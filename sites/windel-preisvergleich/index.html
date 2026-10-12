@@ -18,7 +18,7 @@
 </style>
   <style>
     .not-ranked td{background:#fbfcfe;color:#596579}.status-pill{display:inline-block;padding:3px 8px;border-radius:99px;background:#e9f6ef;color:#176a4c;font-size:.72rem;font-weight:800;white-space:nowrap}.status-pill.open{background:#edf2f8;color:#53627a}.status-detail{display:block;margin-top:4px;color:var(--muted);font-size:.78rem;line-height:1.35}.source-link{display:inline-block;font-weight:750;white-space:nowrap}
-    @media(min-width:761px){table{table-layout:fixed}.product{min-width:0;overflow-wrap:anywhere}.source-link{white-space:normal}th:nth-child(1),td:nth-child(1){width:22%}th:nth-child(2),td:nth-child(2){width:6%}th:nth-child(3),td:nth-child(3){width:10%}th:nth-child(4),td:nth-child(4){width:14%}th:nth-child(5),td:nth-child(5){width:10%}th:nth-child(6),td:nth-child(6){width:10%}th:nth-child(7),td:nth-child(7){width:18%}th:nth-child(8),td:nth-child(8){width:10%}}
+    @media(min-width:761px){table{width:100%;min-width:0;table-layout:fixed}th,td{padding:10px 8px}th{white-space:normal}.product{min-width:0;overflow-wrap:anywhere}.source-link{white-space:normal}th:nth-child(1),td:nth-child(1){width:20%}th:nth-child(2),td:nth-child(2){width:5%}th:nth-child(3),td:nth-child(3){width:8%}th:nth-child(4),td:nth-child(4){width:12%}th:nth-child(5),td:nth-child(5){width:8%}th:nth-child(6),td:nth-child(6){width:8%}th:nth-child(7),td:nth-child(7){width:17%}}
   </style>
 </head>
 <body>
@@ -54,8 +54,8 @@
     </div>
     <div id="offers-area" class="table-card">
       <table>
-        <thead><tr><th scope="col">Händler / Packung</th><th scope="col">Stück</th><th scope="col">Packung</th><th scope="col">Versand</th><th scope="col">Gesamt</th><th scope="col">€/Stück</th><th scope="col">Status / Lieferzeit</th><th scope="col">Quelle</th></tr></thead>
-        <tbody id="offers-body"><tr><td class="loading-cell" colspan="8">Die täglich aktualisierten Händlerpreise werden geladen …</td></tr></tbody>
+        <thead><tr><th scope="col">Händler / Packung</th><th scope="col">Stück</th><th scope="col">Packung</th><th scope="col">Versand</th><th scope="col">Gesamt</th><th scope="col">€/Stück</th><th scope="col">Status / Lieferzeit</th></tr></thead>
+        <tbody id="offers-body"><tr><td class="loading-cell" colspan="7">Die täglich aktualisierten Händlerpreise werden geladen …</td></tr></tbody>
       </table>
     </div>
     <p class="fine-print">Tagespreise können sich ändern. Bei als „nicht im Ranking“ markierten Händlern sind Preis oder Versand heute nicht eindeutig genug für einen fairen Stückpreisvergleich.</p>
@@ -144,7 +144,7 @@
             '<td class="product" data-label="Händler / Packung"><strong>' +
               safe(offer.retailer) +
               (index === 0 && comparable ? '<span class="tag">Preisführer</span>' : '') +
-            '</strong><small>' + safe(offer.pack || 'Kein aktuelles Angebot bestätigt') + '</small></td>' +
+            '</strong><small>' + safe(offer.pack || 'Kein aktuelles Angebot bestätigt') + '</small><small><a class="source-link" href="' + link + '" target="_blank" rel="noopener noreferrer">' + linkLabel + '</a></small></td>' +
             '<td class="num" data-label="Stück">' + packCount + '</td>' +
             '<td class="num" data-label="Packung">' + packPrice + '</td>' +
             '<td class="num" data-label="Versand">' + shipping + shippingNote + '</td>' +
@@ -153,8 +153,7 @@
             '<td data-label="Status / Lieferzeit"><span class="status-pill' + statusClass + '">' +
               (comparable ? 'Vergleichbar' : 'Nicht im Ranking') +
             '</span><span class="status-detail">' + availability + '</span>' + note + '</td>' +
-            '<td data-label="Quelle"><a class="source-link" href="' + link +
-              '" target="_blank" rel="noopener noreferrer">' + linkLabel + '</a></td></tr>';
+            '</tr>';
         }).join('');
 
         if (!offers.length) throw new Error('Heute sind keine Händlerdaten verfügbar.');
@@ -185,7 +184,7 @@
         document.getElementById('checked-at').textContent = 'Der aktuelle Preisstand ist gerade nicht erreichbar.';
         document.getElementById('offer-count').textContent = 'Preistabelle vorübergehend nicht verfügbar';
         document.getElementById('offers-body').innerHTML =
-          '<tr><td class="loading-cell" colspan="8">' + safe(error.message) + '. Die Tabelle bleibt sichtbar; bitte später erneut laden.</td></tr>';
+          '<tr><td class="loading-cell" colspan="7">' + safe(error.message) + '. Die Tabelle bleibt sichtbar; bitte später erneut laden.</td></tr>';
         document.getElementById('best-retailer').textContent = 'Keine Händlerdaten verfügbar';
         document.getElementById('best-details').textContent =
           'Die Seite zeigt nur Preise und Stückzahlen, die sich aus Händlerquellen belegen lassen.';
