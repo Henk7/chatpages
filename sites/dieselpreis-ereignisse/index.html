@@ -232,33 +232,50 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     if(rows.length<2)throw new Error("Zu wenige Wochenwerte");
     return rows;
   }
-  function parseFredCsv(csv,series){
-    var lines=csv.replace(/^\uFEFF/,"").trim().split(/\r?\n/);
-    if(lines.length<2)throw new Error("Leere FRED-Reihe "+series);
-    var header=lines.shift().split(",");
-    var dateIndex=header.indexOf("observation_date");
-    var valueIndex=header.indexOf(series);
-    if(dateIndex<0||valueIndex<0)throw new Error("Unerwarteter FRED-CSV-Kopf für "+series);
-    var rows=[];
-    lines.forEach(function(line){
-      var cells=line.split(","),date=cells[dateIndex],value=Number(cells[valueIndex]);
-      if(date&&date!=="."&&cells[valueIndex]!=="."&&Number.isFinite(value))rows.push({date:date,value:value});
-    });
-    return rows;
+  function parseUsdaRows(records){
+    if(!Array.isArray(records)||!records.length)throw new Error("USDA-Datensatz ist leer");
+    var sample=records.find(function(row){return row&&Object.keys(row).length>0;});
+    if(!sample)throw new Error("USDA-Datensatz enthält keine Datenfelder");
+    function keyFor(wanted){
+      var keys=Object.keys(sample);
+      for(var i=0;i<keys.length;i++){
+        var normalized=keys[i].toLowerCase().replace(/[^a-z0-9]/g,"");
+        if(wanted.indexOf(normalized)>=0)return keys[i];
+      }
+      return null;
+    }
+    var dateKey=keyFor(["date","weekending","weekdate"]);
+    var regionKey=keyFor(["region","area"]);
+    var priceKey=keyFor(["dieselprice","price","value"]);
+    if(!dateKey||!priceKey)throw new Error("USDA-Spalten nicht erkannt: "+Object.keys(sample).join(", "));
+    return records.map(function(row){
+      if(!row||!Object.keys(row).length)return null;
+      var date=String(row[dateKey]||"").slice(0,10);
+      var value=Number(String(row[priceKey]||"").replace(/[$,]/g,""));
+      var region=regionKey?String(row[regionKey]||"").trim().toLowerCase():"us";
+      if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(value)||value<=0)return null;
+      if(region!=="us"&&region!=="u.s."&&region!=="united states"&&region!=="national")return null;
+      return {date:date,value:value};
+    }).filter(Boolean).sort(function(a,b){return a.date.localeCompare(b.date);});
+  }
+  function parseFrankfurterRates(data){
+    if(!data||!data.rates)throw new Error("Frankfurter-Wechselkursformat unerwartet");
+    return Object.keys(data.rates).sort().map(function(date){
+      var value=Number(data.rates[date]&&data.rates[date].EUR);
+      return Number.isFinite(value)&&value>0?{date:date,eurPerUsd:value}:null;
+    }).filter(Boolean);
   }
   function fetchUsSources(){
     if(!usCache){
       usCache=Promise.all([
-        fetch("https://agtransport.usda.gov/resource/u2kh-s8ke.json?$limit=10000",{cache:"no-store"}),
+        fetch("https://agtransport.usda.gov/resource/x88w-atzp.json?$limit=20000",{cache:"no-store"}),
         fetch("https://api.frankfurter.dev/v1/2020-01-01..?base=USD&symbols=EUR",{cache:"no-store"})
       ]).then(function(responses){
         if(!responses[0].ok)throw new Error("USDA-Dieselreihe: HTTP "+responses[0].status);
         if(!responses[1].ok)throw new Error("Wechselkursreihe: HTTP "+responses[1].status);
         return Promise.all([responses[0].json(),responses[1].json()]);
       }).then(function(data){
-        console.log("USDA diesel row sample",JSON.stringify({count:data[0]&&data[0].length,rowKeys:Object.keys((data[0]&&data[0][0])||{}),row:(data[0]&&data[0][0])}));
-        console.log("Frankfurter exchange dataset sample",JSON.stringify(data[1]&&{base:data[1].base,startDate:data[1].start_date,endDate:data[1].end_date,sample:Object.entries(data[1].rates||{}).slice(0,2)}));
-        return {prices:[],rates:[]};
+        return {prices:parseUsdaRows(data[0]),rates:parseFrankfurterRates(data[1])};
       }).catch(function(err){console.error("US-Dieselpreis oder Wechselkurs konnten nicht geladen werden:",err);usCache=null;throw err;});
     }
     return usCache;
@@ -273,7 +290,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
       if(!rate||rate.date>price.date)continue;
       var lag=(Date.parse(price.date+"T00:00:00Z")-Date.parse(rate.date+"T00:00:00Z"))/86400000;
       if(lag>7)continue;
-      output.push({date:price.date,value:price.value/rate.value/3.785411784,usdPerGallon:price.value,usdPerEur:rate.value,fxDate:rate.date});
+      output.push({date:price.date,value:price.value*rate.eurPerUsd/3.785411784,usdPerGallon:price.value,usdPerEur:1/rate.eurPerUsd,fxDate:rate.date});
     }
     if(output.length<2)throw new Error("Zu wenige US-Wochenwerte im gemeinsamen Zeitraum");
     return output;
@@ -448,7 +465,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
           var usLast=usData[usData.length-1];
           document.getElementById("us-status").textContent="USA: "+dateFmt(usLast.date)+" · "+fmt(usLast.usdPerGallon,3)+" $/Gallone · FX "+fmt(usLast.usdPerEur,4)+" USD/€";
         }catch(err){
-          usData=[];document.getElementById("us-status").textContent="US-Reihe für diesen Zeitraum nicht verfügbar";
+          usData=[];console.warn("US-Dieselreihe konnte nicht aufbereitet werden:",err);document.getElementById("us-status").textContent="US-Reihe für diesen Zeitraum nicht verfügbar";
         }
         drawChart();
       });
