@@ -41,6 +41,7 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .axis-text{fill:#526174;font-size:12px}
 .axis-title{fill:#39475a;font-size:12px;font-weight:700}
 .price-line{fill:none;stroke:var(--blue);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.us-line{fill:none;stroke:var(--orange);stroke-width:2.8;stroke-dasharray:8 5;stroke-linejoin:round;stroke-linecap:round}
 .price-area{fill:#3159c7;opacity:.08}
 .event-line{stroke-width:1.2;stroke-dasharray:4 5;opacity:.64}
 .event-dot{stroke:#fff;stroke-width:2;cursor:pointer}
@@ -51,7 +52,7 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .chart-tooltip strong{display:block}
 .loading{padding:26px 12px;text-align:center;color:var(--muted);border:1px dashed #c9d3df;border-radius:12px;margin-top:16px}
 .error{background:#fff4ef;border-color:#f1c5b3;color:#6f2e16}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
 .stat{background:#f8fafd;border:1px solid var(--line);border-radius:12px;padding:13px 15px;min-height:94px}
 .stat strong{display:block;color:var(--navy);font-size:1.35rem;line-height:1.25;font-variant-numeric:tabular-nums}
 .stat span{display:block;font-size:.84rem;color:var(--muted);font-weight:700}
@@ -60,6 +61,7 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;color:#39475a;font-size:.84rem}
 .legend span{display:inline-flex;align-items:center;gap:7px}
 .swatch{width:22px;height:3px;background:var(--blue);display:inline-block;border-radius:4px}
+.swatch.us{background:repeating-linear-gradient(90deg,var(--orange) 0 7px,transparent 7px 11px)}
 .swatch.ukraine{height:12px;width:12px;border-radius:50%;background:var(--blue)}
 .swatch.iran{height:12px;width:12px;border-radius:50%;background:var(--orange)}
 .section-title{margin:28px 0 12px;font-size:1.35rem;color:var(--navy)}
@@ -100,7 +102,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   <p class="back"><a href="/chatpages/sites/">← Zur Seitenübersicht</a></p>
   <section class="card" aria-labelledby="chart-title">
     <h2 id="chart-title">Dieselpreis im Zeitverlauf</h2>
-    <p class="intro">Wähle ein EU-Land. Die Linie zeigt den nationalen Wochenmittelwert inklusive Steuern in Euro pro Liter.</p>
+    <p class="intro">Wähle ein EU-Land. Das Diagramm vergleicht den steuerinklusive Wochenpreis dort mit dem US-Dieselpreis, beide in Euro pro Liter.</p>
     <div class="controls">
       <div class="select-wrap">
         <label for="country">Land</label>
@@ -129,6 +131,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     </div>
     <div class="chart-meta">
       <span id="chart-caption">Daten werden geladen …</span>
+      <span id="us-status">US-Daten werden geladen …</span>
       <span>Y-Achse gekürzt für bessere Lesbarkeit</span>
     </div>
     <div id="loading" class="loading" role="status">Wochenwerte werden geladen …</div>
@@ -136,17 +139,19 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     <div id="chart-wrap" class="chart-wrap" hidden>
       <svg id="chart" viewBox="0 0 1000 430" role="img" aria-label="Dieselpreis in Euro pro Liter als Wochenreihe">
         <title>Dieselpreis im Zeitverlauf</title>
-        <desc>Eine Linie zeigt den wöchentlichen Dieselpreis im gewählten EU-Land. Markierungen ordnen Ereignisse zum Ukraine- und Iran-Krieg zeitlich ein.</desc>
+        <desc>Linien zeigen wöchentliche Dieselpreise im gewählten EU-Land und in den USA, jeweils in Euro pro Liter. Markierungen ordnen Ereignisse zum Ukraine- und Iran-Krieg zeitlich ein.</desc>
       </svg>
       <div id="chart-tooltip" class="chart-tooltip" aria-hidden="true"></div>
     </div>
     <div class="stats" aria-label="Aktuelle Preisangaben">
       <div class="stat"><strong id="latest-value">—</strong><span>Letzter Wochenwert</span><small id="latest-date">Datenstand folgt</small></div>
+      <div class="stat"><strong id="us-latest-value">—</strong><span>USA · umgerechnet in €/L</span><small id="us-latest-date">US-Daten werden geladen</small></div>
       <div class="stat"><strong id="change-value">—</strong><span>Veränderung seit 23.02.2026</span><small id="change-note">Vergleich mit der Woche vor dem Iran-Konflikt</small></div>
       <div class="stat"><strong id="tank-value">—</strong><span>Veränderung für 50 Liter</span><small>Gleiche Basis wie beim Wochenvergleich</small></div>
     </div>
     <div class="legend" aria-label="Diagrammlegende">
-      <span><i class="swatch"></i> Wochenpreis Diesel</span>
+      <span><i class="swatch"></i> Ausgewähltes EU-Land</span>
+      <span><i class="swatch us"></i> USA · umgerechnet in €/L</span>
       <span><i class="swatch ukraine"></i> Ukraine-Ereignis</span>
       <span><i class="swatch iran"></i> Iran-Ereignis</span>
     </div>
@@ -159,8 +164,9 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   <section class="source-note" aria-labelledby="sources-title">
     <h2 id="sources-title">Daten und Quellen</h2>
     <p>Preisreihe: wöchentliche, steuerinklusive Länderwerte aus dem <a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en" target="_blank" rel="noopener noreferrer">Weekly Oil Bulletin der Europäischen Kommission</a>, bereitgestellt über die <a href="https://www.fuel-prices.eu/api/docs/" target="_blank" rel="noopener noreferrer">Schnittstelle von fuel-prices.eu</a>. Die Reihe enthält bis zu fünf Jahre und wird wöchentlich aktualisiert. Sie kann gegenüber dem neuesten Kommissionsbulletin etwas zurückliegen. Angezeigt wird der letzte verfügbare Datenpunkt; sein Datum steht oberhalb des Diagramms.</p>
+    <p>USA: wöchentlicher US-Dieselpreis für Straßenfahrzeuge, inklusive Steuern, vom <a href="https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm" target="_blank" rel="noopener noreferrer">U.S. Energy Information Administration (EIA)</a> über <a href="https://fred.stlouisfed.org/series/GASDESW" target="_blank" rel="noopener noreferrer">FRED, Reihe GASDESW</a>, in US-Dollar pro Gallone. Umrechnung ins Diagramm: USD/Gallone ÷ USD je Euro ÷ 3,785411784 Liter je US-Gallone. Für den Wechselkurs wird der letzte verfügbare Tageswert am oder vor dem Wochenstichtag verwendet: <a href="https://fred.stlouisfed.org/series/DEXUSEU" target="_blank" rel="noopener noreferrer">Federal Reserve, Reihe DEXUSEU</a>. Die EIA änderte die Stichprobenmethode am 13. Juni 2022; dieser Wochenwert ist laut EIA nicht direkt mit der Vorwoche vergleichbar.</p>
     <p>Die zeitliche Einordnung stützt sich auf Berichte der <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260727~1212bdb8f9.en.html" target="_blank" rel="noopener noreferrer">EZB zum Ölpreisschock</a>, das <a href="https://www.ecb.europa.eu/pub/pdf/ecbu/eb202602.en.pdf" target="_blank" rel="noopener noreferrer">Economic Bulletin 2/2026 zum Iran-Krieg</a>, die <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260731~6224db57f8.en.html" target="_blank" rel="noopener noreferrer">Weitergabe an Dieselpreise</a> und den <a href="https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ecb.ebbox202302_02~59c965249a.en.html" target="_blank" rel="noopener noreferrer">EZB-Bericht zu Russland-Sanktionen und Dieselmarkt</a>. Die EU-Ölverbote traten am 5. Dezember 2022 (Rohöl) und 5. Februar 2023 (Ölprodukte) in Kraft.</p>
-    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu. Der angezeigte Länderpreis ist kein EU-gewichteter Durchschnitt.</p>
+    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu; EIA und Federal Reserve, vermittelt durch FRED. US- und EU-Werte sind nationale Wochenmittelwerte, keine regional gewichteten Vergleichspreise.</p>
   </section>
 </main>
 <footer class="wrap">Stand der angezeigten Preisreihe: Datum des letzten vom Datendienst gelieferten Wochenwerts.</footer>
@@ -199,6 +205,8 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   var loading=document.getElementById("loading");
   var errorBox=document.getElementById("error");
   var currentData=[];
+  var usData=[];
+  var usCache=null;
   var requestId=0;
   var W=1000,H=430,margin={left:76,right:28,top:78,bottom:52};
 
@@ -224,6 +232,50 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     if(rows.length<2)throw new Error("Zu wenige Wochenwerte");
     return rows;
   }
+  function parseFredCsv(csv,series){
+    var lines=csv.replace(/^\uFEFF/,"").trim().split(/\r?\n/);
+    if(lines.length<2)throw new Error("Leere FRED-Reihe "+series);
+    var header=lines.shift().split(",");
+    var dateIndex=header.indexOf("observation_date");
+    var valueIndex=header.indexOf(series);
+    if(dateIndex<0||valueIndex<0)throw new Error("Unerwarteter FRED-CSV-Kopf für "+series);
+    var rows=[];
+    lines.forEach(function(line){
+      var cells=line.split(","),date=cells[dateIndex],value=Number(cells[valueIndex]);
+      if(date&&date!=="."&&cells[valueIndex]!=="."&&Number.isFinite(value))rows.push({date:date,value:value});
+    });
+    return rows;
+  }
+  function fetchUsSources(){
+    if(!usCache){
+      usCache=Promise.all([
+        fetch("https://fred.stlouisfed.org/graph/fredgraph.csv?id=GASDESW&cosd=2020-01-01",{cache:"no-store"}),
+        fetch("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2020-01-01",{cache:"no-store"})
+      ]).then(function(responses){
+        if(!responses[0].ok)throw new Error("US-Dieselreihe: HTTP "+responses[0].status);
+        if(!responses[1].ok)throw new Error("Wechselkursreihe: HTTP "+responses[1].status);
+        return Promise.all([responses[0].text(),responses[1].text()]);
+      }).then(function(csv){
+        return {prices:parseFredCsv(csv[0],"GASDESW"),rates:parseFredCsv(csv[1],"DEXUSEU")};
+      }).catch(function(err){usCache=null;throw err;});
+    }
+    return usCache;
+  }
+  function convertUsRows(prices,rates,first,last){
+    var output=[],rateIndex=0;
+    for(var i=0;i<prices.length;i++){
+      var price=prices[i];
+      if(price.date<first||price.date>last)continue;
+      while(rateIndex+1<rates.length&&rates[rateIndex+1].date<=price.date)rateIndex++;
+      var rate=rates[rateIndex];
+      if(!rate||rate.date>price.date)continue;
+      var lag=(Date.parse(price.date+"T00:00:00Z")-Date.parse(rate.date+"T00:00:00Z"))/86400000;
+      if(lag>7)continue;
+      output.push({date:price.date,value:price.value/rate.value/3.785411784,usdPerGallon:price.value,usdPerEur:rate.value,fxDate:rate.date});
+    }
+    if(output.length<2)throw new Error("Zu wenige US-Wochenwerte im gemeinsamen Zeitraum");
+    return output;
+  }
   function visibleEvents(){
     var u=document.getElementById("show-ukraine").checked;
     var i=document.getElementById("show-iran").checked;
@@ -240,8 +292,10 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     var desc=h("desc",{},chart);desc.textContent="Wöchentliche Dieselpreise in Euro pro Liter. Ereignismarker sind anklickbar.";
     var x0=margin.left,x1=W-margin.right,y0=margin.top,y1=H-margin.bottom;
     var minDate=Date.parse(currentData[0].date+"T00:00:00Z"),maxDate=Date.parse(currentData[currentData.length-1].date+"T00:00:00Z");
-    var minVal=Math.min.apply(null,currentData.map(function(d){return d.value;}));
-    var maxVal=Math.max.apply(null,currentData.map(function(d){return d.value;}));
+    var allValues=currentData.map(function(d){return d.value;});
+    usData.forEach(function(d){allValues.push(d.value);});
+    var minVal=Math.min.apply(null,allValues);
+    var maxVal=Math.max.apply(null,allValues);
     var yMin=Math.max(0,Math.floor((minVal-0.08)*5)/5);
     var yMax=Math.ceil((maxVal+0.08)*5)/5;
     if(yMax-yMin<0.4)yMax=yMin+0.4;
@@ -273,6 +327,10 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     var area=path+" L "+xDate(currentData[currentData.length-1].date).toFixed(2)+" "+y1+" L "+xDate(currentData[0].date).toFixed(2)+" "+y1+" Z";
     h("path",{d:area,class:"price-area"},plotted);
     h("path",{d:path,class:"price-line"},plotted);
+    if(usData.length>1){
+      var usPath=usData.map(function(d,i){return (i?"L":"M")+xDate(d.date).toFixed(2)+" "+yValue(d.value).toFixed(2);}).join(" ");
+      h("path",{d:usPath,class:"us-line"},plotted);
+    }
     var markerGroup=h("g",{},chart);
     var assigned=[],trackEnds=[];
     visibleEvents().sort(function(a,b){return a.date.localeCompare(b.date);}).forEach(function(ev){
@@ -305,8 +363,13 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   function showPoint(index,event){
     var row=currentData[index];if(!row)return;
     tooltip.innerHTML="";
-    var title=document.createElement("strong");title.textContent=fmt(row.value,3)+" €/L";tooltip.appendChild(title);
-    var date=document.createElement("span");date.textContent=dateFmt(row.date)+" · "+countries[countrySelect.value];tooltip.appendChild(date);
+    var title=document.createElement("strong");title.textContent=dateFmt(row.date);tooltip.appendChild(title);
+    var eu=document.createElement("span");eu.textContent=countries[countrySelect.value]+": "+fmt(row.value,3)+" €/L";tooltip.appendChild(eu);
+    var usNearest=null,nearestGap=Infinity,targetTime=Date.parse(row.date+"T00:00:00Z");
+    usData.forEach(function(point){var gap=Math.abs(Date.parse(point.date+"T00:00:00Z")-targetTime);if(gap<nearestGap){nearestGap=gap;usNearest=point;}});
+    if(usNearest&&nearestGap<=7*86400000){
+      var us=document.createElement("span");us.textContent="USA: "+fmt(usNearest.value,3)+" €/L ("+fmt(usNearest.usdPerGallon,3)+" $/gal)";tooltip.appendChild(us);
+    }
     var bounds=chart.getBoundingClientRect(),wrap=chartWrap.getBoundingClientRect();
     var x=event.clientX-wrap.left,y=event.clientY-wrap.top;
     tooltip.style.display="block";
@@ -327,6 +390,9 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     var last=currentData[currentData.length-1];
     document.getElementById("latest-value").textContent=fmt(last.value,3)+" €/L";
     document.getElementById("latest-date").textContent="Wochenwert vom "+dateFmt(last.date);
+    var usLast=usData.length?usData[usData.length-1]:null;
+    document.getElementById("us-latest-value").textContent=usLast?fmt(usLast.value,3)+" €/L":"—";
+    document.getElementById("us-latest-date").textContent=usLast?dateFmt(usLast.date)+" · "+fmt(usLast.usdPerGallon,3)+" $/Gallone; FX "+fmt(usLast.usdPerEur,4)+" USD/€ ("+dateFmt(usLast.fxDate)+")":"US-Daten nicht verfügbar";
     var base=null;
     for(var i=0;i<currentData.length;i++)if(currentData[i].date<="2026-02-23")base=currentData[i];
     var diff=document.getElementById("change-value"),note=document.getElementById("change-note"),tank=document.getElementById("tank-value");
@@ -358,12 +424,32 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     var id=++requestId,cc=countrySelect.value;
     loading.hidden=false;loading.textContent="Wochenwerte für "+countries[cc]+" werden geladen …";
     errorBox.hidden=true;chartWrap.hidden=true;
+    currentData=[];usData=[];
+    document.getElementById("us-status").textContent="US-Daten werden geladen …";
+    document.getElementById("us-latest-value").textContent="—";
+    document.getElementById("us-latest-date").textContent="US-Daten werden geladen";
+    var usTask=fetchUsSources().then(function(source){return {source:source};}).catch(function(error){return {error:error};});
     try{
       var response=await fetch("https://www.fuel-prices.eu/lang/api/country-history.php?cc="+encodeURIComponent(cc),{cache:"no-store"});
       if(!response.ok)throw new Error("HTTP "+response.status);
       var json=await response.json(),rows=parsePoints(json);
       if(id!==requestId)return;
       currentData=rows;loading.hidden=true;chartWrap.hidden=false;drawChart();
+      usTask.then(function(result){
+        if(id!==requestId)return;
+        if(result.error){
+          usData=[];document.getElementById("us-status").textContent="US-Datenquelle vorübergehend nicht erreichbar";drawChart();return;
+        }
+        var source=result.source;
+        try{
+          usData=convertUsRows(source.prices,source.rates,rows[0].date,rows[rows.length-1].date);
+          var usLast=usData[usData.length-1];
+          document.getElementById("us-status").textContent="USA: "+dateFmt(usLast.date)+" · "+fmt(usLast.usdPerGallon,3)+" $/Gallone · FX "+fmt(usLast.usdPerEur,4)+" USD/€";
+        }catch(err){
+          usData=[];document.getElementById("us-status").textContent="US-Reihe für diesen Zeitraum nicht verfügbar";
+        }
+        drawChart();
+      });
     }catch(err){
       if(id!==requestId)return;
       loading.hidden=true;errorBox.hidden=false;
@@ -371,7 +457,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
     }
   }
   countrySelect.addEventListener("change",loadData);
-  document.getElementById("reload").addEventListener("click",loadData);
+  document.getElementById("reload").addEventListener("click",function(){usCache=null;loadData();});
   document.getElementById("show-ukraine").addEventListener("change",function(){drawChart();});
   document.getElementById("show-iran").addEventListener("change",function(){drawChart();});
   loadData();
