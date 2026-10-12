@@ -1,0 +1,89 @@
+{
+  "product": "Pampers Baby-Dry Pants",
+  "size": 7,
+  "country": "AT",
+  "currency": "EUR",
+  "checked_at": "2026-10-12T18:05:00+02:00",
+  "checked_label": "12. Oktober 2026 · 18:05 Uhr · Europe/Vienna",
+  "thresholds": {
+    "great": 0.30,
+    "good": 0.35
+  },
+  "offers": [
+    {
+      "retailer": "Kaufland.at · Koif",
+      "pack": "Monatsbox",
+      "count": 232,
+      "item_price": 98.99,
+      "shipping": 0,
+      "total": 98.99,
+      "unit_price": 0.4267,
+      "shipping_note": "Gratis Lieferung",
+      "availability": "Lieferung voraussichtlich 14.–19. Oktober",
+      "url": "https://www.kaufland.at/product/542122309/",
+      "source_url": "https://www.kaufland.at/product/542122309/"
+    },
+    {
+      "retailer": "Müller Österreich",
+      "pack": "Big Economy Pack",
+      "count": 42,
+      "item_price": 15.16,
+      "shipping": 3.95,
+      "total": 19.11,
+      "unit_price": 0.455,
+      "shipping_note": "Einzelversand; gratis ab € 49 Warenkorbwert",
+      "availability": "Bestand vor Bestellung prüfen",
+      "url": "https://www.mueller.at/p/pampers-baby-dry-pants-windeln-gr-7-extra-large-15-kg-big-economy-pack-PPN3166187/",
+      "source_url": "https://www.mueller.at/p/pampers-baby-dry-pants-windeln-gr-7-extra-large-15-kg-big-economy-pack-PPN3166187/"
+    },
+    {
+      "retailer": "0815.at",
+      "pack": "Monatsbox",
+      "count": 126,
+      "item_price": 57.99,
+      "shipping": 0,
+      "total": 57.99,
+      "unit_price": 0.4602,
+      "shipping_note": "Gratis Lieferung laut Händler",
+      "availability": "Sofort lieferbar laut Händler",
+      "url": "https://www.0815.at/Markenwelten/SHOP-Pampers/Pants",
+      "source_url": "https://www.0815.at/Markenwelten/SHOP-Pampers/Pants"
+    },
+    {
+      "retailer": "BIPA",
+      "pack": "Monatsbox",
+      "count": 126,
+      "item_price": 62.90,
+      "shipping": 0,
+      "total": 62.90,
+      "unit_price": 0.4992,
+      "shipping_note": "Versandkostenfrei ab € 49",
+      "availability": "Online-Angebot; Bestand prüfen",
+      "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
+      "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112"
+    },
+    {
+      "retailer": "Galaxus.at",
+      "pack": "Monatsbox",
+      "count": 126,
+      "item_price": 63.36,
+      "shipping": 0,
+      "total": 63.36,
+      "unit_price": 0.5029,
+      "shipping_note": "Gratis Versand",
+      "availability": "8 Stück beim Lieferanten",
+      "url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-7-monatsbox-126-stk-windeln-23688437",
+      "source_url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-7-monatsbox-126-stk-windeln-23688437"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-12",
+      "checked_at": "2026-10-12T18:05:00+02:00",
+      "best_unit_price": 0.4267,
+      "best_total": 98.99,
+      "retailer": "Kaufland.at · Koif"
+    }
+  ],
+  "method": "Verglichen wird ausschließlich Pampers Baby-Dry Pants Größe 7. Der effektive Stückpreis ist (Packungspreis + Pflichtversand für eine Packung nach Österreich) geteilt durch die Stückzahl. Ein unbekannter Versandpreis wird nicht als null gerechnet."
+}
