@@ -164,9 +164,9 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   <section class="source-note" aria-labelledby="sources-title">
     <h2 id="sources-title">Daten und Quellen</h2>
     <p>Preisreihe: wöchentliche, steuerinklusive Länderwerte aus dem <a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en" target="_blank" rel="noopener noreferrer">Weekly Oil Bulletin der Europäischen Kommission</a>, bereitgestellt über die <a href="https://www.fuel-prices.eu/api/docs/" target="_blank" rel="noopener noreferrer">Schnittstelle von fuel-prices.eu</a>. Die Reihe enthält bis zu fünf Jahre und wird wöchentlich aktualisiert. Sie kann gegenüber dem neuesten Kommissionsbulletin etwas zurückliegen. Angezeigt wird der letzte verfügbare Datenpunkt; sein Datum steht oberhalb des Diagramms.</p>
-    <p>USA: wöchentlicher US-Dieselpreis für Straßenfahrzeuge, inklusive Steuern, vom <a href="https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm" target="_blank" rel="noopener noreferrer">U.S. Energy Information Administration (EIA)</a> über <a href="https://fred.stlouisfed.org/series/GASDESW" target="_blank" rel="noopener noreferrer">FRED, Reihe GASDESW</a>, in US-Dollar pro Gallone. Umrechnung ins Diagramm: USD/Gallone ÷ USD je Euro ÷ 3,785411784 Liter je US-Gallone. Für den Wechselkurs wird der letzte verfügbare Tageswert am oder vor dem Wochenstichtag verwendet: <a href="https://fred.stlouisfed.org/series/DEXUSEU" target="_blank" rel="noopener noreferrer">Federal Reserve, Reihe DEXUSEU</a>. Die EIA änderte die Stichprobenmethode am 13. Juni 2022; dieser Wochenwert ist laut EIA nicht direkt mit der Vorwoche vergleichbar.</p>
+    <p>USA: wöchentliche On-Highway-Dieselpreise aus dem öffentlichen Datensatz <a href="https://agtransport.usda.gov/Fuel/Historical-Diesel-Fuel-Prices/u2kh-s8ke" target="_blank" rel="noopener noreferrer">Historical Diesel Fuel Prices des USDA Open Ag Transport Data</a>, in US-Dollar pro Gallone; ergänzende Methodik und Wochenwerte stehen bei der <a href="https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm" target="_blank" rel="noopener noreferrer">U.S. Energy Information Administration (EIA)</a>. Umrechnung ins Diagramm: USD/Gallone ÷ USD je Euro ÷ 3,785411784 Liter je US-Gallone. Die Tageskurse kommen über die <a href="https://frankfurter.dev/providers/" target="_blank" rel="noopener noreferrer">Frankfurter API</a> von Zentralbanken und offiziellen Institutionen; verwendet wird der letzte verfügbare Kurs am oder vor dem Wochenstichtag. Die EIA änderte die Stichprobenmethode am 13. Juni 2022; dieser Wochenwert ist laut EIA nicht direkt mit der Vorwoche vergleichbar.</p>
     <p>Die zeitliche Einordnung stützt sich auf Berichte der <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260727~1212bdb8f9.en.html" target="_blank" rel="noopener noreferrer">EZB zum Ölpreisschock</a>, das <a href="https://www.ecb.europa.eu/pub/pdf/ecbu/eb202602.en.pdf" target="_blank" rel="noopener noreferrer">Economic Bulletin 2/2026 zum Iran-Krieg</a>, die <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260731~6224db57f8.en.html" target="_blank" rel="noopener noreferrer">Weitergabe an Dieselpreise</a> und den <a href="https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ecb.ebbox202302_02~59c965249a.en.html" target="_blank" rel="noopener noreferrer">EZB-Bericht zu Russland-Sanktionen und Dieselmarkt</a>. Die EU-Ölverbote traten am 5. Dezember 2022 (Rohöl) und 5. Februar 2023 (Ölprodukte) in Kraft.</p>
-    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu; EIA und Federal Reserve, vermittelt durch FRED. US- und EU-Werte sind nationale Wochenmittelwerte, keine regional gewichteten Vergleichspreise.</p>
+    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu; USDA Open Ag Transport Data/EIA und offizielle Wechselkursdaten, vermittelt durch Frankfurter. US- und EU-Werte sind nationale Wochenmittelwerte, keine regional gewichteten Vergleichspreise.</p>
   </section>
 </main>
 <footer class="wrap">Stand der angezeigten Preisreihe: Datum des letzten vom Datendienst gelieferten Wochenwerts.</footer>
@@ -249,14 +249,16 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   function fetchUsSources(){
     if(!usCache){
       usCache=Promise.all([
-        fetch("https://fred.stlouisfed.org/graph/fredgraph.csv?id=GASDESW&cosd=2020-01-01",{cache:"no-store"}),
-        fetch("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2020-01-01",{cache:"no-store"})
+        fetch("https://agtransport.usda.gov/resource/u2kh-s8ke.json?$limit=10000",{cache:"no-store"}),
+        fetch("https://api.frankfurter.dev/v1/2020-01-01..?base=USD&symbols=EUR",{cache:"no-store"})
       ]).then(function(responses){
-        if(!responses[0].ok)throw new Error("US-Dieselreihe: HTTP "+responses[0].status);
+        if(!responses[0].ok)throw new Error("USDA-Dieselreihe: HTTP "+responses[0].status);
         if(!responses[1].ok)throw new Error("Wechselkursreihe: HTTP "+responses[1].status);
-        return Promise.all([responses[0].text(),responses[1].text()]);
-      }).then(function(csv){
-        return {prices:parseFredCsv(csv[0],"GASDESW"),rates:parseFredCsv(csv[1],"DEXUSEU")};
+        return Promise.all([responses[0].json(),responses[1].json()]);
+      }).then(function(data){
+        console.log("USDA diesel dataset sample",data[0]&&data[0][0]);
+        console.log("Frankfurter exchange dataset sample",data[1]&&{base:data[1].base,startDate:data[1].start_date,endDate:data[1].end_date,sample:Object.entries(data[1].rates||{}).slice(0,2)});
+        return {prices:[],rates:[]};
       }).catch(function(err){console.error("US-Dieselpreis oder Wechselkurs konnten nicht geladen werden:",err);usCache=null;throw err;});
     }
     return usCache;
