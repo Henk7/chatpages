@@ -257,7 +257,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
         return Promise.all([responses[0].text(),responses[1].text()]);
       }).then(function(csv){
         return {prices:parseFredCsv(csv[0],"GASDESW"),rates:parseFredCsv(csv[1],"DEXUSEU")};
-      }).catch(function(err){usCache=null;throw err;});
+      }).catch(function(err){console.error("US-Dieselpreis oder Wechselkurs konnten nicht geladen werden:",err);usCache=null;throw err;});
     }
     return usCache;
   }
