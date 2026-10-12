@@ -256,7 +256,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
         if(!responses[1].ok)throw new Error("Wechselkursreihe: HTTP "+responses[1].status);
         return Promise.all([responses[0].json(),responses[1].json()]);
       }).then(function(data){
-        console.log("USDA diesel dataset sample",JSON.stringify(data[0]&&data[0][0]));
+        console.log("USDA diesel payload details",JSON.stringify({isArray:Array.isArray(data[0]),count:data[0]&&data[0].length,keys:Object.keys(data[0]||{}),sample:data[0]&&data[0][0]}).slice(0,1800));
         console.log("Frankfurter exchange dataset sample",JSON.stringify(data[1]&&{base:data[1].base,startDate:data[1].start_date,endDate:data[1].end_date,sample:Object.entries(data[1].rates||{}).slice(0,2)}));
         return {prices:[],rates:[]};
       }).catch(function(err){console.error("US-Dieselpreis oder Wechselkurs konnten nicht geladen werden:",err);usCache=null;throw err;});
