@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Interaktive Dieselpreis-Chart für EU-Länder mit wichtigen Ereignissen zum Ukraine- und Iran-Krieg.">
-<title>Dieselpreise in Europa · Ereignis-Chart</title>
+<meta name="description" content="Interaktiver Vergleich von Dieselpreisen in EU-Ländern und den USA, mit Ereignissen zum Ukraine- und Iran-Krieg.">
+<title>Dieselpreise in Europa und den USA · Ereignis-Chart</title>
 <style>
 :root{color-scheme:light;--ink:#17212f;--muted:#627084;--line:#dfe6ee;--paper:#fff;--wash:#f3f6fa;--blue:#3159c7;--navy:#172640;--gold:#e7bd61;--orange:#bb5c24;--soft-blue:#eaf0ff;--soft-orange:#fff0e4}
 *{box-sizing:border-box}
@@ -94,7 +94,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
 <header>
   <div class="wrap">
     <div class="brand">Henk7 · Daten &amp; Zeitgeschehen</div>
-    <h1>Dieselpreise in Europa</h1>
+    <h1>Dieselpreise in Europa und den USA</h1>
     <p class="lede">Wochenpreise an der Zapfsäule, mit wichtigen Ereignissen zum Ukraine- und Iran-Krieg.</p>
   </div>
 </header>
@@ -102,7 +102,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   <p class="back"><a href="/chatpages/sites/">← Zur Seitenübersicht</a></p>
   <section class="card" aria-labelledby="chart-title">
     <h2 id="chart-title">Dieselpreis im Zeitverlauf</h2>
-    <p class="intro">Wähle ein EU-Land. Das Diagramm vergleicht den steuerinklusive Wochenpreis dort mit dem US-Dieselpreis, beide in Euro pro Liter.</p>
+    <p class="intro">Wähle ein EU-Land. Verglichen werden die Wochenpreise inklusive Steuern im EU-Land und in den USA, beide in Euro pro Liter.</p>
     <div class="controls">
       <div class="select-wrap">
         <label for="country">Land</label>
@@ -307,7 +307,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   function drawChart(){
     if(!currentData.length)return;
     while(chart.firstChild)chart.removeChild(chart.firstChild);
-    var title=h("title",{},chart);title.textContent="Dieselpreis "+countries[countrySelect.value];
+    var title=h("title",{},chart);title.textContent="Dieselpreise "+countries[countrySelect.value]+" und USA";
     var desc=h("desc",{},chart);desc.textContent="Wöchentliche Dieselpreise in Euro pro Liter. Ereignismarker sind anklickbar.";
     var x0=margin.left,x1=W-margin.right,y0=margin.top,y1=H-margin.bottom;
     var minDate=Date.parse(currentData[0].date+"T00:00:00Z"),maxDate=Date.parse(currentData[currentData.length-1].date+"T00:00:00Z");
@@ -368,7 +368,7 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
       assigned.push(ev.id);
     });
     document.getElementById("chart-caption").textContent=countries[countrySelect.value]+" · Wochenmittel inkl. Steuern · "+dateFmt(currentData[0].date)+" bis "+dateFmt(currentData[currentData.length-1].date)+" · "+currentData.length+" Wochen";
-    chart.setAttribute("aria-label","Wochenpreis für Diesel in "+countries[countrySelect.value]+", in Euro pro Liter, von "+dateFmt(currentData[0].date)+" bis "+dateFmt(currentData[currentData.length-1].date));
+    chart.setAttribute("aria-label","Wochenpreise für Diesel in "+countries[countrySelect.value]+" und den USA, in Euro pro Liter, von "+dateFmt(currentData[0].date)+" bis "+dateFmt(currentData[currentData.length-1].date));
     updateStats();
     renderEvents();
   }
