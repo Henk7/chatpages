@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Interaktive Dieselpreis-Chart für EU-Länder mit wichtigen Ereignissen zum Ukraine- und Iran-Krieg.">
+<title>Dieselpreise in Europa · Ereignis-Chart</title>
+<style>
+:root{color-scheme:light;--ink:#17212f;--muted:#627084;--line:#dfe6ee;--paper:#fff;--wash:#f3f6fa;--blue:#3159c7;--navy:#172640;--gold:#e7bd61;--orange:#bb5c24;--soft-blue:#eaf0ff;--soft-orange:#fff0e4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--blue);font-weight:650}
+header{background:linear-gradient(135deg,#14223b,#263f68);color:#fff;padding:34px 20px 32px;border-bottom:4px solid var(--gold)}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.brand{color:#cbd7ed;text-transform:uppercase;letter-spacing:.13em;font-weight:750;font-size:.76rem}
+h1{font-size:clamp(2rem,4vw,3.15rem);line-height:1.08;margin:.45rem 0}
+.lede{color:#e1e8f3;max-width:780px;margin:.75rem 0 0;font-size:1.05rem}
+main{padding:28px 0 54px}
+.back{margin:0 0 18px}
+.back a{color:var(--blue);text-decoration:none}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 2px 10px #1c305008}
+.card h2{font-size:1.2rem;line-height:1.3;color:var(--navy);margin:0 0 7px}
+.intro{margin:0 0 20px;color:var(--muted)}
+.controls{display:flex;align-items:end;gap:16px;flex-wrap:wrap;margin:18px 0 12px}
+.select-wrap{display:grid;gap:5px;min-width:210px}
+label{font-weight:700}
+select,button{font:inherit}
+select{border:1px solid #b8c4d2;border-radius:9px;background:#fff;color:var(--ink);padding:9px 12px;min-height:44px}
+.filters{display:flex;gap:9px;flex-wrap:wrap}
+.filter{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;background:#fff;cursor:pointer}
+.filter input{width:17px;height:17px;accent-color:var(--blue);margin:0}
+.filter.iran input{accent-color:var(--orange)}
+button{border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);padding:9px 12px;cursor:pointer;font-weight:700;min-height:44px}
+button:hover,select:hover{border-color:var(--blue)}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #86a3ff;outline-offset:2px}
+.chart-meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.88rem;margin:4px 0 0}
+.chart-wrap{position:relative;width:100%;margin-top:8px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.plot-grid{stroke:#e4e9ef;stroke-width:1}
+.axis-line{stroke:#7c8999;stroke-width:1.2}
+.axis-text{fill:#526174;font-size:12px}
+.axis-title{fill:#39475a;font-size:12px;font-weight:700}
+.price-line{fill:none;stroke:var(--blue);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.price-area{fill:#3159c7;opacity:.08}
+.event-line{stroke-width:1.2;stroke-dasharray:4 5;opacity:.64}
+.event-dot{stroke:#fff;stroke-width:2;cursor:pointer}
+.event-tag{font-size:8px;font-weight:850;text-anchor:middle;dominant-baseline:central;fill:#fff;pointer-events:none}
+.focus-ring{fill:none;stroke:#18233a;stroke-width:2;opacity:0}
+.event-hit:focus .focus-ring,.event-hit:hover .focus-ring{opacity:1}
+.chart-tooltip{position:absolute;z-index:2;display:none;min-width:140px;max-width:220px;background:#172640;color:#fff;border-radius:9px;padding:7px 10px;font-size:.85rem;line-height:1.4;pointer-events:none;box-shadow:0 3px 14px #10203a2b}
+.chart-tooltip strong{display:block}
+.loading{padding:26px 12px;text-align:center;color:var(--muted);border:1px dashed #c9d3df;border-radius:12px;margin-top:16px}
+.error{background:#fff4ef;border-color:#f1c5b3;color:#6f2e16}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.stat{background:#f8fafd;border:1px solid var(--line);border-radius:12px;padding:13px 15px;min-height:94px}
+.stat strong{display:block;color:var(--navy);font-size:1.35rem;line-height:1.25;font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:.84rem;color:var(--muted);font-weight:700}
+.stat small{display:block;color:var(--muted);font-size:.77rem;margin-top:4px}
+.caveat{border-left:4px solid var(--gold);padding:10px 13px;background:#fff9eb;color:#554724;border-radius:0 9px 9px 0;font-size:.9rem;margin:14px 0 0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;color:#39475a;font-size:.84rem}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.swatch{width:22px;height:3px;background:var(--blue);display:inline-block;border-radius:4px}
+.swatch.ukraine{height:12px;width:12px;border-radius:50%;background:var(--blue)}
+.swatch.iran{height:12px;width:12px;border-radius:50%;background:var(--orange)}
+.section-title{margin:28px 0 12px;font-size:1.35rem;color:var(--navy)}
+.event-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.event-card{padding:17px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.event-card.ukraine{border-top:4px solid var(--blue)}
+.event-card.iran{border-top:4px solid var(--orange)}
+.event-card h3{margin:7px 0 5px;font-size:1rem;line-height:1.35;color:var(--navy)}
+.event-card p{margin:0;color:#435166;font-size:.91rem}
+.event-date{font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+.event-card.iran .event-date{color:#91451d}
+.event-source{display:inline-block;margin-top:10px;font-size:.84rem}
+.source-note{margin:22px 0 0;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:14px;color:#435166;font-size:.91rem}
+.source-note h2{font-size:1.06rem;color:var(--navy);margin:0 0 6px}
+.source-note p{margin:7px 0}
+footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
+[hidden]{display:none!important}
+@media(max-width:700px){
+ .wrap{width:min(100% - 24px,1160px)}
+ header{padding:27px 16px 24px}
+ main{padding-top:20px}
+ .card{padding:15px}
+ .stats{grid-template-columns:1fr}
+ .stat{min-height:0}
+ .chart-meta{font-size:.82rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Henk7 · Daten &amp; Zeitgeschehen</div>
+    <h1>Dieselpreise in Europa</h1>
+    <p class="lede">Wochenpreise an der Zapfsäule, mit wichtigen Ereignissen zum Ukraine- und Iran-Krieg.</p>
+  </div>
+</header>
+<main class="wrap">
+  <p class="back"><a href="/chatpages/sites/">← Zur Seitenübersicht</a></p>
+  <section class="card" aria-labelledby="chart-title">
+    <h2 id="chart-title">Dieselpreis im Zeitverlauf</h2>
+    <p class="intro">Wähle ein EU-Land. Die Linie zeigt den nationalen Wochenmittelwert inklusive Steuern in Euro pro Liter.</p>
+    <div class="controls">
+      <div class="select-wrap">
+        <label for="country">Land</label>
+        <select id="country">
+          <option value="AT" selected>Österreich</option>
+          <option value="BE">Belgien</option><option value="BG">Bulgarien</option>
+          <option value="HR">Kroatien</option><option value="CY">Zypern</option>
+          <option value="CZ">Tschechien</option><option value="DK">Dänemark</option>
+          <option value="EE">Estland</option><option value="FI">Finnland</option>
+          <option value="FR">Frankreich</option><option value="DE">Deutschland</option>
+          <option value="EL">Griechenland</option><option value="HU">Ungarn</option>
+          <option value="IE">Irland</option><option value="IT">Italien</option>
+          <option value="LV">Lettland</option><option value="LT">Litauen</option>
+          <option value="LU">Luxemburg</option><option value="MT">Malta</option>
+          <option value="NL">Niederlande</option><option value="PL">Polen</option>
+          <option value="PT">Portugal</option><option value="RO">Rumänien</option>
+          <option value="SK">Slowakei</option><option value="SI">Slowenien</option>
+          <option value="ES">Spanien</option><option value="SE">Schweden</option>
+        </select>
+      </div>
+      <div class="filters" aria-label="Ereignisse filtern">
+        <label class="filter"><input id="show-ukraine" type="checkbox" checked> Ukraine-Ereignisse</label>
+        <label class="filter iran"><input id="show-iran" type="checkbox" checked> Iran-Ereignisse</label>
+      </div>
+      <button id="reload" type="button">Daten neu laden</button>
+    </div>
+    <div class="chart-meta">
+      <span id="chart-caption">Daten werden geladen …</span>
+      <span>Y-Achse gekürzt für bessere Lesbarkeit</span>
+    </div>
+    <div id="loading" class="loading" role="status">Wochenwerte werden geladen …</div>
+    <div id="error" class="loading error" role="alert" hidden>Die Preisreihe konnte gerade nicht geladen werden. Bitte lade die Seite neu.</div>
+    <div id="chart-wrap" class="chart-wrap" hidden>
+      <svg id="chart" viewBox="0 0 1000 430" role="img" aria-label="Dieselpreis in Euro pro Liter als Wochenreihe">
+        <title>Dieselpreis im Zeitverlauf</title>
+        <desc>Eine Linie zeigt den wöchentlichen Dieselpreis im gewählten EU-Land. Markierungen ordnen Ereignisse zum Ukraine- und Iran-Krieg zeitlich ein.</desc>
+      </svg>
+      <div id="chart-tooltip" class="chart-tooltip" aria-hidden="true"></div>
+    </div>
+    <div class="stats" aria-label="Aktuelle Preisangaben">
+      <div class="stat"><strong id="latest-value">—</strong><span>Letzter Wochenwert</span><small id="latest-date">Datenstand folgt</small></div>
+      <div class="stat"><strong id="change-value">—</strong><span>Veränderung seit 23.02.2026</span><small id="change-note">Vergleich mit der Woche vor dem Iran-Konflikt</small></div>
+      <div class="stat"><strong id="tank-value">—</strong><span>Veränderung für 50 Liter</span><small>Gleiche Basis wie beim Wochenvergleich</small></div>
+    </div>
+    <div class="legend" aria-label="Diagrammlegende">
+      <span><i class="swatch"></i> Wochenpreis Diesel</span>
+      <span><i class="swatch ukraine"></i> Ukraine-Ereignis</span>
+      <span><i class="swatch iran"></i> Iran-Ereignis</span>
+    </div>
+    <p class="caveat">Die Markierungen zeigen wichtige zeitliche Zusammenhänge. Sie beweisen nicht, dass ein einzelnes Ereignis die Preisbewegung allein verursacht hat. Dieselpreise hängen auch von Rohöl, Raffinerien, Steuern, Wechselkursen und nationalem Wettbewerb ab.</p>
+  </section>
+
+  <h2 class="section-title">Ereignisse im Kontext</h2>
+  <section id="events" class="event-grid" aria-label="Ereignisse zu den Kriegen in der Ukraine und im Iran"></section>
+
+  <section class="source-note" aria-labelledby="sources-title">
+    <h2 id="sources-title">Daten und Quellen</h2>
+    <p>Preisreihe: wöchentliche, steuerinklusive Länderwerte aus dem <a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en" target="_blank" rel="noopener noreferrer">Weekly Oil Bulletin der Europäischen Kommission</a>, bereitgestellt über die <a href="https://www.fuel-prices.eu/api/docs/" target="_blank" rel="noopener noreferrer">Schnittstelle von fuel-prices.eu</a>. Die Reihe enthält bis zu fünf Jahre und wird wöchentlich aktualisiert. Sie kann gegenüber dem neuesten Kommissionsbulletin etwas zurückliegen. Angezeigt wird der letzte verfügbare Datenpunkt; sein Datum steht oberhalb des Diagramms.</p>
+    <p>Die Ereignisse sind anhand von Berichten der <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260727~1212bdb8f9.en.html" target="_blank" rel="noopener noreferrer">Europäischen Zentralbank zum Ölpreisschock</a>, der <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260731~6224db57f8.en.html" target="_blank" rel="noopener noreferrer">Weitergabe an Dieselpreise</a> und des <a href="https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ecb.ebbox202302_02~59c965249a.en.html" target="_blank" rel="noopener noreferrer">ECB-Berichts zu Russland-Sanktionen und Dieselmarkt</a> datiert. Die EU-Ölverbote traten am 5. Dezember 2022 (Rohöl) und 5. Februar 2023 (Ölprodukte) in Kraft.</p>
+    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu. Der angezeigte Länderpreis ist kein EU-gewichteter Durchschnitt.</p>
+  </section>
+</main>
+<footer class="wrap">Stand der angezeigten Preisreihe: Datum des letzten vom Datendienst gelieferten Wochenwerts.</footer>
+<script>
+(function(){
+  "use strict";
+  var countries={
+    AT:"Österreich",BE:"Belgien",BG:"Bulgarien",HR:"Kroatien",CY:"Zypern",
+    CZ:"Tschechien",DK:"Dänemark",EE:"Estland",FI:"Finnland",FR:"Frankreich",
+    DE:"Deutschland",EL:"Griechenland",HU:"Ungarn",IE:"Irland",IT:"Italien",
+    LV:"Lettland",LT:"Litauen",LU:"Luxemburg",MT:"Malta",NL:"Niederlande",
+    PL:"Polen",PT:"Portugal",RO:"Rumänien",SK:"Slowakei",SI:"Slowenien",
+    ES:"Spanien",SE:"Schweden"
+  };
+  var sources={
+    ecbShock:"https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260727~1212bdb8f9.en.html",
+    ecbPump:"https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260731~6224db57f8.en.html",
+    ecbSanctions:"https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ecb.ebbox202302_02~59c965249a.en.html"
+  };
+  var events=[
+    {id:"U1",group:"ukraine",date:"2022-02-24",title:"Russlands Großangriff auf die Ukraine",text:"Der ECB zufolge stiegen die Ölpreise nach dem Einmarsch zunächst deutlich, vor allem wegen der Sorge vor Ausfällen russischer Lieferungen. Der Rohölpreisanstieg ist nicht dasselbe wie der spätere Zapfsäulenpreis.",source:"ECB: Vergleich der Ölpreisschocks",href:sources.ecbShock},
+    {id:"U2",group:"ukraine",date:"2022-03-08",title:"Erster Rohöl-Preishöchststand",text:"Die ECB vergleicht den ersten Ölmarkt-Höchststand nach Kriegsbeginn mit dem 8. März 2022. Die Markierung bezieht sich auf den Rohölmarkt, nicht auf einen nationalen Diesel-Wochenwert.",source:"ECB: Vergleich der Ölpreisschocks",href:sources.ecbShock},
+    {id:"U3",group:"ukraine",date:"2022-12-05",title:"EU-Verbot für russisches Seerohöl tritt in Kraft",text:"Das Embargo galt zunächst für russisches Rohöl auf dem Seeweg. Europa stellte Lieferketten um; die EU berichtete zugleich von vorausschauenden Marktreaktionen.",source:"ECB: Ölflüsse und Sanktionen",href:sources.ecbSanctions},
+    {id:"U4",group:"ukraine",date:"2023-02-05",title:"EU-Verbot für russische Ölprodukte tritt in Kraft",text:"Das Verbot erfasste raffinierte Ölprodukte wie Diesel. Die ECB beschrieb den europäischen Dieselmarkt rund um diesen Schritt als angespannt; Importe und Handelswege wurden angepasst.",source:"ECB: Ölflüsse und Sanktionen",href:sources.ecbSanctions},
+    {id:"I1",group:"iran",date:"2026-02-27",title:"Beginn des Iran-Kriegs und Störung der Hormus-Route",text:"Die ECB setzt den 27. Februar als Ausgangspunkt ihrer Preisvergleiche zum Iran-Krieg. Der Konflikt brachte Lieferungen durch die Straße von Hormus und Raffineriekapazitäten unter Druck.",source:"ECB: Vergleich der Ölpreisschocks",href:sources.ecbShock},
+    {id:"I2",group:"iran",date:"2026-03-31",title:"Erster Rohöl-Preishöchststand nach Kriegsbeginn",text:"Der Rohölmarkt erreichte laut ECB seinen ersten Höchststand am 31. März. Das ist eine Referenz für den Ölmarkt, nicht der Dieselpreis an der Zapfsäule.",source:"ECB: Vergleich der Ölpreisschocks",href:sources.ecbShock},
+    {id:"I3",group:"iran",date:"2026-06-18",title:"Kurzzeitige Wiederöffnung der Straße von Hormus",text:"Die ECB datiert die kurze Öffnungsphase auf den 18. Juni bis 11. Juli. In dieser Zeit fielen Rohölpreise; die Dieselpreise an der Zapfsäule gingen ebenfalls zurück.",source:"ECB: So kommen Kosten an der Zapfsäule an",href:sources.ecbPump},
+    {id:"I4",group:"iran",date:"2026-07-11",title:"Ende der kurzen Öffnungsphase",text:"Nach dem 11. Juli fiel der Verkehr durch die Meerenge laut ECB infolge erneuter Eskalation wieder zurück. Das erhöhte die Unsicherheit über Ölversorgung und Preise.",source:"ECB: Vergleich der Ölpreisschocks",href:sources.ecbShock},
+    {id:"I5",group:"iran",date:"2026-07-20",title:"Neue Eskalation und höhere Raffineriemargen",text:"Für die ersten drei Juliwochen bezifferte die ECB den Beitrag der Diesel-Raffinerie- und Vertriebsmargen im Euroraum auf 0,35 €/L. Diese Zahl ist ein Euroraum-Wert und nicht der Preis des ausgewählten Landes.",source:"ECB: So kommen Kosten an der Zapfsäule an",href:sources.ecbPump}
+  ];
+  var chart=document.getElementById("chart");
+  var chartWrap=document.getElementById("chart-wrap");
+  var tooltip=document.getElementById("chart-tooltip");
+  var countrySelect=document.getElementById("country");
+  var loading=document.getElementById("loading");
+  var errorBox=document.getElementById("error");
+  var currentData=[];
+  var requestId=0;
+  var W=1000,H=430,margin={left:76,right:28,top:78,bottom:52};
+
+  function h(tag,attrs,parent){
+    var el=document.createElementNS("http://www.w3.org/2000/svg",tag);
+    Object.keys(attrs||{}).forEach(function(k){el.setAttribute(k,String(attrs[k]));});
+    if(parent)parent.appendChild(el);
+    return el;
+  }
+  function fmt(value,digits){
+    return new Intl.NumberFormat("de-AT",{minimumFractionDigits:digits,maximumFractionDigits:digits}).format(value);
+  }
+  function dateFmt(s){
+    return new Intl.DateTimeFormat("de-AT",{day:"2-digit",month:"2-digit",year:"numeric",timeZone:"UTC"}).format(new Date(s+"T00:00:00Z"));
+  }
+  function parsePoints(data){
+    if(!data||!Array.isArray(data.labels)||!Array.isArray(data.diesel))throw new Error("Unerwartetes Datenformat");
+    var rows=[];
+    for(var i=0;i<data.labels.length;i++){
+      var value=Number(data.diesel[i]);
+      if(data.labels[i]&&Number.isFinite(value)&&value>0)rows.push({date:data.labels[i],value:value});
+    }
+    if(rows.length<2)throw new Error("Zu wenige Wochenwerte");
+    return rows;
+  }
+  function visibleEvents(){
+    var u=document.getElementById("show-ukraine").checked;
+    var i=document.getElementById("show-iran").checked;
+    var first=currentData.length?currentData[0].date:"";
+    var last=currentData.length?currentData[currentData.length-1].date:"";
+    return events.filter(function(e){
+      return (e.group==="ukraine"?u:i)&&e.date>=first&&e.date<=last;
+    });
+  }
+  function drawChart(){
+    if(!currentData.length)return;
+    while(chart.firstChild)chart.removeChild(chart.firstChild);
+    var title=h("title",{},chart);title.textContent="Dieselpreis "+countries[countrySelect.value];
+    var desc=h("desc",{},chart);desc.textContent="Wöchentliche Dieselpreise in Euro pro Liter. Ereignismarker sind anklickbar.";
+    var x0=margin.left,x1=W-margin.right,y0=margin.top,y1=H-margin.bottom;
+    var minDate=Date.parse(currentData[0].date+"T00:00:00Z"),maxDate=Date.parse(currentData[currentData.length-1].date+"T00:00:00Z");
+    var minVal=Math.min.apply(null,currentData.map(function(d){return d.value;}));
+    var maxVal=Math.max.apply(null,currentData.map(function(d){return d.value;}));
+    var yMin=Math.max(0,Math.floor((minVal-0.08)*5)/5);
+    var yMax=Math.ceil((maxVal+0.08)*5)/5;
+    if(yMax-yMin<0.4)yMax=yMin+0.4;
+    function xDate(date){return x0+(Date.parse(date+"T00:00:00Z")-minDate)/(maxDate-minDate)*(x1-x0);}
+    function yValue(value){return y1-(value-yMin)/(yMax-yMin)*(y1-y0);}
+    var defs=h("defs",{},chart);
+    var clip=h("clipPath",{id:"plot-clip"},defs);h("rect",{x:x0,y:y0,width:x1-x0,height:y1-y0},clip);
+    var ticks=5;
+    for(var t=0;t<=ticks;t++){
+      var v=yMin+(yMax-yMin)*t/ticks,yy=yValue(v);
+      h("line",{x1:x0,y1:yy,x2:x1,y2:yy,class:"plot-grid"},chart);
+      var label=h("text",{x:x0-12,y:yy+4,"text-anchor":"end",class:"axis-text"},chart);
+      label.textContent=fmt(v,1);
+    }
+    var firstYear=new Date(minDate).getUTCFullYear(),lastYear=new Date(maxDate).getUTCFullYear();
+    for(var year=firstYear;year<=lastYear;year++){
+      var date=year===firstYear?currentData[0].date:year+"-01-01";
+      var x=xDate(date);
+      h("line",{x1:x,y1:y0,x2:x,y2:y1,class:"plot-grid"},chart);
+      var txt=h("text",{x:x,y:y1+25,"text-anchor":"middle",class:"axis-text"},chart);txt.textContent=String(year);
+    }
+    h("line",{x1:x0,y1:y1,x2:x1,y2:y1,class:"axis-line"},chart);
+    h("line",{x1:x0,y1:y0,x2:x0,y2:y1,class:"axis-line"},chart);
+    var yTitle=h("text",{x:19,y:(y0+y1)/2,transform:"rotate(-90 19 "+((y0+y1)/2)+")","text-anchor":"middle",class:"axis-title"},chart);
+    yTitle.textContent="Dieselpreis (€/L)";
+    var xTitle=h("text",{x:(x0+x1)/2,y:H-7,"text-anchor":"middle",class:"axis-title"},chart);xTitle.textContent="Woche";
+    var plotted=h("g",{"clip-path":"url(#plot-clip)"},chart);
+    var path=currentData.map(function(d,i){return (i?"L":"M")+xDate(d.date).toFixed(2)+" "+yValue(d.value).toFixed(2);}).join(" ");
+    var area=path+" L "+xDate(currentData[currentData.length-1].date).toFixed(2)+" "+y1+" L "+xDate(currentData[0].date).toFixed(2)+" "+y1+" Z";
+    h("path",{d:area,class:"price-area"},plotted);
+    h("path",{d:path,class:"price-line"},plotted);
+    var markerGroup=h("g",{},chart);
+    var assigned=[],trackEnds=[];
+    visibleEvents().sort(function(a,b){return a.date.localeCompare(b.date);}).forEach(function(ev){
+      var x=xDate(ev.date),track=trackEnds.findIndex(function(end){return x-end>24;});
+      if(track<0){track=trackEnds.length;trackEnds.push(x);}else trackEnds[track]=x;
+      var cy=25+track*18,color=ev.group==="ukraine"?"#3159c7":"#bb5c24";
+      h("line",{x1:x,y1:cy+11,x2:x,y2:y1,class:"event-line",stroke:color},markerGroup);
+      var g=h("g",{class:"event-hit",tabindex:"0",role:"button","aria-label":ev.id+" "+dateFmt(ev.date)+": "+ev.title,"data-event-id":ev.id},markerGroup);
+      h("circle",{cx:x,cy:cy,r:12,fill:color,class:"event-dot"},g);
+      h("circle",{cx:x,cy:cy,r:15,class:"focus-ring"},g);
+      var tag=h("text",{x:x,y:cy,class:"event-tag"},g);tag.textContent=ev.id;
+      g.addEventListener("pointerenter",function(){showEvent(ev);});
+      g.addEventListener("focus",function(){showEvent(ev);});
+      g.addEventListener("click",function(){showEvent(ev);});
+      g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();showEvent(ev);}});
+      assigned.push(ev.id);
+    });
+    document.getElementById("chart-caption").textContent=countries[countrySelect.value]+" · Wochenmittel inkl. Steuern · "+dateFmt(currentData[0].date)+" bis "+dateFmt(currentData[currentData.length-1].date)+" · "+currentData.length+" Wochen";
+    chart.setAttribute("aria-label","Wochenpreis für Diesel in "+countries[countrySelect.value]+", in Euro pro Liter, von "+dateFmt(currentData[0].date)+" bis "+dateFmt(currentData[currentData.length-1].date));
+    updateStats();
+    renderEvents();
+  }
+  function showEvent(ev){
+    tooltip.innerHTML="";
+    var title=document.createElement("strong");title.textContent=ev.id+" · "+ev.title;tooltip.appendChild(title);
+    var date=document.createElement("span");date.textContent=dateFmt(ev.date);tooltip.appendChild(date);
+    tooltip.style.display="block";tooltip.style.left="10px";tooltip.style.top="10px";
+    tooltip.setAttribute("aria-hidden","false");
+  }
+  function showPoint(index,event){
+    var row=currentData[index];if(!row)return;
+    tooltip.innerHTML="";
+    var title=document.createElement("strong");title.textContent=fmt(row.value,3)+" €/L";tooltip.appendChild(title);
+    var date=document.createElement("span");date.textContent=dateFmt(row.date)+" · "+countries[countrySelect.value];tooltip.appendChild(date);
+    var bounds=chart.getBoundingClientRect(),wrap=chartWrap.getBoundingClientRect();
+    var x=event.clientX-wrap.left,y=event.clientY-wrap.top;
+    tooltip.style.display="block";
+    tooltip.style.left=Math.max(4,Math.min(x+12,wrap.width-225))+"px";
+    tooltip.style.top=Math.max(4,Math.min(y+12,wrap.height-54))+"px";
+    tooltip.setAttribute("aria-hidden","false");
+  }
+  chart.addEventListener("pointermove",function(e){
+    if(e.target.closest&&e.target.closest("[data-event-id]"))return;
+    var rect=chart.getBoundingClientRect(),localX=(e.clientX-rect.left)/rect.width*W;
+    var x0=margin.left,x1=W-margin.right;
+    if(localX<x0||localX>x1)return;
+    var ratio=(localX-x0)/(x1-x0),index=Math.round(ratio*(currentData.length-1));
+    showPoint(index,e);
+  });
+  chart.addEventListener("pointerleave",function(){tooltip.style.display="none";tooltip.setAttribute("aria-hidden","true");});
+  function updateStats(){
+    var last=currentData[currentData.length-1];
+    document.getElementById("latest-value").textContent=fmt(last.value,3)+" €/L";
+    document.getElementById("latest-date").textContent="Wochenwert vom "+dateFmt(last.date);
+    var base=null;
+    for(var i=0;i<currentData.length;i++)if(currentData[i].date<="2026-02-23")base=currentData[i];
+    var diff=document.getElementById("change-value"),note=document.getElementById("change-note"),tank=document.getElementById("tank-value");
+    if(base){
+      var delta=last.value-base.value,pct=delta/base.value*100;
+      diff.textContent=(delta>0?"+":"")+fmt(delta,3)+" €/L";
+      note.textContent=(pct>0?"+":"")+fmt(pct,1)+" % seit "+dateFmt(base.date);
+      tank.textContent=(delta>0?"+":"")+fmt(delta*50,2)+" €";
+    }else{
+      diff.textContent="—";tank.textContent="—";note.textContent="Kein Vor-Konflikt-Wert in der geladenen Reihe";
+    }
+  }
+  function renderEvents(){
+    var container=document.getElementById("events");
+    while(container.firstChild)container.removeChild(container.firstChild);
+    var filtered=events.filter(function(ev){
+      return (ev.group==="ukraine"?document.getElementById("show-ukraine").checked:document.getElementById("show-iran").checked);
+    });
+    filtered.forEach(function(ev){
+      var article=document.createElement("article");article.className="event-card "+ev.group;
+      var date=document.createElement("div");date.className="event-date";date.textContent=ev.id+" · "+dateFmt(ev.date);article.appendChild(date);
+      var title=document.createElement("h3");title.textContent=ev.title;article.appendChild(title);
+      var p=document.createElement("p");p.textContent=ev.text;article.appendChild(p);
+      var link=document.createElement("a");link.className="event-source";link.href=ev.href;link.target="_blank";link.rel="noopener noreferrer";link.textContent=ev.source+" ↗";article.appendChild(link);
+      container.appendChild(article);
+    });
+  }
+  async function loadData(){
+    var id=++requestId,cc=countrySelect.value;
+    loading.hidden=false;loading.textContent="Wochenwerte für "+countries[cc]+" werden geladen …";
+    errorBox.hidden=true;chartWrap.hidden=true;
+    try{
+      var response=await fetch("https://www.fuel-prices.eu/lang/api/country-history.php?cc="+encodeURIComponent(cc),{cache:"no-store"});
+      if(!response.ok)throw new Error("HTTP "+response.status);
+      var json=await response.json(),rows=parsePoints(json);
+      if(id!==requestId)return;
+      currentData=rows;loading.hidden=true;chartWrap.hidden=false;drawChart();
+    }catch(err){
+      if(id!==requestId)return;
+      loading.hidden=true;errorBox.hidden=false;
+      document.getElementById("chart-caption").textContent="Datenquelle vorübergehend nicht erreichbar";
+    }
+  }
+  countrySelect.addEventListener("change",loadData);
+  document.getElementById("reload").addEventListener("click",loadData);
+  document.getElementById("show-ukraine").addEventListener("change",function(){drawChart();});
+  document.getElementById("show-iran").addEventListener("change",function(){drawChart();});
+  loadData();
+})();
+</script>
+</body>
+</html>
