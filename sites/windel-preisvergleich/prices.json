@@ -49,10 +49,10 @@
       "total": 57.99,
       "unit_price": 0.46024,
       "rankable": true,
-      "shipping_note": "Gratisversand laut Geizhals, Preisstand 12.10.",
+      "shipping_note": "Versandkostenfrei ab € 50 Bestellwert; Packung erfüllt die Grenze",
       "availability": "Lagernd · 1–3 Werktage",
       "url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-7-Extra-Large-17-kg/656659360",
-      "source_url": "https://geizhals.at/pampers-baby-dry-pants-gr-7-einwegwindel-a2920500.html",
+      "source_url": "https://www.0815.at/Informationen/Zahlungs-und-Versandarten",
       "link_label": "Zum Shop ↗"
     },
     {
@@ -60,16 +60,16 @@
       "pack": "Monatsbox",
       "count": 126,
       "item_price": 58.99,
-      "shipping": 0,
-      "total": 58.99,
-      "unit_price": 0.46817,
-      "rankable": true,
-      "shipping_note": "Gratisversand laut Preisvergleich, Preisstand 12.10.",
-      "availability": "Auf Lager laut Preisvergleich",
+      "shipping": null,
+      "total": null,
+      "unit_price": null,
+      "rankable": false,
+      "shipping_note": "Versand heute nicht direkt bestätigt",
+      "availability": "Auf Lager laut Preisvergleich; Shopangebot nicht bestätigt",
       "url": "https://www.amazon.at/s?k=Pampers+Baby-Dry+Pants+Gr%C3%B6%C3%9Fe+7+126+St%C3%BCck",
       "source_url": "https://geizhals.at/pampers-baby-dry-pants-gr-7-einwegwindel-a2920500.html",
       "link_label": "Bei Amazon suchen ↗",
-      "status_note": "Preisstand aus Händlervergleich; Angebot vor dem Kauf prüfen."
+      "status_note": "Preis € 58,99 heute nur im Händlervergleich gefunden; Amazon-Angebotsseite nicht direkt bestätigt."
     },
     {
       "retailer": "BIPA",
@@ -138,14 +138,15 @@
       "count": 126,
       "item_price": 65.27,
       "shipping": 5.90,
-      "total": 71.17,
-      "unit_price": 0.56484,
-      "rankable": true,
+      "total": null,
+      "unit_price": null,
+      "rankable": false,
       "shipping_note": "€ 5,90 Versand bei Kreditkarte oder Vorkasse",
       "availability": "Versandfertig in 24–72 Stunden",
       "url": "https://geizhals.at/pampers-baby-dry-pants-gr-7-einwegwindel-a2920500.html",
       "source_url": "https://geizhals.at/pampers-baby-dry-pants-gr-7-einwegwindel-a2920500.html",
-      "link_label": "Preisquelle Geizhals ↗"
+      "link_label": "Preisquelle Geizhals ↗",
+      "status_note": "Preis und Versand sind heute nur im Händlervergleich gelistet; direkter Produktlink nicht bestätigt."
     },
     {
       "retailer": "Babymondino.at",
@@ -157,9 +158,9 @@
       "unit_price": 0.69437,
       "rankable": true,
       "shipping_note": "Gratisversand in Österreich ab € 54,90",
-      "availability": "6 Stück auf Lager laut Händlervergleich · Preisstand 12.10.",
+      "availability": "Lieferung bis 14. Oktober · heute auf Händlerseite bestätigt",
       "url": "https://www.babymondino.at/pampers",
-      "source_url": "https://geizhals.at/pampers-baby-dry-pants-gr-7-einwegwindel-a2920500.html",
+      "source_url": "https://www.babymondino.at/pampers",
       "link_label": "Produktübersicht ↗"
     },
     {
