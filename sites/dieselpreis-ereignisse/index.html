@@ -73,6 +73,34 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .event-card p{margin:0;color:#435166;font-size:.91rem}
 .event-date{font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;font-weight:800;color:var(--muted)}
 .event-card.iran .event-date{color:#91451d}
+
+.oil-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.oil-highlight{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#f8fafd}
+.oil-highlight strong{display:block;color:var(--navy);font-size:1.35rem;line-height:1.2;font-variant-numeric:tabular-nums}
+.oil-highlight span{display:block;margin-top:4px;color:var(--muted);font-size:.84rem;font-weight:650}
+.oil-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
+.oil-panel{min-width:0;padding:16px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.oil-panel h3{margin:0;color:var(--navy);font-size:1.05rem}
+.oil-units{margin:3px 0 12px;color:var(--muted);font-size:.83rem}
+.rankings{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rank-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:.9rem}
+.rank-head span{color:#344257}
+.rank-head strong{white-space:nowrap;color:var(--navy);font-variant-numeric:tabular-nums}
+.rank-track{height:8px;margin-top:4px;overflow:hidden;border-radius:9px;background:#e9edf3}
+.rank-fill{display:block;height:100%;width:var(--bar);border-radius:inherit}
+.rankings.production .rank-fill{background:var(--blue)}
+.rankings.consumption .rank-fill{background:var(--orange)}
+.balance-title{margin:22px 0 7px;color:var(--navy);font-size:1.03rem}
+.table-scroll{overflow-x:auto}
+.balance-table{width:100%;border-collapse:collapse;font-size:.9rem;font-variant-numeric:tabular-nums}
+.balance-table th,.balance-table td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.balance-table th:first-child,.balance-table td:first-child{text-align:left}
+.balance-table thead th{background:#f8fafd;color:var(--navy);font-size:.82rem}
+.balance-table tbody tr:last-child td{border-bottom:0}
+.balance-note,.oil-source{font-size:.85rem;color:var(--muted)}
+.balance-note{margin:9px 0 0}
+.oil-source{margin:14px 0 0}
+.event-card.iran .event-date{color:#91451d}
 .event-source{display:inline-block;margin-top:10px;font-size:.84rem}
 .source-note{margin:22px 0 0;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:14px;color:#435166;font-size:.91rem}
 .source-note h2{font-size:1.06rem;color:var(--navy);margin:0 0 6px}
@@ -87,6 +115,8 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
  .stats{grid-template-columns:1fr}
  .stat{min-height:0}
  .chart-meta{font-size:.82rem}
+ .oil-grid,.oil-highlights{grid-template-columns:1fr}
+} .chart-meta{font-size:.82rem}
 }
 </style>
 </head>
@@ -161,12 +191,73 @@ footer{padding:0 0 34px;color:var(--muted);font-size:.84rem}
   <h2 class="section-title">Ereignisse im Kontext</h2>
   <section id="events" class="event-grid" aria-label="Ereignisse zu den Kriegen in der Ukraine und im Iran"></section>
 
-  <section class="source-note" aria-labelledby="sources-title">
+
+  <section class="card oil-card" aria-labelledby="oil-title">
+    <h2 id="oil-title">Wie viel Öl wird täglich gefördert und verbraucht?</h2>
+    <p class="intro">Länderwerte für 2025, das jüngste vollständige Berichtsjahr. Die Zahlen zeigen den Ölmarkt als Hintergrund zu Dieselpreisen und Kriegen; sie sind keine Diesel-Produktionsmengen. Ein Mio. Barrel pro Tag entspricht rund 159 Mio. Litern pro Tag.</p>
+    <div class="oil-highlights" aria-label="Weltweite Kennzahlen 2025">
+      <div class="oil-highlight"><strong>85,8 Mio.</strong><span>Barrel/Tag Rohöl + Kondensat weltweit</span></div>
+      <div class="oil-highlight"><strong>103,0 Mio.</strong><span>Barrel/Tag Ölverbrauch weltweit, ohne Biokraftstoffe</span></div>
+      <div class="oil-highlight"><strong>13,6 Mio.</strong><span>Barrel/Tag US-Rohölproduktion, weltweit Platz 1</span></div>
+    </div>
+    <div class="oil-grid">
+      <section class="oil-panel" aria-labelledby="oil-production-title">
+        <h3 id="oil-production-title">Größte Rohöl-Förderer</h3>
+        <p class="oil-units">Rohöl und Kondensat · Mio. Barrel pro Tag · 2025</p>
+        <ol class="rankings production" aria-label="Top zehn Rohölproduzenten 2025">
+          <li><div class="rank-head"><span>USA</span><strong>13,6</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:100%"></span></div></li>
+          <li><div class="rank-head"><span>Russland</span><strong>10,2</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:75%"></span></div></li>
+          <li><div class="rank-head"><span>Saudi-Arabien</span><strong>9,7</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:71.3%"></span></div></li>
+          <li><div class="rank-head"><span>Kanada</span><strong>5,4</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:39.7%"></span></div></li>
+          <li><div class="rank-head"><span>Iran</span><strong>4,4</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:32.4%"></span></div></li>
+          <li><div class="rank-head"><span>China</span><strong>4,3</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:31.6%"></span></div></li>
+          <li><div class="rank-head"><span>Irak</span><strong>4,3</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:31.6%"></span></div></li>
+          <li><div class="rank-head"><span>Brasilien</span><strong>3,8</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:27.9%"></span></div></li>
+          <li><div class="rank-head"><span>Vereinigte Arabische Emirate</span><strong>3,5</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:25.7%"></span></div></li>
+          <li><div class="rank-head"><span>Kuwait</span><strong>2,5</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:18.4%"></span></div></li>
+        </ol>
+      </section>
+      <section class="oil-panel" aria-labelledby="oil-consumption-title">
+        <h3 id="oil-consumption-title">Größte Ölverbraucher</h3>
+        <p class="oil-units">Ölbedarf · Mio. Barrel pro Tag · 2025</p>
+        <ol class="rankings consumption" aria-label="Größte Ölverbraucher 2025">
+          <li><div class="rank-head"><span>USA</span><strong>19,4</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:100%"></span></div></li>
+          <li><div class="rank-head"><span>China</span><strong>17,4</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:89.7%"></span></div></li>
+          <li><div class="rank-head"><span>Indien</span><strong>5,6</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:28.9%"></span></div></li>
+          <li><div class="rank-head"><span>Saudi-Arabien</span><strong>3,9</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:20.1%"></span></div></li>
+          <li><div class="rank-head"><span>Russland</span><strong>3,6</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:18.6%"></span></div></li>
+          <li><div class="rank-head"><span>Japan</span><strong>3,3</strong></div><div class="rank-track" aria-hidden="true"><span class="rank-fill" style="--bar:17%"></span></div></li>
+        </ol>
+      </section>
+    </div>
+    <h3 class="balance-title">Förderung im Verhältnis zum Verbrauch</h3>
+    <p class="oil-units">Produktion und Verbrauch in Mio. Barrel/Tag, gerundet. Ein positiver Wert bedeutet rechnerischen Überschuss; ein negativer Wert rechnerischen Fehlbedarf.</p>
+    <div class="table-scroll">
+      <table class="balance-table">
+        <caption class="oil-units">Ausgewählte Länder, 2025</caption>
+        <thead><tr><th scope="col">Land</th><th scope="col">Produktion*</th><th scope="col">Verbrauch</th><th scope="col">Saldo*</th></tr></thead>
+        <tbody>
+          <tr><td>Saudi-Arabien</td><td>11,4</td><td>3,9</td><td>+7,5</td></tr>
+          <tr><td>Russland</td><td>10,7</td><td>3,6</td><td>+7,1</td></tr>
+          <tr><td>Kanada</td><td>6,2</td><td>2,4</td><td>+3,8</td></tr>
+          <tr><td>Irak</td><td>4,4</td><td>0,9</td><td>+3,5</td></tr>
+          <tr><td>USA</td><td>21,1</td><td>19,4</td><td>+1,7</td></tr>
+          <tr><td>Indien</td><td>0,7</td><td>5,6</td><td>−4,9</td></tr>
+          <tr><td>China</td><td>4,3</td><td>17,4</td><td>−13,0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="balance-note">* Für diese Saldo-Tabelle umfasst die Produktion auch Erdgasflüssigkeiten (NGL). Der Saldo ist nicht gleich dem tatsächlichen Nettohandel: Lagerbewegungen, Raffinerieverarbeitung und andere Flüssigstoffe verändern die Handelsbilanz. Die Förder-Rangliste oben zählt dagegen Rohöl und Kondensat ohne NGL. Verbrauch umfasst Öl, jedoch keine Biokraftstoffe.</p>
+    <p class="oil-source">Quelle: <a href="https://www.energyinst.org/statistical-review/resources-and-data-downloads" target="_blank" rel="noopener noreferrer">Energy Institute, Statistical Review of World Energy 2026</a> (Datenjahr 2025); zum US-Rohölrekord siehe auch die <a href="https://www.eia.gov/todayinenergy/detail.php?id=67844." target="_blank" rel="noopener noreferrer">U.S. EIA</a>. Werte der Ranglisten sind auf 0,1 Mio. Barrel/Tag gerundet.</p>
+  </section>
+
+  <section class="source-note" aria-labelledby="sources-title">  <section class="source-note" aria-labelledby="sources-title">
     <h2 id="sources-title">Daten und Quellen</h2>
     <p>Preisreihe: wöchentliche, steuerinklusive Länderwerte aus dem <a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en" target="_blank" rel="noopener noreferrer">Weekly Oil Bulletin der Europäischen Kommission</a>, bereitgestellt über die <a href="https://www.fuel-prices.eu/api/docs/" target="_blank" rel="noopener noreferrer">Schnittstelle von fuel-prices.eu</a>. Die Reihe enthält bis zu fünf Jahre und wird wöchentlich aktualisiert. Sie kann gegenüber dem neuesten Kommissionsbulletin etwas zurückliegen. Angezeigt wird der letzte verfügbare Datenpunkt; sein Datum steht oberhalb des Diagramms.</p>
     <p>USA: wöchentliche On-Highway-Dieselpreise aus dem öffentlichen Datensatz <a href="https://agtransport.usda.gov/Fuel/Historical-Diesel-Fuel-Prices/u2kh-s8ke" target="_blank" rel="noopener noreferrer">Historical Diesel Fuel Prices des USDA Open Ag Transport Data</a>, in US-Dollar pro Gallone; ergänzende Methodik und Wochenwerte stehen bei der <a href="https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm" target="_blank" rel="noopener noreferrer">U.S. Energy Information Administration (EIA)</a>. Umrechnung ins Diagramm: USD/Gallone ÷ USD je Euro ÷ 3,785411784 Liter je US-Gallone. Die Tageskurse kommen über die <a href="https://frankfurter.dev/providers/" target="_blank" rel="noopener noreferrer">Frankfurter API</a> von Zentralbanken und offiziellen Institutionen; verwendet wird der letzte verfügbare Kurs am oder vor dem Wochenstichtag. Die EIA änderte die Stichprobenmethode am 13. Juni 2022; dieser Wochenwert ist laut EIA nicht direkt mit der Vorwoche vergleichbar.</p>
     <p>Die zeitliche Einordnung stützt sich auf Berichte der <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260727~1212bdb8f9.en.html" target="_blank" rel="noopener noreferrer">EZB zum Ölpreisschock</a>, das <a href="https://www.ecb.europa.eu/pub/pdf/ecbu/eb202602.en.pdf" target="_blank" rel="noopener noreferrer">Economic Bulletin 2/2026 zum Iran-Krieg</a>, die <a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260731~6224db57f8.en.html" target="_blank" rel="noopener noreferrer">Weitergabe an Dieselpreise</a> und den <a href="https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ecb.ebbox202302_02~59c965249a.en.html" target="_blank" rel="noopener noreferrer">EZB-Bericht zu Russland-Sanktionen und Dieselmarkt</a>. Die EU-Ölverbote traten am 5. Dezember 2022 (Rohöl) und 5. Februar 2023 (Ölprodukte) in Kraft.</p>
-    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu; USDA Open Ag Transport Data/EIA und offizielle Wechselkursdaten, vermittelt durch Frankfurter. US- und EU-Werte sind nationale Wochenmittelwerte, keine regional gewichteten Vergleichspreise.</p>
+    <p>Ölproduktion und Verbrauch: Länderwerte für 2025 aus dem <a href="https://www.energyinst.org/statistical-review/resources-and-data-downloads" target="_blank" rel="noopener noreferrer">Energy Institute Statistical Review 2026</a>. Die Rohöl-Förderrangliste umfasst Rohöl und Kondensat; die zusätzliche Saldo-Tabelle berücksichtigt NGL. Die Verbrauchswerte schließen Biokraftstoffe aus. Die Maße sind daher getrennt erklärt und nicht ohne Weiteres gleichzusetzen. Für US-Rohölproduktion 2025: <a href="https://www.eia.gov/todayinenergy/detail.php?id=67844." target="_blank" rel="noopener noreferrer">U.S. EIA</a>.</p>
+    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu;    <p>Quellenangabe: European Commission Weekly Oil Bulletin, vermittelt durch fuel-prices.eu; USDA Open Ag Transport Data/EIA und offizielle Wechselkursdaten, vermittelt durch Frankfurter. US- und EU-Werte sind nationale Wochenmittelwerte, keine regional gewichteten Vergleichspreise.</p>
   </section>
 </main>
 <footer class="wrap">Stand der angezeigten Preisreihe: Datum des letzten vom Datendienst gelieferten Wochenwerts.</footer>
