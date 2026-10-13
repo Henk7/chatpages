@@ -183,6 +183,18 @@
     .panel { padding: 18px 19px; }
     .panel h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.05rem; }
     .panel p { margin: 0; color: #3f4e62; font-size: .93rem; }
+    .q3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .q3-card { padding: 18px 19px; background: var(--paper); border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 3px 14px rgba(22, 38, 61, .04); }
+    .q3-card h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.05rem; }
+    .q3-card p { margin: 0; color: #3f4e62; font-size: .93rem; }
+    .q3-number { display: block; margin: 7px 0 2px; color: var(--green); font-size: 1.55rem; font-weight: 850; line-height: 1.2; }
+    .q3-table { min-width: 650px; }
+    .q3-table th, .q3-table td { padding: 11px 13px; }
+    .tool-table { min-width: 700px; }
+    select {
+      width: 100%; min-height: 48px; border: 1px solid #bac6d4; border-radius: 9px;
+      background: #fff; color: var(--ink); padding: 10px 12px; font: inherit;
+    }
     .source-list { margin: 0; padding-left: 19px; color: #3f4e62; font-size: .91rem; }
     .source-list li + li { margin-top: 6px; }
     .checked { margin: 20px 0 0; color: var(--muted); font-size: .83rem; }
@@ -194,6 +206,7 @@
       .winner { grid-template-columns: 1fr; gap: 12px; padding: 19px; }
       .winner-total { text-align: left; }
       .calc-grid, .details-grid { grid-template-columns: 1fr; }
+      .q3-grid { grid-template-columns: 1fr; }
       .calculator { padding: 16px; }
     }
   </style>
@@ -294,6 +307,73 @@
       <div class="note"><strong>Preisfazit:</strong> BAUHAUS zeigt für diese Platte 5,63 €/m² ab 108 m². Für die Beispielmenge sind das <span id="savingText">132,68 € weniger Materialkosten als bei HORNBACH</span>. Da BAUHAUS-Versandkosten und örtlicher Bestand hier nicht ausgewiesen sind, ist der niedrigste Endpreis erst nach PLZ- und Marktprüfung sicher.</div>
     </section>
 
+    <section class="section" aria-labelledby="q3Title">
+      <h2 class="section-heading" id="q3Title">Q3-Spachtelung: Material und Utensilien</h2>
+      <p style="margin:0 0 13px;color:#526277">Berechnet für <strong id="q3AreaSummary">200 m²</strong> fertige Plattenfläche. Der Verschnitt der Platten erhöht diese Spachtelfläche nicht.</p>
+      <div class="q3-grid">
+        <article class="q3-card">
+          <h3>Fugenfüller für die Grundverspachtelung</h3>
+          <p>Knauf Uniflott imprägniert, Richtverbrauch laut Plattendicke und Einsatzort. Die Sackzahl enthält 10 % Reserve.</p>
+          <div class="table-wrap" style="margin-top:12px;box-shadow:none">
+            <table class="q3-table">
+              <thead><tr><th>Fläche</th><th>Richtwert</th><th>inkl. 10 %</th><th>5-kg-Säcke</th></tr></thead>
+              <tbody>
+                <tr><td>Wand</td><td>0,5 kg/m²</td><td id="q3WallMass">110 kg</td><td id="q3WallBags">22</td></tr>
+                <tr><td>Decke</td><td>0,3 kg/m²</td><td id="q3CeilingMass">66 kg</td><td id="q3CeilingBags">14</td></tr>
+                <tr><td>Trockenputz / Vorsatzschale</td><td>0,25 kg/m²</td><td id="q3DryMass">55 kg</td><td id="q3DryBags">11</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sub" style="margin-top:9px">Das sind Q2-Fugen-Richtwerte als Basis. Q3 verlangt zusätzlich breiteres Ausspachteln; dessen Mehrverbrauch hängt von Fugenbreite und Ebenheit ab.</p>
+        </article>
+
+        <article class="q3-card">
+          <h3>Feinspachtel für den Q3-Porenverschluss</h3>
+          <p>Knauf Fill &amp; Finish Light: ca. 1,1 kg/m² je mm. Da Q3 keinen festen vollflächigen Millimeterauftrag vorgibt, ist 0,3 mm hier ein veränderbarer Planungsansatz.</p>
+          <div class="calc-grid" style="margin-top:12px">
+            <div>
+              <label for="q3Thickness">Angenommene mittlere Schichtdicke</label>
+              <select id="q3Thickness">
+                <option value="0.2">0,2 mm · dünn</option>
+                <option value="0.3" selected>0,3 mm · Planungswert</option>
+                <option value="0.5">0,5 mm · großzügig</option>
+              </select>
+            </div>
+            <div>
+              <label>Feinspachtel inkl. 10 % Reserve</label>
+              <strong class="q3-number" id="q3FinishMass">73 kg</strong>
+              <span class="sub" id="q3FinishPails">4 × 20 kg</span>
+            </div>
+          </div>
+          <p class="sub" style="margin-top:10px">Planungsbereich bei 0,2–0,5 mm: <span id="q3FinishRange">49–121 kg</span> inkl. Reserve. Vor dem Großeinkauf eine Probefläche abziehen; nicht mit Q4 (mind. 1 mm vollflächig) verwechseln.</p>
+        </article>
+
+        <article class="q3-card">
+          <h3>Bewehrungsstreifen an Schnittkanten</h3>
+          <p>Knauf empfiehlt Fugendeckstreifen Kurt bei Uniflott an Schnittkanten; an werkseitigen HRAK-Kanten ist er laut Systemspachtel nicht erforderlich.</p>
+          <strong class="q3-number" id="q3TapeLength">99 m</strong>
+          <p id="q3TapePack">Decken-Planungswert inkl. 10 % Reserve: 1 Rolle à 75 m + 1 Rolle à 25 m.</p>
+          <p class="sub" style="margin-top:8px">Der Richtwert von 0,45 m/m² stammt aus Knaufs Decken-Materialbedarf. Bei Wänden oder anderem Plattenlayout Schnittkanten aus dem Verlegeplan messen.</p>
+        </article>
+
+        <article class="q3-card">
+          <h3>Werkzeug für eine Person</h3>
+          <p>Bei mehreren Personen die Handwerkzeuge je Arbeitsplatz verdoppeln.</p>
+          <ul class="source-list" style="margin-top:9px">
+            <li>1 × Rührgerät mit langsam laufendem Quirl für den Pulver-Fugenfüller</li>
+            <li>3 × saubere 20-l-Eimer: anmischen, Wasser, Werkzeugreinigung</li>
+            <li>1 × Fugenspachtel 10–15 cm, 1 × Breitspachtel 25–30 cm</li>
+            <li>1 × Flächenspachtel / Glättkelle 45–60 cm für den scharfen Q3-Abzug</li>
+            <li>1 × Cuttermesser, 1 × Kantenhobel/Raspel und Schere für den Bewehrungsstreifen</li>
+            <li>1 × Handschleifer oder Teleskopschleifer mit Absaugung; Schleifmittel ab Korn 200</li>
+            <li>1 × Baustrahler; bei Decken 1 standsichere Arbeitsplattform</li>
+            <li>Je Person: Schutzbrille und FFP2-Maske beim Schleifen</li>
+          </ul>
+        </article>
+      </div>
+      <div class="note"><strong>Beispiel für 200 m² Wand:</strong> rund 110 kg Uniflott imprägniert (22 Säcke à 5 kg), dazu beim 0,3-mm-Planungsansatz rund 73 kg Fill &amp; Finish Light (4 Gebinde à 20 kg) und etwa 99 m Kurt-Streifen als Decken-Benchmark. Die Fugen- und Streifenmengen anhand des echten Verlegeplans prüfen.</div>
+    </section>
+
     <section class="section details-grid" aria-label="Produkt und Rechenweg">
       <article class="panel">
         <h3>Was genau wird verglichen?</h3>
@@ -312,6 +392,12 @@
         <li><a href="https://www.bauhaus.at/gipsfaserplatten/knauf-gipskartonplatte-2000/p/21086445" target="_blank" rel="noopener noreferrer">BAUHAUS: Stückpreis 11,27 €; Mengenpreis 5,63 €/m² ab 108 m²</a></li>
         <li><a href="https://www.hornbach.at/p/gipskartonplatte-knauf-gkfi-impraegniert-2000x900x12-5-mm/5233517/" target="_blank" rel="noopener noreferrer">HORNBACH: GKFI-Platte 2000 × 900 × 12,5 mm, 6,26 €/m²</a></li>
         <li><a href="https://www.bauwolf.at/knauf-ausbauplatte-2000-2000x900x125mm-178.html" target="_blank" rel="noopener noreferrer">Bauwolf: 17,74 € je Platte; LKW-Versandregeln für Österreich</a></li>
+        <li><a href="https://knauf.com/de-AT/p/produkt/uniflott-impraegniert-10133_0070" target="_blank" rel="noopener noreferrer">Knauf: Uniflott imprägniert und 5-kg-Gebinde</a></li>
+        <li><a href="https://knauf.com/api/download-center/v1/assets/ee9dc3db-bb42-43d3-b675-c618356a36e0?country=de&amp;download=true" target="_blank" rel="noopener noreferrer">Knauf: Technisches Blatt mit Fugenverbrauch für Wand und Decke</a></li>
+        <li><a href="https://knauf.com/de-AT/p/produkt/fill-finish-light-11409_0070" target="_blank" rel="noopener noreferrer">Knauf: Fill &amp; Finish Light, Q3–Q4 und Verbrauch je mm</a></li>
+        <li><a href="https://knauf.com/de-DE/p/produkt/fugendeckstreifen-kurt-10435_0010" target="_blank" rel="noopener noreferrer">Knauf: Fugendeckstreifen Kurt für Schnittkanten und Rollenlängen</a></li>
+        <li><a href="https://knauf.com/api/download-center/v1/assets/84262eb9-81fb-4394-bb3d-41787bbfb125?country=AT&amp;download=true&amp;locale=de-AT" target="_blank" rel="noopener noreferrer">Knauf D11.at: Decken-Materialbedarf und 0,45 m Fugendeckstreifen je m²</a></li>
+        <li><a href="https://knauf.com/de-DE/kompetenzen/design/spachtelung" target="_blank" rel="noopener noreferrer">Knauf: Definition der Qualitätsstufen Q3 und Q4</a></li>
       </ul>
       <p class="checked">Preise zuletzt geprüft am <time datetime="2026-10-13">13.10.2026</time>. Tagespreise, Lagerstände, Lieferkosten und mögliche Mengenrabatte können sich ändern. Die BAUHAUS- und HORNBACH-Lieferkosten sind deshalb nicht in ihren Materialbeträgen enthalten.</p>
     </section>
@@ -326,8 +412,36 @@
       const fmt = new Intl.NumberFormat("de-AT", { style: "currency", currency: "EUR" });
       const num = new Intl.NumberFormat("de-AT", { maximumFractionDigits: 1 });
       const rateNum = new Intl.NumberFormat("de-AT", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const massNum = new Intl.NumberFormat("de-AT", { maximumFractionDigits: 0 });
       const roundMoney = function (value) { return Math.round((value + Number.EPSILON) * 100) / 100; };
       const set = function (id, value) { document.getElementById(id).textContent = value; };
+      const q3Thickness = document.getElementById("q3Thickness");
+
+      function recalculateQ3(area) {
+        const reserveArea = area * 1.1;
+        const wall = reserveArea * 0.5;
+        const ceiling = reserveArea * 0.3;
+        const drylining = reserveArea * 0.25;
+        const thickness = Number(q3Thickness.value) || 0.3;
+        const finish = reserveArea * thickness * 1.1;
+        const minFinish = reserveArea * 0.2 * 1.1;
+        const maxFinish = reserveArea * 0.5 * 1.1;
+        const tape = Math.ceil(reserveArea * 0.45);
+        set("q3AreaSummary", num.format(area) + " m²");
+        set("q3WallMass", massNum.format(wall) + " kg");
+        set("q3WallBags", String(Math.ceil(wall / 5)));
+        set("q3CeilingMass", massNum.format(ceiling) + " kg");
+        set("q3CeilingBags", String(Math.ceil(ceiling / 5)));
+        set("q3DryMass", massNum.format(drylining) + " kg");
+        set("q3DryBags", String(Math.ceil(drylining / 5)));
+        set("q3FinishMass", massNum.format(finish) + " kg");
+        set("q3FinishPails", Math.ceil(finish / 20) + " × 20 kg");
+        set("q3FinishRange", massNum.format(minFinish) + "–" + massNum.format(maxFinish) + " kg");
+        set("q3TapeLength", tape + " m");
+        set("q3TapePack", tape <= 100
+          ? "Decken-Planungswert inkl. 10 % Reserve: 1 Rolle à 75 m + 1 Rolle à 25 m."
+          : "Decken-Planungswert inkl. 10 % Reserve; Rollenlängen 25 m und 75 m passend kombinieren.");
+      }
 
       function recalculate() {
         const area = Math.max(1, Number(areaInput.value) || 200);
@@ -360,6 +474,7 @@
           ? "Standard-LKW bei diesem Warenwert versandkostenfrei; Kranoption +85 €."
           : "98 € Standard-LKW unter 2.400 € Warenwert; darüber versandkostenfrei. Kranoption zusätzlich.");
         set("savingText", fmt.format(savings) + " weniger Materialkosten als bei HORNBACH");
+        recalculateQ3(area);
         document.querySelectorAll("[data-waste]").forEach(function (button) {
           button.setAttribute("aria-pressed", String(Number(button.dataset.waste) === waste));
         });
@@ -367,6 +482,9 @@
 
       areaInput.addEventListener("input", recalculate);
       wasteInput.addEventListener("input", recalculate);
+      q3Thickness.addEventListener("change", function () {
+        recalculateQ3(Math.max(1, Number(areaInput.value) || 200));
+      });
       document.querySelectorAll("[data-waste]").forEach(function (button) {
         button.addEventListener("click", function () {
           wasteInput.value = button.dataset.waste;
