@@ -426,7 +426,7 @@
         const finish = reserveArea * thickness * 1.1;
         const minFinish = reserveArea * 0.2 * 1.1;
         const maxFinish = reserveArea * 0.5 * 1.1;
-        const tape = Math.ceil(reserveArea * 0.45);
+        const tape = Math.ceil(reserveArea * 0.45 - 1e-9);
         let tapeRolls75 = 0;
         let tapeRolls25 = 0;
         let bestTapeLength = Infinity;
