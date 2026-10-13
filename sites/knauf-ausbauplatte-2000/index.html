@@ -325,6 +325,7 @@
       const wasteInput = document.getElementById("waste");
       const fmt = new Intl.NumberFormat("de-AT", { style: "currency", currency: "EUR" });
       const num = new Intl.NumberFormat("de-AT", { maximumFractionDigits: 1 });
+      const rateNum = new Intl.NumberFormat("de-AT", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       const roundMoney = function (value) { return Math.round((value + Number.EPSILON) * 100) / 100; };
       const set = function (id, value) { document.getElementById(id).textContent = value; };
 
@@ -347,7 +348,7 @@
         set("netSummary", "Nutzfläche " + num.format(area) + " m² + " + num.format(waste) + " % Verschnitt");
         set("winnerText", "Bei " + num.format(area) + " m² Fläche und " + num.format(waste) + " % Verschnitt: " + boards + " Platten für " + num.format(bought) + " m². Versand und Abholung bitte anhand Markt und Postleitzahl prüfen.");
         set("winnerPrice", fmt.format(bauhausMaterial));
-        set("bauhausRate", num.format(bauhausRate) + " €/m²");
+        set("bauhausRate", rateNum.format(bauhausRate) + " €/m²");
         set("bauhausTier", bought >= 108 ? "Mengenpreis ab 108 m²; regulär 11,27 €/Platte" : "regulärer Preis laut Produktseite");
         set("bauhausTotal", fmt.format(bauhausMaterial));
         set("bauhausQty", boards + " Platten · Versand nicht eingerechnet");
