@@ -427,6 +427,21 @@
         const minFinish = reserveArea * 0.2 * 1.1;
         const maxFinish = reserveArea * 0.5 * 1.1;
         const tape = Math.ceil(reserveArea * 0.45);
+        let tapeRolls75 = 0;
+        let tapeRolls25 = 0;
+        let bestTapeLength = Infinity;
+        let bestTapeRollCount = Infinity;
+        for (let rolls75 = 0; rolls75 <= Math.ceil(tape / 75); rolls75 += 1) {
+          const rolls25 = Math.ceil(Math.max(0, tape - rolls75 * 75 - 1e-9) / 25);
+          const totalLength = rolls75 * 75 + rolls25 * 25;
+          const rollCount = rolls75 + rolls25;
+          if (totalLength < bestTapeLength || (totalLength === bestTapeLength && rollCount < bestTapeRollCount)) {
+            bestTapeLength = totalLength;
+            bestTapeRollCount = rollCount;
+            tapeRolls75 = rolls75;
+            tapeRolls25 = rolls25;
+          }
+        }
         set("q3AreaSummary", num.format(area) + " m²");
         set("q3WallMass", massNum.format(wall) + " kg");
         set("q3WallBags", String(Math.ceil((wall - 1e-9) / 5)));
@@ -437,10 +452,11 @@
         set("q3FinishMass", massNum.format(finish) + " kg");
         set("q3FinishPails", Math.ceil(finish / 20) + " × 20 kg");
         set("q3FinishRange", Math.ceil(minFinish - 1e-9) + "–" + Math.ceil(maxFinish - 1e-9) + " kg");
-        set("q3TapeLength", Math.ceil(reserveArea * 0.45 - 1e-9) + " m");
-        set("q3TapePack", tape <= 100
-          ? "Decken-Planungswert inkl. 10 % Reserve: 1 Rolle à 75 m + 1 Rolle à 25 m."
-          : "Decken-Planungswert inkl. 10 % Reserve; Rollenlängen 25 m und 75 m passend kombinieren.");
+        set("q3TapeLength", tape + " m");
+        const tapePacks = [];
+        if (tapeRolls75) tapePacks.push(tapeRolls75 + " Rolle" + (tapeRolls75 === 1 ? "" : "n") + " à 75 m");
+        if (tapeRolls25) tapePacks.push(tapeRolls25 + " Rolle" + (tapeRolls25 === 1 ? "" : "n") + " à 25 m");
+        set("q3TapePack", "Decken-Planungswert inkl. 10 % Reserve: " + tapePacks.join(" + ") + ".");
       }
 
       function recalculate() {
