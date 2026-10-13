@@ -429,15 +429,15 @@
         const tape = Math.ceil(reserveArea * 0.45);
         set("q3AreaSummary", num.format(area) + " m²");
         set("q3WallMass", massNum.format(wall) + " kg");
-        set("q3WallBags", String(Math.ceil(wall / 5)));
+        set("q3WallBags", String(Math.ceil((wall - 1e-9) / 5)));
         set("q3CeilingMass", massNum.format(ceiling) + " kg");
         set("q3CeilingBags", String(Math.ceil(ceiling / 5)));
         set("q3DryMass", massNum.format(drylining) + " kg");
-        set("q3DryBags", String(Math.ceil(drylining / 5)));
+        set("q3DryBags", String(Math.ceil((drylining - 1e-9) / 5)));
         set("q3FinishMass", massNum.format(finish) + " kg");
         set("q3FinishPails", Math.ceil(finish / 20) + " × 20 kg");
-        set("q3FinishRange", massNum.format(minFinish) + "–" + massNum.format(maxFinish) + " kg");
-        set("q3TapeLength", tape + " m");
+        set("q3FinishRange", Math.ceil(minFinish - 1e-9) + "–" + Math.ceil(maxFinish - 1e-9) + " kg");
+        set("q3TapeLength", Math.ceil(reserveArea * 0.45 - 1e-9) + " m");
         set("q3TapePack", tape <= 100
           ? "Decken-Planungswert inkl. 10 % Reserve: 1 Rolle à 75 m + 1 Rolle à 25 m."
           : "Decken-Planungswert inkl. 10 % Reserve; Rollenlängen 25 m und 75 m passend kombinieren.");
