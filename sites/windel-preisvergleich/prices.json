@@ -3,8 +3,8 @@
   "size": 7,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-13T08:15:39+02:00",
-  "checked_label": "13. Oktober 2026 um 08:15 Uhr · Europe/Vienna Uhr · Europe/Vienna",
+  "checked_at": "2026-10-13T08:16:06+02:00",
+  "checked_label": "13. Oktober 2026 · 08:16 Uhr · Europe/Vienna",
   "thresholds": {
     "great": 0.3,
     "good": 0.35
@@ -192,7 +192,7 @@
     },
     {
       "date": "2026-10-13",
-      "checked_at": "2026-10-13T08:15:39+02:00",
+      "checked_at": "2026-10-13T08:16:06+02:00",
       "best_unit_price": 0.4266810344827586,
       "best_total": 98.99,
       "retailer": "Kaufland.at · Koif"
