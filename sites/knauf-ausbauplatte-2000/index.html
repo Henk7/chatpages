@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Preisvergleich für Knauf Ausbauplatte 2000, 2000 × 900 × 12,5 mm. Rechner für Plattenzahl, Verschnitt und Materialkosten für rund 200 m².">
+  <meta name="theme-color" content="#16263d">
+  <title>Knauf Ausbauplatte 2000 · Preisvergleich für 200 m²</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #192638;
+      --muted: #607086;
+      --line: #dce4ec;
+      --paper: #ffffff;
+      --wash: #f2f5f7;
+      --navy: #16263d;
+      --blue: #3159c7;
+      --green: #176b50;
+      --green-wash: #e8f4ee;
+      --gold: #e7bd61;
+      --amber-wash: #fff7e6;
+      --shadow: 0 10px 30px rgba(22, 38, 61, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    .hero {
+      color: #fff;
+      background: linear-gradient(130deg, #142238 0%, #263f68 100%);
+      border-bottom: 5px solid var(--gold);
+      padding: 35px 0 32px;
+    }
+    .brand {
+      color: #cbd7e8;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 12px 0 10px;
+      font-size: clamp(2rem, 5vw, 3.45rem);
+      line-height: 1.06;
+      letter-spacing: -.035em;
+    }
+    .lede { max-width: 720px; margin: 0; color: #e3eaf4; font-size: 1.05rem; }
+    .spec-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 19px; }
+    .pill {
+      border: 1px solid #73839d;
+      border-radius: 999px;
+      padding: 5px 11px;
+      color: #f1f4f8;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+    main { padding: 24px 0 54px; }
+    .winner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(220px, .8fr);
+      gap: 20px;
+      align-items: center;
+      margin-top: -1px;
+      padding: 23px 25px;
+      background: var(--green-wash);
+      border: 1px solid #bddccc;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    .eyebrow {
+      color: var(--green);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .winner h2 { margin: 5px 0 5px; color: #134b3b; font-size: clamp(1.3rem, 3vw, 1.8rem); line-height: 1.2; }
+    .winner p { margin: 0; color: #344b43; }
+    .winner-total { text-align: right; }
+    .winner-total strong { display: block; color: #134b3b; font-size: clamp(1.8rem, 4vw, 2.45rem); line-height: 1.1; }
+    .winner-total span { color: #486558; font-size: .9rem; }
+    .section { margin-top: 27px; }
+    .section-heading { margin: 0 0 12px; color: var(--navy); font-size: 1.35rem; line-height: 1.25; }
+    .calculator, .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      box-shadow: 0 3px 14px rgba(22, 38, 61, .04);
+    }
+    .calculator { padding: 20px; }
+    .calc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    label { display: block; margin-bottom: 6px; color: var(--navy); font-size: .9rem; font-weight: 750; }
+    input {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid #bac6d4;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--ink);
+      padding: 10px 12px;
+      font: inherit;
+      font-size: 1.05rem;
+    }
+    input:focus-visible, a:focus-visible, button:focus-visible {
+      outline: 3px solid #80a0ff;
+      outline-offset: 2px;
+    }
+    .quick-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 13px; }
+    .quick-label { margin-right: 2px; color: var(--muted); font-size: .85rem; }
+    .quick {
+      border: 1px solid #c8d2de;
+      border-radius: 999px;
+      background: #f7f9fb;
+      color: #243953;
+      padding: 6px 12px;
+      font: inherit;
+      font-size: .84rem;
+      font-weight: 750;
+      cursor: pointer;
+    }
+    .quick[aria-pressed="true"] { border-color: var(--blue); background: #edf1ff; color: #274bb1; }
+    .calc-result {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      align-items: baseline;
+      margin-top: 17px;
+      padding-top: 15px;
+      border-top: 1px solid var(--line);
+    }
+    .calc-result strong { color: var(--navy); }
+    .calc-result span { color: var(--muted); }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--paper);
+      box-shadow: 0 3px 14px rgba(22, 38, 61, .04);
+    }
+    table { width: 100%; min-width: 850px; border-collapse: collapse; }
+    caption { padding: 13px 16px; color: var(--muted); text-align: left; font-size: .87rem; }
+    th, td { padding: 14px 15px; border-top: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #f8fafc; color: #526277; font-size: .76rem; letter-spacing: .07em; text-transform: uppercase; }
+    td { font-size: .93rem; }
+    tbody tr:first-child td { border-top: 0; }
+    tbody tr.best { background: #f1f8f4; }
+    .store { color: var(--navy); font-weight: 850; white-space: nowrap; }
+    .best-tag {
+      display: inline-block;
+      margin-left: 7px;
+      border-radius: 999px;
+      background: #d7eddf;
+      color: #14563f;
+      padding: 2px 7px;
+      font-size: .68rem;
+      font-weight: 850;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      vertical-align: 2px;
+    }
+    .main-price { display: block; color: var(--navy); font-size: 1.05rem; font-weight: 850; white-space: nowrap; }
+    .sub { display: block; margin-top: 3px; color: var(--muted); font-size: .82rem; }
+    .outbound { display: inline-block; font-weight: 800; white-space: nowrap; }
+    .note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border: 1px solid #ead9a9;
+      border-radius: 12px;
+      background: var(--amber-wash);
+      color: #584a27;
+      font-size: .91rem;
+    }
+    .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .panel { padding: 18px 19px; }
+    .panel h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.05rem; }
+    .panel p { margin: 0; color: #3f4e62; font-size: .93rem; }
+    .source-list { margin: 0; padding-left: 19px; color: #3f4e62; font-size: .91rem; }
+    .source-list li + li { margin-top: 6px; }
+    .checked { margin: 20px 0 0; color: var(--muted); font-size: .83rem; }
+    .back { display: inline-block; margin-top: 12px; font-weight: 750; }
+    footer { padding: 0 0 30px; color: var(--muted); font-size: .82rem; }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 26px, 1120px); }
+      .hero { padding: 27px 0 24px; }
+      .winner { grid-template-columns: 1fr; gap: 12px; padding: 19px; }
+      .winner-total { text-align: left; }
+      .calc-grid, .details-grid { grid-template-columns: 1fr; }
+      .calculator { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="brand">Materialvergleich · Österreich</div>
+      <h1>Knauf Ausbauplatte 2000</h1>
+      <p class="lede">Preisvergleich für rund 200 m²: gleiche Plattengröße, tatsächliche Plattenzahl und sichtbare Lieferkosten statt bloßer Quadratmeterpreise.</p>
+      <div class="spec-pills" aria-label="Produktdaten">
+        <span class="pill">2000 × 900 × 12,5 mm</span>
+        <span class="pill">1,80 m² je Platte</span>
+        <span class="pill">GKFI · imprägniert · faserarmiert</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="winner" aria-labelledby="winnerTitle">
+      <div>
+        <div class="eyebrow">Niedrigster gefundener Materialpreis</div>
+        <h2 id="winnerTitle">BAUHAUS · Mengenpreis ab 108 m²</h2>
+        <p id="winnerText">Bei 200 m² Fläche und 5 % Verschnitt: 117 Platten für 210,6 m². Versand und Abholung bitte anhand Markt und Postleitzahl prüfen.</p>
+      </div>
+      <div class="winner-total">
+        <strong id="winnerPrice">1.185,68&nbsp;€</strong>
+        <span>Material für die berechnete Menge</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="calcTitle">
+      <h2 class="section-heading" id="calcTitle">Deine benötigte Menge</h2>
+      <div class="calculator">
+        <div class="calc-grid">
+          <div>
+            <label for="area">Nutzfläche in m²</label>
+            <input id="area" type="number" min="1" step="1" value="200" inputmode="decimal">
+          </div>
+          <div>
+            <label for="waste">Verschnitt in Prozent</label>
+            <input id="waste" type="number" min="0" max="50" step="1" value="5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="quick-row" aria-label="Verschnitt auswählen">
+          <span class="quick-label">Schnell wählen:</span>
+          <button class="quick" type="button" data-waste="0" aria-pressed="false">0 %</button>
+          <button class="quick" type="button" data-waste="5" aria-pressed="true">5 %</button>
+          <button class="quick" type="button" data-waste="10" aria-pressed="false">10 %</button>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <strong id="qtySummary">117 Platten</strong>
+          <span id="areaSummary">gekaufte Fläche: 210,6 m²</span>
+          <span id="netSummary">inklusive 5 % Verschnitt</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="compareTitle">
+      <h2 class="section-heading" id="compareTitle">Anbieter im Vergleich</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Alle Summen passen sich an die gewählte Fläche und den Verschnitt an. Preise laut Händlerseiten, inklusive MwSt.; Versand nur dort eingerechnet, wo ein Betrag ausgewiesen ist.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Anbieter</th>
+              <th scope="col">Preis</th>
+              <th scope="col">Material für deine Menge</th>
+              <th scope="col">Lieferung / Abholung</th>
+              <th scope="col">Produktseite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="best">
+              <td><span class="store">BAUHAUS</span><span class="best-tag">günstigster Materialpreis</span></td>
+              <td><span class="main-price" id="bauhausRate">5,63 €/m²</span><span class="sub" id="bauhausTier">Mengenpreis ab 108 m²; regulär 11,27 €/Platte</span></td>
+              <td><span class="main-price" id="bauhausTotal">1.185,68 €</span><span class="sub" id="bauhausQty">117 Platten · Versand nicht eingerechnet</span></td>
+              <td>Versandkosten laut Produktseite prüfen; Marktbestand und Reservierung standortabhängig.</td>
+              <td><a class="outbound" href="https://www.bauhaus.at/gipsfaserplatten/knauf-gipskartonplatte-2000/p/21086445" target="_blank" rel="noopener noreferrer">BAUHAUS öffnen ↗</a></td>
+            </tr>
+            <tr>
+              <td><span class="store">HORNBACH</span></td>
+              <td><span class="main-price">6,26 €/m²</span><span class="sub">ca. 11,27 € je Platte</span></td>
+              <td><span class="main-price" id="hornbachTotal">1.318,36 €</span><span class="sub" id="hornbachQty">117 Platten · Versand nicht eingerechnet</span></td>
+              <td>Marktbestand und mögliche Lieferkosten vor Bestellung prüfen.</td>
+              <td><a class="outbound" href="https://www.hornbach.at/p/gipskartonplatte-knauf-gkfi-impraegniert-2000x900x12-5-mm/5233517/" target="_blank" rel="noopener noreferrer">HORNBACH öffnen ↗</a></td>
+            </tr>
+            <tr>
+              <td><span class="store">Bauwolf</span></td>
+              <td><span class="main-price">17,74 €/Platte</span><span class="sub">ca. 9,86 €/m²</span></td>
+              <td><span class="main-price" id="bauwolfTotal">2.173,58 €</span><span class="sub" id="bauwolfQty">2.075,58 € Material + 98 € Standard-LKW</span></td>
+              <td id="bauwolfDelivery">98 € Standard-LKW unter 2.400 € Warenwert; darüber versandkostenfrei. Kranoption zusätzlich.</td>
+              <td><a class="outbound" href="https://www.bauwolf.at/knauf-ausbauplatte-2000-2000x900x125mm-178.html" target="_blank" rel="noopener noreferrer">Bauwolf öffnen ↗</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><strong>Preisfazit:</strong> BAUHAUS zeigt für diese Platte 5,63 €/m² ab 108 m². Für die Beispielmenge sind das <span id="savingText">132,68 € weniger Materialkosten als bei HORNBACH</span>. Da BAUHAUS-Versandkosten und örtlicher Bestand hier nicht ausgewiesen sind, ist der niedrigste Endpreis erst nach PLZ- und Marktprüfung sicher.</div>
+    </section>
+
+    <section class="section details-grid" aria-label="Produkt und Rechenweg">
+      <article class="panel">
+        <h3>Was genau wird verglichen?</h3>
+        <p>Knauf Ausbauplatte 2000, 12,5 mm dick, 900 × 2000 mm groß und 1,8 m² je Platte. Knauf beschreibt sie als faserarmiert und brandschutzgeprüft sowie imprägniert für häusliche Feuchträume. Vergleichbare Standard-GKB-Platten sind nicht derselbe Plattentyp.</p>
+      </article>
+      <article class="panel">
+        <h3>So kommt die Menge zustande</h3>
+        <p>Benötigte Platten = aufgerundet (Nutzfläche × (1 + Verschnitt) ÷ 1,8). Bei 200 m² ohne Verschnitt sind es 112 Platten. Mit 5 % sind es 117 Platten und 210,6 m² Deckfläche.</p>
+      </article>
+    </section>
+
+    <section class="section panel" aria-labelledby="sourcesTitle">
+      <h2 class="section-heading" id="sourcesTitle">Quellen und Lieferhinweise</h2>
+      <ul class="source-list">
+        <li><a href="https://knauf.com/de-AT/p/produkt/ausbauplatte-2000-23445_0070" target="_blank" rel="noopener noreferrer">Knauf Österreich: Produktdaten und Einsatzbereiche</a></li>
+        <li><a href="https://www.bauhaus.at/gipsfaserplatten/knauf-gipskartonplatte-2000/p/21086445" target="_blank" rel="noopener noreferrer">BAUHAUS: Stückpreis 11,27 €; Mengenpreis 5,63 €/m² ab 108 m²</a></li>
+        <li><a href="https://www.hornbach.at/p/gipskartonplatte-knauf-gkfi-impraegniert-2000x900x12-5-mm/5233517/" target="_blank" rel="noopener noreferrer">HORNBACH: GKFI-Platte 2000 × 900 × 12,5 mm, 6,26 €/m²</a></li>
+        <li><a href="https://www.bauwolf.at/knauf-ausbauplatte-2000-2000x900x125mm-178.html" target="_blank" rel="noopener noreferrer">Bauwolf: 17,74 € je Platte; LKW-Versandregeln für Österreich</a></li>
+      </ul>
+      <p class="checked">Preise zuletzt geprüft am <time datetime="2026-10-13">13.10.2026</time>. Tagespreise, Lagerstände, Lieferkosten und mögliche Mengenrabatte können sich ändern. Die BAUHAUS- und HORNBACH-Lieferkosten sind deshalb nicht in ihren Materialbeträgen enthalten.</p>
+    </section>
+    <a class="back" href="/chatpages/sites/">← Zur Übersicht aller Seiten</a>
+  </main>
+  <footer class="wrap">Privater Preisvergleich für eine österreichische Baustelle. Vor der Bestellung Produktart, Menge und Lieferweg beim Händler bestätigen.</footer>
+
+  <script>
+    (function () {
+      const areaInput = document.getElementById("area");
+      const wasteInput = document.getElementById("waste");
+      const fmt = new Intl.NumberFormat("de-AT", { style: "currency", currency: "EUR" });
+      const num = new Intl.NumberFormat("de-AT", { maximumFractionDigits: 1 });
+      const roundMoney = function (value) { return Math.round((value + Number.EPSILON) * 100) / 100; };
+      const set = function (id, value) { document.getElementById(id).textContent = value; };
+
+      function recalculate() {
+        const area = Math.max(1, Number(areaInput.value) || 200);
+        const waste = Math.min(50, Math.max(0, Number(wasteInput.value) || 0));
+        const desired = area * (1 + waste / 100);
+        const boards = Math.ceil(desired / 1.8);
+        const bought = boards * 1.8;
+        const bauhausRate = bought >= 108 ? 5.63 : 6.26;
+        const bauhausMaterial = roundMoney(bought * bauhausRate);
+        const hornbachMaterial = roundMoney(bought * 6.26);
+        const wolfMaterial = roundMoney(boards * 17.74);
+        const wolfFreight = wolfMaterial >= 2400 ? 0 : 98;
+        const wolfTotal = roundMoney(wolfMaterial + wolfFreight);
+        const savings = roundMoney(hornbachMaterial - bauhausMaterial);
+
+        set("qtySummary", boards + " Platten");
+        set("areaSummary", "gekaufte Fläche: " + num.format(bought) + " m²");
+        set("netSummary", "Nutzfläche " + num.format(area) + " m² + " + num.format(waste) + " % Verschnitt");
+        set("winnerText", "Bei " + num.format(area) + " m² Fläche und " + num.format(waste) + " % Verschnitt: " + boards + " Platten für " + num.format(bought) + " m². Versand und Abholung bitte anhand Markt und Postleitzahl prüfen.");
+        set("winnerPrice", fmt.format(bauhausMaterial));
+        set("bauhausRate", num.format(bauhausRate) + " €/m²");
+        set("bauhausTier", bought >= 108 ? "Mengenpreis ab 108 m²; regulär 11,27 €/Platte" : "regulärer Preis laut Produktseite");
+        set("bauhausTotal", fmt.format(bauhausMaterial));
+        set("bauhausQty", boards + " Platten · Versand nicht eingerechnet");
+        set("hornbachTotal", fmt.format(hornbachMaterial));
+        set("hornbachQty", boards + " Platten · Versand nicht eingerechnet");
+        set("bauwolfTotal", fmt.format(wolfTotal));
+        set("bauwolfQty", fmt.format(wolfMaterial) + " Material + " + fmt.format(wolfFreight) + " Standard-LKW");
+        set("bauwolfDelivery", wolfFreight === 0
+          ? "Standard-LKW bei diesem Warenwert versandkostenfrei; Kranoption +85 €."
+          : "98 € Standard-LKW unter 2.400 € Warenwert; darüber versandkostenfrei. Kranoption zusätzlich.");
+        set("savingText", fmt.format(savings) + " weniger Materialkosten als bei HORNBACH");
+        document.querySelectorAll("[data-waste]").forEach(function (button) {
+          button.setAttribute("aria-pressed", String(Number(button.dataset.waste) === waste));
+        });
+      }
+
+      areaInput.addEventListener("input", recalculate);
+      wasteInput.addEventListener("input", recalculate);
+      document.querySelectorAll("[data-waste]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          wasteInput.value = button.dataset.waste;
+          recalculate();
+        });
+      });
+      recalculate();
+    }());
+  </script>
+</body>
+</html>
