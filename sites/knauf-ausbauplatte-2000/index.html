@@ -190,6 +190,11 @@
     .q3-number { display: block; margin: 7px 0 2px; color: var(--green); font-size: 1.55rem; font-weight: 850; line-height: 1.2; }
     .q3-table { min-width: 650px; }
     .q3-table th, .q3-table td { padding: 11px 13px; }
+    .q3-prices { margin-top: 14px; }
+    .price-totals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+    .price-totals div { padding: 12px; border-radius: 10px; background: var(--wash); }
+    .price-totals span { display: block; color: var(--muted); font-size: .85rem; }
+    .price-totals strong { display: block; margin-top: 4px; color: var(--navy); font-size: 1.1rem; }
     .tool-table { min-width: 700px; }
     select {
       width: 100%; min-height: 48px; border: 1px solid #bac6d4; border-radius: 9px;
@@ -207,6 +212,7 @@
       .winner-total { text-align: left; }
       .calc-grid, .details-grid { grid-template-columns: 1fr; }
       .q3-grid { grid-template-columns: 1fr; }
+      .price-totals { grid-template-columns: 1fr; }
       .calculator { padding: 16px; }
     }
   </style>
@@ -371,7 +377,48 @@
           </ul>
         </article>
       </div>
-      <div class="note"><strong>Beispiel für 200 m² Wand:</strong> rund 110 kg Uniflott imprägniert (22 Säcke à 5 kg), dazu beim 0,3-mm-Planungsansatz rund 73 kg Fill &amp; Finish Light (4 Gebinde à 20 kg) und etwa 99 m Kurt-Streifen als Decken-Benchmark. Die Fugen- und Streifenmengen anhand des echten Verlegeplans prüfen.</div>
+      <div class="q3-card q3-prices">
+        <h3>Günstige geprüfte Materialpreise in Österreich</h3>
+        <p>Preise inkl. MwSt. und ganze Gebinde. Die Summen beruhen auf den Richtverbräuchen oben; zusätzlicher Q3-Mehrverbrauch beim breiten Ausspachteln ist noch nicht enthalten.</p>
+        <div class="table-wrap" style="margin-top:12px;box-shadow:none">
+          <table class="q3-table">
+            <thead><tr><th>Material</th><th>Preis &amp; Händler</th><th>Menge für die gewählte Fläche</th><th>Kosten</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Knauf Uniflott imprägniert, 5 kg</td>
+                <td><a href="https://www.bauhaus.at/trockenbauspachtel/knauf-fugenspachtel-uniflott-impraegniert/p/13876578" target="_blank" rel="noopener noreferrer">BAUHAUS · 15,11 € je Sack</a></td>
+                <td>Wand <span id="priceWallBags">22 × 5 kg</span><br>Decke <span id="priceCeilingBags">14 × 5 kg</span><br>Trockenputz <span id="priceDryBags">11 × 5 kg</span></td>
+                <td>Wand <span id="priceWallCompound">332,42 €</span><br>Decke <span id="priceCeilingCompound">211,54 €</span><br>Trockenputz <span id="priceDryCompound">166,21 €</span></td>
+              </tr>
+              <tr>
+                <td>Knauf Fill &amp; Finish Light, 20 kg</td>
+                <td><a href="https://www.bauhaus.at/feinspachtel-fugenspachtel/knauf-ausgleichsmasse-fill-finish-light/p/28677752" target="_blank" rel="noopener noreferrer">BAUHAUS · 39,90 € je Kübel</a></td>
+                <td id="priceFinishPails">4 × 20 kg</td>
+                <td id="priceFinishCost">159,60 €</td>
+              </tr>
+              <tr>
+                <td>Knauf Papier-Fugendeckstreifen, 75 m<br><span class="sub">Preisoption; nicht das Kurt-Produkt</span></td>
+                <td><a href="https://www.obi.at/p/2943603/papier-fugendeckstreifen-50-mm-75-lfm" target="_blank" rel="noopener noreferrer">OBI · 4,98 € je Rolle</a></td>
+                <td id="priceTapeRolls">2 × 75 m für den 99-m-Deckenrichtwert</td>
+                <td id="pricePaperTapeCost">9,96 €</td>
+              </tr>
+              <tr>
+                <td>Knauf Fugendeckstreifen Kurt, 25 m</td>
+                <td><a href="https://www.hornbach.at/p/knauf-fugendeckstreifen-kurt-aus-spezialpapier-mit-falzrille-25-m-x-50-mm/10493905/" target="_blank" rel="noopener noreferrer">HORNBACH · geprüft: 13,41 € je Rolle</a></td>
+                <td id="priceKurtPacks">4 × 25 m für den 99-m-Deckenrichtwert</td>
+                <td id="priceKurtTapeCost">53,64 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="price-totals" aria-label="Material-Zwischensummen ohne Bewehrungsstreifen">
+          <div><span>Wand · Spachtelmasse, ohne Band</span><strong id="priceWallTotal">492,02 €</strong></div>
+          <div><span>Decke · Spachtelmasse, ohne Band</span><strong id="priceCeilingTotal">371,14 €</strong></div>
+          <div><span>Trockenputz · Spachtelmasse, ohne Band</span><strong id="priceDryTotal">325,81 €</strong></div>
+        </div>
+        <p class="sub" style="margin-top:10px">Deckenrichtwert mit Bewehrungsstreifen: <strong id="priceCeilingWithPaper">381,10 €</strong> mit dem günstigeren Knauf Papierstreifen oder <strong id="priceCeilingWithKurt">424,78 €</strong> mit originalem Kurt. Für Wand und Trockenputz die Bandlänge aus dem Verlegeplan ableiten. Versand ist nicht eingerechnet; OBI weist für den Papierstreifen derzeit keine Heimlieferung aus, Marktbestand prüfen.</p>
+      </div>
+      <div class="note"><strong>Beispiel für 200 m² Wand:</strong> rund 110 kg Uniflott imprägniert (22 Säcke à 5 kg) und beim 0,3-mm-Planungsansatz rund 73 kg Fill &amp; Finish Light (4 Gebinde à 20 kg). Die passende Fugen- und Streifenmenge anhand des echten Verlegeplans prüfen.</div>
     </section>
 
     <section class="section details-grid" aria-label="Produkt und Rechenweg">
@@ -393,9 +440,13 @@
         <li><a href="https://www.hornbach.at/p/gipskartonplatte-knauf-gkfi-impraegniert-2000x900x12-5-mm/5233517/" target="_blank" rel="noopener noreferrer">HORNBACH: GKFI-Platte 2000 × 900 × 12,5 mm, 6,26 €/m²</a></li>
         <li><a href="https://www.bauwolf.at/knauf-ausbauplatte-2000-2000x900x125mm-178.html" target="_blank" rel="noopener noreferrer">Bauwolf: 17,74 € je Platte; LKW-Versandregeln für Österreich</a></li>
         <li><a href="https://knauf.com/de-AT/p/produkt/uniflott-impraegniert-10133_0070" target="_blank" rel="noopener noreferrer">Knauf: Uniflott imprägniert und 5-kg-Gebinde</a></li>
+        <li><a href="https://www.bauhaus.at/trockenbauspachtel/knauf-fugenspachtel-uniflott-impraegniert/p/13876578" target="_blank" rel="noopener noreferrer">BAUHAUS Österreich: Uniflott imprägniert, Preis je 5-kg-Sack</a></li>
         <li><a href="https://knauf.com/api/download-center/v1/assets/ee9dc3db-bb42-43d3-b675-c618356a36e0?country=de&amp;download=true" target="_blank" rel="noopener noreferrer">Knauf: Technisches Blatt mit Fugenverbrauch für Wand und Decke</a></li>
         <li><a href="https://knauf.com/de-AT/p/produkt/fill-finish-light-11409_0070" target="_blank" rel="noopener noreferrer">Knauf: Fill &amp; Finish Light, Q3–Q4 und Verbrauch je mm</a></li>
+        <li><a href="https://www.bauhaus.at/feinspachtel-fugenspachtel/knauf-ausgleichsmasse-fill-finish-light/p/28677752" target="_blank" rel="noopener noreferrer">BAUHAUS Österreich: Fill &amp; Finish Light, Preis je 20-kg-Kübel</a></li>
         <li><a href="https://knauf.com/de-DE/p/produkt/fugendeckstreifen-kurt-10435_0010" target="_blank" rel="noopener noreferrer">Knauf: Fugendeckstreifen Kurt für Schnittkanten und Rollenlängen</a></li>
+        <li><a href="https://www.obi.at/p/2943603/papier-fugendeckstreifen-50-mm-75-lfm" target="_blank" rel="noopener noreferrer">OBI Österreich: Knauf Papier-Fugendeckstreifen, 75 m Rolle</a></li>
+        <li><a href="https://www.hornbach.at/p/knauf-fugendeckstreifen-kurt-aus-spezialpapier-mit-falzrille-25-m-x-50-mm/10493905/" target="_blank" rel="noopener noreferrer">HORNBACH Österreich: Knauf Kurt, 25 m Rolle</a></li>
         <li><a href="https://knauf.com/api/download-center/v1/assets/84262eb9-81fb-4394-bb3d-41787bbfb125?country=AT&amp;download=true&amp;locale=de-AT" target="_blank" rel="noopener noreferrer">Knauf D11.at: Decken-Materialbedarf und 0,45 m Fugendeckstreifen je m²</a></li>
         <li><a href="https://knauf.com/de-DE/kompetenzen/design/spachtelung" target="_blank" rel="noopener noreferrer">Knauf: Definition der Qualitätsstufen Q3 und Q4</a></li>
       </ul>
@@ -427,6 +478,19 @@
         const minFinish = reserveArea * 0.2 * 1.1;
         const maxFinish = reserveArea * 0.5 * 1.1;
         const tape = Math.ceil(reserveArea * 0.45 - 1e-9);
+        const wallBags = Math.ceil((wall - 1e-9) / 5);
+        const ceilingBags = Math.ceil((ceiling - 1e-9) / 5);
+        const dryBags = Math.ceil((drylining - 1e-9) / 5);
+        const finishPails = Math.ceil((finish - 1e-9) / 20);
+        const paperTapeRolls = Math.ceil(tape / 75);
+        const kurtRolls = Math.ceil(tape / 25);
+        const finishCost = roundMoney(finishPails * 39.90);
+        const wallCompoundCost = roundMoney(wallBags * 15.11);
+        const ceilingCompoundCost = roundMoney(ceilingBags * 15.11);
+        const dryCompoundCost = roundMoney(dryBags * 15.11);
+        const wallTotal = roundMoney(wallCompoundCost + finishCost);
+        const ceilingTotal = roundMoney(ceilingCompoundCost + finishCost);
+        const dryTotal = roundMoney(dryCompoundCost + finishCost);
         let tapeRolls75 = 0;
         let tapeRolls25 = 0;
         let bestTapeLength = Infinity;
@@ -453,6 +517,23 @@
         set("q3FinishPails", Math.ceil(finish / 20) + " × 20 kg");
         set("q3FinishRange", Math.ceil(minFinish - 1e-9) + "–" + Math.ceil(maxFinish - 1e-9) + " kg");
         set("q3TapeLength", tape + " m");
+        set("priceWallBags", wallBags + " × 5 kg");
+        set("priceCeilingBags", ceilingBags + " × 5 kg");
+        set("priceDryBags", dryBags + " × 5 kg");
+        set("priceWallCompound", fmt.format(wallCompoundCost));
+        set("priceCeilingCompound", fmt.format(ceilingCompoundCost));
+        set("priceDryCompound", fmt.format(dryCompoundCost));
+        set("priceFinishPails", finishPails + " × 20 kg");
+        set("priceFinishCost", fmt.format(finishCost));
+        set("priceTapeRolls", paperTapeRolls + " × 75 m für " + tape + " m");
+        set("pricePaperTapeCost", fmt.format(roundMoney(paperTapeRolls * 4.98)));
+        set("priceKurtPacks", kurtRolls + " × 25 m für " + tape + " m");
+        set("priceKurtTapeCost", fmt.format(roundMoney(kurtRolls * 13.41)));
+        set("priceWallTotal", fmt.format(wallTotal));
+        set("priceCeilingTotal", fmt.format(ceilingTotal));
+        set("priceDryTotal", fmt.format(dryTotal));
+        set("priceCeilingWithPaper", fmt.format(roundMoney(ceilingTotal + paperTapeRolls * 4.98)));
+        set("priceCeilingWithKurt", fmt.format(roundMoney(ceilingTotal + kurtRolls * 13.41)));
         const tapePacks = [];
         if (tapeRolls75) tapePacks.push(tapeRolls75 + " Rolle" + (tapeRolls75 === 1 ? "" : "n") + " à 75 m");
         if (tapeRolls25) tapePacks.push(tapeRolls25 + " Rolle" + (tapeRolls25 === 1 ? "" : "n") + " à 25 m");
