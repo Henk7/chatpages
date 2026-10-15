@@ -3,8 +3,8 @@
   "size": 7,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-14T08:02:28+02:00",
-  "checked_label": "14. Oktober 2026 · 08:02 Uhr · Europe/Vienna",
+  "checked_at": "2026-10-15T06:13:00+02:00",
+  "checked_label": "15. Oktober 2026 · 06:13 Uhr · Europe/Vienna",
   "thresholds": {
     "great": 0.3,
     "good": 0.35
@@ -20,7 +20,7 @@
       "unit_price": 0.4266810344827586,
       "rankable": true,
       "shipping_note": "Kostenloser Versand laut Produktseite; Preis inkl. MwSt.",
-      "availability": "Lieferung voraussichtlich 16.–21. Oktober",
+      "availability": "Lieferung voraussichtlich 17.–22. Oktober",
       "url": "https://www.kaufland.at/product/542122309/",
       "source_url": "https://www.kaufland.at/product/542122309/",
       "link_label": "Zum Shop ↗"
