@@ -3,8 +3,8 @@
   "size": 7,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-15T06:13:00+02:00",
-  "checked_label": "15. Oktober 2026 · 06:13 Uhr · Europe/Vienna",
+  "checked_at": "2026-10-15T06:18:00+02:00",
+  "checked_label": "15. Oktober 2026 · 06:18 Uhr · Europe/Vienna",
   "thresholds": {
     "great": 0.3,
     "good": 0.35
@@ -44,16 +44,17 @@
       "retailer": "BIPA",
       "pack": "Monatsbox",
       "count": 126,
-      "item_price": 62.9,
+      "item_price": 65.9,
       "shipping": 0,
-      "total": 62.9,
-      "unit_price": 0.4992063492063492,
+      "total": 65.9,
+      "unit_price": 0.523015873015873,
       "rankable": true,
-      "shipping_note": "Gratis Lieferung auf der Produktseite; ab € 49 nach Österreich.",
-      "availability": "Lieferung in 2–3 Werktagen",
+      "shipping_note": "Gratis Lieferung auf der Produktseite; ab € 49 Bestellwert nach Österreich.",
+      "availability": "Lieferung in 2–3 Werktagen · Preis heute direkt bestätigt",
       "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
       "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
-      "link_label": "Zum Shop ↗"
+      "link_label": "Zum Shop ↗",
+      "checked_at": "2026-10-15"
     },
     {
       "retailer": "Galaxus.at",
