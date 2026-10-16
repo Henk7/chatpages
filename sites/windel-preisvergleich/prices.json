@@ -3,8 +3,8 @@
   "size": 7,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-16T06:00:00+02:00",
-  "checked_label": "16. Oktober 2026 · 06:00 Uhr · Europe/Vienna",
+  "checked_at": "2026-10-16T12:29:45+02:00",
+  "checked_label": "16. Oktober 2026 · bis 12:29 Uhr · Europe/Vienna",
   "thresholds": {
     "great": 0.3,
     "good": 0.35
@@ -111,20 +111,20 @@
     },
     {
       "retailer": "Müller Österreich",
-      "pack": "Big Economy Pack · Größe 7, ab 15 kg",
+      "pack": "Big Economy Pack · Größe 7, Extra Large, 15+ kg",
       "count": 42,
       "item_price": 18.95,
       "shipping": 3.95,
       "total": 22.9,
       "unit_price": 0.5452380952380952,
-      "rankable": false,
-      "shipping_note": "€ 3,95 Einzelversand nach Österreich; gratis ab € 49 Warenkorbwert.",
-      "availability": "Lieferbar · 2–4 Werktage",
+      "rankable": true,
+      "shipping_note": "3,95 € Versand nach Österreich; versandkostenfrei ab 49,00 € Warenkorbwert. Für eine Packung fällt der Pflichtversand an.",
+      "availability": "Online lieferbar · 2–4 Werktage",
       "url": "https://www.mueller.at/p/pampers-baby-dry-pants-windeln-gr-7-extra-large-15-kg-big-economy-pack-PPN3166187/",
       "source_url": "https://www.mueller.at/p/pampers-baby-dry-pants-windeln-gr-7-extra-large-15-kg-big-economy-pack-PPN3166187/",
       "link_label": "Shop prüfen ↗",
-      "status_note": "Nicht gereiht: Die aktuelle Produktseite nennt Größe 7/15+ kg, nicht die sonst angegebene 17+ kg; daher Produktidentität/Größenabgrenzung nicht eindeutig.",
-      "checked_at": "2026-10-15"
+      "status_note": "Die Müller-Seite bezeichnet den Artikel ausdrücklich als Größe 7; ihre Gewichtsangabe lautet 15+ kg und weicht von anderen Größe-7-Angeboten ab. Deshalb mit diesem Hinweis gereiht.",
+      "checked_at": "2026-10-16T12:29:45+02:00"
     },
     {
       "retailer": "dm.at",
