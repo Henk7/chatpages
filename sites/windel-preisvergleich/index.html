@@ -23,6 +23,11 @@
     .not-ranked td{background:#fbfcfe;color:#596579}.status-pill{display:inline-block;padding:3px 8px;border-radius:99px;background:#e9f6ef;color:#176a4c;font-size:.72rem;font-weight:800;white-space:nowrap}.status-pill.open{background:#edf2f8;color:#53627a}.status-detail{display:block;margin-top:4px;color:var(--muted);font-size:.78rem;line-height:1.35}.num .status-detail{white-space:normal;overflow-wrap:anywhere}.source-link{display:inline-block;font-weight:750;white-space:nowrap}
     @media(min-width:761px){table{width:100%;min-width:0;table-layout:fixed}th,td{padding:10px 8px}th{white-space:normal}.product{min-width:0;overflow-wrap:anywhere}.source-link{white-space:normal}th:nth-child(1),td:nth-child(1){width:20%}th:nth-child(2),td:nth-child(2){width:5%}th:nth-child(3),td:nth-child(3){width:8%}th:nth-child(4),td:nth-child(4){width:12%}th:nth-child(5),td:nth-child(5){width:8%}th:nth-child(6),td:nth-child(6){width:8%}th:nth-child(7),td:nth-child(7){width:17%}}
   </style>
+<style>
+.chart-legend{display:flex;flex-wrap:wrap;gap:7px 14px;margin:8px 4px 0;color:#445168;font-size:.8rem}
+.legend-item{display:inline-flex;align-items:center;gap:6px}
+.legend-item i{display:inline-block;width:12px;height:4px;border-radius:3px}
+</style>
 </head>
 <body>
   <header>
@@ -63,20 +68,20 @@
       </table>
     </div>
     <p class="fine-print">Tagespreise können sich ändern. Bei als „nicht im Ranking“ markierten Händlern sind Preis oder Versand heute nicht eindeutig genug für einen fairen Stückpreisvergleich.</p>
-    <div class="section-head"><h2>Preisentwicklung</h2><p>Täglicher Bestpreis inklusive Versand</p></div>
+    <div class="section-head"><h2>Preisentwicklung</h2><p>Täglicher Bestpreis und Preisverlauf der zehn günstigsten bestätigten Anbieter</p></div>
     <section class="history-card" aria-labelledby="history-heading">
-      <h2 id="history-heading">Bestpreis im Zeitverlauf</h2>
+      <h2 id="history-heading">Top‑10‑Anbieter und Bestpreis im Zeitverlauf</h2>
       <div class="history-wrap" id="history-chart"></div>
-      <p id="history-note">Mit den täglichen Updates wächst die Preisentwicklung weiter.</p>
+      <p id="history-note">Das Tagesarchiv speichert ab 18. Oktober 2026 zusätzlich die zehn günstigsten bestätigten Anbieter samt Packungszahl, Pflichtversand, Gesamtpreis und Händlerlink. Frühere Tage enthielten nur den Tagesbestpreis.</p>
     </section>
     <section class="method" aria-labelledby="method-heading">
       <h2 id="method-heading">So wird gerechnet</h2>
-      <p>Effektiver Stückpreis = (Packungspreis + Pflichtversand für eine Packung) ÷ Anzahl Pants. Die Liste enthält ausschließlich Pampers Baby-Dry Pants Größe 7.</p>
+      <p>Effektiver Stückpreis = (Packungspreis + Pflichtversand für eine Packung) ÷ Anzahl Pants. Die Liste enthält ausschließlich Pampers Baby-Dry Pants Größe 7. Der Tagesverlauf archiviert Preis und Pflichtversand der zehn günstigsten belegten Anbieter.</p>
       <ul>
         <li>Versandkosten werden nach Österreich und für eine Packung angesetzt. Kostenloser Versand wird nur bei erfüllter Bestellbedingung mit € 0 angesetzt.</li>
         <li>Die Tabelle führt zehn unterschiedliche Händler. Nur aktuelle Angebote mit bestätigter Stückzahl, Preis und Versandkosten werden nach €/Pants sortiert; alle anderen bleiben mit Prüfhinweis sichtbar.</li>
         <li>Ein unklarer oder widersprüchlicher Bruttopreis wird nicht geschätzt und nicht ins Ranking aufgenommen.</li>
-        <li>Preisziel: bis € 0,35 pro Pants; sehr guter Vorratskauf: bis € 0,30 pro Pants.</li>
+        <li>Preisziel: bis € 0,35 pro Pants; sehr guter Vorratskauf: bis € 0,30 pro Pants. Die Tagesnews meldet ein verifiziertes Angebot zusätzlich, sobald es unter € 0,37 pro Pants liegt.</li>
       </ul>
     </section>
   </main>
@@ -88,21 +93,39 @@
     const safeUrl = value => { try { const u = new URL(value); return u.protocol === 'https:' ? u.href : ''; } catch { return ''; } };
     const formatDate = value => new Intl.DateTimeFormat('de-AT',{day:'2-digit',month:'2-digit',year:'numeric',timeZone:'Europe/Vienna'}).format(new Date(value));
     function renderChart(history) {
-      const points = (history || []).filter(p => Number.isFinite(Number(p.best_unit_price))).slice(-30);
-      const host = document.getElementById('history-chart');
-      if (!points.length) { host.innerHTML = '<p>Für die Preisentwicklung sind noch keine Tageswerte vorhanden.</p>'; return; }
-      const w=760,h=190,pad={l:50,r:18,t:14,b:32};
-      const values=points.map(p=>Number(p.best_unit_price));
-      const min=Math.min(...values,.30),max=Math.max(...values,.35);
-      const span=Math.max(max-min,.03);
+      const points=(history||[]).filter(p=>Number.isFinite(Number(p.best_unit_price))).slice(-30);
+      const host=document.getElementById('history-chart');
+      if(!points.length){host.innerHTML='<p>Für die Preisentwicklung sind noch keine Tageswerte vorhanden.</p>';return;}
+      const latest=points[points.length-1];
+      const tracked=(latest.top10||[]).map(o=>o.retailer).filter(Boolean);
+      const colors=['#176a4c','#3159c7','#d97706','#be123c','#7c3aed','#0891b2','#65a30d','#c2410c','#475569','#a21caf'];
+      const allValues=points.map(p=>Number(p.best_unit_price)).concat(points.flatMap(p=>(p.top10||[]).map(o=>Number(o.unit_price)).filter(Number.isFinite)));
+      const low=Math.max(0,Math.floor((Math.min(...allValues)-.025)*20)/20);
+      const high=Math.ceil((Math.max(...allValues)+.025)*20)/20;
+      const span=Math.max(high-low,.05),w=900,h=270,pad={l:62,r:20,t:18,b:42};
       const x=i=>pad.l+(points.length===1?(w-pad.l-pad.r)/2:i*(w-pad.l-pad.r)/(points.length-1));
-      const y=v=>pad.t+(max-v)*(h-pad.t-pad.b)/span;
-      const coords=points.map((p,i)=>`${x(i)},${y(Number(p.best_unit_price))}`).join(' ');
-      const grid=[.30,.35].map(v=>`<line x1="${pad.l}" x2="${w-pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="#cbd5e1" stroke-dasharray="4 5"/><text x="4" y="${y(v)+4}" fill="#637084" font-size="12">€${v.toFixed(2)}</text>`).join('');
-      const circles=points.map((p,i)=>`<circle cx="${x(i)}" cy="${y(Number(p.best_unit_price))}" r="${points.length===1?6:4}" fill="#176a4c"><title>${safe(p.date)}: ${unitMoney(Number(p.best_unit_price))}</title></circle>`).join('');
+      const y=v=>pad.t+(high-v)*(h-pad.t-pad.b)/span;
+      const ticks=[];for(let v=Math.ceil(low/.1)*.1;v<=high+.001;v+=.1)ticks.push(Number(v.toFixed(2)));
+      const grid=ticks.map(v=>'<line x1="'+pad.l+'" x2="'+(w-pad.r)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="#d9e1eb" stroke-dasharray="4 5"/><text x="5" y="'+(y(v)+4)+'" fill="#637084" font-size="12">'+money(v)+'</text>').join('');
+      const bestCoords=points.map((p,i)=>x(i)+','+y(Number(p.best_unit_price))).join(' ');
+      const bestLine='<polyline points="'+bestCoords+'" fill="none" stroke="#172640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>';
+      const bestDots=points.map((p,i)=>'<circle cx="'+x(i)+'" cy="'+y(Number(p.best_unit_price))+'" r="4.5" fill="#172640"><title>'+safe(p.date)+' Tagesbestpreis: '+unitMoney(Number(p.best_unit_price))+' · '+safe(p.retailer||'')+'</title></circle>').join('');
+      const vendorLines=tracked.map((name,seriesIndex)=>{
+        const color=colors[seriesIndex%colors.length];
+        const series=points.map((p,i)=>({p,i,o:(p.top10||[]).find(o=>o.retailer===name)})).filter(q=>q.o&&Number.isFinite(Number(q.o.unit_price)));
+        const coords=series.map(q=>x(q.i)+','+y(Number(q.o.unit_price))).join(' ');
+        const line=series.length>1?'<polyline points="'+coords+'" fill="none" stroke="'+color+'" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>':'';
+        const dots=series.map(q=>'<circle cx="'+x(q.i)+'" cy="'+y(Number(q.o.unit_price))+'" r="4.2" fill="'+color+'"><title>'+safe(q.p.date)+' · '+safe(name)+': '+unitMoney(Number(q.o.unit_price))+'</title></circle>').join('');
+        return {html:line+dots,legend:'<span class="legend-item"><i style="background:'+color+'"></i>'+safe(name)+'</span>'};
+      });
+      const bestLegend='<span class="legend-item"><i style="background:#172640"></i>Tagesbestpreis</span>';
       const first=formatDate(points[0].date+'T12:00:00Z'),last=formatDate(points[points.length-1].date+'T12:00:00Z');
-      host.innerHTML=`<svg class="history-svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="Täglicher Bestpreis pro Pants von ${safe(first)} bis ${safe(last)}">${grid}<polyline points="${coords}" fill="none" stroke="#3159c7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${circles}<text x="${pad.l}" y="${h-7}" fill="#637084" font-size="12">${safe(first)}</text><text x="${w-pad.r}" y="${h-7}" fill="#637084" font-size="12" text-anchor="end">${safe(last)}</text></svg>`;
-      document.getElementById('history-note').textContent=points.length===1?'Der tägliche Preisverlauf startet mit diesem ersten belegten Tageswert.':'Die Linie zeigt den niedrigsten bestätigten Stückpreis pro Tag.';
+      const labels=points.map((p,i)=>i===0||i===points.length-1||i===Math.floor(points.length/2)?'<text x="'+x(i)+'" y="'+(h-10)+'" fill="#637084" font-size="11" text-anchor="'+(i===0?'start':i===points.length-1?'end':'middle')+'">'+safe(formatDate(p.date+'T12:00:00Z'))+'</text>':'').join('');
+      host.innerHTML='<svg class="history-svg" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Täglicher Bestpreis und Verlauf der Top-Anbieter von '+safe(first)+' bis '+safe(last)+'">'+grid+bestLine+bestDots+vendorLines.map(q=>q.html).join('')+labels+'</svg><div class="chart-legend">'+bestLegend+vendorLines.map(q=>q.legend).join('')+'</div>';
+      const vendorDays=points.filter(p=>Array.isArray(p.top10)&&p.top10.length).length;
+      document.getElementById('history-note').textContent=vendorDays
+        ? 'Der Bestpreis wird für alle verfügbaren Tageswerte gezeigt. Händlerlinien enthalten nur direkt gespeicherte Top‑10‑Tageswerte; der Anbieter-Verlauf beginnt am 18. Oktober 2026 ('+vendorDays+' Tag'+(vendorDays===1?'':'e')+' mit Top‑10‑Daten).'
+        : 'Der Tagesbestpreis ist archiviert. Detaillierte Top‑10‑Preise je Anbieter beginnen mit dem nächsten vollständigen Tagesupdate.';
     }
     async function loadPrices() {
       try {
