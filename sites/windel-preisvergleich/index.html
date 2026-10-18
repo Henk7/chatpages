@@ -139,7 +139,16 @@
         const providers = (data.offers || [])
           .filter(offer => offer.retailer && safeUrl(offer.url))
           .slice(0, 20);
-        const ranked = providers.filter(canRank).sort((a, b) => a.unit_price - b.unit_price);
+        const rankedOffers = providers.filter(canRank).sort((a, b) => a.unit_price - b.unit_price);
+        const ranked = [];
+        const seenRetailers = new Set();
+        for (const offer of rankedOffers) {
+          const retailerKey = String(offer.retailer).split(' · ')[0].trim().toLocaleLowerCase('de-AT');
+          if (!seenRetailers.has(retailerKey)) {
+            seenRetailers.add(retailerKey);
+            ranked.push(offer);
+          }
+        }
         const notRanked = providers.filter(offer => !canRank(offer))
           .sort((a, b) => a.retailer.localeCompare(b.retailer, 'de'));
         const offers = ranked.concat(notRanked);
