@@ -3,14 +3,31 @@
   "size": 7,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-18T06:08:22+02:00",
-  "checked_label": "18. Oktober 2026 · geprüft bis 06:08 Uhr · Europe/Vienna",
+  "checked_at": "2026-10-18T11:46:37+02:00",
+  "checked_label": "18. Oktober 2026 · Online-Top-10 geprüft 06:08 · HOFER-Filialangebot geprüft 11:46 Uhr · Europe/Vienna",
   "thresholds": {
     "great": 0.3,
     "good": 0.35,
     "news_alert_below": 0.37
   },
   "offers": [
+    {
+      "retailer": "HOFER",
+      "pack": "Baby-Dry Pants Größe 7 · Filialaktion",
+      "count": 74,
+      "item_price": 25.99,
+      "shipping": null,
+      "total": 25.99,
+      "unit_price": 0.3512162162162162,
+      "rankable": false,
+      "shipping_note": "Filialkauf; Online-Zustellung und Versandkosten sind auf der Produktseite nicht ausgewiesen.",
+      "availability": "Filialaktion seit 08.10.2026; begrenzte Menge und regionale Abweichungen. Filialbestand vor Kauf prüfen.",
+      "url": "https://www.hofer.at/produkt/pampers-baby-dry-windeln-pants-gr-7-extra-large-15-kg-000000000734119006",
+      "source_url": "https://www.hofer.at/produkt/pampers-baby-dry-windeln-pants-gr-7-extra-large-15-kg-000000000734119006",
+      "link_label": "HOFER Produkt Gr. 7 ↗",
+      "checked_at": "2026-10-18T11:46:37+02:00",
+      "status_note": "Direkt ausgewählte Variante: Größe 7, 74 Stück, € 25,99 (€ 0,3512/Stück). Nicht im Online-Versandranking, da keine Lieferung ausgewiesen ist."
+    },
     {
       "retailer": "Kaufland.at · Koif",
       "pack": "Monatsbox",
@@ -389,8 +406,34 @@
       ],
       "requested_provider_count": 10,
       "confirmed_provider_count": 8,
-      "provider_shortfall": 2
+      "provider_shortfall": 2,
+      "supplementary_offers_checked_at": "2026-10-18T11:46:37+02:00",
+      "supplementary_offers": [
+        {
+          "retailer": "HOFER",
+          "category": "Filialangebot · nicht im Online-Versandranking",
+          "checked_at": "2026-10-18T11:46:37+02:00",
+          "offers": [
+            {
+              "size": 6,
+              "count": 76,
+              "item_price": 25.99,
+              "unit_price": 0.3419736842105263,
+              "url": "https://www.hofer.at/produkt/pampers-baby-dry-windeln-pants-gr-6-extra-large-13-19-kg-000000000734119007",
+              "availability": "Aktionsartikel seit 08.10.2026; begrenzte Menge, regionale Abweichungen; Filialbestand prüfen."
+            },
+            {
+              "size": 7,
+              "count": 74,
+              "item_price": 25.99,
+              "unit_price": 0.3512162162162162,
+              "url": "https://www.hofer.at/produkt/pampers-baby-dry-windeln-pants-gr-7-extra-large-15-kg-000000000734119006",
+              "availability": "Aktionsartikel seit 08.10.2026; begrenzte Menge, regionale Abweichungen; Filialbestand prüfen."
+            }
+          ]
+        }
+      ]
     }
   ],
-  "method": "Verglichen wird ausschließlich Pampers Baby-Dry Pants Größe 7. Der effektive Stückpreis ist (Packungspreis plus Pflichtversand für eine Packung nach Österreich) geteilt durch die Stückzahl. Unbekannte oder widersprüchliche Kosten werden nicht geschätzt und bleiben außerhalb des Rankings."
+  "method": "Verglichen wird ausschließlich Pampers Baby-Dry Pants Größe 7. Der effektive Stückpreis ist (Packungspreis plus Pflichtversand für eine Packung nach Österreich) geteilt durch die Stückzahl. Unbekannte oder widersprüchliche Kosten werden nicht geschätzt und bleiben außerhalb des Rankings. Filialangebote ohne bestätigte Zustellung bleiben als separater Prüfhinweis sichtbar und zählen nicht zum Online-Ranking."
 }
