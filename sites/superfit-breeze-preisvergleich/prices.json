@@ -1,94 +1,89 @@
 {
-  "product": "Superfit BREEZE GTX",
-  "model": "1-000369-8500",
-  "color": "Lila/Rosa",
+  "product": "Superfit BREEZE GTX High",
+  "model": "1-000369 · alle GORE-TEX-Farbvarianten",
   "size": 23,
-  "ean": "9010159027347",
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-18T11:24:00+02:00",
-  "checked_label": "18. Oktober 2026 · geprüft bis 11:24 Uhr · Europe/Vienna",
-  "price_basis": "Gesamtpreis für ein Paar inklusive Pflichtversand nach Österreich. Unbestätigte Versandkosten oder Verfügbarkeit werden nicht ins Ranking aufgenommen.",
+  "checked_at": "2026-10-18T15:14:16+02:00",
+  "checked_label": "18. Oktober 2026 · geprüft bis 15:14 Uhr · Europe/Vienna",
+  "price_basis": "Gesamtpreis für ein Paar Superfit BREEZE GTX High aus Modellfamilie 1-000369, EU-Größe 23, in beliebiger Farbe, inklusive Pflichtversand nach Österreich. Andere Modellfamilien und Varianten ohne GORE-TEX zählen nicht. Unklare Versandkosten oder Größenverfügbarkeit werden nicht ins Ranking aufgenommen.",
   "offers": [
     {
       "retailer": "Boozt Österreich",
+      "color": "Lila/Rosa (Purple/Pink)",
+      "model_number": "SUP1-000369",
       "item_price": 48.3,
       "shipping": 6.99,
       "total": 55.29,
       "rankable": true,
       "size_available": true,
-      "availability": "Größe 23 wird in der Größenauswahl geführt; Lieferung nach Österreich in 3–5 Werktagen.",
-      "shipping_note": "Versand €6,99 unter dem Freibetrag von €69.",
+      "availability": "Direktseite listet EU 23/14,3 cm und zeigt „In den Warenkorb“; Lieferung nach Österreich.",
+      "shipping_note": "Pflichtversand nach Österreich: 6,99 € bei Warenwert unter 69 €.",
       "url": "https://www.boozt.com/at/de-at/superfit/breeze_30617992/226453703",
       "source_url": "https://www.boozt.com/at/de-at/superfit/breeze_30617992/226453703",
       "shipping_url": "https://www.boozt.com/at/de-at/kundendienst/lieferung/welche-lieferzeiten-und-preise-haben-sie",
-      "checked_at": "2026-10-18T11:24:00+02:00"
+      "checked_at": "2026-10-18T15:14:16+02:00"
+    },
+    {
+      "retailer": "Boozt Österreich",
+      "color": "Grau/Rosa (Grey/Pink)",
+      "model_number": "SUP1-000369",
+      "item_price": 54.6,
+      "shipping": 6.99,
+      "total": 61.59,
+      "rankable": true,
+      "size_available": true,
+      "availability": "Shopseite führt EU 23/14,3 cm für diese GORE-TEX-Farbvariante; Lieferung nach Österreich.",
+      "shipping_note": "Pflichtversand nach Österreich: 6,99 € bei Warenwert unter 69 €.",
+      "url": "https://www.boozt.com/at/de-at/superfit/breeze_30617992/232792855",
+      "source_url": "https://www.boozt.com/at/de-at/superfit/breeze_30617992/232792855",
+      "shipping_url": "https://www.boozt.com/at/de-at/kundendienst/lieferung/welche-lieferzeiten-und-preise-haben-sie",
+      "checked_at": "2026-10-18T15:14:16+02:00"
+    },
+    {
+      "retailer": "Booztlet Österreich",
+      "color": "Grau/Rosa (Grey/Pink)",
+      "model_number": "SUP1-000369",
+      "item_price": 51.6,
+      "shipping": null,
+      "total": null,
+      "rankable": false,
+      "size_available": true,
+      "availability": "Direktseite listet EU 23/14,3 cm und „In den Warenkorb“.",
+      "shipping_note": "Versand ungeklärt: Produktseite nennt 5,99 €, die Versand-FAQ 7,99 € bei Bestellungen unter 99 €; deshalb nicht gerankt.",
+      "url": "https://www.booztlet.com/at/de-at/superfit/breeze_30617992/232792861",
+      "source_url": "https://www.booztlet.com/at/de-at/superfit/breeze_30617992/232792861",
+      "shipping_url": "https://www.booztlet.com/at/de-at/kundenservice/lieferung/welche-lieferzeiten-und-preise-haben-sie",
+      "checked_at": "2026-10-18T15:14:16+02:00"
     },
     {
       "retailer": "superfit.com",
+      "color": "Lila/Rosa",
+      "model_number": "1-000369-8500",
       "item_price": 74.95,
       "shipping": 4.9,
       "total": 79.85,
       "rankable": true,
       "size_available": true,
-      "availability": "Originalprodukt Größe 23; Shop zeigt „In den Warenkorb“.",
-      "shipping_note": "Superfit nennt pauschal €4,90 Versand nach Österreich und Deutschland.",
+      "availability": "Herstellerseite: GORE-TEX, EU-Größe 23 direkt auswählbar und in den Warenkorb legbar.",
+      "shipping_note": "Pflichtversand nach Österreich: 4,90 €.",
       "url": "https://www.superfit.com/de/breeze-sneaker-high-9010159027347/",
       "source_url": "https://www.superfit.com/de/breeze-sneaker-high-9010159027347/",
       "shipping_url": "https://www.superfit.com/de/faq/",
-      "checked_at": "2026-10-18T11:24:00+02:00"
-    },
-    {
-      "retailer": "Amazon.nl (über beslist)",
-      "item_price": 51.95,
-      "shipping": null,
-      "total": null,
-      "rankable": false,
-      "size_available": null,
-      "availability": "Preisvergleich führt Größe 23; österreichische Zustellung und Händlerpreis nicht direkt bestätigt.",
-      "shipping_note": "Der angezeigte Gratisversand ist nicht eindeutig für eine Lieferadresse in Österreich ausgewiesen.",
-      "url": "https://www.amazon.nl/s?k=9010159027347",
-      "source_url": "https://www.beslist.nl/p/sneakers-breeze-effen-leer-suede-velcro-sluiting/32000/V4_04f6dd99-6cdc-458f-a3ee-6006e7202611/",
-      "checked_at": "2026-10-18T11:24:00+02:00"
-    },
-    {
-      "retailer": "Bergfreunde.at (Preisvergleichsstand)",
-      "item_price": 63.71,
-      "shipping": 4.45,
-      "total": 68.16,
-      "rankable": false,
-      "size_available": null,
-      "availability": "Größe 23 im Preisvergleich geführt; der letzte angezeigte Preisstand ist vom 13. Oktober und heute nicht direkt bestätigt.",
-      "shipping_note": "Geizhals zeigte €4,45 Versand nach Österreich und 2–4 Werktage.",
-      "url": "https://geizhals.at/superfit-breeze-lila-pink-junior-1-000369-8500-a3555082.html?hloc=at",
-      "source_url": "https://geizhals.at/superfit-breeze-lila-pink-junior-1-000369-8500-a3555082.html?hloc=at",
-      "checked_at": "2026-10-13"
-    },
-    {
-      "retailer": "Schuhwelt.de",
-      "item_price": 78.95,
-      "shipping": null,
-      "total": null,
-      "rankable": false,
-      "size_available": true,
-      "availability": "Größe 23 wird auf der Händlerseite als verfügbar geführt; die Versandkostenseite nennt ausschließlich Deutschland.",
-      "shipping_note": "Kein Lieferpreis nach Österreich belegt; daher nicht im Österreich-Ranking.",
-      "url": "https://www.schuhwelt.de/superfit-breeze-klettschuh-1-000369-8500-08e9h8j141lg.html",
-      "source_url": "https://www.schuhwelt.de/superfit-breeze-klettschuh-1-000369-8500-08e9h8j141lg.html",
-      "shipping_url": "https://www.schuhwelt.de/versandkosten/",
-      "checked_at": "2026-10-04"
+      "checked_at": "2026-10-18T15:14:16+02:00"
     }
   ],
   "history": [
     {
       "date": "2026-10-18",
-      "checked_at": "2026-10-18T11:24:00+02:00",
+      "checked_at": "2026-10-18T15:14:16+02:00",
       "best_total": 55.29,
       "retailer": "Boozt Österreich",
       "confirmed_count": 2,
       "top10": [
         {
           "retailer": "Boozt Österreich",
+          "color": "Lila/Rosa (Purple/Pink)",
           "item_price": 48.3,
           "shipping": 6.99,
           "total": 55.29,
@@ -96,6 +91,7 @@
         },
         {
           "retailer": "superfit.com",
+          "color": "Lila/Rosa",
           "item_price": 74.95,
           "shipping": 4.9,
           "total": 79.85,
@@ -103,5 +99,7 @@
         }
       ]
     }
-  ]
+  ],
+  "color_scope": "Alle Farben; Farbcode und EAN dürfen abweichen",
+  "reference_ean": "9010159027347"
 }
