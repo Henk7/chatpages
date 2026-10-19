@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kreditrechner für Annuitätendarlehen: Darlehen, Zinsbindung, Gebühren und Zinsbegrenzung durchrechnen – mit Tilgungsplan, Chart und Vergleichstabellen.">
+  <meta name="theme-color" content="#172640">
+  <title>Kreditrechner · Annuitätendarlehen verstehen</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#ergebnisse">Zum Ergebnis springen</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="header-top">
+        <p class="brand">Henk7 · GitHub Pages</p>
+        <a class="back" href="../">← Alle Seiten</a>
+      </div>
+      <p class="eyebrow">Rechner · Annuitätendarlehen</p>
+      <h1>Kredit &amp; Annuität</h1>
+      <p class="lede">Durchrechnen, wie Darlehen, Zins, Rate, Gebühren und eine Zinsbegrenzung zusammenwirken. Mit Tilgungsplan, Verlaufsgrafik und direkten Vergleichen – vollständig im Browser.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <noscript>
+      <div class="notice warn"><strong>JavaScript erforderlich</strong> Dieser Rechner berechnet die Ergebnisse direkt im Browser. Bitte aktiviere JavaScript, um fortzufahren.</div>
+    </noscript>
+    <div class="layout">
+      <section class="panel controls" aria-labelledby="eingaben-title">
+        <div class="panel-head">
+          <h2 id="eingaben-title">Eingaben</h2>
+          <button class="text-button" type="button" id="reset">Zurücksetzen</button>
+        </div>
+
+        <form id="calc-form" novalidate>
+          <fieldset class="field-grid">
+            <legend class="sr-only">Grunddaten</legend>
+
+            <label class="field field-wide">
+              <span class="label">Darlehen</span>
+              <span class="input-wrap">
+                <input id="loan" name="loan" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="100.000" aria-label="Darlehen" aria-describedby="loan-error">
+                <span class="unit" aria-hidden="true">€</span>
+              </span>
+              <span class="hint">Ursprüngliche Kreditsumme</span>
+              <span class="field-error" id="loan-error" data-error-for="loan" hidden></span>
+            </label>
+
+            <label class="field">
+              <span class="label">Nominalzins p. a.</span>
+              <span class="input-wrap">
+                <input id="interest" name="interest" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1" aria-label="Nominalzins p. a." aria-describedby="interest-error">
+                <span class="unit" aria-hidden="true">%</span>
+              </span>
+              <span class="hint">Jährlicher Zinssatz</span>
+              <span class="field-error" id="interest-error" data-error-for="interest" hidden></span>
+            </label>
+
+            <label class="field">
+              <span class="label">Monatsrate</span>
+              <span class="input-wrap">
+                <input id="annuity" name="annuity" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1.000" aria-label="Monatsrate" aria-describedby="annuity-error">
+                <span class="unit" aria-hidden="true">€</span>
+              </span>
+              <span class="hint" id="installment-hint">Bei 12 Zahlungen pro Jahr: 1.000,00 € pro Rate.</span>
+              <span class="field-error" id="annuity-error" data-error-for="annuity" hidden></span>
+            </label>
+          </fieldset>
+
+          <details class="advanced" id="advanced">
+            <summary>
+              Expertenmodus
+              <span class="summary-hint">Zinsbindung, Gebühren, Zinsbegrenzung</span>
+            </summary>
+            <div class="advanced-body">
+              <fieldset class="field-grid">
+                <legend class="sr-only">Expertenmodus</legend>
+
+                <label class="field">
+                  <span class="label">Zahlungen pro Jahr</span>
+                  <span class="select-wrap">
+                    <select id="ppy" name="ppy" aria-label="Zahlungen pro Jahr">
+                      <option value="12" selected>12 · monatlich</option>
+                      <option value="4">4 · vierteljährlich</option>
+                      <option value="2">2 · halbjährlich</option>
+                      <option value="1">1 · jährlich</option>
+                    </select>
+                  </span>
+                  <span class="hint" id="payment-hint">1.000,00 € pro Rate</span>
+                </label>
+
+                <label class="field">
+                  <span class="label">Zinsbindung</span>
+                  <span class="input-wrap">
+                    <input id="fixed" name="fixed" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="30" aria-label="Zinsbindung" aria-describedby="fixed-error">
+                    <span class="unit" aria-hidden="true">Jahre</span>
+                  </span>
+                  <span class="hint">0 = keine Fixierung</span>
+                  <span class="field-error" id="fixed-error" data-error-for="fixed" hidden></span>
+                </label>
+
+                <label class="field">
+                  <span class="label">Zins nach der Bindung</span>
+                  <span class="input-wrap">
+                    <input id="follow" name="follow" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1" aria-label="Zins nach der Bindung" aria-describedby="follow-error">
+                    <span class="unit" aria-hidden="true">%</span>
+                  </span>
+                  <span class="hint">Folgezins p. a.</span>
+                  <span class="field-error" id="follow-error" data-error-for="follow" hidden></span>
+                </label>
+
+                <label class="field">
+                  <span class="label">Kontoführung</span>
+                  <span class="input-wrap">
+                    <input id="fee" name="fee" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0" aria-label="Kontoführung" aria-describedby="fee-error">
+                    <span class="unit" aria-hidden="true">€ / Jahr</span>
+                  </span>
+                  <span class="hint">Wird auf die Raten verteilt</span>
+                  <span class="field-error" id="fee-error" data-error-for="fee" hidden></span>
+                </label>
+
+                <label class="check-row field-wide">
+                  <input type="checkbox" id="cap-enabled" name="cap-enabled">
+                  <span>
+                    <strong>Zinsbegrenzung anwenden</strong>
+                    <small>Ein Teil der Restschuld wird für eine begrenzte Zeit zum begünstigten Zins verzinst.</small>
+                  </span>
+                </label>
+
+                <label class="field">
+                  <span class="label">Begünstigter Betrag</span>
+                  <span class="input-wrap">
+                    <input id="cap-amount" name="cap-amount" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="200.000" aria-label="Begünstigter Betrag" aria-describedby="cap-amount-error" disabled>
+                    <span class="unit" aria-hidden="true">€</span>
+                  </span>
+                  <span class="hint">Höchstens dieser Teil der Restschuld</span>
+                  <span class="field-error" id="cap-amount-error" data-error-for="cap-amount" hidden></span>
+                </label>
+
+                <label class="field">
+                  <span class="label">Begünstigter Zins</span>
+                  <span class="input-wrap">
+                    <input id="cap-rate" name="cap-rate" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1" aria-label="Begünstigter Zins" aria-describedby="cap-rate-error" disabled>
+                    <span class="unit" aria-hidden="true">%</span>
+                  </span>
+                  <span class="hint">Zins p. a. für den begünstigten Teil</span>
+                  <span class="field-error" id="cap-rate-error" data-error-for="cap-rate" hidden></span>
+                </label>
+
+                <label class="field">
+                  <span class="label">Begünstigungsdauer</span>
+                  <span class="input-wrap">
+                    <input id="cap-years" name="cap-years" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="10" aria-label="Begünstigungsdauer" aria-describedby="cap-years-error" disabled>
+                    <span class="unit" aria-hidden="true">Jahre</span>
+                  </span>
+                  <span class="hint">0 = keine Begünstigung</span>
+                  <span class="field-error" id="cap-years-error" data-error-for="cap-years" hidden></span>
+                </label>
+              </fieldset>
+            </div>
+          </details>
+        </form>
+
+        <p class="micro">Alle Beträge sind nominal. Die Berechnung läuft vollständig in deinem Browser; es werden keine Eingaben übertragen.</p>
+      </section>
+
+      <section class="results" id="ergebnisse" aria-labelledby="ergebnisse-title">
+        <div class="panel summary-panel">
+          <div class="panel-head">
+            <h2 id="ergebnisse-title">Ergebnis</h2>
+            <span class="pill" id="term-pill">—</span>
+          </div>
+          <div class="kpis" id="kpis"></div>
+          <p class="summary-sentence" id="summary-sentence" aria-live="polite"></p>
+          <div class="notice" id="warning" role="status" hidden></div>
+          <div class="result-actions">
+            <button type="button" class="button primary" id="export-csv">CSV herunterladen</button>
+            <button type="button" class="button" id="copy-link">Link kopieren</button>
+            <span class="copy-status" id="copy-status" role="status"></span>
+          </div>
+        </div>
+
+        <div class="panel chart-panel">
+          <div class="panel-head">
+            <h2>Verlauf</h2>
+            <span class="hint">Jährliche Rate und Restschuld</span>
+          </div>
+          <div class="legend" aria-hidden="true">
+            <span><i class="swatch principal"></i>Tilgung</span>
+            <span><i class="swatch interest"></i>Zinsen</span>
+            <span><i class="swatch fees"></i>Gebühren</span>
+            <span><i class="swatch debt"></i>Restschuld</span>
+          </div>
+          <div class="chart-wrap" id="chart"></div>
+        </div>
+
+        <div class="panel table-panel">
+          <div class="panel-head">
+            <h2>Tilgungsplan</h2>
+            <span class="hint" id="schedule-count"></span>
+          </div>
+          <div class="table-scroll" id="schedule"></div>
+          <p class="micro scroll-hint">Tabelle horizontal scrollen, um alle Spalten zu sehen.</p>
+          <p class="micro" id="schedule-note">Die letzte Rate wird auf die tatsächliche Restschuld angepasst. Zwischenwerte werden nicht gerundet.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="compare-section" aria-labelledby="compare-title">
+      <div class="section-head">
+        <p class="eyebrow">Vergleichen</p>
+        <h2 id="compare-title">Was ändert sich, wenn …?</h2>
+        <p>Jede Zeile ist eine vollständige Modellrechnung mit den übrigen Eingaben. Die aktuelle Variante ist markiert.</p>
+        <p class="scroll-hint">Die Vergleichstabellen lassen sich horizontal scrollen.</p>
+      </div>
+
+      <details class="panel compare" open>
+        <summary>
+          <span>Monatsrate variieren</span>
+          <span class="compare-count" id="count-annuity"></span>
+        </summary>
+        <p class="compare-note">Schrittweite 100 €. Δ = Differenz der Gesamtzahlung zur vorherigen Zeile.</p>
+        <div class="table-scroll" id="table-annuity"></div>
+      </details>
+
+      <details class="panel compare">
+        <summary>
+          <span>Darlehen variieren</span>
+          <span class="compare-count" id="count-loan"></span>
+        </summary>
+        <p class="compare-note">Schrittweite 20.000 €. Die Monatsrate bleibt gleich.</p>
+        <div class="table-scroll" id="table-loan"></div>
+      </details>
+
+      <details class="panel compare">
+        <summary>
+          <span>Zins variieren</span>
+          <span class="compare-count" id="count-rate"></span>
+        </summary>
+        <p class="compare-note">Schrittweite 0,1 Prozentpunkte. Variiert wird der Zins, der ab dem ersten Jahr gilt; der andere Zins bleibt unverändert.</p>
+        <div class="table-scroll" id="table-rate"></div>
+      </details>
+
+      <details class="panel compare">
+        <summary>
+          <span>Zahlungsweise variieren</span>
+          <span class="compare-count" id="count-ppy"></span>
+        </summary>
+        <p class="compare-note">Die Monatsrate bleibt die Bezugsgröße; die Jahreszahlung wird auf die gewählte Anzahl Raten verteilt.</p>
+        <div class="table-scroll" id="table-ppy"></div>
+      </details>
+    </section>
+
+    <section class="panel method" aria-labelledby="method-title">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Methodik</p>
+          <h2 id="method-title">So rechnet der Rechner</h2>
+        </div>
+        <span class="hint">Nominale Modellrechnung</span>
+      </div>
+
+      <div class="formula-card">
+        <span>Zins pro Periode</span>
+        <code>Restschuld × Jahreszins ÷ Zahlungen pro Jahr</code>
+      </div>
+
+      <div class="method-grid">
+        <details open>
+          <summary>Annuität und Tilgung</summary>
+          <p>Die Rate wird zuerst für Zinsen und Gebühren verwendet. Was danach übrig bleibt, reduziert die Restschuld. Bleibt nichts übrig, entsteht keine Tilgung; der Rechner zeigt diesen Zustand ausdrücklich an, statt eine unendliche Reihe fortzusetzen.</p>
+        </details>
+        <details>
+          <summary>Zahlungen pro Jahr</summary>
+          <p>Die Monatsrate ist die Bezugsgröße. Bei einer anderen Zahlungsweise wird die Jahreszahlung gleichmäßig auf die gewählte Anzahl Raten verteilt. Häufigere Raten senken die Zinslast etwas, weil weniger Zins auf einmal aufläuft.</p>
+        </details>
+        <details>
+          <summary>Zinsbindung und Folgezins</summary>
+          <p>Bis zum Ende der Zinsbindung gilt der Nominalzins, danach der Folgezins. Der Wechsel erfolgt zu Beginn des ersten Jahres nach der Bindung. Eine Bindung von 0 Jahren bedeutet, dass von Anfang an der Folgezins gilt.</p>
+        </details>
+        <details>
+          <summary>Zinsbegrenzung</summary>
+          <p>Der Teil der Restschuld bis zum begünstigten Betrag wird für die angegebene Dauer zum begünstigten Zins verzinst. Der darüberliegende Teil bleibt beim Nominalzins. Ist der begünstigte Zins nicht niedriger als der Nominalzins, entsteht kein Vorteil.</p>
+        </details>
+        <details>
+          <summary>Letzte Rate und Rundung</summary>
+          <p>Die letzte Rate wird auf die verbleibende Restschuld plus Zinsen und Gebühren gekürzt. Zwischenwerte werden nicht gerundet; erst die Anzeige rundet auf Cent. Dadurch können sich angezeigte Summen minimal von einer manuellen Nachrechnung unterscheiden.</p>
+        </details>
+        <details>
+          <summary>Grenzen des Modells</summary>
+          <p>Das Modell bildet keine Steuern, Versicherungen, Bearbeitungsgebühren, Sondertilgungen, tilgungsfreie Jahre oder Zinsänderungen innerhalb eines Jahres ab. Es ist eine Orientierung und keine Finanzberatung.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Modellrechnung, keine Finanzberatung. Alle Berechnungen finden lokal im Browser statt.</p>
+    <p><a href="../">← Zur Übersicht</a> · <a href="../../">Meine News</a></p>
+  </footer>
+</body>
+</html>
