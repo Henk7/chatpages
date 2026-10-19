@@ -90,9 +90,9 @@
     "checked": true,
     "basis": "Shuttle: frühere Basislinie; aktueller Pure ebenfalls prüfen",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Direktlink / Ort / ISOFIX präzisiert; Preis unverändert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rank": 1,
     "rankLabel": "#1"
   },
@@ -152,10 +152,10 @@
     "checked": true,
     "basis": "Active: höhere Linie; kein günstigeres konkretes Pure-Inserat verifiziert",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 2,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Inseratspreis unverändert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "#2"
   },
   {
@@ -214,10 +214,10 @@
     "checked": true,
     "basis": "Active: höhere Linie; kein günstigeres konkretes Pure-Inserat verifiziert",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 3,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "#3"
   },
   {
@@ -283,10 +283,10 @@
     "checked": true,
     "basis": "Active: höhere Linie; kein günstigeres konkretes Pure-Inserat verifiziert",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 4,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Inseratspreis unverändert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "#4"
   },
   {
@@ -359,10 +359,10 @@
     "checked": true,
     "basis": "Active: höhere Linie; kein günstigeres konkretes Pure-Inserat verifiziert",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 5,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "#5"
   },
   {
@@ -436,10 +436,10 @@
     "checked": true,
     "basis": "Basislinie im Inserat nicht angegeben; günstigerer passender Basiswagen nicht verifiziert",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 6,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Inseratspreis unverändert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "#6"
   },
   {
@@ -505,10 +505,10 @@
     "checked": true,
     "basis": "Shuttle: frühere Basislinie; aktuelle L2-Basis ist Active",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 7,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "#7"
   },
   {
@@ -585,10 +585,10 @@
     "checked": true,
     "basis": "Allure: niedrigste AT-Linie; zusätzliche Pakete im konkreten Angebot",
     "proof": "",
-    "checkedDate": "06.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 8,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Inseratspreis unverändert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "#8"
   },
   {
@@ -658,13 +658,13 @@
       "Servolenkung",
       "Verkehrszeichen"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Active: höhere Linie; Kandidat",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 9,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "Kandidat"
   },
   {
@@ -762,13 +762,13 @@
       "Zentralverriegelung",
       "Schiebetür"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Shuttle: frühere Basislinie",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 10,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "Kandidat"
   },
   {
@@ -824,13 +824,13 @@
       "Zentralverriegelung",
       "Verglaste Heckklappe"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Nicht abschließend bestätigt",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 11,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Inseratspreis unverändert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "Kandidat"
   },
   {
@@ -872,13 +872,13 @@
       "Traktionskontrolle",
       "Zentralverriegelung"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Active: höhere Linie; Kandidat",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 12,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "Kandidat"
   },
   {
@@ -936,13 +936,13 @@
       "Zentralverriegelung",
       "Verglaste Heckklappe"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Shuttle: frühere Basislinie",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 13,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "Kandidat"
   },
   {
@@ -996,13 +996,13 @@
       "Start/Stopp",
       "Wegfahrsperre"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Ja: Edition ist Basislinie",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 14,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Neu geprüft / präzisiert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "Kandidat"
   },
   {
@@ -1011,7 +1011,7 @@
     "location": "Hall in Tirol",
     "country": "AT",
     "price": 28565,
-    "atPrice": 28835,
+    "atPrice": 28565,
     "reg": "11/2025",
     "km": 10,
     "fuel": "Diesel",
@@ -1075,13 +1075,13 @@
       "Abblendender Innenspiegel",
       "Sprachsteuerung"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Nicht abschließend bestätigt",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 15,
-    "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Inseratspreis unverändert",
+    "cost": "Anbieter-Gesamtpreis 28.565 € inklusive Überführung und Zulassungspapieren; keine zusätzlichen 270 € addiert.",
+    "change": "Gesamtpreis 28.565 € bestätigt; Überführung und Zulassungspapiere sind enthalten.",
     "rankLabel": "Kandidat"
   },
   {
@@ -1167,13 +1167,13 @@
       "12,9-Zoll-Navigation/Kia Connect",
       "Metallic schwarz"
     ],
-    "checked": false,
+    "checked": true,
     "basis": "Nicht abschließend bestätigt",
     "proof": "",
-    "checkedDate": "01.10.2026",
+    "checkedDate": "19.10.2026",
     "rank": 16,
     "cost": "Inserat inklusive AT-Steuern + 270 € geschätzte Zulassung; keine zusätzliche Überstellung angenommen.",
-    "change": "Inseratspreis unverändert",
+    "change": "Preis am 19.10.2026 erneut geprüft; unverändert.",
     "rankLabel": "Kandidat"
   }
 ]
