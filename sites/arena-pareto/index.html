@@ -64,7 +64,8 @@
     .card-head p { margin: 4px 0 0; color: var(--muted); font-size: .9rem; }
     .legend { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 10px 16px; color: #56646a; font-size: .79rem; }
     .legend-item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
-    .legend-dot { width: 9px; height: 9px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; background: #a9b4b9; }
+    .legend-dot { display: grid; place-items: center; width: 17px; height: 17px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; background: #d87954; color: #fff; font-size: 9px; font-style: normal; font-weight: 900; }
+    .legend-dot::before { content: "A"; }
     .legend-line { width: 19px; height: 3px; border-radius: 5px; background: #9ed54b; }
     .model-label { cursor: pointer; }
     .model-label:focus { outline: none; }
@@ -194,10 +195,10 @@
       <div class="card-head">
         <div>
           <h2 id="chart-title">Pareto frontier</h2>
-          <p>Median task cost on a logarithmic scale · zoom in to reveal model names and lab logo badges</p>
+          <p>All models are labelled on one large SVG canvas · drag to move around the chart</p>
         </div>
         <div class="legend" aria-label="Chart legend">
-          <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Other models</span>
+          <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Model name + provider mark</span>
           <span class="legend-item"><i class="legend-line" aria-hidden="true"></i>Pareto frontier</span>
         </div>
       </div>
@@ -205,15 +206,15 @@
         <div class="chart-tools" aria-label="Chart zoom controls">
           <button class="icon-button" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
           <button class="icon-button" id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
-          <button class="icon-button reset" id="zoom-reset" type="button" title="Reset zoom">Fit</button>
+          <button class="icon-button reset" id="zoom-reset" type="button" title="Fit the whole chart">Fit</button>
         </div>
-        <svg id="plot" role="img" aria-label="Scatter plot of model net improvement against median task cost. Zoom in to replace point symbols with model names and lab logo badges. Drag to pan or pinch to zoom on a touch screen."></svg>
+        <svg id="plot" role="img" aria-label="Large SVG scatter plot of model net improvement against median task cost. Every model name and provider mark is on the chart. Drag or pinch to move around and zoom."></svg>
       </div>
       <div class="chart-help">
-        <span class="hint"><span class="key">Pinch</span> zoom · drag to pan · zoom in for names + lab logos</span>
-        <span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click to fit</span>
+        <span class="hint"><span class="key">Pinch</span> zoom · drag to move around the full chart</span>
+        <span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the full chart</span>
       </div>
-      <div id="tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model point to see its exact values.</div>
+      <div id="tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model label to see its exact values.</div>
     </section>
 
     <section class="section" aria-labelledby="frontier-heading">
@@ -273,12 +274,18 @@
       const svg = $("#plot");
       const tooltip = $("#tooltip");
       const chartWrap = $(".chart-wrap");
-      const initialView = { x0: Math.log10(0.008), x1: 1, y0: -22, y1: 25 };
-      let view = { ...initialView };
+      const SCENE = {
+        width: 3400, height: 2200,
+        left: 270, right: 3210, top: 150, bottom: 1970,
+        minLogCost: Math.log10(0.008), maxLogCost: 1,
+        minScore: -22, maxScore: 25,
+      };
+      let view = null;
       let data = [];
       let frontier = [];
       let filteredToFrontier = false;
-      let dims = { width: 800, height: 500, left: 56, right: 20, top: 22, bottom: 48 };
+      let sceneDirty = true;
+      let dims = { width: 800, height: 500 };
       let pointers = new Map();
       let dragOrigin = null;
       let pinchDistance = 0;
@@ -315,6 +322,68 @@
         { pattern: /^Solar\b/i, name: "Upstage", mark: "U", color: "#1c9291" }
       ];
       const getLab = (model) => labBrands.find((brand) => brand.pattern.test(model)) || { name: "Unknown lab", mark: "?", color: "#718087" };
+      const brandIcons = {
+        "Anthropic": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"
+          ]
+        },
+        "Google": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"
+          ]
+        },
+        "DeepSeek": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M23.748 4.651c-.254-.124-.364.113-.512.233-.051.04-.094.09-.137.137-.372.397-.806.657-1.373.626-.829-.046-1.537.214-2.163.848-.133-.782-.575-1.248-1.247-1.548-.352-.155-.708-.311-.955-.65-.172-.24-.219-.509-.305-.774-.055-.16-.11-.323-.293-.35-.2-.031-.278.136-.356.276-.313.572-.434 1.202-.422 1.84.027 1.436.633 2.58 1.838 3.393.137.094.172.187.129.323-.082.28-.18.553-.266.833-.055.179-.137.218-.328.14a5.5 5.5 0 0 1-1.737-1.179c-.857-.828-1.631-1.743-2.597-2.46a12 12 0 0 0-.689-.47c-.985-.957.13-1.743.387-1.836.27-.098.094-.433-.778-.428-.872.003-1.67.295-2.687.685a3 3 0 0 1-.465.136 9.6 9.6 0 0 0-2.883-.101c-1.885.21-3.39 1.1-4.497 2.622C.082 8.776-.231 10.854.152 13.02c.403 2.284 1.568 4.175 3.36 5.653 1.857 1.533 3.997 2.284 6.438 2.14 1.482-.085 3.132-.284 4.994-1.86.47.234.962.328 1.78.398.629.058 1.235-.031 1.705-.129.735-.155.684-.836.418-.961-2.155-1.004-1.682-.595-2.112-.926 1.095-1.295 2.768-3.598 3.284-6.733.05-.346.115-.834.108-1.114-.004-.171.035-.238.23-.257a4.2 4.2 0 0 0 1.545-.475c1.397-.763 1.96-2.016 2.093-3.517.02-.23-.004-.467-.247-.588M11.58 18.168c-2.088-1.642-3.101-2.183-3.52-2.16-.39.024-.32.472-.234.763.09.288.207.487.371.74.114.167.192.416-.113.603-.673.416-1.842-.14-1.897-.168-1.361-.801-2.5-1.86-3.301-3.306-.775-1.393-1.225-2.888-1.299-4.482-.02-.385.094-.522.477-.592a4.7 4.7 0 0 1 1.53-.038c2.131.311 3.946 1.264 5.467 2.774.868.86 1.525 1.887 2.202 2.89.72 1.066 1.494 2.082 2.48 2.915.348.291.626.513.892.677-.802.09-2.14.109-3.055-.615zm1.001-6.44a.306.306 0 0 1 .415-.287.3.3 0 0 1 .113.074.3.3 0 0 1 .086.214c0 .17-.136.307-.308.307a.303.303 0 0 1-.306-.307m3.11 1.596c-.2.081-.4.151-.591.16a1.25 1.25 0 0 1-.798-.254c-.274-.23-.47-.358-.551-.758a1.7 1.7 0 0 1 .015-.588c.07-.327-.007-.537-.238-.727-.188-.156-.426-.199-.689-.199a.6.6 0 0 1-.254-.078.253.253 0 0 1-.114-.358 1 1 0 0 1 .192-.21c.356-.202.767-.136 1.146.016.352.144.618.408 1.001.782.392.451.462.576.685.915.176.264.336.536.446.848.066.194-.02.353-.25.45"
+          ]
+        },
+        "Xiaomi": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M12 0C8.016 0 4.756.255 2.493 2.516.23 4.776 0 8.033 0 12.012c0 3.98.23 7.235 2.494 9.497C4.757 23.77 8.017 24 12 24c3.983 0 7.243-.23 9.506-2.491C23.77 19.247 24 15.99 24 12.012c0-3.984-.233-7.243-2.502-9.504C19.234.252 15.978 0 12 0zM4.906 7.405h5.624c1.47 0 3.007.068 3.764.827.746.746.827 2.233.83 3.676v4.54a.15.15 0 0 1-.152.147h-1.947a.15.15 0 0 1-.152-.148V11.83c-.002-.806-.048-1.634-.464-2.051-.358-.36-1.026-.441-1.72-.458H7.158a.15.15 0 0 0-.151.147v6.98a.15.15 0 0 1-.152.148H4.906a.15.15 0 0 1-.15-.148V7.554a.15.15 0 0 1 .15-.149zm12.131 0h1.949a.15.15 0 0 1 .15.15v8.892a.15.15 0 0 1-.15.148h-1.949a.15.15 0 0 1-.151-.148V7.554a.15.15 0 0 1 .151-.149zM8.92 10.948h2.046c.083 0 .15.066.15.147v5.352a.15.15 0 0 1-.15.148H8.92a.15.15 0 0 1-.152-.148v-5.352a.15.15 0 0 1 .152-.147Z"
+          ]
+        },
+        "Meta": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"
+          ]
+        },
+        "xAI": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"
+          ]
+        },
+        "Alibaba": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M3.996 4.517h5.291L8.01 6.324 4.153 7.506a1.668 1.668 0 0 0-1.165 1.601v5.786a1.668 1.668 0 0 0 1.165 1.6l3.857 1.183 1.277 1.807H3.996A3.996 3.996 0 0 1 0 15.487V8.513a3.996 3.996 0 0 1 3.996-3.996m16.008 0h-5.291l1.277 1.807 3.857 1.182c.715.227 1.17.889 1.165 1.601v5.786a1.668 1.668 0 0 1-1.165 1.6l-3.857 1.183-1.277 1.807h5.291A3.996 3.996 0 0 0 24 15.487V8.513a3.996 3.996 0 0 0-3.996-3.996m-4.007 8.345H8.002v-1.804h7.995Z"
+          ]
+        },
+        "MiniMax": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M11.43 3.92a.86.86 0 1 0-1.718 0v14.236a1.999 1.999 0 0 1-3.997 0V9.022a.86.86 0 1 0-1.718 0v3.87a1.999 1.999 0 0 1-3.997 0V11.49a.57.57 0 0 1 1.139 0v1.404a.86.86 0 0 0 1.719 0V9.022a1.999 1.999 0 0 1 3.997 0v9.134a.86.86 0 0 0 1.719 0V3.92a1.998 1.998 0 1 1 3.996 0v11.788a.57.57 0 1 1-1.139 0zm10.572 3.105a2 2 0 0 0-1.999 1.997v7.63a.86.86 0 0 1-1.718 0V3.923a1.999 1.999 0 0 0-3.997 0v16.16a.86.86 0 0 1-1.719 0V18.08a.57.57 0 1 0-1.138 0v2a1.998 1.998 0 0 0 3.996 0V3.92a.86.86 0 0 1 1.719 0v12.73a1.999 1.999 0 0 0 3.996 0V9.023a.86.86 0 1 1 1.72 0v6.686a.57.57 0 0 0 1.138 0V9.022a2 2 0 0 0-1.998-1.997"
+          ]
+        },
+        "Mistral AI": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M17.143 3.429v3.428h-3.429v3.429h-3.428V6.857H6.857V3.43H3.43v13.714H0v3.428h10.286v-3.428H6.857v-3.429h3.429v3.429h3.429v-3.429h3.428v3.429h-3.428v3.428H24v-3.428h-3.43V3.429z"
+          ]
+        },
+        "NVIDIA": {
+          "viewBox": "0 0 24 24",
+          "paths": [
+            "M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851c-.398 0-.787-.062-1.158-.185v-4.346c1.528.185 1.837.857 2.747 2.385l2.04-1.714s-1.492-1.952-4-1.952a6.016 6.016 0 0 0-.796.035m0-4.735v2.138l.424-.027c5.45-.185 9.01 4.47 9.01 4.47s-4.08 4.964-8.33 4.964c-.37 0-.733-.035-1.095-.097v1.325c.3.035.61.062.91.062 3.957 0 6.82-2.023 9.593-4.408.459.371 2.34 1.263 2.73 1.652-2.633 2.208-8.772 3.984-12.253 3.984-.335 0-.653-.018-.971-.053v1.864H24V4.063zm0 10.326v1.131c-3.657-.654-4.673-4.46-4.673-4.46s1.758-1.944 4.673-2.262v1.237H8.94c-1.528-.186-2.73 1.245-2.73 1.245s.68 2.412 2.739 3.11M2.456 10.9s2.164-3.197 6.5-3.533V6.201C4.153 6.59 0 10.653 0 10.653s2.35 6.802 8.948 7.42v-1.237c-4.84-.6-6.492-5.936-6.492-5.936z"
+          ]
+        }
+      };
 
       function computeFrontier(records) {
         const sorted = [...records].sort((a, b) => a.cost - b.cost || b.improvement - a.improvement);
@@ -391,171 +460,291 @@
 
       function getPlotMetrics() {
         const rect = svg.getBoundingClientRect();
-        const width = Math.max(320, Math.round(rect.width));
-        const height = Math.round(rect.height) || 500;
-        const left = width < 430 ? 51 : 58;
-        return { width, height, left, right: width < 430 ? 13 : 20, top: 24, bottom: 48 };
+        return { width: Math.max(1, rect.width), height: Math.max(1, rect.height || 500) };
       }
 
       function xPos(value) {
-        return dims.left + ((Math.log10(value) - view.x0) / (view.x1 - view.x0)) * (dims.width - dims.left - dims.right);
+        const fraction = (Math.log10(value) - SCENE.minLogCost) / (SCENE.maxLogCost - SCENE.minLogCost);
+        return SCENE.left + fraction * (SCENE.right - SCENE.left);
       }
       function yPos(value) {
-        return dims.top + ((view.y1 - value) / (view.y1 - view.y0)) * (dims.height - dims.top - dims.bottom);
+        const fraction = (SCENE.maxScore - value) / (SCENE.maxScore - SCENE.minScore);
+        return SCENE.top + fraction * (SCENE.bottom - SCENE.top);
       }
 
-      function layoutModelLabels(items, limits, mobile) {
-        const height = 24;
-        const fontSize = mobile ? 9.5 : 10.5;
-        const charWidth = mobile ? 5 : 5.7;
-        const maxWidth = mobile ? 158 : 205;
-        const gap = 3;
+      function layoutStaticLabels(items) {
+        const boxHeight = 48;
+        const gap = 7;
         const occupied = [];
         const placed = new Map();
+        const keys = frontierSet();
         const candidates = items.map((item) => {
-          const fullWidth = 32 + item.model.length * charWidth;
-          return { item, px: xPos(item.cost), py: yPos(item.improvement), width: Math.max(mobile ? 87 : 96, Math.min(maxWidth, fullWidth)), height, fontSize, charWidth };
-        }).sort((a, b) => Number(frontierSet().has(frontierKey(b.item))) - Number(frontierSet().has(frontierKey(a.item))) || a.py - b.py || a.px - b.px);
+          const width = Math.max(190, Math.min(470, 52 + item.model.length * 8.3));
+          return { item, px: xPos(item.cost), py: yPos(item.improvement), width, height: boxHeight };
+        }).sort((a, b) => Number(keys.has(frontierKey(b.item))) - Number(keys.has(frontierKey(a.item))) || a.py - b.py || a.px - b.px);
 
         for (const candidate of candidates) {
-          const { item, px, py, width: labelWidth } = candidate;
-          const preferredX = px + 9 + labelWidth <= limits.right ? px + 9 : px - 9 - labelWidth;
-          const otherX = preferredX === px + 9 ? px - 9 - labelWidth : px + 9;
-          const xOptions = [preferredX, otherX].map((x) => Math.max(limits.left + 2, Math.min(limits.right - labelWidth - 2, x)));
+          const { item, px, py, width } = candidate;
+          const rightX = px + 16;
+          const leftX = px - width - 16;
+          const preferredX = rightX + width <= SCENE.right ? rightX : leftX;
+          const otherX = preferredX === rightX ? leftX : rightX;
+          const xOptions = [preferredX, otherX].map((x) => Math.max(SCENE.left + 2, Math.min(SCENE.right - width - 2, x)));
           const yOffsets = [0];
-          for (let row = 1; row <= Math.ceil((limits.bottom - limits.top) / (height + gap)); row += 1) yOffsets.push(-row, row);
+          const maxRows = Math.ceil((SCENE.bottom - SCENE.top) / (boxHeight + gap));
+          for (let row = 1; row <= maxRows; row += 1) yOffsets.push(-row, row);
           let chosen = null;
+
           for (const x of xOptions) {
             for (const row of yOffsets) {
-              const y = Math.max(limits.top + 2, Math.min(limits.bottom - height - 2, py - height / 2 + row * (height + gap)));
-              const box = { x, y, width: labelWidth, height };
-              const collision = occupied.some((other) => box.x < other.x + other.width + gap && box.x + box.width + gap > other.x && box.y < other.y + other.height + gap && box.y + box.height + gap > other.y);
+              const y = Math.max(SCENE.top + 2, Math.min(SCENE.bottom - boxHeight - 2, py - boxHeight / 2 + row * (boxHeight + gap)));
+              const box = { x, y, width, height: boxHeight };
+              const collision = occupied.some((other) =>
+                box.x < other.x + other.width + gap &&
+                box.x + box.width + gap > other.x &&
+                box.y < other.y + other.height + gap &&
+                box.y + box.height + gap > other.y
+              );
               if (!collision) { chosen = box; break; }
             }
             if (chosen) break;
           }
-          if (chosen) {
-            occupied.push(chosen);
-            placed.set(frontierKey(item), { ...chosen, ...candidate });
+
+          // Keep every label visible even if a later, larger snapshot needs a denser layout.
+          if (!chosen) {
+            chosen = {
+              x: Math.max(SCENE.left + 2, Math.min(SCENE.right - width - 2, preferredX)),
+              y: Math.max(SCENE.top + 2, Math.min(SCENE.bottom - boxHeight - 2, py - boxHeight / 2)),
+              width, height: boxHeight,
+            };
           }
+          occupied.push(chosen);
+          placed.set(frontierKey(item), { ...chosen, ...candidate });
         }
         return placed;
       }
 
-      function appendModelPoint(plotGroup, item, onFrontier, labelPlacement, mobile) {
+      function appendModelLabel(plotGroup, item, onFrontier, placement) {
         const lab = getLab(item.model);
         const x = xPos(item.cost);
         const y = yPos(item.improvement);
-        const isLabel = Boolean(labelPlacement);
-        const group = svgNode("g", { class: isLabel ? "model-point model-label" : "model-point", "data-model": item.model, "data-point": "true", tabindex: 0, role: "button", "aria-label": `${item.model}, made by ${lab.name}, rank ${item.rank}, ${formatCost(item.cost)} per task, ${formatScore(item.improvement)}${onFrontier ? ", on Pareto frontier" : ""}` });
-        if (!isLabel) {
-          group.append(svgNode("circle", { cx: x, cy: y, r: onFrontier ? 7 : 4.8, fill: onFrontier ? "#b7e66b" : "#9aa9b0", stroke: onFrontier ? "#f3ffd7" : "#26333a", "stroke-width": onFrontier ? 1.3 : 1, opacity: onFrontier ? 1 : .8 }));
-        } else {
-          const { x: labelX, y: labelY, width: labelWidth, height: labelHeight, fontSize, charWidth } = labelPlacement;
-          const endX = x < labelX ? labelX : x > labelX + labelWidth ? labelX + labelWidth : Math.max(labelX + 4, Math.min(labelX + labelWidth - 4, x));
-          const endY = Math.max(labelY + 3, Math.min(labelY + labelHeight - 3, y));
-          if (Math.abs(endX - x) + Math.abs(endY - y) > 8) group.append(svgNode("line", { x1: x, y1: y, x2: endX, y2: endY, stroke: onFrontier ? "#a9e45b" : "#829399", "stroke-width": 1, opacity: .72 }));
-          group.append(svgNode("rect", { class: "label-bg", x: labelX, y: labelY, width: labelWidth, height: labelHeight, rx: 12, fill: "#1d2a30", stroke: onFrontier ? "#a9e45b" : "#617078", "stroke-width": onFrontier ? 1.3 : 1, opacity: .97 }));
-          group.append(svgNode("circle", { cx: labelX + 13, cy: labelY + labelHeight / 2, r: 8.5, fill: lab.color, stroke: "rgba(255,255,255,.7)", "stroke-width": .7 }));
-          const markSize = lab.mark.length > 1 ? 6.5 : 9;
-          group.append(svgNode("text", { x: labelX + 13, y: labelY + labelHeight / 2 + 3, fill: "#fff", "font-size": markSize, "font-weight": 900, "text-anchor": "middle" }, lab.mark));
-          const maxChars = Math.max(5, Math.floor((labelWidth - 34) / charWidth));
-          const displayName = item.model.length > maxChars ? `${item.model.slice(0, Math.max(3, maxChars - 1))}…` : item.model;
-          group.append(svgNode("text", { x: labelX + 26, y: labelY + labelHeight / 2 + 3.5, fill: "#f3f6f4", "font-size": fontSize, "font-weight": 690 }, displayName));
+        const labelX = placement.x;
+        const labelY = placement.y;
+        const labelWidth = placement.width;
+        const labelHeight = placement.height;
+        const group = svgNode("g", {
+          class: "model-point model-label",
+          "data-model": item.model,
+          "data-point": "true",
+          tabindex: 0,
+          role: "button",
+          "aria-label": item.model + ", made by " + lab.name + ", rank " + item.rank + ", " + formatCost(item.cost) + " per task, " + formatScore(item.improvement) + (onFrontier ? ", on Pareto frontier" : ""),
+        });
+
+        const endX = x < labelX ? labelX : x > labelX + labelWidth ? labelX + labelWidth : x;
+        const endY = Math.max(labelY + 4, Math.min(labelY + labelHeight - 4, y));
+        if (Math.hypot(endX - x, endY - y) > 12) {
+          group.append(svgNode("line", {
+            x1: x, y1: y, x2: endX, y2: endY,
+            stroke: onFrontier ? "#a9e45b" : "#829399",
+            "stroke-width": 2, opacity: .72,
+          }));
         }
-        group.append(svgNode("title", {}, `${item.model} · ${lab.name} · ${formatCost(item.cost)} / task · ${formatScore(item.improvement)}`));
+        group.append(svgNode("rect", {
+          class: "label-bg", x: labelX, y: labelY, width: labelWidth, height: labelHeight, rx: 17,
+          fill: "#1d2a30", stroke: onFrontier ? "#a9e45b" : "#617078",
+          "stroke-width": onFrontier ? 2.2 : 1.5, opacity: .98,
+        }));
+        group.append(svgNode("circle", {
+          cx: labelX + 22, cy: labelY + labelHeight / 2, r: 13,
+          fill: lab.color, stroke: "rgba(255,255,255,.76)", "stroke-width": 1,
+        }));
+        const logo = brandIcons[lab.name];
+        if (logo) {
+          const icon = svgNode("svg", {
+            x: labelX + 11, y: labelY + 13, width: 22, height: 22,
+            viewBox: logo.viewBox, fill: "#fff", "aria-hidden": "true", focusable: "false",
+          });
+          for (const path of logo.paths) icon.append(svgNode("path", { d: path }));
+          group.append(icon);
+        } else {
+          group.append(svgNode("text", {
+            x: labelX + 22, y: labelY + labelHeight / 2 + 4.5,
+            fill: "#fff", "font-size": lab.mark.length > 1 ? 9.5 : 14,
+            "font-weight": 900, "text-anchor": "middle",
+          }, lab.mark));
+        }
+        group.append(svgNode("text", {
+          x: labelX + 43, y: labelY + labelHeight / 2 + 5.5,
+          fill: "#f3f6f4", "font-size": 16, "font-weight": 690,
+        }, item.model));
+        group.append(svgNode("title", {}, item.model + " · " + lab.name + " · " + formatCost(item.cost) + " / task · " + formatScore(item.improvement)));
         group.addEventListener("focus", () => setTooltip(item));
         group.addEventListener("pointerenter", (event) => { if (event.pointerType === "mouse") setTooltip(item); });
         plotGroup.append(group);
       }
 
-      function renderChart() {
+      function buildScene() {
         if (!data.length) return;
-        dims = getPlotMetrics();
-        const { width, height, left, right, top, bottom } = dims;
-        const plotRight = width - right;
-        const plotBottom = height - bottom;
-        const plotWidth = plotRight - left;
-        const plotHeight = plotBottom - top;
-        svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+        const { width, height, left, right, top, bottom } = SCENE;
         svg.replaceChildren();
+        svg.setAttribute("width", width);
+        svg.setAttribute("height", height);
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
         const defs = svgNode("defs");
         const clip = svgNode("clipPath", { id: "plot-clip" });
-        clip.append(svgNode("rect", { x: left, y: top, width: plotWidth, height: plotHeight, rx: 1 }));
+        clip.append(svgNode("rect", { x: left, y: top, width: right - left, height: bottom - top, rx: 2 }));
         defs.append(clip);
         svg.append(defs);
+        svg.append(svgNode("rect", { x: 0, y: 0, width, height, fill: "#111a21" }));
+        svg.append(svgNode("rect", {
+          x: left, y: top, width: right - left, height: bottom - top,
+          fill: "#131e25", stroke: "#607077", "stroke-width": 2,
+        }));
 
         const ticksX = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10];
         for (const tick of ticksX) {
           const x = xPos(tick);
-          if (x < left || x > plotRight) continue;
-          svg.append(svgNode("line", { x1: x, y1: top, x2: x, y2: plotBottom, stroke: "#35424a", "stroke-width": 1 }));
-          const label = tick < 1 ? `$${tick.toFixed(tick < 0.1 ? 2 : 1)}` : `$${tick}`;
-          svg.append(svgNode("text", { x, y: height - 20, fill: "#aebbbc", "font-size": width < 430 ? 10 : 11, "text-anchor": "middle" }, label));
+          svg.append(svgNode("line", {
+            x1: x, y1: top, x2: x, y2: bottom,
+            stroke: "#35424a", "stroke-width": 2,
+          }));
+          const label = tick < 1 ? "$" + tick.toFixed(tick < 0.1 ? 2 : 1) : "$" + tick;
+          svg.append(svgNode("text", {
+            x, y: bottom + 48, fill: "#aebbbc", "font-size": 29, "text-anchor": "middle",
+          }, label));
         }
         for (let tick = -20; tick <= 20; tick += 10) {
           const y = yPos(tick);
-          if (y < top || y > plotBottom) continue;
-          svg.append(svgNode("line", { x1: left, y1: y, x2: plotRight, y2: y, stroke: tick === 0 ? "#6b7b7e" : "#35424a", "stroke-width": tick === 0 ? 1.4 : 1, "stroke-dasharray": tick === 0 ? "5 5" : "none" }));
-          svg.append(svgNode("text", { x: left - 10, y: y + 4, fill: "#aebbbc", "font-size": width < 430 ? 10 : 11, "text-anchor": "end" }, `${tick > 0 ? "+" : ""}${tick}%`));
+          svg.append(svgNode("line", {
+            x1: left, y1: y, x2: right, y2: y,
+            stroke: tick === 0 ? "#6b7b7e" : "#35424a",
+            "stroke-width": tick === 0 ? 3 : 2,
+            "stroke-dasharray": tick === 0 ? "10 10" : "none",
+          }));
+          svg.append(svgNode("text", {
+            x: left - 20, y: y + 10, fill: "#aebbbc", "font-size": 29, "text-anchor": "end",
+          }, (tick > 0 ? "+" : "") + tick + "%"));
         }
-        svg.append(svgNode("text", { x: (left + plotRight) / 2, y: height - 4, fill: "#d0d8d7", "font-size": width < 430 ? 10 : 11, "text-anchor": "middle" }, "Median cost per task (USD · log scale)"));
-        const axisTitle = svgNode("text", { x: 14, y: height / 2, fill: "#d0d8d7", "font-size": width < 430 ? 9 : 11, "text-anchor": "middle", transform: `rotate(-90 14 ${height / 2})` }, "Net improvement");
+
+        svg.append(svgNode("line", { x1: left, y1: bottom, x2: right, y2: bottom, stroke: "#aebbbc", "stroke-width": 3 }));
+        svg.append(svgNode("line", { x1: left, y1: top, x2: left, y2: bottom, stroke: "#aebbbc", "stroke-width": 3 }));
+        svg.append(svgNode("text", {
+          x: (left + right) / 2, y: 2138, fill: "#d0d8d7", "font-size": 31, "text-anchor": "middle",
+        }, "Median cost per task (USD · log scale)"));
+        const axisTitle = svgNode("text", {
+          x: 67, y: (top + bottom) / 2, fill: "#d0d8d7", "font-size": 29,
+          "text-anchor": "middle", transform: "rotate(-90 67 " + ((top + bottom) / 2) + ")",
+        }, "Net improvement");
         svg.append(axisTitle);
 
         const plotGroup = svgNode("g", { "clip-path": "url(#plot-clip)" });
         const shown = data.filter((item) => !filteredToFrontier || frontierSet().has(frontierKey(item)));
-        const frontierPath = frontier.map((item) => `${xPos(item.cost)},${yPos(item.improvement)}`).join(" ");
-        if (frontierPath) plotGroup.append(svgNode("polyline", { points: frontierPath, fill: "none", stroke: "#a9e45b", "stroke-width": 2.4, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }));
-
-        const mobile = width < 430;
-        const visible = shown.filter((item) => {
-          const x = xPos(item.cost), y = yPos(item.improvement);
-          return x >= left && x <= plotRight && y >= top && y <= plotBottom;
-        });
-        const zoomedForLabels = (view.x1 - view.x0) <= 1.3 && visible.length <= 16;
-        const labels = zoomedForLabels ? layoutModelLabels(visible, { left, right: plotRight, top, bottom: plotBottom }, mobile) : new Map();
+        const frontierPath = frontier.map((item) => xPos(item.cost) + "," + yPos(item.improvement)).join(" ");
+        if (frontierPath) {
+          plotGroup.append(svgNode("polyline", {
+            points: frontierPath, fill: "none", stroke: "#a9e45b", "stroke-width": 5,
+            "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9,
+          }));
+        }
+        const placements = layoutStaticLabels(shown);
         for (const item of shown) {
-          const onFrontier = frontierSet().has(frontierKey(item));
-          appendModelPoint(plotGroup, item, onFrontier, labels.get(frontierKey(item)), mobile);
+          appendModelLabel(plotGroup, item, frontierSet().has(frontierKey(item)), placements.get(frontierKey(item)));
         }
         svg.append(plotGroup);
       }
 
-      function clampView() {
-        const minSpanX = .18;
-        const maxSpanX = 3.2;
-        const spanX = Math.max(minSpanX, Math.min(maxSpanX, view.x1 - view.x0));
-        const centerX = (view.x0 + view.x1) / 2;
-        const spanY = Math.max(7, Math.min(70, view.y1 - view.y0));
-        const centerY = (view.y0 + view.y1) / 2;
-        view = { x0: centerX - spanX / 2, x1: centerX + spanX / 2, y0: centerY - spanY / 2, y1: centerY + spanY / 2 };
+      function getAspect() {
+        return dims.width / dims.height;
       }
 
-      function zoomAt(factor, px = (dims.left + dims.width - dims.right) / 2, py = (dims.top + dims.height - dims.bottom) / 2) {
-        const fx = Math.min(1, Math.max(0, (px - dims.left) / (dims.width - dims.left - dims.right)));
-        const fy = Math.min(1, Math.max(0, (py - dims.top) / (dims.height - dims.top - dims.bottom)));
-        const anchorX = view.x0 + fx * (view.x1 - view.x0);
-        const anchorY = view.y1 - fy * (view.y1 - view.y0);
-        view = {
+      function clampView(nextView) {
+        const aspect = getAspect();
+        const fitSpanX = Math.max(SCENE.width, SCENE.height * aspect);
+        const spanX = Math.max(180, Math.min(fitSpanX, nextView.x1 - nextView.x0));
+        const spanY = spanX / aspect;
+        let centerX = (nextView.x0 + nextView.x1) / 2;
+        let centerY = (nextView.y0 + nextView.y1) / 2;
+
+        if (spanX >= SCENE.width) centerX = SCENE.width / 2;
+        else centerX = Math.max(spanX / 2, Math.min(SCENE.width - spanX / 2, centerX));
+        if (spanY >= SCENE.height) centerY = SCENE.height / 2;
+        else centerY = Math.max(spanY / 2, Math.min(SCENE.height - spanY / 2, centerY));
+
+        return {
+          x0: centerX - spanX / 2, x1: centerX + spanX / 2,
+          y0: centerY - spanY / 2, y1: centerY + spanY / 2,
+        };
+      }
+
+      function initialView() {
+        const targetScale = dims.width < 600 ? .58 : .70;
+        const spanX = dims.width / targetScale;
+        const centerX = xPos(.35);
+        const centerY = yPos(0);
+        return clampView({
+          x0: centerX - spanX / 2, x1: centerX + spanX / 2,
+          y0: centerY - (spanX / getAspect()) / 2,
+          y1: centerY + (spanX / getAspect()) / 2,
+        });
+      }
+
+      function fitView() {
+        const spanX = Math.max(SCENE.width, SCENE.height * getAspect());
+        const spanY = spanX / getAspect();
+        view = clampView({
+          x0: SCENE.width / 2 - spanX / 2, x1: SCENE.width / 2 + spanX / 2,
+          y0: SCENE.height / 2 - spanY / 2, y1: SCENE.height / 2 + spanY / 2,
+        });
+        renderChart();
+      }
+
+      function renderChart(rebuild = false) {
+        if (!data.length) return;
+        const previous = dims;
+        dims = getPlotMetrics();
+        if (!view) view = initialView();
+        else if (previous.width !== dims.width || previous.height !== dims.height) {
+          const centerX = (view.x0 + view.x1) / 2;
+          const centerY = (view.y0 + view.y1) / 2;
+          const spanX = view.x1 - view.x0;
+          const spanY = spanX / getAspect();
+          view = clampView({
+            x0: centerX - spanX / 2, x1: centerX + spanX / 2,
+            y0: centerY - spanY / 2, y1: centerY + spanY / 2,
+          });
+        }
+        if (rebuild || sceneDirty) {
+          buildScene();
+          sceneDirty = false;
+        }
+        svg.setAttribute("viewBox", [view.x0, view.y0, view.x1 - view.x0, view.y1 - view.y0].join(" "));
+      }
+
+      function zoomAt(factor, px = dims.width / 2, py = dims.height / 2) {
+        const spanX = view.x1 - view.x0;
+        const spanY = view.y1 - view.y0;
+        const anchorX = view.x0 + (px / dims.width) * spanX;
+        const anchorY = view.y0 + (py / dims.height) * spanY;
+        view = clampView({
           x0: anchorX + (view.x0 - anchorX) * factor,
           x1: anchorX + (view.x1 - anchorX) * factor,
           y0: anchorY + (view.y0 - anchorY) * factor,
           y1: anchorY + (view.y1 - anchorY) * factor,
-        };
-        clampView();
+        });
         renderChart();
       }
 
       function panBy(dx, dy, base = view) {
-        const plotWidth = dims.width - dims.left - dims.right;
-        const plotHeight = dims.height - dims.top - dims.bottom;
         const spanX = base.x1 - base.x0;
         const spanY = base.y1 - base.y0;
-        const deltaX = -dx / plotWidth * spanX;
-        const deltaY = dy / plotHeight * spanY;
-        view = { x0: base.x0 + deltaX, x1: base.x1 + deltaX, y0: base.y0 + deltaY, y1: base.y1 + deltaY };
-        clampView();
+        const deltaX = -dx / dims.width * spanX;
+        const deltaY = -dy / dims.height * spanY;
+        view = clampView({
+          x0: base.x0 + deltaX, x1: base.x1 + deltaX,
+          y0: base.y0 + deltaY, y1: base.y1 + deltaY,
+        });
         renderChart();
       }
 
@@ -624,18 +813,19 @@
         const rect = svg.getBoundingClientRect();
         zoomAt(event.deltaY < 0 ? .84 : 1.19, event.clientX - rect.left, event.clientY - rect.top);
       }, { passive: false });
-      svg.addEventListener("dblclick", (event) => { event.preventDefault(); view = { ...initialView }; renderChart(); });
+      svg.addEventListener("dblclick", (event) => { event.preventDefault(); fitView(); });
 
       $("#zoom-in").addEventListener("click", () => zoomAt(.72));
       $("#zoom-out").addEventListener("click", () => zoomAt(1.38));
-      $("#zoom-reset").addEventListener("click", () => { view = { ...initialView }; renderChart(); });
+      $("#zoom-reset").addEventListener("click", fitView);
       $("#search").addEventListener("input", renderRows);
       $("#sort").addEventListener("change", renderRows);
       $("#frontier-toggle").addEventListener("click", (event) => {
         filteredToFrontier = !filteredToFrontier;
         event.currentTarget.setAttribute("aria-pressed", String(filteredToFrontier));
         renderRows();
-        renderChart();
+        sceneDirty = true;
+        renderChart(true);
       });
       $("#download-csv").addEventListener("click", () => {
         const quote = (value) => `"${String(value).replaceAll('"', '""')}"`;
@@ -662,8 +852,9 @@
           renderSummary(snapshot);
           renderFrontier();
           renderRows();
-          renderChart();
-          new ResizeObserver(renderChart).observe(chartWrap);
+          sceneDirty = true;
+          renderChart(true);
+          new ResizeObserver(() => renderChart()).observe(chartWrap);
         })
         .catch((error) => {
           $("#snapshot-strip").textContent = error.message;
