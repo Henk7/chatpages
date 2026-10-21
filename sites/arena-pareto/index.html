@@ -67,6 +67,17 @@
     .legend-dot { display: grid; place-items: center; width: 17px; height: 17px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; background: #d87954; color: #fff; font-size: 9px; font-style: normal; font-weight: 900; }
     .legend-dot::before { content: "A"; }
     .legend-line { width: 19px; height: 3px; border-radius: 5px; background: #9ed54b; }
+    .developer-filter { padding: 0 24px 16px; }
+    .developer-filter-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 9px; }
+    .developer-filter-title { color: #34444a; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .developer-filter-status { color: var(--muted); font-size: .78rem; }
+    .developer-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .developer-chip { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 7px; min-height: 36px; padding: 5px 10px 5px 7px; border: 1px solid #d6dfdf; border-radius: 999px; background: #fff; color: #415057; font-size: .8rem; font-weight: 720; white-space: nowrap; transition: border-color .15s ease, background .15s ease, color .15s ease; }
+    .developer-chip:hover { border-color: #9baead; }
+    .developer-chip[aria-pressed="true"] { border-color: var(--forest); background: #eaf0e6; color: var(--forest); }
+    .developer-chip:focus-visible { outline: 3px solid #8ba2fb; outline-offset: 2px; }
+    .developer-chip-mark { display: grid; flex: 0 0 22px; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--chip-color, #718087); color: #fff; font-size: .62rem; font-weight: 900; line-height: 1; }
+    .developer-chip-count { min-width: 18px; padding: 1px 5px; border-radius: 999px; background: #edf1f1; color: #66747a; font-size: .67rem; font-variant-numeric: tabular-nums; text-align: center; }
     .model-label { cursor: pointer; }
     .model-label:focus { outline: none; }
     .model-label:focus .label-bg { stroke: #fff; stroke-width: 2.5; }
@@ -128,6 +139,10 @@
       .topbar { padding: 16px 0; }
       .hero { padding: 24px 0 20px; }
       .card-head { display: block; padding: 18px 16px 12px; }
+      .developer-filter { padding: 0 16px 13px; }
+      .developer-filter-head { align-items: flex-start; flex-direction: column; gap: 1px; }
+      .developer-chips { flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; padding: 2px 2px 7px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+      .developer-chip { min-height: 38px; }
       .legend { justify-content: flex-start; margin-top: 12px; }
       .chart-wrap { padding: 0 2px; }
       #plot { height: 440px; }
@@ -202,6 +217,13 @@
           <span class="legend-item"><i class="legend-line" aria-hidden="true"></i>Pareto frontier</span>
         </div>
       </div>
+      <div class="developer-filter" aria-label="Developer filter">
+        <div class="developer-filter-head">
+          <span class="developer-filter-title">Filter by developer</span>
+          <span id="developer-filter-status" class="developer-filter-status" role="status" aria-live="polite">Loading developers…</span>
+        </div>
+        <div id="developer-chips" class="developer-chips" role="group" aria-label="Filter models by developer"></div>
+      </div>
       <div class="chart-wrap">
         <div class="chart-tools" aria-label="Chart zoom controls">
           <button class="icon-button" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
@@ -219,7 +241,7 @@
 
     <section class="section" aria-labelledby="frontier-heading">
       <div class="section-heading">
-        <div><h2 id="frontier-heading">Models on the frontier</h2><p>Each is the best observed score available at or below its task cost.</p></div>
+        <div><h2 id="frontier-heading">Models on the frontier</h2><p>Each is the best observed score available at or below its task cost within the current developer filter.</p></div>
       </div>
       <div id="frontier-list" class="frontier-grid"></div>
     </section>
@@ -284,6 +306,7 @@
       let data = [];
       let frontier = [];
       let filteredToFrontier = false;
+      let selectedDevelopers = new Set();
       let sceneDirty = true;
       let dims = { width: 800, height: 500 };
       let pointers = new Map();
@@ -322,6 +345,10 @@
         { pattern: /^Solar\b/i, name: "Upstage", mark: "U", color: "#1c9291" }
       ];
       const getLab = (model) => labBrands.find((brand) => brand.pattern.test(model)) || { name: "Unknown lab", mark: "?", color: "#718087" };
+      const developerLabel = (name) => name === "Anthropic" ? "Claude" : name;
+      const getDeveloperFilteredData = () => selectedDevelopers.size
+        ? data.filter((item) => selectedDevelopers.has(getLab(item.model).name))
+        : data;
       const brandIcons = {
         "Anthropic": {
           "viewBox": "0 0 24 24",
@@ -398,6 +425,87 @@
         return result;
       }
 
+      function syncDeveloperChips() {
+        const allActive = selectedDevelopers.size === 0;
+        $("#all-developers").setAttribute("aria-pressed", String(allActive));
+        $("#developer-chips").querySelectorAll("[data-developer]").forEach((button) => {
+          button.setAttribute("aria-pressed", String(selectedDevelopers.has(button.dataset.developer)));
+        });
+      }
+
+      function renderDeveloperChips() {
+        const counts = new Map();
+        for (const item of data) {
+          const lab = getLab(item.model);
+          counts.set(lab.name, (counts.get(lab.name) || 0) + 1);
+        }
+        const holder = $("#developer-chips");
+        holder.replaceChildren();
+
+        const all = document.createElement("button");
+        all.type = "button";
+        all.id = "all-developers";
+        all.className = "developer-chip";
+        all.setAttribute("aria-pressed", "true");
+        all.setAttribute("aria-label", "Show all developers");
+        all.textContent = "All developers";
+        all.addEventListener("click", () => {
+          selectedDevelopers.clear();
+          applyDeveloperFilter();
+        });
+        holder.append(all);
+
+        [...counts.entries()]
+          .sort(([a], [b]) => developerLabel(a).localeCompare(developerLabel(b)))
+          .forEach(([name, count]) => {
+            const lab = labBrands.find((brand) => brand.name === name) || { mark: "?", color: "#718087" };
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "developer-chip";
+            button.dataset.developer = name;
+            button.setAttribute("aria-pressed", "false");
+            const displayName = developerLabel(name);
+            button.setAttribute("aria-label", `Filter by ${displayName}${name === "Anthropic" ? " (Anthropic)" : ""}; ${count} models`);
+            button.title = `${count} model${count === 1 ? "" : "s"} by ${displayName}${name === "Anthropic" ? " (Anthropic)" : ""}`;
+
+            const mark = document.createElement("span");
+            mark.className = "developer-chip-mark";
+            mark.style.setProperty("--chip-color", lab.color);
+            mark.setAttribute("aria-hidden", "true");
+            mark.textContent = lab.mark;
+            const label = document.createElement("span");
+            label.textContent = displayName;
+            const badge = document.createElement("span");
+            badge.className = "developer-chip-count";
+            badge.setAttribute("aria-hidden", "true");
+            badge.textContent = count;
+            button.append(mark, label, badge);
+            button.addEventListener("click", () => {
+              if (selectedDevelopers.has(name)) selectedDevelopers.delete(name);
+              else selectedDevelopers.add(name);
+              applyDeveloperFilter();
+            });
+            holder.append(button);
+          });
+
+        $("#developer-filter-status").textContent = `${data.length} models across ${counts.size} developers`;
+        syncDeveloperChips();
+      }
+
+      function applyDeveloperFilter() {
+        const visible = getDeveloperFilteredData();
+        frontier = computeFrontier(visible);
+        const names = [...selectedDevelopers].map(developerLabel).sort((a, b) => a.localeCompare(b));
+        $("#developer-filter-status").textContent = selectedDevelopers.size
+          ? `Showing ${visible.length} of ${data.length} models · ${names.join(", ")}`
+          : `${data.length} models across ${new Set(data.map((item) => getLab(item.model).name)).size} developers`;
+        syncDeveloperChips();
+        renderFrontier();
+        renderRows();
+        sceneDirty = true;
+        renderChart(true);
+      }
+
       function renderSummary(meta) {
         const sessions = new Intl.NumberFormat("en-US").format(meta.sessions);
         $("#snapshot-strip").innerHTML = `
@@ -423,7 +531,8 @@
         const query = $("#search").value.trim().toLocaleLowerCase();
         const sort = $("#sort").value;
         const keys = frontierSet();
-        let rows = data.filter((item) => (!filteredToFrontier || keys.has(frontierKey(item))) && item.model.toLocaleLowerCase().includes(query));
+        const developerData = getDeveloperFilteredData();
+        let rows = developerData.filter((item) => (!filteredToFrontier || keys.has(frontierKey(item))) && item.model.toLocaleLowerCase().includes(query));
         if (sort === "score") rows = rows.sort((a, b) => b.improvement - a.improvement);
         else if (sort === "cost") rows = rows.sort((a, b) => a.cost - b.cost || b.improvement - a.improvement);
         else rows = rows.sort((a, b) => a.rank - b.rank);
@@ -449,7 +558,7 @@
           tr.append(rank, model, cost, score);
           body.append(tr);
         }
-        $("#row-count").textContent = `${rows.length} of ${data.length} models`;
+        $("#row-count").textContent = `${rows.length} of ${developerData.length} models`;
         $("#empty-state").style.display = rows.length ? "none" : "block";
       }
 
@@ -640,7 +749,7 @@
         svg.append(axisTitle);
 
         const plotGroup = svgNode("g", { "clip-path": "url(#plot-clip)" });
-        const shown = data.filter((item) => !filteredToFrontier || frontierSet().has(frontierKey(item)));
+        const shown = getDeveloperFilteredData().filter((item) => !filteredToFrontier || frontierSet().has(frontierKey(item)));
         const frontierPath = frontier.map((item) => xPos(item.cost) + "," + yPos(item.improvement)).join(" ");
         if (frontierPath) {
           plotGroup.append(svgNode("polyline", {
@@ -831,7 +940,7 @@
         const quote = (value) => `"${String(value).replaceAll('"', '""')}"`;
         const lines = [
           "rank,model,median_cost_usd_per_task,net_improvement_percent",
-          ...data.map((item) => [item.rank, quote(item.model), item.cost.toFixed(2), item.improvement.toFixed(2)].join(",")),
+          ...getDeveloperFilteredData().map((item) => [item.rank, quote(item.model), item.cost.toFixed(2), item.improvement.toFixed(2)].join(",")),
         ];
         const blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
         const url = URL.createObjectURL(blob);
@@ -849,6 +958,7 @@
         .then((snapshot) => {
           data = snapshot.records;
           frontier = computeFrontier(data);
+          renderDeveloperChips();
           renderSummary(snapshot);
           renderFrontier();
           renderRows();
