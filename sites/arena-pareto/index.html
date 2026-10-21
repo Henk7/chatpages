@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f6f7">
+  <meta name="description" content="Explore a dated snapshot of Arena AI's Agent Pareto frontier with touch zoom, pan, search, and CSV export.">
+  <title>Agent Pareto Explorer · Arena AI snapshot</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #182126;
+      --muted: #627078;
+      --line: #dbe2e3;
+      --paper: #fff;
+      --wash: #f4f6f7;
+      --forest: #183b35;
+      --lime: #b7e66b;
+      --blue: #5375e7;
+      --plot: #111a21;
+      --plot-grid: #36434b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; }
+    .wordmark { display: inline-flex; align-items: center; gap: 10px; color: var(--forest); font-weight: 800; letter-spacing: -.025em; text-decoration: none; }
+    .mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--forest); color: var(--lime); font-size: .76rem; letter-spacing: .04em; }
+    .toplink { color: var(--muted); font-size: .9rem; font-weight: 650; text-decoration: none; }
+    .toplink:hover, .source-link:hover { text-decoration: underline; }
+    .hero { padding: 30px 0 26px; }
+    .eyebrow { margin: 0 0 9px; color: #45615b; font-size: .76rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: 0; font-size: clamp(2.1rem, 5vw, 4.1rem); font-weight: 820; letter-spacing: -.055em; line-height: 1.04; }
+    .intro { max-width: 760px; margin: 16px 0 0; color: #46545b; font-size: clamp(1rem, 1.5vw, 1.12rem); }
+    .snapshot-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 22px; margin-top: 22px; color: #45545a; font-size: .88rem; }
+    .snapshot-strip span { display: inline-flex; align-items: center; gap: 7px; }
+    .snapshot-strip strong { color: var(--ink); font-variant-numeric: tabular-nums; }
+    .snapshot-dot { width: 6px; height: 6px; border-radius: 50%; background: #8eb54e; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 42px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 10px;
+      background: var(--paper); color: var(--ink); font-size: .9rem; font-weight: 750; text-decoration: none;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+    .button:hover { transform: translateY(-1px); border-color: #9daead; }
+    .button.primary { border-color: var(--forest); background: var(--forest); color: #fff; }
+    .button.primary:hover { background: #244f46; }
+    .button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #8ba2fb; outline-offset: 2px; }
+    .card { border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 10px 30px rgba(18, 39, 39, .045); }
+    .chart-card { overflow: hidden; }
+    .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 22px 24px 16px; }
+    .card-head h2 { margin: 0; font-size: 1.2rem; letter-spacing: -.02em; }
+    .card-head p { margin: 4px 0 0; color: var(--muted); font-size: .9rem; }
+    .legend { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 10px 16px; color: #56646a; font-size: .79rem; }
+    .legend-item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+    .legend-dot { width: 9px; height: 9px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; background: #a9b4b9; }
+    .legend-line { width: 19px; height: 3px; border-radius: 5px; background: #9ed54b; }
+    .chart-wrap { position: relative; padding: 0 12px 0; background: var(--plot); }
+    #plot { display: block; width: 100%; height: 500px; overflow: visible; touch-action: none; user-select: none; }
+    #plot text { font-family: inherit; }
+    .chart-tools { position: absolute; top: 13px; right: 18px; z-index: 1; display: flex; gap: 6px; }
+    .icon-button { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #42515b; border-radius: 9px; background: #202b33; color: #f1f6f5; font-size: 1.2rem; line-height: 1; }
+    .icon-button:hover { background: #2d3b44; }
+    .icon-button:active { transform: translateY(1px); }
+    .icon-button.reset { width: auto; padding: 0 10px; font-size: .77rem; font-weight: 750; }
+    .chart-help { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 18px; background: #18242b; color: #bcc7c9; font-size: .77rem; }
+    .chart-help .hint { display: inline-flex; align-items: center; gap: 7px; }
+    .chart-help .key { border: 1px solid #58666d; border-radius: 5px; padding: 1px 5px; color: #ecf0ed; font-size: .7rem; }
+    .tooltip { min-height: 24px; padding: 13px 18px; border-top: 1px solid #2d3941; background: #18242b; color: #f3f6f4; font-size: .85rem; }
+    .tooltip strong { color: var(--lime); }
+    .tooltip .tip-sub { margin-left: 9px; color: #bcc7c9; }
+    .section { margin-top: 28px; }
+    .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin: 0 0 14px; }
+    .section-heading h2 { margin: 0; font-size: 1.25rem; letter-spacing: -.025em; }
+    .section-heading p { margin: 4px 0 0; color: var(--muted); font-size: .88rem; }
+    .frontier-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .frontier-card { display: flex; min-width: 0; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .frontier-number { display: grid; flex: 0 0 32px; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: #edf4df; color: #365627; font-size: .76rem; font-weight: 850; }
+    .frontier-name { overflow: hidden; color: var(--ink); font-size: .9rem; font-weight: 750; text-overflow: ellipsis; white-space: nowrap; }
+    .frontier-values { margin-top: 2px; color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
+    .table-card { overflow: hidden; }
+    .table-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 18px; border-bottom: 1px solid var(--line); }
+    .control-group { display: flex; flex: 1 1 280px; flex-wrap: wrap; align-items: center; gap: 9px; }
+    .search-box { flex: 1 1 200px; min-width: 170px; }
+    .control-input { width: 100%; min-height: 40px; padding: 8px 11px; border: 1px solid #ced8d9; border-radius: 9px; background: #fff; color: var(--ink); }
+    .select-box { min-width: 155px; width: auto; }
+    .filter-button { min-height: 40px; padding: 8px 12px; border: 1px solid #cbd5d4; border-radius: 9px; background: white; color: #43534f; font-size: .84rem; font-weight: 730; }
+    .filter-button[aria-pressed="true"] { border-color: var(--forest); background: #eaf0e6; color: var(--forest); }
+    .row-count { color: var(--muted); font-size: .84rem; white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th { padding: 11px 18px; background: #f8faf9; color: #66747a; font-size: .72rem; font-weight: 820; letter-spacing: .08em; text-transform: uppercase; }
+    td { padding: 12px 18px; border-top: 1px solid #edf0f0; font-size: .9rem; }
+    tbody tr:hover { background: #fafcf9; }
+    .rank-cell { width: 65px; color: #879297; font-variant-numeric: tabular-nums; }
+    .model-cell { min-width: 260px; font-weight: 720; }
+    .model-small { display: block; margin-top: 1px; color: #7a878b; font-size: .73rem; font-weight: 550; }
+    .number-cell { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .score-positive { color: #28724a; font-weight: 800; }
+    .score-negative { color: #a84b47; font-weight: 760; }
+    .frontier-pill { display: inline-block; margin-left: 7px; padding: 2px 7px; border-radius: 99px; background: #eef5df; color: #496b2d; font-size: .65rem; font-weight: 850; vertical-align: 2px; }
+    .empty-state { display: none; padding: 28px 18px; color: var(--muted); text-align: center; }
+    .note-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 14px; margin-top: 20px; }
+    .note-card { padding: 17px 19px; }
+    .note-card h2 { margin: 0 0 7px; font-size: .96rem; }
+    .note-card p { margin: 0; color: #5b696e; font-size: .85rem; }
+    .note-card a { color: #31544b; font-weight: 750; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 30px 0 38px; color: #718087; font-size: .78rem; }
+    footer a { color: #485b55; font-weight: 700; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 28px, 1160px); }
+      .topbar { padding: 16px 0; }
+      .hero { padding: 24px 0 20px; }
+      .card-head { display: block; padding: 18px 16px 12px; }
+      .legend { justify-content: flex-start; margin-top: 12px; }
+      .chart-wrap { padding: 0 2px; }
+      #plot { height: 440px; }
+      .chart-tools { top: 10px; right: 10px; }
+      .icon-button { width: 34px; height: 34px; }
+      .icon-button.reset { padding: 0 8px; }
+      .chart-help { align-items: flex-start; flex-direction: column; gap: 4px; padding: 10px 13px; }
+      .tooltip { padding: 12px 13px; }
+      .frontier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .frontier-card { gap: 9px; padding: 11px 9px; }
+      .frontier-name { font-size: .8rem; }
+      .frontier-values { font-size: .72rem; }
+      .table-controls { padding: 13px; }
+      .control-group { flex-basis: 100%; }
+      .row-count { margin-left: 1px; }
+      th, td { padding: 10px 12px; }
+      .model-cell { min-width: 230px; }
+      .note-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 430px) {
+      .shell { width: calc(100% - 22px); }
+      .toplink { font-size: .8rem; }
+      .hero { padding-top: 20px; }
+      .snapshot-strip { gap: 8px 14px; font-size: .8rem; }
+      .hero-actions .button { flex: 1 1 auto; }
+      #plot { height: 405px; }
+      .frontier-grid { grid-template-columns: 1fr; }
+      .frontier-card { padding: 10px 12px; }
+      .table-scroll { overflow: visible; }
+      table, tbody { display: block; width: 100%; }
+      thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+      tbody tr { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 10px; padding: 12px; border-top: 1px solid #edf0f0; }
+      td { display: block; min-width: 0; padding: 0; border: 0; font-size: .84rem; }
+      .rank-cell { display: none; }
+      .model-cell { grid-column: 1 / -1; min-width: 0; font-size: .9rem; }
+      td.number-cell { text-align: left; }
+      td.number-cell::before { display: block; margin-bottom: 1px; color: #829096; content: attr(data-label); font-size: .65rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+      .frontier-pill { margin-left: 4px; }
+      .select-box { min-width: 135px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="wordmark" href="#top" aria-label="Agent Pareto Explorer home"><span class="mark" aria-hidden="true">PF</span><span>Agent Pareto Explorer</span></a>
+    <a class="toplink" href="../">← More pages</a>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Agent Arena · captured snapshot</p>
+      <h1 id="page-title">Find the quality you can afford.</h1>
+      <p class="intro">Compare model net improvement with median cost per task. The green frontier marks the models where a better score means paying more.</p>
+      <div class="snapshot-strip" id="snapshot-strip" aria-label="Snapshot details">
+        <span><i class="snapshot-dot" aria-hidden="true"></i><strong>Loading snapshot…</strong></span>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary source-link" href="https://arena.ai/leaderboard/agent/pareto" target="_blank" rel="noopener noreferrer">Open Arena source ↗</a>
+        <button id="download-csv" class="button" type="button">Download CSV ↓</button>
+      </div>
+    </section>
+
+    <section class="card chart-card" aria-labelledby="chart-title">
+      <div class="card-head">
+        <div>
+          <h2 id="chart-title">Pareto frontier</h2>
+          <p>Median task cost on a logarithmic scale · net improvement on a linear scale</p>
+        </div>
+        <div class="legend" aria-label="Chart legend">
+          <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Other models</span>
+          <span class="legend-item"><i class="legend-line" aria-hidden="true"></i>Pareto frontier</span>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-tools" aria-label="Chart zoom controls">
+          <button class="icon-button" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+          <button class="icon-button" id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+          <button class="icon-button reset" id="zoom-reset" type="button" title="Reset zoom">Fit</button>
+        </div>
+        <svg id="plot" role="img" aria-label="Scatter plot of model net improvement against median task cost. Drag to pan, pinch to zoom on a touch screen, or use the zoom controls."></svg>
+      </div>
+      <div class="chart-help">
+        <span class="hint"><span class="key">Pinch</span> zoom · drag to pan · tap a point for details</span>
+        <span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click to fit</span>
+      </div>
+      <div id="tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model point to see its exact values.</div>
+    </section>
+
+    <section class="section" aria-labelledby="frontier-heading">
+      <div class="section-heading">
+        <div><h2 id="frontier-heading">Models on the frontier</h2><p>Each is the best observed score available at or below its task cost.</p></div>
+      </div>
+      <div id="frontier-list" class="frontier-grid"></div>
+    </section>
+
+    <section class="section" aria-labelledby="models-heading">
+      <div class="section-heading">
+        <div><h2 id="models-heading">All models in the cost view</h2><p>Search and sort the captured Arena values.</p></div>
+      </div>
+      <div class="card table-card">
+        <div class="table-controls">
+          <div class="control-group">
+            <label class="search-box"><span class="sr-only">Search models</span><input id="search" class="control-input" type="search" placeholder="Search models…" autocomplete="off"></label>
+            <select id="sort" class="control-input select-box" aria-label="Sort models">
+              <option value="rank">Arena rank</option>
+              <option value="score">Net improvement</option>
+              <option value="cost">Lowest cost</option>
+            </select>
+            <button id="frontier-toggle" class="filter-button" type="button" aria-pressed="false">Frontier only</button>
+          </div>
+          <span id="row-count" class="row-count"></span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">Rank</th><th scope="col">Model</th><th scope="col" class="number-cell">Median cost / task</th><th scope="col" class="number-cell">Net improvement</th></tr></thead>
+            <tbody id="model-rows"></tbody>
+          </table>
+          <div id="empty-state" class="empty-state">No models match that search.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="note-grid" aria-label="Data notes">
+      <article class="card note-card">
+        <h2>About this snapshot</h2>
+        <p id="snapshot-note">Loading source details…</p>
+      </article>
+      <article class="card note-card">
+        <h2>How to read the chart</h2>
+        <p>Lower cost is further left; higher improvement is higher up. A model on the frontier cannot be beaten on score without moving to a higher cost point in this snapshot.</p>
+      </article>
+    </section>
+
+    <footer>
+      <span>Independent visualisation of public Arena AI leaderboard data. Not affiliated with Arena.</span>
+      <a href="https://arena.ai/leaderboard/agent/pareto" target="_blank" rel="noopener noreferrer">Source: Arena Agent Pareto ↗</a>
+    </footer>
+  </main>
+
+  <script>
+    (() => {
+      const $ = (selector) => document.querySelector(selector);
+      const svg = $("#plot");
+      const tooltip = $("#tooltip");
+      const chartWrap = $(".chart-wrap");
+      const initialView = { x0: Math.log10(0.008), x1: 1, y0: -22, y1: 25 };
+      let view = { ...initialView };
+      let data = [];
+      let frontier = [];
+      let filteredToFrontier = false;
+      let dims = { width: 800, height: 500, left: 56, right: 20, top: 22, bottom: 48 };
+      let pointers = new Map();
+      let dragOrigin = null;
+      let pinchDistance = 0;
+      let pointerMoved = false;
+      let pointerTapItem = null;
+
+      const svgNode = (tag, attrs = {}, text = "") => {
+        const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+        for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
+        if (text) node.textContent = text;
+        return node;
+      };
+      const formatCost = (value) => `$${value.toFixed(2)}`;
+      const formatScore = (value) => `${value > 0 ? "+" : ""}${value.toFixed(2)}%`;
+      const frontierKey = (item) => `${item.rank}|${item.model}`;
+      const frontierSet = () => new Set(frontier.map(frontierKey));
+
+      function computeFrontier(records) {
+        const sorted = [...records].sort((a, b) => a.cost - b.cost || b.improvement - a.improvement);
+        let bestScore = -Infinity;
+        const result = [];
+        for (const item of sorted) {
+          if (item.improvement > bestScore) {
+            result.push(item);
+            bestScore = item.improvement;
+          }
+        }
+        return result;
+      }
+
+      function renderSummary(meta) {
+        const sessions = new Intl.NumberFormat("en-US").format(meta.sessions);
+        $("#snapshot-strip").innerHTML = `
+          <span><i class="snapshot-dot" aria-hidden="true"></i><strong>${meta.records.length} models with cost data</strong></span>
+          <span><strong>${sessions}</strong> Arena sessions</span>
+          <span>Leaderboard date <strong>${meta.pageDate}</strong></span>
+        `;
+        $("#snapshot-note").innerHTML = `Arena's Agent leaderboard showed <strong>${meta.boardModels} models</strong> and ${sessions} sessions, dated <strong>${meta.pageDate}</strong>. This copy contains the <strong>${meta.records.length} models</strong> shown in its 50th-percentile cost-per-task list. Values were captured on ${meta.capturedDate}; the remaining models were not listed with cost values in that view. Costs cover the last 14 days. <a href="${meta.sourceUrl}" target="_blank" rel="noopener noreferrer">Open the original chart</a>.`;
+      }
+
+      function renderFrontier() {
+        const holder = $("#frontier-list");
+        holder.replaceChildren();
+        frontier.forEach((item, index) => {
+          const card = document.createElement("article");
+          card.className = "frontier-card";
+          card.innerHTML = `<span class="frontier-number">${String(index + 1).padStart(2, "0")}</span><div style="min-width:0"><div class="frontier-name" title="${item.model}">${item.model}</div><div class="frontier-values">${formatCost(item.cost)} / task · ${formatScore(item.improvement)}</div></div>`;
+          holder.append(card);
+        });
+      }
+
+      function renderRows() {
+        const query = $("#search").value.trim().toLocaleLowerCase();
+        const sort = $("#sort").value;
+        const keys = frontierSet();
+        let rows = data.filter((item) => (!filteredToFrontier || keys.has(frontierKey(item))) && item.model.toLocaleLowerCase().includes(query));
+        if (sort === "score") rows = rows.sort((a, b) => b.improvement - a.improvement);
+        else if (sort === "cost") rows = rows.sort((a, b) => a.cost - b.cost || b.improvement - a.improvement);
+        else rows = rows.sort((a, b) => a.rank - b.rank);
+        const body = $("#model-rows");
+        body.replaceChildren();
+        for (const item of rows) {
+          const isFrontier = keys.has(frontierKey(item));
+          const tr = document.createElement("tr");
+          const rank = document.createElement("td");
+          rank.className = "rank-cell";
+          rank.textContent = item.rank;
+          const model = document.createElement("td");
+          model.className = "model-cell";
+          model.innerHTML = `${item.model}${isFrontier ? '<span class="frontier-pill">FRONTIER</span>' : ""}<span class="model-small">Arena rank ${item.rank}</span>`;
+          const cost = document.createElement("td");
+          cost.className = "number-cell";
+          cost.dataset.label = "Median cost / task";
+          cost.textContent = `${formatCost(item.cost)} / task`;
+          const score = document.createElement("td");
+          score.className = `number-cell ${item.improvement >= 0 ? "score-positive" : "score-negative"}`;
+          score.dataset.label = "Net improvement";
+          score.textContent = formatScore(item.improvement);
+          tr.append(rank, model, cost, score);
+          body.append(tr);
+        }
+        $("#row-count").textContent = `${rows.length} of ${data.length} models`;
+        $("#empty-state").style.display = rows.length ? "none" : "block";
+      }
+
+      function setTooltip(item) {
+        const isFrontier = frontierSet().has(frontierKey(item));
+        tooltip.innerHTML = `<strong>${item.model}</strong><span class="tip-sub">Arena rank ${item.rank} · ${formatCost(item.cost)} / task · ${formatScore(item.improvement)}${isFrontier ? " · Pareto frontier" : ""}</span>`;
+      }
+
+      function getPlotMetrics() {
+        const rect = svg.getBoundingClientRect();
+        const width = Math.max(320, Math.round(rect.width));
+        const height = Math.round(rect.height) || 500;
+        const left = width < 430 ? 51 : 58;
+        return { width, height, left, right: width < 430 ? 13 : 20, top: 24, bottom: 48 };
+      }
+
+      function xPos(value) {
+        return dims.left + ((Math.log10(value) - view.x0) / (view.x1 - view.x0)) * (dims.width - dims.left - dims.right);
+      }
+      function yPos(value) {
+        return dims.top + ((view.y1 - value) / (view.y1 - view.y0)) * (dims.height - dims.top - dims.bottom);
+      }
+
+      function renderChart() {
+        if (!data.length) return;
+        dims = getPlotMetrics();
+        const { width, height, left, right, top, bottom } = dims;
+        const plotRight = width - right;
+        const plotBottom = height - bottom;
+        const plotWidth = plotRight - left;
+        const plotHeight = plotBottom - top;
+        svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+        svg.replaceChildren();
+        const defs = svgNode("defs");
+        const clip = svgNode("clipPath", { id: "plot-clip" });
+        clip.append(svgNode("rect", { x: left, y: top, width: plotWidth, height: plotHeight, rx: 1 }));
+        defs.append(clip);
+        svg.append(defs);
+
+        const ticksX = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10];
+        for (const tick of ticksX) {
+          const x = xPos(tick);
+          if (x < left || x > plotRight) continue;
+          svg.append(svgNode("line", { x1: x, y1: top, x2: x, y2: plotBottom, stroke: "#35424a", "stroke-width": 1 }));
+          const label = tick < 1 ? `$${tick.toFixed(tick < 0.1 ? 2 : 1)}` : `$${tick}`;
+          svg.append(svgNode("text", { x, y: height - 20, fill: "#aebbbc", "font-size": width < 430 ? 10 : 11, "text-anchor": "middle" }, label));
+        }
+        for (let tick = -20; tick <= 20; tick += 10) {
+          const y = yPos(tick);
+          if (y < top || y > plotBottom) continue;
+          svg.append(svgNode("line", { x1: left, y1: y, x2: plotRight, y2: y, stroke: tick === 0 ? "#6b7b7e" : "#35424a", "stroke-width": tick === 0 ? 1.4 : 1, "stroke-dasharray": tick === 0 ? "5 5" : "none" }));
+          svg.append(svgNode("text", { x: left - 10, y: y + 4, fill: "#aebbbc", "font-size": width < 430 ? 10 : 11, "text-anchor": "end" }, `${tick > 0 ? "+" : ""}${tick}%`));
+        }
+        svg.append(svgNode("text", { x: (left + plotRight) / 2, y: height - 4, fill: "#d0d8d7", "font-size": width < 430 ? 10 : 11, "text-anchor": "middle" }, "Median cost per task (USD · log scale)"));
+        const axisTitle = svgNode("text", { x: 14, y: height / 2, fill: "#d0d8d7", "font-size": width < 430 ? 9 : 11, "text-anchor": "middle", transform: `rotate(-90 14 ${height / 2})` }, "Net improvement");
+        svg.append(axisTitle);
+
+        const plotGroup = svgNode("g", { "clip-path": "url(#plot-clip)" });
+        const shown = data.filter((item) => !filteredToFrontier || frontierSet().has(frontierKey(item)));
+        const frontierPath = frontier.map((item) => `${xPos(item.cost)},${yPos(item.improvement)}`).join(" ");
+        if (frontierPath) plotGroup.append(svgNode("polyline", { points: frontierPath, fill: "none", stroke: "#a9e45b", "stroke-width": 2.4, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }));
+
+        for (const item of shown) {
+          const onFrontier = frontierSet().has(frontierKey(item));
+          const group = svgNode("g", { class: "model-point", "data-model": item.model, "data-point": "true", tabindex: 0, role: "button", "aria-label": `${item.model}, rank ${item.rank}, ${formatCost(item.cost)} per task, ${formatScore(item.improvement)}${onFrontier ? ", on Pareto frontier" : ""}` });
+          group.append(svgNode("circle", { cx: xPos(item.cost), cy: yPos(item.improvement), r: onFrontier ? 7 : 4.8, fill: onFrontier ? "#b7e66b" : "#9aa9b0", stroke: onFrontier ? "#f3ffd7" : "#26333a", "stroke-width": onFrontier ? 1.3 : 1, opacity: onFrontier ? 1 : .8 }));
+          const title = svgNode("title", {}, `${item.model} · ${formatCost(item.cost)} / task · ${formatScore(item.improvement)}`);
+          group.append(title);
+          group.addEventListener("focus", () => setTooltip(item));
+          group.addEventListener("pointerenter", (event) => { if (event.pointerType === "mouse") setTooltip(item); });
+          plotGroup.append(group);
+        }
+        svg.append(plotGroup);
+      }
+
+      function clampView() {
+        const minSpanX = .18;
+        const maxSpanX = 3.2;
+        const spanX = Math.max(minSpanX, Math.min(maxSpanX, view.x1 - view.x0));
+        const centerX = (view.x0 + view.x1) / 2;
+        const spanY = Math.max(7, Math.min(70, view.y1 - view.y0));
+        const centerY = (view.y0 + view.y1) / 2;
+        view = { x0: centerX - spanX / 2, x1: centerX + spanX / 2, y0: centerY - spanY / 2, y1: centerY + spanY / 2 };
+      }
+
+      function zoomAt(factor, px = (dims.left + dims.width - dims.right) / 2, py = (dims.top + dims.height - dims.bottom) / 2) {
+        const fx = Math.min(1, Math.max(0, (px - dims.left) / (dims.width - dims.left - dims.right)));
+        const fy = Math.min(1, Math.max(0, (py - dims.top) / (dims.height - dims.top - dims.bottom)));
+        const anchorX = view.x0 + fx * (view.x1 - view.x0);
+        const anchorY = view.y1 - fy * (view.y1 - view.y0);
+        view = {
+          x0: anchorX + (view.x0 - anchorX) * factor,
+          x1: anchorX + (view.x1 - anchorX) * factor,
+          y0: anchorY + (view.y0 - anchorY) * factor,
+          y1: anchorY + (view.y1 - anchorY) * factor,
+        };
+        clampView();
+        renderChart();
+      }
+
+      function panBy(dx, dy, base = view) {
+        const plotWidth = dims.width - dims.left - dims.right;
+        const plotHeight = dims.height - dims.top - dims.bottom;
+        const spanX = base.x1 - base.x0;
+        const spanY = base.y1 - base.y0;
+        const deltaX = -dx / plotWidth * spanX;
+        const deltaY = dy / plotHeight * spanY;
+        view = { x0: base.x0 + deltaX, x1: base.x1 + deltaX, y0: base.y0 + deltaY, y1: base.y1 + deltaY };
+        clampView();
+        renderChart();
+      }
+
+      function pointFromEvent(event) {
+        const target = event.target.closest?.("[data-point='true']");
+        if (target) return data.find((item) => item.model === target.getAttribute("data-model"));
+        return null;
+      }
+
+      svg.addEventListener("pointerdown", (event) => {
+        event.preventDefault();
+        pointerTapItem = pointFromEvent(event);
+        svg.setPointerCapture(event.pointerId);
+        pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+        pointerMoved = false;
+        if (pointers.size === 1) dragOrigin = { x: event.clientX, y: event.clientY, view: { ...view } };
+        if (pointers.size === 2) {
+          const values = [...pointers.values()];
+          pinchDistance = Math.hypot(values[0].x - values[1].x, values[0].y - values[1].y);
+          dragOrigin = null;
+        }
+      });
+      svg.addEventListener("pointermove", (event) => {
+        if (!pointers.has(event.pointerId)) return;
+        pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+        if (pointers.size >= 2) {
+          const values = [...pointers.values()];
+          const distance = Math.hypot(values[0].x - values[1].x, values[0].y - values[1].y);
+          if (pinchDistance > 0 && distance > 0) {
+            const factor = pinchDistance / distance;
+            const mid = { x: (values[0].x + values[1].x) / 2, y: (values[0].y + values[1].y) / 2 };
+            const rect = svg.getBoundingClientRect();
+            zoomAt(factor, mid.x - rect.left, mid.y - rect.top);
+            pointerMoved = true;
+          }
+          pinchDistance = distance;
+        } else if (dragOrigin) {
+          const dx = event.clientX - dragOrigin.x;
+          const dy = event.clientY - dragOrigin.y;
+          if (Math.abs(dx) + Math.abs(dy) > 3) pointerMoved = true;
+          if (pointerMoved) panBy(dx, dy, dragOrigin.view);
+        }
+      });
+      function endPointer(event) {
+        const wasPinching = pointers.size > 1;
+        pointers.delete(event.pointerId);
+        if (pointers.size === 1) {
+          const remaining = [...pointers.values()][0];
+          dragOrigin = { x: remaining.x, y: remaining.y, view: { ...view } };
+          pinchDistance = 0;
+        } else if (!pointers.size) {
+          if (!pointerMoved && !wasPinching) {
+            const item = pointerTapItem || pointFromEvent(event);
+            if (item) setTooltip(item);
+          }
+          dragOrigin = null;
+          pinchDistance = 0;
+          pointerTapItem = null;
+        }
+      }
+      svg.addEventListener("pointerup", endPointer);
+      svg.addEventListener("pointercancel", endPointer);
+      svg.addEventListener("wheel", (event) => {
+        if (!event.ctrlKey && !event.metaKey) return;
+        event.preventDefault();
+        const rect = svg.getBoundingClientRect();
+        zoomAt(event.deltaY < 0 ? .84 : 1.19, event.clientX - rect.left, event.clientY - rect.top);
+      }, { passive: false });
+      svg.addEventListener("dblclick", (event) => { event.preventDefault(); view = { ...initialView }; renderChart(); });
+
+      $("#zoom-in").addEventListener("click", () => zoomAt(.72));
+      $("#zoom-out").addEventListener("click", () => zoomAt(1.38));
+      $("#zoom-reset").addEventListener("click", () => { view = { ...initialView }; renderChart(); });
+      $("#search").addEventListener("input", renderRows);
+      $("#sort").addEventListener("change", renderRows);
+      $("#frontier-toggle").addEventListener("click", (event) => {
+        filteredToFrontier = !filteredToFrontier;
+        event.currentTarget.setAttribute("aria-pressed", String(filteredToFrontier));
+        renderRows();
+        renderChart();
+      });
+      $("#download-csv").addEventListener("click", () => {
+        const quote = (value) => `"${String(value).replaceAll('"', '""')}"`;
+        const lines = [
+          "rank,model,median_cost_usd_per_task,net_improvement_percent",
+          ...data.map((item) => [item.rank, quote(item.model), item.cost.toFixed(2), item.improvement.toFixed(2)].join(",")),
+        ];
+        const blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "arena-agent-pareto-snapshot-2026-10-21.csv";
+        document.body.append(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      });
+
+      fetch("./data.json")
+        .then((response) => { if (!response.ok) throw new Error("Could not load the model snapshot."); return response.json(); })
+        .then((snapshot) => {
+          data = snapshot.records;
+          frontier = computeFrontier(data);
+          renderSummary(snapshot);
+          renderFrontier();
+          renderRows();
+          renderChart();
+          new ResizeObserver(renderChart).observe(chartWrap);
+        })
+        .catch((error) => {
+          $("#snapshot-strip").textContent = error.message;
+          $("#snapshot-note").textContent = `${error.message} Open this page over a web server so the data file can load.`;
+          $("#chart-title").textContent = "Snapshot could not load";
+        });
+    })();
+  </script>
+</body>
+</html>
