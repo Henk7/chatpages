@@ -67,10 +67,10 @@
     .legend-dot { display: grid; place-items: center; width: 17px; height: 17px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; background: #d87954; color: #fff; font-size: 9px; font-style: normal; font-weight: 900; }
     .legend-dot::before { content: "A"; }
     .legend-line { width: 19px; height: 3px; border-radius: 5px; background: #9ed54b; }
-    .developer-filter { padding: 0 24px 16px; }
-    .developer-filter-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 9px; }
-    .developer-filter-title { color: #34444a; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
-    .developer-filter-status { color: var(--muted); font-size: .78rem; }
+    .developer-highlight { padding: 0 24px 16px; }
+    .developer-highlight-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 9px; }
+    .developer-highlight-title { color: #34444a; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .developer-highlight-status { color: var(--muted); font-size: .78rem; }
     .developer-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .developer-chip { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 7px; min-height: 36px; padding: 5px 10px 5px 7px; border: 1px solid #d6dfdf; border-radius: 999px; background: #fff; color: #415057; font-size: .8rem; font-weight: 720; white-space: nowrap; transition: border-color .15s ease, background .15s ease, color .15s ease; }
     .developer-chip:hover { border-color: #9baead; }
@@ -78,6 +78,8 @@
     .developer-chip:focus-visible { outline: 3px solid #8ba2fb; outline-offset: 2px; }
     .developer-chip-mark { display: grid; flex: 0 0 22px; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--chip-color, #718087); color: #fff; font-size: .62rem; font-weight: 900; line-height: 1; }
     .developer-chip-count { min-width: 18px; padding: 1px 5px; border-radius: 999px; background: #edf1f1; color: #66747a; font-size: .67rem; font-variant-numeric: tabular-nums; text-align: center; }
+    #plot .model-label { transition: opacity .16s ease; }
+    #plot .model-label.is-subdued { opacity: .42; }
     .model-label { cursor: pointer; }
     .model-label:focus { outline: none; }
     .model-label:focus .label-bg { stroke: #fff; stroke-width: 2.5; }
@@ -139,8 +141,8 @@
       .topbar { padding: 16px 0; }
       .hero { padding: 24px 0 20px; }
       .card-head { display: block; padding: 18px 16px 12px; }
-      .developer-filter { padding: 0 16px 13px; }
-      .developer-filter-head { align-items: flex-start; flex-direction: column; gap: 1px; }
+      .developer-highlight { padding: 0 16px 13px; }
+      .developer-highlight-head { align-items: flex-start; flex-direction: column; gap: 1px; }
       .developer-chips { flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; padding: 2px 2px 7px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
       .developer-chip { min-height: 38px; }
       .legend { justify-content: flex-start; margin-top: 12px; }
@@ -210,19 +212,19 @@
       <div class="card-head">
         <div>
           <h2 id="chart-title">Pareto frontier</h2>
-          <p>All models are labelled on one large SVG canvas · drag to move around the chart</p>
+          <p>All models stay visible · select developer chips to highlight their models</p>
         </div>
         <div class="legend" aria-label="Chart legend">
           <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Model name + provider mark</span>
           <span class="legend-item"><i class="legend-line" aria-hidden="true"></i>Pareto frontier</span>
         </div>
       </div>
-      <div class="developer-filter" aria-label="Developer filter">
-        <div class="developer-filter-head">
-          <span class="developer-filter-title">Filter by developer</span>
-          <span id="developer-filter-status" class="developer-filter-status" role="status" aria-live="polite">Loading developers…</span>
+      <div class="developer-highlight" aria-label="Developer highlights">
+        <div class="developer-highlight-head">
+          <span class="developer-highlight-title">Highlight by developer</span>
+          <span id="developer-highlight-status" class="developer-highlight-status" role="status" aria-live="polite">Loading developers…</span>
         </div>
-        <div id="developer-chips" class="developer-chips" role="group" aria-label="Filter models by developer"></div>
+        <div id="developer-chips" class="developer-chips" role="group" aria-label="Highlight models by developer"></div>
       </div>
       <div class="chart-wrap">
         <div class="chart-tools" aria-label="Chart zoom controls">
@@ -241,7 +243,7 @@
 
     <section class="section" aria-labelledby="frontier-heading">
       <div class="section-heading">
-        <div><h2 id="frontier-heading">Models on the frontier</h2><p>Each is the best observed score available at or below its task cost within the current developer filter.</p></div>
+        <div><h2 id="frontier-heading">Models on the frontier</h2><p>Each is the best observed score available at or below its task cost.</p></div>
       </div>
       <div id="frontier-list" class="frontier-grid"></div>
     </section>
@@ -346,9 +348,6 @@
       ];
       const getLab = (model) => labBrands.find((brand) => brand.pattern.test(model)) || { name: "Unknown lab", mark: "?", color: "#718087" };
       const developerLabel = (name) => name === "Anthropic" ? "Claude" : name;
-      const getDeveloperFilteredData = () => selectedDevelopers.size
-        ? data.filter((item) => selectedDevelopers.has(getLab(item.model).name))
-        : data;
       const brandIcons = {
         "Anthropic": {
           "viewBox": "0 0 24 24",
@@ -447,11 +446,11 @@
         all.id = "all-developers";
         all.className = "developer-chip";
         all.setAttribute("aria-pressed", "true");
-        all.setAttribute("aria-label", "Show all developers");
+        all.setAttribute("aria-label", "Clear developer highlights");
         all.textContent = "All developers";
         all.addEventListener("click", () => {
           selectedDevelopers.clear();
-          applyDeveloperFilter();
+          applyDeveloperHighlights();
         });
         holder.append(all);
 
@@ -465,7 +464,7 @@
             button.dataset.developer = name;
             button.setAttribute("aria-pressed", "false");
             const displayName = developerLabel(name);
-            button.setAttribute("aria-label", `Filter by ${displayName}${name === "Anthropic" ? " (Anthropic)" : ""}; ${count} models`);
+            button.setAttribute("aria-label", `Highlight ${displayName}${name === "Anthropic" ? " (Anthropic)" : ""}; ${count} models`);
             button.title = `${count} model${count === 1 ? "" : "s"} by ${displayName}${name === "Anthropic" ? " (Anthropic)" : ""}`;
 
             const mark = document.createElement("span");
@@ -483,25 +482,22 @@
             button.addEventListener("click", () => {
               if (selectedDevelopers.has(name)) selectedDevelopers.delete(name);
               else selectedDevelopers.add(name);
-              applyDeveloperFilter();
+              applyDeveloperHighlights();
             });
             holder.append(button);
           });
 
-        $("#developer-filter-status").textContent = `${data.length} models across ${counts.size} developers`;
+        $("#developer-highlight-status").textContent = `${data.length} models across ${counts.size} developers · choose a developer to highlight`;
         syncDeveloperChips();
       }
 
-      function applyDeveloperFilter() {
-        const visible = getDeveloperFilteredData();
-        frontier = computeFrontier(visible);
+      function applyDeveloperHighlights() {
         const names = [...selectedDevelopers].map(developerLabel).sort((a, b) => a.localeCompare(b));
-        $("#developer-filter-status").textContent = selectedDevelopers.size
-          ? `Showing ${visible.length} of ${data.length} models · ${names.join(", ")}`
-          : `${data.length} models across ${new Set(data.map((item) => getLab(item.model).name)).size} developers`;
+        const highlightedCount = data.filter((item) => selectedDevelopers.has(getLab(item.model).name)).length;
+        $("#developer-highlight-status").textContent = selectedDevelopers.size
+          ? `Highlighting ${names.join(", ")} · ${highlightedCount} models`
+          : `${data.length} models across ${new Set(data.map((item) => getLab(item.model).name)).size} developers · choose a developer to highlight`;
         syncDeveloperChips();
-        renderFrontier();
-        renderRows();
         sceneDirty = true;
         renderChart(true);
       }
@@ -531,8 +527,7 @@
         const query = $("#search").value.trim().toLocaleLowerCase();
         const sort = $("#sort").value;
         const keys = frontierSet();
-        const developerData = getDeveloperFilteredData();
-        let rows = developerData.filter((item) => (!filteredToFrontier || keys.has(frontierKey(item))) && item.model.toLocaleLowerCase().includes(query));
+        let rows = data.filter((item) => (!filteredToFrontier || keys.has(frontierKey(item))) && item.model.toLocaleLowerCase().includes(query));
         if (sort === "score") rows = rows.sort((a, b) => b.improvement - a.improvement);
         else if (sort === "cost") rows = rows.sort((a, b) => a.cost - b.cost || b.improvement - a.improvement);
         else rows = rows.sort((a, b) => a.rank - b.rank);
@@ -558,7 +553,7 @@
           tr.append(rank, model, cost, score);
           body.append(tr);
         }
-        $("#row-count").textContent = `${rows.length} of ${developerData.length} models`;
+        $("#row-count").textContent = `${rows.length} of ${data.length} models`;
         $("#empty-state").style.display = rows.length ? "none" : "block";
       }
 
@@ -590,7 +585,7 @@
         const candidates = items.map((item) => {
           const width = Math.max(190, Math.min(470, 52 + item.model.length * 8.3));
           return { item, px: xPos(item.cost), py: yPos(item.improvement), width, height: boxHeight };
-        }).sort((a, b) => Number(keys.has(frontierKey(b.item))) - Number(keys.has(frontierKey(a.item))) || a.py - b.py || a.px - b.px);
+        }).sort((a, b) => Number(selectedDevelopers.has(getLab(b.item.model).name)) - Number(selectedDevelopers.has(getLab(a.item.model).name)) || Number(keys.has(frontierKey(b.item))) - Number(keys.has(frontierKey(a.item))) || a.py - b.py || a.px - b.px);
 
         for (const candidate of candidates) {
           const { item, px, py, width } = candidate;
@@ -635,6 +630,8 @@
 
       function appendModelLabel(plotGroup, item, onFrontier, placement) {
         const lab = getLab(item.model);
+        const isHighlighted = selectedDevelopers.has(lab.name);
+        const hasHighlights = selectedDevelopers.size > 0;
         const x = xPos(item.cost);
         const y = yPos(item.improvement);
         const labelX = placement.x;
@@ -642,12 +639,15 @@
         const labelWidth = placement.width;
         const labelHeight = placement.height;
         const group = svgNode("g", {
-          class: "model-point model-label",
+          class: "model-point model-label" + (isHighlighted ? " is-highlighted" : hasHighlights ? " is-subdued" : ""),
           "data-model": item.model,
+          "data-developer": lab.name,
+          "data-highlighted": String(isHighlighted),
           "data-point": "true",
+          opacity: hasHighlights && !isHighlighted ? .42 : 1,
           tabindex: 0,
           role: "button",
-          "aria-label": item.model + ", made by " + lab.name + ", rank " + item.rank + ", " + formatCost(item.cost) + " per task, " + formatScore(item.improvement) + (onFrontier ? ", on Pareto frontier" : ""),
+          "aria-label": item.model + ", made by " + lab.name + (isHighlighted ? ", highlighted" : "") + ", rank " + item.rank + ", " + formatCost(item.cost) + " per task, " + formatScore(item.improvement) + (onFrontier ? ", on Pareto frontier" : ""),
         });
 
         const endX = x < labelX ? labelX : x > labelX + labelWidth ? labelX + labelWidth : x;
@@ -655,14 +655,16 @@
         if (Math.hypot(endX - x, endY - y) > 12) {
           group.append(svgNode("line", {
             x1: x, y1: y, x2: endX, y2: endY,
-            stroke: onFrontier ? "#a9e45b" : "#829399",
-            "stroke-width": 2, opacity: .72,
+            stroke: isHighlighted ? lab.color : onFrontier ? "#a9e45b" : "#829399",
+            "stroke-width": isHighlighted ? 3.5 : 2,
+            opacity: isHighlighted ? 1 : .72,
           }));
         }
         group.append(svgNode("rect", {
           class: "label-bg", x: labelX, y: labelY, width: labelWidth, height: labelHeight, rx: 17,
-          fill: "#1d2a30", stroke: onFrontier ? "#a9e45b" : "#617078",
-          "stroke-width": onFrontier ? 2.2 : 1.5, opacity: .98,
+          fill: "#1d2a30", stroke: isHighlighted ? lab.color : onFrontier ? "#a9e45b" : "#617078",
+          "stroke-width": isHighlighted ? 5 : onFrontier ? 2.2 : 1.5, opacity: .98,
+          style: isHighlighted ? `filter:drop-shadow(0 0 7px ${lab.color})` : "",
         }));
         group.append(svgNode("circle", {
           cx: labelX + 22, cy: labelY + labelHeight / 2, r: 13,
@@ -749,7 +751,7 @@
         svg.append(axisTitle);
 
         const plotGroup = svgNode("g", { "clip-path": "url(#plot-clip)" });
-        const shown = getDeveloperFilteredData().filter((item) => !filteredToFrontier || frontierSet().has(frontierKey(item)));
+        const shown = data.filter((item) => !filteredToFrontier || frontierSet().has(frontierKey(item)));
         const frontierPath = frontier.map((item) => xPos(item.cost) + "," + yPos(item.improvement)).join(" ");
         if (frontierPath) {
           plotGroup.append(svgNode("polyline", {
@@ -758,7 +760,8 @@
           }));
         }
         const placements = layoutStaticLabels(shown);
-        for (const item of shown) {
+        const drawOrder = [...shown].sort((a, b) => Number(selectedDevelopers.has(getLab(a.model).name)) - Number(selectedDevelopers.has(getLab(b.model).name)));
+        for (const item of drawOrder) {
           appendModelLabel(plotGroup, item, frontierSet().has(frontierKey(item)), placements.get(frontierKey(item)));
         }
         svg.append(plotGroup);
@@ -940,7 +943,7 @@
         const quote = (value) => `"${String(value).replaceAll('"', '""')}"`;
         const lines = [
           "rank,model,median_cost_usd_per_task,net_improvement_percent",
-          ...getDeveloperFilteredData().map((item) => [item.rank, quote(item.model), item.cost.toFixed(2), item.improvement.toFixed(2)].join(",")),
+          ...data.map((item) => [item.rank, quote(item.model), item.cost.toFixed(2), item.improvement.toFixed(2)].join(",")),
         ];
         const blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
         const url = URL.createObjectURL(blob);
