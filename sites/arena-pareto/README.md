@@ -15,11 +15,12 @@ The CSV download contains all 51 rows shown with cost values. Six models on the 
 
 ## Chart controls
 
-- Drag to pan.
+- Drag to move around the large SVG chart; every model name and provider mark stays in place as you zoom.
 - Pinch or use the +/- buttons to zoom on touch screens.
-- Zoom in to replace point symbols with model names and colored lab logo badges.
-- Use Ctrl+scroll on desktop, or double-click / Fit to reset.
+- Use Ctrl+scroll on desktop or double-click / Fit to see the full chart.
 - Search and sort the model list; filter down to the frontier.
 - Download the captured values as CSV.
+
+Provider artwork is embedded inline: Simple Icons SVGs (CC0) where available, with colored initials for providers without an icon in that set.
 
 The explorer is an independent reproduction of the public data and is not affiliated with Arena.
