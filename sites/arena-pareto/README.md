@@ -18,6 +18,7 @@ The CSV download contains all 51 rows shown with cost values. Six models on the 
 - Drag to move around the large SVG chart; every model name and provider mark stays in place as you zoom.
 - Pinch or use the +/- buttons to zoom on touch screens.
 - Use Ctrl+scroll on desktop or double-click / Fit to see the full chart.
+- Filter by developer with the chips above the chart. Select multiple developers to compare them; choose “All developers” to reset. The chart, frontier, model list, and CSV export follow the developer selection.
 - Search and sort the model list; filter down to the frontier.
 - Download the captured values as CSV.
 
