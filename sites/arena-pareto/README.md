@@ -17,6 +17,7 @@ The CSV download contains all 51 rows shown with cost values. Six models on the 
 
 - Drag to pan.
 - Pinch or use the +/- buttons to zoom on touch screens.
+- Zoom in to replace point symbols with model names and colored lab logo badges.
 - Use Ctrl+scroll on desktop, or double-click / Fit to reset.
 - Search and sort the model list; filter down to the frontier.
 - Download the captured values as CSV.
