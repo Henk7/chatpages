@@ -4,8 +4,8 @@
   "size": 23,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-20T06:18:00+02:00",
-  "checked_label": "Dienstag, 20. Oktober 2026 · geprüft 06:18 Uhr · Europe/Vienna",
+  "checked_at": "2026-10-21T06:18:00+02:00",
+  "checked_label": "Mittwoch, 21. Oktober 2026, 06:18 Uhr",
   "price_basis": "Gesamtpreis für ein Paar Superfit BREEZE GTX High aus Modellfamilie 1-000369, EU-Größe 23, in beliebiger Farbe, inklusive Pflichtversand nach Österreich. Andere Modellfamilien und Varianten ohne GORE-TEX zählen nicht. Unklare Versandkosten oder Größenverfügbarkeit werden nicht ins Ranking aufgenommen.",
   "offers": [
     {
@@ -17,12 +17,12 @@
       "total": 55.29,
       "rankable": true,
       "size_available": true,
-      "availability": "Direktseite listet EU 23/14,3 cm, zeigt „In den Warenkorb“ und bestätigt Lieferung nach Österreich; 3–5 Werktage.",
+      "availability": "Direktseite listet EU 23/14,3 cm, zeigt „In den Warenkorb“ und bestätigt Lieferung nach Österreich; 2–5 Werktage.",
       "shipping_note": "Pflichtversand € 6,99 bei Warenwert unter € 69.",
       "url": "https://www.boozt.com/at/de-at/superfit/breeze_30617992/226453703",
       "source_url": "https://www.boozt.com/at/de-at/superfit/breeze_30617992/226453703",
       "shipping_url": "https://www.boozt.com/at/de-at/kundendienst/lieferung/welche-lieferzeiten-und-preise-haben-sie",
-      "checked_at": "2026-10-20T06:18:00+02:00"
+      "checked_at": "2026-10-21T06:18:00+02:00"
     },
     {
       "retailer": "superfit.com",
@@ -33,12 +33,12 @@
       "total": 79.85,
       "rankable": true,
       "size_available": true,
-      "availability": "Herstellerseite weist GORE-TEX aus; EU 23 auswählbar und bestellbar. Österreich-Lieferung bestätigt.",
+      "availability": "Herstellerseite weist GORE-TEX, Modell 1-000369-8500 und EU 23 als bestellbar aus; Österreich-Lieferung in 2–5 Werktagen bestätigt.",
       "shipping_note": "Pflichtversand nach Österreich € 4,90.",
       "url": "https://www.superfit.com/de/breeze-sneaker-high-9010159027347/",
       "source_url": "https://www.superfit.com/de/breeze-sneaker-high-9010159027347/",
       "shipping_url": "https://www.superfit.com/de/faq/",
-      "checked_at": "2026-10-20T06:18:00+02:00"
+      "checked_at": "2026-10-21T06:18:00+02:00"
     }
   ],
   "history": [
@@ -120,6 +120,37 @@
           "size_available": true,
           "url": "https://www.superfit.com/de/breeze-sneaker-high-9010159027347/",
           "checked_at": "2026-10-20T06:18:00+02:00"
+        }
+      ],
+      "threshold_eur": 40,
+      "news_alert": false
+    },
+    {
+      "date": "2026-10-21",
+      "checked_at": "2026-10-21T06:18:00+02:00",
+      "best_total": 55.29,
+      "retailer": "Boozt Österreich",
+      "confirmed_count": 2,
+      "top10": [
+        {
+          "retailer": "Boozt Österreich",
+          "color": "Lila/Rosa (Purple/Pink)",
+          "item_price": 48.3,
+          "shipping": 6.99,
+          "total": 55.29,
+          "size_available": true,
+          "url": "https://www.boozt.com/at/de-at/superfit/breeze_30617992/226453703",
+          "checked_at": "2026-10-21T06:18:00+02:00"
+        },
+        {
+          "retailer": "superfit.com",
+          "color": "Lila/Rosa",
+          "item_price": 74.95,
+          "shipping": 4.9,
+          "total": 79.85,
+          "size_available": true,
+          "url": "https://www.superfit.com/de/breeze-sneaker-high-9010159027347/",
+          "checked_at": "2026-10-21T06:18:00+02:00"
         }
       ],
       "threshold_eur": 40,
