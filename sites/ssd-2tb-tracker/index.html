@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14223b">
+  <meta name="description" content="Täglicher Preisradar für 2-TB-SSDs in Österreich: 20 günstige Modelle, Preisverteilung und täglicher Verlauf.">
+  <title>2-TB-SSD Preisradar · Österreich</title>
+  <style>
+    :root{color-scheme:light;--ink:#17212f;--muted:#637084;--line:#dfe6ee;--paper:#fff;--wash:#f3f6fa;--navy:#172640;--blue:#3159c7;--gold:#e7bd61;--green:#176a4c;--amber:#805510}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+    .wrap{width:min(1120px,calc(100% - 36px));margin-inline:auto}
+    header{color:#fff;background:linear-gradient(132deg,#14223b 0%,#263f68 100%);border-bottom:4px solid var(--gold);padding:34px 0 30px}
+    .eyebrow{margin:0 0 9px;color:#cbd7ed;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    h1{max-width:850px;margin:0;font-size:clamp(2rem,5vw,3.35rem);line-height:1.04;letter-spacing:-.035em}
+    .lede{max-width:780px;margin:14px 0 0;color:#e1e8f3}
+    nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-weight:700}
+    nav a{color:#fff}
+    main{padding:26px 0 54px}
+    .notice{padding:15px 17px;border:1px solid #ead9ae;border-left:5px solid var(--gold);border-radius:12px;background:#fff9e9;color:#554724;margin-bottom:18px}
+    .notice.error{border-color:#e7c0b8;border-left-color:#a14232;background:#fff4f1;color:#642c23}
+    .notice strong{color:#403318}
+    .summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 22px}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+    .stat strong{display:block;font-size:1.42rem;color:var(--navy)}
+    .stat span{font-size:.86rem;color:var(--muted)}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;margin:18px 0;box-shadow:0 2px 10px rgba(28,48,80,.035)}
+    .panel h2{margin:0;color:var(--navy);font-size:1.4rem;line-height:1.25}
+    .panel-intro{margin:7px 0 0;color:var(--muted)}
+    .chart-scroll{overflow-x:auto;margin-top:14px}
+    .chart-scroll svg{display:block;width:100%;min-width:520px;height:auto}
+    .chart-note{font-size:.86rem;color:var(--muted);margin:10px 0 0}
+    .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:9px;color:#46566b;font-size:.86rem}
+    .legend span{display:flex;align-items:center;gap:7px}
+    .swatch{width:12px;height:12px;border-radius:3px;background:var(--blue)}
+    .swatch.median{background:var(--gold)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:28px 0 14px}
+    .section-head h2{margin:0;color:var(--navy);font-size:1.55rem}
+    .section-head p{margin:5px 0 0;color:var(--muted)}
+    .offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:0;margin:0;list-style:none;counter-reset:deal}
+    .card{position:relative;min-width:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:0 2px 10px rgba(28,48,80,.035)}
+    .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+    .rank{color:#58677d;font-size:.78rem;font-weight:800}
+    .form{display:inline-block;background:#edf2ff;color:#314b84;border-radius:99px;padding:4px 8px;font-size:.74rem;font-weight:800;white-space:nowrap}
+    .card h3{color:var(--navy);font-size:1.08rem;line-height:1.32;margin:7px 0 4px}
+    .model{color:var(--muted);font-size:.86rem}
+    .price-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:13px 0;padding:11px 12px;background:#f4f7fb;border-radius:10px}
+    .price-row small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;font-weight:800}
+    .price{font-size:1.45rem;color:var(--navy);font-weight:850;white-space:nowrap}
+    .per-tb{color:var(--muted);font-size:.86rem;text-align:right}
+    .card-note{margin:10px 0 0;color:#566274;font-size:.84rem}
+    .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:13px}
+    .button{display:inline-block;background:var(--blue);color:#fff;padding:9px 12px;border-radius:8px;font-weight:750}
+    .subtle{font-size:.83rem;font-weight:700}
+    footer{padding:0 0 36px;color:var(--muted);font-size:.84rem}
+    footer p{margin:7px 0}
+    @media(max-width:700px){.offers{grid-template-columns:1fr}.summary{grid-template-columns:1fr 1fr}.summary .stat:last-child{grid-column:1/-1}.panel{padding:15px}.chart-scroll svg{min-width:500px}}
+    @media(max-width:460px){.wrap{width:min(100% - 26px,1120px)}header{padding:27px 0 23px}.summary{grid-template-columns:1fr}.summary .stat:last-child{grid-column:auto}.card{padding:15px}.price-row{align-items:flex-start;flex-direction:column}.per-tb{text-align:left}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">GitHub Pages · Preisradar Österreich</p>
+      <h1>2‑TB‑SSD Preisradar</h1>
+      <p class="lede">Die 20 günstigsten gelisteten 2‑TB‑SSD‑Modelle im österreichischen Preisvergleich, mit Preisverteilung und täglichem Preisverlauf.</p>
+      <nav aria-label="Navigation"><a href="/chatpages/sites/">← Alle Vergleichsseiten</a><a href="/chatpages/">Meine News</a></nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <div id="freshness" class="notice" role="status" aria-live="polite">Preisdaten werden geladen …</div>
+    <section class="summary" aria-label="Preisübersicht">
+      <div class="stat"><strong id="bestPrice">–</strong><span>günstigster gelisteter Einstiegspreis</span></div>
+      <div class="stat"><strong id="medianPrice">–</strong><span>Median der angezeigten Top 20</span></div>
+      <div class="stat"><strong id="offerCount">–</strong><span>2‑TB‑Modelle in der Liste</span></div>
+    </section>
+    <section class="panel" aria-labelledby="hist-title">
+      <h2 id="hist-title">Histogramm der Top‑20‑Preise</h2>
+      <p class="panel-intro">Jeder Balken zeigt, wie viele Modelle in das jeweilige Preisband fallen.</p>
+      <div class="chart-scroll" id="histogram" aria-live="polite"></div>
+      <p class="chart-note" id="histogramNote"></p>
+    </section>
+    <section class="panel" aria-labelledby="history-title">
+      <h2 id="history-title">Täglicher Preisverlauf</h2>
+      <p class="panel-intro">Verfolgt den günstigsten Einstiegspreis und den Median der jeweils angezeigten Top 20.</p>
+      <div class="chart-scroll" id="historyChart" aria-live="polite"></div>
+      <div class="legend"><span><i class="swatch"></i>Günstigster Preis</span><span><i class="swatch median"></i>Median der Top 20</span></div>
+      <p class="chart-note" id="historyNote"></p>
+    </section>
+    <section aria-labelledby="offers-title">
+      <div class="section-head">
+        <div><h2 id="offers-title">Die 20 günstigsten 2‑TB‑Modelle</h2><p>Aufsteigend nach dem gelisteten Bestpreis sortiert.</p></div>
+      </div>
+      <ol class="offers" id="offers"></ol>
+    </section>
+  </main>
+  <footer class="wrap">
+    <p>Quelle für den Startbestand: <a id="sourceLink" href="https://geizhals.at/" target="_blank" rel="noopener noreferrer">Geizhals Österreich</a>. Die angezeigten „ab“-Preise sind Preisvergleichs-Einstiegspreise, keine direkt geprüften Händler-Endpreise. Versandkosten, Lagerbestand, Zahlungsbedingungen und Lieferung nach Österreich bitte vor dem Kauf auf der Händlerseite bestätigen.</p>
+    <p>Die Preisverteilung bezieht sich auf die angezeigten 20 Modelle. Der Tagesverlauf beginnt mit dem ersten gespeicherten Prüftag; fehlende frühere Preise werden nicht rückwirkend ergänzt.</p>
+  </footer>
+  <script>
+    const currency = new Intl.NumberFormat("de-AT", {style:"currency", currency:"EUR", maximumFractionDigits:2});
+    const esc = value => String(value ?? "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[character]));
+    const money = value => currency.format(Number(value));
+    const median = values => {
+      const ordered = values.slice().sort((a,b)=>a-b);
+      const middle = Math.floor(ordered.length / 2);
+      return ordered.length % 2 ? ordered[middle] : (ordered[middle - 1] + ordered[middle]) / 2;
+    };
+    function drawHistogram(items) {
+      const values = items.map(item => Number(item.priceEUR)).filter(Number.isFinite);
+      if (!values.length) return "";
+      const minimum = Math.min(...values);
+      const maximum = Math.max(...values);
+      const step = Math.max(10, Math.ceil(((maximum - minimum) || 10) / 6 / 10) * 10);
+      const start = Math.floor(minimum / step) * step;
+      const end = Math.ceil((maximum + .01) / step) * step;
+      const bins = [];
+      for (let low = start; low < end; low += step) bins.push({low, high: low + step, count:0});
+      values.forEach(value => {
+        let index = Math.floor((value - start) / step);
+        index = Math.min(bins.length - 1, Math.max(0, index));
+        bins[index].count++;
+      });
+      const width = 760, height = 310, left = 54, right = 16, top = 24, bottom = 256;
+      const plotWidth = width - left - right, plotHeight = bottom - top;
+      const maxCount = Math.max(1, ...bins.map(bin => bin.count));
+      const gap = 8, barWidth = (plotWidth - gap * (bins.length - 1)) / bins.length;
+      let bars = "";
+      bins.forEach((bin, index) => {
+        const x = left + index * (barWidth + gap);
+        const barHeight = bin.count ? Math.max(3, (bin.count / maxCount) * (plotHeight - 20)) : 0;
+        const y = bottom - barHeight;
+        const label = Math.round(bin.low) + "–" + Math.round(bin.high);
+        bars += '<line x1="' + x.toFixed(1) + '" y1="' + bottom + '" x2="' + (x + barWidth).toFixed(1) + '" y2="' + bottom + '" stroke="#dfe6ee"/>';
+        if (bin.count) bars += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + barWidth.toFixed(1) + '" height="' + barHeight.toFixed(1) + '" rx="5" fill="#3159c7"><title>' + label + ' €: ' + bin.count + ' Modelle</title></rect>';
+        bars += '<text x="' + (x + barWidth / 2).toFixed(1) + '" y="' + (y - 7).toFixed(1) + '" text-anchor="middle" font-size="13" font-weight="700" fill="#172640">' + bin.count + '</text>';
+        bars += '<text x="' + (x + barWidth / 2).toFixed(1) + '" y="' + (bottom + 23) + '" text-anchor="middle" font-size="11" fill="#627084">' + label + '</text>';
+      });
+      return '<svg viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="Histogramm mit ' + bins.length + ' Preisbereichen für ' + values.length + ' Modelle"><line x1="' + left + '" y1="' + bottom + '" x2="' + (width-right) + '" y2="' + bottom + '" stroke="#9ba8b9"/><text x="10" y="' + (top + 6) + '" font-size="11" fill="#627084">Modelle</text>' + bars + '<text x="' + (width/2) + '" y="302" text-anchor="middle" font-size="12" fill="#627084">Preisband in Euro</text></svg>';
+    }
+    function drawHistory(records) {
+      if (records.length < 2) return "";
+      const width = 760, height = 300, left = 58, right = 22, top = 25, bottom = 245;
+      const values = records.flatMap(record => [Number(record.bestPrice), Number(record.medianPrice)]).filter(Number.isFinite);
+      const low = Math.floor(Math.min(...values) / 10) * 10, high = Math.ceil(Math.max(...values) / 10) * 10 || low + 10;
+      const range = Math.max(1, high - low), plotWidth = width - left - right, plotHeight = bottom - top;
+      const xAt = index => records.length === 1 ? left + plotWidth / 2 : left + index * plotWidth / (records.length - 1);
+      const yAt = value => bottom - (value - low) / range * plotHeight;
+      let grid = "";
+      for (let value = low; value <= high; value += Math.max(10, Math.ceil(range / 4 / 10) * 10)) {
+        const y = yAt(value);
+        grid += '<line x1="' + left + '" y1="' + y.toFixed(1) + '" x2="' + (width-right) + '" y2="' + y.toFixed(1) + '" stroke="#e5eaf0"/><text x="' + (left-8) + '" y="' + (y+4).toFixed(1) + '" text-anchor="end" font-size="11" fill="#627084">' + Math.round(value) + ' €</text>';
+      }
+      const bestPoints = records.map((record,index) => xAt(index).toFixed(1) + "," + yAt(Number(record.bestPrice)).toFixed(1)).join(" ");
+      const medianPoints = records.map((record,index) => xAt(index).toFixed(1) + "," + yAt(Number(record.medianPrice)).toFixed(1)).join(" ");
+      let dots = "";
+      records.forEach((record,index) => {
+        const x = xAt(index), bestY = yAt(Number(record.bestPrice)), medianY = yAt(Number(record.medianPrice));
+        dots += '<circle cx="' + x.toFixed(1) + '" cy="' + bestY.toFixed(1) + '" r="4" fill="#3159c7"><title>' + esc(record.date) + ': niedrigster Preis ' + money(record.bestPrice) + '</title></circle>';
+        dots += '<circle cx="' + x.toFixed(1) + '" cy="' + medianY.toFixed(1) + '" r="4" fill="#e7bd61"><title>' + esc(record.date) + ': Median ' + money(record.medianPrice) + '</title></circle>';
+        if (index === 0 || index === records.length-1 || records.length <= 8) dots += '<text x="' + x.toFixed(1) + '" y="' + (bottom+22) + '" text-anchor="middle" font-size="11" fill="#627084">' + esc(record.date.slice(5)) + '</text>';
+      });
+      return '<svg viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="Täglicher Verlauf der günstigsten Preise und des Medians"><line x1="' + left + '" y1="' + bottom + '" x2="' + (width-right) + '" y2="' + bottom + '" stroke="#9ba8b9"/>' + grid + '<polyline points="' + bestPoints + '" fill="none" stroke="#3159c7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="' + medianPoints + '" fill="none" stroke="#e7bd61" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' + dots + '</svg>';
+    }
+    function render(data) {
+      const items = (data.offers || []).slice().sort((a,b)=>Number(a.priceEUR)-Number(b.priceEUR)).slice(0,20);
+      const values = items.map(item=>Number(item.priceEUR)).filter(Number.isFinite);
+      const middle = values.length ? median(values) : null;
+      document.getElementById("bestPrice").textContent = values.length ? money(Math.min(...values)) : "–";
+      document.getElementById("medianPrice").textContent = middle === null ? "–" : money(middle);
+      document.getElementById("offerCount").textContent = String(items.length);
+      document.getElementById("freshness").innerHTML = '<strong>Datenstand: ' + esc(data.checkedLabel || data.checkedAt || "unbekannt") + '.</strong> ' + esc(data.priceBasisLabel || "Preise bitte auf der Händlerseite prüfen.");
+      document.getElementById("histogram").innerHTML = drawHistogram(items);
+      document.getElementById("histogramNote").textContent = "Berechnet aus den " + items.length + " angezeigten Modell-Einstiegspreisen; ein „ab“-Preis ist nicht automatisch der Endpreis inklusive Versand.";
+      const history = (data.history || []).slice().sort((a,b)=>a.date.localeCompare(b.date));
+      document.getElementById("historyChart").innerHTML = drawHistory(history);
+      document.getElementById("historyNote").textContent = history.length < 2
+        ? "Preisprotokoll gestartet am " + (history[0]?.date || data.checkedAt || "heute") + ". Nach dem nächsten Tagescheck erscheint hier der Verlauf. Frühere Werte werden nicht geschätzt."
+        : "Tageswerte aus den gespeicherten Preischecks. Der Median bezieht sich jeweils auf die Top 20 des Tages.";
+      document.getElementById("sourceLink").href = data.sourceUrl || "https://geizhals.at/";
+      document.getElementById("offers").innerHTML = items.map((item,index) => {
+        const perTB = Number(item.priceEUR) / 2;
+        const form = item.formFactor || item.interface || "SSD";
+        const source = item.productUrl || data.sourceUrl || "https://geizhals.at/";
+        return '<li class="card"><div class="card-top"><span class="rank">Platz ' + (index+1) + '</span><span class="form">' + esc(form) + '</span></div><h3>' + esc(item.name) + '</h3><div class="model">' + esc(item.model || "2 TB") + '</div><div class="price-row"><div><small>Bestpreis ab</small><span class="price">' + money(item.priceEUR) + '</span></div><div class="per-tb">' + money(perTB) + '<br>pro TB</div></div><p class="card-note">' + esc(item.priceNote || "Preisvergleichs-Einstiegspreis; Shop und Versand vor dem Kauf prüfen.") + '</p><div class="actions"><a class="button" href="' + esc(source) + '" target="_blank" rel="noopener noreferrer">Preisvergleich ansehen ↗</a></div></li>';
+      }).join("");
+    }
+    fetch("./prices.json", {cache:"no-store"})
+      .then(response => { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
+      .then(render)
+      .catch(error => {
+        const freshness = document.getElementById("freshness");
+        freshness.classList.add("error");
+        freshness.textContent = "Preisdaten konnten nicht geladen werden. Bitte später erneut versuchen.";
+        document.getElementById("histogram").textContent = "";
+        document.getElementById("historyChart").textContent = "";
+        document.getElementById("offers").innerHTML = '<li class="card">Derzeit sind keine Preisdaten verfügbar.</li>';
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
