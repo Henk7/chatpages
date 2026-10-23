@@ -5,185 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#292722">
   <meta name="description" content="Tief verwurzelt – Elternprojekt von Maria und Heinrich Eisl. Begegnungstage, Vorträge und Seminare für Eltern, Jugendliche und Paare.">
-  <title>Tief verwurzelt – Wurzeln geben Halt, Gespräche geben Richtung</title>
+  <title>Tief verwurzelt – Von Eltern für Eltern</title>
   <style>
     :root {
       color-scheme: light;
+      --forest: #292722;
+      --forest-deep: #201f1b;
+      --moss: #928571;
+      --sage: #e8e1d4;
+      --cream: #f3efe6;
+      --paper: #fbf9f3;
       --ink: #211f1b;
-      --charcoal: #292722;
-      --paper: #f3efe6;
-      --white: #fbf9f3;
-      --wash: #e8e1d4;
-      --line: #d2c8b7;
-      --brass: #a1875c;
-      --brass-light: #c4ad82;
       --muted: #706a60;
-      --shadow: 8px 8px 0 var(--charcoal);
+      --line: #d2c8b7;
+      --clay: #816d4e;
+      --gold: #b49a70;
+      --shadow: 0 18px 42px rgba(32, 29, 22, .13);
+      --radius: 0;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.72 Georgia, "Times New Roman", serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.7 Georgia, "Times New Roman", serif; }
     a { color: inherit; }
-    img, svg { display: block; }
+    img { max-width: 100%; display: block; }
+    .skip-link { position: fixed; top: -60px; left: 14px; z-index: 10; background: var(--paper); color: var(--ink); padding: 10px 14px; border: 1px solid var(--gold); }
+    .skip-link:focus { top: 12px; }
     .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
-    .skip { position: fixed; z-index: 20; left: 12px; top: -60px; background: var(--white); color: var(--ink); padding: 10px 15px; border: 1px solid var(--brass); }
-    .skip:focus { top: 12px; }
-    .topbar { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: rgba(243,239,230,.97); }
-    .topbar-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
-    .brand-mark { position: relative; width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 0; background: var(--charcoal); }
-    .brand-mark::after { content: ""; position: absolute; left: 5px; right: 5px; bottom: 4px; height: 4px; background: repeating-linear-gradient(90deg, var(--paper) 0 5px, var(--charcoal) 5px 7px); }
-    .brand-mark svg { width: 28px; height: 28px; margin-top: -4px; }
-    .brand-copy { display: grid; line-height: 1.05; }
-    .brand-copy small { color: var(--brass); font: 700 .58rem/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; }
-    .brand-copy strong { margin-top: 5px; font-size: 1.12rem; font-weight: 600; letter-spacing: -.025em; }
-    .nav { display: flex; align-items: center; gap: clamp(12px, 2vw, 27px); overflow-x: auto; white-space: nowrap; scrollbar-width: thin; }
-    .nav a { position: relative; padding: 8px 0; color: #4d4942; font: 600 .75rem/1.3 ui-sans-serif, system-ui, sans-serif; text-decoration: none; letter-spacing: .025em; }
-    .nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 1px; height: 1px; background: var(--brass); transition: right .18s ease; }
-    .nav a:hover::after, .nav a:focus-visible::after { right: 0; }
-    .nav-cta { padding: 10px 17px; border: 1px solid var(--ink); border-radius: 0; background: transparent; text-decoration: none; font: 700 .72rem/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
-    .nav-cta:hover { background: var(--charcoal); color: var(--paper); }
-    .hero { position: relative; overflow: hidden; padding: 74px 0 76px; background: var(--paper); border-bottom: 1px solid var(--line); }
-    .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--brass); opacity: .72; }
-    .hero-grid { position: relative; display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(36px, 6vw, 82px); align-items: center; }
-    .eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 24px; color: var(--brass); font: 700 .68rem/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
-    .eyebrow span { border: 0; border-radius: 0; padding: 0; background: transparent; }
-    .eyebrow span + span::before { content: "·"; padding-right: 10px; color: var(--line); }
+    .site-header { position: sticky; top: 0; z-index: 5; background: rgba(243,239,230,.98); border-bottom: 1px solid var(--line); }
+    .nav-row { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+    .brand img { width: 72px; height: 58px; object-fit: contain; }
+    .brand-text { display: grid; line-height: 1.2; }
+    .brand-text strong { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.18rem; font-weight: 600; letter-spacing: -.02em; }
+    .brand-text span { margin-top: 4px; color: var(--muted); font: 700 .62rem/1.3 ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: .16em; }
+    .nav-links { display: flex; align-items: center; gap: clamp(12px, 2vw, 27px); overflow-x: auto; white-space: nowrap; scrollbar-width: thin; }
+    .nav-links a { color: #514d45; text-decoration: none; font: 600 .75rem/1.3 ui-sans-serif, system-ui, sans-serif; letter-spacing: .035em; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--clay); }
+    .hero { position: relative; overflow: hidden; padding: 66px 0 56px; background: var(--forest-deep); color: var(--paper); border-bottom: 1px solid var(--gold); }
+    .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--gold); opacity: .8; pointer-events: none; }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(34px, 6vw, 78px); }
+    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 17px; color: var(--gold); text-transform: uppercase; letter-spacing: .16em; font: 700 .68rem/1.4 ui-sans-serif, system-ui, sans-serif; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: currentColor; }
     h1, h2, h3, p { margin-top: 0; }
-    h1, h2, h3 { letter-spacing: -.035em; }
-    h1 { max-width: 700px; margin-bottom: 22px; font-size: clamp(3.5rem, 6.3vw, 6rem); line-height: .99; font-weight: 400; }
-    h1 span { color: var(--brass); font-style: italic; font-weight: 400; }
-    .hero-copy { max-width: 610px; margin-bottom: 25px; color: #555046; font-size: clamp(1rem, 1.35vw, 1.13rem); line-height: 1.8; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 47px; padding: 11px 18px; border: 1px solid var(--ink); border-radius: 0; background: transparent; text-decoration: none; font: 700 .76rem/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .045em; text-transform: uppercase; transition: background .16s ease, color .16s ease; }
-    .button:hover { background: var(--wash); }
-    .button-blue { border-color: var(--charcoal); background: var(--charcoal); color: var(--paper); }
-    .button-blue:hover { border-color: var(--brass); background: var(--brass); color: white; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 0; margin-top: 31px; padding-top: 15px; border-top: 1px solid var(--line); }
-    .hero-meta span { padding: 2px 16px 2px 0; margin-right: 16px; border: 0; border-right: 1px solid var(--line); border-radius: 0; background: transparent; color: #5c574e; font: 600 .73rem/1.5 ui-sans-serif, system-ui, sans-serif; }
-    .hero-meta span:last-child { border-right: 0; }
-    .hero-art { position: relative; margin: 0; padding: 14px 14px 10px; border: 1px solid #625c50; border-radius: 0; background: var(--charcoal); box-shadow: 10px 10px 0 rgba(41,39,34,.12); transform: none; }
-    .hero-art svg { width: 100%; height: auto; border-radius: 0; }
-    .art-sticker { position: absolute; right: 0; top: 0; max-width: 126px; padding: 10px 13px; border: 1px solid var(--brass-light); border-top: 0; border-right: 0; border-radius: 0; background: var(--paper); color: var(--ink); text-align: center; font: italic 600 .72rem/1.2 Georgia, "Times New Roman", serif; transform: none; }
-    .hero-art figcaption { margin: 11px 5px 2px; color: #ded6c8; font: italic .84rem/1.4 Georgia, "Times New Roman", serif; }
-    .section { padding: 88px 0; }
-    .section-head { max-width: 820px; margin-bottom: 35px; }
-    .section-label { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 13px; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--brass); font: 700 .66rem/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
-    .section-label::before { content: ""; display: inline-block; width: 25px; height: 1px; background: currentColor; }
-    .section-title { margin-bottom: 16px; font-size: clamp(2.55rem, 4.8vw, 4.5rem); line-height: 1.02; font-weight: 400; }
-    .section-intro { max-width: 720px; margin-bottom: 0; color: #5e594f; font-size: 1.04rem; }
-    .principles { background: var(--white); }
-    .principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
-    .principle { min-height: 220px; padding: 25px 27px 12px 0; border: 0; border-radius: 0; background: transparent !important; box-shadow: none; }
-    .principle + .principle { padding-left: 26px; border-left: 1px solid var(--line); }
-    .principle:nth-child(2) { transform: none; }
-    .principle-number { display: block; width: auto; height: auto; margin-bottom: 18px; border: 0; border-radius: 0; background: transparent; color: var(--brass); font: italic 1rem/1 Georgia, "Times New Roman", serif; }
-    .principle h3 { margin-bottom: 10px; font-size: 1.42rem; line-height: 1.2; font-weight: 500; }
-    .principle p { margin-bottom: 0; color: #5e594f; font-size: .96rem; }
-    .statement { margin-top: 46px; padding: 31px clamp(24px,4vw,45px); border: 0; border-left: 2px solid var(--brass-light); border-radius: 0; background: var(--charcoal); color: var(--paper); box-shadow: none; }
-    .statement p { max-width: 900px; margin: 0; font-size: clamp(1.45rem, 2.6vw, 2.3rem); line-height: 1.35; font-style: italic; font-weight: 400; letter-spacing: -.02em; }
-    .history { background: var(--wash); border-block: 1px solid var(--line); }
-    .history-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 60px; align-items: start; }
-    .history-aside { position: sticky; top: 108px; }
-    .history-aside .section-title { max-width: 420px; }
-    .history-stamp { display: inline-block; width: auto; height: auto; margin-top: 20px; padding: 10px 15px; border: 1px solid var(--brass); border-radius: 0; background: transparent; color: var(--ink); text-align: center; font: italic 1rem/1.3 Georgia, "Times New Roman", serif; transform: none; }
-    .timeline { position: relative; margin: 0; padding: 0; list-style: none; }
-    .timeline::before { content: ""; position: absolute; left: 48px; top: 20px; bottom: 25px; width: 1px; background: var(--brass); }
-    .timeline li { position: relative; display: grid; grid-template-columns: 98px 1fr; gap: 22px; padding-bottom: 18px; }
-    .timeline-year { z-index: 1; display: grid; place-items: center; min-height: 42px; padding: 4px; border: 0; border-radius: 0; background: var(--wash); color: var(--brass); font: 700 .7rem/1.3 ui-sans-serif, system-ui, sans-serif; letter-spacing: .02em; text-align: center; }
-    .timeline-copy { padding: 11px 0 15px; border: 0; border-bottom: 1px solid rgba(125,111,87,.32); border-radius: 0; background: transparent; }
-    .timeline-copy strong { display: block; margin-bottom: 4px; font-size: 1.12rem; font-weight: 500; }
-    .timeline-copy p { margin: 0; color: #625d53; font-size: .94rem; }
-    .topic-list { display: flex; flex-wrap: wrap; gap: 0; margin: 24px 0; }
-    .topic-list span { padding: 3px 11px; border: 0; border-right: 1px solid var(--line); border-radius: 0; background: transparent; color: #5c574e; font: 600 .74rem/1.4 ui-sans-serif, system-ui, sans-serif; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+    h1 { max-width: 680px; margin-bottom: 20px; font-size: clamp(2.9rem, 6vw, 5.35rem); line-height: .99; letter-spacing: -.045em; }
+    h1 em { color: var(--gold); font-style: italic; }
+    .hero-copy { max-width: 650px; color: #ded8cc; font-size: clamp(1rem, 1.4vw, 1.16rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--gold); border-radius: 0; padding: 11px 19px; font: 700 .73rem/1.25 ui-sans-serif, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: background .16s ease, color .16s ease; }
+    .button:hover { background: var(--gold); color: var(--forest-deep); }
+    .button-primary { background: var(--gold); color: var(--forest-deep); }
+    .button-primary:hover { background: var(--paper); border-color: var(--paper); }
+    .button-ghost { border-color: rgba(243,239,230,.52); color: var(--paper); }
+    .button-ghost:hover { border-color: var(--paper); background: var(--paper); color: var(--ink); }
+    .hero-photo { position: relative; min-height: 360px; border: 1px solid #766a54; border-radius: 0; overflow: hidden; box-shadow: var(--shadow); background: #776e5f; }
+    .hero-photo img { position: absolute; width: 100%; height: 100%; inset: 0; object-fit: cover; object-position: center; }
+    .photo-label { position: absolute; left: 0; bottom: 0; max-width: calc(100% - 28px); background: rgba(32,31,27,.92); color: var(--paper); border-top: 1px solid var(--gold); padding: 10px 14px; font: 600 .72rem/1.45 ui-sans-serif, system-ui, sans-serif; letter-spacing: .025em; }
+    .facts { position: relative; margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-block: 1px solid rgba(243,239,230,.28); border-radius: 0; overflow: hidden; background: transparent; }
+    .fact { background: transparent; padding: 14px 14px 12px 0; }
+    .fact + .fact { padding-left: 16px; border-left: 1px solid rgba(243,239,230,.24); }
+    .fact strong { display: block; color: var(--gold); font-family: Georgia, serif; font-size: 1.28rem; font-weight: 500; line-height: 1.2; }
+    .fact span { color: #d2ccbf; font: .72rem/1.45 ui-sans-serif, system-ui, sans-serif; }
+    .section { padding: 84px 0; }
+    .section-kicker { margin: 0 0 10px; color: var(--clay); font: 700 .68rem/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    .section-heading { max-width: 760px; margin-bottom: 18px; color: var(--ink); font-size: clamp(2.3rem, 4.4vw, 3.9rem); line-height: 1.03; letter-spacing: -.04em; }
+    .section-lede { max-width: 740px; margin-bottom: 34px; color: var(--muted); font-size: 1.04rem; }
+    .mission { background: var(--paper); }
+    .mission-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 58px; align-items: start; }
+    .mission-intro { position: sticky; top: 112px; }
+    .mission-intro p { color: var(--muted); }
+    .values { display: grid; gap: 0; border-top: 1px solid var(--line); }
+    .value-card { display: grid; grid-template-columns: 46px 1fr; gap: 18px; padding: 20px 0; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+    .value-icon { width: auto; height: auto; display: block; padding-top: 4px; border-radius: 0; background: transparent; color: var(--clay); font: italic 1rem/1.3 Georgia, serif; }
+    .value-card h3 { margin: 2px 0 6px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.24rem; font-weight: 500; }
+    .value-card p { margin: 0; color: var(--muted); }
+    .quote-band { margin-top: 24px; padding: 23px 27px; border-left: 2px solid var(--gold); border-radius: 0; background: var(--sage); color: #50483a; font-family: Georgia, serif; font-size: 1.2rem; font-style: italic; }
+    .history { background: var(--sage); border-block: 1px solid var(--line); }
+    .history-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 60px; align-items: start; }
+    .history-photo { position: sticky; top: 110px; }
+    .history-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid rgba(33,31,27,.24); border-radius: 0; box-shadow: 8px 8px 0 rgba(32,31,27,.08); }
+    .history-photo figcaption { margin-top: 11px; color: var(--muted); font: italic .83rem/1.5 Georgia, serif; }
+    .timeline { position: relative; display: grid; gap: 0; margin: 28px 0 0; padding: 0; list-style: none; }
+    .timeline::before { content: ""; position: absolute; left: 39px; top: 8px; bottom: 22px; width: 1px; background: var(--gold); }
+    .timeline li { position: relative; display: grid; grid-template-columns: 80px 1fr; gap: 18px; padding-bottom: 22px; }
+    .year { position: relative; z-index: 1; display: grid; place-items: center; width: 80px; height: 36px; border: 0; border-radius: 0; background: var(--sage); color: var(--clay); font: 700 .72rem/1.3 ui-sans-serif, system-ui, sans-serif; }
+    .timeline p { margin: 3px 0 0; color: #5f5a50; }
+    .timeline strong { color: var(--ink); font-weight: 600; }
+    .topic-list { display: flex; flex-wrap: wrap; gap: 0; margin: 22px 0; }
+    .topic-list span { border: 0; border-right: 1px solid var(--line); border-radius: 0; padding: 3px 10px; color: #5d584f; background: transparent; font: 600 .72rem/1.45 ui-sans-serif, system-ui, sans-serif; }
     .topic-list span:first-child { padding-left: 0; }
     .topic-list span:last-child { border-right: 0; }
-    .text-link { color: #765e39; font-size: .87rem; font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .book { overflow: hidden; background: var(--charcoal); color: var(--paper); }
-    .book-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(36px, 7vw, 88px); align-items: center; }
-    .book-display { position: relative; display: grid; place-items: center; min-height: 380px; border: 1px solid #625c50; border-radius: 0; background: #d9cfbd; box-shadow: none; }
-    .book-display::before { content: "LESESTOFF"; position: absolute; left: 17px; top: 16px; padding: 0 0 6px; border: 0; border-bottom: 1px solid var(--brass); border-radius: 0; background: transparent; color: var(--ink); font: 700 .63rem/1.3 ui-sans-serif, system-ui, sans-serif; letter-spacing: .16em; }
-    .book-cover { position: relative; display: flex; flex-direction: column; justify-content: space-between; width: min(230px, 64%); aspect-ratio: .69; padding: 22px; border: 1px solid var(--ink); background: #f4efe5; color: var(--ink); box-shadow: 8px 8px 0 rgba(41,39,34,.82); transform: rotate(-2deg); }
-    .book-cover small { color: #736b5e; font: 700 .56rem/1.35 ui-sans-serif, system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
-    .book-cover strong { font-size: clamp(1.1rem,2vw,1.48rem); line-height: 1.05; font-weight: 500; letter-spacing: -.035em; }
-    .book-cover .root-mark { width: 82px; height: 58px; }
-    .book-copy .section-title { color: var(--paper); }
-    .book-copy .section-intro, .book-copy p { color: #d8d1c5; }
-    .book-price { display: flex; align-items: baseline; gap: 9px; margin: 23px 0; }
-    .book-price strong { color: var(--brass-light); font-size: 2rem; font-weight: 500; }
-    .book-price span { color: #d8d1c5; font: .82rem/1.4 ui-sans-serif, system-ui, sans-serif; }
-    .offers { background: var(--paper); }
-    .offer-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 0 34px; border-top: 1px solid var(--line); }
-    .offer { grid-column: auto !important; min-height: 0; display: flex; flex-direction: column; padding: 25px 10px 25px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent !important; box-shadow: none; }
-    .offer-tag { margin-bottom: 11px; color: var(--brass); font: 700 .63rem/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing: .15em; }
-    .offer h3 { margin-bottom: 10px; font-size: 1.42rem; line-height: 1.16; font-weight: 500; }
-    .offer p, .offer ul { margin-bottom: 16px; color: #5c574e; font-size: .93rem; }
-    .offer ul { padding-left: 19px; }
-    .offer li::marker { color: var(--brass); }
-    .offer-link { align-self: flex-start; margin-top: auto; color: #765e39; font: 700 .72rem/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing: .045em; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .testimonials { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
-    blockquote { margin: 0; padding: 17px 22px; border: 0; border-left: 1px solid var(--brass); border-radius: 0; background: transparent; color: #504b42; font: italic 1.1rem/1.65 Georgia, "Times New Roman", serif; }
-    blockquote:nth-child(2) { background: transparent; color: #504b42; }
-    .dates { background: var(--wash); border-block: 1px solid var(--line); }
-    .date-board { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 25px 0; border: 0; border-block: 1px solid var(--line); border-radius: 0; background: transparent; box-shadow: none; }
-    .date-board h3 { margin-bottom: 8px; font-size: 1.55rem; font-weight: 500; }
-    .date-board p { max-width: 720px; margin: 0; color: #5c574e; }
-    details { margin-top: 18px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; }
-    summary { cursor: pointer; padding: 13px 0; color: #4d4942; font: 700 .76rem/1.5 ui-sans-serif, system-ui, sans-serif; }
-    details ul { margin: 0; padding: 0 20px 17px 24px; color: #5c574e; }
-    details a { color: #765e39; }
-    .contact { padding: 72px 0; background: var(--paper); }
-    .contact-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1.2fr .8fr; gap: 35px; align-items: center; padding: clamp(30px,5vw,56px); border: 1px solid #61594b; border-radius: 0; background: var(--charcoal); color: var(--paper); box-shadow: none; }
-    .contact-card::after { content: ""; position: absolute; right: 38px; top: 0; width: 150px; height: 12px; border: 0; border-radius: 0; background: repeating-linear-gradient(90deg, var(--paper) 0 18px, var(--charcoal) 18px 22px); opacity: .62; }
-    .contact-card h2 { max-width: 560px; margin-bottom: 13px; font-size: clamp(2.45rem,4.5vw,4rem); line-height: 1; font-weight: 400; }
-    .contact-card p { max-width: 580px; margin: 0; color: #d8d1c5; }
-    .contact-actions { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-    .contact-actions .button { border-color: var(--brass-light); color: var(--paper); }
-    .contact-actions .button:hover { background: var(--brass); }
-    .contact-actions a:not(.button) { color: var(--brass-light); overflow-wrap: anywhere; font-weight: 600; }
-    footer { padding: 31px 0 23px; background: #211f1b; color: #d8d1c5; font: .79rem/1.65 ui-sans-serif, system-ui, sans-serif; }
-    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    footer strong { color: var(--paper); font: 600 1rem/1.4 Georgia, "Times New Roman", serif; }
-    footer p { margin: 7px 0; }
-    footer a { color: var(--brass-light); }
-    .footer-bottom { margin-top: 20px; padding-top: 14px; border-top: 1px solid #565148; color: #aaa398; font-size: .7rem; }
-    :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
-    @media (max-width: 900px) {
-      .topbar-inner { flex-wrap: wrap; padding: 10px 0; gap: 9px 18px; }
-      .nav { order: 3; width: 100%; padding: 2px 0; }
-      .nav-cta { margin-left: auto; }
-      .hero-grid, .history-grid, .book-grid { grid-template-columns: 1fr; }
-      .hero-art { max-width: 620px; width: 100%; margin-inline: auto; }
-      .history-aside { position: static; }
-      .history-stamp { margin: 0 0 24px; }
-      .book-grid { gap: 38px; }
-      .book-display { max-width: 550px; width: 100%; }
+    .book { background: var(--forest-deep); color: var(--paper); }
+    .book-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 64px; align-items: center; }
+    .book-art { position: relative; display: grid; place-items: center; min-height: 390px; border: 1px solid #766a54; border-radius: 0; background: #d8cfbf; overflow: hidden; }
+    .book-art::before, .book-art::after { content: ""; position: absolute; width: 210px; height: 210px; border: 1px solid rgba(129,109,78,.27); border-radius: 50%; }
+    .book-art::after { width: 280px; height: 280px; }
+    .book-art img { position: relative; z-index: 1; width: min(225px, 60%); max-height: 320px; object-fit: contain; filter: drop-shadow(10px 13px 10px rgba(0,0,0,.2)); transform: rotate(-2deg); }
+    .book .section-heading { color: var(--paper); }
+    .book .section-lede { color: #d6d0c4; }
+    .book-price { display: inline-flex; align-items: baseline; gap: 8px; margin: 3px 0 22px; color: var(--gold); }
+    .book-price strong { font-family: Georgia, serif; font-size: 2rem; font-weight: 500; }
+    .book-price span { font: .8rem/1.4 ui-sans-serif, system-ui, sans-serif; color: #d6d0c4; }
+    .book .button-primary { background: var(--gold); border-color: var(--gold); }
+    .offers { background: var(--cream); }
+    .offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 34px; border-top: 1px solid var(--line); }
+    .offer-card { display: flex; flex-direction: column; min-height: 230px; padding: 23px 8px 24px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; box-shadow: none; }
+    .offer-card.featured { background: transparent; color: var(--ink); border-color: var(--gold); }
+    .offer-number { color: var(--clay); font: 700 .65rem/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing: .14em; }
+    .featured .offer-number { color: var(--clay); }
+    .offer-card h3 { margin: 10px 0 8px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; line-height: 1.18; font-weight: 500; }
+    .offer-card.featured h3 { color: var(--ink); }
+    .offer-card p { margin-bottom: 16px; color: var(--muted); }
+    .offer-card.featured p { color: var(--muted); }
+    .offer-card ul { padding-left: 20px; margin: 2px 0 17px; color: var(--muted); }
+    .offer-card.featured ul { color: var(--muted); }
+    .offer-card li::marker { color: var(--gold); }
+    .offer-link { align-self: flex-start; margin-top: auto; color: var(--clay); font: 700 .76rem/1.4 ui-sans-serif, system-ui, sans-serif; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .testimonials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 28px; }
+    .testimonials blockquote { margin: 0; padding: 18px 20px; border-left: 1px solid var(--gold); background: transparent; color: #565046; font: italic 1.04rem/1.65 Georgia, serif; }
+    .dates { background: var(--paper); }
+    .date-panel { display: grid; grid-template-columns: 1fr auto; gap: 26px; align-items: center; padding: 25px 0; border-block: 1px solid var(--line); border-radius: 0; background: transparent; }
+    .date-panel h3 { margin-bottom: 8px; color: var(--ink); font-family: Georgia, serif; font-size: 1.5rem; font-weight: 500; }
+    .date-panel p { margin-bottom: 0; color: var(--muted); }
+    .past-dates { margin-top: 20px; }
+    .past-dates details { border-bottom: 1px solid var(--line); }
+    .past-dates summary { cursor: pointer; padding: 12px 0; color: #514d45; font: 700 .74rem/1.5 ui-sans-serif, system-ui, sans-serif; }
+    .past-dates ul { margin: 0; padding: 0 18px 17px 24px; color: var(--muted); }
+    .past-dates a { color: var(--clay); font-weight: 600; }
+    .contact { padding: 70px 0; background: var(--sage); border-top: 1px solid var(--line); }
+    .contact-card { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding: clamp(28px, 5vw, 52px); border: 1px solid #6d6049; border-radius: 0; background: var(--forest); color: var(--paper); box-shadow: none; }
+    .contact-card h2 { margin: 0 0 12px; color: var(--paper); font-size: clamp(2.2rem, 4vw, 3.7rem); line-height: 1.02; }
+    .contact-card p { margin: 0; color: #ded8cc; }
+    .contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .contact-actions a:not(.button) { color: var(--gold); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+    .site-footer { padding: 32px 0 26px; color: #d1cabe; background: var(--forest-deep); font: .8rem/1.65 ui-sans-serif, system-ui, sans-serif; }
+    .footer-row { display: flex; justify-content: space-between; gap: 22px; align-items: flex-start; }
+    .site-footer strong { color: var(--paper); font: 600 1rem/1.4 Georgia, serif; }
+    .site-footer p { margin-bottom: 6px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .site-footer a { color: var(--gold); }
+    .copyright { margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(243,239,230,.2); color: #aaa398; font-size: .72rem; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    @media (max-width: 850px) {
+      .nav-row { align-items: flex-start; flex-direction: column; gap: 8px; padding: 11px 0 12px; }
+      .nav-links { width: 100%; padding-bottom: 2px; }
+      .hero-grid, .mission-grid, .history-grid, .book-grid, .contact-card { grid-template-columns: 1fr; }
+      .hero { padding: 49px 0 42px; }
+      .hero-photo { min-height: 310px; max-width: 610px; width: 100%; justify-self: center; }
+      .mission-intro, .history-photo { position: static; }
+      .history-photo { max-width: 550px; }
+      .book-grid { gap: 36px; }
+      .book-art { min-height: 300px; }
     }
     @media (max-width: 600px) {
       .wrap { width: min(100% - 28px, 1160px); }
-      .nav { gap: 16px; }
-      .nav a { font-size: .72rem; }
-      .nav-cta { padding: 8px 10px; font-size: .65rem; }
-      .hero { padding: 48px 0 52px; }
-      h1 { font-size: clamp(3rem,12.5vw,4.3rem); }
-      .hero-art { padding: 9px 9px 7px; }
-      .art-sticker { max-width: 104px; padding: 8px 10px; font-size: .64rem; }
-      .hero-meta span { padding-right: 9px; margin-right: 9px; font-size: .66rem; }
+      .nav-row { min-height: auto; }
+      .brand img { width: 60px; height: 48px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: .74rem; }
+      .hero-photo { min-height: 245px; }
+      .facts { grid-template-columns: 1fr; }
+      .fact, .fact + .fact { display: flex; align-items: center; gap: 11px; padding: 10px 0; border-left: 0; }
+      .fact + .fact { border-top: 1px solid rgba(243,239,230,.2); }
+      .fact strong { min-width: 88px; font-size: 1.12rem; }
       .section { padding: 62px 0; }
-      .principle-grid, .testimonials, .footer-grid { grid-template-columns: 1fr; }
-      .principle { min-height: 0; padding: 22px 0; }
-      .principle + .principle { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
-      .statement { margin-top: 26px; }
-      .history-grid { gap: 25px; }
-      .timeline::before { left: 32px; }
-      .timeline li { grid-template-columns: 68px 1fr; gap: 12px; }
-      .timeline-year { font-size: .62rem; }
-      .timeline-copy { padding-top: 9px; }
-      .book-display { min-height: 310px; }
-      .offer-grid { grid-template-columns: 1fr; }
-      .date-board, .contact-card { grid-template-columns: 1fr; }
+      .value-card { grid-template-columns: 38px 1fr; gap: 13px; padding: 17px 0; }
+      .timeline::before { left: 30px; }
+      .timeline li { grid-template-columns: 62px 1fr; gap: 12px; }
+      .year { width: 62px; height: 32px; font-size: .67rem; }
+      .offer-grid, .testimonials { grid-template-columns: 1fr; }
+      .offer-card { min-height: 0; }
+      .date-panel { grid-template-columns: 1fr; }
+      .footer-row { flex-direction: column; }
       .contact { padding: 55px 0; }
-      .contact-card::after { right: 20px; width: 110px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -192,115 +186,98 @@
   </style>
 </head>
 <body>
-  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap nav-row">
       <a class="brand" href="#top" aria-label="Tief verwurzelt – Startseite">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none"><path d="M20 5v15m0-6C13 14 10 10 9 7m11 9c6-1 10-5 11-9M20 20c-7 2-10 7-12 12m12-10c1 6-2 10-5 13m5-13c5 2 8 6 11 11" stroke="#B49A70" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="7" r="3" fill="#B49A70"/></svg>
-        </span>
-        <span class="brand-copy"><small>Elternprojekt</small><strong>Tief verwurzelt</strong></span>
+        <img src="https://tiefverwurzelt.at/wp-content/uploads/2025/03/logo_tiefverwurzelt.png" alt="">
+        <span class="brand-text"><strong>Tief verwurzelt</strong><span>Elternprojekt · seit 1991</span></span>
       </a>
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#projekt">Worum es geht</a><a href="#geschichte">Unser Weg</a><a href="#buch">Buch</a><a href="#angebote">Angebote</a><a href="#termine">Termine</a>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="#projekt">Das Projekt</a><a href="#geschichte">Geschichte</a><a href="#buch">Buch</a><a href="#angebote">Angebote</a><a href="#termine">Termine</a><a href="#kontakt">Kontakt</a>
       </nav>
-      <a class="nav-cta" href="#kontakt">Kontakt ↗</a>
     </div>
   </header>
   <main id="inhalt">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow"><span>Fuschl am See</span><span>Elternprojekt seit 1991</span></p>
-          <h1 id="hero-title">Wurzeln geben Halt.<br><span>Gespräche geben Richtung.</span></h1>
-          <p class="hero-copy">Von Eltern für Eltern: Mag. Maria und Heinrich Eisl begleiten Familien mit fundiertem Wissen, Begegnung und stärkenden Gesprächen durch Kindheit, Pubertät und Partnerschaft.</p>
-          <div class="hero-actions"><a class="button button-blue" href="#angebote">Angebote entdecken <span aria-hidden="true">↓</span></a><a class="button" href="#kontakt">Anfrage stellen <span aria-hidden="true">↗</span></a></div>
-          <div class="hero-meta" aria-label="Auf einen Blick"><span>Seit 1991</span><span>Jugendliche 13–18 Jahre</span><span>Salzburg · Österreich</span></div>
+          <p class="eyebrow">Elternprojekt · Fuschl am See</p>
+          <h1 id="hero-title">Von Eltern<br>für <em>Eltern.</em></h1>
+          <p class="hero-copy">Tief verwurzelt begleitet Familien auf dem Weg durch Kindheit, Pubertät und Partnerschaft. Mit Raum für gute Gespräche, fundiertes Wissen und ein Fundament, das trägt.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#angebote">Angebote entdecken <span aria-hidden="true">↓</span></a><a class="button button-ghost" href="#kontakt">Kontakt aufnehmen <span aria-hidden="true">↗</span></a></div>
+          <div class="facts" aria-label="Auf einen Blick"><div class="fact"><strong>Seit 1991</strong><span>Eltern für Eltern</span></div><div class="fact"><strong>13–18 Jahre</strong><span>für Mutter-Tochter- und Vater-Sohn-Tage</span></div><div class="fact"><strong>Fuschl am See</strong><span>Salzburg · Österreich</span></div></div>
         </div>
-        <figure class="hero-art">
-          <svg viewBox="0 0 560 430" role="img" aria-labelledby="art-title art-desc">
-            <title id="art-title">Gemeinsam wachsen</title><desc id="art-desc">Eine stilisierte Pflanze mit kräftigen Wurzeln und zwei Menschen, die miteinander sprechen.</desc>
-            <rect width="560" height="430" rx="18" fill="#292722"/>
-            <circle cx="420" cy="115" r="76" fill="#E8E1D4"/>
-            <path d="M282 321c-2-67 2-124 3-183m-1 55c-42 1-65-20-85-48m86 23c42-1 69-20 87-49m-87 93c-29 1-50-13-65-33m64 21c30-2 49-16 64-36" fill="none" stroke="#B49A70" stroke-width="13" stroke-linecap="round"/>
-            <path d="M284 324c-51 19-88 48-119 82m119-81c-18 25-28 53-27 87m27-88c22 26 39 56 45 87m-44-87c53 18 92 44 128 77m-129-77c-74 3-115 20-162 47m163-44c75 6 120 24 173 48" fill="none" stroke="#E8E1D4" stroke-width="8" stroke-linecap="round"/>
-            <path d="M130 328h302" stroke="#B49A70" stroke-width="8" stroke-linecap="round"/>
-            <circle cx="203" cy="253" r="22" fill="#E8E1D4" stroke="#B49A70" stroke-width="6"/>
-            <path d="M172 320c2-37 12-53 31-53s31 17 34 53" fill="#E8E1D4" stroke="#B49A70" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="364" cy="266" r="19" fill="#B49A70" stroke="#B49A70" stroke-width="6"/>
-            <path d="M338 320c2-31 11-45 26-45s26 15 28 45" fill="#B49A70" stroke="#B49A70" stroke-width="6" stroke-linecap="round"/>
-            <path d="M228 228c25-33 55-42 87-31" fill="none" stroke="#E8E1D4" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 13"/>
-            <path d="M293 188l19 7-14 12" fill="none" stroke="#E8E1D4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <g fill="#E8E1D4"><circle cx="94" cy="77" r="5"/><circle cx="462" cy="268" r="5"/><circle cx="116" cy="153" r="4"/><circle cx="470" cy="65" r="4"/></g>
-          </svg>
-          <span class="art-sticker">Zuhören<br>Verstehen<br>Wachsen</span>
-          <figcaption>Ein tragfähiges Fundament entsteht in Beziehung.</figcaption>
-        </figure>
+        <figure class="hero-photo"><img src="https://tiefverwurzelt.at/wp-content/uploads/2025/02/Bild2.jpg" alt="Teilnehmende bei einem Begegnungstag des Elternprojekts" fetchpriority="high"><figcaption class="photo-label">Begegnungstage für Jugendliche und ihre Eltern</figcaption></figure>
       </div>
     </section>
 
-    <section class="section principles" id="projekt" aria-labelledby="project-title">
-      <div class="wrap">
-        <div class="section-head"><span class="section-label">Worum es geht</span><h2 class="section-title" id="project-title">Familie wächst in Beziehung.</h2><p class="section-intro">Das Augenmerk des Elternprojekts gilt der rechtzeitigen und fundierten Begleitung von Kindern und Jugendlichen. Eltern sollen erste Ansprechpartner bleiben und ihre Jugendlichen auf dem Weg zum Erwachsenwerden begleiten.</p></div>
-        <div class="principle-grid">
-          <article class="principle"><span class="principle-number">01</span><h3>Ein christliches Menschenbild</h3><p>Es ist das Fundament unserer Vorträge und Seminare. Glaube und Liebe haben im Gespräch über das Leben ihren Platz.</p></article>
-          <article class="principle"><span class="principle-number">02</span><h3>Eltern in ihrer Aufgabe stärken</h3><p>Eltern kennen ihr Kind am besten. Wir möchten sie dabei unterstützen, seine Einzigartigkeit wahrzunehmen, zu fördern und zu schützen.</p></article>
-          <article class="principle"><span class="principle-number">03</span><h3>Beziehungen pflegen</h3><p>Eine liebevolle Erziehung und eine glückliche Partnerschaft schenken Kindern Nähe, Geborgenheit und ein tragfähiges Fundament.</p></article>
+    <section class="section mission" id="projekt" aria-labelledby="mission-title">
+      <div class="wrap mission-grid">
+        <div class="mission-intro"><p class="section-kicker">Was uns trägt</p><h2 class="section-heading" id="mission-title">Ein Fundament für einen guten Weg.</h2><p>Das Augenmerk des Elternprojekts gilt der rechtzeitigen und fundierten Begleitung von Kindern und Jugendlichen. Eltern sollen erste Ansprechpartner bleiben und ihre Jugendlichen auf dem Weg zum Erwachsenwerden begleiten.</p><p>Die Mutter-Tochter- und Vater-Sohn-Tage sind seit 1994 ein Herzstück des Projekts. Als Familie gemeinsam über die Veränderungen der Pubertät ins Gespräch zu kommen und im Gespräch zu bleiben, ist ihr Anliegen.</p></div>
+        <div class="values">
+          <article class="value-card"><div class="value-icon" aria-hidden="true">01</div><div><h3>Ein christliches Menschenbild</h3><p>Es bildet das Fundament unserer Vorträge und Seminare. Glaube und Liebe dürfen im Gespräch über das Leben ihren Platz haben.</p></div></article>
+          <article class="value-card"><div class="value-icon" aria-hidden="true">02</div><div><h3>Eltern in ihrer Aufgabe stärken</h3><p>Eltern kennen ihr Kind am besten. Wir möchten sie dabei unterstützen, seine Einzigartigkeit wahrzunehmen, zu fördern und zu schützen.</p></div></article>
+          <article class="value-card"><div class="value-icon" aria-hidden="true">03</div><div><h3>Beziehungen pflegen</h3><p>Eine liebevolle Erziehung und eine glückliche Partnerschaft geben Kindern und Jugendlichen Nähe, Geborgenheit und ein tragfähiges Fundament.</p></div></article>
+          <div class="quote-band">„Ein Zuhause des Angenommenseins“ schenkt Kindern und Jugendlichen Vertrauen, aus dem sie selbstständig wachsen können.</div>
         </div>
-        <div class="statement"><p>„Ein Zuhause des Angenommenseins“ hilft Kindern und Jugendlichen, Vertrauen zu entwickeln und selbstständig zu wachsen.</p></div>
       </div>
     </section>
 
     <section class="section history" id="geschichte" aria-labelledby="history-title">
       <div class="wrap history-grid">
-        <div class="history-aside"><span class="section-label">Unser Weg</span><h2 class="section-title" id="history-title">Seit 1991 an der Seite von Familien.</h2><p class="section-intro">Aus der eigenen Erfahrung als Eltern und aus der Arbeit in Ehevorbereitung und Ehebegleitung entstand ein Angebot von Eltern für Eltern.</p><div class="history-stamp">Maria &<br>Heinrich<br>Eisl<br><small>Gründerpaar</small></div></div>
-        <div>
+        <figure class="history-photo"><img src="https://tiefverwurzelt.at/wp-content/uploads/2025/03/IMG_4612-1024x819.jpg" alt="Maria und Heinrich Eisl präsentieren ihr Buch zur Sprache des Körpers" loading="lazy"><figcaption>Mag. Maria und Heinrich Eisl stellen ihr Buch vor.</figcaption></figure>
+        <div><p class="section-kicker">Unsere Geschichte</p><h2 class="section-heading" id="history-title">Seit über drei Jahrzehnten an der Seite von Familien.</h2><p class="section-lede">Aus der eigenen Erfahrung als Eltern und aus der Arbeit in Ehevorbereitung und Ehebegleitung entstand ein Angebot von Eltern für Eltern.</p>
           <ol class="timeline">
-            <li><span class="timeline-year">1990</span><div class="timeline-copy"><strong>Wissen vertiefen</strong><p>Maria Eisl schließt den Salzburger Aufbaulehrgang Natürliche Empfängnisregelung (NER) unter der Leitung von Prof. Dr. Josef Rötzer ab.</p></div></li>
-            <li><span class="timeline-year">1991</span><div class="timeline-copy"><strong>Das Projekt beginnt</strong><p>Maria und Heinrich Eisl gründen das Elternprojekt „Tief verwurzelt“.</p></div></li>
-            <li><span class="timeline-year">1994 / 95</span><div class="timeline-copy"><strong>Eltern und Jugendliche im Gespräch</strong><p>Die ersten Mutter-Tochter-Tage beginnen 1994, die ersten Vater-Sohn-Tage 1995. Jugendliche sprechen mit ihren Eltern über Themen, die sie beschäftigen.</p></div></li>
-            <li><span class="timeline-year">1997</span><div class="timeline-copy"><strong>Berateranerkennung</strong><p>Maria Eisl erhält die Anerkennung in Angelegenheiten der Familienplanung durch das Bundesministerium für Umwelt, Jugend und Familie.</p></div></li>
-            <li><span class="timeline-year">2006–24</span><div class="timeline-copy"><strong>Familienarbeit in Salzburg</strong><p>Maria Eisl ist als Referentin im Referat für Ehe und Familie der Erzdiözese Salzburg tätig.</p></div></li>
+            <li><span class="year">1990</span><p><strong>Wissen vertiefen.</strong> Maria Eisl schließt den Salzburger Aufbaulehrgang Natürliche Empfängnisregelung (NER) unter der Leitung von Prof. Dr. Josef Rötzer ab.</p></li>
+            <li><span class="year">1991</span><p><strong>Projektstart.</strong> Maria und Heinrich Eisl gründen das Elternprojekt „Tief verwurzelt“.</p></li>
+            <li><span class="year">1994 / 95</span><p><strong>Gemeinsam im Gespräch.</strong> Die ersten Mutter-Tochter-Tage beginnen 1994, die ersten Vater-Sohn-Tage 1995.</p></li>
+            <li><span class="year">1997</span><p><strong>Anerkennung.</strong> Maria Eisl erhält die Berateranerkennung in Angelegenheiten der Familienplanung durch das Bundesministerium für Umwelt, Jugend und Familie.</p></li>
+            <li><span class="year">2006–24</span><p><strong>Familienarbeit in Salzburg.</strong> Maria Eisl ist als Referentin im Referat für Ehe und Familie der Erzdiözese Salzburg tätig.</p></li>
           </ol>
           <p>Zu den Themen der Jugendtage gehören die Sprache des eigenen Körpers, Selbstannahme, Identitätsfindung, Freundschaft, Familie, Pubertät, Partnerschaft, Sexualität, Glaube und Berufung.</p>
           <div class="topic-list" aria-label="Themen der Jugendtage"><span>Selbstannahme</span><span>Identität</span><span>Freundschaft</span><span>Pubertät</span><span>Familie</span><span>Partnerschaft</span><span>Glaube</span></div>
-          <p><a class="text-link" href="https://www.vision2000.at/?nr=2022/5&id=4063" target="_blank" rel="noopener noreferrer">Mehr zur Gründungsgeschichte ↗</a><br><a class="text-link" href="https://tiefverwurzelt.at/wp-content/uploads/2025/03/Broschuere-Referat-fuer-Ehe-und-Familie.pdf" target="_blank" rel="noopener noreferrer">Rückblick auf die Referententätigkeit ↗</a></p>
+          <p><a class="offer-link" href="https://www.vision2000.at/?nr=2022/5&id=4063" target="_blank" rel="noopener noreferrer">Mehr zur Gründungsgeschichte ↗</a> · <a class="offer-link" href="https://tiefverwurzelt.at/wp-content/uploads/2025/03/Broschuere-Referat-fuer-Ehe-und-Familie.pdf" target="_blank" rel="noopener noreferrer">Rückblick auf die Referententätigkeit ↗</a></p>
         </div>
       </div>
     </section>
 
     <section class="section book" id="buch" aria-labelledby="book-title">
       <div class="wrap book-grid">
-        <div class="book-display" aria-label="Gestaltete Buchcover-Ansicht"><div class="book-cover"><small>Elternprojekt Tief verwurzelt</small><strong>Die Sprache<br>des Körpers<br>entdecken</strong><svg class="root-mark" viewBox="0 0 90 60" fill="none" aria-hidden="true"><path d="M45 4v20m0-10C29 12 22 7 19 2m26 19c13-3 22-9 27-18M45 25C31 32 24 42 17 57m28-29c-2 12-9 20-15 28m16-27c12 6 19 14 24 26m-23-26c16 2 25 10 34 22" stroke="#A1875C" stroke-width="4" stroke-linecap="round"/></svg><small>Vom Jugendlichen zum Erwachsenen</small></div></div>
-        <div class="book-copy"><span class="section-label">Buch & Wissen</span><h2 class="section-title" id="book-title">Die Sprache des Körpers entdecken.</h2><p class="section-intro">Vom Jugendlichen zum Erwachsenen: Das Buch erklärt den Entwicklungsprozess des jugendlichen Zyklus und die Geschlechtsreife. Es lädt dazu ein, die fein abgestimmten biologischen Abläufe zu verstehen und die eigene körperliche Entwicklung anzunehmen.</p><p>Ein Wissens- und Nachschlagewerk zum Thema Aufklärung – für Jugendliche und Erwachsene.</p><div class="book-price"><strong>€ 24,90</strong><span>pro Buch</span></div><a class="button" href="mailto:tiefverwurzelt.at@gmail.com?subject=Buchbestellung%3A%20Die%20Sprache%20des%20K%C3%B6rpers%20entdecken">Buch per E-Mail bestellen <span aria-hidden="true">↗</span></a></div>
+        <div class="book-art"><img src="https://tiefverwurzelt.at/wp-content/uploads/2025/03/header-broschuere-724x1024.png" alt="Buchcover: Die Sprache des Körpers entdecken – vom Jugendlichen zum Erwachsenen" loading="lazy"></div>
+        <div><p class="section-kicker">Buch & Wissen</p><h2 class="section-heading" id="book-title">Die Sprache des Körpers entdecken.</h2><p class="section-lede">Vom Jugendlichen zum Erwachsenen: Das Buch erklärt den Entwicklungsprozess des jugendlichen Zyklus und die Geschlechtsreife. Es lädt dazu ein, die fein abgestimmten biologischen Abläufe zu verstehen und die eigene körperliche Entwicklung anzunehmen.</p><p>Ein wertvolles Wissens- und Nachschlagewerk zum Thema Aufklärung – für Jugendliche und Erwachsene.</p><div class="book-price"><strong>€ 24,90</strong><span>pro Buch</span></div><div><a class="button button-primary" href="mailto:tiefverwurzelt.at@gmail.com?subject=Buchbestellung%3A%20Die%20Sprache%20des%20K%C3%B6rpers%20entdecken">Buch per E-Mail bestellen <span aria-hidden="true">↗</span></a></div></div>
       </div>
     </section>
 
     <section class="section offers" id="angebote" aria-labelledby="offers-title">
-      <div class="wrap"><div class="section-head"><span class="section-label">Kurse & Seminare</span><h2 class="section-title" id="offers-title">Gespräche, die Familien stärken.</h2><p class="section-intro">Auf Anfrage kommen wir mit unserem Kursangebot gerne zu Ihnen vor Ort. Gemeinsam lässt sich ein passendes Format für Ihre Pfarre, Schule oder Elterngruppe finden.</p></div>
+      <div class="wrap"><p class="section-kicker">Kurse & Seminare</p><h2 class="section-heading" id="offers-title">Gespräche, die Familien stärken.</h2><p class="section-lede">Auf Anfrage kommen wir mit unserem Kursangebot gerne zu Ihnen vor Ort. Gemeinsam lässt sich ein passendes Format für Ihre Pfarre, Schule oder Elterngruppe finden.</p>
         <div class="offer-grid">
-          <article class="offer"><span class="offer-tag">01 · JUGEND & ELTERN</span><h3>Mutter-Tochter-Tag<br>und Vater-Sohn-Tag</h3><p>Ein gemeinsamer Seminartag für Jugendliche von 13 bis 18 Jahren und ihre Eltern. Über die Pubertät und diese wichtige Entwicklungszeit ins Gespräch kommen – und im Gespräch bleiben.</p><a class="offer-link" href="#termine">Termine ansehen ↓</a></article>
-          <article class="offer"><span class="offer-tag">02 · ELTERN</span><h3>Pubertät – die Freiheit, ich selbst zu werden</h3><p>Wie gelingt die Balance zwischen Loslassen und Begleitung auf dem Weg in ein selbstbestimmtes Leben? Ein Vortrag für Eltern, die ihre Jugendlichen durch diese turbulente Zeit begleiten.</p><a class="offer-link" href="#kontakt">Vortrag anfragen ↗</a></article>
-          <article class="offer"><span class="offer-tag">03 · KINDHEIT</span><h3>Entwicklungsphasen bis zur Volksschule</h3><p>Elternvertrauen stärken, Bedürfnisse erkennen und Talente fördern – mit liebevoller Fürsorge und Raum für eine selbstbestimmte Entwicklung.</p><a class="offer-link" href="#kontakt">Vortrag anfragen ↗</a></article>
-          <article class="offer"><span class="offer-tag">04 · PAARE</span><h3>Liebe, die in die Tiefe geht</h3><p>Ein Einkehrtag für Paare mit Impulsvortrag und Gespräch zu zweit.</p><ul><li>Das gehaltvolle Partnergespräch</li><li>Herkunftsfamilie und Gemeinsamkeiten</li><li>Liebe als lebenslange Herausforderung</li><li>Glaube und Theologie des Leibes</li></ul><a class="offer-link" href="#kontakt">Einkehrtag anfragen ↗</a></article>
-          <article class="offer"><span class="offer-tag">05 · PARTNERSCHAFT</span><h3>Ehebegleitende Vorträge und Seminare</h3><p>Impulse für Paare in unterschiedlichen Lebensphasen.</p><ul><li>Unter vier Augen – das gehaltvolle Partnergespräch</li><li>Wir zwei, die Kinder sind (werden) erwachsen</li><li>Natürliche Empfängnisregelung, auch in der Stillzeit</li></ul><a class="offer-link" href="#kontakt">Seminar anfragen ↗</a></article>
-          <article class="offer"><span class="offer-tag">06 · GLAUBE</span><h3>Gelebter Glaube – erfüllte Freude</h3><p>Ein Einkehrtag in der Advents- oder Fastenzeit: das Leben aus Taufe und Firmung gestalten und die Schönheit des christlichen Glaubens im Kirchenjahr erfahren.</p><a class="offer-link" href="#kontakt">Einkehrtag anfragen ↗</a></article>
+          <article class="offer-card featured"><span class="offer-number">01 · JUGEND & ELTERN</span><h3>Mutter-Tochter-Tag<br>und Vater-Sohn-Tag</h3><p>Ein gemeinsamer Seminartag für Jugendliche von 13 bis 18 Jahren und ihre Eltern. Über die Pubertät und diese wichtige Entwicklungszeit ins Gespräch kommen – und im Gespräch bleiben.</p><a class="offer-link" href="#termine">Termine ansehen ↓</a></article>
+          <article class="offer-card"><span class="offer-number">02 · ELTERN</span><h3>Pubertät – die Freiheit, ich selbst zu werden</h3><p>Wie gelingt die Balance zwischen Loslassen und Begleitung auf dem Weg in ein selbstbestimmtes Leben? Ein Vortrag für Eltern, die ihre Jugendlichen durch diese turbulente Zeit begleiten.</p><a class="offer-link" href="#kontakt">Vortrag anfragen ↗</a></article>
+          <article class="offer-card"><span class="offer-number">03 · KINDHEIT</span><h3>Entwicklungsphasen von Geburt bis zur Volksschulzeit</h3><p>Elternvertrauen stärken, Bedürfnisse erkennen und Talente fördern – mit liebevoller Fürsorge und Raum für eine selbstbestimmte Entwicklung.</p><a class="offer-link" href="#kontakt">Vortrag anfragen ↗</a></article>
+          <article class="offer-card"><span class="offer-number">04 · PAARE</span><h3>Liebe, die in die Tiefe geht</h3><p>Ein Einkehrtag für Paare mit Impulsvortrag und Gespräch zu zweit. Themen sind unter anderem:</p><ul><li>Das gehaltvolle Partnergespräch</li><li>Herkunftsfamilie und Gemeinsamkeiten</li><li>Liebe als lebenslange Herausforderung</li><li>Glaube und Theologie des Leibes</li></ul><a class="offer-link" href="#kontakt">Einkehrtag anfragen ↗</a></article>
+          <article class="offer-card"><span class="offer-number">05 · PARTNERSCHAFT</span><h3>Ehebegleitende Vorträge und Seminare</h3><p>Impulse für Paare in unterschiedlichen Lebensphasen.</p><ul><li>Unter vier Augen – das gehaltvolle Partnergespräch</li><li>Wir zwei, die Kinder sind (werden) erwachsen</li><li>Natürliche Empfängnisregelung (NER), auch in der Stillzeit</li></ul><a class="offer-link" href="#kontakt">Seminar anfragen ↗</a></article>
+          <article class="offer-card"><span class="offer-number">06 · GLAUBE</span><h3>Gelebter Glaube – erfüllte Freude</h3><p>Ein Einkehrtag in der Advents- oder Fastenzeit: das Leben aus Taufe und Firmung gestalten und die Schönheit des christlichen Glaubens im Kirchenjahr erfahren.</p><a class="offer-link" href="#kontakt">Einkehrtag anfragen ↗</a></article>
         </div>
         <div class="testimonials"><blockquote>Mein Sohn hat wider aller Erwartungen den Tag als total positiv erlebt und gesagt, dass er nächstes Jahr wieder dabei sein möchte.</blockquote><blockquote>Die Vorträge haben mir Mut, Hoffnung, Kraft und Wertschätzung für mich selbst, meinen Mann, die Kinder und die Mitmenschen geschenkt.</blockquote></div>
       </div>
     </section>
 
     <section class="section dates" id="termine" aria-labelledby="dates-title">
-      <div class="wrap"><div class="section-head"><span class="section-label">Termine</span><h2 class="section-title" id="dates-title">Zeit für wichtige Gespräche.</h2></div>
-        <div class="date-board"><div><h3>Neue Termine werden hier bekanntgegeben.</h3><p>Die zuletzt veröffentlichten Begegnungstage fanden am 3. und 17. Oktober 2026 in Fuschl am See statt. Für zukünftige Termine oder Anfragen schreiben Sie uns gerne.</p></div><a class="button button-blue" href="mailto:tiefverwurzelt.at@gmail.com?subject=Anfrage%20zu%20Terminen">Nach Terminen fragen <span aria-hidden="true">↗</span></a></div>
-        <details><summary>Informationsblätter der vergangenen Termine 2026</summary><ul><li>Mutter-Tochter-Tag · 3. Oktober 2026 · <a href="https://tiefverwurzelt.at/wp-content/uploads/2026/02/frauen-3.10.pdf" target="_blank" rel="noopener noreferrer">Informationsblatt öffnen ↗</a></li><li>Vater-Sohn-Tag · 17. Oktober 2026 · <a href="https://tiefverwurzelt.at/wp-content/uploads/2026/02/maenner-17.10.pdf" target="_blank" rel="noopener noreferrer">Informationsblatt öffnen ↗</a></li></ul></details>
+      <div class="wrap"><p class="section-kicker">Termine</p><h2 class="section-heading" id="dates-title">Gemeinsam Zeit für wichtige Gespräche nehmen.</h2>
+        <div class="date-panel"><div><h3>Neue Termine werden hier bekanntgegeben.</h3><p>Die zuletzt veröffentlichten Begegnungstage fanden am 3. und 17. Oktober 2026 in Fuschl am See statt. Für zukünftige Termine oder Anfragen schreiben Sie uns gerne.</p></div><a class="button" style="background:var(--forest);color:white" href="mailto:tiefverwurzelt.at@gmail.com?subject=Anfrage%20zu%20Terminen">Nach Terminen fragen <span aria-hidden="true">↗</span></a></div>
+        <div class="past-dates"><details><summary>Informationsblätter der vergangenen Termine 2026</summary><ul><li>Mutter-Tochter-Tag · 3. Oktober 2026 · <a href="https://tiefverwurzelt.at/wp-content/uploads/2026/02/frauen-3.10.pdf" target="_blank" rel="noopener noreferrer">Informationsblatt öffnen ↗</a></li><li>Vater-Sohn-Tag · 17. Oktober 2026 · <a href="https://tiefverwurzelt.at/wp-content/uploads/2026/02/maenner-17.10.pdf" target="_blank" rel="noopener noreferrer">Informationsblatt öffnen ↗</a></li></ul></details></div>
       </div>
     </section>
 
     <section class="contact" id="kontakt" aria-labelledby="contact-title">
-      <div class="wrap contact-card"><div><span class="section-label">Wir freuen uns auf Ihre Anfrage</span><h2 id="contact-title">Kurs, Vortrag oder Buch?</h2><p>Schreiben Sie uns – wir besprechen gerne, welches Angebot zu Ihrer Familie, Gruppe oder Pfarre passt.</p></div><div class="contact-actions"><a class="button" href="mailto:tiefverwurzelt.at@gmail.com?subject=Anfrage%20an%20Tief%20verwurzelt">E-Mail schreiben <span aria-hidden="true">↗</span></a><a href="mailto:tiefverwurzelt.at@gmail.com">tiefverwurzelt.at@gmail.com</a><a href="https://www.tiefverwurzelt.at/" target="_blank" rel="noopener noreferrer">Zur Originalwebsite ↗</a></div></div>
+      <div class="wrap contact-card"><div><p class="section-kicker">Wir freuen uns auf Ihre Anfrage</p><h2 id="contact-title">Kurs, Vortrag oder Buch?</h2><p>Schreiben Sie uns – wir besprechen gerne, welches Angebot zu Ihrer Familie, Gruppe oder Pfarre passt.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:tiefverwurzelt.at@gmail.com?subject=Anfrage%20an%20Tief%20verwurzelt">E-Mail schreiben <span aria-hidden="true">↗</span></a><a href="mailto:tiefverwurzelt.at@gmail.com">tiefverwurzelt.at@gmail.com</a><a href="https://www.tiefverwurzelt.at/" target="_blank" rel="noopener noreferrer">Zur Originalwebsite ↗</a></div></div>
     </section>
   </main>
-  <footer><div class="wrap"><div class="footer-grid"><div><strong>Elternprojekt Tief verwurzelt</strong><p>Mag. Maria und Heinrich Eisl</p><p><a href="mailto:tiefverwurzelt.at@gmail.com">tiefverwurzelt.at@gmail.com</a></p></div><div><strong>Impressum</strong><p>Inhaltlich verantwortlich: Mag. Maria und Heinrich Eisl</p><p>Alle Inhalte sind urheberrechtlich geschützt. Aktuelle Informationen finden Sie auch auf der <a href="https://www.tiefverwurzelt.at/" target="_blank" rel="noopener noreferrer">Originalwebsite</a>.</p><a href="https://www.tiefverwurzelt.at/?page_id=1017" target="_blank" rel="noopener noreferrer">Original-Impressum ↗</a> · <a href="#top">Nach oben ↑</a></div></div><div class="footer-bottom">GitHub-Pages-Fassung des Elternprojekts „Tief verwurzelt“ · Fuschl am See</div></div></footer>
+  <footer class="site-footer">
+    <div class="wrap footer-row"><div><strong>Elternprojekt Tief verwurzelt</strong><p>Mag. Maria und Heinrich Eisl</p><p><a href="mailto:tiefverwurzelt.at@gmail.com">tiefverwurzelt.at@gmail.com</a></p></div><div><strong>Impressum</strong><p>Inhaltlich verantwortlich: Mag. Maria und Heinrich Eisl</p><p>Alle Inhalte sind urheberrechtlich geschützt. Aktuelle Informationen finden Sie auch auf der <a href="https://www.tiefverwurzelt.at/" target="_blank" rel="noopener noreferrer">Originalwebsite</a>.</p><div class="footer-links"><a href="#top">Nach oben ↑</a><a href="https://www.tiefverwurzelt.at/?page_id=1017" target="_blank" rel="noopener noreferrer">Original-Impressum ↗</a></div></div></div>
+    <div class="wrap copyright">GitHub-Pages-Fassung des Elternprojekts „Tief verwurzelt“ · Fuschl am See</div>
+  </footer>
 </body>
 </html>
+
