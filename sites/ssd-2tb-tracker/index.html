@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#14223b">
-  <meta name="description" content="Täglicher Preisradar für 2-TB-SSDs in Österreich: 20 günstige Modelle, Preisverteilung und täglicher Verlauf.">
+  <meta name="description" content="Täglicher Preisradar für 2-TB-SSDs in Österreich: bis zu 20 günstige Modelle, Preisverteilung und täglicher Verlauf.">
   <title>2-TB-SSD Preisradar · Österreich</title>
   <style>
     :root{color-scheme:light;--ink:#17212f;--muted:#637084;--line:#dfe6ee;--paper:#fff;--wash:#f3f6fa;--navy:#172640;--blue:#3159c7;--gold:#e7bd61;--green:#176a4c;--amber:#805510}
@@ -66,7 +66,7 @@
     <div class="wrap">
       <p class="eyebrow">GitHub Pages · Preisradar Österreich</p>
       <h1>2‑TB‑SSD Preisradar</h1>
-      <p class="lede">Die 20 günstigsten gelisteten 2‑TB‑SSD‑Modelle im österreichischen Preisvergleich, mit Preisverteilung und täglichem Preisverlauf.</p>
+      <p class="lede">Bis zu 20 gelistete 2‑TB‑SSD‑Modelle im österreichischen Preisvergleich, mit Preisverteilung und täglichem Preisverlauf.</p>
       <nav aria-label="Navigation"><a href="/chatpages/sites/">← Alle Vergleichsseiten</a><a href="/chatpages/">Meine News</a></nav>
     </div>
   </header>
@@ -74,32 +74,32 @@
     <div id="freshness" class="notice" role="status" aria-live="polite">Preisdaten werden geladen …</div>
     <section class="summary" aria-label="Preisübersicht">
       <div class="stat"><strong id="bestPrice">–</strong><span>günstigster gelisteter Einstiegspreis</span></div>
-      <div class="stat"><strong id="medianPrice">–</strong><span>Median der angezeigten Top 20</span></div>
+      <div class="stat"><strong id="medianPrice">–</strong><span>Median der angezeigten Modelle</span></div>
       <div class="stat"><strong id="offerCount">–</strong><span>2‑TB‑Modelle in der Liste</span></div>
     </section>
     <section class="panel" aria-labelledby="hist-title">
-      <h2 id="hist-title">Histogramm der Top‑20‑Preise</h2>
+      <h2 id="hist-title">Histogramm der angezeigten Modelle</h2>
       <p class="panel-intro">Jeder Balken zeigt, wie viele Modelle in das jeweilige Preisband fallen.</p>
       <div class="chart-scroll" id="histogram" aria-live="polite"></div>
       <p class="chart-note" id="histogramNote"></p>
     </section>
     <section class="panel" aria-labelledby="history-title">
       <h2 id="history-title">Täglicher Preisverlauf</h2>
-      <p class="panel-intro">Verfolgt den günstigsten Einstiegspreis und den Median der jeweils angezeigten Top 20.</p>
+      <p class="panel-intro">Verfolgt den günstigsten Einstiegspreis und den Median der aktuell angezeigten Modelle.</p>
       <div class="chart-scroll" id="historyChart" aria-live="polite"></div>
-      <div class="legend"><span><i class="swatch"></i>Günstigster Preis</span><span><i class="swatch median"></i>Median der Top 20</span></div>
+      <div class="legend"><span><i class="swatch"></i>Günstigster Preis</span><span><i class="swatch median"></i>Median der angezeigten Modelle</span></div>
       <p class="chart-note" id="historyNote"></p>
     </section>
     <section aria-labelledby="offers-title">
       <div class="section-head">
-        <div><h2 id="offers-title">Die 20 günstigsten 2‑TB‑Modelle</h2><p>Aufsteigend nach dem gelisteten Bestpreis sortiert.</p></div>
+        <div><h2 id="offers-title">Die aktuell angezeigten 2‑TB‑Modelle</h2><p>Aufsteigend nach dem gelisteten Bestpreis sortiert.</p></div>
       </div>
       <ol class="offers" id="offers"></ol>
     </section>
   </main>
   <footer class="wrap">
     <p>Quelle für den Startbestand: <a id="sourceLink" href="https://geizhals.at/" target="_blank" rel="noopener noreferrer">Geizhals Österreich</a>. Die angezeigten „ab“-Preise sind Preisvergleichs-Einstiegspreise, keine direkt geprüften Händler-Endpreise. Versandkosten, Lagerbestand, Zahlungsbedingungen und Lieferung nach Österreich bitte vor dem Kauf auf der Händlerseite bestätigen.</p>
-    <p>Die Preisverteilung bezieht sich auf die angezeigten 20 Modelle. Der Tagesverlauf beginnt mit dem ersten gespeicherten Prüftag; fehlende frühere Preise werden nicht rückwirkend ergänzt.</p>
+    <p>Die Preisverteilung bezieht sich auf die angezeigten Modelle. Der Tagesverlauf beginnt mit dem ersten gespeicherten Prüftag; fehlende frühere Preise werden nicht rückwirkend ergänzt.</p>
   </footer>
   <script>
     const currency = new Intl.NumberFormat("de-AT", {style:"currency", currency:"EUR", maximumFractionDigits:2});
@@ -180,7 +180,7 @@
       document.getElementById("historyChart").innerHTML = drawHistory(history);
       document.getElementById("historyNote").textContent = history.length < 2
         ? "Preisprotokoll gestartet am " + (history[0]?.date || data.checkedAt || "heute") + ". Nach dem nächsten Tagescheck erscheint hier der Verlauf. Frühere Werte werden nicht geschätzt."
-        : "Tageswerte aus den gespeicherten Preischecks. Der Median bezieht sich jeweils auf die Top 20 des Tages.";
+        : "Tageswerte aus den gespeicherten Preischecks. Der Median bezieht sich auf die am jeweiligen Prüftag angezeigten Modelle.";
       document.getElementById("sourceLink").href = data.sourceUrl || "https://geizhals.at/";
       document.getElementById("offers").innerHTML = items.map((item,index) => {
         const perTB = Number(item.priceEUR) / 2;
