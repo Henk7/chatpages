@@ -2,12 +2,12 @@
   "currency": "EUR",
   "capacity": "2 TB",
   "market": "Austria",
-  "checkedAt": "2026-10-23T06:06:00+02:00",
-  "checkedLabel": "Freitag, 23. Oktober 2026, 06:06 Uhr",
+  "checkedAt": "2026-10-25T01:17:00+02:00",
+  "checkedLabel": "Sonntag, 25. Oktober 2026, 01:17 Uhr",
   "source": "Geizhals Österreich",
   "sourceUrl": "https://geizhals.at/?bpmax=300&cat=hdssd&pagesize=30&promode=false&sort=p&xf=8250_2TB+(1.92-2TB)",
-  "priceBasisLabel": "Geizhals-AT-„ab“-Preis; Händlerbestand, Versand und Endpreis wurden nicht pauschal als bestätigt übernommen.",
-  "snapshotType": "Geizhals-AT-Einstiegspreise, nach Bestpreis sortiert; direkte Händlerbestätigung nur, wo ausdrücklich vermerkt.",
+  "priceBasisLabel": "Geizhals-AT-„ab“-Einstiegspreis; kein pauschaler Nachweis für Händlerbestand, Versand oder endgültigen Warenkorbpreis.",
+  "snapshotType": "Geizhals-AT-Produktseiten am 25.10.2026 direkt geöffnet; 12 Modellseiten aktuell abrufbar, 8 Kandidaten wegen nicht abrufbarer direkter Produktseiten nicht in der bestätigten Liste.",
   "offers": [
     {
       "id": "sandisk-ssd-plus-g26",
@@ -16,178 +16,142 @@
       "model": "SDSSDA-2T00-G26",
       "formFactor": "2,5 Zoll · SATA",
       "priceEUR": 197,
-      "productUrl": "https://geizhals.at/sandisk-ssd-plus-2tb-sdssda-2t00-g26-a2188932.html?hloc=at"
-    },
-    {
-      "id": "emtec-x150",
-      "rank": 2,
-      "name": "Emtec X150 SSD Power Plus 2TB",
-      "model": "ECSSD2TX150",
-      "formFactor": "2,5 Zoll · SATA",
-      "priceEUR": 217.99,
-      "productUrl": "https://geizhals.at/emtec-x150-ssd-power-plus-2tb-ecssd2tx150-a2430240.html?hloc=at"
+      "productUrl": "https://geizhals.at/sandisk-ssd-plus-2tb-sdssda-2t00-g26-a2188932.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "verbatim-vi550-s3",
-      "rank": 3,
+      "rank": 2,
       "name": "Verbatim Vi550 S3 SSD 2TB",
       "model": "49354",
       "formFactor": "2,5 Zoll · SATA",
       "priceEUR": 222.54,
-      "productUrl": "https://geizhals.at/verbatim-vi550-s3-ssd-2tb-49354-a2927704.html?hloc=at"
-    },
-    {
-      "id": "teamgroup-cx2",
-      "rank": 4,
-      "name": "TeamGroup CX2 SSD 2TB",
-      "model": "T253X6002T0C101",
-      "formFactor": "2,5 Zoll · SATA",
-      "priceEUR": 226.92,
-      "productUrl": "https://geizhals.at/teamgroup-cx2-ssd-2tb-t253x6002t0c101-a2532691.html?hloc=at"
+      "productUrl": "https://geizhals.at/verbatim-vi550-s3-ssd-2tb-49354-a2927704.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "intenso-top-performance",
-      "rank": 5,
+      "rank": 3,
       "name": "Intenso 2.5 Zoll SSD TOP 2TB",
       "model": "3812470",
       "formFactor": "2,5 Zoll · SATA",
       "priceEUR": 228.81,
-      "productUrl": "https://geizhals.at/intenso-top-performance-ssd-2tb-3812470-a2757475.html?hloc=at"
-    },
-    {
-      "id": "intenso-pcie-premium",
-      "rank": 6,
-      "name": "Intenso PCIe PREMIUM SSD 2TB",
-      "model": "3835470",
-      "formFactor": "M.2 2280 · NVMe PCIe 3.0",
-      "priceEUR": 231.02,
-      "productUrl": "https://geizhals.at/intenso-pcie-premium-ssd-2tb-3835470-a2860181.html?hloc=at"
-    },
-    {
-      "id": "pny-cs900",
-      "rank": 7,
-      "name": "PNY CS900 2TB",
-      "model": "SSD7CS900-2TB-RB / PB",
-      "formFactor": "2,5 Zoll · SATA",
-      "priceEUR": 235,
-      "productUrl": "https://geizhals.at/pny-cs900-2tb-ssd7cs900-2tb-rb-ssd7cs900-2tb-pb-a2430487.html?hloc=at"
+      "productUrl": "https://geizhals.at/intenso-top-performance-ssd-2tb-3812470-a2757475.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "verbatim-vi3000",
-      "rank": 8,
+      "rank": 4,
       "name": "Verbatim Vi3000 PCIe NVMe SSD 2TB",
       "model": "49376",
       "formFactor": "M.2 2280 · NVMe PCIe 3.0",
       "priceEUR": 236.9,
-      "productUrl": "https://geizhals.at/verbatim-vi3000-pcie-nvme-ssd-2tb-49376-a2927732.html?hloc=at"
-    },
-    {
-      "id": "teamgroup-vulcan-z",
-      "rank": 9,
-      "name": "TeamGroup T-Force Vulcan Z SSD 2TB",
-      "model": "T253TZ002T0C101",
-      "formFactor": "2,5 Zoll · SATA",
-      "priceEUR": 242.24,
-      "productUrl": "https://geizhals.at/teamgroup-t-force-vulcan-z-ssd-2tb-t253tz002t0c101-a2723196.html?hloc=at"
-    },
-    {
-      "id": "crucial-e100",
-      "rank": 10,
-      "name": "Crucial E100 SSD 2TB",
-      "model": "CT2000E100SSD8",
-      "formFactor": "M.2 2280 · NVMe PCIe 4.0",
-      "priceEUR": 245.1,
-      "productUrl": "https://geizhals.at/crucial-e100-ssd-2tb-ct2000e100ssd8-a3600367.html?hloc=at"
+      "productUrl": "https://geizhals.at/verbatim-vi3000-pcie-nvme-ssd-2tb-49376-a2927732.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "silicon-power-ace-a55",
-      "rank": 11,
+      "rank": 5,
       "name": "Silicon Power Ace A55 2TB",
       "model": "SP002TBSS3A55S25",
       "formFactor": "2,5 Zoll · SATA",
-      "priceEUR": 246.25,
-      "productUrl": "https://geizhals.at/silicon-power-ace-a55-2tb-sp002tbss3a55s25-a2128163.html?hloc=at"
+      "priceEUR": 245.58,
+      "productUrl": "https://geizhals.at/silicon-power-ace-a55-2tb-sp002tbss3a55s25-a2128163.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
-      "id": "teamgroup-mp33",
-      "rank": 12,
-      "name": "TeamGroup MP33 2TB",
-      "model": "TM8FP6002T0C101",
-      "formFactor": "M.2 2280 · NVMe PCIe 3.0",
-      "priceEUR": 246.89,
-      "productUrl": "https://geizhals.at/teamgroup-pcie-ssd-mp33-2tb-tm8fp6002t0c101-a2183971.html?hloc=at"
-    },
-    {
-      "id": "goodram-cx400-gen2",
-      "rank": 13,
-      "name": "goodram CX400 gen.2 2TB",
-      "model": "SSDPR-CX400-02T-G2",
-      "formFactor": "2,5 Zoll · SATA",
-      "priceEUR": 247.33,
-      "productUrl": "https://geizhals.at/goodram-cx400-gen-2-2tb-ssdpr-cx400-02t-g2-a3021549.html?hloc=at"
+      "id": "crucial-e100",
+      "rank": 6,
+      "name": "Crucial E100 SSD 2TB",
+      "model": "CT2000E100SSD8",
+      "formFactor": "M.2 2280 · NVMe PCIe 4.0",
+      "priceEUR": 246.58,
+      "productUrl": "https://geizhals.at/crucial-e100-ssd-2tb-ct2000e100ssd8-a3600367.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "wd-green-sn3000",
-      "rank": 14,
+      "rank": 7,
       "name": "Western Digital WD Green SN3000 NVMe SSD 2TB",
       "model": "WDS200T4G0E / WDS200T4G1E",
       "formFactor": "M.2 2280 · NVMe PCIe 4.0",
-      "priceEUR": 247.76,
-      "productUrl": "https://geizhals.at/western-digital-wd-green-sn3000-nvme-ssd-2tb-wds200t4g0e-00cps0-a3377856.html?hloc=at"
-    },
-    {
-      "id": "lexar-nq100",
-      "rank": 15,
-      "name": "Lexar NQ100 2TB",
-      "model": "LNQ100X002T-RNNNG",
-      "formFactor": "2,5 Zoll · SATA",
-      "priceEUR": 247.97,
-      "productUrl": "https://geizhals.at/lexar-nq100-2tb-lnq100x002t-rnnng-a3523545.html?hloc=at"
+      "priceEUR": 247.55,
+      "productUrl": "https://geizhals.at/western-digital-wd-green-sn3000-nvme-ssd-2tb-wds200t4g0e-00cps0-a3377856.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "teamgroup-mp33-pro",
-      "rank": 16,
+      "rank": 8,
       "name": "TeamGroup MP33 PRO 2TB",
       "model": "TM8FPD002T0C101",
       "formFactor": "M.2 2280 · NVMe PCIe 3.0",
-      "priceEUR": 249.33,
-      "productUrl": "https://geizhals.at/teamgroup-pcie-ssd-mp33-pro-2tb-tm8fpd002t0c101-a2436030.html?hloc=at"
+      "priceEUR": 249.34,
+      "productUrl": "https://geizhals.at/teamgroup-pcie-ssd-mp33-pro-2tb-tm8fpd002t0c101-a2436030.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "sandisk-ssd-plus-g28",
-      "rank": 17,
+      "rank": 9,
       "name": "SanDisk SSD Plus 2TB",
       "model": "SDSSDA-2T00-G28",
       "formFactor": "2,5 Zoll · SATA",
       "priceEUR": 249.99,
-      "productUrl": "https://geizhals.at/sandisk-ssd-plus-2tb-sdssda-2t00-g28-a3560939.html?hloc=at"
+      "productUrl": "https://geizhals.at/sandisk-ssd-plus-2tb-sdssda-2t00-g28-a3560939.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "intenso-mi500",
-      "rank": 18,
+      "rank": 10,
       "name": "Intenso MI500 SSD 2TB",
       "model": "3836470",
       "formFactor": "M.2 2280 · NVMe PCIe 4.0",
       "priceEUR": 250.63,
-      "productUrl": "https://geizhals.at/intenso-mi500-ssd-2tb-3836470-a3188561.html?hloc=at"
+      "productUrl": "https://geizhals.at/intenso-mi500-ssd-2tb-3836470-a3188561.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "crucial-bx500",
-      "rank": 19,
+      "rank": 11,
       "name": "Crucial BX500 2TB",
       "model": "CT2000BX500SSD1",
       "formFactor": "2,5 Zoll · SATA",
       "priceEUR": 252.09,
-      "productUrl": "https://geizhals.at/crucial-bx500-2tb-ct2000bx500ssd1-a2168441.html?hloc=at"
+      "productUrl": "https://geizhals.at/crucial-bx500-2tb-ct2000bx500ssd1-a2168441.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     },
     {
       "id": "crucial-p310",
-      "rank": 20,
+      "rank": 12,
       "name": "Crucial P310 SSD 2TB",
       "model": "CT2000P310SSD8",
       "formFactor": "M.2 2280 · NVMe PCIe 4.0",
-      "priceEUR": 252.09,
-      "productUrl": "https://geizhals.at/crucial-p310-ssd-2tb-ct2000p310ssd8-a3305572.html?hloc=at"
+      "priceEUR": 275.9,
+      "productUrl": "https://geizhals.at/crucial-p310-ssd-2tb-ct2000p310ssd8-a3305572.html?hloc=at",
+      "priceType": "Geizhals-AT-Einstiegspreis („ab“)",
+      "verificationStatus": "Geizhals-Produktseite heute direkt abrufbar; Händlerbestand, Versand nach Österreich und Händler-Endpreis nicht separat bestätigt.",
+      "checkedAt": "2026-10-25T01:17:00+02:00"
     }
   ],
   "history": [
@@ -204,6 +168,16 @@
       "bestPrice": 197,
       "medianPrice": 245.68,
       "source": "Geizhals Österreich"
+    },
+    {
+      "date": "2026-10-25",
+      "count": 12,
+      "bestPrice": 197,
+      "medianPrice": 247.07,
+      "source": "Geizhals Österreich"
     }
-  ]
+  ],
+  "expectedOfferCount": 20,
+  "confirmedOfferCount": 12,
+  "shortfall": 8
 }
