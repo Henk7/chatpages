@@ -173,7 +173,7 @@
       document.getElementById("bestPrice").textContent = values.length ? money(Math.min(...values)) : "–";
       document.getElementById("medianPrice").textContent = middle === null ? "–" : money(middle);
       document.getElementById("offerCount").textContent = String(items.length);
-      document.getElementById("freshness").innerHTML = '<strong>Datenstand: ' + esc(data.checkedLabel || data.checkedAt || "unbekannt") + '.</strong> ' + esc(data.priceBasisLabel || "Preise bitte auf der Händlerseite prüfen.");
+      const expected=Number(data.expectedOfferCount||20);const gap=Math.max(0,expected-items.length);const gapText=gap?` Nur ${items.length} von ${expected} Modellen bestätigt; ${gap} Plätze bleiben offen, weil die heutige Produktseite oder Händlerangabe nicht direkt verifiziert werden konnte. Veraltete Preise wurden nicht ergänzt.`:"";document.getElementById("freshness").innerHTML = '<strong>Datenstand: ' + esc(data.checkedLabel || data.checkedAt || "unbekannt") + '.</strong> ' + esc(data.priceBasisLabel || "Preise bitte auf der Händlerseite prüfen.") + esc(gapText);
       document.getElementById("histogram").innerHTML = drawHistogram(items);
       document.getElementById("histogramNote").textContent = "Berechnet aus den " + items.length + " angezeigten Modell-Einstiegspreisen; ein „ab“-Preis ist nicht automatisch der Endpreis inklusive Versand.";
       const history = (data.history || []).slice().sort((a,b)=>a.date.localeCompare(b.date));
