@@ -5,13 +5,13 @@ A lightweight, mobile-friendly chart built from Arena AI's public Agent Arena Pa
 ## Snapshot
 
 - Source: <https://arena.ai/leaderboard/agent/pareto>
-- Arena page date: October 20, 2026
-- Captured: October 21, 2026
+- Arena page date: October 23, 2026
+- Captured: October 24, 2026
 - Cost selector: median / 50th percentile, last 14 days
-- Board size displayed by Arena: 57 models; the cost view listed 51 models with costs
-- Sessions displayed by Arena: 2,731,078
+- Board size displayed by Arena: 55 models; the cost view listed 51 models with costs
+- Sessions displayed by Arena: 2,557,423
 
-The CSV download contains all 51 rows shown with cost values. Six models on the board were not listed with task costs in this view, so they are not plotted. This is a dated snapshot, not a live feed. Arena's measurements can change as the leaderboard updates.
+The CSV download contains all 51 rows shown with cost values. Four models on the board were not listed with task costs in this view, so they are not plotted. This is a dated snapshot, not a live feed. Arena's measurements can change as the leaderboard updates.
 
 ## Chart controls
 
