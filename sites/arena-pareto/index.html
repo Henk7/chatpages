@@ -956,7 +956,7 @@
         URL.revokeObjectURL(url);
       });
 
-      fetch("./data.json?v=20261024")
+      fetch("./data.json?v=20261026")
         .then((response) => { if (!response.ok) throw new Error("Could not load the model snapshot."); return response.json(); })
         .then((snapshot) => {
           data = snapshot.records;
