@@ -2,11 +2,11 @@
   "currency": "EUR",
   "capacity": "2 TB",
   "market": "Austria",
-  "checkedAt": "2026-10-25T01:17:00+02:00",
-  "checkedLabel": "Sonntag, 25. Oktober 2026, 01:17 Uhr",
+  "checkedAt": "2026-10-26T01:26:33+01:00",
+  "checkedLabel": "Montag, 26. Oktober 2026 um 01:26:33 Uhr",
   "source": "Geizhals Österreich",
   "sourceUrl": "https://geizhals.at/?bpmax=300&cat=hdssd&pagesize=30&promode=false&sort=p&xf=8250_2TB+(1.92-2TB)",
-  "priceBasisLabel": "Geizhals-AT-„ab“-Einstiegspreis; kein pauschaler Nachweis für Händlerbestand, Versand oder endgültigen Warenkorbpreis.",
+  "priceBasisLabel": "VERALTET: Heute, Montag, 26. Oktober 2026 um 01:26:33 Uhr, war der Geizhals-Preisvergleich nur mit einem drei Tage alten gecachten Abruf verfügbar. Die letzten brauchbaren Geizhals-„ab“-Einstiegspreise vom 25.10.2026 bleiben unverändert; Händlerbestand, Versand nach Österreich und Endpreise sind nicht separat bestätigt. Keine neuen 2-TB-Modelle oder Preise aus dem alten Snapshot abgeleitet.",
   "snapshotType": "Geizhals-AT-Produktseiten am 25.10.2026 direkt geöffnet; 12 Modellseiten aktuell abrufbar, 8 Kandidaten wegen nicht abrufbarer direkter Produktseiten nicht in der bestätigten Liste.",
   "offers": [
     {
@@ -179,5 +179,7 @@
   ],
   "expectedOfferCount": 20,
   "confirmedOfferCount": 12,
-  "shortfall": 8
+  "shortfall": 8,
+  "researchStatus": "stale",
+  "staleNote": "Geizhals-Abruf im Tageslauf nur aus 3 Tage altem Snapshot; last verified price data 2026-10-25."
 }
