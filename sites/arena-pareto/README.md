@@ -13,7 +13,7 @@ A lightweight, mobile-friendly chart built from Arena AI's public Agent Arena Pa
 
 Arena still showed its October 23 board snapshot on October 26; the task-cost values were re-captured from the live 50th-percentile, last-14-days view.
 
-The CSV download contains all 51 rows shown with cost values. Four models on the board were not listed with task costs in this view, so they are not plotted. This is a dated snapshot, not a live feed. Arena's measurements can change as the leaderboard updates.
+The CSV download contains the 51 rows from the October 23 snapshot plus GPT-6.1 Terra (Max), added from Arena's October 27 board (rank 7, $0.63/task, +11.14%). Four models on the October 23 board were not listed with task costs in that view, so they are not plotted. The chart therefore combines data from two board dates rather than one synchronized snapshot. Arena's measurements can change as the leaderboard updates.
 
 ## Chart controls
 
