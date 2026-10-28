@@ -2,12 +2,12 @@
   "currency": "EUR",
   "capacity": "2 TB",
   "market": "Austria",
-  "checkedAt": "2026-10-27T01:15:33+01:00",
-  "checkedLabel": "Dienstag, 27. Oktober 2026, 01:15 Uhr",
+  "checkedAt": "2026-10-28T01:22:59+01:00",
+  "checkedLabel": "Mittwoch, 28. Oktober 2026, 01:22 Uhr (Europe/Vienna)",
   "source": "Geizhals Österreich",
   "sourceUrl": "https://geizhals.at/?bpmax=300&cat=hdssd&pagesize=30&promode=false&sort=p&xf=8250_2TB+(1.92-2TB)",
-  "priceBasisLabel": "VERALTET: Heute, Montag, 26. Oktober 2026 um 01:26:33 Uhr, war der Geizhals-Preisvergleich nur mit einem drei Tage alten gecachten Abruf verfügbar. Die letzten brauchbaren Geizhals-„ab“-Einstiegspreise vom 25.10.2026 bleiben unverändert; Händlerbestand, Versand nach Österreich und Endpreise sind nicht separat bestätigt. Keine neuen 2-TB-Modelle oder Preise aus dem alten Snapshot abgeleitet.",
-  "snapshotType": "Geizhals-AT-Produktseiten am 25.10.2026 direkt geöffnet; 12 Modellseiten aktuell abrufbar, 8 Kandidaten wegen nicht abrufbarer direkter Produktseiten nicht in der bestätigten Liste.",
+  "priceBasisLabel": "VERALTET: Geizhals Österreich lieferte am 28.10.2026 nur unvollständige bzw. gecachte Treffer; für keinen neuen Modellpreis ließ sich heute ein passender Händler mit aktueller Verfügbarkeit und Österreich-Lieferung direkt bestätigen. Die letzten brauchbaren 12 Geizhals-„ab“-Einstiegspreise vom 25.10.2026 bleiben unverändert; Händlerbestand, Versand und Endpreise sind nicht bestätigt.",
+  "snapshotType": "Prüfung am 28.10.2026: Geizhals-AT-Suche/Preisvergleich teilweise abrufbar, aktuelle direkte Händlerbestätigung der angezeigten 2-TB-Angebote nicht ausreichend; bestehender 12-Modell-Snapshot vom 25.10.2026 unverändert.",
   "offers": [
     {
       "id": "sandisk-ssd-plus-g26",
@@ -181,5 +181,5 @@
   "confirmedOfferCount": 12,
   "shortfall": 8,
   "researchStatus": "stale",
-  "staleNote": "Geizhals-Seite ließ sich heute nicht frisch genug gegen aktuelle Händlerangebote absichern; Werte bleiben der letzte brauchbare Snapshot vom 25.10.2026. 12 von 20 passenden 2-TB-Modellen bestätigt; Händlerbestand und Österreich-Versand nicht separat bestätigt. Heute kein neuer Preisverlaufseintrag."
+  "staleNote": "Preisstände aus dem letzten brauchbaren Snapshot vom 25.10.2026; heutige Recherche am 28.10.2026 konnte keine aktuellen Händlerangebote mit nach Österreich bestätigter Lieferbarkeit verifizieren. Ältere Werte nicht als aktuelle Händlerpreise lesen."
 }
