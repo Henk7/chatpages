@@ -503,16 +503,21 @@
       }
 
       function renderSummary(meta) {
-        const sessions = new Intl.NumberFormat("en-US").format(meta.sessions);
-        $("#snapshot-strip").innerHTML = `
-          <span><i class="snapshot-dot" aria-hidden="true"></i><strong>${meta.records.length} models with cost data</strong></span>
-          <span><strong>${sessions}</strong> Arena sessions</span>
-          <span>Leaderboard date <strong>${meta.pageDate}</strong></span>
-        `;
-        $("#snapshot-note").innerHTML = `Arena's Agent leaderboard showed <strong>${meta.boardModels} models</strong> and ${sessions} sessions, dated <strong>${meta.pageDate}</strong>. This copy contains the <strong>${meta.records.length} models</strong> shown in its 50th-percentile cost-per-task list. Values were captured on ${meta.capturedDate}; the remaining models were not listed with cost values in that view. Costs cover the last 14 days. <a href="${meta.sourceUrl}" target="_blank" rel="noopener noreferrer">Open the original chart</a>.`;
-      }
-
-      function renderFrontier() {
+      const sessions = new Intl.NumberFormat("en-US").format(meta.sessions);
+      const updates = Array.isArray(meta.updates) ? meta.updates : [];
+      const dateLabel = updates.length ? "Base leaderboard date" : "Leaderboard date";
+      $("#snapshot-strip").innerHTML = `
+        <span><i class="snapshot-dot" aria-hidden="true"></i><strong>${meta.records.length} models with cost data</strong></span>
+        <span><strong>${sessions}</strong> Arena sessions</span>
+        <span>${dateLabel} <strong>${meta.pageDate}</strong></span>
+        ${updates.length ? `<span><strong>${updates.length}</strong> later model addition${updates.length === 1 ? "" : "s"}</span>` : ""}
+      `;
+      const updateNote = updates.map((update) =>
+        `<strong>${update.model}</strong> was added from Arena's board dated <strong>${update.pageDate}</strong>, captured on ${update.capturedDate}.`
+      ).join(" ");
+      $("#snapshot-note").innerHTML = `Arena's Agent leaderboard showed <strong>${meta.boardModels} models</strong> and ${sessions} sessions, dated <strong>${meta.pageDate}</strong>. This base copy contains the <strong>${meta.records.length - updates.length} models</strong> from its 50th-percentile cost-per-task list. ${updateNote} ${updates.length ? "The chart combines data from more than one board date." : `Values were captured on ${meta.capturedDate}; the remaining models were not listed with cost values in that view.`} Costs cover the last 14 days. <a href="${meta.sourceUrl}" target="_blank" rel="noopener noreferrer">Open the original chart</a>.`;
+    }
+    function renderFrontier() {
         const holder = $("#frontier-list");
         holder.replaceChildren();
         frontier.forEach((item, index) => {
@@ -956,7 +961,7 @@
         URL.revokeObjectURL(url);
       });
 
-      fetch("./data.json?v=20261026")
+      fetch("./data.json?v=20261028")
         .then((response) => { if (!response.ok) throw new Error("Could not load the model snapshot."); return response.json(); })
         .then((snapshot) => {
           data = snapshot.records;
