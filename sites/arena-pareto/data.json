@@ -45,6 +45,12 @@
       "improvement": 11.75
     },
     {
+      "rank": 7,
+      "model": "GPT-6.1 Terra (Max)",
+      "cost": 0.63,
+      "improvement": 11.14
+    },
+    {
       "rank": 8,
       "model": "GPT-6 Sol (Max)",
       "cost": 1.55,
@@ -313,6 +319,13 @@
       "model": "Solar Pro 4",
       "cost": 0.05,
       "improvement": -20.25
+    }
+  ],
+  "updates": [
+    {
+      "model": "GPT-6.1 Terra (Max)",
+      "pageDate": "October 27, 2026",
+      "capturedDate": "October 28, 2026"
     }
   ]
 }
