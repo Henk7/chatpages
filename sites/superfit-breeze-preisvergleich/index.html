@@ -126,7 +126,7 @@
       }).join('');
     }
     function renderChart(history){
-      const points=(history||[]).filter(p=>Number.isFinite(Number(p.best_total))).slice(-45);
+      const points=(history||[]).filter(p=>p.best_total!==null&&p.best_total!==undefined&&Number.isFinite(Number(p.best_total))).slice(-45);
       const host=document.getElementById('history-chart'),legend=document.getElementById('chart-legend');
       if(!points.length){host.innerHTML='<p>Für die Preisentwicklung sind noch keine Tageswerte vorhanden.</p>';legend.innerHTML='';return;}
       const vendors=[...new Set(points.flatMap(p=>(p.top10||[]).map(o=>o.retailer).filter(Boolean)))];
@@ -157,7 +157,7 @@
       const body=document.getElementById('history-body');
       const rows=(history||[]).slice().reverse().slice(0,45);
       if(!rows.length){body.innerHTML='<tr><td colspan="4">Der Preisverlauf beginnt mit dem ersten bestätigten Tagesstand.</td></tr>';return;}
-      body.innerHTML=rows.map(p=>'<tr><td>'+safe(dateLabel(p.date+'T12:00:00Z'))+'</td><td class="total">'+money(p.best_total)+'</td><td>'+safe(p.retailer||'—')+'</td><td>'+safe(p.confirmed_count??(p.top10||[]).length)+'</td></tr>').join('');
+      body.innerHTML=rows.map(p=>'<tr><td>'+safe(dateLabel(p.date+'T12:00:00Z'))+'</td><td class="total">'+(p.best_total===null||p.best_total===undefined?'—':money(p.best_total))+'</td><td>'+safe(p.retailer||'—')+'</td><td>'+safe(p.confirmed_count??(p.top10||[]).length)+'</td></tr>').join('');
       const first=history[0],last=history[history.length-1];
       document.getElementById('history-note').textContent='Gespeicherte Tageswerte: '+history.length+' · Verlauf von '+dateLabel(first.date+'T12:00:00Z')+' bis '+dateLabel(last.date+'T12:00:00Z')+'. Frühere Händlerpreise wurden nicht rückwirkend ergänzt.';
     }
