@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abluftführung &amp; Mauerkästen – Naber, Rohre, Wanddurchführung</title>
+  <meta name="description" content="Alle Daten zu Abluftführung (Flachkanal/Rundrohr), Mauerkästen, Wanddurchführung und Naber COMPAIR – inkl. Erklärung zu Aufbau, Modularität und austauschbaren Fronten.">
+  <meta name="theme-color" content="#102a43">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M16 40h32M16 28h32M16 16h32' stroke='%2338bdf8' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #edf3f7;
+      --panel: #ffffff;
+      --panel-soft: #eaf5fa;
+      --text: #102a43;
+      --muted: #526579;
+      --line: #c9d7e3;
+      --best: #087c61;
+      --warn: #9a5d00;
+      --accent: #0284c7;
+      --accent-dark: #075985;
+      --shadow: 0 14px 36px rgba(15, 42, 67, 0.09);
+    }
+
+    * { box-sizing: border-box; }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #dfeef6 0, var(--bg) 360px);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: #005f9e; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid #f59e0b;
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 100;
+      padding: .75rem 1rem;
+      border-radius: .65rem;
+      background: #fff;
+      color: var(--text);
+      font-weight: 800;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .page { width: 100%; max-width: none; margin: 0 auto; padding: 24px 20px 56px; }
+
+    header {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 8px;
+      padding: clamp(22px, 4vw, 42px);
+      border-radius: 20px;
+      background: #102a43;
+      color: #fff;
+      box-shadow: 0 24px 60px rgba(15, 42, 67, .22);
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: #7dd3fc;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      max-width: 1000px;
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+
+    .intro { max-width: 900px; margin: 0; color: #dcebf5; font-size: 1.12rem; }
+
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid #375a74;
+      border-radius: 999px;
+      background: #173b59;
+      color: #eef8ff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .control-dock {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) auto;
+      gap: 12px;
+      margin: 18px 0 26px;
+      padding: 12px;
+      border: 1px solid rgba(201, 215, 227, .9);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 10px 26px rgba(15, 42, 67, .12);
+      backdrop-filter: blur(12px);
+    }
+
+    .dock-total { display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 4px 6px; }
+    .dock-total strong { color: var(--muted); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+    .dock-total .total-value { color: var(--best); font-size: 1.45rem; font-weight: 800; line-height: 1.1; }
+    .dock-total .total-count { color: var(--muted); font-size: .85rem; }
+
+    .quick-nav { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .quick-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 12px;
+      border-radius: 9px;
+      background: #e7f4fb;
+      color: var(--accent-dark);
+      font-weight: 750;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 26px 0; }
+
+    .summary-card, .section, .group, .table-shell, .verdict {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card { padding: 16px; border-top: 4px solid var(--accent); }
+    .summary-card strong { display: block; color: var(--muted); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
+    .summary-card span { display: block; margin-top: 3px; font-size: 1.15rem; font-weight: 750; }
+
+    .section { margin-top: 28px; padding: 22px; scroll-margin-top: 110px; }
+    .section h2 { margin: 0 0 12px; font-size: 1.45rem; color: #0b3954; }
+    .section h3 { margin: 20px 0 8px; font-size: 1.1rem; color: #0b3954; }
+
+    .group { margin-top: 28px; padding: 22px; scroll-margin-top: 110px; }
+    .group-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .group-head h2 { margin: 0; font-size: 1.45rem; color: #0b3954; }
+    .group-head p, .section p, .note { margin: 0; color: var(--muted); line-height: 1.5; }
+
+    .verdict-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .verdict { padding: 14px 16px; background: var(--panel-soft); }
+    .verdict strong { display: block; margin-bottom: 5px; font-size: 1rem; }
+
+    .table-shell { overflow: hidden; background: #fff; position: relative; }
+    .table-wrap { overflow-x: auto; scrollbar-color: #7aa9c4 #e6eef3; scrollbar-width: thin; }
+
+    table { width: 100%; min-width: 1080px; border-collapse: collapse; font-size: 0.94rem; }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { position: sticky; top: 0; z-index: 1; background: #dce9f1; color: #102a43; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    tbody tr:nth-child(even) td { background: #fafbfc; }
+    tbody tr:hover td { background: #e8f5fb; }
+
+    td:first-child, th:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      width: 210px;
+      background: #f1f6f9;
+      font-weight: 700;
+    }
+    th:first-child { z-index: 3; background: #dce9f1; }
+
+    .good { color: var(--best); font-weight: 800; }
+    .warn { color: var(--warn); font-weight: 700; }
+
+    .product-shot-cell { min-width: 150px; background: #fff; }
+    .product-shot { display: block; width: 100%; max-width: 140px; height: 120px; margin: 0 auto; object-fit: contain; }
+    .product-shot-fallback {
+      display: grid; place-items: center; width: 100%; max-width: 140px; height: 120px;
+      margin: 0 auto; padding: 10px; border: 1px dashed var(--line); border-radius: 8px;
+      background: #fafbfc; color: var(--muted); font-size: 0.82rem; text-align: center;
+    }
+
+    .note { margin-top: 28px; font-size: 0.92rem; }
+
+    .selector-link {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 4px 10px;
+      border: 1px solid #a8c8dc; border-radius: 999px; background: #fff; color: var(--accent-dark);
+      font-size: 0.85rem; font-weight: 700; text-decoration: none;
+    }
+    .selector-link:hover { background: #f0f6f8; }
+
+    .search-action-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .search-cell { min-width: 220px; }
+    .selection-row td { background: #eaf5fa; font-weight: 700; }
+
+    td.pick-cell { transition: box-shadow .16s ease; }
+    td.pick-cell.is-selected { box-shadow: inset 0 0 0 2px rgba(2, 132, 199, .45); }
+
+    .feat { color: var(--muted); font-size: .84rem; white-space: nowrap; }
+
+    .pick {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px;
+      border: 1px solid #a8c8dc; border-radius: 999px; background: #fff; color: var(--accent-dark);
+      font-weight: 700; text-transform: none; letter-spacing: 0; cursor: pointer; white-space: nowrap;
+    }
+    .pick:hover { border-color: var(--accent); }
+    .pick:has(input:checked) { border-color: var(--accent); background: #edf8fd; box-shadow: 0 0 0 2px rgba(2, 132, 199, .14); }
+    .pick input { margin: 0; }
+
+    .freshness-note {
+      display: flex; gap: 10px; margin: 14px 0 0; padding: 13px 15px;
+      border-left: 4px solid #f59e0b; border-radius: 8px; background: #fff8e8; color: #65451d;
+    }
+    .freshness-note:first-of-type { margin-top: 0; }
+
+    .detail-box {
+      margin-top: 18px; padding: 16px 18px; border: 1px solid var(--line);
+      border-left: 4px solid var(--accent); border-radius: 8px; background: #f2f9fd;
+    }
+    .detail-box h3 { margin: 0 0 8px; color: #0b3954; font-size: 1rem; }
+    .detail-box ul { margin: 0; padding-left: 20px; }
+    .detail-box li { margin: 3px 0; }
+
+    /* Ablauf-/Bauteil-Schema */
+    .flow-map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 14px 0 4px; }
+    .flow-step {
+      position: relative; padding: 14px 14px 14px 16px; border: 1px solid var(--line);
+      border-top: 4px solid var(--accent); border-radius: 12px; background: #fff; box-shadow: var(--shadow);
+    }
+    .flow-step b { display: block; color: #0b3954; font-size: .95rem; }
+    .flow-step span { display: block; margin-top: 4px; color: var(--muted); font-size: .88rem; }
+    .flow-step em {
+      display: inline-block; margin-bottom: 6px; padding: 1px 8px; border-radius: 999px;
+      background: #e7f4fb; color: var(--accent-dark); font-size: .74rem; font-style: normal; font-weight: 800; letter-spacing: .03em;
+    }
+
+    .qa { margin-top: 14px; display: grid; gap: 12px; }
+    .qa article { padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel-soft); }
+    .qa article strong { display: block; margin-bottom: 4px; color: #0b3954; }
+    .qa article p { margin: 0; color: #3e4954; }
+
+    .checklist { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+    .checklist li { display: grid; grid-template-columns: 74px 1fr; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+    .checklist .prio { font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: var(--accent); border-radius: 999px; padding: 3px 8px; text-align: center; height: fit-content; }
+    .checklist .prio.must { background: #b91c1c; }
+    .checklist .prio.high { background: #9a5d00; }
+    .checklist .prio.nice { background: #087c61; }
+    .checklist b { display: block; color: #0b3954; }
+    .checklist span { display: block; color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 980px) {
+      .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .flow-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 700px) {
+      .summary, .verdict-grid, .flow-map { grid-template-columns: 1fr; }
+      .page { padding: 22px 14px 38px; }
+      .section, .group { padding: 16px; }
+      .group-head { display: grid; gap: 6px; }
+      table { min-width: 860px; }
+      .meta { display: grid; grid-template-columns: 1fr 1fr; }
+      .pill { justify-content: center; text-align: center; }
+    }
+    @media (max-width: 860px) {
+      .control-dock { grid-template-columns: 1fr; position: static; }
+      .quick-nav { overflow-x: auto; padding-bottom: 2px; flex-wrap: nowrap; }
+    }
+    @media print {
+      .control-dock, .search-cell { display: none !important; }
+      body { background: #fff; }
+      header { background: #fff; color: #000; box-shadow: none; }
+      header .intro, header .eyebrow { color: #333; }
+      .section, .group, .summary-card { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+  <main class="page" id="inhalt">
+    <header>
+      <p class="eyebrow">Planungsstand: 16. September 2026</p>
+      <h1>Abluftführung &amp; Mauerkästen</h1>
+      <p class="intro">
+        Eigene Seite für alles rund um die Abluft: Kanalvarianten (Flachkanal vs. Rundrohr), Wanddurchbruch
+        und Mauerkästen – inklusive einer ausführlichen Erklärung zu den Naber-Mauerkästen (Aufbau,
+        Qualitätsmerkmale, Modularität und austauschbare Fronten).
+      </p>
+      <div class="meta">
+        <span class="pill">Naber COMPAIR im Detail erklärt</span>
+        <span class="pill">Flach + rund in einem Vergleich</span>
+        <span class="pill">Materialkosten pro Variante</span>
+        <span class="pill">Mauerkästen zum Auswählen</span>
+        <span class="pill">Preise geprüft am 16.09.2026</span>
+      </div>
+    </header>
+
+    <div class="control-dock" aria-label="Auswahl und Navigation">
+      <div class="dock-total" role="status" aria-live="polite">
+        <strong>Gesamt Auswahl</strong>
+        <span class="total-value" id="cost-total">0,00 &euro;</span>
+        <span class="total-count" id="selected-count">0 Positionen gewählt</span>
+      </div>
+      <nav class="quick-nav" aria-label="Schnellnavigation">
+        <a href="index.html">← Küchengeräte</a>
+        <a href="#grundlagen">Grundlagen</a>
+        <a href="#abluftrohre">Rohre &amp; Zubehör</a>
+        <a href="#abluftvarianten">Abluftführung</a>
+        <a href="#mauerkasten">Mauerkästen</a>
+        <a href="#naber">Naber erklärt</a>
+        <a href="#bezugsquellen">Bezugsquellen</a>
+      </nav>
+    </div>
+
+    <section class="summary">
+      <article class="summary-card">
+        <strong>Kanalformen</strong>
+        <span>Flach 222 × 89 mm + rund Ø150</span>
+      </article>
+      <article class="summary-card">
+        <strong>Variante A – Flachkanal</strong>
+        <span>385,84 &euro; (5,9 m)</span>
+      </article>
+      <article class="summary-card">
+        <strong>Variante B – Rundrohr</strong>
+        <span>186,88 &euro; (5,9 m)</span>
+      </article>
+      <article class="summary-card">
+        <strong>Mauerkästen (mechanisch)</strong>
+        <span>ab 45,90 &euro; · bis 347,00 &euro;</span>
+      </article>
+    </section>
+
+    <section class="section" id="fazit">
+      <h2>Kurzfazit</h2>
+      <div class="verdict-grid">
+        <article class="verdict">
+          <strong>Wenig Platz → Flachkanal</strong>
+          Der BSH-Flachkanal HZ9VDS baut nur ca. 71 mm tief und lässt sich im Sockel bzw. hinter dem Unterschrank führen (Variante A).
+        </article>
+        <article class="verdict">
+          <strong>Budget &amp; Strömung → Rundrohr</strong>
+          Rundrohr Ø150 (Kunststoff/PVC, kein Blechrohr) ist deutlich günstiger, läuft glatt und leise, braucht aber ca. 150 mm Querschnitt (Variante B).
+        </article>
+        <article class="verdict">
+          <strong>Kasten = Qualitätsfaktor</strong>
+          Ein guter Mauerkasten ist dicht (Blower-Door), absperrend/gedämmt (THERMOBOX), strömungsoptimiert und hat eine funktionierende Rückstauklappe.
+        </article>
+        <article class="verdict">
+          <strong>Naber ist modular</strong>
+          Zwei Montagestufen (Rohbauset + Einsatz) machen die Rohbau-Installation zeitunabhängig; Außenblenden sind eigene, nachträglich tauschbare Teile.
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="grundlagen">
+      <h2>Abluftführung – die Grundlagen</h2>
+      <p>
+        Bei Abluft wird der Küchendunst durch einen Kanal nach draußen geführt. Zwei Systeme dominieren,
+        passend zum Anschluss des Kochfeldabzugs:
+      </p>
+      <div class="verdict-grid" style="margin-top:14px;">
+        <article class="verdict">
+          <strong>Variante A – Flachkanal (BSH HZ9VDS)</strong>
+          BSH-Kanal NW 150; die Außenmaße fremder Flachprofile sind nicht automatisch steckkompatibel. Nur ca. 71 mm Bautiefe – ideal im Sockel oder hinter dem Unterschrank.
+          Anschluss an den Kochfeld-Auslass über Flachkanal-Bögen; zum runden Wandauslass über den Adapter
+          HZ9VDSI0 (flach → rund Ø150).
+        </article>
+        <article class="verdict">
+          <strong>Variante B – Rundrohr Ø150</strong>
+          Kunststoff-/PVC-Rohr (kein Blechrohr), glatte Innenwand, leiser und günstiger. Benötigt ca. 150 mm
+          freien Querschnitt und einen runden Wanddurchbruch. Anschluss am Kochfeld über denselben Adapter
+          HZ9VDSI0.
+        </article>
+      </div>
+
+      <h3>Worauf es bei der Strecke ankommt</h3>
+      <ul>
+        <li><strong>Länge &amp; Bögen:</strong> Jeder Bogen kostet Druck. Kurz, gerade und mit möglichst wenigen Umlenkungen planen.</li>
+        <li><strong>Querschnitt:</strong> Ø150 bzw. Flachkanal-Querschnitt nicht verkleinern – sonst steigen Druckverlust und Geräusch.</li>
+        <li><strong>Gefälle nach außen:</strong> Der Kanal sollte leicht nach außen fallen, damit Kondensat abläuft (mit Gefälle bohren!).</li>
+        <li><strong>Dichtheit:</strong> Muffen/Verbindungen dicht ausführen; Dichtmittel und Befestigung sind bauseitig.</li>
+        <li><strong>Temperaturbeständigkeit:</strong> Für Abluftbetrieb die Herstellerangabe zum Kunststoffrohr prüfen.</li>
+        <li><strong>Mauerkasten separat planen:</strong> Er ist in beiden Varianten <em>nicht</em> enthalten und wird eigens gewählt (rund für B, flach für A).</li>
+      </ul>
+
+      <div class="freshness-note">
+        <strong>Faustregel:</strong> Bei Flachkanal-Zuführung (A) einen <em>flachen</em> Mauerkasten nehmen,
+        bei Rundrohr-Zuführung (B) einen <em>runden</em>. Siemens/Bosch/NEFF (BSH) nutzen dasselbe Flachkanalsystem
+        (HZ9VDS / HEZ9VDS / Z861S).
+      </div>
+    </section>
+
+    <section class="group" id="abluftrohre">
+      <div class="group-head">
+        <h2>Abluftrohre &amp; Kanalzubehör</h2>
+        <p>Zuordnung des passenden Abluft-/Flachkanalsystems je Kochfeld; Richtpreise je Einzelteil, geprüft am 16.09.2026</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Kochfeld</th>
+                <th>Abluft-/Kanalsystem</th>
+                <th>Passende Komponenten</th>
+                <th>Richtpreis je Teil (ab)</th>
+                <th>Preisquelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Siemens EX80BNX68E</td><td class="good">BSH-Flachkanalsystem (HZ9VDS)</td><td>HZ9VDSB4 (90° vertikal S) + HZ9VDSM1 (500 mm) + HZ9VDSS1 (Verbindungsstück)</td><td>19,16 &euro; / 18,69 &euro; / 14,52 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Siemens EX80BHL26E</td><td class="good">BSH-Flachkanalsystem (HZ9VDS)</td><td>HZ9VDSB4 bzw. HZ9VDSB2 (90° vertikal S/L) + HZ9VDSM1 (500 mm)</td><td>19,16 &euro; / 29,00 &euro; / 18,69 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Bosch PXX82BD56E</td><td class="good">BSH-Flachkanalsystem (HEZ9VDS)</td><td>HEZ9VDSB4 (90° vertikal S) + HZ9VDSM1 (500 mm) + HEZ9VDSS1 (Verbindungsstück)</td><td>24,39 &euro; / 18,69 &euro; / 17,50 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>NEFF V68PHL4B0</td><td class="good">BSH-Flachkanalsystem (Z861S)</td><td>Z861SB4 (90° vertikal S) + Z861SM1 (500 mm) + Z861SS1 (Verbindungsstück)</td><td>22,49 &euro; / 21,79 &euro; / 15,59 &euro;</td><td>Geizhals Österreich</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="table-shell" style="margin-top:18px;">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Artikel</th>
+                <th>Hersteller</th>
+                <th>Art.-Nr.</th>
+                <th>Typ / Funktion</th>
+                <th>Richtpreis (ab)</th>
+                <th>Preisquelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Flachkanal 90° horizontal</td><td>BSH (Siemens/Bosch)</td><td>HZ9VDSB1 / 17005351</td><td>Flachkanal-Bogen 90° horizontal</td><td>26,65 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal 90° vertikal L</td><td>BSH</td><td>HZ9VDSB2 / 17005352</td><td>Flachkanal-Bogen 90° vertikal groß</td><td>29,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal 90° vertikal M</td><td>BSH</td><td>HZ9VDSB3 / 17005035</td><td>Flachkanal-Bogen 90° vertikal mittel</td><td>derzeit kein Angebot</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal 90° vertikal S</td><td>BSH</td><td>HZ9VDSB4 / 17006153</td><td>Flachkanal-Bogen 90° vertikal klein</td><td>24,39 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal 500 mm</td><td>BSH</td><td>HZ9VDSM1 / 17005031</td><td>gerades Flachkanalstück 500 mm</td><td>18,69 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Rohr Flachkanal 1000 mm</td><td>BSH</td><td>HZ9VDSM2 / 17005346</td><td>gerades Flachkanalstück 1000 mm</td><td>34,78 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal-Verbindungsstück 71 mm weiblich</td><td>BSH</td><td>HZ9VDSS1 / 17005039</td><td>Verbindungsstück / Muffe</td><td>14,52 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Adapterrohrstück rund-flach Ø150</td><td>BSH</td><td>HZ9VDSI0 / 17005353</td><td>Adapterstück rund-flach Ø150</td><td>39,00 &euro;</td><td>Siemens AT</td></tr>
+              <tr><td>Standard-Umluftset</td><td>BSH</td><td>HZ9VDKR2 / 17006708</td><td>Umluftset als Alternative zur Abluft</td><td>72,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal-Set</td><td>Miele</td><td>DFKS / 11306320</td><td>Flachkanalsystem für Kochfeldabzug</td><td>152,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal-Set</td><td>Miele</td><td>DFKS-A-1 / 11737480</td><td>Flachkanal-Set</td><td>470,30 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Flachkanal-Set Abluft</td><td>Miele</td><td>DFKS-AR / 12226910</td><td>Flachkanal-Set für Abluftbetrieb</td><td>437,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Umluft-Set für Kochfeldabzug</td><td>Miele</td><td>DUU 1000-2 / 11207310</td><td>Umluftset als Alternative zur Abluft</td><td>403,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Ecotube EF47/1 Flachkanal</td><td>BORA</td><td>EF47/1</td><td>Flachkanal für BORA-Kochfeldabzug</td><td>4,40 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>EFS750/1 Flachkanal mit Steg</td><td>BORA</td><td>EFS750/1</td><td>Flachkanal mit Steg</td><td>29,99 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td>BLAVH1</td><td>BORA</td><td>BLAVH1</td><td>Anschluss-/Kanalzubehör</td><td>29,00 &euro;</td><td>Geizhals Österreich</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="freshness-note"><strong>Hinweis:</strong> Siemens, Bosch und NEFF (alle BSH) nutzen dasselbe Flachkanalsystem, das je Marke unter HZ9VDS / HEZ9VDS / Z861S geführt wird. Die Miele- und BORA-Teile sind weiterhin aufgeführt, die zugehörigen Kochfelder sind aber nicht mehr im aktuellen Vergleich enthalten. Längen und Bögen müssen auf die tatsächliche Einbausituation abgestimmt werden; vor dem Kauf die Anschlussmaße (Flachkanal bzw. NW 150) in der Montageskizze des exakten Modells prüfen. Alle Preise sind ab-Preise je Einzelteil in Österreich.</p>
+    </section>
+
+    <section class="group" id="abluftvarianten" data-select-variants="Abluftführung">
+      <div class="group-head">
+        <h2>Abluftführung 5 m horizontal + 90 cm Abstieg</h2>
+        <p>Materialbedarf für eine 5,0 m lange Strecke mit 0,90 m Abstieg unter dem Kochfeld – einmal als BSH-Flachkanal, einmal als Kunststoff-Rundrohr NW 150 (PVC, kein Blechrohr). Eine Variante auswählen; sie zählt in die Auswahl oben. Preise als ab-Preis je Einzelteil, Stand 16.09.2026.</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table data-option-name="Flachkanal (HZ9VDS)" data-option-price="385.84">
+            <thead>
+              <tr>
+                <th>Variante A – Flachkanal (BSH HZ9VDS)</th>
+                <th>Art.-Nr.</th>
+                <th>Menge</th>
+                <th>Einzelpreis (ab)</th>
+                <th>Summe</th>
+                <th>Preisquelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="https://geizhals.at/bsh-hausgeraete-flachkanal-90-vertikal-s-17006155-hz9vdsb4-a2524753.html" target="_blank" rel="noopener noreferrer">Flachkanal-Bogen 90° vertikal S (Kochfeld-Auslass → senkrecht nach unten)</a></td><td>HZ9VDSB4 / 17006153</td><td>1</td><td>24,39 &euro;</td><td>24,39 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td><a href="https://geizhals.at/bsh-hausgeraete-flachkanal-90-horizontal-17005351-hz9vdsb1-a2524726.html" target="_blank" rel="noopener noreferrer">Flachkanal-Bogen 90° horizontal (senkrecht → waagrecht in den Sockel)</a></td><td>HZ9VDSB1 / 17005351</td><td>1</td><td>26,65 &euro;</td><td>26,65 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td><a href="https://geizhals.at/bsh-hausgeraete-flachkanal-1000mm-17005346-hz9vdsm2-a2524819.html" target="_blank" rel="noopener noreferrer">Gerades Flachkanalstück 1000 mm (5,0 m waagrecht + 0,9 m senkrecht, 6 Stk. auf Maß gekürzt)</a></td><td>HZ9VDSM2 / 17005346</td><td>6</td><td>34,78 &euro;</td><td>208,68 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td><a href="https://geizhals.at/bsh-hausgeraete-flachkanal-verbindungsstueck-weiblich-71mm-17005039-hz9vdss1-a2524800.html" target="_blank" rel="noopener noreferrer">Flachkanal-Verbindungsstück 71 mm</a></td><td>HZ9VDSS1 / 17005039</td><td>6</td><td>14,52 &euro;</td><td>87,12 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr><td><a href="https://www.siemens-home.bsh-group.com/at/de/product/kochen-und-backen/zubehoer/HZ9VDSI0" target="_blank" rel="noopener noreferrer">Adapter flach → rund Ø150 (Übergang zum Wandauslass)</a></td><td>HZ9VDSI0 / 17005353</td><td>1</td><td>39,00 &euro;</td><td>39,00 &euro;</td><td>Siemens AT</td></tr>
+              <tr><td>Summe Variante A (ohne Mauerkasten – diesen unten wählen)</td><td></td><td></td><td></td><td class="good">385,84 &euro;</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="table-shell" style="margin-top:18px;">
+        <div class="table-wrap">
+          <table data-option-name="Rundrohr Ø150" data-option-price="186.88">
+            <thead>
+              <tr>
+                <th>Variante B – Rundrohr Ø150 (Kunststoff/PVC)</th>
+                <th>Art.-Nr.</th>
+                <th>Menge</th>
+                <th>Einzelpreis (ab)</th>
+                <th>Summe</th>
+                <th>Preisquelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="https://www.siemens-home.bsh-group.com/at/de/product/kochen-und-backen/zubehoer/HZ9VDSI0" target="_blank" rel="noopener noreferrer">Adapter flach → rund Ø150 (nach passendem erstem Gerätebogen)</a></td><td>HZ9VDSI0 / 17005353</td><td>1</td><td>39,00 &euro;</td><td>39,00 &euro;</td><td>Siemens AT</td></tr>
+              <tr><td><a href="https://geizhals.at/363729585" target="_blank" rel="noopener noreferrer">Kunststoffrohr (PVC) Ø150 mm, Länge 1000 mm (5,0 m waagrecht + 0,9 m senkrecht, 6 Stk. gekürzt)</a></td><td>Awenta KO150-22</td><td>6</td><td>9,20 &euro;</td><td>55,20 &euro;</td><td>galaxus.at</td></tr>
+              <tr><td><a href="https://geizhals.at/5512306015" target="_blank" rel="noopener noreferrer">Kunststoff-Bogen 90° Ø150 mm (2 × Umlenkung)</a></td><td>–</td><td>2</td><td>7,49 &euro;</td><td>14,98 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr><td><a href="https://geizhals.at/5872720993" target="_blank" rel="noopener noreferrer">Kunststoff-Verbindungsstück / Steckmuffe Ø150 mm</a></td><td>–</td><td>6</td><td>12,95 &euro;</td><td>77,70 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr><td>Summe Variante B (ohne Mauerkasten – diesen unten wählen)</td><td></td><td></td><td></td><td class="good">186,88 &euro;</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="freshness-note"><strong>Vergleich:</strong> Der Flachkanal (Variante A, ca. 386 &euro;) braucht nur rund 71 mm Bautiefe und lässt sich im Sockel bzw. hinter dem Unterschrank führen – die richtige Wahl bei wenig Platz. Das Kunststoff-Rundrohr Ø150 (Variante B, ca. 187 &euro;, kein Blechrohr) ist günstiger, läuft glatt und leise, benötigt aber ca. 150 mm freien Querschnitt und einen runden Wanddurchbruch. Der Mauerkasten an der Außenwand ist in beiden Varianten nicht enthalten und wird unten in der Tabelle „Mauerkästen" separat gewählt (rund für Variante B, flach für Variante A). Die Strecke rechnet 5,0 m waagrecht + 0,9 m senkrecht = 5,9 m; die 6 Stück à 1 m werden auf der Baustelle auf Maß gekürzt. Dichtmittel und Befestigung sind bauseitig. Für Abluftbetrieb die Temperaturbeständigkeit des Kunststoffrohrs laut Herstellerangabe prüfen.</p>
+    </section>
+
+    <section class="group" id="mauerkasten" data-select-variants="Mauerkasten" data-no-default>
+      <div class="group-head">
+        <h2>Mauerkästen für die Außenwand &amp; Wanddurchführung</h2>
+        <p><strong>Gefilterte Auswahl:</strong> Es sind nur Mauerkästen mit <strong>mechanischem Antrieb</strong> (keine Elektro-/Motorjalousie) aufgeführt. Der vorhandene E-Jal 150 ist mit 0 € zusätzlichem Kaufpreis aufgeführt; seine Eignung bleibt offen. Die Spalte <strong>Features</strong> fasst die wichtigsten Eigenschaften zusammen; <strong>Insektenschutz</strong>, <strong>Rückstauklappe</strong> und <strong>Blower-Door-Test</strong> zeigen je Merkmal ✓ bzw. – (✓ = vorhanden bzw. laut Produktangabe, – = nicht angegeben). Genau einen Mauerkasten wählen; er zählt in die Auswahl oben. Runde Mauerkästen sind über einen passenden BSH-Adapter für Variante B planbar; Flachanschlüsse benötigen eine belegte Profilverbindung. Öffnungsdruck vor Auswahl prüfen. Richtpreise als ab-Preis je Stück, Stand 16.09.2026.</p>
+      </div>
+      <div class="detail-box">
+        <h3>Kompatibilität mit den vier BSH-Abluftmodellen im Vergleich</h3>
+        <p><strong>Dein vorhandener Naber E-Jal 150:</strong> Falls auf deinem Kasten die Artikelnummer <strong>4043065</strong> steht: Für dieses Modell <a href="https://naber.com/E-Jal-150-Mauerkasten-inkl.-THERMOBOX-weiss-Edelstahl/4043065" target="_blank" rel="noopener noreferrer">4043065 mit THERMOBOX</a> nennt Naber im Beschreibungstext <strong>65 Pa</strong>, im technischen Aufzählungspunkt aber <strong>&gt; 65 Pa</strong>. Das ist ein Widerspruch. Siemens EX80BNX68E und EX80BHL26E, Bosch PXX82BD56E und NEFF V68PHL4B0 empfehlen im Abluftbetrieb eine Rückstauklappe mit <strong>maximal 65 Pa Öffnungsdruck</strong>. Deshalb ist die Eignung deines E-Jal 150 derzeit <strong>nicht sicher bestätigt</strong>. Vor dem Einbau Naber oder BSH mit der Artikelnummer 4043065 um eine schriftliche Aussage zum tatsächlichen Öffnungsdruck und zur Kombination mit dem gewählten Kochfeld bitten. Laut Naber ist dieses Modell mechanisch, mit rundem Ø-150-mm-Anschluss, für etwa Ø 155 mm Wanddurchbruch und 350–500 mm Einbautiefe (kürzbar bis 255 mm).</p>
+        <p>Andere Naber-Modelle im Vergleich: P-Turbo 150 / P-Turbo flow 150 (4051064/4051065, jeweils &gt; 65 Pa) sowie flow Star GTS 150 / 150 F (4043040/4043041, jeweils 150 Pa) entsprechen der BSH-Empfehlung nicht. Bei K-Klima-R 150/150 und K-Klima-R flow 150 fehlt auf den eingesehenen Produktseiten eine Öffnungsdruck-Angabe; diesen Wert ebenfalls vor der Wahl klären. Ein passender Rohranschluss allein belegt die Eignung nicht.</p>
+        <p>Rund Ø 150 mm lässt sich mit dem <a href="https://www.siemens-home.bsh-group.com/at/de/product/kochen-und-backen/zubehoer/HZ9VDSI0" target="_blank" rel="noopener noreferrer">BSH-Rund-/Flachadapter HZ9VDSI0</a> planen. Das bislang genannte HZ9VDSS2 ist laut Siemens <strong>nur ein Flachkanal-Verbindungsstück</strong>. Ein Naber-Flachanschluss 227 × 94 mm ist ohne nachgewiesenen Übergang zum BSH-System nicht als direkt passend zu werten. Die Kernbohrung muss sich nach dem vorhandenen Kasten richten: Naber nennt für E-Jal 150 (4043065) ca. Ø 155 mm; Ø 162/164 mm gehört zum P-Turbo.</p>
+        <p>Quellen: <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/EX80BNX68E.pdf" target="_blank" rel="noopener noreferrer">Siemens EX80BNX68E</a> · <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/EX80BHL26E.pdf" target="_blank" rel="noopener noreferrer">Siemens EX80BHL26E</a> · <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/PXX82BD56E.pdf" target="_blank" rel="noopener noreferrer">Bosch PXX82BD56E</a> · <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/V68PHL4B0.pdf" target="_blank" rel="noopener noreferrer">NEFF V68PHL4B0</a> · <a href="https://naber.com/E-Jal-150-Mauerkasten-inkl.-THERMOBOX-weiss-Edelstahl/4043065" target="_blank" rel="noopener noreferrer">Naber E-Jal 150</a> · <a href="https://naber.com/de/PRIME-flow-P-Turbo-flow-150-Mauerkasten-inkl.-THERMOBOX-weiss-Edelstahl/4051065" target="_blank" rel="noopener noreferrer">Naber P-Turbo flow</a> · <a href="https://naber.com/flow-Star-GTS-150-Mauerkasten-weiss-Edelstahl/4043040" target="_blank" rel="noopener noreferrer">Naber flow Star GTS</a>.</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table data-option-rows>
+            <thead>
+              <tr>
+                <th>Auswahl</th>
+                <th>Bild</th>
+                <th>Modell – rund Ø150</th>
+                <th>Ausführung</th>
+                <th>Features</th>
+                <th>Insektenschutz</th>
+                <th>Rückstauklappe</th>
+                <th>Blower-Door-Test</th>
+                <th>Richtpreis (ab)</th>
+                <th>Preisquelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-option-name="Naber E-Jal 150 (vorhanden, Eignung offen)" data-option-price="0"><td class="pick-cell"></td><td>Vorhanden</td><td><a href="https://naber.com/E-Jal-150-Mauerkasten-inkl.-THERMOBOX-weiss-Edelstahl/4043065" target="_blank" rel="noopener noreferrer">Naber E-Jal 150</a> (4043065)</td><td>Rund Ø150, THERMOBOX; Öffnungsdruck widersprüchlich: 65 / &gt;65 Pa</td><td class="feat">mechanisch · für BSH erst nach schriftlicher Klärung · Wanddurchbruch ca. Ø155 mm</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">✓</td><td>vorhanden</td><td>Naber</td></tr>
+              <tr data-option-name="Naber K-Klima-R 150/150 (rund)" data-option-price="45.90"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/dd/41/dd41bc3ba2dce8ca-m.webp" alt="Naber K-Klima-R 150/150 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-150-150-mauerkasten-weiss-4044047-a2865459.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R 150/150, weiß</a> (4044047)</td><td>Anschluss rund Ø150, Rückstau- und Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · rund Ø150 · Rückstauklappe · Kunststoffblende</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>45,90 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Airtec Teleskop-Mauerkasten Ø150" data-option-price="73.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/gxEAAeSwRL1pS-vI/s-l500.jpg" alt="Airtec Teleskop-Mauerkasten Ø150" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/1191958003" target="_blank" rel="noopener noreferrer">Airtec Teleskop-Mauerkasten Ø150</a> (528394)</td><td>Teleskop 220–480 mm, Außengitter und Rückstauklappe</td><td class="feat">mechanisch · rund Ø150 · Teleskop 220–480 mm · Außengitter · Rückstauklappe</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>73,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Miele DMK 150" data-option-price="284.10"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/8a/58/8a5829aaf39cdf3f-m.webp" alt="Miele DMK 150 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/miele-dmk-150-mauerkasten-09162280-a1034927.html" target="_blank" rel="noopener noreferrer">Miele DMK 150</a> (09162280)</td><td>Anschluss rund Ø150, Mauerkasten</td><td class="feat">mechanisch · rund Ø150 · Marken-Mauerkasten</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>284,10 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Berbel BMK-L150" data-option-price="347.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/02/2a/022a065481454114-m.webp" alt="Berbel BMK-L150 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/berbel-bmk-l150-mauerkasten-150mm-a862894.html" target="_blank" rel="noopener noreferrer">Berbel BMK-L150</a> (1001331)</td><td>Anschluss rund Ø150, Abluftmauerkasten</td><td class="feat">mechanisch · rund Ø150 · Abluftmauerkasten · hochwertige Verarbeitung</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>347,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="BORA Mauerkasten rund/lang (UEBR/1, 3box)" data-option-price="249.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/h3IAAOSw0PFn3R6x/s-l500.jpg" alt="BORA Mauerkasten UEBR/1" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/2337347361" target="_blank" rel="noopener noreferrer">BORA Mauerkasten rund und lang</a> (UEBR/1)</td><td>Rund Ø150, BORA 3box: dreifach gedämmt und Blower-Door-dicht</td><td class="feat">mechanisch · rund Ø150 · dreifach gedämmt · Blower-Door-dicht</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">✓</td><td>249,00 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Naber K-Klima-R 150/150 anthrazit (rund)" data-option-price="50.80"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/61/95/6195cfd31c439de7-m.webp" alt="Naber K-Klima-R 150/150 anthrazit Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-150-150-mauerkasten-anthrazit-4044061-a2865455.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R 150/150, anthrazit</a> (4044061)</td><td>Anschluss rund Ø150, Rückstau-/Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · rund Ø150 · Rückstauklappe · anthrazit</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>50,80 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Naber K-Klima-R 150/150 hellgrau (rund)" data-option-price="54.50"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/25/48/25487db1cdb8c832-m.webp" alt="Naber K-Klima-R 150/150 hellgrau Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-150-150-mauerkasten-hellgrau-4044060-a2865458.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R 150/150, hellgrau</a> (4044060)</td><td>Anschluss rund Ø150, Rückstau-/Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · rund Ø150 · Rückstauklappe · hellgrau</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>54,50 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Naber K-Klima-R 150/150 ziegelrot (rund)" data-option-price="52.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/6a/f9/6af92be2c2140e67-m.webp" alt="Naber K-Klima-R 150/150 ziegelrot Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-150-150-mauerkasten-ziegelrot-4044049-a2865460.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R 150/150, ziegelrot</a> (4044049)</td><td>Anschluss rund Ø150, Rückstau-/Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · rund Ø150 · Rückstauklappe · ziegelrot</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>52,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Naber P-Turbo 150 (rund)" data-option-price="172.90"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/43/1d/431da6756b4265cb-m.webp" alt="Naber P-Turbo 150 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-p-turbo-150-mauerkasten-inkl-thermobox-4051064-a2865302.html" target="_blank" rel="noopener noreferrer">Naber P-Turbo 150</a> (4051064)</td><td>Anschluss rund Ø150, Öffnungsdruck &gt; 65 Pa</td><td class="feat">&gt; 65 Pa · für BSH-Kochfelder nicht empfohlen · rund Ø150 · THERMOBOX</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>172,90 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Naber flow Star GTS 150 (rund)" data-option-price="213.90"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/e6/af/e6af37ee6f3ad392-m.webp" alt="Naber flow Star GTS 150 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-flow-star-gts-150-mauerkasten-4043040-a2864928.html" target="_blank" rel="noopener noreferrer">Naber flow Star GTS 150</a> (4043040)</td><td>Anschluss rund Ø150, Öffnungsdruck 150 Pa</td><td class="feat">150 Pa · für BSH-Kochfelder nicht empfohlen · rund Ø150 · Strömungskörper</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>213,90 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Wallair Rundrohr Ø150 Teleskop (657306)" data-option-price="116.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/bQ8AAeSwS5hqo8bw/s-l500.jpg" alt="Wallair Rundrohr Ø150 Teleskop-Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/6584798610" target="_blank" rel="noopener noreferrer">Wallair Rundrohr Ø 150 Teleskop 35–68 cm</a> (657306)</td><td>Rund Ø150, Teleskop 35–68 cm, Rückstauklappe</td><td class="feat">mechanisch · rund Ø150 · Teleskop 35–68 cm · Rückstauklappe · Fliegengitter</td><td class="feat">✓</td><td class="feat">✓</td><td class="feat">–</td><td>116,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Wallair Rundrohr Ø150 Teleskop Magnet (657311)" data-option-price="176.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/xvQAAeSwXz1qo8z9/s-l500.jpg" alt="Wallair Rundrohr Ø150 Teleskop-Mauerkasten Magnet" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/4974647409" target="_blank" rel="noopener noreferrer">Wallair Rundrohr Ø 150 Teleskop, Magnet-Rückstauklappe</a> (657311)</td><td>Rund Ø150, Teleskop 35–68 cm, Blower-Door</td><td class="feat">mechanisch · rund Ø150 · Teleskop 35–68 cm · Magnet-Rückstauklappe · Blower-Door</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">✓</td><td>176,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Wallair Rundrohr Ø150 Teleskop Edelstahl (653193)" data-option-price="193.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/Y4QAAeSwXlRqnnT7/s-l500.jpg" alt="Wallair Rundrohr Ø150 Teleskop-Mauerkasten Edelstahl" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/375560960" target="_blank" rel="noopener noreferrer">Wallair Rundrohr Ø 150 Teleskop 27–55 cm, Edelstahlgitter</a> (653193)</td><td>Rund Ø150, Teleskop 27–55 cm, Edelstahl-Lüftungsgitter</td><td class="feat">mechanisch · rund Ø150 · Teleskop 27–55 cm · Edelstahl-Lüftungsgitter</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>193,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Wallair Rundrohr Ø150 Teleskop Blower-Door (657333)" data-option-price="218.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/1EEAAeSwwDVqo~lM/s-l500.jpg" alt="Wallair Rundrohr Ø150 Teleskop-Mauerkasten Blower-Door" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/4974662342" target="_blank" rel="noopener noreferrer">Wallair Rundrohr Ø 150 Teleskop, Blower-Door</a> (657333)</td><td>Rund Ø150, Teleskop 35–68 cm, Magnet-Rückstauklappe</td><td class="feat">mechanisch · rund Ø150 · Teleskop 35–68 cm · Magnet-Rückstauklappe · Blower-Door</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">✓</td><td>218,95 &euro;</td><td>Geizhals/eBay</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="table-shell" style="margin-top:18px;">
+        <div class="table-wrap">
+          <table data-option-rows>
+            <thead>
+              <tr>
+                <th>Auswahl</th>
+                <th>Bild</th>
+                <th>Modell – flach (Flachkanal)</th>
+                <th>Ausführung</th>
+                <th>Features</th>
+                <th>Insektenschutz</th>
+                <th>Rückstauklappe</th>
+                <th>Blower-Door-Test</th>
+                <th>Richtpreis (ab)</th>
+                <th>Preisquelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-option-name="Naber K-Klima-R flow 150 (flach)" data-option-price="54.50"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/5d/4e/5d4eb005866cf5ea-m.webp" alt="Naber K-Klima-R flow 150 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-flow-150-mauerkasten-hellgrau-4044062-a2865465.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R flow 150, hellgrau</a> (4044062)</td><td>Anschluss flach 227 × 94 mm, Rückstau- und Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · Profilanschluss prüfen · flach 227 × 94 mm · Rückstauklappe · hellgrau</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>54,50 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Wallair Flachkanal 175x80 Teleskop" data-option-price="116.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/TZoAAeSwhYZqhEO5/s-l500.jpg" alt="Wallair Flachkanal 175x80 Teleskop-Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/3672915820" target="_blank" rel="noopener noreferrer">Wallair Flachkanal 175 × 80 mm Teleskop</a> (651718)</td><td>Teleskop 35–68 cm, Rückstauklappe und Fliegengitter</td><td class="feat">mechanisch · 175 × 80 mm · Teleskop 35–68 cm · Rückstauklappe · Fliegengitter</td><td class="feat">✓</td><td class="feat">✓</td><td class="feat">–</td><td>116,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Wallair Flachkanal 222x89 Teleskop" data-option-price="128.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/LMoAAeSwxXtqo8lc/s-l500.jpg" alt="Wallair Flachkanal 222x89 Teleskop-Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/6584798520" target="_blank" rel="noopener noreferrer">Wallair Flachkanal 222 × 89 mm Teleskop</a> (657308)</td><td>Teleskop 35–68 cm, Rückstauklappe und Fliegengitter</td><td class="feat">mechanisch · 222 × 89 mm · Teleskop 35–68 cm · Rückstauklappe · Fliegengitter</td><td class="feat">✓</td><td class="feat">✓</td><td class="feat">–</td><td>128,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="AirCircle Flachkanal 222x89 Teleskop" data-option-price="183.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/SAIAAeSwG-xpvELH/s-l500.jpg" alt="AirCircle Flachkanal 222x89 Teleskop-Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/3604299297" target="_blank" rel="noopener noreferrer">AirCircle Flachkanal 222 × 89 mm Teleskop</a> (657035)</td><td>Teleskop 330–580 mm, Rückstauklappe</td><td class="feat">mechanisch · 222 × 89 mm · Teleskop 330–580 mm · Rückstauklappe</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>183,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Naber flow Star GTS 150 F (flach)" data-option-price="208.90"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/24/5c/245c8eee38daf2f5-m.webp" alt="Naber flow Star GTS 150 F Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-flow-star-gts-150-f-mauerkasten-4043041-a2865454.html" target="_blank" rel="noopener noreferrer">Naber flow Star GTS 150 F</a> (4043041)</td><td>Flachanschluss, Öffnungsdruck 150 Pa</td><td class="feat">150 Pa · für BSH-Kochfelder nicht empfohlen · Flachanschluss</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>208,90 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Wallair Flachkanal 222x89 XXL Teleskop" data-option-price="216.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/kPoAAeSww5ZqoT0g/s-l500.jpg" alt="Wallair Flachkanal 222x89 XXL Teleskop-Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/3604299442" target="_blank" rel="noopener noreferrer">Wallair Flachkanal 222 × 89 mm XXL Teleskop</a> (657030)</td><td>Teleskop 350–680 mm, Rückstauklappe</td><td class="feat">mechanisch · 222 × 89 mm · Teleskop 350–680 mm · Rückstauklappe</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>216,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="BORA Mauerkasten (UEBF/1, 3box)" data-option-price="253.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/b1/9e/b19e878295c50e90-m.webp" alt="BORA Mauerkasten UEBF/1" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/bora-mauerkasten-uebf-1-a3730138.html" target="_blank" rel="noopener noreferrer">BORA Mauerkasten (3box)</a> (UEBF/1)</td><td>Flach, BORA 3box: dreifach gedämmt und Blower-Door-dicht (Referenz)</td><td class="feat">mechanisch · flach · dreifach gedämmt · Blower-Door-dicht</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">✓</td><td>253,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Wallair Flachkanal 222x89 Blower-Door Thermozone" data-option-price="253.95"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/BAgAAeSwl9hqo9HF/s-l500.jpg" alt="Wallair Flachkanal 222x89 Thermozone Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/4974651776" target="_blank" rel="noopener noreferrer">Wallair Flachkanal 222 × 89 mm Thermozone</a> (657332)</td><td>Teleskop 35–68 cm, Blower-Door, gedämmt, 2× Rückstauklappe – sehr ähnlich zum BORA 3box</td><td class="feat">mechanisch · 222 × 89 mm · Teleskop 35–68 cm · gedämmt · 2× Rückstauklappe · Blower-Door</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">✓</td><td>253,95 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Naber/Siemens Flachkanal 222x89 (ohne Insektengitter)" data-option-price="182.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/edwAAeSwMf1o1A-K/s-l500.jpg" alt="Naber/Siemens Flachkanal 222x89 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/6262252597" target="_blank" rel="noopener noreferrer">Naber/Siemens Flachkanal 222 × 89 mm, Edelstahl</a></td><td>Flachanschluss 222 × 89 mm, Rückstauklappe, ohne Insektengitter</td><td class="feat">mechanisch · 222 × 89 mm · Edelstahl · Rückstauklappe</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>182,00 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Naber/Siemens Flachkanal 222x89 (mit Insektengitter)" data-option-price="197.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://i.ebayimg.com/images/g/edwAAeSwMf1o1A-K/s-l500.jpg" alt="Naber/Siemens Flachkanal 222x89 Mauerkasten mit Insektengitter" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/6262252633" target="_blank" rel="noopener noreferrer">Naber/Siemens Flachkanal 222 × 89 mm, Edelstahl</a></td><td>Flachanschluss 222 × 89 mm, Rückstauklappe, mit Insektengitter</td><td class="feat">mechanisch · 222 × 89 mm · Edelstahl · Rückstauklappe · Insektengitter</td><td class="feat">✓</td><td class="feat">✓</td><td class="feat">–</td><td>197,00 &euro;</td><td>Geizhals/eBay</td></tr>
+              <tr data-option-name="Naber K-Klima-R flow 150 weiß (flach)" data-option-price="53.50"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/c6/da/c6da66b934733387-m.webp" alt="Naber K-Klima-R flow 150 weiß Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-flow-150-mauerkasten-weiss-4044050-a2865466.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R flow 150, weiß</a> (4044050)</td><td>Flachanschluss 227 × 94 mm, Rückstau-/Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · Profilanschluss prüfen · flach 227 × 94 mm · Rückstauklappe · weiß</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>53,50 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Naber K-Klima-R flow 150 anthrazit (flach)" data-option-price="52.90"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/f8/af/f8afd03f2e05dc3e-m.webp" alt="Naber K-Klima-R flow 150 anthrazit Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-flow-150-mauerkasten-anthrazit-4044063-a2865464.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R flow 150, anthrazit</a> (4044063)</td><td>Flachanschluss 227 × 94 mm, Rückstau-/Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · Profilanschluss prüfen · flach 227 × 94 mm · Rückstauklappe · anthrazit</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>52,90 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Naber K-Klima-R flow 150 ziegelrot (flach)" data-option-price="52.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/7f/72/7f72854c6624f409-m.webp" alt="Naber K-Klima-R flow 150 ziegelrot Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-k-klima-r-flow-150-mauerkasten-ziegelrot-4044052-a2865467.html" target="_blank" rel="noopener noreferrer">Naber K-Klima-R flow 150, ziegelrot</a> (4044052)</td><td>Flachanschluss 227 × 94 mm, Rückstau-/Wetterschutzklappe</td><td class="feat">Öffnungsdruck nicht angegeben · Profilanschluss prüfen · flach 227 × 94 mm · Rückstauklappe · ziegelrot</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>52,00 &euro;</td><td>Geizhals Österreich</td></tr>
+              <tr data-option-name="Naber P-Turbo flow 150 (flach)" data-option-price="172.00"><td class="pick-cell"></td><td><img class="product-shot" src="https://gzhls.at/pix/b3/af/b3af46c2aa55658a-m.webp" alt="Naber P-Turbo flow 150 Mauerkasten" loading="lazy" decoding="async"></td><td><a href="https://geizhals.at/naber-p-turbo-flow-150-mauerkasten-inkl-thermobox-4051065-a2865301.html" target="_blank" rel="noopener noreferrer">Naber P-Turbo flow 150</a> (4051065) · <a href="#p-turbo-flow-150">Details</a></td><td>Flachanschluss, Öffnungsdruck &gt; 65 Pa</td><td class="feat">&gt; 65 Pa · für BSH-Kochfelder nicht empfohlen · flach · THERMOBOX</td><td class="feat">–</td><td class="feat">✓</td><td class="feat">–</td><td>172,00 &euro;</td><td>Geizhals Österreich</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="detail-box" id="p-turbo-flow-150">
+        <h3>Naber PRIME flow P-Turbo flow 150 (4051065) – Details</h3>
+        <ul>
+          <li><strong>System:</strong> COMPAIR PRIME flow® – Wandkasten/Mauerdurchführung, Einbau in der Wand.</li>
+          <li><strong>THERMOBOX:</strong> mechanisches, energiesparendes Wärmedämm- und Absperrsystem der Abluftöffnung.</li>
+          <li><strong>Außen:</strong> wetterfeste Turbo-Edelstahlblende (Jalousie), auch für bodennahen Einbau.</li>
+          <li><strong>Anschluss:</strong> N-Klick-System am P-Mas-150-Maueranschlussstutzen; direkter Anschluss von Flachadapter, Rundrohr oder Rohrbögen.</li>
+          <li><strong>Blower-Door:</strong> zertifiziert, notwendiger Öffnungsdruck &gt; 65 Pa.</li>
+          <li><strong>Maße:</strong> Außen-Ø 150 mm; Kernloch Ø 162 oder 164 mm; passend für Wandstärken bis 550 mm, kürzbar bis 220 mm.</li>
+          <li><strong>Material/Farbe:</strong> Edelstahl/Kunststoff, Edelstahl/weiß; Form rund, Ausführung kürzbar.</li>
+          <li><strong>Montage (2-stufig):</strong> 1) separates Rohbauset, 2) werkzeugloser Einsatz von THERMOBOX und Blende; Wandhülse mit drei Lippendichtungen, Hartschaumstopfen mit Putzrand und Ausrichthilfe.</li>
+          <li><strong>Zubehör:</strong> PRIME flow P-UVB 150 Universalverbinder (4051004).</li>
+          <li><strong>Quelle:</strong> <a href="https://naber.com/de/PRIME-flow-P-Turbo-flow-150-Mauerkasten-incl.-THERMOBOX-weiss-Edelstahl/4051065" target="_blank" rel="noopener noreferrer">naber.com – Produktseite 4051065</a></li>
+        </ul>
+      </div>
+
+      <div class="detail-box" id="kernlochbohrer-162">
+        <h3>Kernloch Ø 162/164 mm – nur für P-Turbo, nicht für deinen E-Jal 150</h3>
+        <p>Diese Bohrkronen beziehen sich ausschließlich auf den P-Turbo flow 150. Für den E-Jal 150 (4043065) nennt Naber ca. Ø 155 mm Wanddurchbruch. Nicht von der P-Turbo-Bohrung auf den vorhandenen Kasten schließen. Der P-Turbo flow 150 benötigt ein Kernloch Ø <strong>162 mm</strong> (alternativ <strong>164 mm</strong>); beide passen. <strong>Ø 162 mm ist Standard und deutlich günstiger</strong> – Ø 164 mm wird bei Geizhals Österreich praktisch nicht als Diamantbohrkrone angeboten. Empfehlung: das günstigere <strong>Ø 162 mm</strong> nehmen. Optionen, Richtpreis ab:</p>
+        <ul>
+          <li><strong>MSW Diamantbohrkrone 162 × 300 mm (MSW-DCD-300/162) – 76,00 &euro; → günstigste Option</strong> – <a href="https://geizhals.at/1633039104" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>NORDMANN Diamantbohrkrone 1 1/4" UNC Ø 162 mm, trocken Laser – 141,00 &euro; – <a href="https://geizhals.at/2751377296" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Kernlochbohrer TURBO Diamantbohrkrone Ø 162 mm, L 400 mm (4162) – 162,32 &euro; – <a href="https://geizhals.at/3881208384" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Dedra Diamantbohrer 162 × 400 mm (HW4162) – 162,54 &euro; – <a href="https://geizhals.at/152170552" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Bosch PRO Core Cutter Wet Diamantbohrkrone 162 × 450 mm (2608601799) – ab 165,69 &euro; – <a href="https://geizhals.at/bosch-pro-core-cutter-wet-diamant-trockenbohrkrone-2608601799-a3668490.html" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Kernlochbohrer PREMIUM Diamantbohrkrone Ø 162 mm, L 450 mm (2162) – 191,58 &euro; – <a href="https://geizhals.at/3523983845" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Bosch Professional Dry Speed Best for Universal Diamant-Trockenbohrer 162 × 150 mm (2608587334) – ab 202,54 &euro; – <a href="https://geizhals.at/bosch-dry-speed-best-for-universal-diamanttrockenbohrer-162-2608587334-a2162095.html" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Rothenberger FF44160 Diamant-Bohrkrone, D 162 – ab 329,00 &euro; – <a href="https://geizhals.at/373197945" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+        </ul>
+        <p><strong>Aufnahme passend wählen:</strong> je nach Modell/Gerät 1 1/4" UNC (Kernbohrgerät), SDS-max oder M16 – vor dem Kauf mit dem vorhandenen Bohrgerät abgleichen. Nass- (Beton/Stahlbeton) bzw. Trockenbohrkrone (Ziegel/Kalksand) je nach Wandmaterial wählen; Ø 162 mm ist Standard für die Naber-150-Mauerkästen dieser Baureihe.</p>
+      </div>
+
+      <div class="detail-box" id="wallair-rundrohr-150">
+        <h3>Wallair Rundrohr-Lüftungssystem 150 (Ø 150 mm)</h3>
+        <p>Ja – Wallair hat ein eigenes <strong>Rundrohr-System</strong> (Rundrohr-Lüftungssystem) in Ø 150 mm (und Ø 100 mm). Komponenten für die Rundrohr-Variante (Variante B), Richtpreis ab:</p>
+        <ul>
+          <li>Wallair Rundrohr 150 – Rohr ohne Muffe (20210162) – ab 28,99 &euro; – <a href="https://geizhals.at/49611675" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Rundrohr 150 – Rohrbogen 90° (20210165) – ab 26,99 &euro; – <a href="https://geizhals.at/49611676" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Rundrohr 150 – Teleskoprohr (20200188) – ab 20,16 &euro; – <a href="https://geizhals.at/49611633" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Rundrohr 150 – Rohraußenverbinder (20210166) – ab 6,54 &euro; – <a href="https://geizhals.at/81122556" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Lüftungsrohr Ø 150 mm, 50 cm ohne Muffe (4046293270023) – 34,95 &euro; – <a href="https://geizhals.at/6603847927" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Lüftungsbogen Ø 150 mm, 90° mit Muffen (653297) – 38,95 &euro; – <a href="https://geizhals.at/5872708320" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Rundrohr Ø 150 mm Flexschlauch 40 cm (653063) – 46,95 &euro; – <a href="https://geizhals.at/5872722222" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Maueranschluss-Stutzen Ø 150 mit Magnet-Rückstauklappe (657029) – 43,95 &euro; – <a href="https://geizhals.at/5872723469" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Außengitter Ø 150 mit Fliegengitter + Magnet-Rückstauklappe (4046293361103) – 68,95 &euro; – <a href="https://geizhals.at/6606706516" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+          <li>Wallair Halter Rundrohr Ø 150 (653326) – 8,95 &euro; – <a href="https://geizhals.at/5872722344" target="_blank" rel="noopener noreferrer">Geizhals</a></li>
+        </ul>
+        <p>Das System ist eine Alternative zum Kunststoff-Rundrohr in Variante B. Anschluss an das BSH-Flachkanalsystem (Siemens/Bosch) über den Adapter HZ9VDSI0 bzw. ein Übergangsstück 222 × 89 mm → Ø 150. Von Wallair gibt es zudem <strong>runde Mauerkästen Ø 150</strong> (Teleskop, mit Rückstau-/Magnetklappe, teils Blower-Door) – siehe runde Mauerkasten-Tabelle oben.</p>
+      </div>
+
+      <p class="freshness-note"><strong>BORA 3box:</strong> Der BORA Mauerkasten (UEBF/1 flach, UEBR/1 rund) ist dreifach gedämmt, Blower-Door-dicht und teleskopierbar. Am ähnlichsten ist der Wallair „Blower-Door Thermozone" (flach, 222 × 89 mm, gedämmt, 2× Rückstauklappe); bei den runden Mauerkästen kommen Naber flow Star GTS bzw. die Berbel-/Naber-E-Jal-Modelle am nächsten.</p>
+      <p class="freshness-note"><strong>Siemens/BSH – flach oder rund?</strong> Das BSH-System ist ein Flachkanal NW 150. Fremde Flachprofile wie Naber 227 × 94 mm sind nicht automatisch direkt verbindbar. Zum runden Ø-150-mm-Anschluss des vorhandenen E-Jal 150 dient der BSH-Rund-/Flachadapter <strong>HZ9VDSI0</strong>; Anschlussrichtung, Muffe und Dichtung nach der konkreten Leitung planen. Der Öffnungsdruck des E-Jal 150 muss trotz passendem Rohr zuerst geklärt sein.</p>
+      <p class="freshness-note"><strong>BORA 3box &amp; Kompatibilität:</strong> Der BORA-Kasten ist rein mechanisch und unabhängig vom Kochfeld nutzbar. <strong>Rund</strong> (UEBR/1, Ø150) passt über den Adapter HZ9VDSI0 an das BSH-Flachkanalsystem. <strong>Flach</strong> (UEBF/1) verwendet BORAs eigenes Flachprofil und passt <em>nicht</em> direkt an das HZ9VDS-System – für die flache Variante ein Modell mit passendem Profil wählen. Vor der Bestellung Wandöffnung, Profil und Außengitter-Maß in der Montageskizze des exakten Modells prüfen.</p>
+      <p class="freshness-note"><strong>Montage:</strong> Der Mauerkasten wird vor dem Verputzen bzw. Fliesen in die Außenwand gesetzt; die Teleskop-Ausführungen gleichen Wandstärken von ca. 22–68 cm aus. Auf einen dichten, wärmebrückenfreien Einbau und eine funktionierende Rückstauklappe achten. Ob rund oder flach hängt von der gewählten Abluftvariante ab (siehe oben). Preise sind Momentaufnahmen.</p>
+    </section>
+
+    <section class="section" id="naber">
+      <h2>Naber-Mauerkästen genau erklärt</h2>
+      <p>
+        Naber (Nordhorn, DE) ist einer der führenden Hersteller von Küchen-Lüftungstechnik. Die Mauerkästen
+        gehören zur Systemfamilie <strong>COMPAIR®</strong>. Das Entscheidende: Naber verkauft keinen
+        „Kasten aus einem Guss", sondern ein <strong>Baukastensystem</strong> aus Durchführung, Dämm-/Absperr-
+        einsatz und Außenblende. Genau das macht die Teile modular und die Front austauschbar.
+      </p>
+
+      <h3>1. Die Systemfamilien im Überblick</h3>
+      <div class="table-shell" style="margin-top:12px;">
+        <div class="table-wrap">
+          <table style="min-width:900px;">
+            <thead>
+              <tr>
+                <th>System</th>
+                <th>Werkstoff / Form</th>
+                <th>Wofür gedacht</th>
+                <th>Besonderheit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>COMPAIR norm</td><td>Kunststoff, rund Ø100 / eckig</td><td>Basissystem in Nennweite 100 mm (Rohre, Bögen, K-Klima-R 100/100)</td><td>einfaches, preiswertes Einstiegsprogramm</td></tr>
+              <tr><td>COMPAIR top</td><td>Kunststoff, 125 mm</td><td>Breitkanal-/Flachkanalsystem 125 (Breitkanäle, Bögen, Außenjalousien)</td><td>eckige Breitkanäle mit passender Außenjalousie</td></tr>
+              <tr><td>COMPAIR flow 125 / 150</td><td>Kunststoff, rund</td><td>abluftoptimierte Rundkanäle</td><td>integrierte Luftleitkörper – deutlich weniger Druckverlust als klassisches Rundrohr</td></tr>
+              <tr><td class="good">COMPAIR PRIME flow® 150</td><td>Kunststoff, rund</td><td>aktuelle Premium-Linie inkl. PRIME-Mauerkästen</td><td>bionische Bögen, 3D-Luftleitkörper, N-Klick-System, doppelte Lippendichtungen, Universalverbinder mit ±15° Flexzone</td></tr>
+              <tr><td>COMPAIR STEEL flow® 150</td><td>Metall</td><td>Fußbodenaufbau, hohe Brandschutz-/Druckanforderung</td><td>nicht brennbar, sehr formstabil, „Industrial Design"</td></tr>
+              <tr><td>COMPAIR Zubehör</td><td>divers</td><td>Adapter, Endstücke, Reinigungsöffnungen</td><td>verbindet Systeme und Fremdhersteller</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3>2. Wie ist ein Naber-Mauerkasten aufgebaut?</h3>
+      <p>Ein COMPAIR-(PRIME-)Mauerkasten besteht aus vier Funktionsgruppen, die zusammengesteckt bzw. in zwei Stufen montiert werden:</p>
+      <div class="flow-map">
+        <div class="flow-step">
+          <em>Schritt 1 · Rohbau</em>
+          <b>Rohbauset / Wandhülse</b>
+          <span>Mauerdurchführung aus Kunststoff, teleskopierbar bzw. kürzbar (z. B. 220–550 mm). Wandhülse mit drei Lippendichtungen, Hartschaumstopfen mit Putzrand und Ausrichthilfe. Wird schon in der Rohbauphase gesetzt.</span>
+        </div>
+        <div class="flow-step">
+          <em>Schritt 2 · Einsatz</em>
+          <b>THERMOBOX</b>
+          <span>Mechanisches Wärmedämm- und Absperrsystem, das die Abluftöffnung im Ruhezustand wärmedicht verschließt. Blower-Door-zertifiziert (Öffnungsdruck z. B. &gt; 65 Pa). Die Blende öffnet den Strömungskörper beim Betrieb.</span>
+        </div>
+        <div class="flow-step">
+          <em>Außen</em>
+          <b>Außenblende / Jalousie</b>
+          <span>Wetterfeste Edelstahl-Jalousie (bei „Turbo"-Modellen auch bodennah) oder Kunststoff-Wetterschutzgitter, in verschiedenen Farben. Eigenes, separates Bauteil.</span>
+        </div>
+        <div class="flow-step">
+          <em>Innen</em>
+          <b>N-Klick-Anschluss</b>
+          <span>Verbindung zum Kanal: direkt Flachadapter, Rundrohr oder Rohrbögen. Universalverbinder P-UVB 150 mit ±15° Flexzone. Kein Abkleben nötig, doppelte Lippendichtung.</span>
+        </div>
+      </div>
+
+      <div class="freshness-note">
+        Vereinfachte Systemlogik nach Naber-Produktbeschreibungen (z. B. P-Turbo flow 150 / 4051065). Je nach
+        Modell (K-Klima-R, Klima-E, E-Jal, E-Jal Col, P-Turbo, P-E-Jal Col, flow Star GTS) sind die Bauteile
+        unterschiedlich ausgeführt – z. B. Kunststoff- statt Edelstahlblende oder elektrische statt mechanische
+        Absperrung. Details immer im Datenblatt des exakten Modells prüfen.
+      </div>
+
+      <h3>3. Was macht einen guten Mauerkasten aus?</h3>
+      <p>Die folgenden Punkte helfen bei der Auswahl. Für die BSH-Kochfelder kommt der nachgewiesene Öffnungsdruck von höchstens 65 Pa zuerst:</p>
+      <ul class="checklist">
+        <li><span class="prio must">Muss</span><span><b>Dichtigkeit / Blower-Door</b><span>Wandeinbau luftdicht ausführen. Die vier BSH-Kochfelder empfehlen maximal 65 Pa Öffnungsdruck; P-Turbo (&gt;65 Pa) und flow Star GTS (150 Pa) erfüllen diese Vorgabe nicht.</span></span></li>
+        <li><span class="prio must">Muss</span><span><b>Rückstauklappe</b><span>Verhindert, dass Kaltluft, Gerüche und Insekten von außen zurückströmen, wenn der Abzug aus ist. Magnet- und federunterstützte Klappen („Turbo") dichten besser und schlagen leiser.</span></span></li>
+        <li><span class="prio must">Muss</span><span><b>Absperrung / Wärmedämmung</b><span>THERMOBOX &amp; Co. verschließen die Öffnung im Ruhezustand. Beim vorhandenen E-Jal 150 ist der Öffnungsdruck vor der Kombination mit BSH-Geräten zu klären.</span></span></li>
+        <li><span class="prio high">Hoch</span><span><b>Strömung &amp; Druckverlust</b><span>Glatte Innenflächen und Luftleitkörper (COMPAIR flow) senken Druckverlust und Geräusch – der Ventilator muss weniger leisten. Große Querschnittsform (Ø150 oder Flachkanal) beibehalten.</span></span></li>
+        <li><span class="prio high">Hoch</span><span><b>Passende Wandstärke / Teleskop</b><span>Teleskop- bzw. kürzbare Ausführungen (z. B. 220–550 mm, 35–68 cm) gleichen unterschiedliche Wandstärken aus. Vorher Mauerdicke messen.</span></span></li>
+        <li><span class="prio high">Hoch</span><span><b>Richtiger Anschluss</b><span>Rund Ø150 mit HZ9VDSI0; bei Fremd-Flachprofilen einen passenden Übergang schriftlich bestätigen lassen.</span></span></li>
+        <li><span class="prio high">Hoch</span><span><b>Wetterschutz &amp; Optik</b><span>Edelstahl-Jalousie ist robuster und wertiger als Kunststoff. Farbe/Front passend zur Fassade wählen (weiß, anthrazit, hellgrau, ziegelrot – bei „Col" farbige Alu-Jalousie).</span></span></li>
+        <li><span class="prio nice">Nice</span><span><b>Insektenschutz</b><span>Fliegengitter gegen Insekten; bei manchen Modellen optional oder nur mit bestimmter Front erhältlich.</span></span></li>
+        <li><span class="prio nice">Nice</span><span><b>Bedienkomfort</b><span>Mechanisch (selbsttätig über Strömung) oder elektrisch (Motorjalousie/-absperrung). Elektrisch braucht 230-V-Anschluss und Steuersignal, mechanisch ist wartungsärmer.</span></span></li>
+        <li><span class="prio nice">Nice</span><span><b>Ersatzteil- &amp; Frontverfügbarkeit</b><span>Kann die Außenblende später getauscht werden? Gibt es das Teil einzeln? (Bei Naber: ja, siehe unten.)</span></span></li>
+      </ul>
+
+      <h3>4. Wie modular sind Naber-Kästen?</h3>
+      <p>
+        Sehr modular. Das Baukastenprinzip zeigt sich an mehreren Stellen:
+      </p>
+      <ul>
+        <li><strong>Zwei Montagestufen:</strong> Zuerst das <em>Rohbauset</em> (Wandhülse) im Rohbau, später werkzeuglos der <em>Einsatz</em> aus THERMOBOX und Blende. Der Innenausbau kann also zeitlich unabhängig vorbereitet werden.</li>
+        <li><strong>Ein System, viele Anschlüsse:</strong> Über das <em>N-Klick-System</em> und die Universalverbinder (P-UVB 150) lässt sich innen entweder ein Flachadapter, ein Rundrohr oder ein Rohrbogen anschließen – ohne Abkleben, mit doppelter Lippendichtung.</li>
+        <li><strong>Flexzone ±15°:</strong> Die Universalverbinder erlauben eine Richtungsänderung um 15° in jede Richtung – die Verlegung lässt sich vor Ort nachjustieren.</li>
+        <li><strong>Einzelteile separat:</strong> Rohbauset, Wandhülse, THERMOBOX, Außenjalousie, Endstücke und Adapter sind jeweils eigene Artikel. Defekte oder verschlissene Teile lassen sich gezielt nachkaufen.</li>
+        <li><strong>Baureihen-übergreifend anschließen:</strong> Über Adapter (z. B. HZ9VDSI0 flach → rund) verbindet sich Naber auch mit dem BSH-Flachkanalsystem. Innerhalb COMPAIR sind die Komponenten aufeinander abgestimmt.</li>
+        <li><strong>Grenzen:</strong> Freie Kombination über <em>alle</em> Marken hinweg gibt es nicht. Blende, Ø und Mechanik müssen zur Baureihe passen; elektrische Modelle brauchen einen Stromanschluss.</li>
+      </ul>
+
+      <h3>5. Sind die Fronten austauschbar?</h3>
+      <div class="qa">
+        <article>
+          <strong>Kurzantwort: Ja – grundsätzlich und modellabhängig.</strong>
+          <p>
+            Bei den Naber-Systemkästen ist die Außenblende (Jalousie bzw. Wetterschutzgitter) ein
+            eigenständiges Bauteil und nicht fest mit der Wandhülse verklebt oder verschraubt. Sie wird bei
+            der zweistufigen Montage werkzeuglos in die bereits eingebaute Durchführung eingesetzt. Dadurch
+            kann die Front später wieder entnommen und ersetzt werden – z. B. bei Beschädigung, Farbwechsel
+            oder wenn eine andere Jalousie-/Wetterschutzart gewünscht ist.
+          </p>
+        </article>
+        <article>
+          <strong>Belege aus dem Naber-Sortiment</strong>
+          <p>
+            Naber führt die Außenblende als separaten Artikel (Beispiel: „PRIME flow P-E-Jal Col Außenjalousie
+            Ø 150 mm, Edelstahl", Art. 4051063 – Artikeltyp „Außenjalousie", Wandmontage) und als ausdrückliches
+            Ersatzteil („Ersatz-Außenjalousie für den E-Jal Col Mauerkasten 150"). Auch die THERMOBOX und das
+            Rohbauset (P-RBS / P-MRBS) sind separat erhältlich.
+          </p>
+        </article>
+        <article>
+          <strong>Wichtig beim Tausch</strong>
+          <p>
+            Tauschbar ist nur eine <em>passende</em> Blende derselben Baureihe, mit passendem Ø/Flachmaß und
+            passender Mechanik. Eine elektrische Jalousie braucht den vorhandenen 230-V-Anschluss und die
+            passende Steuerung; eine rein mechanische Blende lässt sich nicht beliebig gegen eine elektrische
+            tauschen. Vor dem Nachkauf die Ersatzteil-/Kompatibilitätsangabe des exakten Modells beim Händler
+            oder in der Naber-Ersatzteilliste prüfen.
+          </p>
+        </article>
+      </div>
+
+      <h3>6. Naber-Mauerkasten-Modelle im Vergleich</h3>
+      <p>Zur Einordnung zeigt diese Tabelle die <strong>gesamte</strong> Naber-Modellpalette – auch die elektrischen Varianten, die in der oben mechanisch gefilterten Auswahl nicht enthalten sind.</p>
+      <div class="table-shell" style="margin-top:12px;">
+        <div class="table-wrap">
+          <table style="min-width:1100px;">
+            <thead>
+              <tr>
+                <th>Baureihe / Modell</th>
+                <th>Anschluss</th>
+                <th>Absperrung / Dämmung</th>
+                <th>Außenfront</th>
+                <th>Antrieb</th>
+                <th>Besonderheit</th>
+                <th>ca. Preis (ab)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>K-Klima-R 150/150</td><td>rund Ø150</td><td>Wetterschutzklappe</td><td>Kunststoff, 4 Farben</td><td>mechanisch</td><td>Einstieg, günstigster Naber</td><td class="good">45,90 &euro;</td>
+              </tr>
+              <tr>
+                <td>K-Klima-R flow 150</td><td>flach 227 × 94</td><td>Wetterschutzklappe</td><td>Kunststoff, 4 Farben</td><td>mechanisch</td><td>flach für Variante A</td><td class="good">52,00 &euro;</td>
+              </tr>
+              <tr>
+                <td>Klima-E 150 / Klima-E flow 150</td><td>rund bzw. flach</td><td>Elektro-Absperrung</td><td>Kunststoff</td><td>elektrisch</td><td>motorische Absperrung</td><td>135,85 &euro;</td>
+              </tr>
+              <tr>
+                <td>E-Klima-E 150</td><td>rund Ø150</td><td>Elektro-Absperrung</td><td>Kunststoff</td><td>elektrisch</td><td>elektrische Variante, rund</td><td>171,90 &euro;</td>
+              </tr>
+              <tr>
+                <td>P-Turbo 150 / flow 150</td><td>rund bzw. flach</td><td>THERMOBOX + Turbo-Rückstau</td><td>Turbo-Edelstahlblende</td><td>mechanisch</td><td>PRIME, bodennaher Einbau möglich, Öffnungsdruck &gt; 65 Pa – BSH: nicht empfohlen</td><td>172,00–172,90 &euro;</td>
+              </tr>
+              <tr>
+                <td>E-Jal 150 / E-Jal flow 150</td><td>rund bzw. flach</td><td>THERMOBOX</td><td>Edelstahl-Außenjalousie</td><td>mechanisch</td><td>E-Jal 150 (4043065): Öffnungsdruck widersprüchlich 65 / &gt;65 Pa; vor BSH-Einbau klären</td><td>177,89–179,48 &euro;</td>
+              </tr>
+              <tr>
+                <td>P-E-Jal Col 150 / flow 150</td><td>rund bzw. flach</td><td>THERMOBOX</td><td>farbige Alu-Jalousie (Col)</td><td>mechanisch</td><td>PRIME; Öffnungsdruck modellbezogen prüfen</td><td>201,70–201,85 &euro;</td>
+              </tr>
+              <tr>
+                <td>E-Jal Col flow 150</td><td>flach</td><td>THERMOBOX</td><td>farbige Alu-Jalousie</td><td>mechanisch</td><td>Flachprofil und Öffnungsdruck prüfen</td><td>225,00 &euro;</td>
+              </tr>
+              <tr>
+                <td>flow Star GTS 150 / 150 F</td><td>rund Ø150 bzw. flach</td><td>hohe Wärmeisolierung im geschlossenen Zustand</td><td>runde Edelstahlabdeckung Ø220 mm (preisgekrönt)</td><td>mechanisch (Druckfeder)</td><td>Strömungskörper + Druckfeder, Öffnungsdruck 150 Pa – BSH: nicht empfohlen; Kernloch Ø155</td><td>208,90–213,90 &euro;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="freshness-note">
+        <strong>Praxis-Empfehlung:</strong> Für die vier BSH-Kochfelder zuerst einen Mauerkasten mit belegtem Öffnungsdruck von höchstens 65 Pa wählen. Beim vorhandenen E-Jal 150 widersprechen sich die Herstellerangaben (65 / &gt;65 Pa); schriftlich klären. Bei Naber K-Klima-R fehlt die Angabe auf den eingesehenen Produktseiten. P-Turbo und flow Star GTS fallen wegen ihres höheren Öffnungsdrucks aus dieser Empfehlung. Danach das Anschlussprofil und die Wandmaße festlegen.
+      </p>
+    </section>
+
+    <section class="section" id="bezugsquellen">
+      <h2>Bezugsquellen – wo Naber-Teile kaufen?</h2>
+      <p>
+        Naber ist ein <strong>B2B-Anbieter</strong> (Preise im Naber-Shop erst nach Login). Endkunden kaufen die
+        COMPAIR-Komponenten daher über den Fachhandel oder Online-Händler. Am besten die benötigten
+        <strong>Artikelnummern</strong> (z. B. 4051065, 4043040) notieren und damit bestellen.
+      </p>
+      <div class="verdict-grid" style="margin-top:14px;">
+        <article class="verdict">
+          <strong>Fachhändler / Küchenstudio (Empfehlung)</strong>
+          Über den Naber-Händler-Finder den nächsten Betrieb wählen. Vorteil: komplette Planung von Kanal,
+          Mauerkasten, Adapter und Wanddurchbruch aus einer Hand, eine Gewährleistung – meist am günstigsten
+          als Teil des Küchenauftrags.<br>
+          <a class="selector-link" href="https://naber.com/de/haendler-finden" target="_blank" rel="noopener noreferrer">Naber-Händler finden</a>
+        </article>
+        <article class="verdict">
+          <strong>Online in Österreich: conceptshop.at</strong>
+          „Die gesamte Naber-Welt online" – Versand direkt ab Naber-Zentrallager, versandkostenfrei ab 100 €.
+          Für Einzelteile in Österreich die naheliegendste Quelle.<br>
+          <a class="selector-link" href="https://conceptshop.at/collections/compair-flow-150" target="_blank" rel="noopener noreferrer">conceptshop.at – COMPAIR flow 150</a>
+        </article>
+        <article class="verdict">
+          <strong>Preisvergleich Österreich</strong>
+          Einzelteile und Mauerkästen zuerst über Geizhals/idealo vergleichen – die günstigsten Anbieter
+          wechseln oft.<br>
+          <a class="selector-link" href="https://geizhals.at/?fs=Naber+COMPAIR" target="_blank" rel="noopener noreferrer">Geizhals</a>
+          <a class="selector-link" href="https://www.idealo.at/preisvergleich/MainSearchProductCategory.html?q=Naber+COMPAIR" target="_blank" rel="noopener noreferrer">idealo.at</a>
+        </article>
+        <article class="verdict">
+          <strong>Deutsche Online-Shops (voller COMPAIR-Bestand)</strong>
+          Gute Auswahl an Katalogteilen und Original-Zubehör: spuelenprofi.de, ellerbrockshop.de (COMPAIR
+          norm/top/flow), kitchenking.de. Versand nach Österreich vorher prüfen.<br>
+          <a class="selector-link" href="https://www.spuelenprofi.de/naber-compair" target="_blank" rel="noopener noreferrer">spuelenprofi.de</a>
+          <a class="selector-link" href="https://www.ellerbrockshop.de/markenshops/naber/lueftungstechnik/compair-norm-100" target="_blank" rel="noopener noreferrer">ellerbrockshop.de</a>
+          <a class="selector-link" href="https://www.kitchenking.de/hersteller/naber/lueftungstechnik/compair-flow.html" target="_blank" rel="noopener noreferrer">kitchenking.de</a>
+        </article>
+      </div>
+      <p class="freshness-note" style="margin-top:16px;">
+        <strong>Beim Zusammenstellen:</strong> Es gibt keinen Endkunden-Konfigurator für die Lüftung. Als
+        Planungswerkzeug dienen der Naber-Online-Katalog/Systembaukasten und die Tabellen auf dieser Seite.
+        Zuerst die Anschlussform (rund Ø150 oder flach 222 × 89 / 227 × 94) und die Wandstärke festlegen –
+        danach Mauerkasten und Kanal passend wählen.
+      </p>
+    </section>
+
+    <p class="freshness-note"><strong>Wichtig:</strong> Preise sind Momentaufnahmen (Stand 16.09.2026). Vor dem Kauf Verfügbarkeit, Lieferumfang, Ersatzteil-Kompatibilität und Endpreis beim Händler prüfen. Maße und technische Angaben stets aus dem Datenblatt/Montageskizze des exakt bestellten Modells übernehmen.</p>
+    <p class="note">
+      Quellen: Preise und Artikelnummern über Geizhals Österreich / eBay; System-, Aufbau- und Montageangaben aus
+      Naber-Produktbeschreibungen (u. a. COMPAIR PRIME flow P-Turbo flow 150 / 4051065, flow Star GTS 150 / 4043040,
+      P-E-Jal Col Außenjalousie / 4051063) sowie der Naber-COMPAIR-Seite „Die perfekte und schnelle Montage".
+      Die Aussagen zu Modularität und austauschbaren Fronten sind aus dieser Systemlogik abgeleitet; im Einzelfall
+      modellabhängig.
+    </p>
+  </main>
+
+  <script>
+    const formatEuro = (value) =>
+      new Intl.NumberFormat("de-AT", { style: "currency", currency: "EUR" }).format(value);
+
+    const selectionKey = "abluft-mauerkasten-auswahl";
+    const savedSelection = (() => {
+      try { return JSON.parse(localStorage.getItem(selectionKey) || "{}"); }
+      catch { return {}; }
+    })();
+
+    const costTotalEl = document.getElementById("cost-total");
+    const selectedCountEl = document.getElementById("selected-count");
+
+    document.querySelectorAll(".table-shell table").forEach((table) => {
+      const sectionHeading = table.closest(".group")?.querySelector("h2")?.textContent.trim();
+      if (sectionHeading) table.setAttribute("aria-label", sectionHeading);
+    });
+
+    document.querySelectorAll(".group[data-select-variants]").forEach((section) => {
+      const category = section.dataset.selectVariants;
+
+      section.querySelectorAll("table[data-option-price]").forEach((table) => {
+        const header = table.querySelector("thead th");
+        if (!header || header.querySelector('input[type="radio"]')) return;
+
+        const name = table.dataset.optionName || header.textContent.trim();
+        const price = table.dataset.optionPrice || "";
+
+        const label = document.createElement("label");
+        label.className = "pick";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = `pick-${category}`;
+        radio.value = name;
+        radio.dataset.category = category;
+        radio.dataset.price = price;
+        radio.setAttribute("aria-label", `${category}: ${name}`);
+        if (!price) {
+          radio.disabled = true;
+        } else if (savedSelection[category] === name) {
+          radio.checked = true;
+        }
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(price ? "wählen" : "Preis offen"));
+        header.appendChild(document.createElement("br"));
+        header.appendChild(label);
+      });
+
+      section.querySelectorAll("table[data-option-rows] tbody tr[data-option-price]").forEach((row) => {
+        const name = row.dataset.optionName || "Option";
+        const price = row.dataset.optionPrice || "";
+        const cell = row.querySelector("td.pick-cell") || row.querySelector("td");
+        if (!cell || cell.querySelector('input[type="radio"]')) return;
+
+        const label = document.createElement("label");
+        label.className = "pick";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = `pick-${category}`;
+        radio.value = name;
+        radio.dataset.category = category;
+        radio.dataset.price = price;
+        radio.setAttribute("aria-label", `${category}: ${name}`);
+        if (!price) {
+          radio.disabled = true;
+        } else if (savedSelection[category] === name) {
+          radio.checked = true;
+        }
+        if (section.hasAttribute("data-no-default")) radio.dataset.noDefault = "1";
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(price ? "wählen" : "Preis offen"));
+        cell.appendChild(label);
+      });
+    });
+
+    const ensureDefaultSelection = () => {
+      const byCategory = new Map();
+      document.querySelectorAll('input[type="radio"][data-category]').forEach((input) => {
+        const list = byCategory.get(input.dataset.category) || [];
+        list.push(input);
+        byCategory.set(input.dataset.category, list);
+      });
+      byCategory.forEach((inputs) => {
+        if (inputs.some((input) => input.checked)) return;
+        const firstAvailable = inputs.find((input) => !input.disabled && !input.dataset.noDefault);
+        if (firstAvailable) firstAvailable.checked = true;
+      });
+    };
+
+    const updateTotal = () => {
+      const selected = Array.from(document.querySelectorAll('input[type="radio"][data-category]:checked'));
+      const total = selected.reduce((sum, input) => sum + Number(input.dataset.price || 0), 0);
+
+      document.querySelectorAll("td.pick-cell").forEach((cell) => {
+        cell.classList.toggle("is-selected", Boolean(cell.querySelector("input:checked")));
+      });
+
+      costTotalEl.textContent = formatEuro(total);
+      selectedCountEl.textContent = `${selected.length} ${selected.length === 1 ? "Position" : "Positionen"} gewählt`;
+
+      const persisted = Object.fromEntries(selected.map((input) => [input.dataset.category, input.value]));
+      try { localStorage.setItem(selectionKey, JSON.stringify(persisted)); } catch { /* ignore */ }
+    };
+
+    ensureDefaultSelection();
+    document.addEventListener("change", (event) => {
+      if (event.target.matches('input[type="radio"][data-category]')) updateTotal();
+    });
+    updateTotal();
+
+    document.querySelectorAll("img.product-shot").forEach((image) => {
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.addEventListener("error", () => {
+        const fallback = document.createElement("div");
+        fallback.className = "product-shot-fallback";
+        fallback.textContent = "Produktbild derzeit nicht verfügbar";
+        image.replaceWith(fallback);
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>
