@@ -4,8 +4,8 @@
   "size": 23,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-29T01:08:42+01:00",
-  "checked_label": "Donnerstag, 29. Oktober 2026, 01:08 Uhr (Europe/Vienna)",
+  "checked_at": "2026-10-30T01:19:50+01:00",
+  "checked_label": "Freitag, 30. Oktober 2026, 01:19 Uhr (Europe/Vienna)",
   "price_basis": "Gesamtpreis für ein Paar Superfit BREEZE GTX High aus Modellfamilie 1-000369, EU-Größe 23, in beliebiger Farbe, inklusive Pflichtversand nach Österreich. Andere Modellfamilien und Varianten ohne GORE-TEX zählen nicht. Unklare Versandkosten oder Größenverfügbarkeit werden nicht ins Ranking aufgenommen.",
   "offers": [
     {
@@ -317,9 +317,30 @@
       ],
       "threshold_eur": 40,
       "news_alert": false
+    },
+    {
+      "date": "2026-10-30",
+      "checked_at": "2026-10-30T01:19:50+01:00",
+      "best_total": null,
+      "retailer": "Kein aktuelles Angebot direkt bestätigt",
+      "confirmed_count": 0,
+      "top10": [],
+      "references": [
+        {
+          "retailer": "Booztlet Österreich",
+          "color": "Grey / Pink",
+          "item_price": 51.6,
+          "shipping": 5.99,
+          "url": "https://www.booztlet.com/at/de-at/superfit/breeze_30617992/232792861",
+          "checked_at": "2026-10-30T01:19:50+01:00",
+          "note": "Unbestätigte Referenz: Größenoption EU 23 sichtbar, aber heute kein aktueller Lager- oder Warenkorbbeleg; Preis nicht in Rangliste/Chart."
+        }
+      ],
+      "threshold_eur": 40,
+      "news_alert": false
     }
   ],
   "color_scope": "Alle Farben; Farbcode und EAN dürfen abweichen",
   "reference_ean": "9010159027347",
-  "current_note": "Tagescheck 29.10.2026: Kein aktuelles EU-23-Angebot aus Modellfamilie 1-000369 mit direkt bestätigter Lieferbarkeit und Versand-Endpreis. Booztlet Grey/Pink (€51,60 + angezeigte €5,99) ist eine unbestätigte Referenz, da Produktseite/Größenoption keinen heutigen Lager- oder Warenkorbbeleg lieferte; nicht in Rangliste oder Chart. Kein Preisalarm unter €40."
+  "current_note": "Tagescheck 30.10.2026: Kein aktuell lieferbares EU-23-Angebot aus der Modellfamilie 1-000369 mit direkt bestätigtem Gesamtpreis nach Österreich gefunden. Booztlet Grey/Pink bleibt eine unbestätigte Referenz und ist weder aktuelle Ranglistenposition noch Chartpreis. Kein Preisalarm unter €40."
 }
