@@ -1,1 +1,1399 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Küchengeräte-Vergleich · GitHub Pages</title><style>*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#f3f6fa;color:#17212f;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;place-items:center;padding:20px}.card{width:min(680px,100%);background:white;border:1px solid #dfe6ee;border-radius:18px;padding:clamp(22px,5vw,42px);box-shadow:0 10px 32px #17264012}a{color:#3159c7;text-decoration:none;font-weight:750}a:hover{text-decoration:underline}.brand{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#627084;font-weight:750}h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;color:#172640;margin:10px 0 14px}.note{background:#fff8e6;border:1px solid #f0dfb3;border-radius:10px;padding:14px;color:#554724;margin:20px 0}.button{display:inline-block;padding:11px 16px;border-radius:9px;background:#3159c7;color:#fff}.links{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px}</style></head><body><main class="card"><div class="brand">GitHub Pages · Site-Verzeichnis</div><h1>Küchengeräte-Vergleich</h1><p>Diese GitHub-Seite kann den Inhalt der Original-Site nicht selbst anzeigen. Der Test der Einbettung blieb leer; die Originalseite ist über den Direktlink erreichbar.</p><div class="note">Das hier ist eine Navigationsseite, kein inhaltlicher Klon. Preise, Bilder, Rechner und weitere Funktionen werden weiterhin nur auf der Original-Site bereitgestellt.</div><a class="button" href="https://kuechen-geraete-vergleich.henk87.chatgpt.site/" target="_blank" rel="noopener noreferrer">Original-Site öffnen ↗</a><div class="links"><a href="/chatpages/sites/">← Alle Seiten</a><a href="/chatpages/">Meine News</a></div></main></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Küchengeräte-Vergleich – Geräte & Preise</title>
+  <meta name="description" content="Interaktiver Vergleich von Küchengeräten, Ausstattungsmerkmalen, Angeboten und Gesamtkosten.">
+  <meta name="theme-color" content="#102a43">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M18 15v17c0 8 6 15 14 17 8-2 14-9 14-17V15' fill='none' stroke='%2338bdf8' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M24 24h16' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f8;
+      --panel: #ffffff;
+      --panel-soft: #eef4f7;
+      --text: #1d2329;
+      --muted: #66717d;
+      --line: #d7dde3;
+      --bosch: #0b5e87;
+      --siemens: #00756f;
+      --best: #0a7a4b;
+      --warn: #8a5a00;
+      --shadow: 0 12px 30px rgba(24, 35, 46, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: #005f9e;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    header {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.7rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 880px;
+      margin: 0;
+      color: #3e4954;
+      font-size: 1.12rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: #4d5965;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 26px 0;
+    }
+
+    .summary-card,
+    .section,
+    .group,
+    .table-shell,
+    .verdict {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card {
+      padding: 16px;
+    }
+
+    .summary-card strong {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .summary-card span {
+      display: block;
+      margin-top: 3px;
+      font-size: 1.02rem;
+      font-weight: 750;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 22px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .group {
+      margin-top: 28px;
+      padding: 22px;
+    }
+
+    .group-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .group-head h2 {
+      margin: 0;
+      font-size: 1.45rem;
+    }
+
+    .group-head p,
+    .section p,
+    .note {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .verdict-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .verdict {
+      padding: 14px 16px;
+      background: var(--panel-soft);
+    }
+
+    .verdict strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .table-shell {
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 1080px;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+
+    th,
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #e9eef2;
+      color: #24313d;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: #fafbfc;
+    }
+
+    tbody tr:hover td {
+      background: #f0f6f8;
+    }
+
+    td:first-child,
+    th:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      width: 210px;
+      background: #f4f6f8;
+      font-weight: 700;
+    }
+
+    th:first-child {
+      z-index: 3;
+      background: #e9eef2;
+    }
+
+    .good {
+      color: var(--best);
+      font-weight: 800;
+    }
+
+    .warn {
+      color: var(--warn);
+      font-weight: 700;
+    }
+
+    .product-shot-cell {
+      min-width: 150px;
+      background: #fff;
+    }
+
+    .product-shot {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      height: 120px;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .product-shot-fallback {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      max-width: 140px;
+      height: 120px;
+      margin: 0 auto;
+      padding: 10px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: #fafbfc;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    .note {
+      margin-top: 28px;
+      font-size: 0.92rem;
+    }
+
+    .selector-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: #005f9e;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .selector-link:hover {
+      background: #f0f6f8;
+    }
+
+    .search-action-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .search-cell {
+      min-width: 220px;
+    }
+
+    .selection-row td {
+      background: #eaf5fa;
+      font-weight: 700;
+    }
+
+    td.pick-cell {
+      transition: box-shadow .16s ease;
+    }
+
+    td.pick-cell.is-selected {
+      box-shadow: inset 0 0 0 2px rgba(2, 132, 199, .45);
+    }
+
+    #mauerkasten td:first-child,
+    #mauerkasten th:first-child {
+      width: 120px;
+    }
+
+    #mauerkasten .product-shot {
+      max-width: 100px;
+      height: 70px;
+      margin: 0;
+    }
+
+    #mauerkasten .product-shot-fallback {
+      max-width: 100px;
+      height: 70px;
+      margin: 0;
+      font-size: .72rem;
+    }
+
+    .feat {
+      color: var(--muted);
+      font-size: .84rem;
+      white-space: nowrap;
+    }
+
+    .pick {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border: 1px solid #a8c8dc;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .pick:hover { border-color: var(--accent); }
+
+    .pick:has(input:checked) {
+      border-color: var(--accent);
+      background: #edf8fd;
+      box-shadow: 0 0 0 2px rgba(2, 132, 199, .14);
+    }
+
+    .pick input { margin: 0; }
+
+    @media (max-width: 980px) {
+      .summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .summary,
+      .verdict-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 22px 14px 38px;
+      }
+
+      .section,
+      .group {
+        padding: 16px;
+      }
+
+      .group-head {
+        display: grid;
+        gap: 6px;
+      }
+
+      table {
+        min-width: 860px;
+      }
+    }
+
+    /* 2026 refresh: clearer hierarchy, faster navigation and better focus states */
+    :root {
+      --bg: #edf3f7;
+      --panel: #ffffff;
+      --panel-soft: #eaf5fa;
+      --text: #102a43;
+      --muted: #526579;
+      --line: #c9d7e3;
+      --best: #087c61;
+      --warn: #9a5d00;
+      --accent: #0284c7;
+      --accent-dark: #075985;
+      --shadow: 0 14px 36px rgba(15, 42, 67, 0.09);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: linear-gradient(180deg, #dfeef6 0, var(--bg) 360px); }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid #f59e0b;
+      outline-offset: 3px;
+    }
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 100;
+      padding: .75rem 1rem;
+      border-radius: .65rem;
+      background: #fff;
+      color: var(--text);
+      font-weight: 800;
+    }
+    .skip-link:focus { top: 1rem; }
+    .page { width: 100%; max-width: none; padding-top: 24px; }
+    header {
+      padding: clamp(22px, 4vw, 42px);
+      border-radius: 20px;
+      background: #102a43;
+      color: #fff;
+      box-shadow: 0 24px 60px rgba(15, 42, 67, .22);
+    }
+    header .eyebrow { color: #7dd3fc; }
+    header .intro { color: #dcebf5; }
+    header .pill { border-color: #375a74; background: #173b59; color: #eef8ff; }
+    h1 { max-width: 1000px; font-size: clamp(2.2rem, 6vw, 4.5rem); letter-spacing: -.045em; }
+    .control-dock {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) auto;
+      gap: 12px;
+      margin: 18px 0 26px;
+      padding: 12px;
+      border: 1px solid rgba(201, 215, 227, .9);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 10px 26px rgba(15, 42, 67, .12);
+      backdrop-filter: blur(12px);
+    }
+    .dock-total {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+      padding: 4px 6px;
+    }
+    .dock-total strong {
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .dock-total .total-value {
+      color: var(--best);
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .dock-total .total-count {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .quick-nav { display: flex; align-items: center; gap: 7px; }
+    .quick-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 12px;
+      border-radius: 9px;
+      background: #e7f4fb;
+      color: var(--accent-dark);
+      font-weight: 750;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .summary-card, .section, .group, .table-shell, .verdict { border-radius: 14px; }
+    .summary-card { border-top: 4px solid var(--accent); }
+    .summary-card span { font-size: 1.15rem; }
+    .section, .group { scroll-margin-top: 110px; }
+    .group-head h2, .section h2 { color: #0b3954; }
+    .table-shell { position: relative; }
+    .table-wrap { scrollbar-color: #7aa9c4 #e6eef3; scrollbar-width: thin; }
+    th { background: #dce9f1; color: #102a43; }
+    th:first-child { background: #dce9f1; }
+    td:first-child { background: #f1f6f9; }
+    tbody tr:hover td { background: #e8f5fb; }
+    .selector-link { border-color: #a8c8dc; color: var(--accent-dark); }
+    .freshness-note {
+      display: flex;
+      gap: 10px;
+      margin: 0;
+      padding: 13px 15px;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      background: #fff8e8;
+      color: #65451d;
+    }
+
+    .detail-box {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: #f2f9fd;
+    }
+
+    .detail-box h3 {
+      margin: 0 0 8px;
+      color: #0b3954;
+      font-size: 1rem;
+    }
+
+    .detail-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .detail-box li {
+      margin: 3px 0;
+    }
+    @media (max-width: 860px) {
+      .control-dock { grid-template-columns: 1fr; position: static; }
+      .quick-nav { overflow-x: auto; padding-bottom: 2px; }
+    }
+    @media (max-width: 700px) {
+      body { background: var(--bg); }
+      header { border-radius: 14px; }
+      h1 { font-size: clamp(2rem, 12vw, 3.2rem); }
+      .intro { font-size: 1rem; }
+      .meta { display: grid; grid-template-columns: 1fr 1fr; }
+      .pill { justify-content: center; text-align: center; }
+      .table-wrap::after {
+        content: "Seitlich wischen für alle Spalten";
+        position: sticky;
+        left: 12px;
+        display: inline-block;
+        margin: 8px 12px 10px;
+        padding: 5px 9px;
+        border-radius: 999px;
+        background: #102a43;
+        color: #fff;
+        font-size: .78rem;
+      }
+    }
+    @media print {
+      .control-dock, .search-cell { display: none !important; }
+      body { background: #fff; }
+      header { background: #fff; color: #000; box-shadow: none; }
+      header .intro, header .eyebrow { color: #333; }
+      .section, .group, .summary-card { box-shadow: none; break-inside: avoid; }
+    }
+
+    .fan-panel { margin: 20px 0; padding: 18px; border: 1px solid #b6d1e2; border-radius: 12px; background: #f2f9fd; scroll-margin-top: 110px; }
+    .fan-panel h3 { margin: 0 0 10px; color: #0b3954; font-size: 1.2rem; }
+    .fan-panel p { margin: 10px 0; font-size: 1rem; line-height: 1.6; }
+    .fan-details summary { padding: 12px 0; cursor: pointer; font-weight: 700; color: #0b3954; }
+    .fan-details summary:focus-visible { outline: 3px solid #0077b6; outline-offset: 3px; }
+    .fan-details table { min-width: 980px; }
+    .fan-details th, .fan-details td { font-size: 0.94rem; }
+    .fan-details .pressure-missing { color: #715018; }
+    .fan-details .pressure-absent { color: #596574; }
+    .fan-panel .fan-legend, .fan-panel .fan-sources { font-size: 0.9rem; }
+    @media (max-width: 600px) { .fan-panel { padding: 12px; } }
+    .fan-search { min-height: 44px; font-size: .875rem; white-space: normal; }
+    .fan-search:focus-visible { outline: 3px solid #0076b3; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+  <main class="page" id="inhalt">
+    <header>
+      <p class="eyebrow">Neueste Preisänderung direkt bestätigt: 26. Oktober 2026</p>
+      <h1>Küchengeräte klar vergleichen</h1>
+      <p class="intro">
+        Geräte, Ausstattung und Preise aus dem Küchenangebot auf einen Blick. Vergleiche Modelle direkt
+        und wähle in jeder Tabelle deine bevorzugte Variante – die Gesamtkosten erscheinen oben mit.
+      </p>
+      <div class="meta">
+        <span class="pill">22 Modelle im Gesamtvergleich</span>
+        <span class="pill">19 Preispositionen</span>
+        <span class="pill">Preisänderung direkt bestätigt am 26.10.2026</span>
+        <span class="pill">5 Kochfelder direkt vergleichbar</span>
+        <span class="pill">Offene Quellen klar markiert</span>
+      </div>
+    </header>
+
+    <div class="control-dock" aria-label="Auswahl und Navigation">
+      <div class="dock-total" role="status" aria-live="polite">
+        <strong>Gesamt</strong>
+        <span class="total-value" id="cost-total">0,00 &euro;</span>
+        <span class="total-count" id="selected-count">0 Positionen gewählt</span>
+      </div>
+      <nav class="quick-nav" aria-label="Schnellnavigation">
+        <a href="#fazit">Fazit</a>
+        <a href="#geraete">Geräte</a>
+      </nav>
+    </div>
+
+    <section class="summary">
+      <article class="summary-card">
+        <strong>Geräte</strong>
+        <span>21</span>
+      </article>
+      <article class="summary-card">
+        <strong>Günstigster Live-Treffer</strong>
+        <span>130,00 &euro;</span>
+      </article>
+      <article class="summary-card">
+        <strong>Teuerster Live-Treffer</strong>
+        <span>2.499,00 &euro;</span>
+      </article>
+      <article class="summary-card">
+        <strong>Beste Datenlage</strong>
+        <span>Siemens + Bosch</span>
+      </article>
+    </section>
+
+    <section class="section" id="fazit">
+      <h2>Kurzfazit</h2>
+      <div class="verdict-grid">
+        <article class="verdict">
+          <strong>Backöfen</strong>
+          HB978GNM1 ist funktional der stärkste Vergleichsbackofen; HB271ABB3 ist mit 677,90&nbsp;&euro; aktuell der günstigste Live-Treffer.
+        </article>
+        <article class="verdict">
+          <strong>Kühlschränke</strong>
+          KIF81HDD0 bietet die beste verifizierte Ausstattung; KIF81PFE0 ist mit 804,00&nbsp;&euro; aktuell am günstigsten.
+        </article>
+        <article class="verdict">
+          <strong>Steinplatten</strong>
+          Black Tea ist aus dem Mailangebot die günstigste Variante, Black Tectonic die teuerste.
+        </article>
+        <article class="verdict">
+          <strong>Kochfeld mit Abzug</strong>
+          Fünf matte Kochfelder mit integriertem Abzug: Beim Siemens EX80BHL26E stieg der direkt bestätigte Wohnfitz-Preis von 1.425&nbsp;&euro; auf 1.994&nbsp;&euro;. Für Lieferung nach Österreich kommen 59&nbsp;&euro; hinzu (2.053&nbsp;&euro; Gesamt, angezeigte Lieferzeit 5 Werktage). AEG XCD6847CS liegt beim Produktpreis bei 1.849&nbsp;&euro;, arbeitet aber nur im Umluftbetrieb; EX80BNX68E bleibt die Abluft-Referenz.
+        </article>
+      </div>
+    </section>
+
+    <div id="geraete"></div>
+    <section class="group" data-select-category="Backofen">
+      <div class="group-head">
+        <h2>Backöfen im Feature-Vergleich</h2>
+        <p>Neu recherchiert aus offiziellen Siemens-Produktseiten</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="1929.00">HB978GNM1</th>
+                <th data-price="717.00">HB774G1B1</th>
+                <th data-price="970.00">HB279GBB3</th>
+                <th data-price="867.90">HB772G1B1</th>
+                <th data-price="677.90">HB271ABB3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bild</td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/27089495_HB978GNM1_STP_def.webp" alt="HB978GNM1 Backofen"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/26055149_HB774G1B1_STP_def.webp" alt="HB774G1B1 Backofen"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/25075232_HB279GBB3_STP_def.webp" alt="HB279GBB3 Backofen"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/27780979_HB772G1B1_STP_def.webp" alt="HB772G1B1 Backofen"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/28569375_HB271ABB3_STP_def.webp" alt="HB271ABB3 Backofen"></td>
+              </tr>
+              <tr><td>Serie</td><td>Siemens studioLine</td><td>Siemens iQ700</td><td>Siemens studioLine</td><td>Siemens iQ700</td><td>Siemens iQ300</td></tr>
+              <tr><td>Bauart</td><td>Einbau-Backofen 60 cm</td><td>Einbau-Backofen 60 cm</td><td>Einbau-Backofen 60 cm</td><td>Einbau-Backofen 60 x 60 cm</td><td>Einbau-Backofen 60 x 60 cm</td></tr>
+              <tr><td>Optik / Farbe</td><td>matt schwarz</td><td>schwarz</td><td>deep black inox</td><td>schwarz, edelstahl</td><td>deep black inox</td></tr>
+              <tr><td>Bedienkonzept</td><td class="good">TFT Touchdisplay</td><td>TFT Touchdisplay</td><td>TFT-Klartextanzeige mit Drehknebel</td><td class="good">TFT-Full-Touchdisplay</td><td>weisses LED Display mit Touch-Control</td></tr>
+              <tr><td>Anzahl Beheizungsarten</td><td>14</td><td>14</td><td>14</td><td>10</td><td>5</td></tr>
+              <tr><td>Heissluft-System</td><td class="good">4D Heissluft</td><td>3D Heissluft</td><td>3D Heissluft</td><td>3D Heissluft</td><td>3D Heissluft</td></tr>
+              <tr><td>Air Fry</td><td class="good">Ja</td><td class="good">Ja</td><td class="good">Ja</td><td class="good">Ja</td><td>Nein</td></tr>
+              <tr><td>Pyrolyse / Hydrolyse</td><td class="good">pyrolytisch + hydrolytisch</td><td class="good">pyrolytisch + hydrolytisch</td><td class="good">pyrolytisch + hydrolytisch</td><td class="good">activeClean / pyrolytisch</td><td class="good">pyrolytisch + hydrolytisch</td></tr>
+              <tr><td>Sensorik</td><td class="good">Backsensor + 3-Punkt-Bratenthermometer</td><td>keine Sensoren laut Herstellerdaten</td><td>keine Sensoren laut Herstellerdaten</td><td>Kochassistent / cookControl Plus</td><td>keine Sensoren</td></tr>
+              <tr><td>Automatikprogramme</td><td>Backsensor-gestuetzt</td><td>laut aktueller Tabelle nicht spezifiziert</td><td>laut aktueller Tabelle nicht spezifiziert</td><td>cookControl Plus</td><td>cookControl10</td></tr>
+              <tr><td>coolStart</td><td class="good">Ja</td><td class="good">Ja</td><td class="good">Ja</td><td class="good">Ja</td><td>Nein</td></tr>
+              <tr><td>Schnellvorheizen</td><td class="good">Ja</td><td class="good">Ja</td><td class="good">Ja</td><td class="good">Ja</td><td class="good">Ja</td></tr>
+              <tr><td>Crisp-Funktion</td><td class="good">Ja</td><td>Nein</td><td>Nein</td><td>Nein</td><td>Nein</td></tr>
+              <tr><td>Home Connect</td><td class="good">Ja</td><td class="good">Ja</td><td>Nein</td><td class="good">Ja</td><td>Nein</td></tr>
+              <tr><td>App-/Remote-Funktionen</td><td>Remote Diagnostics, Monitoring, Control</td><td>Remote Diagnostics, Monitoring, Control</td><td>keine</td><td>Fernsteuerung via Home Connect</td><td>keine</td></tr>
+              <tr><td>Auszugssystem</td><td>flexibel platzierbare Teleskopschienen</td><td>Auszug nachruestbar</td><td>Auszug nachruestbar</td><td>kein Auszug, nachrüstbar</td><td>kein Auszug, nachrüstbar</td></tr>
+              <tr><td>Zubehör ab Werk</td><td>Backblech, Kombirost, Universalpfanne, Air Fry &amp; Grillblech</td><td>Backblech, Kombirost, Universalpfanne, Air Fry &amp; Grillblech</td><td>Kombirost, Universalpfanne, Air Fry &amp; Grillblech</td><td>Backblech, Kombirost, Universalpfanne</td><td>Kombirost, Universalpfanne</td></tr>
+              <tr><td>Nutzinhalt</td><td>71 l</td><td>71 l</td><td>71 l</td><td>71 l</td><td>71 l</td></tr>
+              <tr><td>Energieklasse</td><td>A+</td><td>A+</td><td>A+</td><td>A+</td><td>A+</td></tr>
+              <tr><td>Abmessungen</td><td>595 x 594 x 548 mm</td><td>595 x 594 x 548 mm</td><td>595 x 594 x 548 mm</td><td>60 x 60 cm Bauformat laut Siemens</td><td>595 x 594 x 548 mm</td></tr>
+              <tr><td>Angebotspreis</td><td>1.719,89 &euro;</td><td>966,24 &euro;</td><td>923,34 &euro;</td><td>nicht im Küchenangebot</td><td>nicht im Küchenangebot</td></tr>
+              <tr><td>Aktueller Preis</td><td>1.929,00 &euro;</td><td>717,00 &euro;</td><td>970,00 &euro;</td><td>867,90 &euro;</td><td class="good">677,90 &euro;</td></tr>
+              <tr><td>Preisquelle</td><td><a href="https://studioline.elektrokoeck.com/at/HB978GNM1/196197" target="_blank" rel="noopener noreferrer">Elektro Köck Österreich</a></td><td>Geizhals Österreich</td><td><a href="https://www.elektrokoeck.com/at/HB279GBB3/182772" target="_blank" rel="noopener noreferrer">Elektro Köck Österreich</a></td><td>Elektro Köck</td><td>Geizhals Österreich</td></tr>
+              <tr><td>Quellenstatus</td><td>offizielle Siemens-Seite neu verifiziert am 15.06.2026</td><td>offizielle Siemens-Seite neu verifiziert am 15.06.2026</td><td>offizielle Siemens-Seite neu verifiziert am 15.06.2026</td><td>offizielle Siemens-Seite verifiziert über Link vom 16.06.2026</td><td>offizielle Siemens DE-Seite mit Produktmerkmalen und Highlights verifiziert am 16.06.2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" data-select-category="Kühlschrank">
+      <div class="group-head">
+        <h2>Kühlschränke im Feature-Vergleich</h2>
+        <p>Liebherr aus dem Angebot plus vier Vergleichsmodelle mit neu verifizierten Bosch- und Siemens-Daten</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="2188.00">IRBbi 5150</th>
+                <th data-price="1720.00">KIF81HDD0</th>
+                <th data-price="804.00">KIF81PFE0</th>
+                <th data-price="1550.00">KI81FSDE0</th>
+                <th data-price="1399.00">KI81FPDE0</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bild</td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://assets-cdn.liebherr.com/versions/58f5e653-40d2-43df-a7c9-7adee527d12c/w-1280_h-1280_f-webp/IRBbi%205150.webp" alt="IRBbi 5150 Kühlschrank"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/MCSA03268012_KIF81HDD0_PGA1_def.webp" alt="KIF81HDD0 Kühlschrank"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/MCSA02564629_i6155_1927663_KIF81PF30_PGA1_def.webp" alt="KIF81PFE0 Kühlschrank"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/MCSA02518017_i5462_1890144_KI81FSD30_PGA1_def.webp" alt="KI81FSDE0 Kühlschrank"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/20921925_KI81FPDE0_STP_def.webp" alt="KI81FPDE0 Kühlschrank"></td>
+              </tr>
+              <tr><td>Marke</td><td>Liebherr</td><td>Bosch</td><td>Bosch</td><td>Siemens</td><td>Siemens</td></tr>
+              <tr><td>Bauart</td><td>Einbau-Kühlschrank</td><td>Vollraum-Einbaukühlschrank</td><td>Vollraum-Einbaukühlschrank</td><td>Vollraum-Einbaukühlschrank</td><td>Vollraum-Einbaukühlschrank</td></tr>
+              <tr><td>Gerätehöhe</td><td>1772 mm (Angebot nannte 178 cm)</td><td>1772 mm</td><td>1772 mm</td><td>1772 mm</td><td>1772 mm</td></tr>
+              <tr><td>Nische</td><td>1772–1788 x 560–570 x 550 mm</td><td>1775 x 560 x 550 mm</td><td>1775 x 560 x 550 mm</td><td>1775 x 560 x 550 mm</td><td>1775 x 560 x 550 mm</td></tr>
+              <tr><td>Kühlvolumen</td><td>296 l (davon BioFresh 98,4 l)</td><td>289 l</td><td>289 l</td><td>289 l</td><td>289 l</td></tr>
+              <tr><td>Freshness-System</td><td>BioFresh</td><td>VitaFresh</td><td>VitaFresh</td><td>hyperFresh</td><td>hyperFresh</td></tr>
+              <tr><td>Energieklasse</td><td>B</td><td class="good">D</td><td>E</td><td>E</td><td>E</td></tr>
+              <tr><td>Jahresverbrauch</td><td>80 kWh</td><td class="good">120 kWh</td><td>150 kWh</td><td>150 kWh</td><td>150 kWh</td></tr>
+              <tr><td>Geräusch</td><td>29 dB</td><td class="good">36 dB</td><td>37 dB</td><td>37 dB</td><td>37 dB</td></tr>
+              <tr><td>Home Connect</td><td>SmartDeviceBox (WLAN), kein Home Connect</td><td class="good">Ja</td><td>Nein</td><td>Nein</td><td>Nein</td></tr>
+              <tr><td>Scharnier</td><td>Flachscharnier, Festtür, Anschlag wechselbar</td><td>Flachscharnier mit Softeinzug</td><td>Flachscharnier</td><td>Flachscharnier mit Softeinzug</td><td>Flachscharnier mit Softeinzug</td></tr>
+              <tr><td>Super-Kühlen</td><td>Ja (Schnellkühlen)</td><td>Ja</td><td>Ja</td><td>Ja</td><td>Ja</td></tr>
+              <tr><td>Flaschenablage</td><td>Ja (integriert)</td><td>Ja</td><td>Nein</td><td>Ja</td><td>Nein</td></tr>
+              <tr><td>Display</td><td>Touch &amp; Swipe (Touchscreen)</td><td>7-Segment, App-Steuerung</td><td>7-Segment</td><td>7-Segment</td><td>7-Segment</td></tr>
+              <tr><td>Beleuchtung</td><td>LED</td><td>LED mit Softstart</td><td>LED</td><td>LED mit Softstart</td><td>LED</td></tr>
+              <tr><td>Ablagen / verstellbar</td><td>Glasablagen, teilbar</td><td>7 / 6</td><td>7 / 6</td><td>7 / 6</td><td>7 / 6</td></tr>
+              <tr><td>Gewicht</td><td>72,3 kg</td><td>69,7 kg</td><td>70,3 kg</td><td>70,8 kg</td><td>65,7 kg</td></tr>
+              <tr><td>Angebotspreis</td><td>1.800,99 &euro;</td><td>nicht im Küchenangebot</td><td>nicht im Küchenangebot</td><td>nicht im Küchenangebot</td><td>nicht im Küchenangebot</td></tr>
+              <tr><td>Aktueller Preis</td><td>2.188,00 &euro;</td><td>1.720,00 &euro;</td><td class="good">804,00 &euro;</td><td>1.550,00 &euro;</td><td>1.399,00 &euro;</td></tr>
+              <tr><td>Preisquelle</td><td>Geizhals Österreich</td><td>Alles Küche Österreich</td><td>Elektro Köck</td><td>Elektro Köck</td><td>EP.at / EP:Poth</td></tr>
+              <tr><td>Quellenstatus</td><td>offizielle Liebherr-Daten (liebherr.com/Datenblatt) neu verifiziert am 16.09.2026</td><td>offizielle Bosch-Seite neu verifiziert am 15.06.2026</td><td>offizielle Bosch-Seite neu verifiziert am 15.06.2026</td><td>offizielle Siemens-Seite neu verifiziert am 15.06.2026</td><td>offizielle Siemens-Seite neu verifiziert am 15.06.2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" data-select-category="Kochfeldabzug">
+      <div class="group-head">
+        <h2>80-cm-Kochfelder mit integriertem Abzug</h2>
+        <p>Je Kochfeld genau eine Spalte; Maße in Millimetern. Neue Preisänderung direkt bestätigt am 26.10.2026; ältere Preisstände und nicht erneut geprüfte Zeilen behalten ihr eigenes Datenstanddatum.</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="2189.00">Siemens EX80BNX68E</th>
+                <th data-price="2053.00">Siemens EX80BHL26E · Gesamtpreis Österreich</th>
+                <th data-price="2249.00">Bosch PXX82BD56E</th>
+                <th data-price="2499.00">NEFF V68PHL4B0</th>
+                <th data-price="1849.00">AEG XCD6847CS SaphirMatt 80</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bild</td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/26019455_EX80BNX68E_STP_def.webp" alt="Siemens EX80BNX68E Kochfeld mit integriertem Dunstabzug"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/26019431_EX80BHL26E_STP_def.webp" alt="Siemens EX80BHL26E Kochfeld mit integriertem Dunstabzug"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/25506996_PXX82BD56E_STP_def.webp" alt="Bosch PXX82BD56E Kochfeld mit integriertem Dunstabzug"></td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/25506997_V68PHL4B0_STP_def.webp" alt="NEFF V68PHL4B0 Kochfeld mit integriertem Dunstabzug"></td>
+              <td class="product-shot-cell"><img class="product-shot" src="https://www.aeg.de/services/eml/transform/WS_PN/77885313-af8e-4549-9314-1172c5befbf6/2024955866-jpg" alt="AEG XCD6847CS SaphirMatt 80 Kochfeld mit integriertem Dunstabzug"></td></tr>
+              <tr><td>Positionierung</td><td class="good">Referenz / ausgewogenes Gesamtpaket</td><td>Aktuell günstigster direkter Treffer; iQ700 Matt Edition</td><td>Mattglas-Alternative mit PerfectAir Sensor</td><td>Mattglas-Alternative mit Twist Touch</td><td>SaphirMatt® und Bridge XT, aber ausschließlich Umluftbetrieb</td></tr>
+              <tr><td>Breite / Einbau</td><td>80 cm, flächenbündig</td><td>80 cm, flächenbündig</td><td>80 cm, flächenbündig</td><td>80 cm, flächenbündig</td><td>80 cm, rahmenlos; aufliegend oder flächenbündig</td></tr>
+              <tr><td>Gerätemaß H × B × T</td><td>227 × 792 × 512 mm</td><td>227 × 792 × 512 mm</td><td>227 × 792 × 512 mm</td><td>227 × 792 × 512 mm</td><td>205 × 800 × 510 mm</td></tr>
+              <tr><td>Durchbruch B × T</td><td>780 × 500 mm</td><td>780 × 500 mm</td><td>780 × 500 mm</td><td>780 × 500 mm</td><td>780 × 490 mm</td></tr>
+              <tr><td>Außenfalz flächenbündig B × T</td><td>796 × 516 mm</td><td>796 × 516 mm</td><td>796 × 516 mm</td><td>796 × 516 mm</td><td>Maß aus der AEG-Einbauzeichnung prüfen</td></tr>
+              <tr><td>Einbauhöhe unter Oberkante</td><td>227 mm</td><td>227 mm</td><td>227 mm</td><td>227 mm</td><td>205 mm</td></tr>
+              <tr><td>Rundes Abluftrohr</td><td>Ø 150 mm, über <a href="https://www.siemens-home.bsh-group.com/at/de/product/kochen-und-backen/zubehoer/HZ9VDSI0" target="_blank" rel="noopener noreferrer">Flach-/Rundadapter HZ9VDSI0</a></td><td>Ø 150 mm, über <a href="https://www.siemens-home.bsh-group.com/at/de/product/kochen-und-backen/zubehoer/HZ9VDSI0" target="_blank" rel="noopener noreferrer">Flach-/Rundadapter HZ9VDSI0</a></td><td>Ø 150 mm, über <a href="https://www.bosch-home.at/de/product/kochen-backen/zubehoer/dunstabzugshauben/kaminverlaengerungen/HEZ9VDSI0" target="_blank" rel="noopener noreferrer">Flach-/Rundadapter HEZ9VDSI0</a></td><td>Ø 150 mm, über <a href="https://www.neff-home.com/at/de/product/zubehoer/kochfelder/entlueftungszubehoer/17005360" target="_blank" rel="noopener noreferrer">Flach-/Rundadapter Z861SI0</a></td><td>Kein Abluftrohr vorgesehen: Umluftversion</td></tr>
+              <tr><td>Oberfläche</td><td class="good">Mattschwarz</td><td class="good">Matt Edition, mattschwarz</td><td class="good">Carbon Black Matt Design</td><td class="good">Matt Black Design</td><td>SaphirMatt®-Keramikglas, mattschwarz, rahmenlos</td></tr>
+              <tr><td>Kochzonen</td><td>4 Zonen / 2 Flexflächen, je 40 × 24 cm</td><td class="good">4 Zonen / 2 intelligente XL-flexZonen, ca. 25 % mehr Fläche</td><td>4 Zonen / 2 Flex-Induction-Flächen</td><td>4 Zonen / 2 Flexflächen, je 44 × 23 cm</td><td>4 × Ø 21 cm; je 2,3 kW (Power 3,2 kW); Bridge XT</td></tr>
+              <tr><td>Bedienung</td><td>Blauer Dual lightSlider</td><td class="good">touchSlider (Einstellung mit nur einem Finger)</td><td>DirectSelect Premium</td><td>Twist Touch</td><td>Touch-Control; 9 Kochstufen</td></tr>
+              <tr><td>Automatischer Abzug</td><td class="good">Luftgütesensor</td><td>Nachlaufautomatik</td><td class="good">PerfectAir Sensor</td><td class="good">Automatischer Luftsensor</td><td>Auto-Funktion passt den Abzug an den Kochvorgang an</td></tr>
+              <tr><td>Dunstabzug spülmaschinengeeignet</td><td class="good">Ja – Edelstahl-Fettfilter und entnehmbare Überlaufschutzeinheit</td><td class="good">Ja – spülmaschinenfeste Edelstahl-Fettfilter (BSH-Plattform)</td><td class="good">Ja – Metall-Fettfilter und entnehmbare Überlaufschutzeinheit</td><td class="good">Ja – Edelstahl-Fettfilter und entnehmbare Überlaufschutzeinheit</td><td class="good">Ja – regenerierbarer 2-in-1-Aktivkohle-/Fettfilter, spülmaschinengeeignet</td></tr>
+              <tr><td>Flüssigkeitsauffangvolumen</td><td>900 ml gesamt: 200 ml + 700 ml Sicherheitstank</td><td>900 ml gesamt (BSH-Plattform, wie EX80BNX68E)</td><td>900 ml gesamt: 200 ml + 700 ml Sicherheitstank</td><td>900 ml gesamt: 200 ml + 700 ml Sicherheitstank</td><td>In den geprüften AEG-Angaben nicht beziffert</td></tr>
+              <tr><td>Niedrigste Normalstufe · Abluft</td><td>154 m³/h · 42 dB(A)</td><td>154 m³/h · 42 dB(A)</td><td>154 m³/h · 42 dB(A)</td><td>154 m³/h · 42 dB(A)</td><td>Nicht anwendbar: Umluftversion</td></tr>
+              <tr><td>Höchste Normalstufe · Abluft</td><td>500 m³/h · 69 dB(A)</td><td>500 m³/h · 69 dB(A)</td><td>500 m³/h · 69 dB(A)</td><td>500 m³/h · 69 dB(A)</td><td>Nicht anwendbar: Umluftversion</td></tr>
+              <tr><td>Intensivstufe I · Abluft</td><td>Separater Luftmengen- und Druckwert nicht gefunden.</td><td>Separater Luftmengen- und Druckwert nicht gefunden.</td><td>Separater Luftmengen- und Druckwert nicht gefunden.</td><td>Separater Luftmengen- und Druckwert nicht gefunden.</td><td>Nicht anwendbar: Umluftversion</td></tr>
+              <tr><td>Höchste Intensivstufe · Abluft</td><td>622 m³/h · 74 dB(A)</td><td>622 m³/h · 74 dB(A)</td><td>622 m³/h · 74 dB(A)</td><td>622 m³/h · 74 dB(A)</td><td>Nicht anwendbar: Umluftversion</td></tr>
+              <tr><td>Umluft-Luftstrom · niedrig / normal max. / intensiv</td><td>In dieser Übersicht nicht aufgeführt</td><td>In dieser Übersicht nicht aufgeführt</td><td>In dieser Übersicht nicht aufgeführt</td><td>In dieser Übersicht nicht aufgeführt</td><td>250 / 465 / 585 m³/h</td></tr>
+              <tr><td>Umluft-Geräusch · niedrig / normal max.</td><td>In dieser Übersicht nicht aufgeführt</td><td>In dieser Übersicht nicht aufgeführt</td><td>In dieser Übersicht nicht aufgeführt</td><td>In dieser Übersicht nicht aufgeführt</td><td>54 / 70 dB(A)</td></tr>
+              <tr><td>Herstellerquelle · Gebläse</td><td><a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/EX80BNX68E.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (PDF)</a></td><td><a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/EX80BHL26E.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (PDF)</a></td><td><a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/PXX82BD56E.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (PDF)</a></td><td><a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/V68PHL4B0.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (PDF)</a></td><td><a href="https://www.aeg.at/kitchen/cooking/cooker-hoods/combo-hob-hood/xcd6847cs/" target="_blank" rel="noopener noreferrer">AEG Produktdaten</a></td></tr>
+              <tr><td>Lüfterstufen</td><td>17 Normalstufen (1–9 mit Zwischenstufen) + 2 Intensivstufen</td><td>9 Normalstufen + 2 Intensivstufen</td><td>17 Normalstufen (1–9 mit Zwischenstufen) + 2 Intensivstufen</td><td>9 Normalstufen + 2 Intensivstufen</td><td>3 Normalstufen + 1 Intensivstufe</td></tr>
+              <tr><td>Gemessener Gebläsedruck im Bestpunkt (BEP)</td><td><strong>468 Pa</strong> bei 365,8 m³/h<br><a href="https://media3.bsh-group.com/Documents/eudatasheet/de-AT/EX80BNX68E.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt, S. 2</a><br>Keine Zuordnung zu einer Lüfterstufe</td><td><strong>468 Pa</strong> bei 365,8 m³/h<br><a href="https://media3.bsh-group.com/Documents/eudatasheet/de-AT/EX80BHL26E.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt, S. 2</a><br>Keine Zuordnung zu einer Lüfterstufe</td><td><strong>468 Pa</strong> bei 365,8 m³/h<br><a href="https://media3.bsh-group.com/Documents/eudatasheet/de-AT/PXX82BD56E.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt, S. 2</a><br>Keine Zuordnung zu einer Lüfterstufe</td><td><strong>468 Pa</strong> bei 365,8 m³/h<br><a href="https://media3.bsh-group.com/Documents/eudatasheet/de-DE/V68PHL4B0.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt, S. 2</a><br>Keine Zuordnung zu einer Lüfterstufe</td><td>Kein Pa-Bestpunkt in den geprüften AEG-Unterlagen gefunden</td></tr>
+              <tr><td>Ventilatorkennlinie je Stufe</td><td>In den geprüften Unterlagen nicht gefunden<br><a href="#ventilatorkennlinie">Stufenübersicht (Pa)</a></td><td>In den geprüften Unterlagen nicht gefunden<br><a href="#ventilatorkennlinie">Stufenübersicht (Pa)</a></td><td>In den geprüften Unterlagen nicht gefunden<br><a href="#ventilatorkennlinie">Stufenübersicht (Pa)</a></td><td>In den geprüften Unterlagen nicht gefunden<br><a href="#ventilatorkennlinie">Stufenübersicht (Pa)</a></td><td>Keine AEG-Pa-Kennlinie gefunden; Umluftmodell<br><a href="#ventilatorkennlinie">Stufenübersicht (Pa)</a></td></tr>
+              <tr><td>Google: Ventilatorkennlinie</td><td><a href="https://www.google.com/search?q=Siemens%20EX80BNX68E%20Ventilatorkennlinie" target="_blank" rel="noopener noreferrer" class="selector-link fan-search" aria-label="Siemens EX80BNX68E Ventilatorkennlinie bei Google suchen">Google: Kennlinie suchen</a></td><td><a href="https://www.google.com/search?q=Siemens%20EX80BHL26E%20Ventilatorkennlinie" target="_blank" rel="noopener noreferrer" class="selector-link fan-search" aria-label="Siemens EX80BHL26E Ventilatorkennlinie bei Google suchen">Google: Kennlinie suchen</a></td><td><a href="https://www.google.com/search?q=Bosch%20PXX82BD56E%20Ventilatorkennlinie" target="_blank" rel="noopener noreferrer" class="selector-link fan-search" aria-label="Bosch PXX82BD56E Ventilatorkennlinie bei Google suchen">Google: Kennlinie suchen</a></td><td><a href="https://www.google.com/search?q=NEFF%20V68PHL4B0%20Ventilatorkennlinie" target="_blank" rel="noopener noreferrer" class="selector-link fan-search" aria-label="NEFF V68PHL4B0 Ventilatorkennlinie bei Google suchen">Google: Kennlinie suchen</a></td><td><a href="https://www.google.com/search?q=AEG%20XCD6847CS%20Ventilatorkennlinie" target="_blank" rel="noopener noreferrer" class="selector-link fan-search" aria-label="AEG XCD6847CS Ventilatorkennlinie bei Google suchen">Google: Kennlinie suchen</a></td></tr>
+              <tr><td>Geräusch</td><td>69 dB normal, 74 dB intensiv</td><td>69 dB normal</td><td>69 dB normal</td><td>BSH-Plattform, max. 69 dB normal</td><td>Umluft: 54–70 dB(A) normal; Intensiv-Geräuschwert nicht separat ausgewiesen</td></tr>
+              <tr><td>Energieeffizienz Abzug</td><td>B</td><td>B</td><td>B</td><td>B</td><td>A (fluiddynamisch); A+ Gesamtgerät</td></tr>
+              <tr><td>Smart Home</td><td class="good">Home Connect</td><td class="good">Home Connect</td><td class="good">Home Connect</td><td class="good">Home Connect</td><td>Nicht ausgewiesen</td></tr>
+              <tr><td>Preis (Produkt / Gesamt AT)</td><td>2.189,00 &euro; · Versand nicht neu geprüft</td><td class="good">1.994,00 &euro;<br><small>+ 59,00 &euro; Pflichtversand AT = 2.053,00 &euro;</small></td><td>2.249,00 &euro;</td><td>2.499,00 &euro;</td><td>1.849,00 &euro;</td></tr>
+              <tr><td>Preisquelle</td><td>Elektro Köck, Österreich</td><td>wohnfitz.shop · Direkttreffer</td><td>modern life Bosch-Shop, Österreich</td><td>Elektro Köck, Österreich</td><td><a href="https://geizhals.at/aeg-electrolux-xcd6847cs-induktionskochfeld-mit-kochfeldabzug-autark-949-598-149-a3103805.html" target="_blank" rel="noopener noreferrer">Geizhals Österreich</a></td></tr>
+              <tr><td>Verfügbarkeit</td><td class="good">sofort verfügbar</td><td class="good">5 Werktage; Österreich-Versand 59,00 &euro;; 2.053,00 &euro; geliefert</td><td>bestellbar</td><td class="good">sofort verfügbar</td><td>Preis direkt bestätigt</td></tr>
+              <tr><td>Einordnung</td><td class="good">Matt, sensorautomatisch und flexibel</td><td class="good">Matt Edition mit touchSlider und XL-flexZonen; Produktpreis 1.994,00 &euro;, gesamt Österreich 2.053,00 &euro;</td><td>Matt und flächenbündig</td><td>Matt, flächenbündig und mit Twist-Touch-Bedienung</td><td>Umluft, daher nicht am vorhandenen Naber E-Jal 150 anschließbar</td></tr>
+              <tr><td>Shop / Quelle</td><td><a href="https://siemens.modern-life-shop.at/siemens-ex80bnx68e-iq700-kochfeld-mit-dunstabzug-induktion-80-cm-mattschwarz-fl%C3%A4chenb%C3%BCndig-integriert-38301.html" target="_blank" rel="noopener noreferrer">modern life</a> · <a href="https://studioline.elektrokoeck.com/at/EX80BNX68E/192445" target="_blank" rel="noopener noreferrer">Elektro Köck</a></td><td><a href="https://www.wohnfitz.shop/Siemens-studioLine-Mattes-Induktionskochfeld-mit-integriertem-Dunstabzug-iQ700-80-cm-flaechenbuendig-EX80BHL26E/EX80BHL26E" target="_blank" rel="noopener noreferrer">wohnfitz.shop</a> · <a href="https://www.idealo.at/preisvergleich/OffersOfProduct/208529344_-ex80bhl26e-siemens.html" target="_blank" rel="noopener noreferrer">Idealo Österreich</a> · <a href="https://www.siemens-home.bsh-group.com/at/de/product/studioline-kochfelder-integrierter-dunstabzug/EX80BHL26E" target="_blank" rel="noopener noreferrer">Siemens</a></td><td><a href="https://bosch.modern-life-shop.at/accent-line-k%C3%BCchensortiment-5126" target="_blank" rel="noopener noreferrer">modern life Bosch-Shop</a> · <a href="https://www.bosch-home.at/hausgeraete/kochen-backen/kochfelder/matt-design-kochfelder" target="_blank" rel="noopener noreferrer">Bosch Matt Design</a></td><td><a href="https://www.elektrokoeck.com/at/V68PHL4B0/195099" target="_blank" rel="noopener noreferrer">Elektro Köck</a> · <a href="https://www.neff-home.com/at/de/mkt-product/kochfelder/induktions-kochfelder/V68PHL4B0" target="_blank" rel="noopener noreferrer">NEFF</a></td><td><a href="https://www.aeg.at/kitchen/cooking/cooker-hoods/combo-hob-hood/xcd6847cs/" target="_blank" rel="noopener noreferrer">AEG</a> · <a href="https://geizhals.at/aeg-electrolux-xcd6847cs-induktionskochfeld-mit-kochfeldabzug-autark-949-598-149-a3103805.html" target="_blank" rel="noopener noreferrer">Geizhals Österreich · Elektro Outlet Steyr</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="fan-panel" id="ventilatorkennlinie">
+        <h3>Ventilatorkennlinie · Druck je Lüfterstufe</h3>
+        <p><strong>Vollständige Kennlinien fehlen:</strong> In den geprüften Herstellerunterlagen wurden keine Druckwerte je Stufe gefunden. Eine Kennlinie zeigt den Druck in Pascal (Pa) über dem Luftvolumenstrom (m³/h) für eine bestimmte Lüfterstufe. Ein einzelner Pa-Wert je Stufe benötigt deshalb einen festgelegten Messpunkt.</p>
+        <p>Bei den vier BSH-Abluftmodellen sind <strong>468 Pa bei 365,8 m³/h im Bestpunkt (BEP)</strong> belegt. Für das AEG XCD6847CS (Umluftversion) wurde in den geprüften AEG-Unterlagen kein Pa-Bestpunkt gefunden. Die zugehörige Lüfterstufe wird bei den BSH-Modellen im EU-Datenblatt nicht genannt; ein einzelner Messpunkt erlaubt keine Berechnung der übrigen Stufen.</p>
+        <details class="fan-details" open>
+          <summary>Alle Normal-, Zwischen- und Intensivstufen · Pascalwerte</summary>
+          <div class="table-shell">
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Druckwerte je Lüfterstufe, horizontal scrollbar">
+              <table data-no-selection aria-label="Ventilatorkennlinie: Druck in Pascal je Lüfterstufe" aria-describedby="pressure-legend">
+                <thead><tr><th scope="col">Lüfterstufe · Druck (Pa)</th><th scope="col">Siemens EX80BNX68E</th><th scope="col">Siemens EX80BHL26E</th><th scope="col">Bosch PXX82BD56E</th><th scope="col">NEFF V68PHL4B0</th><th scope="col">AEG XCD6847CS</th></tr></thead>
+                <tbody>
+                  <tr><td>Stufe 1</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td></tr>
+                  <tr><td>Zwischenstufe 1–2</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Zwischenstufe</td></tr>
+                  <tr><td>Stufe 2</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td></tr>
+                  <tr><td>Zwischenstufe 2–3</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Zwischenstufe</td></tr>
+                  <tr><td>Stufe 3</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td></tr>
+                  <tr><td>Zwischenstufe 3–4</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Stufe 4</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Zwischenstufe 4–5</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Stufe 5</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Zwischenstufe 5–6</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Stufe 6</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Zwischenstufe 6–7</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Stufe 7</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Zwischenstufe 7–8</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Stufe 8</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Zwischenstufe 8–9</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Zwischenstufe</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Stufe 9</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine Stufe</td></tr>
+                  <tr><td>Intensivstufe 1</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td></tr>
+                  <tr><td>Intensivstufe 2</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-missing">Nicht veröffentlicht*</td><td class="pressure-absent">Keine zweite Intensivstufe</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="fan-legend" id="pressure-legend">* „Nicht veröffentlicht“ bedeutet: In den am 01.10.2026 geprüften Produkt- und EU-Datenblättern sowie bei der Kennliniensuche kein belastbarer Pa-Wert gefunden. Es bedeutet nicht 0 Pa. Zwischenstufen sind nur bei EX80BNX68E und PXX82BD56E angegeben; das AEG XCD6847CS hat 3 Normal- und 1 Intensivstufe. Der automatische Nachlauf ist ein separater Betriebsmodus; auch dafür wurde kein Pa-Wert gefunden.</p>
+        </details>
+        <p><strong>Für deinen Mauerkasten:</strong> Die empfohlenen maximal 65 Pa beziehen sich auf den Öffnungsdruck der Rückstauklappe. Das ist eine andere Angabe als die 468 Pa am Bestpunkt des Gebläses und bestätigt keine Freigabe für den E-Jal 150. Für die Kombination braucht es die Herstellerbestätigung; für die Planung die Druck-/Volumenstromkennlinien je Stufe im Abluftbetrieb. Das AEG XCD6847CS ist als Umluftversion ausgewiesen und in diesem Mauerkastenvergleich nicht enthalten.</p>
+        <p class="fan-sources"><strong>Herstellerquellen · geprüft am 01.10.2026:</strong><br>Siemens EX80BNX68E: <a href="https://media3.bsh-group.com/Documents/eudatasheet/de-AT/EX80BNX68E.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt (BEP)</a> · <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/EX80BNX68E.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (Lüfterstufen / Rückstauklappe)</a><br>Siemens EX80BHL26E: <a href="https://media3.bsh-group.com/Documents/eudatasheet/de-AT/EX80BHL26E.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt (BEP)</a> · <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/EX80BHL26E.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (Lüfterstufen / Rückstauklappe)</a><br>Bosch PXX82BD56E: <a href="https://media3.bsh-group.com/Documents/eudatasheet/de-AT/PXX82BD56E.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt (BEP)</a> · <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/PXX82BD56E.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (Lüfterstufen / Rückstauklappe)</a><br>NEFF V68PHL4B0: <a href="https://media3.bsh-group.com/Documents/eudatasheet/de-DE/V68PHL4B0.pdf" target="_blank" rel="noopener noreferrer">EU-Datenblatt (BEP)</a> · <a href="https://media3.bsh-group.com/Documents/specsheet/de-AT/V68PHL4B0.pdf" target="_blank" rel="noopener noreferrer">Produktdatenblatt (Lüfterstufen / Rückstauklappe)</a><br>AEG XCD6847CS: <a href="https://www.aeg.at/kitchen/cooking/cooker-hoods/combo-hob-hood/xcd6847cs/" target="_blank" rel="noopener noreferrer">Produktdaten (Luftstrom, Geräusch, Betriebsart)</a></p>
+      </div>
+      <p class="freshness-note"><strong>EX80BHL26E mit deinem Naber E-Jal 150:</strong> Für Abluft empfiehlt Siemens eine Rückstauklappe mit maximal 65 Pa Öffnungsdruck. Falls dein E-Jal die Artikelnummer 4043065 hat, nennt Naber auf derselben Produktseite sowohl 65 Pa als auch &gt;65 Pa. Die Eignung der eingebauten THERMOBOX ist deshalb noch offen; den tatsächlichen Wert vor dem Anschluss mit Naber oder Siemens schriftlich klären. Der Mauerkasten hat einen runden Ø150-Anschluss; zum BSH-Flachkanal passt der Rund-/Flachadapter HZ9VDSI0. Für das Modell 4043065 nennt Naber ca. Ø155 mm Wanddurchbruch; Ø162/164 mm gilt für den anderen P-Turbo. <a href="abluft-mauerkasten.html#mauerkasten">Details und Herstellerquellen</a>.</p>
+      <p class="freshness-note"><strong>Einbauhinweis:</strong> Die vier BSH-Abluftmodelle führen die Abluft zunächst über ein Flachkanalsystem ab; das AEG XCD6847CS ist eine Umluftversion. Für ein rundes Rohr ist ein passender Übergang auf Ø 150 mm nötig; der Rohrdurchmesser ist nicht der Durchmesser der Kernbohrung. Durchbruch und Außenfalz sind unterschiedliche Fräsmaße. Vor der Fertigung der Steinplatte immer die aktuelle Montageskizze des exakt bestellten Modells und die vorgesehene Abluft- oder Umluftführung freigeben lassen. Die Spalte <strong>EX80BHL26E</strong> ist farblich markiert: grün = Vorteil gegenüber EX80BNX68E, orange = teurer.</p>
+    </section>
+
+
+    <section class="group" data-select-category="Geschirrspüler">
+      <div class="group-head">
+        <h2>Geschirrspüler im Feature-Vergleich</h2>
+        <p>Eigenständige Tabelle für den Siemens-Geschirrspüler</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="916.64">SN87TX00CE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bild</td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://media3.bsh-group.com/Product_Shots/22525701_SN87TX00CE_STP_def.webp" alt="SN87TX00CE Geschirrspüler"></td>
+              </tr>
+              <tr><td>Marke</td><td>Siemens</td></tr>
+              <tr><td>Kategorie</td><td>vollintegrierter Geschirrspüler</td></tr>
+              <tr><td>Breite / Format</td><td>60 cm</td></tr>
+              <tr><td>Einbauart</td><td>vollintegriert</td></tr>
+              <tr><td>Energieklasse</td><td class="good">A</td></tr>
+              <tr><td>Massgedecke</td><td>14</td></tr>
+              <tr><td>Geräusch</td><td>43 dB</td></tr>
+              <tr><td>Programme</td><td>Eco, Auto, intelligentProgramm, Intensive, Kurz, Glas Shine, Silence, Favorite</td></tr>
+              <tr><td>Trocknung</td><td>Zeolith + Wärmetauscher + Trocknungsassist</td></tr>
+              <tr><td>Korbsystem</td><td>flexComfort Pro, RackMatic, varioSchublade Pro</td></tr>
+              <tr><td>Spezialzonen</td><td>glassZone, intensiveZone</td></tr>
+              <tr><td>Bedienung / Anzeige</td><td>TFT-Display, TimeLight, emotionLight blau</td></tr>
+              <tr><td>Komfort</td><td>openAssist, aquaStop, iQdrive, hygienePlus, varioSpeed Plus</td></tr>
+              <tr><td>Home Connect</td><td class="good">Ja</td></tr>
+              <tr><td>Angebotspreis</td><td>1.243,97 &euro;</td></tr>
+              <tr><td>Aktueller Preis</td><td class="good">916,64 &euro;</td></tr>
+              <tr><td>Preisquelle</td><td><a href="https://geizhals.at/siemens-iq700-sn87tx00ce-a3045528.html" target="_blank" rel="noopener noreferrer">Geizhals Österreich</a></td></tr>
+              <tr><td>Quellenstatus</td><td>offizielle Siemens-Seite neu verifiziert am 15.06.2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" data-select-category="Spüle">
+      <div class="group-head">
+        <h2>Spüle im Feature-Vergleich</h2>
+        <p>Eigenständige Tabelle für die BLANCO-Spüle</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="308.00">ETAGON 500-U / 527754</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bild</td>
+                <td class="product-shot-cell">
+                  <div class="product-shot-fallback">Bildquelle für ETAGON 500-U noch offen</div>
+                </td>
+              </tr>
+              <tr><td>Kategorie</td><td>Spüle</td></tr>
+              <tr><td>Marke</td><td>BLANCO</td></tr>
+              <tr><td>Modell</td><td>ETAGON 500-U</td></tr>
+              <tr><td>Farbe / Finish</td><td>schwarz</td></tr>
+              <tr><td>Material</td><td>Silgranit (Granit-Verbundwerkstoff)</td></tr>
+              <tr><td>Bauart / Einbau</td><td>Unterbau, Becken mittig</td></tr>
+              <tr><td>Maße Spüle (B × T)</td><td>530 × 460 mm</td></tr>
+              <tr><td>Hauptbecken (B × T)</td><td>500 × 370 mm</td></tr>
+              <tr><td>Beckentiefe</td><td>200 mm</td></tr>
+              <tr><td>Unterschrankbreite</td><td>600 mm</td></tr>
+              <tr><td>Abtropffläche</td><td>keine, aber Abtropfgitter</td></tr>
+              <tr><td>Angebotsdetail</td><td>Unterbau-Spüle</td></tr>
+              <tr><td>Neu recherchierter Status</td><td>Modellbezeichnung, Maße und österreichischer Händlerpreis verifiziert</td></tr>
+              <tr><td>Angebotspreis</td><td>330,00 &euro;</td></tr>
+              <tr><td>Aktueller Preis</td><td>308,00 &euro;</td></tr>
+              <tr><td>Preisquelle</td><td>Küchen &amp; Wohnstudio Kutzer</td></tr>
+              <tr><td>Quellenstatus</td><td>Maße/Material über BLANCO-/Geizhals-Datenblatt verifiziert am 16.09.2026; Herstellerbild offen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" data-select-category="Ablaufset">
+      <div class="group-head">
+        <h2>Ablaufset im Feature-Vergleich</h2>
+        <p>Eigenständige Tabelle für das BLANCO-Ablaufset</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="130.00">InFino / 207422</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bild</td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://data.sanitino.eu/PRODUCT-103713/0a88f492cae06d218bfd5ef3?size=120-webp&amp;v=800a9446" alt="BLANCO InFino Ablaufset"></td>
+              </tr>
+              <tr><td>Kategorie</td><td>Ablauf- und Überlaufset</td></tr>
+              <tr><td>Marke</td><td>BLANCO</td></tr>
+              <tr><td>Modell</td><td>InFino</td></tr>
+              <tr><td>Farbe / Finish</td><td>schwarz</td></tr>
+              <tr><td>Angebotsdetail</td><td>ohne Zugknopf</td></tr>
+              <tr><td>Neu recherchierter Status</td><td>BLANCO-Produktseite und österreichischer Preisvergleich verifiziert</td></tr>
+              <tr><td>Angebotspreis</td><td>93,28 &euro;</td></tr>
+              <tr><td>Aktueller Preis</td><td class="good">130,00 &euro;</td></tr>
+              <tr><td>Preisquelle</td><td><a href="https://www.baedermaxx.at/kueche/spueltischablaeufe/43691/blanco-ab-und-ueberlaufset-infino-ohne-zugknopf-fuer-einzelbecken-schwarz" target="_blank" rel="noopener noreferrer">Bädermaxx Österreich</a></td></tr>
+              <tr><td>Quellenstatus</td><td>Modellbezeichnung aus Angebot verifiziert, Herstellerdetail offen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" data-select-category="Armatur">
+      <div class="group-head">
+        <h2>Armatur im Feature-Vergleich</h2>
+        <p>Eigenständige Tabelle für die BLANCO-Armatur</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="481.60">CULINA-S II / 527464</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bild</td>
+                <td class="product-shot-cell"><img class="product-shot" src="https://cdn.blanco.com/assets/derivateOPK/blanco_1134x1050/hlr-system/png/461/189461.png" alt="BLANCO CULINA-S II Armatur"></td>
+              </tr>
+              <tr><td>Kategorie</td><td>Armatur</td></tr>
+              <tr><td>Marke</td><td>BLANCO</td></tr>
+              <tr><td>Modell</td><td>CULINA-S II</td></tr>
+              <tr><td>Farbe / Finish</td><td>schwarz matt</td></tr>
+              <tr><td>Angebotsdetail</td><td>Design-Armatur</td></tr>
+              <tr><td>Neu recherchierter Status</td><td>offizielle BLANCO-Produktseite aktuell nicht stabil abrufbar</td></tr>
+              <tr><td>Angebotspreis</td><td>510,40 &euro;</td></tr>
+              <tr><td>Aktueller Preis</td><td>481,60 &euro;</td></tr>
+              <tr><td>Preisquelle</td><td>Idealo Österreich</td></tr>
+              <tr><td>Quellenstatus</td><td>Modellbezeichnung aus Angebot verifiziert, Herstellerdetail offen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" data-select-category="Steinplatte">
+      <div class="group-head">
+        <h2>Steinplatten im Vergleich</h2>
+        <p>Mailangebot von Marmor Brucker vom 09.03.2026 für Arbeitsplatten inkl. Ausschnitte, Messen und Montage</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th data-price="5878.80">Black Tectonic</th>
+                <th data-price="5364.00">Nero Assoluto</th>
+                <th data-price="4510.80">Black Tea</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Material / Dekor</td><td>Black Tectonic</td><td>Nero Assoluto</td><td>Black Tea</td></tr>
+              <tr><td>Stärke / Oberfläche</td><td>2 cm Leather</td><td>2 cm Leather</td><td>2 cm Leather</td></tr>
+              <tr><td>Projektumfang</td><td>Arbeitsplatten inkl. Ausschnitte, Messen und Montage</td><td>Arbeitsplatten inkl. Ausschnitte, Messen und Montage</td><td>Arbeitsplatten inkl. Ausschnitte, Messen und Montage</td></tr>
+              <tr><td>Küchenmasse</td><td>Abwasch 180 x 70 cm + Kochinsel 240 x 120 cm</td><td>Abwasch 180 x 70 cm + Kochinsel 240 x 120 cm</td><td>Abwasch 180 x 70 cm + Kochinsel 240 x 120 cm</td></tr>
+              <tr><td>Ausschnitte</td><td>Unterbauspuele + flächenbündiges Kochfeld</td><td>Unterbauspuele + flächenbündiges Kochfeld</td><td>Unterbauspuele + flächenbündiges Kochfeld</td></tr>
+              <tr><td>Mailpreis netto</td><td>4.899,00 &euro;</td><td>4.470,00 &euro;</td><td class="good">3.759,00 &euro;</td></tr>
+              <tr><td>Angebotspreis</td><td>5.878,80 &euro;</td><td>5.364,00 &euro;</td><td class="good">4.510,80 &euro;</td></tr>
+              <tr><td>Aktueller Marktpreis</td><td>nur individuelles Projektangebot</td><td>nur individuelles Projektangebot</td><td>nur individuelles Projektangebot</td></tr>
+              <tr><td>Elektro-Köck-Preis</td><td>nicht relevant</td><td>nicht relevant</td><td>nicht relevant</td></tr>
+              <tr><td>Quellenstatus</td><td>Mailangebot Marmor Brucker vom 09.03.2026; neuer Preis nur per Anfrage</td><td>Mailangebot Marmor Brucker vom 09.03.2026; neuer Preis nur per Anfrage</td><td>Mailangebot Marmor Brucker vom 09.03.2026; neuer Preis nur per Anfrage</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head">
+        <h2>Preis- und Quellenübersicht</h2>
+        <p>Kompakter Gesamtüberblick</p>
+      </div>
+      <div class="table-shell">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Kategorie</th>
+                <th>Modell</th>
+                <th>Angebot</th>
+                <th>Aktueller Preis</th>
+                <th>Preisquelle</th>
+                <th>Datenstand</th>
+                <th>Preisstatus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Backofen</td><td>HB978GNM1</td><td>1.719,89 &euro;</td><td>1.929,00 &euro;</td><td><a href="https://studioline.elektrokoeck.com/at/HB978GNM1/196197" target="_blank" rel="noopener noreferrer">Elektro Köck Österreich</a></td><td>23.10.2026</td><td>direkt bestätigt · sofort verfügbar · Gratisversand</td></tr>
+              <tr><td>Backofen</td><td>HB774G1B1</td><td>966,24 &euro;</td><td>717,00 &euro;</td><td>Geizhals Österreich</td><td>28.09.2026</td><td class="good">günstigster Backofen</td></tr>
+              <tr><td>Backofen</td><td>HB279GBB3</td><td>923,34 &euro;</td><td>970,00 &euro;</td><td><a href="https://www.elektrokoeck.com/at/HB279GBB3/182772" target="_blank" rel="noopener noreferrer">Elektro Köck Österreich</a></td><td>23.10.2026</td><td>direkt bestätigt · sofort verfügbar</td></tr>
+              <tr><td>Backofen</td><td>HB772G1B1</td><td>nicht im Küchenangebot</td><td>867,90 &euro;</td><td>Elektro Köck</td><td>28.09.2026</td><td>sofort verfügbar</td></tr>
+              <tr><td>Backofen</td><td>HB271ABB3</td><td>nicht im Küchenangebot</td><td>677,90 &euro;</td><td>Geizhals Österreich</td><td>28.09.2026</td><td class="good">günstigster Live-Treffer</td></tr>
+              <tr><td>Kochfeldabzug</td><td>Siemens EX80BNX68E</td><td>nicht im Küchenangebot</td><td>2.189,00 &euro;</td><td>Elektro Köck</td><td>28.09.2026</td><td class="good">sofort verfügbar · Empfehlung</td></tr>
+              <tr><td>Kochfeldabzug</td><td>Siemens EX80BHL26E</td><td>nicht im Küchenangebot</td><td>1.994,00 &euro;</td><td><a href="https://www.wohnfitz.shop/Siemens-studioLine-Mattes-Induktionskochfeld-mit-integriertem-Dunstabzug-iQ700-80-cm-flaechenbuendig-EX80BHL26E/EX80BHL26E" target="_blank" rel="noopener noreferrer">wohnfitz.shop · Direktbestätigung</a></td><td>26.10.2026</td><td class="good">+ 59,00 &euro; Pflichtversand nach Österreich; Gesamt 2.053,00 &euro; · Lieferzeit 5 Werktage</td></tr>
+              <tr><td>Kochfeldabzug</td><td>Bosch PXX82BD56E</td><td>nicht im Küchenangebot</td><td>2.249,00 &euro;</td><td>modern life Bosch-Shop</td><td>28.09.2026</td><td class="good">bestellbar · günstigste matte Kochfeld-Alternative</td></tr>
+              <tr><td>Kochfeldabzug</td><td>NEFF V68PHL4B0</td><td>nicht im Küchenangebot</td><td>2.499,00 &euro;</td><td>Elektro Köck</td><td>28.09.2026</td><td>sofort verfügbar · matte flächenbündige Alternative</td></tr>
+              <tr><td>Kochfeldabzug</td><td>AEG XCD6847CS SaphirMatt 80</td><td>nicht im Küchenangebot</td><td class="good">1.849,00 &euro;</td><td>Geizhals Österreich · Elektro Outlet Steyr</td><td>01.10.2026</td><td class="good">lagernd · Gratisversand</td></tr>
+              <tr><td>Geschirrspüler</td><td>SN87TX00CE</td><td>1.243,97 &euro;</td><td>916,64 &euro;</td><td><a href="https://geizhals.at/siemens-iq700-sn87tx00ce-a3045528.html" target="_blank" rel="noopener noreferrer">Geizhals Österreich</a></td><td>23.10.2026</td><td>aktueller Einstiegspreis; Händler-Endpreis vor Kauf prüfen</td></tr>
+              <tr><td>Kühlschrank</td><td>IRBbi 5150</td><td>1.800,99 &euro;</td><td>2.188,00 &euro;</td><td>Geizhals Österreich</td><td>28.09.2026</td><td>Live-Preis</td></tr>
+              <tr><td>Kühlschrank</td><td>Bosch KIF81HDD0</td><td>nicht im Küchenangebot</td><td>1.720,00 &euro;</td><td>Alles Küche Österreich</td><td>28.09.2026</td><td>AT-Händlerpreis</td></tr>
+              <tr><td>Kühlschrank</td><td>Bosch KIF81PFE0</td><td>nicht im Küchenangebot</td><td>804,00 &euro;</td><td>Elektro Köck</td><td>28.09.2026</td><td class="good">günstigster Kühlschrank · sofort verfügbar</td></tr>
+              <tr><td>Kühlschrank</td><td>Siemens KI81FSDE0</td><td>nicht im Küchenangebot</td><td>1.550,00 &euro;</td><td>Elektro Köck</td><td>28.09.2026</td><td>sofort verfügbar</td></tr>
+              <tr><td>Kühlschrank</td><td>Siemens KI81FPDE0</td><td>nicht im Küchenangebot</td><td>1.399,00 &euro;</td><td>EP.at</td><td>28.09.2026</td><td class="good">bestellbar</td></tr>
+              <tr><td>Spüle</td><td>BLANCO ETAGON 500-U / 527754</td><td>330,00 &euro;</td><td>308,00 &euro;</td><td>Küchen &amp; Wohnstudio Kutzer</td><td>28.09.2026</td><td>AT-Händlerpreis</td></tr>
+              <tr><td>Ablaufset</td><td>BLANCO InFino / 207422</td><td>93,28 &euro;</td><td>130,00 &euro;</td><td><a href="https://www.baedermaxx.at/kueche/spueltischablaeufe/43691/blanco-ab-und-ueberlaufset-infino-ohne-zugknopf-fuer-einzelbecken-schwarz" target="_blank" rel="noopener noreferrer">Bädermaxx Österreich</a></td><td>23.10.2026</td><td class="good">direkt bestätigter österreichischer Händlerpreis</td></tr>
+              <tr><td>Armatur</td><td>BLANCO CULINA-S II / 527464</td><td>510,40 &euro;</td><td>481,60 &euro;</td><td>Idealo Österreich</td><td>28.09.2026</td><td>Live-Preis</td></tr>
+              <tr><td>Steinplatte</td><td>Black Tectonic</td><td>5.878,80 &euro;</td><td>nur auf Anfrage</td><td>Marmor Brucker</td><td>09.03.2026</td><td>individuelles Projektangebot</td></tr>
+              <tr><td>Steinplatte</td><td>Nero Assoluto</td><td>5.364,00 &euro;</td><td>nur auf Anfrage</td><td>Marmor Brucker</td><td>09.03.2026</td><td>individuelles Projektangebot</td></tr>
+              <tr><td>Steinplatte</td><td>Black Tea</td><td>4.510,80 &euro;</td><td>nur auf Anfrage</td><td>Marmor Brucker</td><td>09.03.2026</td><td>individuelles Projektangebot</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <p class="freshness-note"><strong>Wichtig:</strong> Preise sind Momentaufnahmen. Vor dem Kauf bitte Verfügbarkeit, Lieferumfang und Endpreis beim Händler prüfen.</p>
+    <p class="note">
+      Hinweise zur Genauigkeit: Am 26.10.2026 wurde beim EX80BHL26E direkt ein Wohnfitz-Preis von 1.994,00 &euro; festgestellt (zuvor 1.425,00 &euro; am 23.10.); Pflichtversand nach Österreich 59,00 &euro;, Gesamt 2.053,00 &euro;, Lieferzeit 5 Werktage. Für die übrigen Positionen behalten die bestehenden Zeilen ihre jeweiligen früheren Datenstände; ihre heutige Verfügbarkeit wurde nicht vollständig neu geprüft. Versandkosten und Lagerstatus können sich ändern.
+      Die Steinplatten sind individuelle Projektangebote vom 09.03.2026 und lassen sich ohne neue Anfrage nicht als laufender Marktpreis aktualisieren.
+    </p>
+  </main>
+  <script>
+    const formatEuro = (value) =>
+      new Intl.NumberFormat("de-AT", { style: "currency", currency: "EUR" }).format(value);
+
+    const selectionKey = "kuechenvergleich-auswahl";
+    const savedSelection = (() => {
+      try { return JSON.parse(localStorage.getItem(selectionKey) || "{}"); }
+      catch { return {}; }
+    })();
+
+    const costTotalEl = document.getElementById("cost-total");
+    const selectedCountEl = document.getElementById("selected-count");
+
+    const createSearchActions = (query) => {
+      const wrap = document.createElement("div");
+      wrap.className = "search-action-list";
+
+      const links = [
+        {
+          label: "Geizhals suchen",
+          href: `https://geizhals.at/?fs=${encodeURIComponent(query)}`
+        },
+        {
+          label: "Idealo suchen",
+          href: `https://www.idealo.at/preisvergleich/MainSearchProductCategory.html?q=${encodeURIComponent(query)}`
+        },
+        {
+          label: "Google suchen",
+          href: `https://www.google.com/search?q=${encodeURIComponent(query)}`
+        }
+      ];
+
+      links.forEach((link) => {
+        const a = document.createElement("a");
+        a.className = "selector-link";
+        a.href = link.href;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = link.label;
+        wrap.appendChild(a);
+      });
+
+      return wrap;
+    };
+
+    document.querySelectorAll(".table-shell table").forEach((table) => {
+      const sectionHeading = table.closest(".group")?.querySelector("h2")?.textContent.trim();
+      if (sectionHeading && !table.hasAttribute("aria-label")) table.setAttribute("aria-label", sectionHeading);
+
+      const headerCells = Array.from(table.querySelectorAll("thead th"));
+      if (headerCells.length < 2) return;
+
+      const firstHeader = headerCells[0].textContent.trim();
+      const body = table.tBodies[0];
+      if (!body) return;
+
+      if (firstHeader === "Feature") {
+        const models = headerCells.slice(1).map((cell) => cell.textContent.trim()).filter(Boolean);
+        if (!models.length) return;
+
+        const row = document.createElement("tr");
+        const labelCell = document.createElement("td");
+        labelCell.textContent = "Suche";
+        row.appendChild(labelCell);
+
+        models.forEach((model) => {
+          const cell = document.createElement("td");
+          cell.className = "search-cell";
+          cell.appendChild(createSearchActions(model));
+          row.appendChild(cell);
+        });
+
+        body.appendChild(row);
+        return;
+      }
+
+      if (firstHeader === "Kategorie" && headerCells[1] && headerCells[1].textContent.trim() === "Modell") {
+        const headerRow = table.querySelector("thead tr");
+        const searchHeader = document.createElement("th");
+        searchHeader.textContent = "Suche";
+        headerRow.appendChild(searchHeader);
+
+        body.querySelectorAll("tr").forEach((row) => {
+          const cells = row.querySelectorAll("td");
+          if (cells.length < 2) return;
+
+          const cell = document.createElement("td");
+          cell.className = "search-cell";
+          cell.appendChild(createSearchActions(cells[1].textContent.trim()));
+          row.appendChild(cell);
+        });
+      }
+    });
+
+    document.querySelectorAll(".group[data-select-category] table:not([data-no-selection])").forEach((table) => {
+      const category = table.closest(".group").dataset.selectCategory;
+      const headerCells = Array.from(table.querySelectorAll("thead th"));
+      const body = table.tBodies[0];
+      if (headerCells.length < 2 || !body) return;
+
+      const row = document.createElement("tr");
+      row.className = "selection-row";
+
+      const labelCell = document.createElement("td");
+      labelCell.textContent = "Auswahl";
+      row.appendChild(labelCell);
+
+      headerCells.slice(1).forEach((header) => {
+        const model = header.textContent.trim();
+        const price = header.dataset.price || "";
+
+        const cell = document.createElement("td");
+        cell.className = "pick-cell";
+
+        const label = document.createElement("label");
+        label.className = "pick";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = `pick-${category}`;
+        radio.value = model;
+        radio.dataset.category = category;
+        radio.dataset.price = price;
+        radio.setAttribute("aria-label", `${category}: ${model}`);
+        if (!price) {
+          radio.disabled = true;
+        } else if (savedSelection[category] === model) {
+          radio.checked = true;
+        }
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(price ? "wählen" : "Preis offen"));
+        cell.appendChild(label);
+        row.appendChild(cell);
+      });
+
+      body.insertBefore(row, body.firstChild);
+    });
+
+    document.querySelectorAll(".group[data-select-variants]").forEach((section) => {
+      const category = section.dataset.selectVariants;
+      section.querySelectorAll("table[data-option-price]").forEach((table) => {
+        const header = table.querySelector("thead th");
+        if (!header || header.querySelector('input[type="radio"]')) return;
+
+        const name = table.dataset.optionName || header.textContent.trim();
+        const price = table.dataset.optionPrice || "";
+
+        const label = document.createElement("label");
+        label.className = "pick";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = `pick-${category}`;
+        radio.value = name;
+        radio.dataset.category = category;
+        radio.dataset.price = price;
+        radio.setAttribute("aria-label", `${category}: ${name}`);
+        if (!price) {
+          radio.disabled = true;
+        } else if (savedSelection[category] === name) {
+          radio.checked = true;
+        }
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(price ? "wählen" : "Preis offen"));
+        header.appendChild(document.createElement("br"));
+        header.appendChild(label);
+      });
+
+      section.querySelectorAll("table[data-option-rows] tbody tr[data-option-price]").forEach((row) => {
+        const name = row.dataset.optionName || "Option";
+        const price = row.dataset.optionPrice || "";
+        const cell = row.querySelector("td.pick-cell") || row.querySelector("td");
+        if (!cell || cell.querySelector('input[type="radio"]')) return;
+
+        const label = document.createElement("label");
+        label.className = "pick";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = `pick-${category}`;
+        radio.value = name;
+        radio.dataset.category = category;
+        radio.dataset.price = price;
+        radio.setAttribute("aria-label", `${category}: ${name}`);
+        if (!price) {
+          radio.disabled = true;
+        } else if (savedSelection[category] === name) {
+          radio.checked = true;
+        }
+        if (section.hasAttribute("data-no-default")) radio.dataset.noDefault = "1";
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(price ? "wählen" : "Preis offen"));
+        cell.appendChild(label);
+      });
+    });
+
+    const ensureDefaultSelection = () => {
+      const byCategory = new Map();
+      document.querySelectorAll('input[type="radio"][data-category]').forEach((input) => {
+        const list = byCategory.get(input.dataset.category) || [];
+        list.push(input);
+        byCategory.set(input.dataset.category, list);
+      });
+      byCategory.forEach((inputs) => {
+        if (inputs.some((input) => input.checked)) return;
+        const firstAvailable = inputs.find((input) => !input.disabled && !input.dataset.noDefault);
+        if (firstAvailable) firstAvailable.checked = true;
+      });
+    };
+
+    const updateTotal = () => {
+      const selected = Array.from(document.querySelectorAll('input[type="radio"][data-category]:checked'));
+      const total = selected.reduce((sum, input) => sum + Number(input.dataset.price || 0), 0);
+
+      document.querySelectorAll("td.pick-cell").forEach((cell) => {
+        cell.classList.toggle("is-selected", Boolean(cell.querySelector("input:checked")));
+      });
+
+      costTotalEl.textContent = formatEuro(total);
+      selectedCountEl.textContent = `${selected.length} ${selected.length === 1 ? "Position" : "Positionen"} gewählt`;
+
+      const persisted = Object.fromEntries(selected.map((input) => [input.dataset.category, input.value]));
+      try { localStorage.setItem(selectionKey, JSON.stringify(persisted)); } catch { /* ignore */ }
+    };
+
+    ensureDefaultSelection();
+    document.addEventListener("change", (event) => {
+      if (event.target.matches('input[type="radio"][data-category]')) updateTotal();
+    });
+    updateTotal();
+
+    document.querySelectorAll("img.product-shot").forEach((image) => {
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.addEventListener("error", () => {
+        const fallback = document.createElement("div");
+        fallback.className = "product-shot-fallback";
+        fallback.textContent = "Produktbild derzeit nicht verfügbar";
+        image.replaceWith(fallback);
+      }, { once: true });
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3c22bb7bc15b4b5',t:'MTc4OTU4NTgyMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
