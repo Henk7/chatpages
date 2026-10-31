@@ -2,8 +2,8 @@
   "currency": "EUR",
   "capacity": "2 TB",
   "market": "Austria",
-  "checkedAt": "2026-10-30T01:19:50+01:00",
-  "checkedLabel": "Freitag, 30. Oktober 2026, 01:19 Uhr (Europe/Vienna)",
+  "checkedAt": "2026-10-31T01:03:33+01:00",
+  "checkedLabel": "Samstag, 31. Oktober 2026, 01:03 Uhr (Europe/Vienna)",
   "source": "Geizhals Österreich",
   "sourceUrl": "https://geizhals.at/?bpmax=300&cat=hdssd&pagesize=30&promode=false&sort=p&xf=8250_2TB+(1.92-2TB)",
   "priceBasisLabel": "VERALTET: Geizhals Österreich lieferte am 28.10.2026 nur unvollständige bzw. gecachte Treffer; für keinen neuen Modellpreis ließ sich heute ein passender Händler mit aktueller Verfügbarkeit und Österreich-Lieferung direkt bestätigen. Die letzten brauchbaren 12 Geizhals-„ab“-Einstiegspreise vom 25.10.2026 bleiben unverändert; Händlerbestand, Versand und Endpreise sind nicht bestätigt.",
@@ -181,5 +181,5 @@
   "confirmedOfferCount": 0,
   "shortfall": 20,
   "researchStatus": "stale",
-  "staleNote": "Prüfzeitpunkt 30.10.2026, 01:19 Uhr (Europe/Vienna): Heute ließ sich kein neuer 2-TB-Händlerpreis mit direkter Bestätigung von Modell, Verfügbarkeit und Lieferung nach Österreich belegen. Die 12 gespeicherten Geizhals-„ab“-Einstiegspreise vom 25.10.2026 bleiben als letzter brauchbarer, veralteter Snapshot mit ursprünglichem Prüftag erhalten; sie sind heute nicht bestätigt. Aktuell bestätigte Angebote: 0 von 20; offene Plätze: 20."
+  "staleNote": "Prüfzeitpunkt 31.10.2026, 01:03 Uhr (Europe/Vienna): Der österreichische Geizhals-Kategorievergleich und mehrere 2-TB-Produktseiten wurden geprüft; die angezeigten „ab“-Einstiegspreise belegen jedoch weder aktuelle Händlerbestände noch Produktpreis, Pflichtversand und Lieferung beim einzelnen Shop. Eine heutige direkte Top-20-Liste konnte deshalb nicht belastbar bestätigt werden. Die 12 gespeicherten Geizhals-Einstiegspreise vom 25.10.2026 bleiben unverändert als veralteter Snapshot; bestätigte aktuelle Händlerangebote 0/20, 20 Plätze offen. Kein neuer Tageshistorieneintrag wurde aus unbestätigten Preisen erzeugt."
 }
