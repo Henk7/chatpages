@@ -1,11 +1,11 @@
 {
-  "checkedDate": "30.10.2026",
-  "checkedAt": "2026-10-30T01:19:50+01:00",
+  "checkedDate": "31.10.2026",
+  "checkedAt": "2026-10-31T01:03:33+01:00",
   "checked": false,
   "requiredCount": 10,
   "confirmedCount": 0,
   "shortfall": 10,
-  "statusNote": "Separater 7-Sitzer-Check 30.10.2026: 0 von 10 eigenständig recherchierten österreichischen Angeboten mit direkt bestätigten sieben Sitzen, mindestens drei ISOFIX-Plätzen und aktuellem Bar-Endpreis. 10 Plätze sind offen. Die 10 früheren Einträge bleiben als nicht aktuelle Referenzen erhalten und erscheinen nicht als heutige Angebote.",
+  "statusNote": "Separater 7-Sitzer-Prüfstand 31.10.2026, 01:03 Uhr (Europe/Vienna): 0 von 10 eigenständig recherchierten österreichischen Angeboten mit direkt belegten sieben Sitzen, mindestens drei ISOFIX-Plätzen und aktuellem Bar-Endpreis. 10 Plätze bleiben offen. Die separate Suche über österreichische Angebote ergab keine konkreten Inserate, bei denen alle Muss-Kriterien gleichzeitig direkt nachweisbar waren; es wurde nichts aus der Hauptliste abgeleitet. Frühere Einträge bleiben nur als datierte staleReferences erhalten.",
   "offers": [],
   "staleReferences": [
     {
