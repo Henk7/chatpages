@@ -1,19 +1,23 @@
 {
-  "checkedDate": "30.10.2026",
-  "checkedAt": "2026-10-30T01:19:50+01:00",
+  "checkedDate": "31.10.2026",
+  "checkedAt": "2026-10-31T01:03:33+01:00",
   "checked": false,
   "requiredCount": 20,
   "confirmedCount": 0,
   "shortfall": 20,
-  "statusNote": "Prüfstand 30.10.2026: 0 von 20 Hauptangeboten konnten heute mit allen Pflichtkriterien und aktuellem Bar-Endpreis direkt frisch bestätigt werden; 20 Plätze sind offen. Die 17 bisherigen Einträge bleiben nur als ältere, nicht aktuelle Referenzen erhalten und werden nicht als Angebote angezeigt. In einem gezielten österreichischen Marktplatzcheck waren bei zwei neuen Leads Barpreis und/oder drei ISOFIX-Plätze nicht vollständig belegt.",
+  "statusNote": "Prüfstand 31.10.2026, 01:03 Uhr (Europe/Vienna): 0 von 20 Hauptangeboten frisch direkt mit allen Muss-Kriterien bestätigt; 20 Plätze bleiben offen. Die aktualisierten österreichischen Angebotslisten von AutoScout24 und willhaben wurden geprüft, aber keine konkrete Anzeige belegte zugleich österreichischen Standort, zulässiges Alter/Kilometerlimit, aktuellen Bar-Endpreis ohne Finanzierungsbindung sowie mindestens drei ISOFIX-Plätze im gesamten Fahrzeug. Modell-/Ausstattungsseiten und Suchfilter sind keine Angebots- oder ISOFIX-Bestätigung. Alte Einträge bleiben ausschließlich als datierte staleReferences erhalten und zählen nicht als aktuelle Angebote.",
   "unqualifiedLeads": [
     {
       "url": "https://www.toyota.at/neuwagen/proace-city-verso",
-      "note": "Offizielle Modell-/Sitzkonfiguration gefunden, aber kein konkretes österreichisches Inserat mit Barpreis und mindestens drei direkt bestätigten ISOFIX-Plätzen."
+      "note": "Offizielle Modell-/Sitzkonfiguration, aber kein konkretes österreichisches Inserat mit aktuellem Bar-Endpreis, zulässiger EZ/km-Angabe und mindestens drei direkt bestätigten ISOFIX-Plätzen."
     },
     {
       "url": "https://www.willhaben.at/iad/gebrauchtwagen/auto/gebrauchtwagenboerse",
-      "note": "Kandidat bis 1 Jahr/10.000 km mit sieben Sitzen; aktueller Barpreis und mindestens drei ISOFIX-Plätze nicht direkt belegt."
+      "note": "Österreichische Inseratsuche geprüft; heute kein einzelnes Inserat mit sämtlichen Muss-Kriterien direkt belegbar."
+    },
+    {
+      "url": "https://www.autoscout24.at/lst/toyota/proace/ve_city-verso",
+      "note": "Österreichische Toyota Proace City Verso Ergebnisliste geprüft; einzelne Treffer auf der Ergebnisliste belegten nicht gleichzeitig Barpreis, EZ/km und ≥3 ISOFIX. Kein Treffer als aktuelles Angebot übernommen."
     }
   ],
   "offers": [],
