@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b131c">
+<meta name="description" content="Eisl TFT fantasy strategy game button visual style concept.">
+<title>Eisl TFT · Button Style Study</title>
+<style>
+:root{
+  color-scheme:dark;
+  --night:#08111a;--panel:#101b25;--panel2:#14212c;--iron:#26333b;
+  --gold:#d3a951;--gold-hi:#f0cf7b;--bronze:#825e2f;--ivory:#eee3c8;
+  --muted:#9a9a87;--line:rgba(211,169,81,.42);--shadow:0 16px 34px #0008;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100vh;color:var(--ivory);
+  background:
+    radial-gradient(ellipse at 50% -20%,#24384a 0,transparent 52%),
+    radial-gradient(ellipse at 100% 70%,#172b32 0,transparent 48%),
+    linear-gradient(145deg,#080f17,#101922 55%,#080e14);
+  font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;
+  background-image:repeating-linear-gradient(135deg,transparent 0 5px,#c9aa6812 5px 6px);
+  mask-image:linear-gradient(180deg,#000,transparent 85%);
+}
+button{font:inherit}
+.shell{width:min(1180px,calc(100% - 38px));margin:auto;position:relative}
+.topline{height:5px;background:linear-gradient(90deg,transparent,var(--gold),#f2dc9c,var(--gold),transparent);opacity:.9}
+header{padding:30px 0 25px;border-bottom:1px solid #d3a95135}
+.mast{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:13px}
+.crest{
+  width:54px;height:60px;display:grid;place-items:center;color:var(--gold-hi);
+  border:1px solid var(--gold);background:linear-gradient(145deg,#1d2b35,#0b141c);
+  clip-path:polygon(0 0,100% 0,100% 72%,50% 100%,0 72%);
+  filter:drop-shadow(0 4px 8px #0009);
+}
+.crest svg{width:30px;height:34px}
+.brandname{font:600 1.12rem Georgia,serif;letter-spacing:.14em;color:#f3e4bd}
+.brandline{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.back{color:#c8b27f;text-decoration:none;font-size:.83rem;border-bottom:1px solid #a786493d;padding:7px 0}
+.back:hover{color:#f4d888}
+.heading{padding:38px 0 24px}
+.eyebrow{color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{font:500 clamp(2.4rem,6vw,4.5rem)/1.02 Georgia,"Times New Roman",serif;letter-spacing:-.035em;margin:8px 0 12px;color:#f4e9d1}
+.lede{max-width:690px;color:#b7b8ad;font-size:1rem;margin:0}
+.board{
+  position:relative;padding:24px;border:1px solid var(--line);
+  background:linear-gradient(135deg,#15222cdd,#0c151ddf);
+  box-shadow:var(--shadow),inset 0 0 0 4px #080e1488;
+}
+.board:before,.board:after{content:"";position:absolute;width:17px;height:17px;border-color:var(--gold);opacity:.9}
+.board:before{top:7px;left:7px;border-top:1px solid;border-left:1px solid}
+.board:after{right:7px;bottom:7px;border-right:1px solid;border-bottom:1px solid}
+.intro-row{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:21px}
+h2{font:500 1.65rem/1.15 Georgia,serif;color:#ead8ad;margin:5px 0 0}
+.section-note{max-width:400px;color:#92988f;font-size:.82rem;margin:0;text-align:right}
+.hero-buttons{display:flex;align-items:center;gap:13px;flex-wrap:wrap;padding:20px 0 5px}
+.caption{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:#8e978f;font-weight:800;margin:0 0 7px}
+.specimen{min-width:210px}
+.btn{
+  --face1:#1b2a35;--face2:#0d1720;--edge:#98773d;--label:#eee3c8;
+  position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:54px;padding:0 22px;color:var(--label);font:600 1rem/1 Georgia,"Times New Roman",serif;
+  letter-spacing:.035em;text-decoration:none;white-space:nowrap;cursor:pointer;
+  border:1px solid var(--edge);border-radius:5px;
+  background:linear-gradient(180deg,var(--face1),var(--face2));
+  box-shadow:inset 0 1px 0 #fff2,inset 0 -2px 0 #0007,0 6px 13px #0007;
+  transition:transform .14s ease,filter .14s ease,border-color .14s ease,box-shadow .14s ease,background .14s ease;
+}
+.btn:before{
+  content:"";position:absolute;inset:4px;border:1px solid #d0aa5940;border-radius:2px;
+  pointer-events:none;z-index:-1;
+}
+.btn:after{
+  content:"";position:absolute;left:16px;right:16px;top:2px;height:1px;
+  background:linear-gradient(90deg,transparent,#f2dfaa8c,transparent);pointer-events:none;
+}
+.btn svg{width:19px;height:19px;flex:none;color:var(--gold-hi);filter:drop-shadow(0 1px 1px #000)}
+.btn:hover:not(:disabled){
+  transform:translateY(-2px);border-color:var(--gold-hi);filter:brightness(1.16);
+  box-shadow:inset 0 1px 0 #fff3,inset 0 -2px 0 #0008,0 9px 18px #0009,0 0 13px #d3a95128;
+}
+.btn:active:not(:disabled),.btn.is-pressed{
+  transform:translateY(1px);filter:brightness(.92);
+  box-shadow:inset 0 2px 7px #0009,inset 0 0 0 1px #0008,0 2px 4px #0008;
+}
+.btn:focus-visible,.btn.is-focus{
+  outline:2px solid #f1ce72;outline-offset:4px;
+  box-shadow:0 0 0 6px #d3a95125,0 6px 13px #0007;
+}
+.btn:disabled,.btn.is-disabled{
+  --label:#84877e;--edge:#4b514e;filter:saturate(.35);opacity:.72;cursor:not-allowed;
+  box-shadow:inset 0 1px 0 #fff1,0 2px 5px #0006;
+}
+.btn--primary{
+  --face1:#906b36;--face2:#49331c;--edge:#e1bd68;--label:#fff0c8;
+  min-height:58px;padding-inline:28px;font-size:1.08rem;
+  box-shadow:inset 0 1px 0 #fff5,inset 0 -2px 0 #26190a,0 7px 17px #0009,0 0 18px #d4a94b22;
+}
+.btn--primary:before{border-color:#f4d98a62}
+.btn--primary svg{color:#ffdfa0}
+.btn--quiet{--edge:#6b715f;--face1:#202a2c;--face2:#11191c;--label:#c8c6b5}
+.btn--danger{--edge:#986346;--face1:#492c29;--face2:#241918;--label:#f1d7c5}
+.btn--selected{
+  --edge:#edc866;--face1:#263340;--face2:#111c25;--label:#fff1ca;
+  box-shadow:inset 0 0 0 1px #d9b25355,inset 0 -3px 0 #0008,0 0 17px #d3a9511c;
+}
+.btn--selected svg{color:#f6d47e}
+.rune{color:#e7c46f;font:700 1rem/1 Georgia,serif}
+.rule{height:1px;margin:25px 0;background:linear-gradient(90deg,transparent,#bd975b77,transparent)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:23px 0 14px}
+.section-head h2{font-size:1.45rem}
+.section-head p{margin:0;color:#92988f;font-size:.81rem;max-width:400px;text-align:right}
+.state-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.state-card{
+  min-height:140px;padding:14px 15px;background:linear-gradient(150deg,#15212a,#0b131a);
+  border:1px solid #b9944c35;box-shadow:inset 0 1px 0 #ffffff08;
+}
+.state-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;color:#d8c79f;font-size:.78rem;font-weight:750}
+.state-title span:last-child{color:#7c857e;font: .67rem/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.state-card .btn{min-height:46px;padding-inline:16px;font-size:.88rem}
+.state-card .btn:after{left:10px;right:10px}
+.is-hovered{transform:translateY(-2px);border-color:var(--gold-hi);filter:brightness(1.16);box-shadow:inset 0 1px 0 #fff3,0 9px 18px #0009,0 0 13px #d3a95128}
+.states-help{font-size:.77rem;color:#8f958a;margin:12px 0 0}
+.nav-sample{display:flex;gap:8px;flex-wrap:wrap}
+.nav-sample .btn{min-width:130px;min-height:60px}
+.nav-sample .btn svg{width:18px;height:18px}
+.segment-wrap{display:flex;gap:0;width:max-content;max-width:100%;border:1px solid #98773d;border-radius:5px;overflow:hidden;box-shadow:0 6px 13px #0007}
+.segment-wrap .btn{border:0;border-radius:0;min-width:72px;min-height:46px;padding:0 14px;box-shadow:none}
+.segment-wrap .btn:before{inset:3px;border-color:#d0aa5925}
+.segment-wrap .btn+.btn{border-left:1px solid #a9874c55}
+.segment-wrap .btn--selected{box-shadow:inset 0 0 0 1px #d9b25370,inset 0 -3px 0 #0008}
+.bottom-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+.bottom-card{padding:17px;background:#0c151d;border:1px solid #bd975b3b}
+.bottom-card h3{font:500 1.08rem Georgia,serif;color:#e7d5ad;margin:0 0 14px}
+.utility-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.utility-row .btn{min-height:46px;padding:0 15px;font-size:.86rem}
+.utility-row .btn svg{width:17px;height:17px}
+.hint{margin:13px 0 0;color:#858d84;font-size:.75rem}
+footer{padding:24px 0 36px;color:#79827b;font-size:.75rem;text-align:center}
+footer span{color:#c5a45d}
+@media(max-width:760px){
+  .shell{width:min(100% - 24px,1180px)}
+  header{padding-top:20px}.heading{padding:30px 0 19px}
+  .board{padding:18px 14px}.intro-row{align-items:flex-start;flex-direction:column}
+  .section-note,.section-head p{text-align:left}
+  .state-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bottom-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .mast{align-items:flex-start}.brandline{font-size:.59rem}
+  .state-grid{grid-template-columns:1fr}
+  .specimen{min-width:0;width:100%}.hero-buttons{align-items:stretch;flex-direction:column}
+  .specimen .btn{width:100%}.section-head{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="shell mast">
+    <div class="brand">
+      <div class="crest" aria-hidden="true">
+        <svg viewBox="0 0 32 38" fill="none"><path d="M4 4h24v18L16 34 4 22V4Z" stroke="currentColor" stroke-width="1.5"/><path d="M16 9l2.1 5.1 5.5.4-4.2 3.5 1.4 5.3-4.8-2.9-4.8 2.9 1.4-5.3-4.2-3.5 5.5-.4L16 9Z" fill="currentColor"/></svg>
+      </div>
+      <div><div class="brandname">EISL TFT</div><div class="brandline">Kingdom interface · Button style study</div></div>
+    </div>
+    <a class="back" href="/chatpages/sites/">← All game concepts</a>
+  </div>
+</header>
+
+<main class="shell">
+  <section class="heading">
+    <div class="eyebrow">Metal · enamel · antique gold</div>
+    <h1>Buttons with a little<br>weight to them.</h1>
+    <p class="lede">A visual study for Eisl TFT: dark iron frames, warm engraved trim, quiet fantasy ornament, and tactile states. Hover, press, or tab through the samples.</p>
+  </section>
+
+  <section class="board" aria-labelledby="command-title">
+    <div class="intro-row">
+      <div><div class="eyebrow">01 / Command controls</div><h2 id="command-title">The main action set</h2></div>
+      <p class="section-note">A strong bronze face is reserved for the lead action. Supporting actions stay dark, edged in worn gold.</p>
+    </div>
+    <div class="hero-buttons">
+      <div class="specimen">
+        <p class="caption">Primary · warm bronze</p>
+        <button class="btn btn--primary" type="button">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 20v-6h6v6M3 9l9-6 9 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Enter camp
+        </button>
+      </div>
+      <div class="specimen">
+        <p class="caption">Standard · midnight enamel</p>
+        <button class="btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 18c5-1 7-4 9-9 1.5-3.5 4.5-4 8-4M3 18l4 1m-4-1 1-4M20 5l-1 4m1-4-4 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Travel
+        </button>
+      </div>
+      <div class="specimen">
+        <p class="caption">Quiet · iron green</p>
+        <button class="btn btn--quiet" type="button"><span class="rune" aria-hidden="true">✦</span> Inspect</button>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+    <div class="section-head">
+      <div><div class="eyebrow">02 / Surface states</div><h2>Same frame, clear feedback</h2></div>
+      <p>Gold light is a response to the player, not a permanent decoration.</p>
+    </div>
+    <div class="state-grid">
+      <div class="state-card"><div class="state-title"><span>At rest</span><span>Idle</span></div><button class="btn" type="button">Open map</button></div>
+      <div class="state-card"><div class="state-title"><span>Pointer over</span><span>Hover</span></div><button class="btn is-hovered" type="button">Open map</button></div>
+      <div class="state-card"><div class="state-title"><span>Held down</span><span>Pressed</span></div><button class="btn is-pressed" type="button">Open map</button></div>
+      <div class="state-card"><div class="state-title"><span>Persistent choice</span><span>Selected</span></div><button class="btn btn--selected" type="button" aria-pressed="true"><span class="rune" aria-hidden="true">✦</span> Map</button></div>
+      <div class="state-card"><div class="state-title"><span>Keyboard outline</span><span>Focus</span></div><button class="btn is-focus" type="button">Open map</button></div>
+      <div class="state-card"><div class="state-title"><span>Unavailable</span><span>Disabled</span></div><button class="btn" type="button" disabled>Open map</button></div>
+    </div>
+    <p class="states-help">The focus ring sits outside the metal rim. The selected state remains visible after the pointer moves away.</p>
+
+    <div class="rule"></div>
+    <div class="section-head">
+      <div><div class="eyebrow">03 / Navigation</div><h2>Insignia, not plain tabs</h2></div>
+      <p>A compact engraved emblem and an inset gold edge make the active choice feel engaged.</p>
+    </div>
+    <div class="nav-sample" role="group" aria-label="Navigation button appearance examples">
+      <button class="btn btn--selected" type="button" aria-pressed="true">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 11 9-7 9 7v9H3v-9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.6"/></svg>Map
+      </button>
+      <button class="btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M8 20v-6h8v6M2 20h20" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Camp
+      </button>
+      <button class="btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4 3 8l4 3 5-3 5 3 4-3-3-4-6 3-6-3ZM7 11l-2 9h14l-2-9M9 15h6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Warband
+      </button>
+    </div>
+
+    <div class="rule"></div>
+    <div class="bottom-grid">
+      <div class="bottom-card">
+        <h3>Small controls · one connected frame</h3>
+        <div class="segment-wrap" role="group" aria-label="Time button appearance examples">
+          <button class="btn" type="button">1h</button>
+          <button class="btn btn--selected" type="button" aria-pressed="true">6h</button>
+          <button class="btn" type="button">Dawn</button>
+        </div>
+        <p class="hint">Thin inner dividers keep related options together; the active segment carries the gold inset.</p>
+      </div>
+      <div class="bottom-card">
+        <h3>Icon-only · framed like the rest</h3>
+        <div class="utility-row">
+          <button class="btn" type="button" aria-label="Rotate left">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9a8 8 0 1 1-1 5M4 4v5h5M12 8v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="btn" type="button" aria-label="Reset view">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7V3m0 4h4M4.8 7.5A8 8 0 1 1 4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <button class="btn btn--danger" type="button"><span class="rune" aria-hidden="true">✕</span>Abandon</button>
+        </div>
+        <p class="hint">Danger uses a muted oxblood face, with the same shape and lettering as the rest.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="shell">EISL TFT <span>◆</span> Button visual concept · Dark iron, antique gold, restrained ornament</footer>
+</body>
+</html>
