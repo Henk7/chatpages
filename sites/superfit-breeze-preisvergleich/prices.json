@@ -4,8 +4,8 @@
   "size": 23,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-10-31T01:03:33+01:00",
-  "checked_label": "Samstag, 31. Oktober 2026, 01:03 Uhr (Europe/Vienna)",
+  "checked_at": "2026-11-01T01:10:02+01:00",
+  "checked_label": "Sonntag, 1. November 2026, 01:10 Uhr (Europe/Vienna)",
   "price_basis": "Gesamtpreis für ein Paar Superfit BREEZE GTX High aus Modellfamilie 1-000369, EU-Größe 23, in beliebiger Farbe, inklusive Pflichtversand nach Österreich. Andere Modellfamilien und Varianten ohne GORE-TEX zählen nicht. Unklare Versandkosten oder Größenverfügbarkeit werden nicht ins Ranking aufgenommen.",
   "offers": [
     {
@@ -417,9 +417,54 @@
       ],
       "threshold_eur": 40,
       "news_alert": false
+    },
+    {
+      "date": "2026-11-01",
+      "checked_at": "2026-11-01T01:10:02+01:00",
+      "best_total": null,
+      "retailer": "Kein Angebot direkt bestätigt",
+      "confirmed_count": 0,
+      "top10": [],
+      "references": [
+        {
+          "retailer": "Booztlet Österreich",
+          "color": "Grey / Pink",
+          "model_number": "1-000367 (falsche Modellfamilie)",
+          "item_price": null,
+          "shipping": null,
+          "total": null,
+          "url": "https://www.booztlet.com/at/de-at/superfit/breeze_30617992/232792861",
+          "checked_at": "2026-11-01T01:10:02+01:00",
+          "note": "Heute direkt geprüft: Produkt gehört zu 1-000367, nicht zur verlangten 1-000369; ausgeschlossen."
+        },
+        {
+          "retailer": "FluxOnline",
+          "color": "Variante mit GORE-TEX, EU 23",
+          "model_number": "1-000367-8000",
+          "item_price": 79.95,
+          "shipping": null,
+          "total": null,
+          "url": "https://www.fluxonline.com/",
+          "checked_at": "2026-11-01T01:10:02+01:00",
+          "note": "Heute direkt geprüfte Shopansicht: Größe 23 angezeigt, aber Modellfamilie 1-000367; Versand nach Österreich nicht ausreichend belegt; ausgeschlossen."
+        },
+        {
+          "retailer": "Händlerseiten/Preisvergleichsreferenzen",
+          "color": "verschiedene",
+          "model_number": "1-000369",
+          "item_price": null,
+          "shipping": null,
+          "total": null,
+          "url": "https://www.geizhals.at/",
+          "checked_at": "2026-11-01T01:10:02+01:00",
+          "note": "Heutige Direktprüfung konnte für die passenden Treffer weder lieferbare EU-23-Größe noch alle Pflichtversandkosten und Österreich-Lieferung zugleich bestätigen; nicht rankbar."
+        }
+      ],
+      "threshold_eur": 40,
+      "news_alert": false
     }
   ],
   "color_scope": "Alle Farben; Farbcode und EAN dürfen abweichen",
   "reference_ean": "9010159027347",
-  "current_note": "Tagescheck 31.10.2026: Kein aktuell direkt beim Händler bestätigtes und nach Österreich lieferbares Angebot für Superfit BREEZE GTX High, Modellfamilie 1-000369, Größe EU 23. Booztlet zeigte EU 23 als Größenoption, jedoch keinen heutigen Größen-Lagerbeleg; die Händleransicht war nicht tagesaktuell. Müller das Schuhhaus zeigte Preis und Lieferzeit, aber nicht EU-23-Verfügbarkeit und AT-Versand. Geizhals hatte am 31.10. um 01:00 einen 23-EU-Eintrag, die direkte Händlerweiterleitung war gesperrt. Alle drei bleiben nur Referenzen; bestätigte Angebote: 0, Top-10 nicht befüllt. Kein Preisalarm unter € 40."
+  "current_note": "Tagescheck 2026-11-01, 01:10 Uhr (Europe/Vienna): 0 aktuell direkt bestätigte Angebote für das exakte Superfit BREEZE GTX High der Modellfamilie 1-000369 in EU 23 mit bestätigter Lieferung nach Österreich. Direkt geprüfte Shoptreffer waren entweder Modellfamilie 1-000367 oder hatten für 1-000369 keine heute bestätigte EU-23-Verfügbarkeit bzw. Versandkosten/AT-Lieferung. Diese bleiben nur Referenzen; Top-Liste und Chart haben 0 bestätigte Händler. Kein Angebot unter €40, daher kein Superfit-News-Alarm."
 }
