@@ -2,12 +2,12 @@
   "currency": "EUR",
   "capacity": "2 TB",
   "market": "Austria",
-  "checkedAt": "2026-11-01T01:10:02+01:00",
-  "checkedLabel": "Sonntag, 1. November 2026, 01:10 Uhr (Europe/Vienna)",
+  "checkedAt": "2026-11-02T11:16:32+01:00",
+  "checkedLabel": "Montag, 2. November 2026, 11:16 Uhr (Europe/Vienna)",
   "source": "Geizhals Österreich",
   "sourceUrl": "https://geizhals.at/?bpmax=300&cat=hdssd&pagesize=30&promode=false&sort=p&xf=8250_2TB+(1.92-2TB)",
-  "priceBasisLabel": "VERALTET: heutiger Direktcheck am 2026-11-01, 01:10 Uhr (Europe/Vienna) konnte keinen aktuellen Geizhals-AT-Bestpreis mit direkt belegtem Händlerbestand und Österreich-Lieferung bestätigen. Die zuletzt brauchbaren 12 Geizhals-„ab“-Einstiegspreise vom 25.10.2026 bleiben als veraltete Referenz unverändert; Versand, Lagerstand und Händler-Endpreise sind nicht bestätigt.",
-  "snapshotType": "Prüfung am 2026-11-01: Geizhals-AT-Preisvergleich und Direktanbieter erneut geprüft; keine aktuelle vollständige Händlerbestätigung. Letzter nutzbarer 12-Modell-Snapshot vom 25.10.2026 bleibt unverändert und stale.",
+  "priceBasisLabel": "VERALTET: Prüfung Montag, 2. November 2026, 11:16 Uhr (Europe/Vienna) fand keinen aktuellen österreichischen Händlerpreis mit direkt belegtem Bestand und AT-Lieferung. Die letzten brauchbaren 12 Geizhals-„ab“-Einstiegspreise vom 25.10.2026 bleiben unverändert; kein Preis, Lagerstand, Versand oder Händlerangebot ist heute neu bestätigt.",
+  "snapshotType": "Geizhals AT 2-TB-Suche am Montag, 2. November 2026, 11:16 Uhr (Europe/Vienna); Verkäuferseiten/Bestände nicht frisch für Österreich direkt bestätigt. Letzter brauchbarer Snapshot 25.10.2026 bleibt als veraltet gekennzeichnet.",
   "offers": [
     {
       "id": "sandisk-ssd-plus-g26",
@@ -181,5 +181,5 @@
   "confirmedOfferCount": 0,
   "shortfall": 20,
   "researchStatus": "stale",
-  "staleNote": "Geizhals-2-TB-Tagescheck am 2026-11-01, 01:10 Uhr: kein verlässlicher frischer Angebotsdatensatz mit direkt bestätigtem Anbieter, Lieferbarkeit und Österreich-Versand. Die vorhandenen 12 Modelle sind ausschließlich der letzte brauchbare Stand vom 25.10.2026. Es wurden keine neuen Preise erfunden und kein Tages-Historiensatz für den 01.11. angelegt."
+  "staleNote": "Letzte brauchbare Angebotsdaten vom 25.10.2026; Geizhals führt 2-TB-Modelle, aber Händlerendpreise, aktuelle Lieferbarkeit und Versand nach Österreich heute nicht direkt bestätigt. Datenstand veraltet."
 }
