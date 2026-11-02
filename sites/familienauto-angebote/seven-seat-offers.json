@@ -1,11 +1,11 @@
 {
-  "checkedDate": "01.11.2026",
-  "checkedAt": "2026-11-01T01:10:02+01:00",
+  "checkedDate": "02.11.2026",
+  "checkedAt": "2026-11-02T11:16:32+01:00",
   "checked": true,
   "requiredCount": 10,
   "confirmedCount": 3,
   "shortfall": 7,
-  "statusNote": "Separater 7-Sitzer-Prüfstand 01.11.2026, 01:10 Uhr (Europe/Vienna): 3 von 10 eigenständig recherchierten österreichischen Angeboten frisch direkt mit sieben Sitzen, mindestens drei ISOFIX-Plätzen und gelistetem Kaufpreis bestätigt; 7 Plätze bleiben offen. Kandidaten wurden über die aktuelle österreichische Händlerangebotssuche separat geprüft und nicht aus der Hauptliste gefiltert. Weitere Inserate waren zu alt/zu viele Kilometer, hatten keinen direkt belegten Endpreis oder belegten ISOFIX-Anzahl/-Position nicht ausreichend.",
+  "statusNote": "Separater 7-Sitzer-Prüfstand 02.11.2026, 11:16 Uhr (Europe/Vienna): 3 von 10 eigenständig recherchierten österreichischen Angeboten frisch mit sieben Sitzen, mindestens drei ISOFIX-Plätzen und gelistetem Kaufpreis bestätigt; 7 Plätze bleiben offen. Die drei Inserate wurden separat direkt bei österreichischen Händlerseiten geprüft und nicht aus der Hauptliste gefiltert. Für weitere Inserate fehlte heute ein direkt belegter Bar-Endpreis, zulässige EZ/km oder die konkrete Sitz-/ISOFIX-Ausstattung.",
   "offers": [
     {
       "rankLabel": "#1",
@@ -15,7 +15,7 @@
       "basis": "Eigenständig in der 7-Sitzer-Recherche bestätigt; nicht aus dem Hauptangebot gefiltert.",
       "proof": "https://www.citroen.at/unsere-modelle/berlingo.html",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 30 900; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "01.11.2026",
+      "checkedDate": "02.11.2026",
       "checked": true,
       "location": "Elixhausen (Salzburg)",
       "country": "AT",
@@ -39,7 +39,8 @@
         "Rückfahrkamera",
         "Tempomat",
         "Spoticar Premium 12 Monate"
-      ]
+      ],
+      "checkedAt": "2026-11-02T11:16:32+01:00"
     },
     {
       "rankLabel": "#2",
@@ -49,7 +50,7 @@
       "basis": "Eigenständig in der 7-Sitzer-Recherche bestätigt; nicht aus dem Hauptangebot gefiltert.",
       "proof": "https://www.opel.de/content/dam/opel/germany/fahrzeuge/combo-passenger/Combo_Preisliste_23Februar2026-B.pdf",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 34 390; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "01.11.2026",
+      "checkedDate": "02.11.2026",
       "checked": true,
       "location": "Wallern (Oberösterreich)",
       "country": "AT",
@@ -75,7 +76,8 @@
         "Sitzheizung",
         "Totwinkel-Assistent",
         "12 Monate Spoticar Premium"
-      ]
+      ],
+      "checkedAt": "2026-11-02T11:16:32+01:00"
     },
     {
       "rankLabel": "#3",
@@ -85,7 +87,7 @@
       "basis": "Eigenständig in der 7-Sitzer-Recherche bestätigt; nicht aus dem Hauptangebot gefiltert.",
       "proof": "https://www.opel.de/content/dam/opel/germany/fahrzeuge/combo-passenger/Combo_Preisliste_23Februar2026-B.pdf",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 37 490; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "01.11.2026",
+      "checkedDate": "02.11.2026",
       "checked": true,
       "location": "Wallern (Oberösterreich)",
       "country": "AT",
@@ -111,7 +113,8 @@
         "Sitzheizung",
         "Abstandstempomat",
         "12 Monate Spoticar Premium"
-      ]
+      ],
+      "checkedAt": "2026-11-02T11:16:32+01:00"
     }
   ],
   "staleReferences": [
