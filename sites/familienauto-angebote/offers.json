@@ -1,11 +1,11 @@
 {
-  "checkedDate": "02.11.2026",
-  "checkedAt": "2026-11-02T11:16:32+01:00",
+  "checkedDate": "06.11.2026",
+  "checkedAt": "2026-11-06T10:30:35+01:00",
   "checked": true,
   "requiredCount": 20,
   "confirmedCount": 4,
   "shortfall": 16,
-  "statusNote": "Prüfstand 02.11.2026, 11:16 Uhr (Europe/Vienna): 4 von 20 österreichischen Kaufangeboten direkt frisch mit den Muss-Kriterien bestätigt; 16 Plätze bleiben offen. Aktuell belegt sind ein Toyota Proace City Verso L1 Shuttle und drei XL-7-Sitzer von Citroën/Opel. Für weitere Inserate war heute mindestens ein Muss-Kriterium (Bar-/AT-Endpreis, EZ/km, Sitzzahl oder mindestens drei ISOFIX-Plätze) nicht direkt belegbar. Ältere, nicht heute bestätigte Werte stehen nur unter staleReferences und zählen nicht als aktuelle Angebote.",
+  "statusNote": "Hauptliste 06.11.2026, 10:30 Uhr (Europe/Vienna): 4 von 20 Angeboten direkt mit den Muss-Kriterien erneut bestätigt; 16 Plätze bleiben offen. Nur die hier gelisteten aktiven Inserate zählen. Für weitere Kandidaten war im aktuellen Durchgang mindestens ein Pflichtkriterium (österreichischer Kaufpreis, EZ/km, Sitzanzahl oder mindestens drei ISOFIX-Plätze am konkreten Fahrzeug) nicht vollständig direkt belegbar.",
   "unqualifiedLeads": [
     {
       "url": "https://www.toyota.at/neuwagen/proace-city-verso",
@@ -37,7 +37,7 @@
       "basis": "Shuttle: niedrigste Toyota-Proace-City-Verso-Linie in dieser heutigen Stichprobe mit bestätigten Muss-Kriterien.",
       "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 28 690; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "02.11.2026",
+      "checkedDate": "06.11.2026",
       "checked": true,
       "location": "Unterwart (Burgenland)",
       "country": "AT",
@@ -51,7 +51,7 @@
       "android": "Ja",
       "seats": "5",
       "iso": "3× bestätigt · alle drei Plätze der 2. Sitzreihe",
-      "note": "Direktes willhaben-Inserat: €28.690 Verkaufspreis, Neuwagen, 2 km, 5 Sitze; Ausstattungstext nennt ISOFIX an allen Sitzen der 2. Reihe. Zuletzt geändert 29.10.2026. Diesel, 102 PS, Schaltgetriebe. Niedrigste heute passend bestätigte Toyota-Ausstattungslinie in dieser Recherche: Shuttle.",
+      "note": "Direktes willhaben-Inserat: €28.690 Verkaufspreis, Neuwagen, 2 km, 5 Sitze; Ausstattungstext nennt ISOFIX an allen Sitzen der 2. Reihe. Zuletzt geändert 29.10.2026. Diesel, 102 PS, Schaltgetriebe. Niedrigste heute passend bestätigte Toyota-Ausstattungslinie in dieser Recherche: Shuttle. Direktanzeige am 06.11.2026 erneut geöffnet; Preis, Verfügbarkeit und die jeweils aufgeführten Fahrzeugdaten erneut kontrolliert.",
       "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "source": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "features": [
@@ -63,7 +63,7 @@
         "Parksensoren hinten",
         "Schiebetüren beidseits"
       ],
-      "checkedAt": "2026-11-02T11:16:32+01:00",
+      "checkedAt": "2026-11-06T10:30:35+01:00",
       "lowestMatchingTrim": true
     },
     {
@@ -74,7 +74,7 @@
       "basis": "Ausstattungslinie laut Inserat; niedrigste Marktlinie nicht behauptet.",
       "proof": "https://www.citroen.at/unsere-modelle/berlingo.html",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 30 900; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "02.11.2026",
+      "checkedDate": "06.11.2026",
       "checked": true,
       "location": "Elixhausen (Salzburg)",
       "country": "AT",
@@ -88,7 +88,7 @@
       "android": "Ja",
       "seats": "7",
       "iso": "3× bestätigt · drei Einzelsitze in Reihe 2 mit ISOFIX",
-      "note": "Direkte Spoticar-Anzeige: €30.900, 7 Sitze, EZ 07/2026, 3.266 km, Diesel 131 PS. Händler nennt lagerndes Vorführfahrzeug; die Fertigstellung der Anhängerkupplung kostet laut Anzeige ca. €300 extra und ist deshalb nicht im Kaufpreis enthalten.",
+      "note": "Direkte Spoticar-Anzeige: €30.900, 7 Sitze, EZ 07/2026, 3.266 km, Diesel 131 PS. Händler nennt lagerndes Vorführfahrzeug; die Fertigstellung der Anhängerkupplung kostet laut Anzeige ca. €300 extra und ist deshalb nicht im Kaufpreis enthalten. Direktanzeige am 06.11.2026 erneut geöffnet; Preis, Verfügbarkeit und die jeweils aufgeführten Fahrzeugdaten erneut kontrolliert.",
       "url": "https://www.spoticar.at/gebrauchtwagen-kaufen/citroen-berlingo-laenge-xl-bluehdi-130-ss-plus-7-sitzer-salzburg-elixhausen-1200278867",
       "source": "https://www.spoticar.at/gebrauchtwagen-kaufen/citroen-berlingo-laenge-xl-bluehdi-130-ss-plus-7-sitzer-salzburg-elixhausen-1200278867",
       "features": [
@@ -99,7 +99,7 @@
         "Tempomat",
         "Spoticar Premium 12 Monate"
       ],
-      "checkedAt": "2026-11-02T11:16:32+01:00"
+      "checkedAt": "2026-11-06T10:30:35+01:00"
     },
     {
       "rankLabel": "#3",
@@ -109,7 +109,7 @@
       "basis": "Ausstattungslinie laut Inserat; niedrigste Marktlinie nicht behauptet.",
       "proof": "https://www.opel.de/content/dam/opel/germany/fahrzeuge/combo-passenger/Combo_Preisliste_23Februar2026-B.pdf",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 34 390; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "02.11.2026",
+      "checkedDate": "06.11.2026",
       "checked": true,
       "location": "Wallern (Oberösterreich)",
       "country": "AT",
@@ -123,7 +123,7 @@
       "android": "Ja",
       "seats": "7",
       "iso": "3× bestätigt · Reihe 2 links, Mitte, rechts (Combo XL Herstellerausstattung plus Inserats-ISOFIX)",
-      "note": "Direkte Spoticar-Anzeige: €34.390, EZ 05/2026, 1.570 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2.",
+      "note": "Direkte Spoticar-Anzeige: €34.390, EZ 05/2026, 1.570 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2. Direktanzeige am 06.11.2026 erneut geöffnet; Preis, Verfügbarkeit und die jeweils aufgeführten Fahrzeugdaten erneut kontrolliert.",
       "url": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzheizung-wallern-1200268960",
       "source": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzheizung-wallern-1200268960",
       "features": [
@@ -136,7 +136,7 @@
         "Totwinkel-Assistent",
         "12 Monate Spoticar Premium"
       ],
-      "checkedAt": "2026-11-02T11:16:32+01:00"
+      "checkedAt": "2026-11-06T10:30:35+01:00"
     },
     {
       "rankLabel": "#4",
@@ -146,7 +146,7 @@
       "basis": "Ausstattungslinie laut Inserat; niedrigste Marktlinie nicht behauptet.",
       "proof": "https://www.opel.de/content/dam/opel/germany/fahrzeuge/combo-passenger/Combo_Preisliste_23Februar2026-B.pdf",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 37 490; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "02.11.2026",
+      "checkedDate": "06.11.2026",
       "checked": true,
       "location": "Wallern (Oberösterreich)",
       "country": "AT",
@@ -160,7 +160,7 @@
       "android": "Ja",
       "seats": "7",
       "iso": "3× bestätigt · Reihe 2 links, Mitte, rechts (Combo XL Herstellerausstattung plus Inserats-ISOFIX)",
-      "note": "Direkte Spoticar-Anzeige: €37.490, EZ 06/2026, 1.630 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2.",
+      "note": "Direkte Spoticar-Anzeige: €37.490, EZ 06/2026, 1.630 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2. Direktanzeige am 06.11.2026 erneut geöffnet; Preis, Verfügbarkeit und die jeweils aufgeführten Fahrzeugdaten erneut kontrolliert.",
       "url": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzh-acc-wallern-1200274622",
       "source": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzh-acc-wallern-1200274622",
       "features": [
@@ -173,7 +173,7 @@
         "Abstandstempomat",
         "12 Monate Spoticar Premium"
       ],
-      "checkedAt": "2026-11-02T11:16:32+01:00"
+      "checkedAt": "2026-11-06T10:30:35+01:00"
     }
   ],
   "staleReferences": [

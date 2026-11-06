@@ -1,11 +1,11 @@
 {
-  "checkedDate": "02.11.2026",
-  "checkedAt": "2026-11-02T11:16:32+01:00",
+  "checkedDate": "06.11.2026",
+  "checkedAt": "2026-11-06T10:30:35+01:00",
   "checked": true,
   "requiredCount": 10,
   "confirmedCount": 3,
   "shortfall": 7,
-  "statusNote": "Separater 7-Sitzer-Prüfstand 02.11.2026, 11:16 Uhr (Europe/Vienna): 3 von 10 eigenständig recherchierten österreichischen Angeboten frisch mit sieben Sitzen, mindestens drei ISOFIX-Plätzen und gelistetem Kaufpreis bestätigt; 7 Plätze bleiben offen. Die drei Inserate wurden separat direkt bei österreichischen Händlerseiten geprüft und nicht aus der Hauptliste gefiltert. Für weitere Inserate fehlte heute ein direkt belegter Bar-Endpreis, zulässige EZ/km oder die konkrete Sitz-/ISOFIX-Ausstattung.",
+  "statusNote": "Separate 7-Sitzer-Liste 06.11.2026, 10:30 Uhr (Europe/Vienna): 3 von 10 Angeboten direkt mit den Muss-Kriterien erneut bestätigt; 7 Plätze bleiben offen. Nur die hier gelisteten aktiven Inserate zählen. Für weitere Kandidaten war im aktuellen Durchgang mindestens ein Pflichtkriterium (österreichischer Kaufpreis, EZ/km, Sitzanzahl oder mindestens drei ISOFIX-Plätze am konkreten Fahrzeug) nicht vollständig direkt belegbar.",
   "offers": [
     {
       "rankLabel": "#1",
@@ -15,7 +15,7 @@
       "basis": "Eigenständig in der 7-Sitzer-Recherche bestätigt; nicht aus dem Hauptangebot gefiltert.",
       "proof": "https://www.citroen.at/unsere-modelle/berlingo.html",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 30 900; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "02.11.2026",
+      "checkedDate": "06.11.2026",
       "checked": true,
       "location": "Elixhausen (Salzburg)",
       "country": "AT",
@@ -29,7 +29,7 @@
       "android": "Ja",
       "seats": "7",
       "iso": "3× bestätigt · drei Einzelsitze in Reihe 2 mit ISOFIX",
-      "note": "Direkte Spoticar-Anzeige: €30.900, 7 Sitze, EZ 07/2026, 3.266 km, Diesel 131 PS. Händler nennt lagerndes Vorführfahrzeug; die Fertigstellung der Anhängerkupplung kostet laut Anzeige ca. €300 extra und ist deshalb nicht im Kaufpreis enthalten.",
+      "note": "Direkte Spoticar-Anzeige: €30.900, 7 Sitze, EZ 07/2026, 3.266 km, Diesel 131 PS. Händler nennt lagerndes Vorführfahrzeug; die Fertigstellung der Anhängerkupplung kostet laut Anzeige ca. €300 extra und ist deshalb nicht im Kaufpreis enthalten. Direktanzeige am 06.11.2026 erneut geöffnet; Preis, Verfügbarkeit und die jeweils aufgeführten Fahrzeugdaten erneut kontrolliert.",
       "url": "https://www.spoticar.at/gebrauchtwagen-kaufen/citroen-berlingo-laenge-xl-bluehdi-130-ss-plus-7-sitzer-salzburg-elixhausen-1200278867",
       "source": "https://www.spoticar.at/gebrauchtwagen-kaufen/citroen-berlingo-laenge-xl-bluehdi-130-ss-plus-7-sitzer-salzburg-elixhausen-1200278867",
       "features": [
@@ -40,7 +40,7 @@
         "Tempomat",
         "Spoticar Premium 12 Monate"
       ],
-      "checkedAt": "2026-11-02T11:16:32+01:00"
+      "checkedAt": "2026-11-06T10:30:35+01:00"
     },
     {
       "rankLabel": "#2",
@@ -50,7 +50,7 @@
       "basis": "Eigenständig in der 7-Sitzer-Recherche bestätigt; nicht aus dem Hauptangebot gefiltert.",
       "proof": "https://www.opel.de/content/dam/opel/germany/fahrzeuge/combo-passenger/Combo_Preisliste_23Februar2026-B.pdf",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 34 390; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "02.11.2026",
+      "checkedDate": "06.11.2026",
       "checked": true,
       "location": "Wallern (Oberösterreich)",
       "country": "AT",
@@ -64,7 +64,7 @@
       "android": "Ja",
       "seats": "7",
       "iso": "3× bestätigt · Reihe 2 links, Mitte, rechts (Combo XL Herstellerausstattung plus Inserats-ISOFIX)",
-      "note": "Direkte Spoticar-Anzeige: €34.390, EZ 05/2026, 1.570 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2.",
+      "note": "Direkte Spoticar-Anzeige: €34.390, EZ 05/2026, 1.570 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2. Direktanzeige am 06.11.2026 erneut geöffnet; Preis, Verfügbarkeit und die jeweils aufgeführten Fahrzeugdaten erneut kontrolliert.",
       "url": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzheizung-wallern-1200268960",
       "source": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzheizung-wallern-1200268960",
       "features": [
@@ -77,7 +77,7 @@
         "Totwinkel-Assistent",
         "12 Monate Spoticar Premium"
       ],
-      "checkedAt": "2026-11-02T11:16:32+01:00"
+      "checkedAt": "2026-11-06T10:30:35+01:00"
     },
     {
       "rankLabel": "#3",
@@ -87,7 +87,7 @@
       "basis": "Eigenständig in der 7-Sitzer-Recherche bestätigt; nicht aus dem Hauptangebot gefiltert.",
       "proof": "https://www.opel.de/content/dam/opel/germany/fahrzeuge/combo-passenger/Combo_Preisliste_23Februar2026-B.pdf",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 37 490; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet.",
-      "checkedDate": "02.11.2026",
+      "checkedDate": "06.11.2026",
       "checked": true,
       "location": "Wallern (Oberösterreich)",
       "country": "AT",
@@ -101,7 +101,7 @@
       "android": "Ja",
       "seats": "7",
       "iso": "3× bestätigt · Reihe 2 links, Mitte, rechts (Combo XL Herstellerausstattung plus Inserats-ISOFIX)",
-      "note": "Direkte Spoticar-Anzeige: €37.490, EZ 06/2026, 1.630 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2.",
+      "note": "Direkte Spoticar-Anzeige: €37.490, EZ 06/2026, 1.630 km, 7 Sitze, Diesel 131 PS. Inserat nennt ISOFIX und Android Auto; Opel-Datenblatt belegt XL/7-Sitzer-Konfiguration und ISOFIX-Anker für Reihe 2. Direktanzeige am 06.11.2026 erneut geöffnet; Preis, Verfügbarkeit und die jeweils aufgeführten Fahrzeugdaten erneut kontrolliert.",
       "url": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzh-acc-wallern-1200274622",
       "source": "https://www.spoticar.at/gebrauchtwagen-kaufen/opel-combo-gs-xl-7-sitzer-navi-kamera-sitzh-acc-wallern-1200274622",
       "features": [
@@ -114,7 +114,7 @@
         "Abstandstempomat",
         "12 Monate Spoticar Premium"
       ],
-      "checkedAt": "2026-11-02T11:16:32+01:00"
+      "checkedAt": "2026-11-06T10:30:35+01:00"
     }
   ],
   "staleReferences": [
