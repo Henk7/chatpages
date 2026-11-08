@@ -155,9 +155,12 @@
 
         document.getElementById('checked-at').textContent =
           'Preisstand: ' + safe(data.checked_label || formatDate(data.checked_at)) + ' · Preise inkl. MwSt.';
+        const requestedProviders = Number(data.requested_provider_count || 10);
+        const missingProviders = Math.max(0, requestedProviders - ranked.length);
         document.getElementById('offer-count').textContent =
           offers.length + ' Händler · ' + ranked.length + ' vergleichbar · ' +
-          notRanked.length + ' mit offenem Prüfhinweis';
+          (missingProviders ? missingProviders + ' von ' + requestedProviders + ' Händlerplätzen offen' : 'Top ' + requestedProviders + ' vollständig') +
+          (notRanked.length ? ' · ' + notRanked.length + ' mit offenem Prüfhinweis' : '');
 
         const body = document.getElementById('offers-body');
         body.innerHTML = offers.map((offer, index) => {
