@@ -1,11 +1,11 @@
 {
   "checkedDate": "08.11.2026",
-  "checkedAt": "2026-11-08T01:24:05+01:00",
+  "checkedAt": "2026-11-08T02:30:25+01:00",
   "checked": true,
   "requiredCount": 20,
   "confirmedCount": 1,
   "shortfall": 19,
-  "statusNote": "Direktrecherche Sonntag, 8. November 2026, 01:24 Uhr (Europe/Vienna): 1 von 20 Hauptangeboten frisch bestätigt (Toyota Proace City Verso Shuttle, €28.690); konkretes Inserat, Preis, fünf Sitze und drei ISOFIX-Plätze bestätigt. 19 Plätze bleiben mangels direkt verifizierter Inserate offen. Drei Spoticar-Inserate wegen Timeout heute nicht frisch bestätigt und in Altreferenzen verschoben.",
+  "statusNote": "Direktrecherche Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna): 1 von 20 Hauptangeboten frisch bestätigt (Toyota Proace City Verso Shuttle, €28.690). Konkretes österreichisches Inserat, Preis, fünf Sitze, drei ISOFIX-Plätze in Reihe 2 und Android Auto direkt geprüft. 19 Plätze bleiben mangels direkt verifizierter Inserate offen.",
   "unqualifiedLeads": [
     {
       "url": "https://www.toyota.at/neuwagen/proace-city-verso",
@@ -51,7 +51,7 @@
       "android": "Ja",
       "seats": "5",
       "iso": "3× bestätigt · alle drei Plätze der 2. Sitzreihe",
-      "note": "Willhaben-Inserat am 08.11.2026 direkt geöffnet: Anzeige aktiv, €28.690 Verkaufspreis, Neuwagen, 2 km, 5 Sitze; Inserat nennt ISOFIX an allen Sitzen der 2. Sitzreihe. Der Aktionspreis gilt laut Anzeige bei Kauf bis 31.12.2026; Leasing- und Versicherungsboni sind nicht eingerechnet. Gangzahl nicht angegeben.",
+      "note": "Willhaben-Inserat am Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna) direkt geöffnet: Anzeige aktiv, €28.690 Verkaufspreis, Neuwagen, 2 km, 5 Sitze; Anzeige nennt ISOFIX an allen drei Sitzen der 2. Sitzreihe und Android Auto. Aktionspreis laut Anzeige bei Kauf bis 31.12.2026; Leasing- und Versicherungsboni nicht eingerechnet. Gangzahl nicht angegeben.",
       "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "source": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "features": [
@@ -63,7 +63,7 @@
         "Parksensoren hinten",
         "Schiebetüren beidseits"
       ],
-      "checkedAt": "2026-11-08T01:24:05+01:00",
+      "checkedAt": "2026-11-08T02:30:25+01:00",
       "lowestMatchingTrim": true
     }
   ],
