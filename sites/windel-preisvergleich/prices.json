@@ -3,8 +3,8 @@
   "size": 7,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-11-08T01:24:05+01:00",
-  "checked_label": "Sonntag, 8. November 2026, 01:24 Uhr (Europe/Vienna)",
+  "checked_at": "2026-11-08T02:30:25+01:00",
+  "checked_label": "Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna)",
   "thresholds": {
     "great": 0.3,
     "good": 0.35,
@@ -29,7 +29,7 @@
       "unit_price": 0.4309913793103448,
       "rankable": true,
       "rank": 1,
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "source_url": "https://www.kaufland.at/product/542122309/",
       "link_label": "Direkt zum Angebot ↗"
     },
@@ -49,7 +49,7 @@
       "unit_price": 0.4602380952380953,
       "rankable": true,
       "rank": 2,
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "source_url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-7-Extra-Large-17-kg/656659360",
       "link_label": "Direkt zum Angebot ↗"
     },
@@ -69,7 +69,7 @@
       "unit_price": 0.5038095238095238,
       "rankable": true,
       "rank": 3,
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "source_url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-7-monatsbox-126-stk-windeln-23688437",
       "link_label": "Direkt zum Angebot ↗"
     },
@@ -89,7 +89,7 @@
       "unit_price": 0.5150793650793651,
       "rankable": true,
       "rank": 4,
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
       "link_label": "Direkt zum Angebot ↗"
     },
@@ -109,7 +109,7 @@
       "unit_price": 0.523015873015873,
       "rankable": true,
       "rank": 5,
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "source_url": "https://www.dm.at/p/d/1681514/pampers-baby-dry-baby-pants-baby-dry-gr-7-17-kg-monatsbox",
       "link_label": "Direkt zum Angebot ↗"
     }
@@ -2938,7 +2938,7 @@
     },
     {
       "date": "2026-11-08",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "best_unit_price": 0.4309913793103448,
       "best_total": 99.99,
       "retailer": "Kaufland.at · Koif",
@@ -2963,7 +2963,7 @@
           "unit_price": 0.4309913793103448,
           "rankable": true,
           "rank": 1,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.kaufland.at/product/542122309/",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -2983,7 +2983,7 @@
           "unit_price": 0.4602380952380953,
           "rankable": true,
           "rank": 2,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-7-Extra-Large-17-kg/656659360",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -3003,7 +3003,7 @@
           "unit_price": 0.5038095238095238,
           "rankable": true,
           "rank": 3,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-7-monatsbox-126-stk-windeln-23688437",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -3023,7 +3023,7 @@
           "unit_price": 0.5150793650793651,
           "rankable": true,
           "rank": 4,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -3043,17 +3043,17 @@
           "unit_price": 0.523015873015873,
           "rankable": true,
           "rank": 5,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.dm.at/p/d/1681514/pampers-baby-dry-baby-pants-baby-dry-gr-7-17-kg-monatsbox",
           "link_label": "Direkt zum Angebot ↗"
         }
       ]
     }
   ],
-  "method": "Direkte Kontrolle österreichischer Händler-Produktseiten am Sonntag, 8. November 2026, 01:24 Uhr (Europe/Vienna); je Größe ein bestes lieferbares Angebot pro Händler, nach effektivem Stückpreis inklusive notwendigem Versand sortiert. Bei kostenlosem Versand gelten die je Angebot genannten Schwellen/Kontobedingungen. Nur direkte Händlerseiten; kein Preisvergleichsportal.",
+  "method": "Direkte Kontrolle österreichischer Händler-Produktseiten am Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna); je Größe ein bestes lieferbares Angebot pro Händler, nach effektivem Stückpreis inklusive notwendigem Versand sortiert. Bei kostenlosem Versand gelten die je Angebot genannten Schwellen/Kontobedingungen. Nur direkte Händlerseiten; kein Preisvergleichsportal.",
   "size6_check": {
-    "checked_at": "2026-11-08T01:24:05+01:00",
-    "checked_label": "Sonntag, 8. November 2026, 01:24 Uhr (Europe/Vienna)",
+    "checked_at": "2026-11-08T02:30:25+01:00",
+    "checked_label": "Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna)",
     "threshold_eur_per_pants": 0.37,
     "special_threshold_eur_per_pants": 0.27,
     "news_alert": false,
@@ -3079,7 +3079,7 @@
         "unit_price": 0.40572463768115946,
         "rankable": true,
         "rank": 1,
-        "checked_at": "2026-11-08T01:24:05+01:00",
+        "checked_at": "2026-11-08T02:30:25+01:00",
         "source_url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-6-Extra-Large-14-19kg/656659359",
         "link_label": "Direkt zum Angebot ↗"
       },
@@ -3099,7 +3099,7 @@
         "unit_price": 0.44,
         "rankable": true,
         "rank": 2,
-        "checked_at": "2026-11-08T01:24:05+01:00",
+        "checked_at": "2026-11-08T02:30:25+01:00",
         "source_url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-6-monatsbox-138-stk-windeln-23688435",
         "link_label": "Direkt zum Angebot ↗"
       },
@@ -3119,7 +3119,7 @@
         "unit_price": 0.44368749999999996,
         "rankable": true,
         "rank": 3,
-        "checked_at": "2026-11-08T01:24:05+01:00",
+        "checked_at": "2026-11-08T02:30:25+01:00",
         "source_url": "https://www.kaufland.at/product/543407244/",
         "link_label": "Direkt zum Angebot ↗"
       },
@@ -3139,7 +3139,7 @@
         "unit_price": 0.44855072463768114,
         "rankable": true,
         "rank": 4,
-        "checked_at": "2026-11-08T01:24:05+01:00",
+        "checked_at": "2026-11-08T02:30:25+01:00",
         "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-6---13kg-19kg--monatsbox/B3-348110",
         "link_label": "Direkt zum Angebot ↗"
       },
@@ -3159,17 +3159,17 @@
         "unit_price": 0.4557971014492754,
         "rankable": true,
         "rank": 5,
-        "checked_at": "2026-11-08T01:24:05+01:00",
+        "checked_at": "2026-11-08T02:30:25+01:00",
         "source_url": "https://www.dm.at/p/d/1679518/pampers-baby-dry-baby-pants-baby-dry-paw-patrol-gr-6-extra-large-14-19-kg-monatsbox",
         "link_label": "Direkt zum Angebot ↗"
       }
     ],
-    "retailer_note": "Müller Österreich für Größe 6 direkt geprüft; die Produktseite zeigte beim heutigen Abruf eine Sicherheitsprüfung statt Preis, Lagerstatus oder Lieferoption. Daher kein bestätigtes Müller-Angebot in der Rangliste."
+    "retailer_note": "Müller Österreich für Größe 6 und 7 direkt geprüft; beide Produktseiten lieferten beim heutigen Abruf nur eine Sicherheitsprüfung statt Preis, Stückzahl, Warenkorb/Lieferbarkeit oder Österreichversand. Daher kein bestätigtes Müller-Angebot in den Ranglisten."
   },
   "news_threshold_eur_per_unit": 0.37,
-  "latest_snapshot_note": "Direktcheck Sonntag, 8. November 2026, 01:24 Uhr (Europe/Vienna): Größe 7: 5 von 10 unterschiedlichen Händlern bestätigt; 5 Plätze offen. Bestpreis €99,99 / 232 Stück = €0.431/Stück (Kaufland.at · Koif). Größe 6: 5 von 10; 5 Plätze offen. Bestpreis €55,99 / 138 Stück = €0.406/Stück (0815.at). Kein direkt bestätigtes Angebot unter €0,37 je Pants; kein Pampers-Alarm. Müller Österreich geprüft, aber beide Produktseiten blockierten Preis-/Lieferprüfung mit Sicherheitsabfrage.",
+  "latest_snapshot_note": "Direktcheck Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna): Größe 7: 5 von 10 unterschiedlichen Händlern bestätigt; 5 Plätze offen. Bestpreis €99,99 / 232 Stück = €0,431/Stück (Kaufland.at · Koif). Größe 6: 5 von 10; 5 Plätze offen. Bestpreis €55,99 / 138 Stück = €0,406/Stück (0815.at). Kein direkt bestätigtes Angebot unter €0,37 je Pants; kein Pampers-Alarm. Müller Österreich für beide Größen geprüft, aber beide Produktseiten blockierten Preis-/Lieferprüfung mit Sicherheitsabfrage.",
   "provider_history_started_on": "2026-10-18",
-  "latest_note": "Direktcheck Sonntag, 8. November 2026, 01:24 Uhr (Europe/Vienna): Größe 7: 5 von 10 unterschiedlichen Händlern bestätigt; 5 Plätze offen. Bestpreis €99,99 / 232 Stück = €0.431/Stück (Kaufland.at · Koif). Größe 6: 5 von 10; 5 Plätze offen. Bestpreis €55,99 / 138 Stück = €0.406/Stück (0815.at). Kein direkt bestätigtes Angebot unter €0,37 je Pants; kein Pampers-Alarm. Müller Österreich geprüft, aber beide Produktseiten blockierten Preis-/Lieferprüfung mit Sicherheitsabfrage.",
+  "latest_note": "Direktcheck Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna): Größe 7: 5 von 10 unterschiedlichen Händlern bestätigt; 5 Plätze offen. Bestpreis €99,99 / 232 Stück = €0,431/Stück (Kaufland.at · Koif). Größe 6: 5 von 10; 5 Plätze offen. Bestpreis €55,99 / 138 Stück = €0,406/Stück (0815.at). Kein direkt bestätigtes Angebot unter €0,37 je Pants; kein Pampers-Alarm. Müller Österreich für beide Größen geprüft, aber beide Produktseiten blockierten Preis-/Lieferprüfung mit Sicherheitsabfrage.",
   "separate_savings": [
     {
       "date": "2026-11-08",
@@ -3177,56 +3177,57 @@
       "offer": "€ 6 Rabatt auf eine Packung Baby-Dry Pants, Premium Protection Pants oder Night Pants; Größen 4–9",
       "conditions": "Pampers-Club-Registrierung und SMS-Verifizierung nötig; BIPA auswählen; Coupon nur in der BIPA-Filiale an der Kasse scanbar, nicht online. Nicht in der Basisrangliste eingerechnet.",
       "validity": "Die öffentliche Angebotsseite nennt kein fixes Enddatum. Laut Coupon-FAQ gilt ein individueller Coupon in der Regel 90 Tage; maßgeblich ist das Ablaufdatum des erzeugten Coupons.",
-      "url": "https://www.pampers.at/coupons-angebote/pampers-pants-aktion"
+      "url": "https://www.pampers.at/coupons-angebote/pampers-pants-aktion",
+      "checked_at": "2026-11-08T02:30:25+01:00"
     }
   ],
   "retailer_checks": [
     {
       "retailer": "0815.at",
       "status": "direkt bestätigt · Größe 6 und 7",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-6-Extra-Large-14-19kg/656659359",
       "note": "Größe 6: 138 Stück €55,99 inkl. Pflichtversand €0 (ab €50 gratis), 2 Stück Versandlager, 1–3 Werktage; €0,406/Stück. Größe 7: 126 Stück €57,99, Pflichtversand €0, 4 Stück Versandlager, 1–3 Werktage; €0,460/Stück."
     },
     {
       "retailer": "Galaxus.at",
       "status": "direkt bestätigt · Größe 6 und 7",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-6-monatsbox-138-stk-windeln-23688435",
       "note": "Größe 6: 138 Stück €60,72 inkl. kostenlosem Versand, >10 Lieferantenstücke; €0,440/Stück. Größe 7: 126 Stück €63,48 inkl. kostenlosem Versand, 1 Stück beim Lieferanten; €0,504/Stück."
     },
     {
       "retailer": "Kaufland.at · Koif",
       "status": "direkt bestätigt · Größe 6 und 7",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "url": "https://www.kaufland.at/product/542122309/",
       "note": "Größe 6: 160 Stück €70,99, Versand €0, Bestellung/Liefertermin nach Österreich bestätigt; €0,444/Stück. Größe 7: 232 Stück €99,99, Versand €0, Bestellung/Liefertermin nach Österreich bestätigt; €0,431/Stück. Marketplace seller Koif zählt je Größe nur einmal."
     },
     {
       "retailer": "BIPA",
       "status": "direkt bestätigt · Größe 6 und 7",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-6---13kg-19kg--monatsbox/B3-348110",
       "note": "Größe 6: 138 Stück €61,90 inkl. Pflichtversand €0 ab €49; online lieferbar, 2–3 Werktage; €0,449/Stück. Größe 7: 126 Stück €64,90, gleicher Versandstatus; €0,515/Stück."
     },
     {
       "retailer": "dm.at",
       "status": "direkt bestätigt · Größe 6 und 7",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "url": "https://www.dm.at/p/d/1679518/pampers-baby-dry-baby-pants-baby-dry-paw-patrol-gr-6-extra-large-14-19-kg-monatsbox",
       "note": "Größe 6 Paw Patrol: 138 Stück €62,90; Größe 7: 126 Stück €65,90. Online lieferbar, Versand €0 mit kostenlosem Mein-dm-Konto (bis 15.11.2026 ausgewiesen); €0,456 bzw. €0,523/Stück."
     },
     {
       "retailer": "Müller Österreich",
       "status": "nicht belegbar · Produktseiten-Sicherheitsprüfung",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "url": "https://www.mueller.at/p/pampers-baby-dry-pants-gr-6-14-19kg-monatsbox-IPN2887000/",
       "note": "Beide direkten Müller-Produktseiten (Größe 6 und 7) lieferten im heutigen Abruf nur eine Sicherheitsprüfung. Kein Preis, Stückzahl, Warenkorb/Lieferbarkeit oder Österreichversand direkt bestätigt; daher nicht gerankt."
     },
     {
       "retailer": "Pampers Club / BIPA",
       "status": "separater öffentlicher Coupon · nicht gerankt",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "url": "https://www.pampers.at/coupons-angebote/pampers-pants-aktion",
       "note": "€6 Coupon auf eine Pants-Packung Größe 4–9; Registrierung und SMS-Verifizierung, Auswahl BIPA; nur in BIPA-Filiale an der Kasse, nicht online. Kein öffentliches fixes Enddatum; individuelles Coupon-Ablaufdatum maßgeblich."
     }
@@ -4013,7 +4014,7 @@
     },
     {
       "date": "2026-11-08",
-      "checked_at": "2026-11-08T01:24:05+01:00",
+      "checked_at": "2026-11-08T02:30:25+01:00",
       "best_unit_price": 0.40572463768115946,
       "best_total": 55.99,
       "retailer": "0815.at",
@@ -4038,7 +4039,7 @@
           "unit_price": 0.40572463768115946,
           "rankable": true,
           "rank": 1,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-6-Extra-Large-14-19kg/656659359",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -4058,7 +4059,7 @@
           "unit_price": 0.44,
           "rankable": true,
           "rank": 2,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-6-monatsbox-138-stk-windeln-23688435",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -4078,7 +4079,7 @@
           "unit_price": 0.44368749999999996,
           "rankable": true,
           "rank": 3,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.kaufland.at/product/543407244/",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -4098,7 +4099,7 @@
           "unit_price": 0.44855072463768114,
           "rankable": true,
           "rank": 4,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-6---13kg-19kg--monatsbox/B3-348110",
           "link_label": "Direkt zum Angebot ↗"
         },
@@ -4118,7 +4119,7 @@
           "unit_price": 0.4557971014492754,
           "rankable": true,
           "rank": 5,
-          "checked_at": "2026-11-08T01:24:05+01:00",
+          "checked_at": "2026-11-08T02:30:25+01:00",
           "source_url": "https://www.dm.at/p/d/1679518/pampers-baby-dry-baby-pants-baby-dry-paw-patrol-gr-6-extra-large-14-19-kg-monatsbox",
           "link_label": "Direkt zum Angebot ↗"
         }
