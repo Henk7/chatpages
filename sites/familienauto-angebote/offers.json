@@ -1,11 +1,11 @@
 {
-  "checkedDate": "08.11.2026",
-  "checkedAt": "2026-11-08T02:30:25+01:00",
+  "checkedDate": "09.11.2026",
+  "checkedAt": "2026-11-09T16:22:24+01:00",
   "checked": true,
   "requiredCount": 20,
   "confirmedCount": 1,
   "shortfall": 19,
-  "statusNote": "Direktrecherche Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna): 1 von 20 Hauptangeboten frisch bestätigt (Toyota Proace City Verso Shuttle, €28.690). Konkretes österreichisches Inserat, Preis, fünf Sitze, drei ISOFIX-Plätze in Reihe 2 und Android Auto direkt geprüft. 19 Plätze bleiben mangels direkt verifizierter Inserate offen.",
+  "statusNote": "Direktrecherche Montag, 9. November 2026, 16:22 Uhr (Europe/Vienna): 1 von 20 Hauptangeboten frisch bestätigt (Toyota Proace City Verso Shuttle, €28.690). Das konkrete österreichische Inserat bleibt aktiv; Preis, fünf Sitze und drei ISOFIX-Plätze in Reihe 2 direkt geprüft. 19 Plätze bleiben mangels direkt bestätigter passender Inserate offen.",
   "unqualifiedLeads": [
     {
       "url": "https://www.toyota.at/neuwagen/proace-city-verso",
@@ -37,7 +37,7 @@
       "basis": "Shuttle; niedrigste Ausstattungslinie im heutigen direkt belegten Toyota-Datensatz.",
       "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "cost": "Direkt gelisteter österreichischer Verkaufspreis € 28.690; kein Leasing-/Finanzierungs-Lockpreis auf der Anzeige erkennbar. Separate verpflichtende Nebenkosten sind nicht ausgewiesen und daher nicht hinzugerechnet. €500 Leasing- und €500 Versicherungsbonus ausgeschlossen.",
-      "checkedDate": "08.11.2026",
+      "checkedDate": "09.11.2026",
       "checked": true,
       "location": "Unterwart (Burgenland)",
       "country": "AT",
@@ -51,7 +51,7 @@
       "android": "Ja",
       "seats": "5",
       "iso": "3× bestätigt · alle drei Plätze der 2. Sitzreihe",
-      "note": "Willhaben-Inserat am Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna) direkt geöffnet: Anzeige aktiv, €28.690 Verkaufspreis, Neuwagen, 2 km, 5 Sitze; Anzeige nennt ISOFIX an allen drei Sitzen der 2. Sitzreihe und Android Auto. Aktionspreis laut Anzeige bei Kauf bis 31.12.2026; Leasing- und Versicherungsboni nicht eingerechnet. Gangzahl nicht angegeben.",
+      "note": "Willhaben-Inserat am Montag, 9. November 2026, 16:22 Uhr (Europe/Vienna) direkt geöffnet: Anzeige aktiv, €28.690 Verkaufspreis, Neuwagen, 2 km, 5 Sitze; Anzeige nennt ISOFIX an allen drei Sitzen der 2. Sitzreihe und Android Auto. Aktionspreis laut Inserat bei Kauf bis 31.12.2026; Leasing- und Versicherungsboni nicht eingerechnet. Gangzahl nicht angegeben.",
       "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "source": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-5-d4d-102-shuttle-2101794006/",
       "features": [
@@ -63,7 +63,7 @@
         "Parksensoren hinten",
         "Schiebetüren beidseits"
       ],
-      "checkedAt": "2026-11-08T02:30:25+01:00",
+      "checkedAt": "2026-11-09T16:22:24+01:00",
       "lowestMatchingTrim": true
     }
   ],
