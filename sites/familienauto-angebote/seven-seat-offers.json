@@ -1,12 +1,13 @@
 {
-  "checkedDate": "08.11.2026",
-  "checkedAt": "2026-11-08T02:30:25+01:00",
+  "checkedDate": "09.11.2026",
+  "checkedAt": "2026-11-09T16:22:24+01:00",
   "checked": true,
   "requiredCount": 10,
-  "confirmedCount": 1,
-  "shortfall": 9,
-  "statusNote": "Direktrecherche Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna): 1 von 10 separat recherchierten 7-Sitzern frisch bestätigt: Citroën Berlingo XL BlueHDi 130 S&S PLUS, €30.900, 7 Sitze und drei ISOFIX in Reihe 2 (Händleranzeige plus passendes Citroën-Produktblatt). 9 Plätze bleiben offen; weitere Anzeigen ohne frische direkte Bestätigung wurden nicht übernommen.",
-  "offers": [
+  "confirmedCount": 0,
+  "shortfall": 10,
+  "statusNote": "Direktrecherche Montag, 9. November 2026, 16:22 Uhr (Europe/Vienna): 0 von 10 7-Sitzer-Angeboten frisch bestätigt; 10 Plätze offen. Die gestern geführte Spoticar-Detailseite für den Citroën Berlingo XL ließ sich heute nicht direkt laden; der verfügbare Suchtreffer zeigte widersprüchliche, ältere Kilometerstände und wurde deshalb aus der aktuellen Liste entfernt. Kein anderes Inserat erfüllte heute alle direkt bestätigbaren Preis-, Verfügbarkeits- und ISOFIX-Kriterien.",
+  "offers": [],
+  "staleReferences": [
     {
       "rankLabel": "#1 · frisch direkt geprüft",
       "rank": 1,
@@ -16,7 +17,7 @@
       "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
       "cost": "Direkter Spoticar-Verkaufspreis €30.900; keine zusätzlichen verpflichtenden Kaufkosten auf der Produktseite ausgewiesen.",
       "checkedDate": "08.11.2026",
-      "checked": true,
+      "checked": false,
       "location": "Elixhausen (Salzburg)",
       "country": "AT",
       "price": 30900,
@@ -42,10 +43,9 @@
         "Spoticar Premium 12 Monate"
       ],
       "checkedAt": "2026-11-08T02:30:25+01:00",
-      "change": "Separat recherchierte 7-Sitzer-Anzeige am Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna) direkt geöffnet; aktiv angezeigter Preis, 7 Sitze, EZ/km und Fahrzeugdaten bestätigt. Hersteller-Produktblatt bestätigt für Länge XL drei Einzelsitze mit ISOFIX in Reihe 2."
-    }
-  ],
-  "staleReferences": [
+      "change": "Separat recherchierte 7-Sitzer-Anzeige am Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna) direkt geöffnet; aktiv angezeigter Preis, 7 Sitze, EZ/km und Fahrzeugdaten bestätigt. Hersteller-Produktblatt bestätigt für Länge XL drei Einzelsitze mit ISOFIX in Reihe 2.",
+      "staleReferenceReason": "Am 9.11.2026 nicht frisch bestätigt: Detailseite bei Direktabruf nicht geladen; Suchtreffer war gegenüber dem Vortagesstand widersprüchlich/stale. Nicht mehr als aktuelles Angebot geführt."
+    },
     {
       "rankLabel": "#1",
       "rank": 1,
