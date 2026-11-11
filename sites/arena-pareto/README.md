@@ -5,15 +5,15 @@ A lightweight, mobile-friendly chart built from Arena AI's public Agent Arena Pa
 ## Snapshot
 
 - Source: <https://arena.ai/leaderboard/agent/pareto>
-- Arena board date: November 8, 2026
-- Captured: November 10, 2026
+- Arena board date: November 11, 2026
+- Captured: November 11, 2026
 - Cost selector: median / 50th percentile, last 14 days
-- Board size: 57 models; 53 models with task costs are plotted
-- Sessions displayed by Arena: 2,750,973
+- Board size: 59 models; 55 models with task costs are plotted
+- Sessions displayed by Arena: 2,810,198
 
-Arena still showed its November 8 Agent Arena board on November 10. The 53 plotted cost and improvement values were captured from the live 50th-percentile, last-14-days view. Four board models had no task-cost row and are not plotted.
+The 55 plotted cost and improvement values were captured from Arena's 50th-percentile, last-14-days view. Four board models had no task-cost row and are not plotted. Arena's measurements can change as its live leaderboard updates.
 
-Claude Fable 5.2 is featured in Arena's WebDev rankings, but it has no cost or net-improvement row in this Agent Arena snapshot; it is not plotted. The snapshot includes Claude Fable 5.1 (Max). WebDev and Agent Arena measure different model use cases, so their rankings and scores are not interchangeable. See the [Arena WebDev leaderboard](https://arena.ai/leaderboard/code/webdev).
+Claude Fable 5.2 (Max) is now included at rank 1: +30.35% net improvement and $7.34 median cost per task. Claude Fable 5.1 (Max) is rank 5 in this snapshot.
 
 ## Chart controls
 
