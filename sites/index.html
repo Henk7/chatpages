@@ -36,7 +36,7 @@
     const heading = card.querySelector("h2");
     const firstLink = card.querySelector("a[href]");
     const url = firstLink ? new URL(firstLink.getAttribute("href"), document.baseURI) : null;
-    const title = (heading?.textContent || "").trim().replace(/\\s+/g, " ");
+    const title = (heading?.textContent || "").trim().replace(/\s+/g, " ");
     card.dataset.pageId = (url ? url.origin + url.pathname : "") + "|" + title;
 
     const badge = document.createElement("span");
