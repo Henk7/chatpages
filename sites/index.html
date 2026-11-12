@@ -53,13 +53,14 @@
       const raw = localStorage.getItem(storageKey);
       const parsed = raw ? JSON.parse(raw) : [];
       if (!Array.isArray(parsed)) return [];
-      const cutoff = Date.now() - windowMs;
+      const now = Date.now();
+      const cutoff = now - windowMs;
       return parsed.filter(item =>
         item &&
         typeof item.id === "string" &&
         Number.isFinite(item.at) &&
         item.at >= cutoff &&
-        item.at <= Date.now()
+        item.at <= now
       );
     } catch {
       storageAvailable = false;
@@ -86,17 +87,21 @@
     }
   }
 
-  function render(events) {
+  function updateBadges(events) {
     const counts = new Map();
     for (const item of events) counts.set(item.id, (counts.get(item.id) || 0) + 1);
-
     for (const card of cards) {
       const count = counts.get(card.dataset.pageId) || 0;
       const badge = card.querySelector(".popularity");
       badge.hidden = count === 0;
       badge.textContent = count + (count === 1 ? " Klick · 30 Tage" : " Klicks · 30 Tage");
     }
+  }
 
+  function render(events) {
+    const counts = new Map();
+    for (const item of events) counts.set(item.id, (counts.get(item.id) || 0) + 1);
+    updateBadges(events);
     const sorted = [...cards].sort((a, b) =>
       (counts.get(b.dataset.pageId) || 0) - (counts.get(a.dataset.pageId) || 0) ||
       Number(a.dataset.originalOrder) - Number(b.dataset.originalOrder)
@@ -110,15 +115,25 @@
   showStatus();
 
   grid.addEventListener("click", event => {
-    const target = event.target instanceof Element ? event.target.closest("a[href]") : null;
-    const card = target?.closest("article.card");
+    const link = event.target instanceof Element ? event.target.closest("a[href]") : null;
+    const card = link?.closest("article.card");
     if (!card) return;
 
     events = readEvents();
     events.push({ id: card.dataset.pageId, at: Date.now() });
     saveEvents(events);
-    render(events);
+    updateBadges(events);
     showStatus();
+
+    // Leave same-tab navigation untouched; the overview re-sorts when it is shown again.
+    const opensSeparateContext =
+      link.target === "_blank" || event.ctrlKey || event.metaKey || event.shiftKey || event.button === 1;
+    if (opensSeparateContext) {
+      setTimeout(() => {
+        events = readEvents();
+        render(events);
+      }, 0);
+    }
   }, true);
 
   clearButton.addEventListener("click", () => {
@@ -131,6 +146,12 @@
     }
     render(events);
     showStatus(storageAvailable ? "Klickverlauf gelöscht. Neue Klicks werden lokal gespeichert." : "");
+  });
+
+  window.addEventListener("pageshow", () => {
+    events = readEvents();
+    render(events);
+    showStatus();
   });
 
   window.addEventListener("storage", event => {
