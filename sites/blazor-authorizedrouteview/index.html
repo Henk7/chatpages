@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AuthorizeRouteView in Blazor: Setup ab .NET 8, geschützte Seiten sowie eigene Nichtautorisiert- und Authorizing-Anzeigen.">
+  <title>AuthorizeRouteView in Blazor · Henk7</title>
+  <style>
+    :root{color-scheme:light;--ink:#17212f;--muted:#627084;--line:#dfe6ee;--paper:#fff;--wash:#f3f6fa;--blue:#3159c7;--navy:#172640;--gold:#e7bd61}
+    *{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    header{background:linear-gradient(135deg,#14223b,#263f68);color:#fff;padding:38px 20px;border-bottom:4px solid var(--gold)}
+    .wrap{max-width:980px;margin:auto}.brand{color:#cbd7ed;text-transform:uppercase;letter-spacing:.13em;font-weight:750;font-size:.78rem}
+    h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.45rem 0}.lede{color:#e1e8f3;max-width:760px;margin:.7rem 0 0}
+    main{padding:28px 20px 55px}.back{margin:0 0 20px}.back a,.source{color:var(--blue);font-weight:700;text-decoration:none}.back a:hover,.source:hover{text-decoration:underline}
+    section{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;margin:16px 0;box-shadow:0 2px 10px #1c305008}
+    h2{font-size:1.25rem;line-height:1.3;color:var(--navy);margin:0 0 10px}p{margin:.55rem 0}.hint{padding:13px 15px;background:#fff8e6;border:1px solid #f0dfb3;border-radius:10px;color:#554724}
+    pre{overflow:auto;background:#111a2b;color:#edf3ff;padding:17px;border-radius:10px;font:14px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}ul{padding-left:1.3rem}footer{padding:0 20px 34px;color:var(--muted);font-size:.85rem}
+    @media(max-width:600px){main{padding:20px 14px 38px}header{padding:28px 16px}section{padding:17px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">Henk7 · Blazor Kurzreferenz</div><h1>AuthorizeRouteView</h1><p class="lede">Geschützte Blazor-Routen anzeigen, den Anmeldestatus berücksichtigen und passende Meldungen für fehlende Berechtigungen zeigen.</p></div></header>
+<main class="wrap">
+  <p class="back"><a href="../">← Zur Seitenübersicht</a></p>
+  <section>
+    <h2>Was macht die Komponente?</h2>
+    <p><code>AuthorizeRouteView</code> ersetzt innerhalb des <code>Router</code> die normale <code>RouteView</code>. Sie prüft die Autorisierungsregeln der aufgerufenen Razor-Komponente, zum Beispiel <code>[Authorize]</code>, Rollen oder Policies.</p>
+    <p>Mit <code>NotAuthorized</code> legst du fest, was bei fehlender Berechtigung erscheint. <code>Authorizing</code> zeigt optional einen Zwischenzustand, solange die Prüfung noch läuft.</p>
+  </section>
+  <section>
+    <h2>.NET 8 und neuer: Dienste registrieren</h2>
+    <p>Die vorhandene Authentifizierung und Autorisierung deiner App muss bereits eingerichtet sein. Registriere zusätzlich den kaskadierenden Authentication State einmal in <code>Program.cs</code>:</p>
+    <pre><code>builder.Services.AddCascadingAuthenticationState();</code></pre>
+    <p>Bei älteren Blazor-Versionen wird stattdessen der Router in <code>&lt;CascadingAuthenticationState&gt;</code> eingeschlossen. In .NET 8+ soll diese Wrapper-Komponente nicht verwendet werden.</p>
+  </section>
+  <section>
+    <h2>Router in <code>Routes.razor</code></h2>
+    <pre><code>&lt;Router AppAssembly="typeof(Program).Assembly"&gt;
+    &lt;Found Context="routeData"&gt;
+        &lt;AuthorizeRouteView RouteData="routeData"
+                            DefaultLayout="typeof(MainLayout)"&gt;
+            &lt;NotAuthorized Context="authState"&gt;
+                @if (authState.User.Identity?.IsAuthenticated != true)
+                {
+                    &lt;p&gt;Bitte melde dich an, um diese Seite zu öffnen.&lt;/p&gt;
+                }
+                else
+                {
+                    &lt;p&gt;Du hast keine Berechtigung für diese Seite.&lt;/p&gt;
+                }
+            &lt;/NotAuthorized&gt;
+            &lt;Authorizing&gt;
+                &lt;p&gt;Berechtigung wird geprüft …&lt;/p&gt;
+            &lt;/Authorizing&gt;
+        &lt;/AuthorizeRouteView&gt;
+        &lt;FocusOnNavigate RouteData="routeData" Selector="h1" /&gt;
+    &lt;/Found&gt;
+    &lt;NotFound&gt;
+        &lt;LayoutView Layout="typeof(MainLayout)"&gt;
+            &lt;p&gt;Diese Seite wurde nicht gefunden.&lt;/p&gt;
+        &lt;/LayoutView&gt;
+    &lt;/NotFound&gt;
+&lt;/Router&gt;</code></pre>
+    <p>In einer .NET-8-Blazor-Web-App steht der Router üblicherweise in <code>Routes.razor</code>; dort sind auch <code>MainLayout</code> und <code>FocusOnNavigate</code> aus dem Projekt verfügbar.</p>
+  </section>
+  <section>
+    <h2>Eine Seite schützen</h2>
+    <p>Setze das Attribut direkt auf die Razor-Komponente:</p>
+    <pre><code>@page "/admin"
+@attribute [Authorize(Roles = "Admin")]
+
+&lt;h1&gt;Administration&lt;/h1&gt;</code></pre>
+    <p>Ohne Rollen- oder Policy-Angabe reicht <code>[Authorize]</code> für angemeldete Benutzer. Eine Policy kannst du zum Beispiel mit <code>[Authorize(Policy = "CanEdit")]</code> verlangen.</p>
+  </section>
+  <section>
+    <h2>Wichtige Abgrenzung</h2>
+    <ul>
+      <li><code>AuthorizeRouteView</code> schützt den Zugriff auf geroutete Komponenten anhand ihrer Autorisierungsattribute.</li>
+      <li><code>AuthorizeView</code> blendet einzelne UI-Teile je nach Benutzerstatus ein oder aus.</li>
+      <li>UI-Prüfungen allein sichern keine Daten oder API-Aufrufe. Prüfe Berechtigungen auch serverseitig an den Datenzugriffen und Endpunkten.</li>
+      <li>Bei statischem SSR rendert Blazor den Inhalt von <code>NotAuthorized</code> nicht für serverseitig abgewiesene Requests. Dafür muss die ASP.NET-Core-Pipeline die Anmeldung beziehungsweise Ablehnung behandeln.</li>
+    </ul>
+    <p class="hint"><strong>Merksatz:</strong> Routen-Komponente mit <code>[Authorize]</code> markieren, <code>AuthorizeRouteView</code> im Router verwenden und den Authentication State bereitstellen.</p>
+    <p><a class="source" href="https://learn.microsoft.com/aspnet/core/blazor/security/?view=aspnetcore-10.0" target="_blank" rel="noopener noreferrer">Offizielle Microsoft-Dokumentation zu Blazor-Authentifizierung und Autorisierung ↗</a></p>
+  </section>
+</main>
+<footer class="wrap">Kurzreferenz für Blazor Web Apps ab .NET 8. Details hängen vom Authentifizierungsmodell und Render-Modus ab.</footer>
+</body>
+</html>
