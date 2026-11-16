@@ -1,11 +1,11 @@
 {
-  "checkedDate": "15.11.2026",
-  "checkedAt": "2026-11-15T01:21:26+01:00",
+  "checkedDate": "16.11.2026",
+  "checkedAt": "2026-11-16T01:31:00+01:00",
   "checked": true,
   "requiredCount": 10,
   "confirmedCount": 2,
   "shortfall": 8,
-  "statusNote": "Separat recherchierte 7-Sitzer-Liste, Direktprüfung Sonntag, 15. November 2026, 01:21:26 Uhr (Europe/Vienna): 2/10 passende österreichische Inserate aktuell am Einzelangebot bestätigt; Lücke 8. Aktive Treffer belegen sieben Sitze, mindestens drei ISOFIX, Preis und Österreich-Verfügbarkeit; ältere nicht frisch bestätigte Inserate liegen in staleReferences.",
+  "statusNote": "Separat recherchierte 7-Sitzer-Liste, Direktprüfung am Montag, 16. November 2026, 01:31:00 Uhr (Europe/Vienna): 2/10 österreichische Angebote mit bestätigten sieben Sitzen und mindestens 3 ISOFIX-Plätzen; Lücke 8. Nicht aus der Hauptliste gefiltert.",
   "offers": [
     {
       "rank": 1,
@@ -15,8 +15,8 @@
       "basis": "Separat recherchiertes passendes 7-Sitzer-Angebot",
       "proof": "https://www.opel.at/content/dam/opel/austria/fahrzeuge/downloads/preislisten/Opel_Combo_Preisliste_MYC0-01_22092026.pdf",
       "cost": "Österreichischer Bar-Verkaufspreis €28.980; keine verpflichtenden Nebenkosten separat ausgewiesen.",
-      "change": "Separat recherchiertes 7-Sitzer-Angebot, direkt geprüft am Sonntag, 15. November 2026, 01:21:26 Uhr (Europe/Vienna): Inserat, Barpreis, Verfügbarkeit, sieben Sitze und mindestens drei ISOFIX-Plätze bestätigt.",
-      "checkedDate": "15.11.2026",
+      "change": "Separat recherchierter 7-Sitzer, am Montag, 16. November 2026, 01:31:00 Uhr (Europe/Vienna) erneut direkt bestätigt: Preis, Verfügbarkeit, sieben Sitze und mindestens 3 ISOFIX-Plätze am konkreten Inserat geprüft.",
+      "checkedDate": "16.11.2026",
       "checked": true,
       "location": "Amstetten",
       "country": "AT",
@@ -43,7 +43,7 @@
         "Parksensoren",
         "Rückfahrkamera"
       ],
-      "checkedAt": "2026-11-15T01:21:26+01:00",
+      "checkedAt": "2026-11-16T01:31:00+01:00",
       "lowestMatchingTrim": true
     },
     {
@@ -54,8 +54,8 @@
       "basis": "Separat recherchiertes passendes 7-Sitzer-Angebot",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Österreichischer Verkaufspreis €29.990 laut aktivem Willhaben-Inserat; keine zusätzlichen verpflichtenden Nebenkosten ausgewiesen.",
-      "change": "Separat recherchiertes 7-Sitzer-Angebot, direkt geprüft am Sonntag, 15. November 2026, 01:21:26 Uhr (Europe/Vienna): Inserat, Barpreis, Verfügbarkeit, sieben Sitze und mindestens drei ISOFIX-Plätze bestätigt.",
-      "checkedDate": "15.11.2026",
+      "change": "Separat recherchierter 7-Sitzer, am Montag, 16. November 2026, 01:31:00 Uhr (Europe/Vienna) erneut direkt bestätigt: Preis, Verfügbarkeit, sieben Sitze und mindestens 3 ISOFIX-Plätze am konkreten Inserat geprüft.",
+      "checkedDate": "16.11.2026",
       "checked": true,
       "location": "Wels (Oberösterreich)",
       "country": "AT",
@@ -81,7 +81,7 @@
         "Android Auto",
         "Apple CarPlay"
       ],
-      "checkedAt": "2026-11-15T01:21:26+01:00",
+      "checkedAt": "2026-11-16T01:31:00+01:00",
       "lowestMatchingTrim": false
     }
   ],
