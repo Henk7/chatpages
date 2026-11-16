@@ -1,11 +1,11 @@
 {
-  "checkedDate": "15.11.2026",
-  "checkedAt": "2026-11-15T01:21:26+01:00",
+  "checkedDate": "16.11.2026",
+  "checkedAt": "2026-11-16T01:31:00+01:00",
   "checked": true,
   "requiredCount": 20,
   "confirmedCount": 3,
   "shortfall": 17,
-  "statusNote": "Direktprüfung Sonntag, 15. November 2026, 01:21:26 Uhr (Europe/Vienna): 3/20 österreichische Bar-Kaufangebote frisch am Einzelinserat bestätigt; Lücke 17. Nur diese drei Inserate belegen heute konkret Preis, Verfügbarkeit, Laufleistung/Sitze und mindestens drei ISOFIX-Plätze. Ältere nicht erneut bestätigte Datensätze bleiben mit ursprünglichem Prüftag in staleReferences.",
+  "statusNote": "Direktprüfung am Montag, 16. November 2026, 01:31:00 Uhr (Europe/Vienna): 3/20 österreichische Kaufangebote frisch bestätigt; Lücke 17. Nur aktuell direkt bestätigte Inserate zählen. Die Hauptliste umfasst passende Hochdachkombis mit mindestens 3 bestätigten ISOFIX-Plätzen; Gebrauchtwagen bis 50.000 km sind eingeschlossen.",
   "unqualifiedLeads": [
     {
       "url": "https://www.toyota.at/neuwagen/proace-city-verso",
@@ -37,8 +37,8 @@
       "basis": "GS XL – günstigste heute direkt bestätigte passende Opel-Ausführung",
       "proof": "https://www.opel.at/content/dam/opel/austria/fahrzeuge/downloads/preislisten/Opel_Combo_Preisliste_MYC0-01_22092026.pdf",
       "cost": "Österreichischer Bar-Verkaufspreis €28.980; keine verpflichtenden Nebenkosten separat ausgewiesen.",
-      "change": "Direktprüfung am Sonntag, 15. November 2026, 01:21:26 Uhr (Europe/Vienna): Inserat, Bar-Verkaufspreis, Verfügbarkeit, technische Fahrzeugdaten und ISOFIX-Angaben am konkreten Fahrzeug geprüft.",
-      "checkedDate": "15.11.2026",
+      "change": "Direktprüfung am Montag, 16. November 2026, 01:31:00 Uhr (Europe/Vienna): Inserat, Barpreis, Verfügbarkeit, Fahrzeugdaten, Sitzanzahl und ISOFIX am konkreten Fahrzeug erneut bestätigt.",
+      "checkedDate": "16.11.2026",
       "checked": true,
       "location": "Amstetten",
       "country": "AT",
@@ -65,7 +65,7 @@
         "Parksensoren",
         "Rückfahrkamera"
       ],
-      "checkedAt": "2026-11-15T01:21:26+01:00",
+      "checkedAt": "2026-11-16T01:31:00+01:00",
       "lowestMatchingTrim": true
     },
     {
@@ -76,8 +76,8 @@
       "basis": "Gebrauchtwagen · L2 mit 7 Sitzen · Händlerangebot",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Österreichischer Verkaufspreis €29.990 laut aktivem Willhaben-Inserat; keine zusätzlichen verpflichtenden Nebenkosten ausgewiesen.",
-      "change": "Separat recherchiertes 7-Sitzer-Angebot, direkt geprüft am Sonntag, 15. November 2026, 01:21:26 Uhr (Europe/Vienna): aktives Inserat, Bar-Verkaufspreis, Österreich-Verfügbarkeit, sieben Sitze, Laufleistung und ISOFIX-Angabe bestätigt.",
-      "checkedDate": "15.11.2026",
+      "change": "Direktprüfung am Montag, 16. November 2026, 01:31:00 Uhr (Europe/Vienna): Inserat, Barpreis, Verfügbarkeit, Fahrzeugdaten, Sitzanzahl und ISOFIX am konkreten Fahrzeug erneut bestätigt.",
+      "checkedDate": "16.11.2026",
       "checked": true,
       "location": "Wels (Oberösterreich)",
       "country": "AT",
@@ -103,7 +103,7 @@
         "Android Auto",
         "Apple CarPlay"
       ],
-      "checkedAt": "2026-11-15T01:21:26+01:00",
+      "checkedAt": "2026-11-16T01:31:00+01:00",
       "lowestMatchingTrim": false
     },
     {
@@ -114,8 +114,8 @@
       "basis": "Gebrauchtwagen · Family+ · Händlerangebot",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Österreichischer Verkaufspreis €34.990 laut heute direkt geprüftem Inserat; keine zusätzlichen verpflichtenden Nebenkosten separat ausgewiesen.",
-      "change": "Direktprüfung am Sonntag, 15. November 2026, 01:21:26 Uhr (Europe/Vienna): Inserat, Bar-Verkaufspreis, Verfügbarkeit, technische Fahrzeugdaten und ISOFIX-Angaben am konkreten Fahrzeug geprüft.",
-      "checkedDate": "15.11.2026",
+      "change": "Direktprüfung am Montag, 16. November 2026, 01:31:00 Uhr (Europe/Vienna): Inserat, Barpreis, Verfügbarkeit, Fahrzeugdaten, Sitzanzahl und ISOFIX am konkreten Fahrzeug erneut bestätigt.",
+      "checkedDate": "16.11.2026",
       "checked": true,
       "location": "Krems an der Donau (Niederösterreich)",
       "country": "AT",
@@ -141,7 +141,7 @@
         "Automatik",
         "Android Auto"
       ],
-      "checkedAt": "2026-11-15T01:21:26+01:00",
+      "checkedAt": "2026-11-16T01:31:00+01:00",
       "lowestMatchingTrim": false
     }
   ],
