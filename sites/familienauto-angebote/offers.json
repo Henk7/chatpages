@@ -601,8 +601,8 @@
   ],
   "staleReferences": [
     {
-      "rank": 7,
-      "rankLabel": "#7 · 7 Sitze",
+      "rank": 0,
+      "rankLabel": "Kandidat · 7 Sitze",
       "model": "Opel Combo XL 1.5 Diesel",
       "trim": "GS XL · 1.5 Diesel · 6-Gang",
       "basis": "GS XL – günstigste heute direkt bestätigte passende Opel-Ausführung",
@@ -643,8 +643,8 @@
       "staleReferenceReason": "Inserat und sieben Sitze heute geprüft; das Inserat nennt ISOFIX ohne konkrete Anzahl. Die Herstellerunterlagen sprechen für drei Plätze, am konkreten Fahrzeug ist die Anzahl aber nicht direkt bestätigt."
     },
     {
-      "rankLabel": "#10 · 7 Sitze",
-      "rank": 10,
+      "rankLabel": "Kandidat · 7 Sitze",
+      "rank": 0,
       "model": "Toyota Proace City Verso L2 1.5 D4D 130",
       "trim": "Automatik · 7-Sitzer",
       "basis": "Gebrauchtwagen · L2 mit 7 Sitzen · Händlerangebot",
@@ -716,8 +716,8 @@
       "checkedAt": "2026-11-16T20:36:16+01:00",
       "checked": false,
       "lowestMatchingTrim": false,
-      "rank": 11,
-      "rankLabel": "#11 · 7 Sitze",
+      "rank": 0,
+      "rankLabel": "Kandidat · 7 Sitze",
       "displayAsCandidate": true,
       "lastCheckAttemptAt": "2026-11-16T20:39:03+01:00",
       "staleReferenceReason": "Inserat und sieben Sitze heute geprüft; das Inserat nennt ISOFIX ohne konkrete Anzahl. Die Herstellerunterlagen sprechen für drei Plätze, am konkreten Fahrzeug ist die Anzahl aber nicht direkt bestätigt."
@@ -755,8 +755,8 @@
       "checkedAt": "2026-11-16T20:36:16+01:00",
       "checked": false,
       "lowestMatchingTrim": false,
-      "rank": 13,
-      "rankLabel": "#13 · 7 Sitze",
+      "rank": 0,
+      "rankLabel": "Kandidat · 7 Sitze",
       "displayAsCandidate": true,
       "lastCheckAttemptAt": "2026-11-16T20:39:03+01:00",
       "staleReferenceReason": "Inserat und sieben Sitze heute geprüft; das Inserat nennt ISOFIX ohne konkrete Anzahl. Die Herstellerunterlagen sprechen für drei Plätze, am konkreten Fahrzeug ist die Anzahl aber nicht direkt bestätigt."
