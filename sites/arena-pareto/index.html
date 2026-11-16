@@ -344,7 +344,8 @@
         { pattern: /^Mistral\b/i, name: "Mistral AI", mark: "M", color: "#f47721" },
         { pattern: /^Nemotron\b/i, name: "NVIDIA", mark: "N", color: "#76b900" },
         { pattern: /^Inkling/i, name: "Thinking Machines", mark: "TM", color: "#a85ed1" },
-        { pattern: /^Solar\b/i, name: "Upstage", mark: "U", color: "#1c9291" }
+        { pattern: /^Solar\b/i, name: "Upstage", mark: "U", color: "#1c9291" },
+        { pattern: /^Spark-X/i, name: "XHToken", mark: "XH", color: "#ab5cbc" }
       ];
       const getLab = (model) => labBrands.find((brand) => brand.pattern.test(model)) || { name: "Unknown lab", mark: "?", color: "#718087" };
       const developerLabel = (name) => name === "Anthropic" ? "Claude" : name;
@@ -731,7 +732,7 @@
             x, y: bottom + 48, fill: "#aebbbc", "font-size": 29, "text-anchor": "middle",
           }, label));
         }
-        for (let tick = -20; tick <= 20; tick += 10) {
+        for (let tick = Math.ceil(SCENE.minScore / 10) * 10; tick <= SCENE.maxScore; tick += 10) {
           const y = yPos(tick);
           svg.append(svgNode("line", {
             x1: left, y1: y, x2: right, y2: y,
@@ -954,17 +955,21 @@
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
         link.href = url;
-        link.download = "arena-agent-pareto-snapshot-2026-11-11.csv";
+        link.download = "arena-agent-pareto-snapshot-2026-11-16.csv";
         document.body.append(link);
         link.click();
         link.remove();
         URL.revokeObjectURL(url);
       });
 
-      fetch("./data.json?v=20261111")
+      fetch("./data.json?v=20261116")
         .then((response) => { if (!response.ok) throw new Error("Could not load the model snapshot."); return response.json(); })
         .then((snapshot) => {
           data = snapshot.records;
+          // Keep every plotted score, including future outliers, inside the chart.
+          const scores = data.map((item) => item.improvement);
+          SCENE.minScore = Math.floor((Math.min(...scores) - 2) / 5) * 5;
+          SCENE.maxScore = Math.ceil((Math.max(...scores) + 2) / 5) * 5;
           frontier = computeFrontier(data);
           renderDeveloperChips();
           renderSummary(snapshot);
