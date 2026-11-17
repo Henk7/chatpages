@@ -628,6 +628,110 @@
         }
       ],
       "needsReview": true
+    },
+    {
+      "id": "actec-trina-744-1024-large",
+      "group": "gross",
+      "status": "gesamt",
+      "seller": "ACTEC · größere Alternative",
+      "name": "Größer: 7,44 kWp Trina + 10,24 kWh",
+      "subtitle": "16 × 465 Wp · 6 kW Hybridwechselrichter · deutlich größer als Wunsch",
+      "url": "https://actec.eu/at/pv10710766-pv-set-7440wp-pv-komplettanlage-mit-10-24-kwh-speicher-trina-465w-trina-trh-6k-6161.html",
+      "image": null,
+      "imageAlt": "Trina PV Set",
+      "imageCaption": "Abbildung des angebotenen Sets",
+      "price": 5638.8,
+      "shipping": 175,
+      "currency": "EUR",
+      "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
+      "shippingText": "175,00 € Spedition nach Österreich; laut Händler auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
+      "checked": "2026-11-17",
+      "pv": 7.44,
+      "storage": 10.24,
+      "grid": "Ja · zeitabhängiger Betriebsmodus",
+      "output": "6.000 W AC · dreiphasig",
+      "meter": "Nicht in Set-Stückliste aufgeführt",
+      "warning": "Deutlich größer als die gewünschten etwa 5 kWp: 16 Module brauchen ca. 32 m² reine Modulfläche. Unterkonstruktion, Kabel und Installation sind extra; Eignung mit Netzbetreiber und Elektrofachbetrieb prüfen.",
+      "specs": {
+        "Artikel / Bestand": "PV10710766; laut ACTEC auf Lager",
+        "Solarmodule": "16 × Trina Vertex S+ TSM-465NEG9R.28, 465 Wp, Glas-Glas; 7,44 kWp, ca. 32 m² reine Modulfläche",
+        "Speicher": "4 × Trina TRBM-2.5K-H mit je 2,56 kWh plus 1 × TRBC-2.5K-H BMS = 10,24 kWh nominal; nutzbare Kapazität prüfen",
+        "Zellchemie / Erweiterung": "LiFePO₄; je Turm laut Händler bis 8 Module / 20,48 kWh",
+        "Wechselrichter": "Trina Nexeos TRH-6K-T2, dreiphasig, 6 kW AC-Nennleistung",
+        "Netzladung": "Herstellerhandbuch beschreibt freigegebenes Laden aus dem Netz und zeitabhängige Nutzung; Grenzwerte, Firmware und Tarifsteuerung vor Bestellung prüfen",
+        "PV-Eingang": "2 MPPT; 150–950 V; max. 9.000 Wp laut Anbieter",
+        "Messung": "Smart Meter nicht als eigene Position in der Setliste; mit Händler klären, ob Stromwandler oder Messgerät beim Wechselrichter enthalten sind",
+        "Notstrom": "Wechselrichter mit dreiphasigem EPS-Ausgang; tatsächliche Hausversorgung und Zusatzteile mit Elektrofachbetrieb klären",
+        "Schutz / Maße": "Wechselrichter IP66; 548 × 458 × 224 mm, 27 kg laut Händler",
+        "Montage / Kabel": "Unterkonstruktion, Solarkabel und Installation extra; Ziegeldach-K2 optional 959,88 €, Trapez optional 359,88 €; zusätzliche Kabel/Stecker und Elektriker kommen hinzu.",
+        "Garantie": "2 Jahre gesetzliche Gewährleistung; konkrete Herstellergarantie der Komponenten und Bedingungen prüfen"
+      },
+      "sources": [
+        {
+          "label": "ACTEC Angebot, Preis und Lieferumfang",
+          "url": "https://actec.eu/at/pv10710766-pv-set-7440wp-pv-komplettanlage-mit-10-24-kwh-speicher-trina-465w-trina-trh-6k-6161.html"
+        },
+        {
+          "label": "Trina: Handbuch Netzladung",
+          "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/08/TRH-5-12K-T2-T3-User-Manual_rev_02_DE_26.07.24.pdf"
+        },
+        {
+          "label": "Trina: Systemdatenblatt",
+          "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "actec-trina-1023-1024-large",
+      "group": "gross",
+      "status": "gesamt",
+      "seller": "ACTEC · größere Alternative",
+      "name": "Größer: 10,23 kWp Trina + 10,24 kWh",
+      "subtitle": "22 × 465 Wp · 8 kW Hybridwechselrichter · deutlich größer als Wunsch",
+      "url": "https://actec.eu/at/pv10710868-pv-set-10-2-kwp-pv-komplettanlage-mit-10-24-kwh-speicher-trina-465w-trina-trh-8k-6269.html",
+      "image": null,
+      "imageAlt": "Trina PV Set",
+      "imageCaption": "Abbildung des angebotenen Sets",
+      "price": 5482.8,
+      "shipping": 175,
+      "currency": "EUR",
+      "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
+      "shippingText": "175,00 € Spedition nach Österreich; laut Händler auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
+      "checked": "2026-11-17",
+      "pv": 10.23,
+      "storage": 10.24,
+      "grid": "Ja · zeitabhängiger Betriebsmodus",
+      "output": "8.000 W AC · dreiphasig",
+      "meter": "Nicht in Set-Stückliste aufgeführt",
+      "warning": "Deutlich größer als die gewünschten etwa 5 kWp: 22 Module brauchen ca. 44 m² reine Modulfläche. Unterkonstruktion, Kabel und Installation sind extra; Eignung mit Netzbetreiber und Elektrofachbetrieb prüfen.",
+      "specs": {
+        "Artikel / Bestand": "PV10710868; laut ACTEC auf Lager",
+        "Solarmodule": "22 × Trina Vertex S+ TSM-465NEG9R.28, 465 Wp, Glas-Glas; 10,23 kWp, ca. 44 m² reine Modulfläche",
+        "Speicher": "4 × Trina TRBM-2.5K-H mit je 2,56 kWh plus 1 × TRBC-2.5K-H BMS = 10,24 kWh nominal; nutzbare Kapazität prüfen",
+        "Zellchemie / Erweiterung": "LiFePO₄; je Turm laut Händler bis 8 Module / 20,48 kWh",
+        "Wechselrichter": "Trina Nexeos TRH-8K-T3, dreiphasig, 8 kW AC-Nennleistung",
+        "Netzladung": "Herstellerhandbuch beschreibt freigegebenes Laden aus dem Netz und zeitabhängige Nutzung; Grenzwerte, Firmware und Tarifsteuerung vor Bestellung prüfen",
+        "PV-Eingang": "3 MPPT; max. 12.000 Wp laut Anbieter; Datenblatt und Stringplanung prüfen",
+        "Messung": "Smart Meter nicht als eigene Position in der Setliste; mit Händler klären, ob Stromwandler oder Messgerät beim Wechselrichter enthalten sind",
+        "Notstrom": "Wechselrichter mit dreiphasigem EPS-Ausgang; tatsächliche Hausversorgung und Zusatzteile mit Elektrofachbetrieb klären",
+        "Schutz / Maße": "Wechselrichter IP66; 548 × 458 × 224 mm, 27 kg laut Händler",
+        "Montage / Kabel": "Unterkonstruktion, Solarkabel und Installation extra; Ziegeldach-K2 optional 1.283,88 €, Trapez optional 479,88 €; zusätzliche Kabel/Stecker und Elektriker kommen hinzu.",
+        "Garantie": "2 Jahre gesetzliche Gewährleistung; konkrete Herstellergarantie der Komponenten und Bedingungen prüfen"
+      },
+      "sources": [
+        {
+          "label": "ACTEC Angebot, Preis und Lieferumfang",
+          "url": "https://actec.eu/at/pv10710868-pv-set-10-2-kwp-pv-komplettanlage-mit-10-24-kwh-speicher-trina-465w-trina-trh-8k-6269.html"
+        },
+        {
+          "label": "Trina: Handbuch Netzladung",
+          "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/08/TRH-5-12K-T2-T3-User-Manual_rev_02_DE_26.07.24.pdf"
+        },
+        {
+          "label": "Trina: Systemdatenblatt",
+          "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
+        }
+      ]
     }
   ],
   "history": [
@@ -684,6 +788,18 @@
       "date": "2026-11-17",
       "price": 5398.8,
       "shipping": null
+    },
+    {
+      "id": "actec-trina-744-1024-large",
+      "date": "2026-11-17",
+      "price": 5638.8,
+      "shipping": 175
+    },
+    {
+      "id": "actec-trina-1023-1024-large",
+      "date": "2026-11-17",
+      "price": 5482.8,
+      "shipping": 175
     }
   ]
 }
