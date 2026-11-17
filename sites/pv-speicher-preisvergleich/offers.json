@@ -108,7 +108,7 @@
     },
     {
       "id": "solago-anker-5000-10",
-      "group": "pruefen",
+      "group": "stecker",
       "status": "offen",
       "seller": "Solago · Österreich",
       "name": "Anker Solarbank 4 Pro · Flachdach-Set",
@@ -154,7 +154,7 @@
     },
     {
       "id": "solarhandel-anker4-5000",
-      "group": "pruefen",
+      "group": "stecker",
       "status": "offen",
       "seller": "Solarhandel24 · Lieferung Österreich",
       "name": "Anker Solarbank 4 Pro + AIKO 500 W",
@@ -196,7 +196,7 @@
     },
     {
       "id": "solarhandel-anker-x1-5335",
-      "group": "pruefen",
+      "group": "dach",
       "status": "offen",
       "seller": "Solarhandel24 · Lieferung Österreich",
       "name": "Anker X1-H5K-T + AIKO 485 W",
@@ -238,7 +238,7 @@
     },
     {
       "id": "pvmarkt-huawei-564",
-      "group": "pruefen",
+      "group": "dach",
       "status": "teilpreis",
       "seller": "PVmarkt.shop · Österreich",
       "name": "Huawei SUN2000 + LUNA2000 10 kWh",
