@@ -69,11 +69,11 @@
     drawView();
   }
   function positionLabels(items, x, y) {
-    const boxes = [], result = new Map(), gap = 8, height = 44;
+    const boxes = [], result = new Map(), gap = 8, height = 54;
     // Give frontier models first choice of label positions without hiding any other model.
     const order = [...items].sort((a, b) => Number(frontier.includes(b)) - Number(frontier.includes(a)) || b.elo - a.elo);
     for (const item of order) {
-      const px = x(item.cost), py = y(item.elo), width = Math.max(235, 66 + item.model.length * 12);
+      const px = x(item.cost), py = y(item.elo), width = Math.max(270, 78 + item.model.length * 15);
       const options = [px + 18, px - width - 18];
       let selected = null;
       for (const desiredX of options) {
@@ -125,9 +125,9 @@
       group.append(node("line", {x1: px, y1: py, x2: Math.max(box.x, Math.min(box.x + box.width, px)), y2: box.y + box.height / 2, stroke: "#768990", "stroke-width": 2}));
       group.append(node("circle", {cx: px, cy: py, r: 10, fill: brand.color, stroke: item.provisional ? "#d8a5ff" : frontier.includes(item) ? "#b7e66b" : "#eaf1ef", "stroke-width": 4, ...(item.provisional ? {"stroke-dasharray": "5 3"} : {})}));
       group.append(node("rect", {class: "label-bg", x: box.x, y: box.y, width: box.width, height: box.height, rx: 9, fill: "#24333a", stroke: item.provisional ? "#c58cea" : "#4b5d63", "stroke-width": 2, ...(item.provisional ? {"stroke-dasharray": "7 4"} : {})}));
-      group.append(node("circle", {cx: box.x + 22, cy: box.y + 22, r: 15, fill: brand.color}));
-      group.append(node("text", {x: box.x + 22, y: box.y + 28, fill: "#fff", "font-size": brand.mark.length > 1 ? 14 : 18, "font-weight": 800, "text-anchor": "middle"}, brand.mark));
-      group.append(node("text", {x: box.x + 44, y: box.y + 29, fill: "#f4f7f6", "font-size": 23, "font-weight": 700}, item.model));
+      group.append(node("circle", {cx: box.x + 26, cy: box.y + 27, r: 18, fill: brand.color}));
+      group.append(node("text", {x: box.x + 26, y: box.y + 34, fill: "#fff", "font-size": brand.mark.length > 1 ? 16 : 21, "font-weight": 800, "text-anchor": "middle"}, brand.mark));
+      group.append(node("text", {x: box.x + 52, y: box.y + 36, fill: "#f4f7f6", "font-size": 29, "font-weight": 700}, item.model));
       const show = () => showItem(item);
       group.addEventListener("focus", show);
       group.addEventListener("mouseenter", show);
