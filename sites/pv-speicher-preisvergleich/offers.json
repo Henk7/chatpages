@@ -1,0 +1,367 @@
+{
+  "updated": "2026-11-17",
+  "scope": "4–5 kWp Module, ungefähr 10 kWh Speicher und Netzladung",
+  "offers": [
+    {
+      "id": "tepto-sigenmate-10752",
+      "group": "stecker",
+      "status": "teilpreis",
+      "seller": "Tepto Österreich",
+      "name": "Sigenergy SigenMate 2700 Ultra + 3 Batterien",
+      "subtitle": "8 × 500 Wp · 10,752 kWh · einphasig",
+      "url": "https://www.tepto.at/Tepto-4000W-Balkonkraftwerk-Premium-mit-Sigenergy-SigenMate-mit-10-8kWh-Speicher",
+      "image": "https://cdn.tepto.de/media/1f/34/30/1793285251/1_PV11543.webp?width=900",
+      "imageAlt": "Sigenergy SigenMate Haupteinheit; Abbildung zeigt nicht den gesamten Lieferumfang",
+      "price": 4066.8,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Gerätepreis inkl. MwSt.",
+      "shippingText": "Versand nach Österreich und Kosten im Checkout prüfen; Händlerangaben widersprüchlich.",
+      "checked": "2026-11-17",
+      "pv": 4,
+      "storage": 10.752,
+      "grid": "Ja · bis 1.400 W bidirektional",
+      "output": "800 W AC netzgekoppelt",
+      "meter": "Sigen Power Sensor enthalten",
+      "warning": "Montagesystem separat. 4.000 Wp sind Modulleistung; ins Haus gehen netzgekoppelt nur 800 W. Die ausgewiesenen 3.600 W beziehen sich auf mehrere Haupteinheiten bzw. Bypass-Konfigurationen.",
+      "specs": {
+        "Ausgewählte Variante": "8 Module und 3 Erweiterungsbatterien · Artikel PVST5393.33",
+        "Solarmodule": "8 × Jolywood Niwa JW-HD108N-R2, 500 Wp, Glas-Glas, bifazial",
+        "Speicher": "1 × SigenMate 2700 Ultra + 3 × BAT 2700; 4 × 2,688 = 10,752 kWh nominal; nutzbar nicht angegeben",
+        "Zellchemie / Ausbau": "LiFePO₄; pro Haupteinheit laut Hersteller bis 18,8 kWh",
+        "Netzladung": "Ja, bidirektionaler Wechselrichter bis 1.400 W; Konfiguration und Tarifunterstützung prüfen",
+        "PV-Eingang": "Bis 4.000 W, 4 MPPT, max. 32 A je MPPT; mit mindestens 2 Zusatzbatterien max. 4.000 W PV-Ladung",
+        "Ausgang": "Netzgekoppelt 800 W nominal; Ersatzstrom 1.400 W nominal; Bypass-Angaben nicht mit Netzeinspeisung verwechseln",
+        "Messung": "1 × Sigen Power Sensor TP-CT100-WI enthalten",
+        "Weiteres Zubehör": "8 × 5 m und 8 × 3 m MC4-Verlängerungen laut Lieferliste; Montageset optional",
+        "Schutz / Temperatur": "IP66; −20 bis +55 °C laut Hersteller",
+        "Garantie / Kommunikation": "10 Jahre Herstellergarantie für das Gerät; WLAN und Bluetooth; Bedingungen prüfen",
+        "Abmessungen / Gewicht": "Haupteinheit 460 × 275 × 225 mm; 29 kg; Erweiterungen zusätzlich",
+        "Montage / Anschluss": "Montage und Elektroarbeiten nicht im genannten Preis; Genehmigung/Netzbetreiber klären"
+      },
+      "sources": [
+        {
+          "label": "Angebot und Lieferumfang",
+          "url": "https://www.tepto.at/Tepto-4000W-Balkonkraftwerk-Premium-mit-Sigenergy-SigenMate-mit-10-8kWh-Speicher"
+        },
+        {
+          "label": "Sigenergy: technische Daten",
+          "url": "https://eu-store.sigenergy.com/en/products/sigenmate-2700-ultra"
+        },
+        {
+          "label": "Sigenergy: PV-Ladeleistung",
+          "url": "https://de-store.sigenergy.com/pages/faq"
+        }
+      ]
+    },
+    {
+      "id": "lumix-solax-1024",
+      "group": "dach",
+      "status": "gesamt",
+      "seller": "Lumix PV-Shop",
+      "name": "SolaX X3-HYB G4 PRO + HS25",
+      "subtitle": "10 × 470 Wp · 10,24 kWh · 3-phasig · Ziegeldach",
+      "url": "https://lumix-pvshop.at/products/pv-anlage-5-kwp-komplettset-solax-hs25-speicher",
+      "image": "https://lumix-pvshop.at/cdn/shop/files/solax-t-bat-hs-10-0-hochvoltspeicher-9-2-kwh-nutzbar-lfp_93436620-9c40-4b14-bba0-5de167a0f490.png",
+      "imageAlt": "SolaX HS25 Speicher; Abbildung zeigt nicht das gesamte Set",
+      "price": 7774.84,
+      "shipping": 189,
+      "currency": "EUR",
+      "priceLabel": "Gerätepreis inkl. MwSt.",
+      "shippingText": "189,00 € Spedition nach Österreich; laut Shop kostenlos ab 7.900 € Warenwert.",
+      "checked": "2026-11-17",
+      "pv": 4.7,
+      "storage": 10.24,
+      "grid": "Ja · zeitgesteuert; Leistung prüfen",
+      "output": "6.000 W AC · dreiphasig",
+      "meter": "SolaX DTSU666-D enthalten",
+      "warning": "Konfiguration Ziegeldach / 10,2 kWh. Fachmontage, Netzanschluss und einige Elektro-Komponenten sind zusätzlich. Preis und Versand an der Kasse prüfen.",
+      "specs": {
+        "Ausgewählte Variante": "Ziegeldach K2 Systems, 10,2 kWh · Artikel SET-PV-5-ZIE-S25-04",
+        "Solarmodule": "10 × Trina Solar Vertex S+ TSM-470NEG9R.28, je 470 Wp oder stärker, Glas-Glas; Modul 1.762 × 1.134 × 30 mm, 21 kg",
+        "Speicher": "SolaX T-BAT-SYS-HV-S2.5 (HS25): 4 × 2,56 kWh = 10,24 kWh nominal, etwa 90 % nutzbar; 1 × MCS0800 Steuerung",
+        "Zellchemie / Ausbau": "LiFePO₄; laut Händler bis 33,3 kWh konfigurierbar; ab 10 Modulen Series Box",
+        "Netzladung": "Ja, ChargeFromGrid im Handbuch; zeit- und SOC-gesteuert; maximal praktisch nutzbare Ladeleistung der Kombination nicht bestätigt",
+        "Wechselrichter": "SolaX X3-HYB 6.0 G4 PRO, 3-phasig, 6 kW AC, 2 MPPT",
+        "Messung / Kommunikation": "1 × SolaX DTSU666-D Smart Meter enthalten; App/Cloud",
+        "Weiteres Zubehör": "K2-Unterkonstruktion für gewählte Dachart, 100 m Solarkabel, 10 MC4-Paare",
+        "Schutz": "Wechselrichter IP66; HS25-System laut Händler IP65",
+        "Notstrom": "Ersatzstromausgang; für ganzes Haus ggf. zusätzliche Komponenten erforderlich",
+        "Abmessungen / Gewicht": "Wechselrichter 560 × 503 × 210 mm, 38 kg; Speichergewicht/-maße gesondert beim Händler prüfen",
+        "Garantie": "Module 25 Jahre Produktgarantie; Wechselrichter laut Händler 5 Jahre, 10 Jahre bei SolaX-Cloud-Anbindung; Bedingungen der Speicherherstellergarantie prüfen",
+        "Nicht enthalten": "AC-Kabel, Schutzgeräte, Überspannungsschutz, Erdung, Installation und Anmeldung"
+      },
+      "sources": [
+        {
+          "label": "Angebot und Komponenten",
+          "url": "https://lumix-pvshop.at/products/pv-anlage-5-kwp-komplettset-solax-hs25-speicher"
+        },
+        {
+          "label": "SolaX: Handbuch mit Netzladung",
+          "url": "https://solaxpower.com/uploads/file/20240827/320101107100%20X3-HYB-G4%20PRO%20Series%20User%20Manual%20240620-EN.pdf"
+        }
+      ]
+    },
+    {
+      "id": "tepto-fox-1055",
+      "group": "pruefen",
+      "status": "teilpreis",
+      "seller": "Tepto Österreich",
+      "name": "FoxESS Avocado 22 Pro + 4 Batterien",
+      "subtitle": "8 × 500 Wp · 10,55 kWh · PV-Eingang begrenzt",
+      "url": "https://www.tepto.at/Tepto-4000W-Plug-Play-PV-Anlage-Premium-mit-FoxEss-Avocado-22-Pro-10-55kWh-Speicher",
+      "image": "https://cdn.tepto.de/media/b5/7d/4d/1772526068/PV1456.png?width=900",
+      "imageAlt": "FoxESS Avocado 22 Pro Haupteinheit; Batterien und Solarmodule sind nicht abgebildet",
+      "price": 3898.8,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Gerätepreis inkl. MwSt.",
+      "shippingText": "Versand nach Österreich und Kosten im Checkout prüfen; Händlerangaben widersprüchlich.",
+      "checked": "2026-11-17",
+      "pv": 4,
+      "storage": 10.55,
+      "grid": "Netzladen laut e-tec · prüfen",
+      "output": "800 W AC nominal · einphasig",
+      "meter": "stromleser.one laut Auswahl gratis vorausgewählt; bestätigen",
+      "warning": "Wichtige Abweichung: 4.000 Wp Module, aber maximal 2.600 W PV-Ladeleistung laut Händler. Netzladung mit Verkäufer für diese Firmware bestätigen. Nicht automatisch mit einem 4-kW-PV-Eingang gleichsetzen.",
+      "specs": {
+        "Ausgewählte Variante": "8 Module und 4 Erweiterungen · Artikel PVST5393.85",
+        "Solarmodule": "8 × Solyco 500 Wp R-BG 108h.5, bifazial, Fullblack",
+        "Speicher": "1 × Avocado 22 Pro-M + 4 × 2,11 kWh Erweiterung = 10,55 kWh nominal; nutzbare Kapazität nicht bestätigt",
+        "Zellchemie / Ausbau": "LiFePO₄; max. 12,66 kWh laut Händler",
+        "Netzladung": "e-tec beschreibt Laden bei niedrigen Netzpreisen. Maximal 1.200 VA AC-Eingang; konkrete Ladeleistung und Tarif-Firmware bestätigen",
+        "PV-Eingang": "4 MPPT, 10–60 V, max. 20 A je Eingang; laut Händler max. 2.600 W PV-Ladeleistung. Kompatibilität der 8 Module in der vorgesehenen Verschaltung bestätigen",
+        "Ausgang": "800 W nominal netzgekoppelt; bis 1.200 W einstellbar nur fachgerecht; Notstrom 1.200 W, Bypass 2.200 W",
+        "Weiteres Zubehör": "Laut Lieferliste 4 × 5 m und 4 × 3 m Solarkabel sowie je 4 Plus-/Minus-Y-Verteiler; Montageset optional",
+        "Schutz / Temperatur": "IP65; −20 bis +55 °C; Heizfolie laut Händler",
+        "Abmessungen / Gewicht": "Haupteinheit 420 × 285 × 255 mm, ca. 26,5 kg; Erweiterungen zusätzlich",
+        "Garantie": "10 Jahre laut Händler, Bedingungen prüfen"
+      },
+      "sources": [
+        {
+          "label": "Ausgewähltes Angebot",
+          "url": "https://www.tepto.at/Tepto-4000W-Plug-Play-PV-Anlage-Premium-mit-FoxEss-Avocado-22-Pro-10-55kWh-Speicher"
+        },
+        {
+          "label": "Technische Daten und PV-Grenzen",
+          "url": "https://www.tepto.at/FoxEss-Avocado-22-Pro-Speicherpaket-10-55-kWh"
+        },
+        {
+          "label": "e-tec: Netzladung",
+          "url": "https://www.e-tec.at/de/shop/produkt/134263/foxess-avocado-22-pro-speicher-fuer-balkonkraftwerke-2kwh.html"
+        }
+      ]
+    },
+    {
+      "id": "lumix-solinteg-pylontech",
+      "group": "pruefen",
+      "status": "offen",
+      "seller": "Lumix PV-Shop",
+      "name": "Solinteg MHT-5K-25 + Pylontech Force H3",
+      "subtitle": "10 × 470 Wp · 10,24 kWh · 3-phasig",
+      "url": "https://lumix-pvshop.at/products/pv-anlage-5-kwp-komplettset-solinteg",
+      "image": "",
+      "imageAlt": "",
+      "price": null,
+      "shipping": 189,
+      "currency": "EUR",
+      "priceLabel": "Preis für Variante offen",
+      "shippingText": "Laut Shop 189,00 € Versand unter 7.900 € Warenwert; Preis hängt von Dachart ab.",
+      "checked": "2026-11-17",
+      "pv": 4.7,
+      "storage": 10.24,
+      "grid": "Ja · Zeitfenster und Ziel-SOC",
+      "output": "5.000 W AC · dreiphasig",
+      "meter": "Solinteg RMM-MA enthalten",
+      "warning": "Im Shop zuerst Pylontech Force H3 10,2 kWh und Dachart auswählen. Der zuerst angezeigte Preis ist für ein Set ohne Speicher und gehört nicht in den Preisvergleich.",
+      "specs": {
+        "Auswahl": "Pylontech Force H3 10,2 kWh + passende Dachart; Standardauswahl ist ohne Speicher",
+        "Solarmodule": "10 × Trina Solar Vertex S+ 470 Wp oder stärker; Glas-Glas; zusammen mindestens 4,70 kWp",
+        "Speicher": "Pylontech Force H3, 2 × 5,12 kWh = 10,24 kWh nominal, 9,70 kWh nutzbar; Steuerung FC1000",
+        "Ausbau / Chemie": "LiFePO₄; 2 bis 6 Module (10,24 bis 30,72 kWh)",
+        "Wechselrichter": "Solinteg MHT-5K-25, dreiphasig, 5 kW AC, 2 MPPT, 120–950 V MPPT-Bereich; max. 15 A je MPPT",
+        "Netzladung": "Herstellerhandbuch bestätigt Laden aus dem Netz im einstellbaren Zeitfenster und bis Ziel-SOC; Leistung der gewählten Batteriekombination prüfen",
+        "Messung / Kommunikation": "Smart Meter Solinteg RMM-MA und R2MD-DuoCom WLAN/LAN/Bluetooth im Set",
+        "Zubehör": "K2-Unterkonstruktion je Dachart; 100 m Solarkabel und 10 Paar MC4",
+        "Notstrom": "Ersatzstrom-Ausgang vorhanden; Funktion und notwendige Umschaltung beim Installateur klären",
+        "Nicht enthalten": "Elektromontage, Netzanschluss, Schutzgeräte, Erdung und weitere Kleinteile"
+      },
+      "sources": [
+        {
+          "label": "Auswahl, Komponenten und Preise",
+          "url": "https://lumix-pvshop.at/products/pv-anlage-5-kwp-komplettset-solinteg"
+        },
+        {
+          "label": "Solinteg: Netzladung im Handbuch",
+          "url": "https://docs.solinteg.com/uploads/11/01_Integ%20M%20series/02_MHT-4-20K/MHT-4~20K-UMEN_9b0a7558-a7ed-4932-a31d-2bbd21c21442.pdf"
+        },
+        {
+          "label": "Solinteg: Datenblatt",
+          "url": "https://www.solinteg.com/de/integ-m/231d38aa49dd18499a051e5e47cb2f82.html"
+        }
+      ]
+    },
+    {
+      "id": "solfuerza-anker-10",
+      "group": "pruefen",
+      "status": "offen",
+      "seller": "Solfuerza Österreich",
+      "name": "Anker SOLIX Solarbank 4 E5000 Pro + BP5000",
+      "subtitle": "8 × 500 Wp · 10,048 kWh bei Auswahl",
+      "url": "https://solfuerza.at/products/balkonkraftwerk-4000w-speicher-jolywood-anker-solarbank-4-pro",
+      "image": "",
+      "imageAlt": "",
+      "price": null,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "10-kWh-Variantenpreis offen",
+      "shippingText": "Österreich-Versand laut Händler; Kosten für die gewählte Kombination im Checkout prüfen.",
+      "checked": "2026-11-17",
+      "pv": 4,
+      "storage": 10.048,
+      "grid": "Ja · bis 2.500 W AC",
+      "output": "800 W ab Werk; bis 2.500 W unter Bedingungen",
+      "meter": "Lieferumfang der 10-kWh-Variante prüfen",
+      "warning": "Im Shop 10 kWh ausdrücklich auswählen: Der Grundpreis bezieht sich auf 5 kWh und ist kein Preis für das gesuchte Set.",
+      "specs": {
+        "Auswahl": "4.000 Wp und 10 kWh; eine Erweiterung BP5000 muss ausgewählt sein",
+        "Solarmodule": "8 × Jolywood 500 Wp, 4.000 Wp gesamt laut Angebot",
+        "Speicher": "Solarbank 4 E5000 Pro 5.024 Wh + BP5000 5.024 Wh = 10.048 Wh nominal",
+        "Zellchemie / Ausbau": "LiFePO₄; bis zu fünf BP5000 Zusatzmodule, insgesamt bis ca. 30 kWh",
+        "Netzladung": "Ja, Hersteller gibt max. 2.500 W AC-Ladeleistung an",
+        "PV-Eingang": "Max. 5.000 W; 4 MPPT, je 36 A, MPPT-Spannungsbereich 16–50 V laut Hersteller",
+        "Ausgang": "800 W AC ab Werk; Freischaltung bis 2.500 W nur unter Hersteller- und örtlichen Anschlussbedingungen; nicht mit 3-phasiger Dachanlage verwechseln",
+        "Notstrom": "Bis 2.500 W am separaten Off-Grid-Ausgang laut Hersteller; kein automatischer Beleg für Ersatzstrom im ganzen Haus",
+        "Schutz / Temperatur": "IP66; −20 bis +55 °C laut Hersteller",
+        "Garantie": "10 Jahre Herstellerangabe; Garantiebedingungen je Komponente prüfen",
+        "Maße / Gewicht": "Haupteinheit 460 × 305 × 355 mm, 50 kg; BP5000 zusätzlich",
+        "Messung / Montage": "Smart Meter, Solarkabel und Montagesystem im ausgewählten Set und Preis ausdrücklich prüfen"
+      },
+      "sources": [
+        {
+          "label": "Händler und Varianten",
+          "url": "https://solfuerza.at/products/balkonkraftwerk-4000w-speicher-jolywood-anker-solarbank-4-pro"
+        },
+        {
+          "label": "Anker: technische Daten",
+          "url": "https://www.ankersolix.com/de/products/ae103"
+        }
+      ]
+    },
+    {
+      "id": "pvmarkt-huawei-564",
+      "group": "pruefen",
+      "status": "teilpreis",
+      "seller": "PVmarkt.shop · Österreich",
+      "name": "Huawei SUN2000 + LUNA2000 10 kWh",
+      "subtitle": "12 × 470 Wp = 5,64 kWp · 3-phasig",
+      "url": "https://pvmarkt.shop/produkt/komplettpaket-5kwp-mit-10kwh-speicher-huawei-2/",
+      "image": "",
+      "imageAlt": "",
+      "price": 7006.8,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Gerätepreis inkl. MwSt.",
+      "shippingText": "Versandkosten für Österreich nicht zuverlässig bestätigt; Abholung in Weißkirchen laut Shop.",
+      "checked": "2026-11-17",
+      "pv": 5.64,
+      "storage": 10,
+      "grid": "Ja · Freischaltung/Parametrierung",
+      "output": "5.000 W AC · dreiphasig",
+      "meter": "Huawei DTSU666-H enthalten",
+      "warning": "Größer als das gesuchte Ziel: Laut Stückliste 12 × 470 Wp = 5,64 kWp, obwohl der Titel 5 kWp nennt. Lieferung und konkrete Komponenten vor Bestellung bestätigen.",
+      "specs": {
+        "Solarmodule": "12 × Trina Solar Vertex S+ TSM-NEG9R.28, je 470 Wp; rechnerisch 5,64 kWp",
+        "Wechselrichter": "Huawei SUN2000-5KTL-M1 HC Hybrid, 5 kW, dreiphasig",
+        "Speicher": "Huawei LUNA2000 10 kWh; genaue Modulgeneration und nutzbare Kapazität im Angebot bestätigen",
+        "Netzladung": "SUN2000-M1 Handbuch beschreibt die Funktion; Aktivierung und lokale Anforderungen durch Elektrofachbetrieb prüfen",
+        "Messung": "Huawei Smart Power Sensor DTSU666-H laut Lieferliste",
+        "Montage / weitere Teile": "Unterkonstruktion, Montagedienstleistung und weitere Elektrokomponenten in der Liste nicht eindeutig genannt; vor Bestellung klären",
+        "Grenze": "5,64 kWp liegen über dem Suchbereich 4–5 kWp"
+      },
+      "sources": [
+        {
+          "label": "Shop und Stückliste",
+          "url": "https://pvmarkt.shop/produkt/komplettpaket-5kwp-mit-10kwh-speicher-huawei-2/"
+        },
+        {
+          "label": "Huawei-Wechselrichter und Netzladung",
+          "url": "https://solfuerza.at/collections/huawei-wechselrichter/products/huawei-sun2000-5ktl-m1-hybrid-wechselrichter-5-kw"
+        }
+      ]
+    },
+    {
+      "id": "otto-anker-de",
+      "group": "pruefen",
+      "status": "ausland",
+      "seller": "OTTO Deutschland",
+      "name": "Anker Solarbank 4 Pro · Deutschlandpreis",
+      "subtitle": "8 × 500 Wp · 10 kWh gewählt",
+      "url": "https://www.otto.de/p/anker-balkonkraftwerk-4000w-anker-solix-solarbank-4-e5000-pro-all-in-one-stromspeicher-optional-1-5-anker-bp5000-erweiterungsakku-inkl-anker-smart-meter-gen-2-und-8x-sunpro-500w-solarmodule-pv-speicher-mit-notstromfunktion-CS0ILB0UT/",
+      "image": "",
+      "imageAlt": "",
+      "price": 3498,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Deutschlandpreis · Österreich offen",
+      "shippingText": "Lieferung und Endpreis nach Österreich nicht bestätigt; nicht direkt mit österreichischen Preisen vergleichbar.",
+      "checked": "2026-11-17",
+      "pv": 4,
+      "storage": 10.048,
+      "grid": "Ja · bis 2.500 W AC",
+      "output": "800 W ab Werk; ggf. bis 2.500 W",
+      "meter": "Anker Smart Meter Gen 2 laut Angebot",
+      "warning": "Nur Beobachtung: Deutscher Shop, mögliche Steuer- und Versandunterschiede. Den 10-kWh-Ausbau und Lieferland beim Händler prüfen.",
+      "specs": {
+        "Auswahl": "10 kWh: Solarbank 4 E5000 Pro plus 1 × BP5000; 8 Sunpro 500 W Module",
+        "Speicher": "10,048 kWh nominal; LiFePO₄; bis ca. 30 kWh erweiterbar",
+        "Netzladung": "Bis 2.500 W AC laut Anker",
+        "PV / Ausgang": "4.000 Wp Module; Gerät max. 5.000 W PV-Eingang; 800 W ab Werk, höhere Ausgabe nur unter Bedingungen",
+        "Messung": "Anker Smart Meter Gen 2 laut Lieferumfang",
+        "Österreich": "Lieferung, Steuern und Versand nicht bestätigt; kein österreichischer Endpreis"
+      },
+      "sources": [
+        {
+          "label": "Deutsches Angebot",
+          "url": "https://www.otto.de/p/anker-balkonkraftwerk-4000w-anker-solix-solarbank-4-e5000-pro-all-in-one-stromspeicher-optional-1-5-anker-bp5000-erweiterungsakku-inkl-anker-smart-meter-gen-2-und-8x-sunpro-500w-solarmodule-pv-speicher-mit-notstromfunktion-CS0ILB0UT/"
+        },
+        {
+          "label": "Anker: technische Daten",
+          "url": "https://www.ankersolix.com/de/products/ae103"
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "id": "tepto-sigenmate-10752",
+      "date": "2026-11-17",
+      "price": 4066.8,
+      "shipping": null
+    },
+    {
+      "id": "lumix-solax-1024",
+      "date": "2026-11-17",
+      "price": 7774.84,
+      "shipping": 189
+    },
+    {
+      "id": "tepto-fox-1055",
+      "date": "2026-11-17",
+      "price": 3898.8,
+      "shipping": null
+    },
+    {
+      "id": "pvmarkt-huawei-564",
+      "date": "2026-11-17",
+      "price": 7006.8,
+      "shipping": null
+    },
+    {
+      "id": "otto-anker-de",
+      "date": "2026-11-17",
+      "price": 3498,
+      "shipping": null
+    }
+  ]
+}
