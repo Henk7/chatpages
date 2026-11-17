@@ -185,6 +185,19 @@
       .frontier-pill { margin-left: 4px; }
       .select-box { min-width: 135px; }
     }
+    .duel-source { padding: 0 24px 16px; }
+    .duel-provisional-key { width: 15px; height: 15px; border: 2px dashed #b469e4; border-radius: 50%; }
+    #duel-plot { display: block; width: 100%; height: 500px; overflow: hidden; touch-action: none; user-select: none; }
+    #duel-plot text { font-family: inherit; }
+    #duel-plot .model-label:focus .label-bg { stroke: #fff; stroke-width: 3; }
+    .duel-details { padding: 16px 22px 22px; }
+    .duel-details > p { margin: 0 0 14px; color: var(--muted); font-size: .84rem; }
+    .duel-details .model-cell { min-width: 220px; }
+    .duel-details .frontier-pill.provisional { background: #f3eafd; color: #744495; }
+    .availability-note { margin: 14px 0 0; color: #45545a; font-size: .87rem; }
+    .availability-note a { color: #31544b; font-weight: 750; }
+    @media (max-width: 760px) { .duel-source { padding: 0 16px 13px; } #duel-plot { height: 440px; } .duel-details { padding: 14px 13px 18px; } }
+    @media (max-width: 430px) { #duel-plot { height: 405px; } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
   </style>
 </head>
@@ -202,6 +215,7 @@
       <div class="snapshot-strip" id="snapshot-strip" aria-label="Snapshot details">
         <span><i class="snapshot-dot" aria-hidden="true"></i><strong>Loading snapshot…</strong></span>
       </div>
+      <p class="availability-note"><strong>Model availability · Nov 17:</strong> GPT-6.2 Astra and GPT-6.2 Sol are available to test on Arena; their Agent Arena scores were not yet published when announced. <a href="https://x.com/arena/status/2122752107292099001" target="_blank" rel="noopener noreferrer">Arena announcement ↗</a></p>
       <div class="hero-actions">
         <a class="button primary source-link" href="https://arena.ai/leaderboard/agent/pareto" target="_blank" rel="noopener noreferrer">Open Arena source ↗</a>
         <button id="download-csv" class="button" type="button">Download CSV ↓</button>
@@ -239,6 +253,39 @@
         <span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the full chart</span>
       </div>
       <div id="tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model label to see its exact values.</div>
+    </section>
+
+    <section class="section card chart-card" id="agentduel" aria-labelledby="duel-chart-title">
+      <div class="card-head">
+        <div>
+          <h2 id="duel-chart-title">AgentDuel · Pareto frontier</h2>
+          <p>Head-to-head Elo vs. battle-adjusted median cost per task · a separate benchmark from Arena AI</p>
+          <p id="duel-snapshot">Loading AgentDuel snapshot…</p>
+        </div>
+        <div class="legend" aria-label="AgentDuel chart legend">
+          <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Model + provider</span>
+          <span class="legend-item"><i class="legend-line" aria-hidden="true"></i>Ranked Pareto frontier</span>
+          <span class="legend-item"><i class="duel-provisional-key" aria-hidden="true"></i>Provisional</span>
+        </div>
+      </div>
+      <div class="duel-source"><a class="button" href="https://agentduel.com/leaderboard" target="_blank" rel="noopener noreferrer">Open AgentDuel source ↗</a></div>
+      <div class="chart-wrap duel-chart-wrap">
+        <div class="chart-tools" aria-label="AgentDuel chart zoom controls">
+          <button class="icon-button" id="duel-zoom-in" type="button" aria-label="Zoom in on AgentDuel chart" title="Zoom in">+</button>
+          <button class="icon-button" id="duel-zoom-out" type="button" aria-label="Zoom out on AgentDuel chart" title="Zoom out">−</button>
+          <button class="icon-button reset" id="duel-zoom-reset" type="button" title="Fit the whole AgentDuel chart">Fit</button>
+        </div>
+        <svg id="duel-plot" role="img" aria-label="AgentDuel Elo against median cost per task. Every model name and provider is shown. Drag or pinch to pan and zoom."></svg>
+      </div>
+      <div class="chart-help"><span class="hint"><span class="key">Pinch</span> zoom · drag to move around</span><span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the whole chart</span></div>
+      <div id="duel-tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model to see its exact values.</div>
+      <div class="duel-details">
+        <p>Higher Elo and lower cost are better. Cost and time are adjusted for average battle difficulty by AgentDuel; 95% intervals describe uncertainty in Elo. The green line uses only ranked models. Provisional models have fewer than 100 eligible votes and are shown for context, but do not determine that line. Elo and Arena net improvement measure different things and must not be directly compared. <a href="https://agentduel.com/leaderboard/methodology" target="_blank" rel="noopener noreferrer">Methodology ↗</a></p>
+        <div class="table-scroll"><table>
+          <thead><tr><th scope="col">Rank</th><th scope="col">Model</th><th scope="col" class="number-cell">Elo · 95% CI</th><th scope="col" class="number-cell">Median cost / task</th><th scope="col" class="number-cell">Median time / task</th></tr></thead>
+          <tbody id="duel-rows"></tbody>
+        </table></div>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="frontier-heading">
@@ -986,5 +1033,6 @@
         });
     })();
   </script>
+  <script src="./agentduel.js?v=20261117"></script>
 </body>
 </html>

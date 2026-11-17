@@ -27,3 +27,24 @@ Qwen4-Max (xHigh) is included at rank 14: +7.46% net improvement and $1.47 media
 Provider artwork is embedded inline: Simple Icons SVGs (CC0) where available, with colored initials for providers without an icon in that set.
 
 The explorer is an independent reproduction of public Arena data and is not affiliated with Arena.
+
+## AgentDuel comparison
+
+The separate AgentDuel chart uses the public <https://agentduel.com/leaderboard>
+snapshot generated November 17, 2026, 18:00 UTC. Its y-axis is AgentDuel's
+head-to-head Elo, not Arena's net improvement. Cost and time are the source's
+battle-adjusted medians. The point estimates and 95% Elo intervals are copied
+as displayed by AgentDuel.
+
+- `agentduel-data.json` contains the dated model snapshot, including ranked
+  and provisional models. Qwen 4 Max is provisional in this snapshot.
+- `agentduel.js` draws a second independent, pannable and zoomable SVG and
+  builds its table. The frontier is calculated only from ranked models, just
+  as on AgentDuel; provisional models are visible but do not set the line.
+- To refresh it, capture a single current leaderboard generation; update its
+  timestamp and all model values, retaining provisional status and missing
+  values faithfully. Bump the `agentduel-data.json` cache version in
+  `agentduel.js` and the `agentduel.js` cache version in `index.html`.
+  Verify the frontier against the corresponding AgentDuel median-cost view.
+- These are dated snapshots, not automatic live feeds. The two benchmarks use
+  different tasks and scores and should not be interpreted as a shared scale.
