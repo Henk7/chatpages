@@ -277,6 +277,110 @@
           "url": "https://solfuerza.at/collections/huawei-wechselrichter/products/huawei-sun2000-5ktl-m1-hybrid-wechselrichter-5-kw"
         }
       ]
+    },
+    {
+      "id": "tepto-foxess-598-1152",
+      "group": "dach",
+      "status": "teilpreis",
+      "seller": "Tepto Österreich",
+      "name": "Tepto FoxESS H3-6.0-M · Dachset",
+      "subtitle": "13 × 460 Wp = 5,98 kWp · EK12 Plus 11,52 kWh",
+      "url": "https://www.tepto.at/6kWp-FoxEss-PV-Anlage-13x-460Wp-Glas-Glas-Fullblack-Schraegdachmontage-10-kWh-Speicher-inkl.-Smart-Meter",
+      "image": "https://cdn.tepto.de/media/09/e7/f1/1757584757/EK12Plus.webp?width=900",
+      "imageAlt": "FoxESS EK12 Plus Speicher des Tepto-Sets",
+      "imageCaption": "Abbildung: Speicher des Sets",
+      "price": 5988,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Gerätepreis inkl. MwSt.",
+      "shippingText": "Zzgl. Versand; Lieferung nach Österreich und die genauen Versandkosten im Checkout prüfen. Händler: voraussichtlich ab 19.11.2026, nur wenige.",
+      "checked": "2026-11-17",
+      "pv": 5.98,
+      "storage": 11.52,
+      "grid": "Ja · zeitgesteuert; Leistung prüfen",
+      "output": "6.000 W AC · dreiphasig",
+      "meter": "FoxESS Smart Meter laut Händler enthalten",
+      "warning": "Angebot nennt 10,36 kWh, Stückliste nennt den EK12 Plus mit 11,52 kWh Nennenergie. 90 % davon ergeben rechnerisch 10,368 kWh; beim Händler bestätigen. Versand und Installation sind im Preis nicht enthalten.",
+      "specs": {
+        "Konfiguration / Status": "PVST5355.6.5.SDM; laut Händler nur wenige, Lieferung ab 19.11.2026; Versand separat",
+        "Solarmodule": "13 × Sunpro SPDG-N96R12, je 460 Wp, Glas-Glas und bifazial = 5.980 Wp",
+        "Speicher": "1 × FoxESS EK12 Plus, 11,52 kWh nominal laut Lieferliste; Angebot bezeichnet diese Variante mit 10,36 kWh. Bei 90 % Entladungstiefe ergeben sich rechnerisch 10,368 kWh; nicht vom Shop ausdrücklich erklärt",
+        "Zellchemie / Ausbau": "LiFePO₄, 90 % Entladungstiefe, 10 Jahre laut Händler; 4 EK12 parallel laut Datenblatt bis 46,08 kWh nominal; Kompatibilität und Zusatzkomponenten prüfen",
+        "Wechselrichter": "FoxESS H3-6.0-M, 6 kW AC Nennleistung, 3-phasig; 2 MPPT, 120–950 V",
+        "Netzladung": "FoxESS-Handbuch für H3-M nennt zeitgesteuertes Laden vom Netz zur Batterie. Ladeleistung und dynamischen Tarif im konkreten Setup bestätigen",
+        "Messung / Kommunikation": "Smart Meter und WLAN laut Händler enthalten",
+        "Notstrom": "EPS-Ausgang vorhanden; die komplette Hausumschaltung und gegebenenfalls weitere Komponenten durch Fachbetrieb klären",
+        "Befestigung / Kabel": "Laut Stückliste Dachhaken, 13 Schienen, Klemmen, 100 m Solarkabel, Stecker. Eignung für Dach, Statik und Schneelasten prüfen",
+        "Schutz / Gewicht": "Wechselrichter IP65 und ca. 39,5 kg laut Händler; Speicher IP65 und 98 kg",
+        "Garantie": "Herstellerangaben Händler: 10 Jahre Speicher und Wechselrichter, 25 Jahre Modul-Produktgarantie, 30 Jahre Modulleistung; Bedingungen prüfen"
+      },
+      "sources": [
+        {
+          "label": "Tepto: Angebot und Lieferliste",
+          "url": "https://www.tepto.at/6kWp-FoxEss-PV-Anlage-13x-460Wp-Glas-Glas-Fullblack-Schraegdachmontage-10-kWh-Speicher-inkl.-Smart-Meter"
+        },
+        {
+          "label": "FoxESS: H3-M Handbuch, Netzladung",
+          "url": "https://nltest.fox-ess.com/Public/Uploads/uploadfile/files/20251231/ENH3SmartP3SManualV1.3.pdf"
+        },
+        {
+          "label": "FoxESS EK12 Datenblatt",
+          "url": "https://www.tepto.at/docs/366870-FOXESS-EK-12-DE-Datenblatt.pdf"
+        },
+        {
+          "label": "Tepto: Versandbedingungen",
+          "url": "https://www.tepto.at/Versand/"
+        }
+      ]
+    },
+    {
+      "id": "tepto-foxess-506-1152",
+      "group": "dach",
+      "status": "offen",
+      "seller": "Tepto Österreich · beobachten",
+      "name": "Tepto FoxESS H3-5.0-Smart · 5-kWp-Set",
+      "subtitle": "11 × 460 Wp = 5,06 kWp · EK12 Plus 11,52 kWh",
+      "url": "https://www.tepto.at/5-kWp-FoxEss-PV-Anlage-11x-460Wp-Fullblack-11-52Wh-Speicher-Notstromfaehig-Speicher-erweiterbar",
+      "image": "https://cdn.tepto.de/media/09/e7/f1/1757584757/EK12Plus.webp?width=900",
+      "imageAlt": "FoxESS EK12 Plus Speicher des Tepto-Sets",
+      "imageCaption": "Abbildung: Speicher des Sets",
+      "price": 5398.8,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Zuletzt indexierter Preis · älterer Stand",
+      "shippingText": "Zzgl. Versand. Preis und Verfügbarkeit basieren auf einem älteren Suchindex-Stand und sind aktuell nicht bestätigt.",
+      "checked": "2026-11-17",
+      "pv": 5.06,
+      "storage": 11.52,
+      "grid": "Ja · zeitgesteuert; Leistung prüfen",
+      "output": "5.000 W AC · dreiphasig",
+      "meter": "FoxESS Smart Meter laut Händler enthalten",
+      "warning": "BEOBACHTUNG: Die Suchquelle liefert einen älteren Stand; dort war die Variante ausverkauft. Aktuelle Verfügbarkeit und Preis direkt beim Händler prüfen. Dachmontage nicht eindeutig in der Stückliste.",
+      "specs": {
+        "Konfiguration / Status": "Artikel PVST5400.5.10; ausgewählt 11,52 kWh. Älterer Suchindex: ausverkauft; aktuellen Stand direkt prüfen",
+        "Solarmodule": "11 × Trina Vertex S+ TSM-NEG9R.25, 460 Wp = 5.060 Wp, Glas-Glas Fullblack",
+        "Speicher": "1 × FoxESS EK12 Plus, 11,52 kWh nominal; 90 % Entladungstiefe laut Datenblatt entsprechen rechnerisch ca. 10,37 kWh",
+        "Wechselrichter": "FoxESS H3-5.0-Smart, 3-phasig, 5 kW AC; 3 MPPT",
+        "Netzladung": "FoxESS H3-Smart Handbuch beschreibt einstellbare Ladezeiten aus dem Netz; Ladeleistung und dynamischen Tarif mit Installateur bestätigen",
+        "Messung / Zubehör": "Smart Meter, 100 m Solarkabel und je 5 Plus-/Minus-Stecker laut Händler enthalten",
+        "Montagematerial": "Beschreibung nennt Montage, vollständige Unterkonstruktion ist in der sichtbaren Stückliste nicht aufgelistet; vor Kauf ausdrücklich bestätigen",
+        "Ausbau": "Bis zu 4 EK12 laut Speicher-Datenblatt = 46,08 kWh nominal; erforderliches Zubehör prüfen",
+        "Garantie / Notstrom": "Speicher 10 Jahre laut Händler; EPS- und Umschaltzubehör, Herstellergarantie der übrigen Komponenten prüfen"
+      },
+      "sources": [
+        {
+          "label": "Tepto: Angebot, Preis und Verfügbarkeit",
+          "url": "https://www.tepto.at/5-kWp-FoxEss-PV-Anlage-11x-460Wp-Fullblack-11-52Wh-Speicher-Notstromfaehig-Speicher-erweiterbar"
+        },
+        {
+          "label": "FoxESS H3 Smart: Handbuch",
+          "url": "https://de.fox-ess.com/Public/Uploads/uploadfile/files/20260228/DEH3SmartUserBenutzerhandbuchV1.0.120250212.pdf"
+        },
+        {
+          "label": "FoxESS EK12 Datenblatt",
+          "url": "https://www.tepto.at/docs/366870-FOXESS-EK-12-DE-Datenblatt.pdf"
+        }
+      ]
     }
   ],
   "history": [
@@ -321,6 +425,12 @@
       "date": "2026-11-17",
       "price": 6514.8,
       "shipping": 175
+    },
+    {
+      "id": "tepto-foxess-598-1152",
+      "date": "2026-11-17",
+      "price": 5988,
+      "shipping": null
     }
   ]
 }
