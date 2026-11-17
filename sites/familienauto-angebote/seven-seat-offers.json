@@ -1,11 +1,11 @@
 {
-  "checkedDate": "16.11.2026",
-  "checkedAt": "2026-11-16T20:39:03+01:00",
-  "checked": true,
+  "checkedDate": "17.11.2026",
+  "checkedAt": "2026-11-17T01:09:07+01:00",
+  "checked": false,
   "requiredCount": 10,
   "confirmedCount": 0,
   "shortfall": 10,
-  "statusNote": "7-Sitzer: 0 von 10 Inseraten nennen die Zahl von mindestens drei ISOFIX-Plätzen am konkreten Fahrzeug ausdrücklich; 10 Plätze offen. Vier zusätzlich angezeigte Kandidaten nennen ISOFIX allgemein und haben passende Modellunterlagen, die Zahl muss jedoch beim Händler am Fahrzeug bestätigt werden.",
+  "statusNote": "0 von 10 7-Sitzern mit drei ISOFIX-Plätzen im konkreten Inserat direkt bestätigt; 10 Plätze offen. Vier separat geprüfte Kandidaten nennen ISOFIX allgemein; die Anzahl am konkreten Fahrzeug ist offen.",
   "offers": [],
   "staleReferences": [
     {
