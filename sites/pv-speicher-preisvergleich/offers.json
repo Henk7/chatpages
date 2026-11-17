@@ -51,7 +51,25 @@
           "label": "Solarvie: Österreich-Preise und Setübersicht",
           "url": "https://www.solarvie.at/collections/pv-komplettpaket"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Technisch gut geeignet",
+        "product": "Dreiphasiger Deye mit zeitgesteuertem Netzladen und LFP-Speicher passt zum Wunsch. Batteriemodell und Messgerät sind im Set noch zu klären.",
+        "valueTitle": "Preis wirkt günstig",
+        "value": "Rechnerischer Preis mit 20 % USt.; Versand, Montage und endgültige 10,2-kWh-Variante sind offen.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Deye-Handbuch",
+            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-jolywood-455-full-black-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+          }
+        ]
+      }
     },
     {
       "id": "solarvie-deye-trina-517-102",
@@ -102,7 +120,25 @@
           "label": "Solarvie: Österreich-Preise und Setübersicht",
           "url": "https://www.solarvie.at/collections/pv-komplettpaket"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Technisch gut geeignet",
+        "product": "Deye unterstützt zeitgesteuerte Netzladung und hat einen Ersatzstromausgang. Konkrete Module, Speicher und Messgerät vor Kauf bestätigen.",
+        "valueTitle": "Preis wirkt günstig",
+        "value": "Bruttopreis nur berechnet; Versand und Montage fehlen noch. 10,2-kWh-Variante auswählen.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Deye-Handbuch",
+            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+          }
+        ]
+      }
     },
     {
       "id": "solarvie-deye-aiko-528-102",
@@ -153,7 +189,25 @@
           "label": "Solarvie: Österreich-Preise und Setübersicht",
           "url": "https://www.solarvie.at/collections/pv-komplettpaket"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Technisch gut geeignet",
+        "product": "Deye bietet 5 kW dreiphasig und Netzladung; AIKO-Module liefern im Set 5,28 kWp. Ersatzmodul und Speicher konkret bestätigen.",
+        "valueTitle": "Aufpreis abwägen",
+        "value": "Rechnerisch rund 502 € mehr als das Trina-Deye-Set bei 110 Wp mehr; Versand und Montage sind bei beiden offen.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Deye-Handbuch",
+            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-aiko-470-neostar-3s-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+          }
+        ]
+      }
     },
     {
       "id": "solarvie-sofar-trina-5115-10",
@@ -202,7 +256,25 @@
           "label": "SOFAR-Handbuch: Netzladung",
           "url": "https://www.voegelin.ch/Dokumente/Download_314/260205_esi-5-12k-t1_usermanual_v19_en-int.pdf"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Gut ausgestattet",
+        "product": "Dreiphasiges System mit drei MPPT und Netzladefunktion; der Händler führt einen Smart Meter auf. Genaue Modulleistung und Akku-Auswahl prüfen.",
+        "valueTitle": "Gesamtpreis offen",
+        "value": "20 % USt. sind berechnet; Versand, Montage und die 10-kWh-Variante im Warenkorb bestätigen.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "SOFAR-Daten",
+            "url": "https://de.sofarsolar.com/product/residentialstorage/storageinverter/ESI-5-12K-T1.html"
+          },
+          {
+            "label": "Netzladung im Handbuch",
+            "url": "https://www.voegelin.ch/Dokumente/Download_314/260205_esi-5-12k-t1_usermanual_v19_en-int.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "idealo-growatt-552-1024",
@@ -245,7 +317,25 @@
           "label": "Growatt: Original-Handbuch",
           "url": "https://de.growatt.com/upload/file/SPH_4_10KTL3_BH_UP_Handbuch_DE_202412.pdf"
         }
-      ]
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Bedingt beurteilbar",
+        "product": "Growatt unterstützt Netzladung und das gelistete ARK-System passt zur Speichergröße. Die Module und das vollständige Set sind nicht direkt geprüft.",
+        "valueTitle": "Preis nur als Hinweis",
+        "value": "Idealo nennt Versand ab 323,88 €; ein verbindlicher Preis für Österreich und der Lieferumfang fehlen.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Growatt-Handbuch",
+            "url": "https://de.growatt.com/upload/file/SPH_4_10KTL3_BH_UP_Handbuch_DE_202412.pdf"
+          },
+          {
+            "label": "Idealo",
+            "url": "https://www.idealo.at/preisvergleich/Liste/124172761/photovoltaikanlage-5kw.html"
+          }
+        ]
+      }
     },
     {
       "id": "actec-trina-558-1024",
@@ -297,7 +387,25 @@
           "label": "Trina: Systemdatenblatt",
           "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Gut geeignet",
+        "product": "Dreiphasig, modularer LFP-Speicher und Netzladung: technisch passend. Smart Meter und Ersatzstrom-Zubehör im konkreten Set klären.",
+        "valueTitle": "Endpreis bestätigt",
+        "value": "Preis mit Österreich-Versand bekannt; Montage, Kabel und Unterkonstruktion kosten extra. Die größeren ACTEC-Sets sind günstiger, benötigen aber mehr Platz.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Trina-Daten",
+            "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://actec.eu/at/pv10710764-pv-set-5580wp-pv-komplettanlage-mit-10-24-kwh-speicher-trina-465w-trina-trh-6k-6159.html"
+          }
+        ]
+      }
     },
     {
       "id": "actec-solplanet-558-1024",
@@ -349,7 +457,25 @@
           "label": "Solplanet: Datenblatt T2",
           "url": "https://solplanet.net/wp-content/uploads/2020/11/Global-Brochure-EU-20250207-WEB-1.pdf"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Gut geeignet",
+        "product": "Passendes dreiphasiges Hybridset mit LFP-Speicher und Netzladung. Smart Meter und erforderliches Ersatzstrom-Zubehör sind abzuklären.",
+        "valueTitle": "Vergleichsweise höher",
+        "value": "Mit Versand etwa 528 € über dem 5,58-kWp-Trina-Set von ACTEC; beide ohne Dachmontage und Elektroarbeiten.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Kompatibilitätsliste",
+            "url": "https://solplanet.net/wp-content/uploads/2024/12/Hybrid-battery-compatibility-list-0126.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://actec.eu/at/pv10710783-pv-set-5580wp-pv-komplettanlage-mit-10-24-kwh-speicher-ja-solar-465w-solplanet-asw-6kh-6178.html"
+          }
+        ]
+      }
     },
     {
       "id": "solago-anker-5000-10",
@@ -395,7 +521,25 @@
           "label": "Anker: technische Daten und Netzladung",
           "url": "https://www.ankersolix.com/de/products/ae103"
         }
-      ]
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Gut bei kleiner Einspeisung",
+        "product": "Netzladung ist im Praxistest belegt; ab Werk sind 800 W Netzausgabe eingestellt. Höhere Einspeisung benötigt passenden Anschluss und Freigabe. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab.",
+        "valueTitle": "Preis noch offen",
+        "value": "Die 10-kWh-Konfiguration und der AT-Gesamtpreis sind nicht sicher bestätigt; Flachdachhalter laut Händler enthalten.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Praxistest",
+            "url": "https://www.smartzone.de/anker-solarbank-4-pro-test/"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://solago.at/products/balkonkraftwerk-mit-speicher-anker-solix-solarbank-4-5000-watt-flachdach-boden?variant=57912202527094"
+          }
+        ]
+      }
     },
     {
       "id": "solarhandel-anker4-5000",
@@ -437,7 +581,25 @@
           "label": "Anker: technische Daten",
           "url": "https://www.ankersolix.com/de/products/ae103"
         }
-      ]
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Gut bei kleiner Einspeisung",
+        "product": "Der Speicher kann aus dem Netz laden; ab Werk sind 800 W Netzausgabe eingestellt. Einen höheren Wert nur mit passendem Anschluss und Freigabe nutzen. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab.",
+        "valueTitle": "Preis noch offen",
+        "value": "10-kWh-Akku, Österreich-Steuer und Versand im Warenkorb prüfen; Montageoption extra.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Praxistest",
+            "url": "https://www.smartzone.de/anker-solarbank-4-pro-test/"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://solarhandel24.at/products/5000w-solarkraftwerk-aiko-500w-full-black-mit-anker-solix-solarbank-4-pro"
+          }
+        ]
+      }
     },
     {
       "id": "solarhandel-anker-x1-5335",
@@ -479,7 +641,25 @@
           "label": "Anker X1-H5K-T: Benutzerhandbuch",
           "url": "https://venturama-solar.de/wp-content/uploads/2025/12/Anker-SOLIX-X1-Power-Module_X1-H512K-T_Bedienungsanleitung.pdf"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Technisch gut geeignet",
+        "product": "5-kW-Hybridwechselrichter für drei Phasen und erweiterbarer X1-Speicher; Netzladung ist laut Anker vorgesehen. Notstrom-Zubehör prüfen.",
+        "valueTitle": "Preis noch offen",
+        "value": "10-kWh-Option und Österreich-Steuer wählen; Versand, Smart Meter und Montagekosten sind nicht bestätigt.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Anker-Speicher",
+            "url": "https://support.ankersolix.com/s/article/Anker-SOLIX-X1-Battery-Module-X1-B5-H-X1-B5-H0-User-Guide"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher"
+          }
+        ]
+      }
     },
     {
       "id": "pvmarkt-huawei-564",
@@ -521,7 +701,25 @@
           "label": "Huawei-Wechselrichter und Netzladung",
           "url": "https://solfuerza.at/collections/huawei-wechselrichter/products/huawei-sun2000-5ktl-m1-hybrid-wechselrichter-5-kw"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Technisch gut geeignet",
+        "product": "Huawei-Hybrid mit LUNA-Speicher und Smart Meter ist funktional passend. Die genaue Batteriegeneration und Modulleistung sind zu klären.",
+        "valueTitle": "Preisvergleich offen",
+        "value": "Gerätepreis bekannt, Österreich-Versand und Montage fehlen. Verschiedene Angaben zu den Modulen prüfen.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Huawei-Datenblatt",
+            "url": "https://solar.huawei.com/download?p=%2F-%2Fmedia%2FSolar%2Fdatasheet%2FSUN2000-3_4_5_6_8_10KTL-M1_High_Current_Version.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://pvmarkt.shop/produkt/komplettpaket-5kwp-mit-10kwh-speicher-huawei-2/"
+          }
+        ]
+      }
     },
     {
       "id": "tepto-foxess-598-1152",
@@ -576,7 +774,25 @@
           "label": "Tepto: Versandbedingungen",
           "url": "https://www.tepto.at/Versand/"
         }
-      ]
+      ],
+      "review": {
+        "type": "good",
+        "productTitle": "Gut ausgestattet",
+        "product": "FoxESS mit Netzladung, 11,52-kWh-Nennspeicher, Smart Meter und Dachbefestigung. Nutzbare Speichergröße und vollständigen Ersatzstrom prüfen.",
+        "valueTitle": "Potenzial, Versand offen",
+        "value": "Der Gerätepreis enthält bereits viele Montagekomponenten; daher nicht direkt mit Sets ohne Dachmontage vergleichbar. Versand und Elektriker extra.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "FoxESS-Handbuch",
+            "url": "https://nltest.fox-ess.com/Public/Uploads/uploadfile/files/20251231/ENH3SmartP3SManualV1.3.pdf"
+          },
+          {
+            "label": "Tepto-Lieferliste",
+            "url": "https://www.tepto.at/6kWp-FoxEss-PV-Anlage-13x-460Wp-Glas-Glas-Fullblack-Schraegdachmontage-10-kWh-Speicher-inkl.-Smart-Meter"
+          }
+        ]
+      }
     },
     {
       "id": "tepto-foxess-506-1152",
@@ -627,7 +843,25 @@
           "url": "https://www.tepto.at/docs/366870-FOXESS-EK-12-DE-Datenblatt.pdf"
         }
       ],
-      "needsReview": true
+      "needsReview": true,
+      "review": {
+        "type": "good",
+        "productTitle": "Gut ausgestattet",
+        "product": "5,06 kWp, dreiphasiger FoxESS mit drei MPPT, Netzladung und Smart Meter; 11,52 kWh Speicher nominal. Dachmontage extra.",
+        "valueTitle": "Derzeit nicht verfügbar",
+        "value": "11,52-kWh-Variante laut Händler ausverkauft; letzter Preis ohne Versand und Montagesystem.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "FoxESS-Handbuch",
+            "url": "https://de.fox-ess.com/Public/Uploads/uploadfile/files/20260228/DEH3SmartUserBenutzerhandbuchV1.0.120250212.pdf"
+          },
+          {
+            "label": "Tepto-Angebot",
+            "url": "https://www.tepto.at/5-kWp-FoxEss-PV-Anlage-11x-460Wp-Fullblack-11-52Wh-Speicher-Notstromfaehig-Speicher-erweiterbar"
+          }
+        ]
+      }
     },
     {
       "id": "actec-trina-744-1024-large",
@@ -679,7 +913,25 @@
           "label": "Trina: Systemdatenblatt",
           "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
         }
-      ]
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Gut, aber deutlich größer",
+        "product": "Modulares Trina-Hybridsystem mit Netzladung und 10,24 kWh Speicher; 7,44 kWp brauchen deutlich mehr Fläche als gewünscht.",
+        "valueTitle": "Attraktiver Gerätepreis",
+        "value": "Mit Versand 348 € unter ACTECs kleinerem 5,58-kWp-Set; Dachmontage, Kabel und Elektriker kommen bei beiden dazu.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Trina-Daten",
+            "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://actec.eu/at/pv10710766-pv-set-7440wp-pv-komplettanlage-mit-10-24-kwh-speicher-trina-465w-trina-trh-6k-6161.html"
+          }
+        ]
+      }
     },
     {
       "id": "actec-trina-1023-1024-large",
@@ -731,7 +983,25 @@
           "label": "Trina: Systemdatenblatt",
           "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
         }
-      ]
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Gut, aber mehr als doppelt so groß",
+        "product": "10,23 kWp mit dreiphasigem Trina-Hybrid und 10,24 kWh LFP-Speicher; rund 44 m² reine Modulfläche nötig.",
+        "valueTitle": "Attraktiver Gerätepreis",
+        "value": "Mit Versand 504 € unter ACTECs 5,58-kWp-Set; Montage, Unterkonstruktion und Kabel zusätzlich.",
+        "checked": "2026-11-17",
+        "sources": [
+          {
+            "label": "Trina-Daten",
+            "url": "https://residentialstorage.trinasolar.com/wp-content/uploads/2024/11/Nexeos-Residential-Energy-Storage-SystemThree-Phase_2024_B_DE_ONLINE-1.pdf"
+          },
+          {
+            "label": "Angebot",
+            "url": "https://actec.eu/at/pv10710868-pv-set-10-2-kwp-pv-komplettanlage-mit-10-24-kwh-speicher-trina-465w-trina-trh-8k-6269.html"
+          }
+        ]
+      }
     }
   ],
   "history": [
