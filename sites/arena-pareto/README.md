@@ -20,6 +20,7 @@ Qwen4-Max (xHigh) is included at rank 14: +7.46% net improvement and $1.47 media
 - Drag to move around the large SVG chart; every model name and provider mark stays in place as you zoom.
 - Pinch or use the +/- buttons to zoom on touch screens.
 - Use Ctrl+scroll on desktop or double-click / Fit to see the full chart.
+- Use Full screen to expand each chart to the whole display.
 - Highlight developers with the chips above the chart. Select multiple developers to highlight their labels while keeping every model visible; choose “All developers” to clear the highlights.
 - Search and sort the model list; filter down to the frontier.
 - Download the captured values as CSV.
@@ -46,5 +47,29 @@ as displayed by AgentDuel.
   values faithfully. Bump the `agentduel-data.json` cache version in
   `agentduel.js` and the `agentduel.js` cache version in `index.html`.
   Verify the frontier against the corresponding AgentDuel median-cost view.
-- These are dated snapshots, not automatic live feeds. The two benchmarks use
+- These are dated snapshots, not automatic live feeds. The benchmarks use
   different tasks and scores and should not be interpreted as a shared scale.
+
+## WebDev comparison
+
+The third chart is a separate Arena WebDev overall leaderboard snapshot from
+November 18, 2026, captured at 21:04 Central European Time. It compares Arena's
+WebDev ratings with the published median task costs; it does not put WebDev
+ratings on the Agent Arena or AgentDuel score scales.
+
+- `webdev-data.json` contains all 160 ranked models: 111 have published costs
+  and are plotted, while the other 49 remain in the searchable table as N/A.
+  Arena also lists one unranked AutoEval entry, which is not included.
+- The frontier membership is copied from Arena's own WebDev Pareto view and
+  stored in `sourceFrontier`. Do not recompute it from the displayed prices:
+  Arena rounds those prices to cents and its unrounded values can distinguish
+  entries that look equal.
+- `webdev.js` draws the labels and source frontier, builds the table, and
+  supports highlighting, pan, pinch, zoom, Fit and full-screen mode.
+- To update the snapshot, capture the full overall leaderboard and Pareto view
+  together. Update the board date, capture time, all values, missing costs and
+  source frontier, then bump the data and script cache versions. Check that
+  all plotted labels remain visible and the published frontier agrees.
+
+The three charts are dated snapshots; they do not refresh automatically.
+
