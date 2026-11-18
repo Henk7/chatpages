@@ -1,11 +1,11 @@
 {
-  "checkedDate": "17.11.2026",
-  "checkedAt": "2026-11-17T01:09:07+01:00",
+  "checkedDate": "18.11.2026",
+  "checkedAt": "2026-11-18T01:05:09+01:00",
   "checked": false,
   "requiredCount": 10,
   "confirmedCount": 0,
   "shortfall": 10,
-  "statusNote": "0 von 10 7-Sitzern mit drei ISOFIX-Plätzen im konkreten Inserat direkt bestätigt; 10 Plätze offen. Vier separat geprüfte Kandidaten nennen ISOFIX allgemein; die Anzahl am konkreten Fahrzeug ist offen.",
+  "statusNote": "Stand Mittwoch, 18. November 2026, 01:05:09 Uhr (Europe/Vienna): 0 von 10 separat gesuchten 7-Sitzern mit mindestens drei ISOFIX-Plätzen am konkreten Fahrzeug bestätigt; 10 Plätze offen. Ein in Wels direkt überprüftes Inserat nennt 7 Sitze und ISOFIX, aber nicht die Zahl der Halterungen. Ältere Kandidaten bleiben gesondert gekennzeichnet.",
   "offers": [],
   "staleReferences": [
     {
@@ -166,8 +166,8 @@
       "rank": 0,
       "rankLabel": "Kandidat · 7 Sitze",
       "displayAsCandidate": true,
-      "lastCheckAttemptAt": "2026-11-16T20:39:03+01:00",
-      "staleReferenceReason": "Inserat und sieben Sitze heute geprüft; das Inserat nennt ISOFIX ohne konkrete Anzahl. Die Herstellerunterlagen sprechen für drei Plätze, am konkreten Fahrzeug ist die Anzahl aber nicht direkt bestätigt."
+      "lastCheckAttemptAt": "2026-11-18T01:05:09+01:00",
+      "staleReferenceReason": "Am 18.11.2026 direkt erneut geprüft: 7 Sitze, €31.990 und 14.600 km sichtbar; ISOFIX nur allgemein genannt. Die Zahl der Halterungen ist am konkreten Fahrzeug nicht direkt bestätigt."
     },
     {
       "rankLabel": "≤50.000 km",
