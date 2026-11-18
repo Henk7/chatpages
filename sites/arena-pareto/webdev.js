@@ -135,7 +135,7 @@
   }
   function display(){svg.setAttribute("viewBox",[view.x,view.y,view.w,view.h].join(" "));}
   function fit(){dims=metrics();const w=Math.max(scene.width,scene.height*dims.width/dims.height),h=w*dims.height/dims.width;view=clamp({x:(scene.width-w)/2,y:(scene.height-h)/2,w,h});display();}
-  function initial(){dims=metrics();const w=dims.width<600?1900:3400,h=w*dims.height/dims.width;view=clamp({x:xPos(.45)-w/2,y:yPos(1640)-h/2,w,h});display();}
+  function initial(){dims=metrics();const mobile=dims.width<600,w=mobile?1900:3400,h=w*dims.height/dims.width;view=clamp({x:xPos(mobile?3:1.3)-w/2,y:yPos(1680)-h/2,w,h});display();}
   function zoom(factor,px=dims.width/2,py=dims.height/2){if(!view)return;const ax=view.x+px/dims.width*view.w,ay=view.y+py/dims.height*view.h;view=clamp({x:ax+(view.x-ax)*factor,y:ay+(view.y-ay)*factor,w:view.w*factor,h:view.h*factor});display();}
   function pan(dx,dy,start){view=clamp({...start,x:start.x-dx/dims.width*start.w,y:start.y-dy/dims.height*start.h});display();}
   function itemAt(e){const n=e.target.closest?.("[data-rank]");return n?data.find(r=>r.rank===Number(n.getAttribute("data-rank"))):null;}
