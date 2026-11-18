@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "scope": "Mindestens 5.000 Wp enthaltene Module, ungefähr 10 kWh Speicher, Netzladung",
   "offers": [
     {
@@ -18,8 +18,8 @@
       "shipping": null,
       "currency": "EUR",
       "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "Netto 3693,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten.",
-      "checked": "2026-11-17",
+      "shippingText": "Netto 3693,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
+      "checked": "2026-11-18",
       "pv": 5.06,
       "storage": 10.2,
       "grid": "Ja · programmierbare Netzladung laut Deye-Handbuch",
@@ -53,12 +53,12 @@
         }
       ],
       "review": {
-        "type": "good",
-        "productTitle": "Technisch gut geeignet",
-        "product": "Dreiphasiger Deye mit zeitgesteuertem Netzladen und LFP-Speicher passt zum Wunsch. Batteriemodell und Messgerät sind im Set noch zu klären.",
-        "valueTitle": "Preis wirkt günstig",
-        "value": "Rechnerischer Preis mit 20 % USt.; Versand, Montage und endgültige 10,2-kWh-Variante sind offen.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "Variante noch bestätigen",
+        "product": "Dreiphasiger Deye mit zeitgesteuertem Netzladen und LFP-Speicher passt zum Wunsch. Batteriemodell und Messgerät sind im Set noch zu klären. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
+        "valueTitle": "Teilpreis und Bestand offen",
+        "value": "Rechnerischer Preis mit 20 % USt.; Versand, Montage und endgültige 10,2-kWh-Variante sind offen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Deye-Handbuch",
@@ -77,7 +77,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 Module",
-            "price": "481,09 € inkl. 20 % USt.; Versand extra",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
             "links": [
               {
@@ -85,12 +85,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
-            "price": "556,19 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
             "links": [
               {
@@ -102,10 +102,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "availabilityUnconfirmed": true
     },
     {
       "id": "solarvie-deye-trina-517-102",
@@ -123,8 +124,8 @@
       "shipping": null,
       "currency": "EUR",
       "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "Netto 3704,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten.",
-      "checked": "2026-11-17",
+      "shippingText": "Netto 3704,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
+      "checked": "2026-11-18",
       "pv": 5.17,
       "storage": 10.2,
       "grid": "Ja · programmierbare Netzladung laut Deye-Handbuch",
@@ -158,12 +159,12 @@
         }
       ],
       "review": {
-        "type": "good",
-        "productTitle": "Technisch gut geeignet",
-        "product": "Deye unterstützt zeitgesteuerte Netzladung und hat einen Ersatzstromausgang. Konkrete Module, Speicher und Messgerät vor Kauf bestätigen.",
-        "valueTitle": "Preis wirkt günstig",
-        "value": "Bruttopreis nur berechnet; Versand und Montage fehlen noch. 10,2-kWh-Variante auswählen.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "Variante noch bestätigen",
+        "product": "Deye unterstützt zeitgesteuerte Netzladung und hat einen Ersatzstromausgang. Konkrete Module, Speicher und Messgerät vor Kauf bestätigen. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
+        "valueTitle": "Teilpreis und Bestand offen",
+        "value": "Bruttopreis nur berechnet; Versand und Montage fehlen noch. 10,2-kWh-Variante auswählen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Deye-Handbuch",
@@ -182,7 +183,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 Module",
-            "price": "481,09 € inkl. 20 % USt.; Versand extra",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
             "links": [
               {
@@ -190,12 +191,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
-            "price": "556,19 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
             "links": [
               {
@@ -207,10 +208,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "availabilityUnconfirmed": true
     },
     {
       "id": "solarvie-deye-aiko-528-102",
@@ -228,8 +230,8 @@
       "shipping": null,
       "currency": "EUR",
       "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "Netto 4122,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten.",
-      "checked": "2026-11-17",
+      "shippingText": "Netto 4122,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
+      "checked": "2026-11-18",
       "pv": 5.28,
       "storage": 10.2,
       "grid": "Ja · programmierbare Netzladung laut Deye-Handbuch",
@@ -263,12 +265,12 @@
         }
       ],
       "review": {
-        "type": "good",
-        "productTitle": "Technisch gut geeignet",
-        "product": "Deye bietet 5 kW dreiphasig und Netzladung; AIKO-Module liefern im Set 5,28 kWp. Ersatzmodul und Speicher konkret bestätigen.",
-        "valueTitle": "Aufpreis abwägen",
-        "value": "Rechnerisch rund 502 € mehr als das Trina-Deye-Set bei 110 Wp mehr; Versand und Montage sind bei beiden offen.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "Variante noch bestätigen",
+        "product": "Deye bietet 5 kW dreiphasig und Netzladung; AIKO-Module liefern im Set 5,28 kWp. Ersatzmodul und Speicher konkret bestätigen. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
+        "valueTitle": "Teilpreis und Bestand offen",
+        "value": "Rechnerisch rund 502 € mehr als das Trina-Deye-Set bei 110 Wp mehr; Versand und Montage sind bei beiden offen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Deye-Handbuch",
@@ -287,7 +289,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 Module",
-            "price": "481,09 € inkl. 20 % USt.; Versand extra",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
             "links": [
               {
@@ -295,12 +297,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
-            "price": "556,19 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
             "links": [
               {
@@ -312,10 +314,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "availabilityUnconfirmed": true
     },
     {
       "id": "solarvie-sofar-trina-5115-10",
@@ -333,8 +336,8 @@
       "shipping": null,
       "currency": "EUR",
       "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "4.978,85 € netto × 1,20. Preis der 10-kWh-Auswahl, Verfügbarkeit und Österreich-Versand im Warenkorb bestätigen.",
-      "checked": "2026-11-17",
+      "shippingText": "4.978,85 € netto × 1,20. Preis der 10-kWh-Auswahl, Verfügbarkeit und Österreich-Versand im Warenkorb bestätigen. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
+      "checked": "2026-11-18",
       "pv": 5.115,
       "storage": 10,
       "grid": "Ja · „Charging From Grid“ im Herstellerhandbuch",
@@ -366,12 +369,12 @@
         }
       ],
       "review": {
-        "type": "good",
-        "productTitle": "Gut ausgestattet",
-        "product": "Dreiphasiges System mit drei MPPT und Netzladefunktion; der Händler führt einen Smart Meter auf. Genaue Modulleistung und Akku-Auswahl prüfen.",
-        "valueTitle": "Gesamtpreis offen",
-        "value": "20 % USt. sind berechnet; Versand, Montage und die 10-kWh-Variante im Warenkorb bestätigen.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "Variante noch bestätigen",
+        "product": "Dreiphasiges System mit drei MPPT und Netzladefunktion; der Händler führt einen Smart Meter auf. Genaue Modulleistung und Akku-Auswahl prüfen. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
+        "valueTitle": "Teilpreis und Bestand offen",
+        "value": "20 % USt. sind berechnet; Versand, Montage und die 10-kWh-Variante im Warenkorb bestätigen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "SOFAR-Daten",
@@ -390,7 +393,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 Module",
-            "price": "481,09 € inkl. 20 % USt.; Versand extra",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
             "links": [
               {
@@ -398,12 +401,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
-            "price": "556,19 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
             "links": [
               {
@@ -415,10 +418,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "availabilityUnconfirmed": true
     },
     {
       "id": "idealo-growatt-552-1024",
@@ -434,15 +438,15 @@
       "price": 5986.96,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Idealo-Preis inkl. MwSt. · Anbieter nicht verifiziert",
-      "shippingText": "Idealo nennt Versand ab 323,88 €, Ziel-/Pauschale nicht individuell bestätigt; konkrete Bestellung und Verfügbarkeit beim Anbieter prüfen. Keine Montage angenommen.",
+      "priceLabel": "Zuletzt beobachteter Preis · veraltet",
+      "shippingText": "Preis und Bestand nicht erneut bestätigt; kein aktueller Österreich-Endpreis.",
       "checked": "2026-11-17",
       "pv": 5.52,
       "storage": 10.24,
       "grid": "Ja · AC CHG im Growatt-Handbuch",
       "output": "5.000 W AC · dreiphasig",
       "meter": "Lieferumfang prüfen",
-      "warning": "Nur über Idealo auffindbar; der Shop ließ sich nicht direkt abrufen. Modulanzahl und -modell, Lieferung nach Salzburg, Versand-Endpreis und Bestand sind nicht bestätigt.",
+      "warning": "Am 18.11.2026 über den bisherigen Preisvergleich nicht erneut auffindbar; Händler, Modulanzahl, Versand und Bestand nicht verifiziert.",
       "specs": {
         "Artikel": "Growatt SPH5000TL3-BH-UP + 4 × ARK 2.5H-A2 + HVC 60050-C2, PV-Set 5.520 Wp, laut Idealo.",
         "Solarmodule": "5.520 Wp laut Idealo; Anzahl, Hersteller und exakte Modulmodelle konnten auf der blockierten Händlerseite nicht geprüft werden.",
@@ -463,12 +467,12 @@
         }
       ],
       "review": {
-        "type": "mixed",
-        "productTitle": "Bedingt beurteilbar",
-        "product": "Growatt unterstützt Netzladung und das gelistete ARK-System passt zur Speichergröße. Die Module und das vollständige Set sind nicht direkt geprüft.",
-        "valueTitle": "Preis nur als Hinweis",
-        "value": "Idealo nennt Versand ab 323,88 €; ein verbindlicher Preis für Österreich und der Lieferumfang fehlen.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "Angebot nicht verifizierbar",
+        "product": "Das Growatt-Handbuch beschreibt Netzladen; die genaue Modulkonfiguration und der Händler sind nicht erneut bestätigt.",
+        "valueTitle": "Kein aktueller Preis",
+        "value": "Preis und Verfügbarkeit konnten am 18.11.2026 nicht erneut bestätigt werden. Anzeige nur im Archiv; kein aktueller Treffer.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Growatt-Handbuch",
@@ -487,7 +491,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 oder 12 Module",
-            "price": "11er 481,09 € inkl. 20 % USt.; 12er ca. 529,93 € rechnerisch; Versand extra",
+            "price": "11er 481,09 € / 12er 529,93 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Exakte Stückzahl und 20-%-Variante prüfen.",
             "links": [
               {
@@ -499,12 +503,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome · 10 oder 12 Module",
-            "price": "10er 383,44 € / 12er 447,42 € inkl. 20 % USt.; Versand extra",
+            "price": "10er 383,44 € / 12er 447,42 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Exakte Modulanzahl klären; bei ungerader Anzahl Gruppen sorgfältig planen; K2 nennt eine Mindestgröße von zwei Modulen für S-Dome.",
             "links": [
               {
@@ -516,10 +520,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "stale": true,
+      "staleReason": "Am 18.11.2026 über den bisherigen Preisvergleich nicht erneut auffindbar; Händler, Modulanzahl, Versand und Bestand nicht verifiziert."
     },
     {
       "id": "actec-trina-558-1024",
@@ -536,8 +542,8 @@
       "shipping": 175,
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
-      "shippingText": "175,00 € Spedition nach Österreich; Stand 17.11.2026. Auf Lager laut Anbieter.",
-      "checked": "2026-11-17",
+      "shippingText": "175,00 € Spedition nach Österreich; am 18.11.2026 laut Anbieter auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
+      "checked": "2026-11-18",
       "pv": 5.58,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -577,8 +583,8 @@
         "productTitle": "Gut geeignet",
         "product": "Dreiphasig, modularer LFP-Speicher und Netzladung: technisch passend. Smart Meter und Ersatzstrom-Zubehör im konkreten Set klären.",
         "valueTitle": "Endpreis bestätigt",
-        "value": "Preis mit Österreich-Versand bekannt; Montage, Kabel und Unterkonstruktion kosten extra. Die größeren ACTEC-Sets sind günstiger, benötigen aber mehr Platz.",
-        "checked": "2026-11-17",
+        "value": "6.161,80 € inkl. Österreich-Versand. Montage, Kabel und Unterkonstruktion kosten extra. Das größere 7,44-kWp-Set ist aktuell 1.908 € günstiger, braucht aber mehr Fläche.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Trina-Daten",
@@ -597,20 +603,20 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 12 Module",
-            "price": "ca. 529,93 € inkl. 20 % USt. rechnerisch; Versand extra",
-            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Österreich-Variante und Endpreis im Warenkorb bestätigen.",
+            "price": "529,93 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Den Versand-Endpreis im Warenkorb bestätigen.",
             "links": [
               {
                 "label": "12er-Montageset",
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 6.10 · 12 Module",
-            "price": "447,42 € inkl. 20 % USt.; Versand extra",
+            "price": "447,42 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Österreich und 6.10 im Shop prüfen.",
             "links": [
               {
@@ -618,7 +624,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
       }
@@ -639,7 +645,7 @@
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
       "shippingText": "175,00 € Spedition nach Österreich; Vorbestellung, voraussichtlich lieferbar ab 21.11.2026.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 5.58,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -679,8 +685,8 @@
         "productTitle": "Gut geeignet",
         "product": "Passendes dreiphasiges Hybridset mit LFP-Speicher und Netzladung. Smart Meter und erforderliches Ersatzstrom-Zubehör sind abzuklären.",
         "valueTitle": "Vergleichsweise höher",
-        "value": "Mit Versand etwa 528 € über dem 5,58-kWp-Trina-Set von ACTEC; beide ohne Dachmontage und Elektroarbeiten.",
-        "checked": "2026-11-17",
+        "value": "6.689,80 € mit Österreich-Versand; 528 € über dem 5,58-kWp-Trina-Set von ACTEC. Vorbestellung; beide ohne Dachmontage, Kabel und Elektroarbeiten.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Kompatibilitätsliste",
@@ -699,20 +705,20 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 12 Module",
-            "price": "ca. 529,93 € inkl. 20 % USt. rechnerisch; Versand extra",
-            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Österreich-Variante und Endpreis im Warenkorb bestätigen.",
+            "price": "529,93 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Den Versand-Endpreis im Warenkorb bestätigen.",
             "links": [
               {
                 "label": "12er-Montageset",
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 6.10 · 12 Module",
-            "price": "447,42 € inkl. 20 % USt.; Versand extra",
+            "price": "447,42 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Österreich und 6.10 im Shop prüfen.",
             "links": [
               {
@@ -720,10 +726,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "preorder": true
     },
     {
       "id": "solago-anker-5000-10",
@@ -741,7 +748,7 @@
       "currency": "EUR",
       "priceLabel": "Preis für 10 kWh prüfen",
       "shippingText": "Versand nach Österreich laut Shop. Tabelle nennt 5–8 Module, zusätzlich pauschal ab 5; Versand für 10 Module im Checkout bestätigen.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 5,
       "storage": 10.048,
       "grid": "Ja · bis 2.500 W AC",
@@ -771,12 +778,12 @@
         }
       ],
       "review": {
-        "type": "mixed",
-        "productTitle": "Gut bei kleiner Einspeisung",
-        "product": "Netzladung ist im Praxistest belegt; ab Werk sind 800 W Netzausgabe eingestellt. Höhere Einspeisung benötigt passenden Anschluss und Freigabe. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab.",
-        "valueTitle": "Preis noch offen",
-        "value": "Die 10-kWh-Konfiguration und der AT-Gesamtpreis sind nicht sicher bestätigt; Flachdachhalter laut Händler enthalten.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "10-kWh-Variante offen",
+        "product": "Netzladung ist im Praxistest belegt; ab Werk sind 800 W Netzausgabe eingestellt. Höhere Einspeisung benötigt passenden Anschluss und Freigabe. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab. Ob die genaue 10-kWh-Auswahl aktuell bestellbar ist, bleibt ungeprüft.",
+        "valueTitle": "Preis und Bestand offen",
+        "value": "Die 10-kWh-Konfiguration und der AT-Gesamtpreis sind nicht sicher bestätigt; Flachdachhalter laut Händler enthalten. Der Preis der passenden 10-kWh-Variante wurde am 18.11. nicht bestätigt.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Praxistest",
@@ -795,20 +802,20 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 10 Module",
-            "price": "427,55 € laut Händler; AT-Steuer und Versand bestätigen",
-            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Im Shop Österreich/20 % auswählen und Preis bestätigen.",
+            "price": "427,55 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. 20 % USt. für Österreich laut Shop; Versand gesondert klären.",
             "links": [
               {
                 "label": "10er-Montageset",
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-10-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 6.10 · 10 Module",
-            "price": "383,44 € inkl. 20 % USt.; Versand extra",
+            "price": "383,44 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Österreich und 6.10 im Shop prüfen.",
             "links": [
               {
@@ -816,10 +823,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-10-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "needsReview": true,
+      "availabilityUnconfirmed": true
     },
     {
       "id": "solarhandel-anker4-5000",
@@ -836,7 +845,7 @@
       "currency": "EUR",
       "priceLabel": "10-kWh-Preis offen",
       "shippingText": "Österreich-Versand wird laut Händler im Checkout nach Gewicht berechnet.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 5,
       "storage": 10.048,
       "grid": "Ja · bis 2.500 W AC",
@@ -863,12 +872,12 @@
         }
       ],
       "review": {
-        "type": "mixed",
-        "productTitle": "Gut bei kleiner Einspeisung",
-        "product": "Der Speicher kann aus dem Netz laden; ab Werk sind 800 W Netzausgabe eingestellt. Einen höheren Wert nur mit passendem Anschluss und Freigabe nutzen. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab.",
-        "valueTitle": "Preis noch offen",
-        "value": "10-kWh-Akku, Österreich-Steuer und Versand im Warenkorb prüfen; Montageoption extra.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "10-kWh-Variante offen",
+        "product": "Der Speicher kann aus dem Netz laden; ab Werk sind 800 W Netzausgabe eingestellt. Einen höheren Wert nur mit passendem Anschluss und Freigabe nutzen. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab. Ob die genaue 10-kWh-Auswahl aktuell bestellbar ist, bleibt ungeprüft.",
+        "valueTitle": "Preis und Bestand offen",
+        "value": "10-kWh-Akku, Österreich-Steuer und Versand im Warenkorb prüfen; Montageoption extra. Der Preis der passenden 10-kWh-Variante wurde am 18.11. nicht bestätigt.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Praxistest",
@@ -887,20 +896,20 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 10 Module",
-            "price": "427,55 € laut Händler; AT-Steuer und Versand bestätigen",
-            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Im Shop Österreich/20 % auswählen und Preis bestätigen.",
+            "price": "427,55 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. 20 % USt. für Österreich laut Shop; Versand gesondert klären.",
             "links": [
               {
                 "label": "10er-Montageset",
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-10-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 6.10 · 10 Module",
-            "price": "383,44 € inkl. 20 % USt.; Versand extra",
+            "price": "383,44 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Österreich und 6.10 im Shop prüfen.",
             "links": [
               {
@@ -908,10 +917,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-10-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "needsReview": true,
+      "availabilityUnconfirmed": true
     },
     {
       "id": "solarhandel-anker-x1-5335",
@@ -928,7 +939,7 @@
       "currency": "EUR",
       "priceLabel": "10-kWh-Preis offen",
       "shippingText": "Österreich-Versand nach Gewicht; Endbetrag im Checkout berechnet.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 5.335,
       "storage": 10,
       "grid": "Ja · Einstellungen prüfen",
@@ -955,12 +966,12 @@
         }
       ],
       "review": {
-        "type": "good",
-        "productTitle": "Technisch gut geeignet",
-        "product": "5-kW-Hybridwechselrichter für drei Phasen und erweiterbarer X1-Speicher; Netzladung ist laut Anker vorgesehen. Notstrom-Zubehör prüfen.",
-        "valueTitle": "Preis noch offen",
-        "value": "10-kWh-Option und Österreich-Steuer wählen; Versand, Smart Meter und Montagekosten sind nicht bestätigt.",
-        "checked": "2026-11-17",
+        "type": "open",
+        "productTitle": "10-kWh-Variante offen",
+        "product": "5-kW-Hybridwechselrichter für drei Phasen und erweiterbarer X1-Speicher; Netzladung ist laut Anker vorgesehen. Notstrom-Zubehör prüfen. Ob die genaue 10-kWh-Auswahl aktuell bestellbar ist, bleibt ungeprüft.",
+        "valueTitle": "Preis und Bestand offen",
+        "value": "10-kWh-Option und Österreich-Steuer wählen; Versand, Smart Meter und Montagekosten sind nicht bestätigt. Der Preis der passenden 10-kWh-Variante wurde am 18.11. nicht bestätigt.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Anker-Speicher",
@@ -979,7 +990,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 Module",
-            "price": "481,09 € inkl. 20 % USt.; Versand extra",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
             "links": [
               {
@@ -987,12 +998,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
-            "price": "556,19 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
             "links": [
               {
@@ -1004,10 +1015,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "needsReview": true,
+      "availabilityUnconfirmed": true
     },
     {
       "id": "pvmarkt-huawei-564",
@@ -1024,7 +1037,7 @@
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. MwSt.",
       "shippingText": "Versandkosten für Österreich nicht zuverlässig bestätigt; Abholung in Weißkirchen laut Shop.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 5.46,
       "storage": 10,
       "grid": "Ja · Freischaltung/Parametrierung",
@@ -1051,12 +1064,12 @@
         }
       ],
       "review": {
-        "type": "good",
-        "productTitle": "Technisch gut geeignet",
+        "type": "mixed",
+        "productTitle": "Technische Details abklären",
         "product": "Huawei-Hybrid mit LUNA-Speicher und Smart Meter ist funktional passend. Die genaue Batteriegeneration und Modulleistung sind zu klären.",
         "valueTitle": "Preisvergleich offen",
-        "value": "Gerätepreis bekannt, Österreich-Versand und Montage fehlen. Verschiedene Angaben zu den Modulen prüfen.",
-        "checked": "2026-11-17",
+        "value": "7.006,80 € laut Händler inkl. MwSt.; auf Lager. Versand nach Österreich, Montage und widersprüchliche Modul- und Batteriedetails sind offen.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Huawei-Datenblatt",
@@ -1075,20 +1088,20 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 12 Module",
-            "price": "ca. 529,93 € inkl. 20 % USt. rechnerisch; Versand extra",
-            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Österreich-Variante und Endpreis im Warenkorb bestätigen.",
+            "price": "529,93 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Den Versand-Endpreis im Warenkorb bestätigen.",
             "links": [
               {
                 "label": "12er-Montageset",
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 6.10 · 12 Module",
-            "price": "447,42 € inkl. 20 % USt.; Versand extra",
+            "price": "447,42 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Österreich und 6.10 im Shop prüfen.",
             "links": [
               {
@@ -1096,7 +1109,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
       }
@@ -1115,9 +1128,9 @@
       "price": 5988,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Gerätepreis inkl. MwSt.",
-      "shippingText": "Zzgl. Versand; Lieferung nach Österreich und die genauen Versandkosten im Checkout prüfen. Händler: voraussichtlich ab 19.11.2026, nur wenige.",
-      "checked": "2026-11-17",
+      "priceLabel": "Shoppreis inkl. MwSt. · AT-Steuersatz prüfen",
+      "shippingText": "5.988 € laut Shop inkl. MwSt.; der für Österreich geltende Steuersatz und Versand-Endpreis sind nicht individuell bestätigt. Lieferung ab 19.11.2026 laut Händler.",
+      "checked": "2026-11-18",
       "pv": 5.98,
       "storage": 11.52,
       "grid": "Ja · zeitgesteuert; Leistung prüfen",
@@ -1160,8 +1173,8 @@
         "productTitle": "Gut ausgestattet",
         "product": "FoxESS mit Netzladung, 11,52-kWh-Nennspeicher und Smart Meter. Das beiliegende Montageset ist für Ziegeldach; nutzbare Speichergröße und Ersatzstrom prüfen.",
         "valueTitle": "Potenzial, Versand offen",
-        "value": "Ziegeldachhaken enthalten; für Pappdach zusätzliche Unterkonstruktion oder Austausch klären. Versand und Elektriker extra.",
-        "checked": "2026-11-17",
+        "value": "5.988 € laut Shop inkl. MwSt.; AT-Steuersatz und Versand offen. Ziegeldachhaken enthalten, Pappdach-Befestigung und Elektriker extra.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "FoxESS-Handbuch",
@@ -1180,8 +1193,8 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 + 2 Module",
-            "price": "ca. 596,88 € rechnerisch inkl. 20 % USt.; Versand extra",
-            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. 481,09 € für 11 plus rechnerisch 115,79 € für 2; zwei getrennte Reihen und ihre Abstände/Statik beim Händler prüfen.",
+            "price": "596,88 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. 481,09 € für 11 plus 115,79 € für 2; zwei getrennte Reihen und ihre Abstände/Statik beim Händler prüfen.",
             "links": [
               {
                 "label": "11er-Montageset",
@@ -1192,12 +1205,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-hochkant-montageset-2-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 10 + S-Dome 3 · Planungsvariante",
-            "price": "620,18 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "620,18 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 für 10 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 383,44 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
             "links": [
               {
@@ -1209,10 +1222,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "preorder": true
     },
     {
       "id": "tepto-foxess-506-1152",
@@ -1228,9 +1242,9 @@
       "price": 5398.8,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Nicht verfügbar · zuletzt angezeigter Gerätepreis",
+      "priceLabel": "Letzter angezeigter Preis · nicht verfügbar",
       "shippingText": "Nicht auf Lager, Händler zeigt 5.398,80 € inkl. MwSt.; Versand nach Österreich offen.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 5.06,
       "storage": 11.52,
       "grid": "Ja · zeitgesteuert; Leistung prüfen",
@@ -1238,7 +1252,7 @@
       "meter": "FoxESS Smart Meter laut Händler enthalten",
       "warning": "Der Händler zeigt die 11,52-kWh-Variante aktuell als nicht verfügbar („Bald wieder da“). Letzter angezeigter Preis 5.398,80 € zzgl. Versand; Montagesystem wird separat angeboten.",
       "specs": {
-        "Konfiguration / Status": "Artikel PVST5400.5.10; ausgewählt 11,52 kWh. Älterer Suchindex: ausverkauft; aktuellen Stand direkt prüfen",
+        "Konfiguration / Status": "Artikel PVST5400.5.10; die 11,52-kWh-Auswahl ist laut Händler derzeit nicht verfügbar.",
         "Solarmodule": "11 × Trina Vertex S+ TSM-NEG9R.25, 460 Wp = 5.060 Wp, Glas-Glas Fullblack",
         "Speicher": "1 × FoxESS EK12 Plus, 11,52 kWh nominal; 90 % Entladungstiefe laut Datenblatt entsprechen rechnerisch ca. 10,37 kWh",
         "Wechselrichter": "FoxESS H3-5.0-Smart, 3-phasig, 5 kW AC; 3 MPPT",
@@ -1265,12 +1279,12 @@
       ],
       "needsReview": true,
       "review": {
-        "type": "good",
+        "type": "mixed",
         "productTitle": "Gut ausgestattet",
         "product": "5,06 kWp, dreiphasiger FoxESS mit drei MPPT, Netzladung und Smart Meter; 11,52 kWh Speicher nominal. Dachmontage extra.",
-        "valueTitle": "Derzeit nicht verfügbar",
-        "value": "11,52-kWh-Variante laut Händler ausverkauft; letzter Preis ohne Versand und Montagesystem.",
-        "checked": "2026-11-17",
+        "valueTitle": "Nicht verfügbar",
+        "value": "Die 11,52-kWh-Variante ist derzeit nicht verfügbar. Letzter Preis ohne Versand und Dachmontage; nur im Archiv.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "FoxESS-Handbuch",
@@ -1289,7 +1303,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 11 Module",
-            "price": "481,09 € inkl. 20 % USt.; Versand extra",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
             "links": [
               {
@@ -1297,12 +1311,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
-            "price": "556,19 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
             "links": [
               {
@@ -1314,10 +1328,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
-      }
+      },
+      "stale": true,
+      "staleReason": "Die konkrete 11,52-kWh-Variante wird am 18.11.2026 als nicht verfügbar angezeigt."
     },
     {
       "id": "actec-trina-744-1024-large",
@@ -1330,12 +1346,12 @@
       "image": null,
       "imageAlt": "Trina PV Set",
       "imageCaption": "Abbildung des angebotenen Sets",
-      "price": 5638.8,
+      "price": 4078.8,
       "shipping": 175,
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
       "shippingText": "175,00 € Spedition nach Österreich; laut Händler auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 7.44,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -1374,9 +1390,9 @@
         "type": "mixed",
         "productTitle": "Gut, aber deutlich größer",
         "product": "Modulares Trina-Hybridsystem mit Netzladung und 10,24 kWh Speicher; 7,44 kWp brauchen deutlich mehr Fläche als gewünscht.",
-        "valueTitle": "Attraktiver Gerätepreis",
-        "value": "Mit Versand 348 € unter ACTECs kleinerem 5,58-kWp-Set; Dachmontage, Kabel und Elektriker kommen bei beiden dazu.",
-        "checked": "2026-11-17",
+        "valueTitle": "Aktionspreis · größere Anlage",
+        "value": "4.253,80 € mit Österreich-Versand; 1.560 € weniger als am 17.11. und 1.908 € weniger als ACTECs 5,58-kWp-Set. Dachmontage, Kabel und Elektriker sind extra.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Trina-Daten",
@@ -1395,7 +1411,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 2 × 8 Module",
-            "price": "ca. 713,38 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "ca. 713,38 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Zwei 8er-Sets à rechnerisch 356,69 €, getrennte Reihen und Auslegung bestätigen.",
             "links": [
               {
@@ -1403,12 +1419,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-8-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome · 2 × 8 Module",
-            "price": "638,90 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "638,90 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Zwei 8er-Sets à 319,45 €; Aufteilung, Preisvariante und Auslegung bestätigen.",
             "links": [
               {
@@ -1416,7 +1432,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-8-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           }
         ]
       }
@@ -1432,12 +1448,12 @@
       "image": null,
       "imageAlt": "Trina PV Set",
       "imageCaption": "Abbildung des angebotenen Sets",
-      "price": 5482.8,
+      "price": 4798.8,
       "shipping": 175,
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
       "shippingText": "175,00 € Spedition nach Österreich; laut Händler auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pv": 10.23,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -1476,9 +1492,9 @@
         "type": "mixed",
         "productTitle": "Gut, aber mehr als doppelt so groß",
         "product": "10,23 kWp mit dreiphasigem Trina-Hybrid und 10,24 kWh LFP-Speicher; rund 44 m² reine Modulfläche nötig.",
-        "valueTitle": "Attraktiver Gerätepreis",
-        "value": "Mit Versand 504 € unter ACTECs 5,58-kWp-Set; Montage, Unterkonstruktion und Kabel zusätzlich.",
-        "checked": "2026-11-17",
+        "valueTitle": "Aktionspreis · deutlich größer",
+        "value": "4.973,80 € mit Österreich-Versand; 684 € weniger als am 17.11. und 1.188 € weniger als das 5,58-kWp-Set. Montage, Unterkonstruktion und Kabel zusätzlich.",
+        "checked": "2026-11-18",
         "sources": [
           {
             "label": "Trina-Daten",
@@ -1497,7 +1513,7 @@
           {
             "kind": "Geneigtes Pappdach",
             "title": "K2 SingleRail · 2 × 11 Module",
-            "price": "962,18 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "962,18 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. Zwei 11er-Sets à 481,09 €; getrennte Reihen und Auslegung bestätigen.",
             "links": [
               {
@@ -1505,12 +1521,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
           },
           {
             "kind": "Bitumen-Flachdach",
             "title": "K2 D-Dome · 12 + 10 Module",
-            "price": "830,86 € rechnerisch inkl. 20 % USt.; Versand extra",
+            "price": "830,86 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
             "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Zwei getrennte Felder: 447,42 € + 383,44 €; Preisvarianten und individuelle Auslegung bestätigen.",
             "links": [
               {
@@ -1522,7 +1538,112 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-10-module"
               }
             ],
-            "checked": "2026-11-17"
+            "checked": "2026-11-18"
+          }
+        ]
+      }
+    },
+    {
+      "id": "woba-fox-cube-517-96",
+      "group": "dach",
+      "status": "ausland",
+      "seller": "WOBA Solar",
+      "name": "Fox ESS Power Cube · 5,17 kWp + 9,6 kWh",
+      "subtitle": "11 × Trina 470 Wp = 5.170 Wp · 3 × EQ3300 = 9,6 kWh",
+      "url": "https://www.woba-solar.de/products/pv-komplettset-5-kwp-11-trina-vertex-s-470-w-full-black-fox-ess-power-cube-5-0-kw-all-in-one-mit-speicher",
+      "price": 5345,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Deutschlandpreis · 0 % USt. · Auswahl 9,6 kWh",
+      "shippingText": "9,6-kWh-Variante am 18.11. im Shop ausgewählt und mit 5.345 € bei 0 % USt. angezeigt; auf Lager. Österreich-Lieferung grundsätzlich laut Versandseite, Steuer und Versand für diese konkrete Bestellung offen. Dachmontage und Installation extra.",
+      "checked": "2026-11-18",
+      "pv": 5.17,
+      "storage": 9.6,
+      "grid": "Ja · laut FoxESS-Handbuch im Peak-Shaving-Modus",
+      "output": "5 kW · 3-phasig",
+      "meter": "Fox ESS Gridmeter inkl. Stromwandler",
+      "warning": "Unbedingt „9,6 kWh (3 × EQ3300)“ wählen. Der bei Öffnen zunächst sichtbare Preis gehört zur kleineren 6,4-kWh-Variante. Der 0-%-Deutschlandpreis ist kein bestätigter Preis für Österreich.",
+      "specs": {
+        "Solarmodule": "11 × Trina Vertex S+ TSM-470-NEG9RP.25Z, je 470 Wp = 5.170 Wp; Glas-Glas, 1.762 × 1.134 × 30 mm laut Händler.",
+        "Speicher": "3 × Fox ESS EQ3300 à 3,2 kWh = 9,6 kWh nominal; LiFePO₄. Nutzbare Kapazität offen; 90 % Entladungstiefe entsprechen rechnerisch 8,64 kWh.",
+        "Wechselrichter / Netz": "Fox ESS HQ3-5.0 Power Cube, 5 kW AC, dreiphasig. 3 MPPT; maximal 11 kWp PV und 1.000 V DC laut Händler.",
+        "Netzladung": "FoxESS-Handbuch beschreibt Netzladung im Peak-Shaving-Modus; Leistung, Zeitsteuerung und Freigabe für die konkrete AT-Konfiguration offen.",
+        "Messung / Notstrom": "Fox ESS Gridmeter mit 250-A-Stromwandlern enthalten; EPS-Ausgang. Konkrete Hausumschaltung und eventuell zusätzlich nötige Schutz- und Schaltgeräte abklären.",
+        "Montage / Kabel": "100 m 6-mm²-Solarkabel und 6 MC4-Steckerpaare laut Händler enthalten. Bitumen-Unterkonstruktion, Montage, elektrische Installation und Netzanmeldung separat.",
+        "Ausbau": "Laut Händler 2–6 Batteriemodule, bis 19,2 kWh; notwendige Anschluss- und Kompatibilitätsbedingungen prüfen.",
+        "Schutz / Temperatur": "Wechselrichter IP66 laut Händler; Temperaturbereiche für Wechselrichter und Batterie nicht geprüft.",
+        "Garantie": "Händler nennt 25 Jahre Modul-Produktgarantie und 30 Jahre Modulleistung; Batterie- und Wechselrichtergarantie sowie Bedingungen offen.",
+        "Bestand / Preis": "Variante 9,6 kWh laut Shop bei Prüfung auf Lager, 5.345 € mit 0 % USt. für Deutschland. Österreichische USt. und Versand für die konkrete Bestellung nicht bestätigt."
+      },
+      "sources": [
+        {
+          "label": "WOBA: 9,6-kWh-Variante auswählen",
+          "url": "https://www.woba-solar.de/products/pv-komplettset-5-kwp-11-trina-vertex-s-470-w-full-black-fox-ess-power-cube-5-0-kw-all-in-one-mit-speicher"
+        },
+        {
+          "label": "FoxESS HQ3-Handbuch · Netzladung",
+          "url": "https://de.fox-ess.com/Public/Uploads/uploadfile/files/20261112/DEHQ3ManualV1.0.020261110.pdf"
+        },
+        {
+          "label": "WOBA Versandbedingungen",
+          "url": "https://www.woba-solar.de/policies/shipping-policy"
+        }
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Technisch passend, Speicher etwas kleiner",
+        "product": "5,17 kWp, dreiphasig mit Smart Meter und 9,6 kWh LFP. FoxESS beschreibt Netzladung im Peak-Shaving-Betrieb; frei zeitgesteuerte Netzladung und benötigte Notstromteile sind zu klären.",
+        "valueTitle": "Nur Deutschlandpreis belegt",
+        "value": "5.345 € mit 0 % USt. für die gewählte 9,6-kWh-Variante; AT-Steuer, Versand, Dachmontage und Installation fehlen. Ein direkter Vergleich mit AT-Endpreisen ist nicht möglich.",
+        "checked": "2026-11-18",
+        "sources": [
+          {
+            "label": "WOBA-Angebot",
+            "url": "https://www.woba-solar.de/products/pv-komplettset-5-kwp-11-trina-vertex-s-470-w-full-black-fox-ess-power-cube-5-0-kw-all-in-one-mit-speicher"
+          },
+          {
+            "label": "FoxESS-Herstellerhandbuch",
+            "url": "https://de.fox-ess.com/Public/Uploads/uploadfile/files/20261112/DEHQ3ManualV1.0.020261110.pdf"
+          },
+          {
+            "label": "Versandbedingungen",
+            "url": "https://www.woba-solar.de/policies/shipping-policy"
+          }
+        ]
+      },
+      "roof": {
+        "moduleCount": 11,
+        "included": "Eine Bitumendach-Unterkonstruktion ist im originalen WOBA-Lieferumfang nicht belegt. Die folgenden Vorschläge sind gesondert zu kaufen und standortspezifisch zu planen.",
+        "options": [
+          {
+            "kind": "Geneigtes Pappdach",
+            "title": "K2 SingleRail · 11 Module",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
+            "links": [
+              {
+                "label": "11er-Montageset",
+                "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
+              }
+            ],
+            "checked": "2026-11-18"
+          },
+          {
+            "kind": "Bitumen-Flachdach",
+            "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
+            "links": [
+              {
+                "label": "8er-D-Dome",
+                "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-8-module"
+              },
+              {
+                "label": "3er-S-Dome",
+                "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
+              }
+            ],
+            "checked": "2026-11-18"
           }
         ]
       }
@@ -1594,6 +1715,81 @@
       "date": "2026-11-17",
       "price": 5482.8,
       "shipping": 175
+    },
+    {
+      "id": "actec-trina-558-1024",
+      "date": "2026-11-18",
+      "price": 5986.8,
+      "shipping": 175
+    },
+    {
+      "id": "actec-solplanet-558-1024",
+      "date": "2026-11-18",
+      "price": 6514.8,
+      "shipping": 175,
+      "note": "Vorbestellung"
+    },
+    {
+      "id": "actec-trina-744-1024-large",
+      "date": "2026-11-18",
+      "price": 4078.8,
+      "shipping": 175
+    },
+    {
+      "id": "actec-trina-1023-1024-large",
+      "date": "2026-11-18",
+      "price": 4798.8,
+      "shipping": 175
+    },
+    {
+      "id": "tepto-foxess-598-1152",
+      "date": "2026-11-18",
+      "price": 5988,
+      "shipping": null,
+      "note": "Shoppreis inkl. MwSt.; AT-Steuersatz offen"
+    },
+    {
+      "id": "pvmarkt-huawei-564",
+      "date": "2026-11-18",
+      "price": 7006.8,
+      "shipping": null
+    },
+    {
+      "id": "woba-fox-cube-517-96",
+      "date": "2026-11-18",
+      "price": 5345,
+      "shipping": null,
+      "note": "Deutschlandpreis mit 0 % USt.; AT-Steuer offen"
     }
-  ]
+  ],
+  "research": {
+    "checked": "2026-11-18",
+    "text": "Systematische Recherche bei österreichischen und liefernden Fachhändlern, Herstellern, Preisvergleichsportalen sowie Amazon.de, eBay und Kaufland. Nicht belegbare Konfigurationen stehen unter „Noch prüfen“ oder im Archiv; keine vermeintlich passenden Marketplace-Treffer ohne verifizierte Modul- und Speichergröße.",
+    "notes": [
+      {
+        "label": "Amazon-Marketplace / Idealo: gefundene Growatt-Variante mit 5 kWh erfüllt das Speicherziel nicht",
+        "url": "https://www.idealo.de/preisvergleich/Liste/123379413/pv-komplettanlage-mit-speicher-growatt.html"
+      },
+      {
+        "label": "OE24 Solar: 5-kWp-Paket – exakte Batterievariante, Netzladen und Endpreis offen",
+        "url": "https://oe24solar.at/produkt/5-kwp-paket"
+      },
+      {
+        "label": "WOBA EcoFlow: 10-kWh-Variante und Verfügbarkeit nicht sicher belegt",
+        "url": "https://www.woba-solar.de/"
+      },
+      {
+        "label": "Geizhals: weitere Preisvergleichssuche",
+        "url": "https://geizhals.at/?fs=pv+komplettset+10+kwh"
+      },
+      {
+        "label": "Kaufland: weitere Marktplatzsuche",
+        "url": "https://www.kaufland.de/s/?search_value=pv%20komplettanlage%205kw%2010kwh"
+      },
+      {
+        "label": "eBay: weitere Marktplatzsuche",
+        "url": "https://www.ebay.de/sch/i.html?_nkw=pv+komplettanlage+5kw+10kwh"
+      }
+    ]
+  }
 }
