@@ -198,6 +198,23 @@
     .availability-note a { color: #31544b; font-weight: 750; }
     @media (max-width: 760px) { .duel-source { padding: 0 16px 13px; } #duel-plot { height: 500px; } .duel-details { padding: 14px 13px 18px; } }
     @media (max-width: 430px) { #duel-plot { height: 460px; } }
+    /* Full-screen chart mode keeps zoom, fit, labels, and model details available. */
+    .icon-button.fullscreen-toggle { width: auto; min-width: 100px; padding: 0 10px; font-size: .76rem; font-weight: 750; white-space: nowrap; }
+    body.chart-fullscreen-open { overflow: hidden; overscroll-behavior: none; }
+    .chart-card:is(:fullscreen, .chart-expanded) {
+      display: flex; flex-direction: column; width: 100%; height: 100%; max-width: none;
+      margin: 0; padding: 0; border: 0; border-radius: 0; background: var(--plot); box-shadow: none;
+    }
+    .chart-card.chart-expanded { position: fixed; inset: 0; z-index: 10000; width: 100vw; height: 100vh; height: 100dvh; }
+    .chart-card:is(:fullscreen, .chart-expanded) > :not(.developer-highlight):not(.chart-wrap):not(.tooltip) { display: none; }
+    .chart-card:is(:fullscreen, .chart-expanded) > .chart-wrap { flex: 1 1 auto; min-height: 0; width: 100%; padding: 0; }
+    .chart-card:is(:fullscreen, .chart-expanded) > .chart-wrap > svg { width: 100%; height: 100% !important; }
+    .chart-card:is(:fullscreen, .chart-expanded) > .tooltip { flex: 0 0 auto; max-height: 25%; overflow-y: auto; }
+    .chart-card:is(:fullscreen, .chart-expanded) .chart-tools { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); }
+    .chart-card:is(:fullscreen, .chart-expanded) > .developer-highlight { flex: 0 0 auto; padding: 8px 14px; background: #fff; }
+    .chart-card:is(:fullscreen, .chart-expanded) .developer-highlight-head { margin-bottom: 4px; }
+    .chart-card:is(:fullscreen, .chart-expanded) .developer-chips { flex-wrap: nowrap; overflow-x: auto; padding: 2px 1px 4px; scrollbar-width: thin; }
+    .icon-button:focus-visible { outline: 3px solid #8ba2fb; outline-offset: 2px; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
   </style>
 </head>
@@ -245,6 +262,7 @@
           <button class="icon-button" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
           <button class="icon-button" id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
           <button class="icon-button reset" id="zoom-reset" type="button" title="Fit the whole chart">Fit</button>
+          <button class="icon-button fullscreen-toggle" id="fullscreen-arena" type="button" aria-label="Open Arena chart in full screen" aria-pressed="false" title="Open Arena chart in full screen">⛶ Full screen</button>
         </div>
         <svg id="plot" role="img" aria-label="Large SVG scatter plot of model net improvement against median task cost. Every model name and provider mark is on the chart. Drag or pinch to move around and zoom."></svg>
       </div>
@@ -274,6 +292,7 @@
           <button class="icon-button" id="duel-zoom-in" type="button" aria-label="Zoom in on AgentDuel chart" title="Zoom in">+</button>
           <button class="icon-button" id="duel-zoom-out" type="button" aria-label="Zoom out on AgentDuel chart" title="Zoom out">−</button>
           <button class="icon-button reset" id="duel-zoom-reset" type="button" title="Fit the whole AgentDuel chart">Fit</button>
+          <button class="icon-button fullscreen-toggle" id="fullscreen-duel" type="button" aria-label="Open AgentDuel chart in full screen" aria-pressed="false" title="Open AgentDuel chart in full screen">⛶ Full screen</button>
         </div>
         <svg id="duel-plot" role="img" aria-label="AgentDuel Elo against median cost per task. Every model name and provider is shown. Drag or pinch to pan and zoom."></svg>
       </div>
@@ -1034,5 +1053,57 @@
     })();
   </script>
   <script src="./agentduel.js?v=20261117b"></script>
+  <script>
+    (() => {
+      const charts = [
+        { card: document.getElementById("plot").closest(".chart-card"), button: document.getElementById("fullscreen-arena"), name: "Arena" },
+        { card: document.getElementById("duel-plot").closest(".chart-card"), button: document.getElementById("fullscreen-duel"), name: "AgentDuel" },
+      ];
+      let fallbackScroll = null;
+      const isOpen = ({ card }) => document.fullscreenElement === card || card.classList.contains("chart-expanded");
+      function sync() {
+        for (const chart of charts) {
+          const active = isOpen(chart);
+          const label = `${active ? "Exit" : "Open"} ${chart.name} chart ${active ? "full screen" : "in full screen"}`;
+          chart.button.textContent = active ? "✕ Exit full screen" : "⛶ Full screen";
+          chart.button.setAttribute("aria-label", label);
+          chart.button.setAttribute("title", label);
+          chart.button.setAttribute("aria-pressed", String(active));
+        }
+        document.body.classList.toggle("chart-fullscreen-open", charts.some(({ card }) => card.classList.contains("chart-expanded")));
+      }
+      async function close(chart) {
+        if (document.fullscreenElement === chart.card && document.exitFullscreen) {
+          try { await document.exitFullscreen(); } catch (_) { /* The browser may have already exited. */ }
+        }
+        if (chart.card.classList.contains("chart-expanded")) {
+          chart.card.classList.remove("chart-expanded");
+          sync();
+          if (fallbackScroll) window.scrollTo(fallbackScroll.x, fallbackScroll.y);
+          fallbackScroll = null;
+        }
+        sync();
+      }
+      async function open(chart) {
+        if (document.fullscreenEnabled && typeof chart.card.requestFullscreen === "function") {
+          try { await chart.card.requestFullscreen(); sync(); return; }
+          catch (_) { /* Use the page-filling layout when native full screen is unavailable. */ }
+        }
+        fallbackScroll = { x: window.scrollX, y: window.scrollY };
+        chart.card.classList.add("chart-expanded");
+        sync();
+      }
+      for (const chart of charts) {
+        chart.button.addEventListener("click", () => isOpen(chart) ? close(chart) : open(chart));
+      }
+      document.addEventListener("fullscreenchange", sync);
+      document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") return;
+        const fallback = charts.find(({ card }) => card.classList.contains("chart-expanded"));
+        if (fallback) { event.preventDefault(); close(fallback); }
+      });
+      sync();
+    })();
+  </script>
 </body>
 </html>
