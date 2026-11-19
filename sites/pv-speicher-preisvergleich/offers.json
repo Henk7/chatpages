@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "scope": "Mindestens 5.000 Wp enthaltene Module, ungefähr 10 kWh Speicher, Netzladung",
   "offers": [
     {
@@ -10,24 +10,24 @@
       "seller": "Solarvie · Österreich",
       "name": "Deye + Jolywood · 5,06 kWp / 10,2 kWh",
       "subtitle": "11 × Jolywood 460 Wp Full Black; 5.060 Wp · Deye SUN-5K-SG05LP3-EU-SM2",
-      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-jolywood-455-full-black-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher",
+      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-jolywood-455-full-black-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57563131969920",
       "image": "https://www.solarvie.at/cdn/shop/files/215_70x.png?v=1774504306",
       "imageAlt": "Produktabbildung des Solarvie PV-Sets",
       "imageCaption": "Händlerabbildung · Variante prüfen",
       "price": 4432.7,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "Netto 3693,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
-      "checked": "2026-11-18",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10,2-kWh-Variante ausgewählt; Shop zeigt Bruttopreis inkl. USt. und Lieferzeit 7–10 Werktage. Österreich-Versandbetrag offen; Montage/Elektroarbeiten extra.",
+      "checked": "2026-11-19",
       "pv": 5.06,
       "storage": 10.2,
       "grid": "Ja · programmierbare Netzladung laut Deye-Handbuch",
       "output": "5.000 W AC · dreiphasig",
       "meter": "Nicht eindeutig in Stückliste aufgeführt",
-      "warning": "Die aktuelle Shopbeschreibung nennt 11 × 460 Wp; alte URL/Bilder nennen teils 455 Wp. Beide überschreiten 5 kWp; genauen Modultyp bei Bestellung bestätigen. Variante „mit Speicher 10.2 kW SE-G10.2Pro-B“ ausdrücklich wählen: Der Shop bezeichnet die Batteriegröße irrtümlich mit kW. Lieferumfang und Bruttopreis im Warenkorb prüfen.",
+      "warning": "11 × 460 Wp = 5.060 Wp laut aktueller Stückliste; ältere URL/Bilder nennen 455 Wp. 10,2-kWh-Auswahl im Shop tatsächlich gewählt. Genaue Batteriemodule, Smart Meter und Lieferung bestätigen.",
       "specs": {
-        "Variantenpreis": "Anbieter listet die 10,2er Variante mit 3693,92 € netto; 20 % österreichische USt. rechnerisch ergänzt, nicht als bestätigter Kassenpreis behandelt.",
+        "Variantenpreis": "10,2-kWh-Variante im Shop ausgewählt; angezeigter Bruttopreis inklusive USt. Versandkosten für Österreich und Montage extra bzw. offen.",
         "Solarmodule": "11 × Jolywood 460 Wp Full Black; 5.060 Wp",
         "Speicher": "Shop-Variante „mit Speicher 10.2 kW SE-G10.2Pro-B“; laut allgemeiner Stückliste Deye SE-G5.1 Pro B à 5,12 kWh. Stückzahl/Bezeichnung und nutzbare Kapazität beim Händler bestätigen.",
         "Zellchemie / Erweiterung": "LiFePO₄, laut Anbieter modular erweiterbar; Ausbaustufe und BMS-Kompatibilität bestätigen",
@@ -41,7 +41,7 @@
       "sources": [
         {
           "label": "Solarvie: Variante und Lieferumfang",
-          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-jolywood-455-full-black-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-jolywood-455-full-black-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57563131969920"
         },
         {
           "label": "Deye: Originalhandbuch und Netzladung",
@@ -53,20 +53,20 @@
         }
       ],
       "review": {
-        "type": "open",
-        "productTitle": "Variante noch bestätigen",
-        "product": "Dreiphasiger Deye mit zeitgesteuertem Netzladen und LFP-Speicher passt zum Wunsch. Batteriemodell und Messgerät sind im Set noch zu klären. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
-        "valueTitle": "Teilpreis und Bestand offen",
-        "value": "Rechnerischer Preis mit 20 % USt.; Versand, Montage und endgültige 10,2-kWh-Variante sind offen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
-        "checked": "2026-11-18",
+        "type": "mixed",
+        "productTitle": "Technisch interessant, Details offen",
+        "product": "5-kW-Deye-Hybrid arbeitet dreiphasig und unterstützt laut Handbuch zeitgesteuerte Netzladung. Der Shop nennt die gewählte Variante SE-G10.2Pro-B; exakte Akkumodule und Smart Meter vor Kauf bestätigen.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "€ 4.432,70 inkl. USt. für die gewählte 10,2-kWh-Variante. AT-Versandkosten, Dachbefestigung und Installation nicht enthalten bzw. noch nicht bestätigt; kein AT-Endpreis.",
+        "checked": "2026-11-19",
         "sources": [
           {
-            "label": "Deye-Handbuch",
-            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
+            "label": "Ausgewählte Variante",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-jolywood-455-full-black-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57563131969920"
           },
           {
-            "label": "Angebot",
-            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-jolywood-455-full-black-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+            "label": "Deye-Handbuch: Netzladen",
+            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
           }
         ]
       },
@@ -85,7 +85,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -102,11 +102,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
-      "availabilityUnconfirmed": true
+      "availabilityUnconfirmed": false
     },
     {
       "id": "solarvie-deye-trina-517-102",
@@ -116,24 +116,24 @@
       "seller": "Solarvie · Österreich",
       "name": "Deye + Trina · 5,17 kWp / 10,2 kWh",
       "subtitle": "11 × Trina Solar Vertex S+ 470 Wp Black Frame; 5.170 Wp · Deye SUN-5K-SG05LP3-EU-SM2",
-      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher",
+      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57594102514048",
       "image": "https://www.solarvie.at/cdn/shop/files/263_70x.png?v=1774506736",
       "imageAlt": "Produktabbildung des Solarvie PV-Sets",
       "imageCaption": "Händlerabbildung · Variante prüfen",
       "price": 4445.9,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "Netto 3704,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
-      "checked": "2026-11-18",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10,2-kWh-Variante ausgewählt; Shop zeigt Bruttopreis inkl. USt. und Lieferzeit 7–10 Werktage. Österreich-Versandbetrag offen; Montage/Elektroarbeiten extra.",
+      "checked": "2026-11-19",
       "pv": 5.17,
       "storage": 10.2,
       "grid": "Ja · programmierbare Netzladung laut Deye-Handbuch",
       "output": "5.000 W AC · dreiphasig",
       "meter": "Nicht eindeutig in Stückliste aufgeführt",
-      "warning": "Die aktuelle Beschreibung nennt 470 Wp pro Modul, ältere URL/Bilder 455 Wp. Genaue Module bei Bestellung bestätigen; auch 11 × 455 Wp ergeben mindestens 5.000 Wp. Variante „mit Speicher 10.2 kW SE-G10.2Pro-B“ ausdrücklich wählen: Der Shop bezeichnet die Batteriegröße irrtümlich mit kW. Lieferumfang und Bruttopreis im Warenkorb prüfen.",
+      "warning": "11 × 470 Wp = 5.170 Wp laut aktueller Stückliste; ältere URL/Bilder nennen 455 Wp. 10,2-kWh-Auswahl im Shop tatsächlich gewählt. Genaue Batteriemodule, Smart Meter und Lieferung bestätigen.",
       "specs": {
-        "Variantenpreis": "Anbieter listet die 10,2er Variante mit 3704,92 € netto; 20 % österreichische USt. rechnerisch ergänzt, nicht als bestätigter Kassenpreis behandelt.",
+        "Variantenpreis": "10,2-kWh-Variante im Shop ausgewählt; angezeigter Bruttopreis inklusive USt. Versandkosten für Österreich und Montage extra bzw. offen.",
         "Solarmodule": "11 × Trina Solar Vertex S+ 470 Wp Black Frame; 5.170 Wp",
         "Speicher": "Shop-Variante „mit Speicher 10.2 kW SE-G10.2Pro-B“; laut allgemeiner Stückliste Deye SE-G5.1 Pro B à 5,12 kWh. Stückzahl/Bezeichnung und nutzbare Kapazität beim Händler bestätigen.",
         "Zellchemie / Erweiterung": "LiFePO₄, laut Anbieter modular erweiterbar; Ausbaustufe und BMS-Kompatibilität bestätigen",
@@ -147,7 +147,7 @@
       "sources": [
         {
           "label": "Solarvie: Variante und Lieferumfang",
-          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57594102514048"
         },
         {
           "label": "Deye: Originalhandbuch und Netzladung",
@@ -159,20 +159,20 @@
         }
       ],
       "review": {
-        "type": "open",
-        "productTitle": "Variante noch bestätigen",
-        "product": "Deye unterstützt zeitgesteuerte Netzladung und hat einen Ersatzstromausgang. Konkrete Module, Speicher und Messgerät vor Kauf bestätigen. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
-        "valueTitle": "Teilpreis und Bestand offen",
-        "value": "Bruttopreis nur berechnet; Versand und Montage fehlen noch. 10,2-kWh-Variante auswählen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
-        "checked": "2026-11-18",
+        "type": "mixed",
+        "productTitle": "Technisch interessant, Details offen",
+        "product": "5-kW-Deye-Hybrid arbeitet dreiphasig und unterstützt laut Handbuch zeitgesteuerte Netzladung. Der Shop nennt die gewählte Variante SE-G10.2Pro-B; exakte Akkumodule und Smart Meter vor Kauf bestätigen.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "€ 4.445,90 inkl. USt. für die gewählte 10,2-kWh-Variante. AT-Versandkosten, Dachbefestigung und Installation nicht enthalten bzw. noch nicht bestätigt; kein AT-Endpreis.",
+        "checked": "2026-11-19",
         "sources": [
           {
-            "label": "Deye-Handbuch",
-            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
+            "label": "Ausgewählte Variante",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57594102514048"
           },
           {
-            "label": "Angebot",
-            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+            "label": "Deye-Handbuch: Netzladen",
+            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
           }
         ]
       },
@@ -191,7 +191,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -208,11 +208,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
-      "availabilityUnconfirmed": true
+      "availabilityUnconfirmed": false
     },
     {
       "id": "solarvie-deye-aiko-528-102",
@@ -222,24 +222,24 @@
       "seller": "Solarvie · Österreich",
       "name": "Deye + AIKO · 5,28 kWp / 10,2 kWh",
       "subtitle": "11 × AIKO 480 Wp Neostar 3S+54 Glas-Glas; 5.280 Wp · Deye SUN-5K-SG05LP3-EU-SM2",
-      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-aiko-470-neostar-3s-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher",
+      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-aiko-470-neostar-3s-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57578349625728",
       "image": "https://www.solarvie.at/cdn/shop/files/239_70x.png?v=1774504835",
       "imageAlt": "Produktabbildung des Solarvie PV-Sets",
       "imageCaption": "Händlerabbildung · Variante prüfen",
       "price": 4947.5,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "Netto 4122,92 € × 1,20; Österreich-Versand, Variantenpreis im Warenkorb und Verfügbarkeit noch bestätigen. Keine Installation enthalten. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
-      "checked": "2026-11-18",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10,2-kWh-Variante ausgewählt; Shop zeigt Bruttopreis inkl. USt. und Lieferzeit 7–10 Werktage. Österreich-Versandbetrag offen; Montage/Elektroarbeiten extra.",
+      "checked": "2026-11-19",
       "pv": 5.28,
       "storage": 10.2,
       "grid": "Ja · programmierbare Netzladung laut Deye-Handbuch",
       "output": "5.000 W AC · dreiphasig",
       "meter": "Nicht eindeutig in Stückliste aufgeführt",
-      "warning": "Solarvie weist bei den AIKO-480-W-Modulen auf mögliche Lieferengpässe und Ersatz nach Absprache hin. Mindestens 5.000 Wp bei Ersatz ausdrücklich vereinbaren. Variante „mit Speicher 10.2 kW SE-G10.2Pro-B“ ausdrücklich wählen: Der Shop bezeichnet die Batteriegröße irrtümlich mit kW. Lieferumfang und Bruttopreis im Warenkorb prüfen.",
+      "warning": "11 × 480 Wp = 5.280 Wp laut Stückliste. Der Händler behält sich gleichwertige Ersatzmodule vor: Vor Kauf 11 tatsächlich gelieferte Module mit mindestens 5.000 Wp insgesamt schriftlich bestätigen lassen. Genaue Batteriemodule und Smart Meter klären.",
       "specs": {
-        "Variantenpreis": "Anbieter listet die 10,2er Variante mit 4122,92 € netto; 20 % österreichische USt. rechnerisch ergänzt, nicht als bestätigter Kassenpreis behandelt.",
+        "Variantenpreis": "10,2-kWh-Variante im Shop ausgewählt; angezeigter Bruttopreis inklusive USt. Versandkosten für Österreich und Montage extra bzw. offen.",
         "Solarmodule": "11 × AIKO 480 Wp Neostar 3S+54 Glas-Glas; 5.280 Wp",
         "Speicher": "Shop-Variante „mit Speicher 10.2 kW SE-G10.2Pro-B“; laut allgemeiner Stückliste Deye SE-G5.1 Pro B à 5,12 kWh. Stückzahl/Bezeichnung und nutzbare Kapazität beim Händler bestätigen.",
         "Zellchemie / Erweiterung": "LiFePO₄, laut Anbieter modular erweiterbar; Ausbaustufe und BMS-Kompatibilität bestätigen",
@@ -253,7 +253,7 @@
       "sources": [
         {
           "label": "Solarvie: Variante und Lieferumfang",
-          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-aiko-470-neostar-3s-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-aiko-470-neostar-3s-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57578349625728"
         },
         {
           "label": "Deye: Originalhandbuch und Netzladung",
@@ -265,20 +265,20 @@
         }
       ],
       "review": {
-        "type": "open",
-        "productTitle": "Variante noch bestätigen",
-        "product": "Deye bietet 5 kW dreiphasig und Netzladung; AIKO-Module liefern im Set 5,28 kWp. Ersatzmodul und Speicher konkret bestätigen. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
-        "valueTitle": "Teilpreis und Bestand offen",
-        "value": "Rechnerisch rund 502 € mehr als das Trina-Deye-Set bei 110 Wp mehr; Versand und Montage sind bei beiden offen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
-        "checked": "2026-11-18",
+        "type": "mixed",
+        "productTitle": "Technisch interessant, Details offen",
+        "product": "5-kW-Deye-Hybrid arbeitet dreiphasig und unterstützt laut Handbuch zeitgesteuerte Netzladung. Der Shop nennt die gewählte Variante SE-G10.2Pro-B; exakte Akkumodule und Smart Meter vor Kauf bestätigen.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "€ 4.947,50 inkl. USt. für die gewählte 10,2-kWh-Variante. AT-Versandkosten, Dachbefestigung und Installation nicht enthalten bzw. noch nicht bestätigt; kein AT-Endpreis.",
+        "checked": "2026-11-19",
         "sources": [
           {
-            "label": "Deye-Handbuch",
-            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
+            "label": "Ausgewählte Variante",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-aiko-470-neostar-3s-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher?variant=57578349625728"
           },
           {
-            "label": "Angebot",
-            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-aiko-470-neostar-3s-deye-sun-5k-sg05lp3-eu-sm2-opt-deye-se-g5-1-pro-b-lv-speicher"
+            "label": "Deye-Handbuch: Netzladen",
+            "url": "https://de.deyeinverter.com/deyeinverter/2025/11/17/%E3%80%90B%E3%80%91Manual_SUN-4-12K-SG05LP3-EU-SM2_20251115_de.pdf"
           }
         ]
       },
@@ -297,7 +297,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -314,11 +314,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
-      "availabilityUnconfirmed": true
+      "availabilityUnconfirmed": false
     },
     {
       "id": "solarvie-sofar-trina-5115-10",
@@ -328,16 +328,16 @@
       "seller": "Solarvie · Österreich",
       "name": "Sofar PowerAll + Trina · ca. 5,1 kWp / 10 kWh",
       "subtitle": "11 × 465 oder 470 Wp · PowerAll ESI-5K-T1 · 10-kWh-Variante",
-      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-sofarsolar-hyd-ktl-3ph-opt-sofarsolar-bts-ds5-speicher",
+      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-sofarsolar-hyd-ktl-3ph-opt-sofarsolar-bts-ds5-speicher?variant=57560115511680",
       "image": "https://www.solarvie.at/cdn/shop/files/159_70x.png?v=1794529031",
       "imageAlt": "Sofar und Trina PV-Set",
       "imageCaption": "Händlerabbildung · Variante prüfen",
       "price": 5974.62,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Rechnerisch inkl. 20 % USt.; Versand offen",
-      "shippingText": "4.978,85 € netto × 1,20. Preis der 10-kWh-Auswahl, Verfügbarkeit und Österreich-Versand im Warenkorb bestätigen. Verfügbarkeit der exakt ausgewählten Batterievariante offen; kein bestätigtes kaufbares Angebot.",
-      "checked": "2026-11-18",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10-kWh-Variante ausgewählt, laut Shop Express-Versand bzw. Lieferzeit 7–10 Werktage; Bruttopreis inkl. USt. Österreich-Versandkosten offen. Montage und Installation extra.",
+      "checked": "2026-11-19",
       "pv": 5.115,
       "storage": 10,
       "grid": "Ja · „Charging From Grid“ im Herstellerhandbuch",
@@ -345,7 +345,7 @@
       "meter": "DTSU666 80 A laut Händler enthalten",
       "warning": "Shop nennt im Lieferumfang sowohl 11 × 465 Wp (5,115 kWp) als auch 11 × 470 Wp (5,17 kWp); konkreten Typ klären. 10-kWh-Variante wählen; Bruttopreis und Versand bestätigen.",
       "specs": {
-        "Variantenpreis": "10-kWh-Variante BTS5K-E10 mit 4.978,85 € netto im Händler-Variantenmenü; zzgl. 20 % USt. kalkuliert, exakter Warenkorbpreis und Versand offen.",
+        "Variantenpreis": "10-kWh-Variante im Shop gewählt; Preis inkl. USt. Versand und Montage extra.",
         "Solarmodule": "11 × Trina Glas-Glas: Händler nennt 465 Wp und 470 Wp an verschiedenen Stellen; mindestens 5.115 Wp.",
         "Speicher": "SofarSolar BTS5K-E10, ca. 10 kWh nominal laut Variantenauswahl; tatsächliche Modulanzahl und nutzbare kWh prüfen.",
         "Wechselrichter": "Sofar PowerAll ESI-5K-T1, 5 kW AC, dreiphasig; 3 MPPT laut Hersteller.",
@@ -357,7 +357,7 @@
       "sources": [
         {
           "label": "Solarvie: Variante und Stückliste",
-          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-sofarsolar-hyd-ktl-3ph-opt-sofarsolar-bts-ds5-speicher"
+          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-sofarsolar-hyd-ktl-3ph-opt-sofarsolar-bts-ds5-speicher?variant=57560115511680"
         },
         {
           "label": "SOFAR: Gerätefamilie",
@@ -369,19 +369,19 @@
         }
       ],
       "review": {
-        "type": "open",
-        "productTitle": "Variante noch bestätigen",
-        "product": "Dreiphasiges System mit drei MPPT und Netzladefunktion; der Händler führt einen Smart Meter auf. Genaue Modulleistung und Akku-Auswahl prüfen. Der Shop listet die Batterieauswahl; Bestand und tatsächlich ausgewählte Variante waren im Warenkorb nicht überprüfbar.",
-        "valueTitle": "Teilpreis und Bestand offen",
-        "value": "20 % USt. sind berechnet; Versand, Montage und die 10-kWh-Variante im Warenkorb bestätigen. Es handelt sich um einen aus dem angezeigten Nettopreis berechneten Hinweis, keinen bestätigten Kassen- oder Österreich-Endpreis.",
-        "checked": "2026-11-18",
+        "type": "mixed",
+        "productTitle": "Netzladen, Details abklären",
+        "product": "Dreiphasiger SOFAR-Hybrid mit drei MPPT, Netzladung und laut Händler Smart Meter. 10 kWh gewählt; exaktes Batteriemodell und Nutzkapazität sowie 465/470-Wp-Modulwiderspruch bestätigen.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "5.974,62 € inkl. USt. für die gewählte 10-kWh-Variante. Österreich-Versand, Unterkonstruktion und Installation nicht bestätigt bzw. extra.",
+        "checked": "2026-11-19",
         "sources": [
           {
-            "label": "SOFAR-Daten",
-            "url": "https://de.sofarsolar.com/product/residentialstorage/storageinverter/ESI-5-12K-T1.html"
+            "label": "Ausgewählte Variante",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-sofarsolar-hyd-ktl-3ph-opt-sofarsolar-bts-ds5-speicher?variant=57560115511680"
           },
           {
-            "label": "Netzladung im Handbuch",
+            "label": "SOFAR-Handbuch mit Netzladung",
             "url": "https://www.voegelin.ch/Dokumente/Download_314/260205_esi-5-12k-t1_usermanual_v19_en-int.pdf"
           }
         ]
@@ -401,7 +401,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -418,11 +418,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
-      "availabilityUnconfirmed": true
+      "availabilityUnconfirmed": false
     },
     {
       "id": "idealo-growatt-552-1024",
@@ -446,7 +446,7 @@
       "grid": "Ja · AC CHG im Growatt-Handbuch",
       "output": "5.000 W AC · dreiphasig",
       "meter": "Lieferumfang prüfen",
-      "warning": "Am 18.11.2026 über den bisherigen Preisvergleich nicht erneut auffindbar; Händler, Modulanzahl, Versand und Bestand nicht verifiziert.",
+      "warning": "Am 19.11.2026 über den bisherigen Preisvergleich nicht als aktuelles konkretes Angebot auffindbar; Modulzahl und Bestand nicht verifiziert.",
       "specs": {
         "Artikel": "Growatt SPH5000TL3-BH-UP + 4 × ARK 2.5H-A2 + HVC 60050-C2, PV-Set 5.520 Wp, laut Idealo.",
         "Solarmodule": "5.520 Wp laut Idealo; Anzahl, Hersteller und exakte Modulmodelle konnten auf der blockierten Händlerseite nicht geprüft werden.",
@@ -471,8 +471,8 @@
         "productTitle": "Angebot nicht verifizierbar",
         "product": "Das Growatt-Handbuch beschreibt Netzladen; die genaue Modulkonfiguration und der Händler sind nicht erneut bestätigt.",
         "valueTitle": "Kein aktueller Preis",
-        "value": "Preis und Verfügbarkeit konnten am 18.11.2026 nicht erneut bestätigt werden. Anzeige nur im Archiv; kein aktueller Treffer.",
-        "checked": "2026-11-18",
+        "value": "Preis und Verfügbarkeit konnten am 19.11.2026 nicht bestätigt werden. Nur im Archiv; kein aktueller Treffer.",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "Growatt-Handbuch",
@@ -503,7 +503,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -520,12 +520,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
       "stale": true,
-      "staleReason": "Am 18.11.2026 über den bisherigen Preisvergleich nicht erneut auffindbar; Händler, Modulanzahl, Versand und Bestand nicht verifiziert."
+      "staleReason": "Am 19.11.2026 über den bisherigen Preisvergleich nicht als aktuelles konkretes Angebot auffindbar; Modulzahl und Bestand nicht verifiziert."
     },
     {
       "id": "actec-trina-558-1024",
@@ -542,8 +542,8 @@
       "shipping": 175,
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
-      "shippingText": "175,00 € Spedition nach Österreich; am 18.11.2026 laut Anbieter auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
-      "checked": "2026-11-18",
+      "shippingText": "175,00 € Spedition nach Österreich; am 19.11.2026 laut Anbieter auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
+      "checked": "2026-11-19",
       "pv": 5.58,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -584,7 +584,7 @@
         "product": "Dreiphasig, modularer LFP-Speicher und Netzladung: technisch passend. Smart Meter und Ersatzstrom-Zubehör im konkreten Set klären.",
         "valueTitle": "Endpreis bestätigt",
         "value": "6.161,80 € inkl. Österreich-Versand. Montage, Kabel und Unterkonstruktion kosten extra. Das größere 7,44-kWp-Set ist aktuell 1.908 € günstiger, braucht aber mehr Fläche.",
-        "checked": "2026-11-18",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "Trina-Daten",
@@ -611,7 +611,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -624,7 +624,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       }
@@ -644,8 +644,8 @@
       "shipping": 175,
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
-      "shippingText": "175,00 € Spedition nach Österreich; Vorbestellung, voraussichtlich lieferbar ab 21.11.2026.",
-      "checked": "2026-11-18",
+      "shippingText": "175 € Spedition nach Österreich; Vorbestellung mit Lieferdatum 01.12.2026 laut Händler. Keine Montage oder Unterkonstruktion enthalten.",
+      "checked": "2026-11-19",
       "pv": 5.58,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -653,7 +653,7 @@
       "meter": "Nicht in Set-Stückliste aufgeführt",
       "warning": "Vorbestellung. 5,58 kWp statt exakt 5,00 kWp. Montagesystem, PV-Kabel und Elektroarbeiten sind extra; Smart Meter vor Bestellung klären.",
       "specs": {
-        "Artikel / Verfügbarkeit": "PV10710783; Vorbestellung, Lieferung laut Händler voraussichtlich ab 21.11.2026",
+        "Artikel / Verfügbarkeit": "Vorbestellung; Lieferung ab 01.12.2026 laut Händler.",
         "Solarmodule": "12 × JA Solar JAM54D40-465/LR, je 465 Wp Glas-Glas; insgesamt 5.580 Wp",
         "Speicher": "4 × Solplanet Ai-HB G2 Pro 2,56 kWh plus Batterie-BMS mit Basis = 10,24 kWh nominal; nutzbare Kapazität prüfen",
         "Zellchemie / Erweiterung": "LiFePO₄; bis zu 8 Module / 20,48 kWh je Turm laut Händler",
@@ -664,7 +664,8 @@
         "Notstrom": "EPS-Ausgang; Backup-Verschaltung und notwendiges Zubehör abklären",
         "Montage / Kabel": "Unterkonstruktion, Solarkabel, Stecker, Installationsmaterial und Fachmontage nicht im Set enthalten",
         "Schutz": "Wechselrichter IP66 laut Solplanet Datenblatt",
-        "Garantie": "Gesetzliche Gewährleistung 2 Jahre; Herstellergarantie der einzelnen Komponenten prüfen"
+        "Garantie": "Gesetzliche Gewährleistung 2 Jahre; Herstellergarantie der einzelnen Komponenten prüfen",
+        "Artikel / Bestand": "PV10710783; Vorbestellung, Lieferung ab 01.12.2026 laut Händler."
       },
       "sources": [
         {
@@ -685,8 +686,8 @@
         "productTitle": "Gut geeignet",
         "product": "Passendes dreiphasiges Hybridset mit LFP-Speicher und Netzladung. Smart Meter und erforderliches Ersatzstrom-Zubehör sind abzuklären.",
         "valueTitle": "Vergleichsweise höher",
-        "value": "6.689,80 € mit Österreich-Versand; 528 € über dem 5,58-kWp-Trina-Set von ACTEC. Vorbestellung; beide ohne Dachmontage, Kabel und Elektroarbeiten.",
-        "checked": "2026-11-18",
+        "value": "6.689,80 € mit Österreich-Versand; 528 € über dem 5,58-kWp-Trina-Set von ACTEC. Vorbestellung ab 01.12.; beide ohne Dachmontage, Kabel und Elektroarbeiten.",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "Kompatibilitätsliste",
@@ -713,7 +714,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -726,7 +727,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
@@ -735,7 +736,7 @@
     {
       "id": "solago-anker-5000-10",
       "group": "stecker",
-      "status": "offen",
+      "status": "teilpreis",
       "seller": "Solago · Österreich",
       "name": "Anker Solarbank 4 Pro · Flachdach-Set",
       "subtitle": "10 × 500 Wp = 5,00 kWp · 10,048 kWh gewählt",
@@ -743,18 +744,18 @@
       "image": "https://solago.at/cdn/shop/files/solago_coverbild_Flachdach-Boden_mit_Anker-4-Pro_10_module_d054f74d-63cc-4966-92a1-8c63af3c131b_288x.webp?v=1787639580",
       "imageAlt": "Anker Solarbank mit Solarmodulen und Flachdachhalterung",
       "imageCaption": "Abbildung des angebotenen Sets",
-      "price": null,
+      "price": 4293.6,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Preis für 10 kWh prüfen",
-      "shippingText": "Versand nach Österreich laut Shop. Tabelle nennt 5–8 Module, zusätzlich pauschal ab 5; Versand für 10 Module im Checkout bestätigen.",
-      "checked": "2026-11-18",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10-kWh-Variante inkl. 20 % USt. ausgewählt; laut Shop verfügbar. Flachdach-/Bodenhalter enthalten; Freigabe für Bitumen und Ballast offen. Österreich-Versand offen, Elektroinstallation extra.",
+      "checked": "2026-11-19",
       "pv": 5,
       "storage": 10.048,
       "grid": "Ja · bis 2.500 W AC",
       "output": "800 W ab Werk; mehr nur unter Bedingungen",
       "meter": "Anker Smart Meter laut Händler enthalten",
-      "warning": "Exakt 5,00 kWp. Die abgerufene Shopseite zeigte die 10-kWh-Auswahl und 3.653 €, aber die Variantenpreise sind nicht eindeutig nachvollziehbar. Preis erst nach Auswahl und im Warenkorb bestätigen.",
+      "warning": "Verschaltung kritisch: Anker nennt max. 1.250 W und 36 A je MPPT und untersagt Reihenschaltung. Bei 10 × 500 W und 4 MPPT müssten bei direkter Verteilung mindestens 3 Module an einen Eingang: 1.500 Wp; 3 × 13,21 A = 39,63 A nach AIKO-Datenblatt. Eine zulässige vollständige Verschaltung ist nicht belegt. Vor Anschluss schriftlich von Anker/Fachbetrieb klären.",
       "specs": {
         "Auswahl": "10 kWh: 1 × E5000 Pro + 1 × BP5000; Flachdach/Boden; Anschlusskabel auswählen",
         "Solarmodule": "10 × AIKO 500 W Glas-Glas Full Black, insgesamt exakt 5.000 Wp",
@@ -765,7 +766,8 @@
         "Notstrom": "Bis 2.500 W am separaten Off-Grid-Ausgang laut Hersteller; nicht automatisch das ganze Haus",
         "Lieferumfang": "Laut Anbieter 10 × Flachdachhalter, 10 × Modulpaar-Verlängerung, Smart Meter, Anschlusskabel und Y-Stecker; konkrete Auswahl prüfen",
         "Schutz / Temperatur": "IP66; −20 bis +55 °C laut Hersteller",
-        "Garantie": "10 Jahre auf Haupteinheit laut Händler; Bedingungen der Erweiterungsbatterie und Module prüfen"
+        "Garantie": "10 Jahre auf Haupteinheit laut Händler; Bedingungen der Erweiterungsbatterie und Module prüfen",
+        "Verschaltung / Eingangsgrenze": "Verschaltung kritisch: Anker nennt max. 1.250 W und 36 A je MPPT und untersagt Reihenschaltung. Bei 10 × 500 W und 4 MPPT müssten bei direkter Verteilung mindestens 3 Module an einen Eingang: 1.500 Wp; 3 × 13,21 A = 39,63 A nach AIKO-Datenblatt. Eine zulässige vollständige Verschaltung ist nicht belegt. Vor Anschluss schriftlich von Anker/Fachbetrieb klären."
       },
       "sources": [
         {
@@ -775,23 +777,39 @@
         {
           "label": "Anker: technische Daten und Netzladung",
           "url": "https://www.ankersolix.com/de/products/ae103"
+        },
+        {
+          "label": "Anker: MPPT-Grenzen",
+          "url": "https://www.ankersolix.com/de/balkonkraftwerk-mit-speicher/solarbank4-ae103?ic=vCqMuakb"
+        },
+        {
+          "label": "AIKO-Datenblatt",
+          "url": "https://gr-solar.de/wp-content/uploads/2026/06/Datenblatt_Aiko_Neostar_2S_Plus_60_AIKO-A-MAH60Db_500-520W_PV-Modul.pdf"
         }
       ],
       "review": {
         "type": "open",
-        "productTitle": "10-kWh-Variante offen",
-        "product": "Netzladung ist im Praxistest belegt; ab Werk sind 800 W Netzausgabe eingestellt. Höhere Einspeisung benötigt passenden Anschluss und Freigabe. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab. Ob die genaue 10-kWh-Auswahl aktuell bestellbar ist, bleibt ungeprüft.",
-        "valueTitle": "Preis und Bestand offen",
-        "value": "Die 10-kWh-Konfiguration und der AT-Gesamtpreis sind nicht sicher bestätigt; Flachdachhalter laut Händler enthalten. Der Preis der passenden 10-kWh-Variante wurde am 18.11. nicht bestätigt.",
-        "checked": "2026-11-18",
+        "productTitle": "Verschaltung kritisch / ungeklärt",
+        "product": "Netzladung bis 2.500 W; ab Werk 800 W Netzausgabe. Verschaltung kritisch: Anker nennt max. 1.250 W und 36 A je MPPT und untersagt Reihenschaltung. Bei 10 × 500 W und 4 MPPT müssten bei direkter Verteilung mindestens 3 Module an einen Eingang: 1.500 Wp; 3 × 13,21 A = 39,63 A nach AIKO-Datenblatt. Eine zulässige vollständige Verschaltung ist nicht belegt. Vor Anschluss schriftlich von Anker/Fachbetrieb klären.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "€ 4.293,60 inkl. 20 % USt.; Flachdach-/Bodenhalter enthalten; Freigabe für Bitumen und Ballast offen. Versand und Installation extra bzw. offen. Ein Preis-Leistungs-Urteil bleibt bis zur Klärung aus.",
+        "checked": "2026-11-19",
         "sources": [
           {
-            "label": "Praxistest",
-            "url": "https://www.smartzone.de/anker-solarbank-4-pro-test/"
+            "label": "Gewähltes Angebot",
+            "url": "https://solago.at/products/balkonkraftwerk-mit-speicher-anker-solix-solarbank-4-5000-watt-flachdach-boden?variant=57912202527094"
           },
           {
-            "label": "Angebot",
-            "url": "https://solago.at/products/balkonkraftwerk-mit-speicher-anker-solix-solarbank-4-5000-watt-flachdach-boden?variant=57912202527094"
+            "label": "Anker: Eingangsgrenzen und Verschaltung",
+            "url": "https://www.ankersolix.com/de/balkonkraftwerk-mit-speicher/solarbank4-ae103?ic=vCqMuakb"
+          },
+          {
+            "label": "AIKO: Datenblatt Modulstrom",
+            "url": "https://gr-solar.de/wp-content/uploads/2026/06/Datenblatt_Aiko_Neostar_2S_Plus_60_AIKO-A-MAH60Db_500-520W_PV-Modul.pdf"
+          },
+          {
+            "label": "Unabhängiger Test des Grundgeräts",
+            "url": "https://www.smartzone.de/anker-solarbank-4-pro-test/"
           }
         ]
       },
@@ -810,7 +828,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-10-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -823,35 +841,36 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-10-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
       "needsReview": true,
-      "availabilityUnconfirmed": true
+      "availabilityUnconfirmed": false,
+      "compatibilityUnconfirmed": true
     },
     {
       "id": "solarhandel-anker4-5000",
       "group": "stecker",
-      "status": "offen",
+      "status": "teilpreis",
       "seller": "Solarhandel24 · Lieferung Österreich",
       "name": "Anker Solarbank 4 Pro + AIKO 500 W",
       "subtitle": "10 × 500 Wp = 5,00 kWp · 10 kWh auswählbar",
-      "url": "https://solarhandel24.at/products/5000w-solarkraftwerk-aiko-500w-full-black-mit-anker-solix-solarbank-4-pro",
+      "url": "https://solarhandel24.at/products/5000w-solarkraftwerk-aiko-500w-full-black-mit-anker-solix-solarbank-4-pro?variant=56854059778434",
       "image": "",
       "imageAlt": "",
-      "price": null,
+      "price": 4053.6,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "10-kWh-Preis offen",
-      "shippingText": "Österreich-Versand wird laut Händler im Checkout nach Gewicht berechnet.",
-      "checked": "2026-11-18",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10-kWh-Variante inkl. 20 % USt. ausgewählt; laut Shop verfügbar. Ohne Halterung gewählt. Österreich-Versand offen, Elektroinstallation extra.",
+      "checked": "2026-11-19",
       "pv": 5,
       "storage": 10.048,
       "grid": "Ja · bis 2.500 W AC",
       "output": "800 W ab Werk; mehr nur unter Bedingungen",
       "meter": "Smart Meter Gen 2 laut Händler enthalten",
-      "warning": "Exakt 5,00 kWp. 10-kWh-Variante und 20 % MwSt. auswählen; der Grundpreis gilt nicht nachweislich für diese Konfiguration.",
+      "warning": "Verschaltung kritisch: Anker nennt max. 1.250 W und 36 A je MPPT und untersagt Reihenschaltung. Bei 10 × 500 W und 4 MPPT müssten bei direkter Verteilung mindestens 3 Module an einen Eingang: 1.500 Wp; 3 × 13,21 A = 39,63 A nach AIKO-Datenblatt. Eine zulässige vollständige Verschaltung ist nicht belegt. Vor Anschluss schriftlich von Anker/Fachbetrieb klären.",
       "specs": {
         "Solarmodule": "10 × AIKO 500 W Glas-Glas Full Black = exakt 5.000 Wp",
         "Speicher": "1 × Anker SOLIX E5000 Pro + 1 × BP5000 auswählen = 10,048 kWh nominal, LiFePO₄",
@@ -859,33 +878,50 @@
         "PV / MPPT": "Max. 5.000 W PV-Eingang, 4 MPPT; elektrische Verschaltung vom Fachbetrieb planen",
         "Hausnetz": "800 W ab Werk; höhere Leistungen abhängig von Anschlussbedingungen und Zulassung",
         "Lieferumfang": "Anker Smart Meter Gen 2, 10 Paare 5-m-Solarkabel und Y-Stecker laut Anbieter; Montageoption extra",
-        "Garantie / Temperatur": "10 Jahre auf Haupteinheit laut Händler, IP66, −20 bis +55 °C laut Anker; Garantien der übrigen Komponenten prüfen"
+        "Garantie / Temperatur": "10 Jahre auf Haupteinheit laut Händler, IP66, −20 bis +55 °C laut Anker; Garantien der übrigen Komponenten prüfen",
+        "Verschaltung / Eingangsgrenze": "Verschaltung kritisch: Anker nennt max. 1.250 W und 36 A je MPPT und untersagt Reihenschaltung. Bei 10 × 500 W und 4 MPPT müssten bei direkter Verteilung mindestens 3 Module an einen Eingang: 1.500 Wp; 3 × 13,21 A = 39,63 A nach AIKO-Datenblatt. Eine zulässige vollständige Verschaltung ist nicht belegt. Vor Anschluss schriftlich von Anker/Fachbetrieb klären."
       },
       "sources": [
         {
           "label": "Angebot und Varianten",
-          "url": "https://solarhandel24.at/products/5000w-solarkraftwerk-aiko-500w-full-black-mit-anker-solix-solarbank-4-pro"
+          "url": "https://solarhandel24.at/products/5000w-solarkraftwerk-aiko-500w-full-black-mit-anker-solix-solarbank-4-pro?variant=56854059778434"
         },
         {
           "label": "Anker: technische Daten",
           "url": "https://www.ankersolix.com/de/products/ae103"
+        },
+        {
+          "label": "Anker: MPPT-Grenzen",
+          "url": "https://www.ankersolix.com/de/balkonkraftwerk-mit-speicher/solarbank4-ae103?ic=vCqMuakb"
+        },
+        {
+          "label": "AIKO-Datenblatt",
+          "url": "https://gr-solar.de/wp-content/uploads/2026/06/Datenblatt_Aiko_Neostar_2S_Plus_60_AIKO-A-MAH60Db_500-520W_PV-Modul.pdf"
         }
       ],
       "review": {
         "type": "open",
-        "productTitle": "10-kWh-Variante offen",
-        "product": "Der Speicher kann aus dem Netz laden; ab Werk sind 800 W Netzausgabe eingestellt. Einen höheren Wert nur mit passendem Anschluss und Freigabe nutzen. Ein unabhängiger Test maß beim Grundgerät rund 81 % für Netz → Akku → Haus; Werte hängen vom Betrieb ab. Ob die genaue 10-kWh-Auswahl aktuell bestellbar ist, bleibt ungeprüft.",
-        "valueTitle": "Preis und Bestand offen",
-        "value": "10-kWh-Akku, Österreich-Steuer und Versand im Warenkorb prüfen; Montageoption extra. Der Preis der passenden 10-kWh-Variante wurde am 18.11. nicht bestätigt.",
-        "checked": "2026-11-18",
+        "productTitle": "Verschaltung kritisch / ungeklärt",
+        "product": "Netzladung bis 2.500 W; ab Werk 800 W Netzausgabe. Verschaltung kritisch: Anker nennt max. 1.250 W und 36 A je MPPT und untersagt Reihenschaltung. Bei 10 × 500 W und 4 MPPT müssten bei direkter Verteilung mindestens 3 Module an einen Eingang: 1.500 Wp; 3 × 13,21 A = 39,63 A nach AIKO-Datenblatt. Eine zulässige vollständige Verschaltung ist nicht belegt. Vor Anschluss schriftlich von Anker/Fachbetrieb klären.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "€ 4.053,60 inkl. 20 % USt.; Ohne Halterung gewählt. Versand und Installation extra bzw. offen. Ein Preis-Leistungs-Urteil bleibt bis zur Klärung aus.",
+        "checked": "2026-11-19",
         "sources": [
           {
-            "label": "Praxistest",
-            "url": "https://www.smartzone.de/anker-solarbank-4-pro-test/"
+            "label": "Gewähltes Angebot",
+            "url": "https://solarhandel24.at/products/5000w-solarkraftwerk-aiko-500w-full-black-mit-anker-solix-solarbank-4-pro?variant=56854059778434"
           },
           {
-            "label": "Angebot",
-            "url": "https://solarhandel24.at/products/5000w-solarkraftwerk-aiko-500w-full-black-mit-anker-solix-solarbank-4-pro"
+            "label": "Anker: Eingangsgrenzen und Verschaltung",
+            "url": "https://www.ankersolix.com/de/balkonkraftwerk-mit-speicher/solarbank4-ae103?ic=vCqMuakb"
+          },
+          {
+            "label": "AIKO: Datenblatt Modulstrom",
+            "url": "https://gr-solar.de/wp-content/uploads/2026/06/Datenblatt_Aiko_Neostar_2S_Plus_60_AIKO-A-MAH60Db_500-520W_PV-Modul.pdf"
+          },
+          {
+            "label": "Unabhängiger Test des Grundgeräts",
+            "url": "https://www.smartzone.de/anker-solarbank-4-pro-test/"
           }
         ]
       },
@@ -904,7 +940,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-10-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -917,48 +953,50 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-10-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
       "needsReview": true,
-      "availabilityUnconfirmed": true
+      "availabilityUnconfirmed": false,
+      "compatibilityUnconfirmed": true
     },
     {
       "id": "solarhandel-anker-x1-5335",
       "group": "dach",
-      "status": "offen",
+      "status": "teilpreis",
       "seller": "Solarhandel24 · Lieferung Österreich",
       "name": "Anker X1-H5K-T + AIKO 485 W",
       "subtitle": "11 × 485 Wp = 5,335 kWp · 10 kWh auswählbar",
-      "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher",
+      "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher?variant=56871912440194",
       "image": "",
       "imageAlt": "",
-      "price": null,
+      "price": 5923.66,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "10-kWh-Preis offen",
-      "shippingText": "Österreich-Versand nach Gewicht; Endbetrag im Checkout berechnet.",
-      "checked": "2026-11-18",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10-kWh-Variante inkl. 20 % USt. ausgewählt; Lieferzeit laut Shop 9–14 Tage. AT-Versandkosten offen; keine Dachmontage oder Installation enthalten.",
+      "checked": "2026-11-19",
       "pv": 5.335,
       "storage": 10,
       "grid": "Ja · Einstellungen prüfen",
       "output": "5.000 W AC · dreiphasig",
       "meter": "Enthaltensein nicht bestätigt",
-      "warning": "10-kWh-Speicher und 20 % MwSt. für Österreich im Shop auswählen; der zunächst angezeigte Preis ist für die gesuchte Konfiguration nicht eindeutig bestätigt.",
+      "warning": "11 × 485 Wp = 5.335 Wp. Zwei X1-B5-H-Akkus à 5 kWh gewählt; Montage, Smart Meter, Notstromzubehör und Versand klären. Bei abweichenden Ausrichtungen Stringspannung und zwei MPPT fachlich planen.",
       "specs": {
         "Solarmodule": "11 × AIKO Solar 485 W Glas-Glas AIKO-A485-GRH48Dw Neostar 2P+48 = 5.335 Wp",
         "Wechselrichter": "Anker X1-H5K-T, dreiphasiger 5-kW-Hybridwechselrichter",
-        "Speicher": "Anker X1-B5-H Batterieoption mit 10 kWh auswählen; Lieferumfang der passenden Konfiguration prüfen",
+        "Speicher": "2 × Anker X1-B5-H à 5 kWh = 10 kWh nominal; nutzbare Kapazität offen.",
         "Netzladung": "X1-H5K-T Anleitung beschreibt Laden aus Stromnetz oder PV; Einstellungen und Tarifautomation prüfen",
         "Zubehör": "100 m Solarkabel und 6 Stecker-Sets laut Händler; Montageset laut Händler separat",
-        "Steuer / Versand": "20-%-MwSt.-Variante und österreichische Versandkosten im Checkout wählen; keine 0-%-Preise aus Deutschland übernehmen",
-        "Notstrom / Garantie": "Ersatzstromausstattung, Smart Meter und Garantiebedingungen des ausgewählten Sets beim Händler bestätigen"
+        "Steuer / Versand": "10-kWh-Variante, 20 % USt. im Shop gewählt; AT-Versand nach Gewicht im Checkout, genaue Kosten offen.",
+        "Notstrom / Garantie": "Ersatzstromausstattung, Smart Meter und Garantiebedingungen des ausgewählten Sets beim Händler bestätigen",
+        "PV-Eingang": "2 MPPT; Belegung, Stringspannungen und bei unterschiedlichen Ausrichtungen die zulässigen Modulgruppen fachlich prüfen."
       },
       "sources": [
         {
           "label": "Angebot und Auswahl",
-          "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher"
+          "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher?variant=56871912440194"
         },
         {
           "label": "Anker X1-H5K-T: Benutzerhandbuch",
@@ -966,20 +1004,20 @@
         }
       ],
       "review": {
-        "type": "open",
-        "productTitle": "10-kWh-Variante offen",
-        "product": "5-kW-Hybridwechselrichter für drei Phasen und erweiterbarer X1-Speicher; Netzladung ist laut Anker vorgesehen. Notstrom-Zubehör prüfen. Ob die genaue 10-kWh-Auswahl aktuell bestellbar ist, bleibt ungeprüft.",
-        "valueTitle": "Preis und Bestand offen",
-        "value": "10-kWh-Option und Österreich-Steuer wählen; Versand, Smart Meter und Montagekosten sind nicht bestätigt. Der Preis der passenden 10-kWh-Variante wurde am 18.11. nicht bestätigt.",
-        "checked": "2026-11-18",
+        "type": "mixed",
+        "productTitle": "Dreiphasig und netzladbar",
+        "product": "11 AIKO-Module, 5-kW-X1-Hybrid und zwei X1-B5-H-Akkus mit 10 kWh; Netzladen laut Anker. Smart Meter und Zusatzteile für Notstrom vor Kauf klären.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "5.923,66 € inkl. 20 % USt., ohne geklärten AT-Versand und Dachmontage. Das 10 × 500-Wp-X1-Set kostet bei gleicher Batterieauswahl 4,38 € mehr; Modulanzahl und -typ unterscheiden sich.",
+        "checked": "2026-11-19",
         "sources": [
           {
-            "label": "Anker-Speicher",
-            "url": "https://support.ankersolix.com/s/article/Anker-SOLIX-X1-Battery-Module-X1-B5-H-X1-B5-H0-User-Guide"
+            "label": "Gewähltes Angebot",
+            "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher?variant=56871912440194"
           },
           {
-            "label": "Angebot",
-            "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher"
+            "label": "Anker X1 Anleitung",
+            "url": "https://venturama-solar.de/wp-content/uploads/2025/12/Anker-SOLIX-X1-Power-Module_X1-H512K-T_Bedienungsanleitung.pdf"
           }
         ]
       },
@@ -998,7 +1036,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -1015,12 +1053,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
       "needsReview": true,
-      "availabilityUnconfirmed": true
+      "availabilityUnconfirmed": false
     },
     {
       "id": "pvmarkt-huawei-564",
@@ -1028,7 +1066,7 @@
       "status": "teilpreis",
       "seller": "PVmarkt.shop · Österreich",
       "name": "Huawei SUN2000 + LUNA2000 10 kWh",
-      "subtitle": "12 Module · 5,46–5,64 kWp · 3-phasig",
+      "subtitle": "12 × 470 Wp laut Stückliste = 5,64 kWp · 3-phasig",
       "url": "https://pvmarkt.shop/produkt/komplettpaket-5kwp-mit-10kwh-speicher-huawei-2/",
       "image": "",
       "imageAlt": "",
@@ -1036,22 +1074,22 @@
       "shipping": null,
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. MwSt.",
-      "shippingText": "Versandkosten für Österreich nicht zuverlässig bestätigt; Abholung in Weißkirchen laut Shop.",
-      "checked": "2026-11-18",
-      "pv": 5.46,
+      "shippingText": "7.006,80 € inkl. 20 % USt.; laut Händler auf Lager. Österreich-Versand und Dachmontage extra und nicht für die Bestellung bestätigt.",
+      "checked": "2026-11-19",
+      "pv": 5.64,
       "storage": 10,
       "grid": "Ja · Freischaltung/Parametrierung",
       "output": "5.000 W AC · dreiphasig",
       "meter": "Huawei DTSU666-H enthalten",
-      "warning": "Die gefundenen Händlerangaben nennen 12 × 455 Wp oder 12 × 470 Wp. Beides liegt über 5 kWp, aber konkrete Module, Lieferumfang und Versand vor Bestellung bestätigen.",
+      "warning": "Aktuelle Händlerstückliste nennt 12 × 470 Wp, ein Produktbild 450 Wp. Exakte Module und den Lieferumfang vor Bestellung schriftlich bestätigen; auch 12 × 450 Wp wären 5.400 Wp.",
       "specs": {
-        "Solarmodule": "Widersprüchliche Stände: 12 × Trina Solar Vertex S+ 455 Wp = 5,46 kWp oder 12 × 470 Wp = 5,64 kWp; konkret liefern lassen bestätigen",
+        "Solarmodule": "12 × Trina Solar Vertex S+ TSM-NEG9R.28 470 Wp = 5.640 Wp laut aktueller Stückliste. Produktabbildung nennt 450 Wp; tatsächliche Ausführung bestätigen.",
         "Wechselrichter": "Huawei SUN2000-5KTL-M1 HC Hybrid, 5 kW, dreiphasig",
         "Speicher": "Huawei LUNA2000 10 kWh; genaue Modulgeneration und nutzbare Kapazität im Angebot bestätigen",
         "Netzladung": "SUN2000-M1 Handbuch beschreibt die Funktion; Aktivierung und lokale Anforderungen durch Elektrofachbetrieb prüfen",
         "Messung": "Huawei Smart Power Sensor DTSU666-H laut Lieferliste",
         "Montage / weitere Teile": "Unterkonstruktion, Montagedienstleistung und weitere Elektrokomponenten in der Liste nicht eindeutig genannt; vor Bestellung klären",
-        "Grenze": "Mindestens 5 kWp bei beiden aufgefundenen Varianten; exakte Variante bestätigen"
+        "Grenze": "Mindestens 5 kWp bei beiden Angaben (12 × 450/470 Wp); exakte Variante bestätigen."
       },
       "sources": [
         {
@@ -1069,7 +1107,7 @@
         "product": "Huawei-Hybrid mit LUNA-Speicher und Smart Meter ist funktional passend. Die genaue Batteriegeneration und Modulleistung sind zu klären.",
         "valueTitle": "Preisvergleich offen",
         "value": "7.006,80 € laut Händler inkl. MwSt.; auf Lager. Versand nach Österreich, Montage und widersprüchliche Modul- und Batteriedetails sind offen.",
-        "checked": "2026-11-18",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "Huawei-Datenblatt",
@@ -1096,7 +1134,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-12-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -1109,7 +1147,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-12-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       }
@@ -1129,8 +1167,8 @@
       "shipping": null,
       "currency": "EUR",
       "priceLabel": "Shoppreis inkl. MwSt. · AT-Steuersatz prüfen",
-      "shippingText": "5.988 € laut Shop inkl. MwSt.; der für Österreich geltende Steuersatz und Versand-Endpreis sind nicht individuell bestätigt. Lieferung ab 19.11.2026 laut Händler.",
-      "checked": "2026-11-18",
+      "shippingText": "5.988 € laut AT-Shop inkl. MwSt.; Steuersatz und AT-Versand-Endpreis für das Set nicht individuell bestätigt. Laut Händler wenige verfügbar, Lieferung ab 19.11.2026. Installation extra.",
+      "checked": "2026-11-19",
       "pv": 5.98,
       "storage": 11.52,
       "grid": "Ja · zeitgesteuert; Leistung prüfen",
@@ -1174,7 +1212,7 @@
         "product": "FoxESS mit Netzladung, 11,52-kWh-Nennspeicher und Smart Meter. Das beiliegende Montageset ist für Ziegeldach; nutzbare Speichergröße und Ersatzstrom prüfen.",
         "valueTitle": "Potenzial, Versand offen",
         "value": "5.988 € laut Shop inkl. MwSt.; AT-Steuersatz und Versand offen. Ziegeldachhaken enthalten, Pappdach-Befestigung und Elektriker extra.",
-        "checked": "2026-11-18",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "FoxESS-Handbuch",
@@ -1205,7 +1243,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-hochkant-montageset-2-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -1222,11 +1260,11 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
-      "preorder": true
+      "preorder": false
     },
     {
       "id": "tepto-foxess-506-1152",
@@ -1244,13 +1282,13 @@
       "currency": "EUR",
       "priceLabel": "Letzter angezeigter Preis · nicht verfügbar",
       "shippingText": "Nicht auf Lager, Händler zeigt 5.398,80 € inkl. MwSt.; Versand nach Österreich offen.",
-      "checked": "2026-11-18",
+      "checked": "2026-11-19",
       "pv": 5.06,
       "storage": 11.52,
       "grid": "Ja · zeitgesteuert; Leistung prüfen",
       "output": "5.000 W AC · dreiphasig",
       "meter": "FoxESS Smart Meter laut Händler enthalten",
-      "warning": "Der Händler zeigt die 11,52-kWh-Variante aktuell als nicht verfügbar („Bald wieder da“). Letzter angezeigter Preis 5.398,80 € zzgl. Versand; Montagesystem wird separat angeboten.",
+      "warning": "Am 19.11.2026: 11,52-kWh-Variante laut Shop derzeit nicht verfügbar. Dachbefestigung laut separater Stückliste nicht enthalten.",
       "specs": {
         "Konfiguration / Status": "Artikel PVST5400.5.10; die 11,52-kWh-Auswahl ist laut Händler derzeit nicht verfügbar.",
         "Solarmodule": "11 × Trina Vertex S+ TSM-NEG9R.25, 460 Wp = 5.060 Wp, Glas-Glas Fullblack",
@@ -1283,8 +1321,8 @@
         "productTitle": "Gut ausgestattet",
         "product": "5,06 kWp, dreiphasiger FoxESS mit drei MPPT, Netzladung und Smart Meter; 11,52 kWh Speicher nominal. Dachmontage extra.",
         "valueTitle": "Nicht verfügbar",
-        "value": "Die 11,52-kWh-Variante ist derzeit nicht verfügbar. Letzter Preis ohne Versand und Dachmontage; nur im Archiv.",
-        "checked": "2026-11-18",
+        "value": "5.398,80 € angezeigt, die gewählte 11,52-kWh-Variante ist aber nicht verfügbar; Österreich-Versand und Montage offen. Nur im Archiv.",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "FoxESS-Handbuch",
@@ -1311,7 +1349,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -1328,12 +1366,12 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       },
       "stale": true,
-      "staleReason": "Die konkrete 11,52-kWh-Variante wird am 18.11.2026 als nicht verfügbar angezeigt."
+      "staleReason": "Am 19.11.2026: 11,52-kWh-Variante laut Shop derzeit nicht verfügbar."
     },
     {
       "id": "actec-trina-744-1024-large",
@@ -1351,7 +1389,7 @@
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
       "shippingText": "175,00 € Spedition nach Österreich; laut Händler auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
-      "checked": "2026-11-18",
+      "checked": "2026-11-19",
       "pv": 7.44,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -1391,8 +1429,8 @@
         "productTitle": "Gut, aber deutlich größer",
         "product": "Modulares Trina-Hybridsystem mit Netzladung und 10,24 kWh Speicher; 7,44 kWp brauchen deutlich mehr Fläche als gewünscht.",
         "valueTitle": "Aktionspreis · größere Anlage",
-        "value": "4.253,80 € mit Österreich-Versand; 1.560 € weniger als am 17.11. und 1.908 € weniger als ACTECs 5,58-kWp-Set. Dachmontage, Kabel und Elektriker sind extra.",
-        "checked": "2026-11-18",
+        "value": "4.253,80 € mit Österreich-Versand; gegenüber 18.11. unverändert und 1.908 € unter ACTECs 5,58-kWp-Set. Mehr Module und Fläche; Dachmontage, Kabel und Elektriker extra.",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "Trina-Daten",
@@ -1419,7 +1457,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-8-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -1432,7 +1470,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-8-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       }
@@ -1453,7 +1491,7 @@
       "currency": "EUR",
       "priceLabel": "Gerätepreis inkl. 20 % MwSt.",
       "shippingText": "175,00 € Spedition nach Österreich; laut Händler auf Lager. Keine Montage oder Unterkonstruktion enthalten.",
-      "checked": "2026-11-18",
+      "checked": "2026-11-19",
       "pv": 10.23,
       "storage": 10.24,
       "grid": "Ja · zeitabhängiger Betriebsmodus",
@@ -1493,8 +1531,8 @@
         "productTitle": "Gut, aber mehr als doppelt so groß",
         "product": "10,23 kWp mit dreiphasigem Trina-Hybrid und 10,24 kWh LFP-Speicher; rund 44 m² reine Modulfläche nötig.",
         "valueTitle": "Aktionspreis · deutlich größer",
-        "value": "4.973,80 € mit Österreich-Versand; 684 € weniger als am 17.11. und 1.188 € weniger als das 5,58-kWp-Set. Montage, Unterkonstruktion und Kabel zusätzlich.",
-        "checked": "2026-11-18",
+        "value": "4.973,80 € mit Österreich-Versand; gegenüber 18.11. unverändert, 1.188 € unter dem 5,58-kWp-Set und 720 € über dem 7,44-kWp-Set. 22 Module brauchen deutlich mehr Fläche; Montage und Kabel extra.",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "Trina-Daten",
@@ -1521,7 +1559,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -1538,7 +1576,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-10-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       }
@@ -1550,13 +1588,13 @@
       "seller": "WOBA Solar",
       "name": "Fox ESS Power Cube · 5,17 kWp + 9,6 kWh",
       "subtitle": "11 × Trina 470 Wp = 5.170 Wp · 3 × EQ3300 = 9,6 kWh",
-      "url": "https://www.woba-solar.de/products/pv-komplettset-5-kwp-11-trina-vertex-s-470-w-full-black-fox-ess-power-cube-5-0-kw-all-in-one-mit-speicher",
+      "url": "https://www.woba-solar.de/products/pv-komplettset-5-kwp-11-trina-vertex-s-470-w-full-black-fox-ess-power-cube-5-0-kw-all-in-one-mit-speicher?variant=57721999982965",
       "price": 5345,
       "shipping": null,
       "currency": "EUR",
       "priceLabel": "Deutschlandpreis · 0 % USt. · Auswahl 9,6 kWh",
-      "shippingText": "9,6-kWh-Variante am 18.11. im Shop ausgewählt und mit 5.345 € bei 0 % USt. angezeigt; auf Lager. Österreich-Lieferung grundsätzlich laut Versandseite, Steuer und Versand für diese konkrete Bestellung offen. Dachmontage und Installation extra.",
-      "checked": "2026-11-18",
+      "shippingText": "9,6-kWh-Variante am 19.11. im Shop ausgewählt: 5.345 € bei 0 % deutscher USt., auf Lager. AT-Steuer und Versand für diese Bestellung offen; Dachmontage und Installation extra.",
+      "checked": "2026-11-19",
       "pv": 5.17,
       "storage": 9.6,
       "grid": "Ja · laut FoxESS-Handbuch im Peak-Shaving-Modus",
@@ -1595,7 +1633,7 @@
         "product": "5,17 kWp, dreiphasig mit Smart Meter und 9,6 kWh LFP. FoxESS beschreibt Netzladung im Peak-Shaving-Betrieb; frei zeitgesteuerte Netzladung und benötigte Notstromteile sind zu klären.",
         "valueTitle": "Nur Deutschlandpreis belegt",
         "value": "5.345 € mit 0 % USt. für die gewählte 9,6-kWh-Variante; AT-Steuer, Versand, Dachmontage und Installation fehlen. Ein direkter Vergleich mit AT-Endpreisen ist nicht möglich.",
-        "checked": "2026-11-18",
+        "checked": "2026-11-19",
         "sources": [
           {
             "label": "WOBA-Angebot",
@@ -1626,7 +1664,7 @@
                 "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           },
           {
             "kind": "Bitumen-Flachdach",
@@ -1643,10 +1681,312 @@
                 "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
               }
             ],
-            "checked": "2026-11-18"
+            "checked": "2026-11-19"
           }
         ]
       }
+    },
+    {
+      "id": "solarhandel-anker-x1-5000",
+      "group": "dach",
+      "status": "teilpreis",
+      "seller": "Solarhandel24 · Lieferung Österreich",
+      "name": "Anker X1-H5K-T + AIKO 500 W · exakt 5,00 kWp",
+      "subtitle": "10 × 500 Wp = 5.000 Wp · 2 × 5 kWh Speicher",
+      "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-500w-anker-x1-h5k-t-speicher?variant=56069840830850",
+      "image": "",
+      "imageAlt": "",
+      "price": 5928.04,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10-kWh-Variante inkl. 20 % USt. ausgewählt; Lieferzeit laut Shop 9–14 Tage. AT-Versandkosten offen; keine Dachmontage oder Installation enthalten.",
+      "checked": "2026-11-19",
+      "pv": 5,
+      "storage": 10,
+      "grid": "Ja · Einstellungen prüfen",
+      "output": "5.000 W AC · dreiphasig",
+      "meter": "Enthaltensein nicht bestätigt",
+      "warning": "Exakt 5.000 Wp. 10-kWh-Speicher ausgewählt. Smart Meter und Notstrom-Zubehör nicht sicher in der Stückliste; Versand, Installation und Dachmontage extra bzw. offen. Wallbox-Aktion wird vom Händler erwähnt, ist für diese Auswahl nicht als Lieferumfang bestätigt.",
+      "specs": {
+        "Solarmodule": "10 × AIKO-A500-MAH60Db Neostar 2S+ à 500 Wp = exakt 5.000 Wp; 1.954 × 1.134 × 30 mm, Impp 13,21 A laut Moduldatenblatt.",
+        "Speicher": "2 × Anker X1-B5-H à 5 kWh = 10 kWh nominal; nutzbare Kapazität im konkreten Set offen.",
+        "Wechselrichter / AC": "Anker X1-H5K-T, 5 kW AC-Nennleistung, dreiphasig.",
+        "Netzladung": "Anker X1 unterstützt Netzladung; genaue AC-Ladeleistung, Tarifsteuerung und lokale Freigaben für diese Konfiguration prüfen.",
+        "PV-Eingang / MPPT": "Zwei MPPT; 5 Module je String als mögliche Planung, exakte Stringspannung bei Kälte, Ausrichtung und Eingangsstrom vom Fachbetrieb prüfen.",
+        "Temperatur / Schutz": "Wechselrichter laut Datenblatt IP66; Temperatur- und Aufstellgrenzen der Batteriemodule sowie Klemmzonen prüfen.",
+        "Ausbau / Garantie": "X1-Speichersystem modular erweiterbar; technische Grenzen und 10-Jahres-Garantiebedingungen laut Anbieter für gewählte Geräte prüfen.",
+        "Messung / Notstrom": "Smart Meter nicht in der sichtbaren Stückliste bestätigt; Ersatzstrom und benötigte Umschalteinrichtung gesondert klären.",
+        "Lieferumfang / Montage": "10 Module, X1-Wechselrichter, gewählte 10-kWh-Batterie, 100 m Solarkabel und 6 Stecker-Sets laut Händler; Dachmontage und Elektroarbeiten extra.",
+        "Preis / Bestand": "5.928,04 € für 10 kWh inkl. 20 % USt.; laut Shop 9–14 Tage. AT-Versandbetrag offen."
+      },
+      "sources": [
+        {
+          "label": "Gewähltes 10-kWh-Angebot",
+          "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-500w-anker-x1-h5k-t-speicher?variant=56069840830850"
+        },
+        {
+          "label": "Anker X1: Handbuch",
+          "url": "https://venturama-solar.de/wp-content/uploads/2025/12/Anker-SOLIX-X1-Power-Module_X1-H512K-T_Bedienungsanleitung.pdf"
+        },
+        {
+          "label": "AIKO-Moduldatenblatt",
+          "url": "https://gr-solar.de/wp-content/uploads/2026/06/Datenblatt_Aiko_Neostar_2S_Plus_60_AIKO-A-MAH60Db_500-520W_PV-Modul.pdf"
+        }
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Exakt 5 kWp, Netzladung",
+        "product": "10 AIKO-500-W-Module und 10 kWh X1-Speicher; dreiphasiger 5-kW-Hybrid mit Netzladen. Smart Meter, Notstrom-Zubehör und Stringplanung klären.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "5.928,04 € inkl. 20 % USt.; 4,38 € über dem X1-Set mit 11 × 485 W bei ebenfalls 10 kWh. AT-Versand, Dachmontage und Elektroarbeiten nicht enthalten bzw. offen.",
+        "checked": "2026-11-19",
+        "sources": [
+          {
+            "label": "Gewähltes 10-kWh-Angebot",
+            "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-500w-anker-x1-h5k-t-speicher?variant=56069840830850"
+          },
+          {
+            "label": "Anker X1 Handbuch",
+            "url": "https://venturama-solar.de/wp-content/uploads/2025/12/Anker-SOLIX-X1-Power-Module_X1-H512K-T_Bedienungsanleitung.pdf"
+          },
+          {
+            "label": "AIKO-Moduldatenblatt",
+            "url": "https://gr-solar.de/wp-content/uploads/2026/06/Datenblatt_Aiko_Neostar_2S_Plus_60_AIKO-A-MAH60Db_500-520W_PV-Modul.pdf"
+          }
+        ]
+      },
+      "roof": {
+        "moduleCount": 10,
+        "included": "Keine Bitumen-Unterkonstruktion in der gewählten Setvariante nachgewiesen; folgende Montagesets sind gesonderte Planungsvarianten.",
+        "options": [
+          {
+            "kind": "Geneigtes Pappdach",
+            "title": "K2 SingleRail · 10 Module",
+            "price": "427,55 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig. 20 % USt. für Österreich laut Shop; Versand gesondert klären.",
+            "links": [
+              {
+                "label": "10er-Montageset",
+                "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-10-module-hochkant"
+              }
+            ],
+            "checked": "2026-11-19"
+          },
+          {
+            "kind": "Bitumen-Flachdach",
+            "title": "K2 D-Dome 6.10 · 10 Module",
+            "price": "383,44 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "D-Dome 6.10 Ost/West; K2 nennt Bitumen als geeigneten Untergrund. Kein Ballast im Lieferumfang. Dachneigung, Tragfähigkeit, Verträglichkeit der Auflagen sowie Modulformat und Klemmzonen standortspezifisch prüfen. Österreich und 6.10 im Shop prüfen.",
+            "links": [
+              {
+                "label": "10er-Montageset",
+                "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-10-module"
+              }
+            ],
+            "checked": "2026-11-19"
+          }
+        ]
+      },
+      "needsReview": true,
+      "availabilityUnconfirmed": false
+    },
+    {
+      "id": "solarvie-huawei-map0-5115-10",
+      "group": "dach",
+      "status": "teilpreis",
+      "needsReview": true,
+      "seller": "Solarvie · Österreich",
+      "name": "Huawei SUN2000 MAP0 + Trina · ab 5,115 kWp / 10 kWh",
+      "subtitle": "11 × mindestens 465 Wp = 5.115 Wp · Huawei LUNA 10 kWh",
+      "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-huawei-sun2000-map0-opt-huawei-luna2000-speicher?variant=57431883055488",
+      "image": "https://www.solarvie.at/cdn/shop/files/159_70x.png?v=1794529031",
+      "imageAlt": "Sofar und Trina PV-Set",
+      "imageCaption": "Händlerabbildung · Variante prüfen",
+      "price": 6123.14,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Gewählte Variante inkl. USt.; AT-Versand offen",
+      "shippingText": "10-kWh-Variante ausgewählt, laut Shop Express-Versand bzw. Lieferzeit 7–10 Werktage; Bruttopreis inkl. USt. Österreich-Versandkosten offen. Montage und Installation extra.",
+      "checked": "2026-11-19",
+      "pv": 5.115,
+      "storage": 10,
+      "grid": "Ja · Netzladung laut Huawei-Speicheranleitung",
+      "output": "5.000 W AC · dreiphasig",
+      "meter": "Nicht eindeutig in der Stückliste bestätigt",
+      "warning": "Stückliste nennt 11 × 465 Wp, Überschrift 470 Wp: mindestens 5.115 Wp nach diesen Angaben. Exakte Module und Batterievariante sowie Smart Meter und AT-Versand vor Kauf bestätigen.",
+      "specs": {
+        "Solarmodule": "11 × Trina Vertex S+ Black Frame, Stückliste 465 Wp, Titel 470 Wp; mindestens 5.115 Wp. Genaues Modell vor Kauf bestätigen.",
+        "Speicher": "10-kWh-LUNA2000-Variante im Shop ausgewählt; genaue Batteriegeneration, Anzahl und nutzbare Kapazität nicht eindeutig bestätigt.",
+        "Wechselrichter": "Huawei SUN2000-5K-MAP0, 5 kW AC, dreiphasig; 2 MPPT, max. 16 A je MPPT, 160–1.000 V, max. 1.100 V laut Huawei.",
+        "Netzladung": "Huawei bestätigt Netzladung und max. 5.500 W Batterieladeleistung am 5K-MAP0. Tatsächliche AC-Ladeleistung, Tarifsteuerung und Freischaltung im konkreten Setup bestätigen.",
+        "Messung / Notstrom": "Smart Dongle laut Angebot; Smart Meter und zusätzliche Komponenten für Ersatzstrom in gewählter Stückliste nicht eindeutig belegt.",
+        "Montage / Kabel": "100 m Solarkabel und 6 Steckerpaare laut Stückliste. Dachbefestigung und fachgerechte Installation separat.",
+        "Schutz / Ausbau / Garantie": "Wechselrichter IP66 und −25 bis +60 °C laut Huawei. Erweiterung, Batterietemperatur und Garantie der tatsächlich gelieferten LUNA-Batteriegeneration offen.",
+        "Preis / Bestand": "10-kWh-Variante 6.123,14 € inkl. USt.; laut Shop 7–10 Werktage. Österreich-Versandkosten offen."
+      },
+      "sources": [
+        {
+          "label": "Gewählte Variante",
+          "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-huawei-sun2000-map0-opt-huawei-luna2000-speicher?variant=57431883055488"
+        },
+        {
+          "label": "Huawei MAP0: Netzladen und Daten",
+          "url": "https://solar.huawei.com/en/products/sun2000-5-12k-map0/specs/"
+        }
+      ],
+      "review": {
+        "type": "mixed",
+        "productTitle": "Netzladen belegt, Details offen",
+        "product": "Dreiphasiger 5-kW-Huawei-Hybrid und gewählte 10-kWh-LUNA-Ausführung; Netzladung laut Huawei. Batteriegeneration, Meter und Modultyp vor Kauf bestätigen.",
+        "valueTitle": "Gerätepreis, Versand offen",
+        "value": "6.123,14 € inkl. USt. für die ausgewählte 10-kWh-Variante; AT-Versand, Dachmontage und Installation sind zusätzlich bzw. offen. Kein vollständiger AT-Endpreis.",
+        "checked": "2026-11-19",
+        "sources": [
+          {
+            "label": "Gewählte Variante",
+            "url": "https://www.solarvie.at/products/pv-komplettset-5-kwp-11-x-trina-455-black-frame-huawei-sun2000-map0-opt-huawei-luna2000-speicher?variant=57431883055488"
+          },
+          {
+            "label": "Huawei MAP0: Netzladen und Daten",
+            "url": "https://solar.huawei.com/en/products/sun2000-5-12k-map0/specs/"
+          }
+        ]
+      },
+      "roof": {
+        "moduleCount": 11,
+        "included": "Pappdach-Montage im ursprünglichen Angebot nicht nachgewiesen; die Vorschläge unten sind separat.",
+        "options": [
+          {
+            "kind": "Geneigtes Pappdach",
+            "title": "K2 SingleRail · 11 Module",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
+            "links": [
+              {
+                "label": "11er-Montageset",
+                "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
+              }
+            ],
+            "checked": "2026-11-19"
+          },
+          {
+            "kind": "Bitumen-Flachdach",
+            "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
+            "links": [
+              {
+                "label": "8er-D-Dome",
+                "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-8-module"
+              },
+              {
+                "label": "3er-S-Dome",
+                "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
+              }
+            ],
+            "checked": "2026-11-19"
+          }
+        ]
+      },
+      "availabilityUnconfirmed": false
+    },
+    {
+      "id": "solaroutlet-goodwe-esa-5335-10",
+      "group": "dach",
+      "status": "ausland",
+      "seller": "SolarOutlet · Deutschland",
+      "name": "GoodWe ESA + AIKO · 5,335 kWp / 10 kWh",
+      "subtitle": "11 × 485 Wp = 5.335 Wp · GoodWe ESA 10 kWh",
+      "url": "https://solaroutlet.de/collections/pv-komplettset-5-kwp/products/pv-komplettset-5-kwp-11-x-aiko-485-w-full-black-goodwe-esa-all-in-one-system-10-kwh-speicher",
+      "price": 4999,
+      "shipping": null,
+      "currency": "EUR",
+      "priceLabel": "Deutschlandpreis mit 0 % USt.; genaue Ausführung offen",
+      "shippingText": "4.999 € mit 0 % USt. auf der deutschen Angebotsseite; laut Anbieter ein Stück auf Lager. Österreich-Versand und Steuer für diese Bestellung nicht bestätigt; Installation und Dachbefestigung extra.",
+      "checked": "2026-11-19",
+      "pv": 5.335,
+      "storage": 10,
+      "grid": "Netzladen für ESA-Baureihe dokumentiert; konkretes Modell bestätigen",
+      "output": "Modell und AC-Nennleistung im Set offen",
+      "meter": "Lieferumfang offen",
+      "warning": "Shop bewirbt 11 × 485 Wp und 10 kWh, aber exaktes ESA-Wechselrichtermodell, Batteriemodulzahl und teils widersprüchliche Detailtexte sind unklar. Ausführung und AT-Lieferbarkeit vor Kauf schriftlich bestätigen.",
+      "specs": {
+        "Solarmodule": "11 × AIKO 485 Wp = 5.335 Wp laut Angebot; exakte Modellgeneration schriftlich bestätigen.",
+        "Speicher / Wechselrichter": "GoodWe ESA All-in-one mit 10 kWh beworben; exakte ESA-Modellnummer und Batteriemodulzahl aus der Angebotsseite nicht eindeutig bestimmbar.",
+        "Netzladung": "GoodWe dokumentiert Laden aus dem Netz für die ESA-Baureihe; Funktion, Bedingungen und AC-Ladeleistung der konkreten Auswahl bestätigen.",
+        "PV / MPPT / AC": "Modellabhängig; Spannung, Eingangsleistung, MPPT-Zahl und AC-Ausgangsleistung für konkret geliefertes Modell offen.",
+        "Garantie / Schutz / Ausbau": "Exaktes Gerät, IP, Temperatur, Erweiterung und Garantie vor Bestellung beim Händler klären.",
+        "Meter / Ersatzstrom / Montage": "Lieferumfang zu Smart Meter, Ersatzstrom und Dachbefestigung offen. Handwerker und Netzanmeldung nicht belegt.",
+        "Preis / Bestand": "Deutscher Bruttopreis 4.999 € mit 0 % USt.; eine Einheit laut Shop verfügbar. AT-Steuer, Zustellung und individueller Endpreis offen.",
+        "Widerspruch": "Angebotstexte enthalten teils allgemeine Angaben zu anderen Anlagen; vor Kauf genaue Stückliste schriftlich bestätigen."
+      },
+      "sources": [
+        {
+          "label": "Händlerangebot",
+          "url": "https://solaroutlet.de/collections/pv-komplettset-5-kwp/products/pv-komplettset-5-kwp-11-x-aiko-485-w-full-black-goodwe-esa-all-in-one-system-10-kwh-speicher"
+        },
+        {
+          "label": "GoodWe ESA: Handbuch Netzladen",
+          "url": "https://en.goodwe.com/Ftp/EN/Downloads/User%20Manual/GW_ESA-3-10kW_User-Manual-EN.pdf"
+        }
+      ],
+      "review": {
+        "type": "open",
+        "productTitle": "Exakte Ausführung ungeklärt",
+        "product": "11 × 485 Wp und 10 kWh werden beworben; konkrete ESA-Modellnummer und Speicheranzahl fehlen. Netzladung ist für die ESA-Baureihe dokumentiert, für die genaue Ware zu bestätigen.",
+        "valueTitle": "Nur Deutschlandpreis",
+        "value": "4.999 € mit 0 % deutscher USt.; Österreich-Steuer und -Versand offen, außerdem Dachmontage und Installation extra. Kein Österreich-Endpreis.",
+        "checked": "2026-11-19",
+        "sources": [
+          {
+            "label": "Händlerangebot",
+            "url": "https://solaroutlet.de/collections/pv-komplettset-5-kwp/products/pv-komplettset-5-kwp-11-x-aiko-485-w-full-black-goodwe-esa-all-in-one-system-10-kwh-speicher"
+          },
+          {
+            "label": "GoodWe ESA: Handbuch Netzladen",
+            "url": "https://en.goodwe.com/Ftp/EN/Downloads/User%20Manual/GW_ESA-3-10kW_User-Manual-EN.pdf"
+          }
+        ]
+      },
+      "roof": {
+        "moduleCount": 11,
+        "included": "Passende Bitumen-Unterkonstruktion im originalen Lieferumfang nicht belegt; die aufgeführten Teile sind getrennt zu bestellen.",
+        "options": [
+          {
+            "kind": "Geneigtes Pappdach",
+            "title": "K2 SingleRail · 11 Module",
+            "price": "481,09 € inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "K2 SingleRail SpliceFoot für geneigte Bitumendächer (5–75°); laut Set mit 140-mm-Schrauben. Tragfähigen Holzuntergrund/Sparren, Dichtheit, Modulmaß und örtliche Schnee- und Windlasten vor Bestellung prüfen. Evtl. zusätzliche Teile nötig.",
+            "links": [
+              {
+                "label": "11er-Montageset",
+                "url": "https://solarhandel24.at/products/k2-systems-bitumendach-montageset-11-module-hochkant"
+              }
+            ],
+            "checked": "2026-11-19"
+          },
+          {
+            "kind": "Bitumen-Flachdach",
+            "title": "K2 D-Dome 8 + S-Dome 3 · Planungsvariante",
+            "price": "556,19 € rechnerisch inkl. 20 % USt.; Österreich-Versand extra, Höhe offen",
+            "detail": "D-Dome 6.10 für 8 Module Ost/West plus S-Dome für 3 einseitig ausgerichtete Module: 319,45 € + 236,74 €. K2 nennt Bitumen als geeigneten Untergrund. Gruppen, Modul-Klemmung, Modulspannung, MPPT und Orientierung fachlich planen; keine fertig freigegebene Kombination. Die beiliegenden S-Dome-Windleitbleche passen laut Händler für Modullängen 1.448–1.799 mm; längere prüfen. Ballast und Versand extra; Dachneigung, Tragfähigkeit und Verträglichkeit der Auflagen prüfen.",
+            "links": [
+              {
+                "label": "8er-D-Dome",
+                "url": "https://solarhandel24.at/products/k2-systems-flachdach-d-dome-montageset-fur-8-module"
+              },
+              {
+                "label": "3er-S-Dome",
+                "url": "https://solarhandel24.at/products/k2-systems-flachdach-s-dome-montageset-fur-3-module"
+              }
+            ],
+            "checked": "2026-11-19"
+          }
+        ]
+      },
+      "availabilityUnconfirmed": true,
+      "needsReview": true
     }
   ],
   "history": [
@@ -1760,35 +2100,165 @@
       "price": 5345,
       "shipping": null,
       "note": "Deutschlandpreis mit 0 % USt.; AT-Steuer offen"
+    },
+    {
+      "id": "solarvie-deye-jolywood-506-102",
+      "date": "2026-11-19",
+      "price": 4432.7,
+      "shipping": null,
+      "note": "10,2-kWh-Variante inkl. USt. ausgewählt; Österreich-Versand offen."
+    },
+    {
+      "id": "solarvie-deye-trina-517-102",
+      "date": "2026-11-19",
+      "price": 4445.9,
+      "shipping": null,
+      "note": "10,2-kWh-Variante inkl. USt. ausgewählt; Österreich-Versand offen."
+    },
+    {
+      "id": "solarvie-deye-aiko-528-102",
+      "date": "2026-11-19",
+      "price": 4947.5,
+      "shipping": null,
+      "note": "10,2-kWh-Variante inkl. USt. ausgewählt; Österreich-Versand offen."
+    },
+    {
+      "id": "solarvie-sofar-trina-5115-10",
+      "date": "2026-11-19",
+      "price": 5974.62,
+      "shipping": null,
+      "note": "10-kWh-Variante inkl. USt. ausgewählt; AT-Versand offen."
+    },
+    {
+      "id": "solarhandel-anker4-5000",
+      "date": "2026-11-19",
+      "price": 4053.6,
+      "shipping": null,
+      "note": "10-kWh-Variante inkl. 20 % USt. gewählt; Verschaltung und AT-Versand offen."
+    },
+    {
+      "id": "solago-anker-5000-10",
+      "date": "2026-11-19",
+      "price": 4293.6,
+      "shipping": null,
+      "note": "10-kWh-Variante inkl. 20 % USt. gewählt; Verschaltung und AT-Versand offen."
+    },
+    {
+      "id": "solarhandel-anker-x1-5335",
+      "date": "2026-11-19",
+      "price": 5923.66,
+      "shipping": null,
+      "note": "10-kWh-Variante inkl. 20 % USt. gewählt; Österreich-Versand offen."
+    },
+    {
+      "id": "actec-trina-558-1024",
+      "date": "2026-11-19",
+      "price": 5986.8,
+      "shipping": 175,
+      "note": "Händlerpreis inkl. 20 % USt.; 175 € Spedition AT; Dachmontage/Installation extra."
+    },
+    {
+      "id": "actec-solplanet-558-1024",
+      "date": "2026-11-19",
+      "price": 6514.8,
+      "shipping": 175,
+      "note": "Händlerpreis inkl. 20 % USt.; 175 € Spedition AT; Dachmontage/Installation extra."
+    },
+    {
+      "id": "actec-trina-744-1024-large",
+      "date": "2026-11-19",
+      "price": 4078.8,
+      "shipping": 175,
+      "note": "Händlerpreis inkl. 20 % USt.; 175 € Spedition AT; Dachmontage/Installation extra."
+    },
+    {
+      "id": "actec-trina-1023-1024-large",
+      "date": "2026-11-19",
+      "price": 4798.8,
+      "shipping": 175,
+      "note": "Händlerpreis inkl. 20 % USt.; 175 € Spedition AT; Dachmontage/Installation extra."
+    },
+    {
+      "id": "pvmarkt-huawei-564",
+      "date": "2026-11-19",
+      "price": 7006.8,
+      "shipping": null,
+      "note": "AT-Shoppreis inkl. USt., Versand offen; Bild und Artikeltext zu Modulen weichen ab."
+    },
+    {
+      "id": "tepto-foxess-598-1152",
+      "date": "2026-11-19",
+      "price": 5988,
+      "shipping": null,
+      "note": "AT-Shoppreis inkl. MwSt.; Steuersatz und Versand offen; Ziegeldachhaken enthalten."
+    },
+    {
+      "id": "tepto-foxess-506-1152",
+      "date": "2026-11-19",
+      "price": 5398.8,
+      "shipping": null,
+      "note": "Angezeigter Preis inkl. MwSt.; 11,52-kWh-Variante nicht verfügbar, Versand offen."
+    },
+    {
+      "id": "woba-fox-cube-517-96",
+      "date": "2026-11-19",
+      "price": 5345,
+      "shipping": null,
+      "note": "Deutschlandpreis mit 0 % USt., gewählte 9,6-kWh-Variante; AT-Steuer und Versand offen."
+    },
+    {
+      "id": "solarhandel-anker-x1-5000",
+      "date": "2026-11-19",
+      "price": 5928.04,
+      "shipping": null,
+      "note": "10-kWh-Variante mit 20 % USt.; AT-Versand offen."
+    },
+    {
+      "id": "solarvie-huawei-map0-5115-10",
+      "date": "2026-11-19",
+      "price": 6123.14,
+      "shipping": null,
+      "note": "Gewählte 10-kWh-Variante inkl. USt.; AT-Versand offen."
+    },
+    {
+      "id": "solaroutlet-goodwe-esa-5335-10",
+      "date": "2026-11-19",
+      "price": 4999,
+      "shipping": null,
+      "note": "Deutschlandpreis 0 % USt.; AT-Steuer und -Versand offen, Modell/Bestand klären."
     }
   ],
   "research": {
-    "checked": "2026-11-18",
-    "text": "Systematische Recherche bei österreichischen und liefernden Fachhändlern, Herstellern, Preisvergleichsportalen sowie Amazon.de, eBay und Kaufland. Nicht belegbare Konfigurationen stehen unter „Noch prüfen“ oder im Archiv; keine vermeintlich passenden Marketplace-Treffer ohne verifizierte Modul- und Speichergröße.",
+    "checked": "2026-11-19",
+    "text": "Mehrere Suchrunden über österreichische und nach Österreich liefernde Fachhändler, Hersteller, Idealo, Geizhals, Amazon.de samt Marketplace, eBay und Kaufland. Gewählte Varianten, Modulanzahl, Speicher und Versand wurden einzeln geprüft; nicht verfügbare oder nicht belegbare Angebote stehen getrennt. Amazon-, eBay- und Kaufland-Suchergebnisse lieferten bei dieser Prüfung kein ausreichend verifiziertes zusätzliches Komplettset.",
     "notes": [
       {
-        "label": "Amazon-Marketplace / Idealo: gefundene Growatt-Variante mit 5 kWh erfüllt das Speicherziel nicht",
-        "url": "https://www.idealo.de/preisvergleich/Liste/123379413/pv-komplettanlage-mit-speicher-growatt.html"
+        "label": "Amazon.de: Suche nach 5-kWp-Sets mit 10-kWh-Speicher; Marketplace-Varianten nicht hinreichend verifiziert",
+        "url": "https://www.amazon.de/s?k=pv+komplettanlage+5kw+10kwh+speicher"
       },
       {
-        "label": "OE24 Solar: 5-kWp-Paket – exakte Batterievariante, Netzladen und Endpreis offen",
-        "url": "https://oe24solar.at/produkt/5-kwp-paket"
-      },
-      {
-        "label": "WOBA EcoFlow: 10-kWh-Variante und Verfügbarkeit nicht sicher belegt",
-        "url": "https://www.woba-solar.de/"
+        "label": "Idealo: 5-kWp-PV-Komplettanlagen",
+        "url": "https://www.idealo.at/preisvergleich/Liste/124172761/photovoltaikanlage-5kw.html"
       },
       {
         "label": "Geizhals: weitere Preisvergleichssuche",
         "url": "https://geizhals.at/?fs=pv+komplettset+10+kwh"
       },
       {
-        "label": "Kaufland: weitere Marktplatzsuche",
+        "label": "Kaufland: Marktplatzsuche; keine exakte Konfiguration bestätigt",
         "url": "https://www.kaufland.de/s/?search_value=pv%20komplettanlage%205kw%2010kwh"
       },
       {
-        "label": "eBay: weitere Marktplatzsuche",
+        "label": "eBay: Marktplatzsuche; keine exakte Konfiguration bestätigt",
         "url": "https://www.ebay.de/sch/i.html?_nkw=pv+komplettanlage+5kw+10kwh"
+      },
+      {
+        "label": "OE24 Solar: genaue Speicherwahl, Netzladen und Endpreis offen",
+        "url": "https://oe24solar.at/produkt/5-kwp-paket"
+      },
+      {
+        "label": "SolarOutlet: Deutschlandpreis; exakte Modellvariante / AT-Kosten offen",
+        "url": "https://solaroutlet.de/collections/pv-komplettset-5-kwp/products/pv-komplettset-5-kwp-11-x-aiko-485-w-full-black-goodwe-esa-all-in-one-system-10-kwh-speicher"
       }
     ]
   }
