@@ -3,9 +3,9 @@
   "checkedAt": "2026-11-19T01:07:47+01:00",
   "checked": true,
   "requiredCount": 20,
-  "confirmedCount": 15,
-  "shortfall": 5,
-  "statusNote": "Stand Donnerstag, 19. November 2026, 01:07:47 Uhr (Europe/Vienna): 15 von 20 Hauptangeboten mit mindestens drei ISOFIX-Plätzen laut Inserat geprüft; 5 Plätze offen. Neu: Citroën Berlingo Plus M in Mattersburg und Max XL in Bad Zell. Der Toyota TeamDeutschland aus Enns bleibt wegen ungeklärter Herkunft nur Referenz. Preisangaben sind inserierte Kaufpreise; mögliche Händler- und Zulassungskosten klären.",
+  "confirmedCount": 16,
+  "shortfall": 4,
+  "statusNote": "Stand Donnerstag, 19. November 2026, 01:07:47 Uhr (Europe/Vienna): 16 von 20 Hauptangeboten mit mindestens drei ISOFIX-Plätzen laut Inserat geprüft; 4 Plätze offen. Neu: Toyota Active in Hartkirchen und Citroën Berlingo Plus M in Mattersburg und Max XL in Bad Zell. Der Toyota TeamDeutschland aus Enns bleibt wegen ungeklärter Herkunft nur Referenz. Preisangaben sind inserierte Kaufpreise; mögliche Händler- und Zulassungskosten klären.",
   "unqualifiedLeads": [
     {
       "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/nutzfahrzeuge/toyota-pro-ace-proace-city-verso-l2-1-5-d-4d-130-auto-7-sitze-1016423009/",
@@ -195,6 +195,43 @@
       "rankLabel": "#5 · 5 Sitze"
     },
     {
+      "model": "Toyota Proace City Verso L1 1,2",
+      "trim": "Active · 5-Sitzer",
+      "location": "Hartkirchen (Oberösterreich)",
+      "country": "AT",
+      "price": 27990,
+      "atPrice": 27990,
+      "reg": "07/2026",
+      "km": 50,
+      "fuel": "Benzin",
+      "hp": 110,
+      "gearbox": "Schaltgetriebe",
+      "android": "Ja, laut Inserat",
+      "seats": "5",
+      "iso": "3× ISOFIX · alle Plätze der zweiten Sitzreihe laut Inserat",
+      "note": "Inserat nennt drei ISOFIX-Plätze ausdrücklich. Der Händler weist einen Verkaufspreis aus und bietet Finanzierung gesondert an; konkrete Konditionen und Nebenkosten vor Kauf klären.",
+      "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-2-active-top-finanzi-2063439353/",
+      "source": "Willhaben · Wildberger GmbH",
+      "features": [
+        "3× ISOFIX Reihe 2",
+        "5 Sitze",
+        "Benzin",
+        "Schaltgetriebe",
+        "Android Auto",
+        "Einparksensoren hinten"
+      ],
+      "basis": "Active · 5-Sitzer",
+      "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-2-active-top-finanzi-2063439353/",
+      "cost": "Österreichischer Verkaufspreis laut Inserat; Finanzierung wird separat angeboten. Eventuelle Nebenkosten beim Händler klären.",
+      "change": "Am 19.11.2026 direkt auf Kaufpreis, Fahrzeugdaten und drei ISOFIX-Plätze geprüft.",
+      "checkedDate": "19.11.2026",
+      "checkedAt": "2026-11-19T01:15:00+01:00",
+      "checked": true,
+      "lowestMatchingTrim": false,
+      "rank": 6,
+      "rankLabel": "#6 · 5 Sitze"
+    },
+    {
       "model": "Citroën Berlingo BlueHDi 100",
       "trim": "Plus M · Neuwagen",
       "location": "Mattersburg (Burgenland)",
@@ -227,8 +264,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 6,
-      "rankLabel": "#6 · 5 Sitze"
+      "rank": 7,
+      "rankLabel": "#7 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -262,8 +299,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 7,
-      "rankLabel": "#7 · 5 Sitze"
+      "rank": 8,
+      "rankLabel": "#8 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -298,8 +335,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 8,
-      "rankLabel": "#8 · 5 Sitze"
+      "rank": 9,
+      "rankLabel": "#9 · 5 Sitze"
     },
     {
       "model": "Toyota Proace City Verso L1 1,2",
@@ -333,8 +370,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 9,
-      "rankLabel": "#9 · 5 Sitze"
+      "rank": 10,
+      "rankLabel": "#10 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -368,8 +405,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 10,
-      "rankLabel": "#10 · 5 Sitze"
+      "rank": 11,
+      "rankLabel": "#11 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo XL BlueHDi 130",
@@ -404,12 +441,12 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 11,
-      "rankLabel": "#11 · 5 Sitze"
+      "rank": 12,
+      "rankLabel": "#12 · 5 Sitze"
     },
     {
-      "rankLabel": "#12 · 5 Sitze",
-      "rank": 12,
+      "rankLabel": "#13 · 5 Sitze",
+      "rank": 13,
       "model": "Toyota Proace City Verso L2 1.5 D4D 130 Family+",
       "trim": "Family+ · 5-Sitzer · Automatik",
       "basis": "Gebrauchtwagen · Family+ · Händlerangebot",
@@ -477,8 +514,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 13,
-      "rankLabel": "#13 · 5 Sitze"
+      "rank": 14,
+      "rankLabel": "#14 · 5 Sitze"
     },
     {
       "model": "Toyota Proace City Verso L1 1,5 D4D",
@@ -513,8 +550,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 14,
-      "rankLabel": "#14 · 5 Sitze"
+      "rank": 15,
+      "rankLabel": "#15 · 5 Sitze"
     },
     {
       "model": "Toyota Proace City Verso L2 1,5 D4D",
@@ -549,8 +586,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 15,
-      "rankLabel": "#15 · 5 Sitze"
+      "rank": 16,
+      "rankLabel": "#16 · 5 Sitze"
     }
   ],
   "staleReferences": [
