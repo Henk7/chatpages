@@ -242,7 +242,7 @@
       <div class="snapshot-strip" id="snapshot-strip" aria-label="Snapshot details">
         <span><i class="snapshot-dot" aria-hidden="true"></i><strong>Loading snapshot…</strong></span>
       </div>
-      <p class="availability-note"><strong>Model availability · Nov 18:</strong> GPT-6.2 Astra and GPT-6.2 Sol are ranked on Arena’s WebDev leaderboard, and both are on its Pareto frontier. <a href="#webdev">See the WebDev chart ↓</a></p>
+      <p class="availability-note"><strong>Model availability · Nov 19:</strong> GPT-6.2 Astra and GPT-6.2 Sol are included in the Agent Arena chart below. <a href="#webdev">See the separate WebDev chart ↓</a></p>
       <div class="hero-actions">
         <a class="button primary source-link" href="https://arena.ai/leaderboard/agent/pareto" target="_blank" rel="noopener noreferrer">Open Arena source ↗</a>
         <button id="download-csv" class="button" type="button">Download CSV ↓</button>
@@ -253,7 +253,7 @@
     <section class="card chart-card" aria-labelledby="chart-title">
       <div class="card-head">
         <div>
-          <h2 id="chart-title">Pareto frontier</h2>
+          <h2 id="chart-title">Agent Arena Index · Pareto frontier</h2>
           <p>All models stay visible · select developer chips to highlight their models</p>
         </div>
         <div class="legend" aria-label="Chart legend">
@@ -275,7 +275,7 @@
           <button class="icon-button reset" id="zoom-reset" type="button" title="Fit the whole chart">Fit</button>
           <button class="icon-button fullscreen-toggle" id="fullscreen-arena" type="button" aria-label="Open Arena chart in full screen" aria-pressed="false" title="Open Arena chart in full screen">⛶ Full screen</button>
         </div>
-        <svg id="plot" role="img" aria-label="Large SVG scatter plot of model net improvement against median task cost. Every model name and provider mark is on the chart. Drag or pinch to move around and zoom."></svg>
+        <svg id="plot" role="img" aria-label="Large SVG scatter plot of the Agent Arena Index against median task cost. Every model name and provider mark is on the chart. Drag or pinch to move around and zoom."></svg>
       </div>
       <div class="chart-help">
         <span class="hint"><span class="key">Pinch</span> zoom · drag to move around the full chart</span>
@@ -310,7 +310,7 @@
       <div class="chart-help"><span class="hint"><span class="key">Pinch</span> zoom · drag to move around</span><span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the whole chart</span></div>
       <div id="duel-tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model to see its exact values.</div>
       <div class="duel-details">
-        <p>Higher Elo and lower cost are better. Cost and time are adjusted for average battle difficulty by AgentDuel; 95% intervals describe uncertainty in Elo. The green line uses only ranked models. Provisional models have fewer than 100 eligible votes and are shown for context, but do not determine that line. Elo and Arena net improvement measure different things and must not be directly compared. <a href="https://agentduel.com/leaderboard/methodology" target="_blank" rel="noopener noreferrer">Methodology ↗</a></p>
+        <p>Higher Elo and lower cost are better. Cost and time are adjusted for average battle difficulty by AgentDuel; 95% intervals describe uncertainty in Elo. The green line uses only ranked models. Provisional models have fewer than 100 eligible votes and are shown for context, but do not determine that line. Elo and the Agent Arena Index measure different things and must not be directly compared. <a href="https://agentduel.com/leaderboard/methodology" target="_blank" rel="noopener noreferrer">Methodology ↗</a></p>
         <div class="table-scroll"><table>
           <thead><tr><th scope="col">Rank</th><th scope="col">Model</th><th scope="col" class="number-cell">Elo · 95% CI</th><th scope="col" class="number-cell">Median cost / task</th><th scope="col" class="number-cell">Median time / task</th></tr></thead>
           <tbody id="duel-rows"></tbody>
@@ -367,14 +367,14 @@
 
     <section class="section" aria-labelledby="frontier-heading">
       <div class="section-heading">
-        <div><h2 id="frontier-heading">Models on the frontier</h2><p>Each is the best observed score available at or below its task cost.</p></div>
+        <div><h2 id="frontier-heading">Agent Arena models on the frontier</h2><p>Each is the best observed score available at or below its task cost.</p></div>
       </div>
       <div id="frontier-list" class="frontier-grid"></div>
     </section>
 
     <section class="section" aria-labelledby="models-heading">
       <div class="section-heading">
-        <div><h2 id="models-heading">All models in the cost view</h2><p>Search and sort the captured Arena values.</p></div>
+        <div><h2 id="models-heading">All Agent Arena models</h2><p>Search and sort the captured Arena Index values. Models without task costs are listed as N/A.</p></div>
       </div>
       <div class="card table-card">
         <div class="table-controls">
@@ -382,7 +382,7 @@
             <label class="search-box"><span class="sr-only">Search models</span><input id="search" class="control-input" type="search" placeholder="Search models…" autocomplete="off"></label>
             <select id="sort" class="control-input select-box" aria-label="Sort models">
               <option value="rank">Arena rank</option>
-              <option value="score">Net improvement</option>
+              <option value="score">Highest Agent Index</option>
               <option value="cost">Lowest cost</option>
             </select>
             <button id="frontier-toggle" class="filter-button" type="button" aria-pressed="false">Frontier only</button>
@@ -391,7 +391,7 @@
         </div>
         <div class="table-scroll">
           <table>
-            <thead><tr><th scope="col">Rank</th><th scope="col">Model</th><th scope="col" class="number-cell">Median cost / task</th><th scope="col" class="number-cell">Net improvement</th></tr></thead>
+            <thead><tr><th scope="col">Rank</th><th scope="col">Model</th><th scope="col" class="number-cell">Median cost / task</th><th scope="col" class="number-cell">Agent Arena Index</th></tr></thead>
             <tbody id="model-rows"></tbody>
           </table>
           <div id="empty-state" class="empty-state">No models match that search.</div>
@@ -406,7 +406,7 @@
       </article>
       <article class="card note-card">
         <h2>How to read the chart</h2>
-        <p>Lower cost is further left; higher improvement is higher up. A model on the frontier cannot be beaten on score without moving to a higher cost point in this snapshot.</p>
+        <p>Lower cost is further left; a higher Agent Arena Index is higher up. The green line follows Arena’s published cost frontier; equal displayed costs or scores can conceal differences in the unrounded measurements.</p>
       </article>
     </section>
 
@@ -426,10 +426,11 @@
         width: 3400, height: 2200,
         left: 270, right: 3210, top: 150, bottom: 1970,
         minLogCost: Math.log10(0.008), maxLogCost: 1,
-        minScore: -22, maxScore: 25,
+        minScore: 700, maxScore: 1500,
       };
       let view = null;
       let data = [];
+      let allData = [];
       let frontier = [];
       let filteredToFrontier = false;
       let selectedDevelopers = new Set();
@@ -447,8 +448,8 @@
         if (text) node.textContent = text;
         return node;
       };
-      const formatCost = (value) => `$${value.toFixed(2)}`;
-      const formatScore = (value) => `${value > 0 ? "+" : ""}${value.toFixed(2)}%`;
+      const formatCost = (value) => Number.isFinite(value) ? `$${value.toFixed(2)}` : "N/A";
+      const formatScore = (value) => new Intl.NumberFormat("en-US").format(value);
       const frontierKey = (item) => `${item.rank}|${item.model}`;
       const frontierSet = () => new Set(frontier.map(frontierKey));
       const labBrands = [
@@ -469,7 +470,7 @@
         { pattern: /^Nemotron\b/i, name: "NVIDIA", mark: "N", color: "#76b900" },
         { pattern: /^Inkling/i, name: "Thinking Machines", mark: "TM", color: "#a85ed1" },
         { pattern: /^Solar\b/i, name: "Upstage", mark: "U", color: "#1c9291" },
-        { pattern: /^Spark-X/i, name: "XHToken", mark: "XH", color: "#ab5cbc" }
+        { pattern: /^Spark-X/i, name: "Synlan", mark: "SX", color: "#ab5cbc" }
       ];
       const getLab = (model) => labBrands.find((brand) => brand.pattern.test(model)) || { name: "Unknown lab", mark: "?", color: "#718087" };
       const developerLabel = (name) => name === "Anthropic" ? "Claude" : name;
@@ -536,16 +537,11 @@
         }
       };
 
-      function computeFrontier(records) {
-        const sorted = [...records].sort((a, b) => a.cost - b.cost || b.improvement - a.improvement);
-        let bestScore = -Infinity;
-        const result = [];
-        for (const item of sorted) {
-          if (item.improvement > bestScore) {
-            result.push(item);
-            bestScore = item.improvement;
-          }
-        }
+      function frontierFromSource(records, names) {
+        if (!Array.isArray(names)) throw new Error("The source frontier is missing.");
+        const byName = new Map(records.map((item) => [item.model, item]));
+        const result = [...names].reverse().map((name) => byName.get(name));
+        if (result.some((item) => !item) || new Set(names).size !== names.length) throw new Error("The source frontier does not match the snapshot.");
         return result;
       }
 
@@ -628,27 +624,22 @@
       }
 
       function renderSummary(meta) {
-      const sessions = new Intl.NumberFormat("en-US").format(meta.sessions);
-      const updates = Array.isArray(meta.updates) ? meta.updates : [];
-      const dateLabel = updates.length ? "Base leaderboard date" : "Leaderboard date";
-      $("#snapshot-strip").innerHTML = `
-        <span><i class="snapshot-dot" aria-hidden="true"></i><strong>${meta.records.length} models with cost data</strong></span>
-        <span><strong>${sessions}</strong> Arena sessions</span>
-        <span>${dateLabel} <strong>${meta.pageDate}</strong></span>
-        ${updates.length ? `<span><strong>${updates.length}</strong> later model addition${updates.length === 1 ? "" : "s"}</span>` : ""}
-      `;
-      const updateNote = updates.map((update) =>
-        `<strong>${update.model}</strong> was added from Arena's board dated <strong>${update.pageDate}</strong>, captured on ${update.capturedDate}.`
-      ).join(" ");
-      $("#snapshot-note").innerHTML = `Arena's Agent leaderboard showed <strong>${meta.boardModels} models</strong> and ${sessions} sessions, dated <strong>${meta.pageDate}</strong>. This snapshot contains the <strong>${meta.records.length - updates.length} models</strong> from its 50th-percentile cost-per-task list. ${updateNote} ${updates.length ? "The chart combines data from more than one board date." : `Values were captured on ${meta.capturedDate}; the remaining models were not listed with cost values in that view.`} ${meta.modelNote ? `<strong>Model status:</strong> ${meta.modelNote} <a href="${meta.modelNoteUrl}" target="_blank" rel="noopener noreferrer">View current Agent leaderboard</a>. ` : ""}Costs cover the last 14 days. <a href="${meta.sourceUrl}" target="_blank" rel="noopener noreferrer">Open the original chart</a>.`;
-    }
+        const sessions = new Intl.NumberFormat("en-US").format(meta.sessions);
+        const missing = allData.length - data.length;
+        $("#snapshot-strip").innerHTML = `
+          <span><i class="snapshot-dot" aria-hidden="true"></i><strong>${data.length} models with cost data</strong></span>
+          <span><strong>${sessions}</strong> Arena sessions</span>
+          <span>Leaderboard date <strong>${meta.pageDate}</strong></span>
+        `;
+        $("#snapshot-note").innerHTML = `Arena's Agent leaderboard showed <strong>${meta.boardModels} models</strong> and ${sessions} sessions, dated <strong>${meta.pageDate}</strong>. Captured on ${meta.capturedDate}: ${data.length} models have a cost and appear on the chart; ${missing} lack a published cost and are listed as N/A in the table. The chart uses the Agent Arena Index, replacing the earlier net-improvement metric. The green line follows Arena’s published cost frontier, which may use unrounded values. Costs cover the last 14 days. <a href="${meta.sourceUrl}" target="_blank" rel="noopener noreferrer">Open the original chart</a>.`;
+      }
     function renderFrontier() {
         const holder = $("#frontier-list");
         holder.replaceChildren();
         frontier.forEach((item, index) => {
           const card = document.createElement("article");
           card.className = "frontier-card";
-          card.innerHTML = `<span class="frontier-number">${String(index + 1).padStart(2, "0")}</span><div style="min-width:0"><div class="frontier-name" title="${item.model}">${item.model}</div><div class="frontier-values">${formatCost(item.cost)} / task · ${formatScore(item.improvement)}</div></div>`;
+          card.innerHTML = `<span class="frontier-number">${String(index + 1).padStart(2, "0")}</span><div style="min-width:0"><div class="frontier-name" title="${item.model}">${item.model}</div><div class="frontier-values">${formatCost(item.cost)} / task · ${formatScore(item.score)} index</div></div>`;
           holder.append(card);
         });
       }
@@ -657,9 +648,9 @@
         const query = $("#search").value.trim().toLocaleLowerCase();
         const sort = $("#sort").value;
         const keys = frontierSet();
-        let rows = data.filter((item) => (!filteredToFrontier || keys.has(frontierKey(item))) && item.model.toLocaleLowerCase().includes(query));
-        if (sort === "score") rows = rows.sort((a, b) => b.improvement - a.improvement);
-        else if (sort === "cost") rows = rows.sort((a, b) => a.cost - b.cost || b.improvement - a.improvement);
+        let rows = allData.filter((item) => (!filteredToFrontier || keys.has(frontierKey(item))) && item.model.toLocaleLowerCase().includes(query));
+        if (sort === "score") rows = rows.sort((a, b) => b.score - a.score);
+        else if (sort === "cost") rows = rows.sort((a, b) => (Number.isFinite(a.cost) ? a.cost : Infinity) - (Number.isFinite(b.cost) ? b.cost : Infinity) || b.score - a.score);
         else rows = rows.sort((a, b) => a.rank - b.rank);
         const body = $("#model-rows");
         body.replaceChildren();
@@ -671,25 +662,25 @@
           rank.textContent = item.rank;
           const model = document.createElement("td");
           model.className = "model-cell";
-          model.innerHTML = `${item.model}${isFrontier ? '<span class="frontier-pill">FRONTIER</span>' : ""}<span class="model-small">Arena rank ${item.rank}</span>`;
+          model.innerHTML = `${item.model}${isFrontier ? '<span class="frontier-pill">FRONTIER</span>' : ""}<span class="model-small">Arena rank ${item.rank}${item.preliminary ? " · Preliminary" : ""}</span>`;
           const cost = document.createElement("td");
           cost.className = "number-cell";
           cost.dataset.label = "Median cost / task";
-          cost.textContent = `${formatCost(item.cost)} / task`;
+          cost.textContent = Number.isFinite(item.cost) ? `${formatCost(item.cost)} / task` : "N/A";
           const score = document.createElement("td");
-          score.className = `number-cell ${item.improvement >= 0 ? "score-positive" : "score-negative"}`;
-          score.dataset.label = "Net improvement";
-          score.textContent = formatScore(item.improvement);
+          score.className = "number-cell";
+          score.dataset.label = "Agent Arena Index";
+          score.textContent = formatScore(item.score);
           tr.append(rank, model, cost, score);
           body.append(tr);
         }
-        $("#row-count").textContent = `${rows.length} of ${data.length} models`;
+        $("#row-count").textContent = `${rows.length} of ${allData.length} models`;
         $("#empty-state").style.display = rows.length ? "none" : "block";
       }
 
       function setTooltip(item) {
         const isFrontier = frontierSet().has(frontierKey(item));
-        tooltip.innerHTML = `<strong>${item.model}</strong><span class="tip-sub">${getLab(item.model).name} · Arena rank ${item.rank} · ${formatCost(item.cost)} / task · ${formatScore(item.improvement)}${isFrontier ? " · Pareto frontier" : ""}</span>`;
+        tooltip.innerHTML = `<strong>${item.model}</strong><span class="tip-sub">${getLab(item.model).name} · Arena rank ${item.rank} · ${formatCost(item.cost)} / task · ${formatScore(item.score)} Agent Index${isFrontier ? " · Pareto frontier" : ""}${item.preliminary ? " · Preliminary" : ""}</span>`;
       }
 
       function getPlotMetrics() {
@@ -714,7 +705,7 @@
         const keys = frontierSet();
         const candidates = items.map((item) => {
           const width = Math.max(190, Math.min(470, 52 + item.model.length * 8.3));
-          return { item, px: xPos(item.cost), py: yPos(item.improvement), width, height: boxHeight };
+          return { item, px: xPos(item.cost), py: yPos(item.score), width, height: boxHeight };
         }).sort((a, b) => Number(selectedDevelopers.has(getLab(b.item.model).name)) - Number(selectedDevelopers.has(getLab(a.item.model).name)) || Number(keys.has(frontierKey(b.item))) - Number(keys.has(frontierKey(a.item))) || a.py - b.py || a.px - b.px);
 
         for (const candidate of candidates) {
@@ -763,7 +754,7 @@
         const isHighlighted = selectedDevelopers.has(lab.name);
         const hasHighlights = selectedDevelopers.size > 0;
         const x = xPos(item.cost);
-        const y = yPos(item.improvement);
+        const y = yPos(item.score);
         const labelX = placement.x;
         const labelY = placement.y;
         const labelWidth = placement.width;
@@ -777,7 +768,7 @@
           opacity: hasHighlights && !isHighlighted ? .42 : 1,
           tabindex: 0,
           role: "button",
-          "aria-label": item.model + ", made by " + lab.name + (isHighlighted ? ", highlighted" : "") + ", rank " + item.rank + ", " + formatCost(item.cost) + " per task, " + formatScore(item.improvement) + (onFrontier ? ", on Pareto frontier" : ""),
+          "aria-label": item.model + ", made by " + lab.name + (isHighlighted ? ", highlighted" : "") + ", rank " + item.rank + ", " + formatCost(item.cost) + " per task, Agent Index " + formatScore(item.score) + (onFrontier ? ", on Pareto frontier" : ""),
         });
 
         const endX = x < labelX ? labelX : x > labelX + labelWidth ? labelX + labelWidth : x;
@@ -790,6 +781,7 @@
             opacity: isHighlighted ? 1 : .72,
           }));
         }
+        group.append(svgNode("circle", { cx: x, cy: y, r: 8, fill: lab.color, stroke: onFrontier ? "#b7e66b" : "#e9f1ee", "stroke-width": 2 }));
         group.append(svgNode("rect", {
           class: "label-bg", x: labelX, y: labelY, width: labelWidth, height: labelHeight, rx: 17,
           fill: "#1d2a30", stroke: isHighlighted ? lab.color : onFrontier ? "#a9e45b" : "#617078",
@@ -819,7 +811,7 @@
           x: labelX + 43, y: labelY + labelHeight / 2 + 5.5,
           fill: "#f3f6f4", "font-size": 16, "font-weight": 690,
         }, item.model));
-        group.append(svgNode("title", {}, item.model + " · " + lab.name + " · " + formatCost(item.cost) + " / task · " + formatScore(item.improvement)));
+        group.append(svgNode("title", {}, item.model + " · " + lab.name + " · " + formatCost(item.cost) + " / task · " + formatScore(item.score)));
         group.addEventListener("focus", () => setTooltip(item));
         group.addEventListener("pointerenter", (event) => { if (event.pointerType === "mouse") setTooltip(item); });
         plotGroup.append(group);
@@ -856,7 +848,7 @@
             x, y: bottom + 48, fill: "#aebbbc", "font-size": 29, "text-anchor": "middle",
           }, label));
         }
-        for (let tick = Math.ceil(SCENE.minScore / 10) * 10; tick <= SCENE.maxScore; tick += 10) {
+        for (let tick = Math.ceil(SCENE.minScore / 100) * 100; tick <= SCENE.maxScore; tick += 100) {
           const y = yPos(tick);
           svg.append(svgNode("line", {
             x1: left, y1: y, x2: right, y2: y,
@@ -866,7 +858,7 @@
           }));
           svg.append(svgNode("text", {
             x: left - 20, y: y + 10, fill: "#aebbbc", "font-size": 29, "text-anchor": "end",
-          }, (tick > 0 ? "+" : "") + tick + "%"));
+          }, formatScore(tick)));
         }
 
         svg.append(svgNode("line", { x1: left, y1: bottom, x2: right, y2: bottom, stroke: "#aebbbc", "stroke-width": 3 }));
@@ -877,12 +869,12 @@
         const axisTitle = svgNode("text", {
           x: 67, y: (top + bottom) / 2, fill: "#d0d8d7", "font-size": 29,
           "text-anchor": "middle", transform: "rotate(-90 67 " + ((top + bottom) / 2) + ")",
-        }, "Net improvement");
+        }, "Agent Arena Index");
         svg.append(axisTitle);
 
         const plotGroup = svgNode("g", { "clip-path": "url(#plot-clip)" });
         const shown = data.filter((item) => !filteredToFrontier || frontierSet().has(frontierKey(item)));
-        const frontierPath = frontier.map((item) => xPos(item.cost) + "," + yPos(item.improvement)).join(" ");
+        const frontierPath = frontier.map((item) => xPos(item.cost) + "," + yPos(item.score)).join(" ");
         if (frontierPath) {
           plotGroup.append(svgNode("polyline", {
             points: frontierPath, fill: "none", stroke: "#a9e45b", "stroke-width": 5,
@@ -921,10 +913,9 @@
       }
 
       function initialView() {
-        const targetScale = dims.width < 600 ? .58 : .70;
-        const spanX = dims.width / targetScale;
-        const centerX = xPos(.35);
-        const centerY = yPos(0);
+        const spanX = dims.width < 600 ? 1100 : Math.max(1500, dims.width / .70);
+        const centerX = xPos(dims.width < 600 ? 1.8 : 1.3);
+        const centerY = yPos(1250);
         return clampView({
           x0: centerX - spanX / 2, x1: centerX + spanX / 2,
           y0: centerY - (spanX / getAspect()) / 2,
@@ -1072,29 +1063,30 @@
       $("#download-csv").addEventListener("click", () => {
         const quote = (value) => `"${String(value).replaceAll('"', '""')}"`;
         const lines = [
-          "rank,model,median_cost_usd_per_task,net_improvement_percent",
-          ...data.map((item) => [item.rank, quote(item.model), item.cost.toFixed(2), item.improvement.toFixed(2)].join(",")),
+          "rank,model,median_cost_usd_per_task,agent_arena_index,preliminary,on_frontier",
+          ...allData.map((item) => [item.rank, quote(item.model), Number.isFinite(item.cost) ? item.cost.toFixed(2) : "", item.score, item.preliminary, frontierSet().has(frontierKey(item))].join(",")),
         ];
         const blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
         link.href = url;
-        link.download = "arena-agent-pareto-snapshot-2026-11-16.csv";
+        link.download = "arena-agent-pareto-snapshot-2026-11-19.csv";
         document.body.append(link);
         link.click();
         link.remove();
         URL.revokeObjectURL(url);
       });
 
-      fetch("./data.json?v=20261116")
+      fetch("./data.json?v=20261119")
         .then((response) => { if (!response.ok) throw new Error("Could not load the model snapshot."); return response.json(); })
         .then((snapshot) => {
-          data = snapshot.records;
-          // Keep every plotted score, including future outliers, inside the chart.
-          const scores = data.map((item) => item.improvement);
-          SCENE.minScore = Math.floor((Math.min(...scores) - 2) / 5) * 5;
-          SCENE.maxScore = Math.ceil((Math.max(...scores) + 2) / 5) * 5;
-          frontier = computeFrontier(data);
+          allData = snapshot.records;
+          data = allData.filter((item) => Number.isFinite(item.cost) && item.cost > 0 && Number.isFinite(item.score));
+          if (!data.length) throw new Error("The snapshot contains no costed Agent models.");
+          const scores = data.map((item) => item.score);
+          SCENE.minScore = Math.floor((Math.min(...scores) - 40) / 100) * 100;
+          SCENE.maxScore = Math.ceil((Math.max(...scores) + 40) / 100) * 100;
+          frontier = frontierFromSource(data, snapshot.sourceFrontier);
           renderDeveloperChips();
           renderSummary(snapshot);
           renderFrontier();
