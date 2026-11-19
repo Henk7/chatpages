@@ -1,11 +1,11 @@
 {
-  "checkedDate": "18.11.2026",
-  "checkedAt": "2026-11-18T01:05:09+01:00",
+  "checkedDate": "19.11.2026",
+  "checkedAt": "2026-11-19T01:07:47+01:00",
   "checked": false,
   "requiredCount": 10,
   "confirmedCount": 0,
   "shortfall": 10,
-  "statusNote": "Stand Mittwoch, 18. November 2026, 01:05:09 Uhr (Europe/Vienna): 0 von 10 separat gesuchten 7-Sitzern mit mindestens drei ISOFIX-Plätzen am konkreten Fahrzeug bestätigt; 10 Plätze offen. Ein in Wels direkt überprüftes Inserat nennt 7 Sitze und ISOFIX, aber nicht die Zahl der Halterungen. Ältere Kandidaten bleiben gesondert gekennzeichnet.",
+  "statusNote": "Stand Donnerstag, 19. November 2026, 01:07:47 Uhr (Europe/Vienna): 0 von 10 separat recherchierten 7-Sitzern mit mindestens drei ISOFIX-Plätzen am konkreten Fahrzeug bestätigt; 10 Plätze offen. Das direkt geprüfte Toyota-Inserat in Steyr nennt 7 Sitze und ISOFIX, aber keine Anzahl; weitere Kandidaten sind gesondert und mit ihrem alten Prüftag gekennzeichnet.",
   "offers": [],
   "staleReferences": [
     {
