@@ -1,0 +1,527 @@
+{
+  "meta": {
+    "title": "Pelletheizung-Preisradar 20–25 kW",
+    "updated": "2026-11-19",
+    "timezone": "Europe/Vienna",
+    "note": "Preisstand der Recherche: 19.11.2026. Händlerpreise können sich ändern. Keine Endpreise ohne verifizierte Lieferung nach Österreich.",
+    "next_run": "Wöchentlich; Termin siehe eingerichtete Aufgabe.",
+    "reference_buffer": {
+      "name": "Austria Email PSF 1000 EcoSkin",
+      "price": 1060.8,
+      "url": "https://www.heizprofishop.at/Austria-Email-Pufferspeicher-PSF-mit-Flansch-1000-L-EcoSkin",
+      "note": "1.000 l mit Dämmung; Blindflansch und Versand zusätzlich. Separates Angebot; Kompatibilität und Installateurannahme prüfen."
+    }
+  },
+  "offers": [
+    {
+      "id": "robin-loader-vak",
+      "model": "Robin Wood EcoPellet + Loader700 + Vakumatik",
+      "seller": "ganz24 über eBay",
+      "kw": 24,
+      "price": 6072.0,
+      "url": "https://www.ebay.at/itm/116168297373",
+      "scope": "Kessel, Saugturbine, Steuerung, Dosierung, Vakumatik-Entnahme und 20 m Schlauch; ohne Puffer und Pelletlager.",
+      "vacuum": "Saugsystem + Entnahme dabei",
+      "cleaning": "Brenner selbstreinigend; automatische Wärmetauscherreinigung nicht bestätigt.",
+      "vat": "inkl. MwSt.; Steuersatz für AT prüfen",
+      "shipping": "Für Österreich unbestätigt; Versandpreis im Inserat bezieht sich auf eine deutsche PLZ.",
+      "pros": "Günstiges Beispiel mit Lagerentnahme; 24 kW und selbstreinigender Brenner.",
+      "caveat": "Österreichzustellung, Umsatzsteuer, Ersatzteile und Service vor Ort klären.",
+      "group": "auto",
+      "puffer": "add",
+      "buffer_price": 1060.8,
+      "starting": false,
+      "source_note": "",
+      "tank": "Pelletlager zusätzlich nötig",
+      "lambda_": "",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 6072.0,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "robin-loader",
+      "model": "Robin Wood EcoPellet + Loader700",
+      "seller": "ganz24 über eBay",
+      "kw": 24,
+      "price": 6047.0,
+      "url": "https://www.ebay.at/itm/126463283564",
+      "scope": "Kessel, Saugturbine, Dosierung, Steuerung und 20 m Schlauch. Entnahmesonde ist im angegebenen Lieferumfang nicht genannt.",
+      "vacuum": "Saugturbine dabei; Entnahme unklar",
+      "cleaning": "Brenner selbstreinigend; Wärmetauscherreinigung nicht bestätigt.",
+      "vat": "inkl. MwSt.; Steuersatz für AT prüfen",
+      "shipping": "Für Österreich unbestätigt; Angaben im Inserat für deutsche PLZ.",
+      "pros": "Niedriger Kesselpreis mit Saugturbine.",
+      "caveat": "Einsetzbare Lagerentnahme, Anschlüsse und Service für Österreich prüfen.",
+      "group": "auto",
+      "puffer": "add",
+      "buffer_price": 1060.8,
+      "starting": false,
+      "source_note": "",
+      "tank": "Pelletlager zusätzlich nötig",
+      "lambda_": "",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 6047.0,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "froeling-20",
+      "model": "Fröling PE1 Pellet 20 + Sauger",
+      "seller": "Heizprofishop / willhaben",
+      "kw": 20,
+      "price": 9900.0,
+      "url": "https://www.willhaben.at/iad/kaufen-und-verkaufen/d/froeling-pe1-pellet-20-kw-563408900",
+      "scope": "Neuer Kessel, externes Saugmodul, Lambdaregelung; Puffer und Lagerentnahme nicht ausdrücklich enthalten.",
+      "vacuum": "Sauger dabei; Lagerentnahme prüfen",
+      "cleaning": "Automatischer Schieberost, Wärmetauscherreinigung und Ascheaustragung.",
+      "vat": "Verkaufspreis laut Inserat; USt.-Ausweis prüfen",
+      "shipping": "Versand möglich; Kosten nach Österreich offen.",
+      "pros": "Sehr ähnlicher Komfort; günstiger österreichischer Fachhändler.",
+      "caveat": "Hat 20 statt 23 kW. Eignung per Heizlast prüfen; Puffer separat.",
+      "group": "auto",
+      "puffer": "add",
+      "buffer_price": 1060.8,
+      "starting": false,
+      "source_note": "",
+      "tank": "Lager und Entnahme zusätzlich prüfen",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 9900.0,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "peltec-compact",
+      "model": "Centrometal PelTec Compact 24",
+      "seller": "Gloobi.at",
+      "kw": 24,
+      "price": 11182.8,
+      "url": "https://gloobi.at/pelletkessel/762-peltec-compact-24-kw-pelletkessel-effiziente-heizlosung-mit-modernster-technologie",
+      "scope": "Kessel mit Saugturbine, Hydraulikkomponenten und Regelung; Puffer nicht im Preis.",
+      "vacuum": "Saugturbine integriert; Lagerentnahme prüfen",
+      "cleaning": "Automatische Brenner- und Rauchgaszugreinigung.",
+      "vat": "inkl. 20 % MwSt.",
+      "shipping": "Versandkosten nach Österreich anfragen.",
+      "pros": "24 kW, automatische Reinigung und integrierte Saugung.",
+      "caveat": "Saugleitungen, Entnahmesonde, Pelletlager und Serviceumfang klären.",
+      "group": "auto",
+      "puffer": "add",
+      "buffer_price": 1060.8,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 11182.8,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "froeling-pe1-25",
+      "model": "Fröling PE1 Pellet 25 Paket",
+      "seller": "Heizprofishop",
+      "kw": 25,
+      "price": 13255.2,
+      "url": "https://www.heizprofishop.at/Froeling-PE1-25kW-Komplettset",
+      "scope": "Konfigurierbares Set mit Saugmodul; Austragung, Schlauch und Pufferspeicher sind auswählbar.",
+      "vacuum": "Saugmodul und Zyklon im Set",
+      "cleaning": "WOS-Wärmetauscherreinigung, automatische Entaschung.",
+      "vat": "inkl. 20 % MwSt.",
+      "shipping": "Versand und Montage gesondert klären.",
+      "pros": "Markengerät mit 25 kW und automatischer Pelletzufuhr.",
+      "caveat": "Ab-Preis: Ob er die 1.000-l-Konfiguration und die gewählte Lagerentnahme abdeckt, ist nicht bestätigt.",
+      "group": "auto",
+      "puffer": "select",
+      "buffer_price": null,
+      "starting": true,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 13255.2,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "froeling-p5-25",
+      "model": "Fröling P5 Pellet 25 Paket",
+      "seller": "Heizprofishop",
+      "kw": 25,
+      "price": 13711.2,
+      "url": "https://www.heizprofishop.at/Froeling-P5-25kW-Komplettset",
+      "scope": "Konfigurierbares Set mit Saugmodul; Puffer und Lageraustragung auswählbar.",
+      "vacuum": "Saugmodul und Zyklon im Set",
+      "cleaning": "Automatische Reinigungsfunktionen; genaue Ausstattung prüfen.",
+      "vat": "inkl. 20 % MwSt.",
+      "shipping": "Versand und Montage gesondert klären.",
+      "pros": "Aktuelles 25-kW-Paket mit Pumpen- und Regelungsoptionen.",
+      "caveat": "Ab-Preis: ausgewählter Puffer und die Lagerentnahme müssen im Shop bestätigt werden.",
+      "group": "auto",
+      "puffer": "select",
+      "buffer_price": null,
+      "starting": true,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 13711.2,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "biotech-pz25rl",
+      "model": "Biotech PZ 25 RL mit automatischer Befüllung",
+      "seller": "KlimaWorld",
+      "kw": 25,
+      "price": 11367.0,
+      "url": "https://www.klimaworld.com/products/biotech-bafa-pelletsheizkessel-pz25rl-automatische-befuellung-25-kw",
+      "scope": "Kessel mit automatischer Befüllung und Saugsystem; ohne ausgewiesenen Puffer.",
+      "vacuum": "Automatische Saugzufuhr; Entnahme prüfen",
+      "cleaning": "Automatische Brenner- und Röhrenreinigung sowie Ascheaustragung.",
+      "vat": "inkl. 19 % deutscher MwSt.; AT-Preis offen",
+      "shipping": "Lieferung und Speditionskosten nach Österreich anfragen.",
+      "pros": "25 kW, umfangreiche Automatisierung und Lambdasonde.",
+      "caveat": "Deutscher Preis nicht als österreichischer Endpreis bestätigt; Rücklaufanhebung/Puffer extra.",
+      "group": "auto",
+      "puffer": "none",
+      "buffer_price": null,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 11367.0,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "viessmann-24",
+      "model": "Viessmann Vitoligno 300-C Saugsystem",
+      "seller": "emax Haustechnik",
+      "kw": 24,
+      "price": 11106.25,
+      "url": "https://www.emax-haustechnik.de/marken/pelletkessel-vitoligno-300-c-24-kw-saugsystem-viessmann.html",
+      "scope": "Kessel mit Ecotronic und Saugturbine; Puffer, Lager und Entnahme gesondert prüfen.",
+      "vacuum": "Saugturbine im Kessel",
+      "cleaning": "Automatische Wärmetauscherreinigung; weitere Details prüfen.",
+      "vat": "inkl. 19 % deutscher MwSt.; AT-Preis offen",
+      "shipping": "Kostenfrei nur für DE ausgewiesen; Österreich anfragen.",
+      "pros": "24 kW mit Saugung und Lambdaregelung.",
+      "caveat": "AT-Lieferung, Preis und Zubehör sind nicht bestätigt.",
+      "group": "auto",
+      "puffer": "none",
+      "buffer_price": null,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 11106.25,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "hargassner25",
+      "model": "Hargassner Nano-PK 25",
+      "seller": "Shop-Installateur",
+      "kw": 25,
+      "price": 15550.5,
+      "url": "https://shop-installateur.com/produkt/hargassner-pelletheizung-nano-pk-25-75-25-kw-inkl-grundmodul-ihm/",
+      "scope": "Kessel mit Grundmodul IHM; Speicher, Austragung und genaue Saugkonfiguration nicht ausgewiesen.",
+      "vacuum": "Austragung und Saugausstattung beim Anbieter klären",
+      "cleaning": "Baureihe mit automatischer Reinigung; Paketdetails erfragen.",
+      "vat": "Mehrwertsteuerstatus im abrufbaren Angebot nicht eindeutig",
+      "shipping": "Lieferung nach Österreich auswählbar; Kosten offen.",
+      "pros": "Österreichische Premiummarke; 25 kW.",
+      "caveat": "Lieferumfang und Bruttopreis bestätigen lassen.",
+      "group": "unclear",
+      "puffer": "none",
+      "buffer_price": null,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 15550.5,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "biostar-ref",
+      "model": "Guntamatic BIOSTAR 23 Complete EC",
+      "seller": "Guntamatic Listenpreis",
+      "kw": 23,
+      "price": 17073.6,
+      "url": "https://www.guntamatic.com/fileadmin/user_upload/Preisliste_Biostar_12-23_OEsterreich.pdf",
+      "scope": "Kessel mit integriertem EC-Filter. Lagerung und Austragung extra.",
+      "vacuum": "Lager-/Entnahmesystem separat wählen",
+      "cleaning": "Automatische Rost-, Primärluft- und Wärmetauscherreinigung.",
+      "vat": "Listenpreis 14.228 € netto + 20 % = 17.073,60 €",
+      "shipping": "Fracht und Montage nicht enthalten.",
+      "pros": "Referenzprodukt mit Filter; originaler 1.000-l-Speicher für 2.300,40 € ergänzbar.",
+      "caveat": "Listenpreis; Zubehör, Zufuhr und Angebotspreis sind gesondert zu prüfen.",
+      "group": "auto",
+      "puffer": "own",
+      "buffer_price": 2300.4,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 17073.6,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "peltec-delta",
+      "model": "Centrometal PelTec II Lambda 24",
+      "seller": "Deltastav",
+      "kw": 24,
+      "price": 6110.64,
+      "url": "https://www.deltastav.at/automatischer-pelletkessel-peltec-ii-lambda-24/",
+      "scope": "Kessel mit 340-l-Pelletbehälter; Puffer und Saugsystem extra.",
+      "vacuum": "Saugsystem als Zubehör; nicht enthalten",
+      "cleaning": "Automatische Brennerrost- und Abgasrohrreinigung.",
+      "vat": "Shop nennt 4.968 € netto und 6.110,64 € brutto: rechnerisch 23 %; AT-Satz klären.",
+      "shipping": "Versand nach Österreich und Kosten nicht bestätigt.",
+      "pros": "Günstiger Kessel mit automatischer Brenner- und Wärmetauscherreinigung.",
+      "caveat": "Keine automatische Lagerbefüllung im Angebot; Steuer/Versand für Österreich klären.",
+      "group": "optional",
+      "puffer": "add",
+      "buffer_price": 1060.8,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 6110.64,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "environ-pro24",
+      "model": "Environ PelletPro 24",
+      "seller": "ganz24",
+      "kw": 23.3,
+      "price": 5999.99,
+      "url": "https://ganz24.com/products/pellet-pro-24-pelletkessel-23-3-kw-mit-integrierter-hydraulik",
+      "scope": "Kessel mit interner Pumpe und Sicherheitskomponenten; Puffer und Pelletsaugsystem extra.",
+      "vacuum": "Saugsystem vorbereitet, nicht enthalten",
+      "cleaning": "Automatische Brennertopf- und Turbulatorenreinigung.",
+      "vat": "inkl. MwSt.; Steuersatz für Österreich prüfen",
+      "shipping": "Lieferung nach Österreich und Kosten offen.",
+      "pros": "Leistung nahe 23 kW; automatische Brenner- und Wärmetauscherreinigung.",
+      "caveat": "Ohne Saugsystem und Pelletlager weniger komfortabel; AT-Service klären.",
+      "group": "optional",
+      "puffer": "add",
+      "buffer_price": 1060.8,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "nicht bestätigt",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 5999.99,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "peltec-lambda24",
+      "model": "Centrometal PelTec Lambda 24",
+      "seller": "Gloobi.at",
+      "kw": 24,
+      "price": 8422.8,
+      "url": "https://gloobi.at/pelletkessel/631-pelletkessel-lambada-24-kw",
+      "scope": "Kessel mit 300-l-Behälter, Rücklaufanhebung; Puffer und Saugsystem separat.",
+      "vacuum": "Saugsystem optional; nicht im Preis",
+      "cleaning": "Automatische Brennrost- und Wärmetauscherreinigung.",
+      "vat": "inkl. 20 % MwSt.",
+      "shipping": "Versandkosten nach Österreich offen.",
+      "pros": "24 kW, automatische Reinigung und Lambdaregelung.",
+      "caveat": "Saugsystem, Lager und Lagerentnahme für vergleichbaren Komfort zusätzlich nötig.",
+      "group": "optional",
+      "puffer": "add",
+      "buffer_price": 1060.8,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "ja",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 8422.8,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "robin-paket800",
+      "model": "Robin Wood EcoPellet 24 mit Puffer",
+      "seller": "ganz24",
+      "kw": 24,
+      "price": 6393.45,
+      "url": "https://ganz24.com/en/products/ecopellet-24-kw-komplettset-pelletheizung-mit-pufferspeicher",
+      "scope": "Paket mit 800-l-Puffer, Pumpengruppen und Sicherheitszubehör; 1.000 l konfigurierbar.",
+      "vacuum": "Pelletsaugsystem separat erhältlich",
+      "cleaning": "Brenner selbstreinigend; Wärmetauscherreinigung nicht bestätigt.",
+      "vat": "inkl. MwSt.; Steuersatz für AT prüfen",
+      "shipping": "DE-Preis; Österreichzustellung und Fracht offen.",
+      "pros": "Paket inklusive Puffer und Hydraulikkomponenten.",
+      "caveat": "Preis gilt für 800 l. 1.000-l-Aufpreis und Saugsystem fehlen.",
+      "group": "optional",
+      "puffer": "select",
+      "buffer_price": null,
+      "starting": true,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 6393.45,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "optima25-hygiene",
+      "model": "Seltron Optima PKO25B Hygiene-Paket",
+      "seller": "Heizprofishop",
+      "kw": 25,
+      "price": 5997.0,
+      "url": "https://www.heizprofishop.at/Pelletkessel-Komplettpaket-Hygiene-PKO25B-25kW-135kg",
+      "scope": "Kessel mit 135-kg-Behälter, Hygiene-Pufferspeicher 800/1.000 l konfigurierbar, Pumpen, MAG.",
+      "vacuum": "135-kg-Behälter; externe Lagerzufuhr nicht bestätigt",
+      "cleaning": "Automatische Brenner- und Wärmetauscherreinigung nicht bestätigt.",
+      "vat": "inkl. 20 % MwSt.",
+      "shipping": "Versand zusätzlich; Betrag offen.",
+      "pros": "Relativ günstiges österreichisches Paket mit Warmwasseroption.",
+      "caveat": "Ab-Preis; genaue Puffergröße und Reinigungskomfort für die Konfiguration prüfen.",
+      "group": "manual",
+      "puffer": "select",
+      "buffer_price": null,
+      "starting": true,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 5997.0,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "thermoflux-75",
+      "model": "ThermoFLUX Pelling ECO 25 Standard",
+      "seller": "GEMA Shop",
+      "kw": 25,
+      "price": 5224.5,
+      "url": "https://gemashop.de/products/pelletheizungs-komplettpaket-thermoflux-pelling-eco-25-standard-behaelter-rechts-mit-1000-liter-pufferspeicher",
+      "scope": "Kessel mit 75-kg-Behälter, 1.000-l-Klasse (889 l tatsächlicher Inhalt), Ausdehnungsgefäß und Anschlusspaketen.",
+      "vacuum": "75-kg-Behälter von Hand befüllen",
+      "cleaning": "Brenntopf, Wärmetauscher und Asche laut Händler regelmäßig manuell reinigen.",
+      "vat": "inkl. MwSt.; deutscher Preis, AT-Satz prüfen",
+      "shipping": "Versand nach Österreich und Kosten unbestätigt.",
+      "pros": "Sehr günstiger Paketpreis einschließlich Speicher.",
+      "caveat": "Weniger Komfort als BIOSTAR: manuelle Reinigung und keine Lageraustragung.",
+      "group": "manual",
+      "puffer": "included",
+      "buffer_price": 0,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 5224.5,
+          "type": "Angebotspreis"
+        }
+      ]
+    },
+    {
+      "id": "thermoflux-230",
+      "model": "ThermoFLUX Pelling ECO 25 Großbehälter",
+      "seller": "GEMA Shop",
+      "kw": 25,
+      "price": 5400.5,
+      "url": "https://gemashop.de/products/pelletheizungs-komplettpaket-thermoflux-pelling-eco-25-grossbehaelter-behaelter-rechts-mit-1000-liter-pufferspeicher",
+      "scope": "Kessel mit 230-kg-Behälter, 1.000-l-Klasse (889 l tatsächlicher Inhalt), Ausdehnungsgefäß und Anschlusspaketen.",
+      "vacuum": "230-kg-Behälter von Hand befüllen",
+      "cleaning": "Regelmäßige manuelle Reinigung laut Anbieter.",
+      "vat": "inkl. MwSt.; deutscher Preis, AT-Satz prüfen",
+      "shipping": "Versand nach Österreich und Kosten unbestätigt.",
+      "pros": "Mehr Vorrat, Paket inklusive Speicher.",
+      "caveat": "Weniger Komfort als BIOSTAR; 889 l tatsächlicher Speicherinhalt.",
+      "group": "manual",
+      "puffer": "included",
+      "buffer_price": 0,
+      "starting": false,
+      "source_note": "",
+      "tank": "",
+      "lambda_": "",
+      "verified_date": "2026-11-19",
+      "history": [
+        {
+          "date": "2026-11-19",
+          "price": 5400.5,
+          "type": "Angebotspreis"
+        }
+      ]
+    }
+  ]
+}
