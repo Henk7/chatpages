@@ -3,9 +3,9 @@
   "checkedAt": "2026-11-19T01:15:00+01:00",
   "checked": true,
   "requiredCount": 20,
-  "confirmedCount": 16,
-  "shortfall": 4,
-  "statusNote": "Stand Donnerstag, 19. November 2026, 01:15:00 Uhr (Europe/Vienna): 16 von 20 Hauptangeboten mit mindestens drei ISOFIX-Plätzen laut Inserat geprüft; 4 Plätze offen. Neu: Toyota Active in Hartkirchen und Citroën Berlingo Plus M in Mattersburg und Max XL in Bad Zell. Der Toyota TeamDeutschland aus Enns bleibt wegen ungeklärter Herkunft nur Referenz. Preisangaben sind inserierte Kaufpreise; mögliche Händler- und Zulassungskosten klären.",
+  "confirmedCount": 14,
+  "shortfall": 6,
+  "statusNote": "Stand Donnerstag, 19. November 2026, 01:15 Uhr (Europe/Vienna): 14 von 20 Hauptangeboten mit mindestens drei ISOFIX-Plätzen laut Inserat geprüft; 6 Plätze offen. Die Zwei-Jahres-Grenze wurde nachträglich angewandt und zwei ältere Fahrzeuge entfernt. Toyota Active in Hartkirchen und Citroën Berlingo Plus M in Mattersburg und Max XL in Bad Zell waren neu hinzugekommen. Preisangaben sind inserierte Kaufpreise; mögliche Händler- und Zulassungskosten klären.",
   "unqualifiedLeads": [
     {
       "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/nutzfahrzeuge/toyota-pro-ace-proace-city-verso-l2-1-5-d-4d-130-auto-7-sitze-1016423009/",
@@ -17,76 +17,6 @@
     }
   ],
   "offers": [
-    {
-      "model": "Peugeot Rifter 1,2 PureTech 110",
-      "trim": "Active · 5-Sitzer",
-      "location": "Hörsching (OÖ)",
-      "country": "AT",
-      "price": 14999,
-      "atPrice": 14999,
-      "reg": "08/2020",
-      "km": 33000,
-      "fuel": "Benzin",
-      "hp": 110,
-      "gearbox": "Schaltgetriebe",
-      "android": "Nicht bestätigt",
-      "seats": "5",
-      "iso": "3× ISOFIX · zweite Sitzreihe laut Inserat",
-      "note": "Inserat nennt ausdrücklich ISOFIX auf den drei Plätzen der zweiten Sitzreihe. Fahrzeugdaten und Kaufpreis direkt geprüft.",
-      "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/peugeot-rifter-1-2-puretech-110-s-s-active-810971447/",
-      "source": "Willhaben · A.T. Handels GmbH Autohaus Hörsching",
-      "features": [
-        "3× ISOFIX Reihe 2",
-        "5 Sitze",
-        "Benzin",
-        "Schaltgetriebe"
-      ],
-      "basis": "Active · 5-Sitzer",
-      "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/peugeot-rifter-1-2-puretech-110-s-s-active-810971447/",
-      "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am 19.11.2026 erneut auf angezeigten Kaufpreis, Fahrzeugdaten und mindestens drei ISOFIX-Plätze laut Beschreibung geprüft.",
-      "checkedDate": "19.11.2026",
-      "checkedAt": "2026-11-19T01:07:47+01:00",
-      "checked": true,
-      "lowestMatchingTrim": true,
-      "rank": 1,
-      "rankLabel": "#1 · 5 Sitze"
-    },
-    {
-      "model": "Peugeot Rifter 1,2 PureTech 110",
-      "trim": "Allure · 5-Sitzer",
-      "location": "Puch bei Hallein (Salzburg)",
-      "country": "AT",
-      "price": 15570,
-      "atPrice": 15570,
-      "reg": "01/2019",
-      "km": 41000,
-      "fuel": "Benzin",
-      "hp": 110,
-      "gearbox": "Schaltgetriebe",
-      "android": "Nicht bestätigt",
-      "seats": "5",
-      "iso": "3× ISOFIX · zweite Sitzreihe laut Inserat",
-      "note": "Inserat nennt drei Einzelsitze und ISOFIX an allen drei Plätzen der zweiten Reihe.",
-      "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/peugeot-rifter-1-2-puretech-110-allure-959600811/",
-      "source": "Willhaben · Autohaus Gimpl GmbH",
-      "features": [
-        "3× ISOFIX Reihe 2",
-        "5 Sitze",
-        "Benzin",
-        "Schaltgetriebe"
-      ],
-      "basis": "Allure · 5-Sitzer",
-      "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/peugeot-rifter-1-2-puretech-110-allure-959600811/",
-      "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am 19.11.2026 erneut auf angezeigten Kaufpreis, Fahrzeugdaten und mindestens drei ISOFIX-Plätze laut Beschreibung geprüft.",
-      "checkedDate": "19.11.2026",
-      "checkedAt": "2026-11-19T01:07:47+01:00",
-      "checked": true,
-      "lowestMatchingTrim": false,
-      "rank": 2,
-      "rankLabel": "#2 · 5 Sitze"
-    },
     {
       "model": "Citroën Berlingo BlueHDi 100",
       "trim": "Plus M · Vorführwagen",
@@ -119,8 +49,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 3,
-      "rankLabel": "#3 · 5 Sitze"
+      "rank": 1,
+      "rankLabel": "#1 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 100",
@@ -155,8 +85,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 4,
-      "rankLabel": "#4 · 5 Sitze"
+      "rank": 2,
+      "rankLabel": "#2 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 100",
@@ -191,8 +121,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 5,
-      "rankLabel": "#5 · 5 Sitze"
+      "rank": 3,
+      "rankLabel": "#3 · 5 Sitze"
     },
     {
       "model": "Toyota Proace City Verso L1 1,2",
@@ -228,8 +158,8 @@
       "checkedAt": "2026-11-19T01:15:00+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 6,
-      "rankLabel": "#6 · 5 Sitze"
+      "rank": 4,
+      "rankLabel": "#4 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 100",
@@ -264,8 +194,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 7,
-      "rankLabel": "#7 · 5 Sitze"
+      "rank": 5,
+      "rankLabel": "#5 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -299,8 +229,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 8,
-      "rankLabel": "#8 · 5 Sitze"
+      "rank": 6,
+      "rankLabel": "#6 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -335,8 +265,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 9,
-      "rankLabel": "#9 · 5 Sitze"
+      "rank": 7,
+      "rankLabel": "#7 · 5 Sitze"
     },
     {
       "model": "Toyota Proace City Verso L1 1,2",
@@ -370,8 +300,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 10,
-      "rankLabel": "#10 · 5 Sitze"
+      "rank": 8,
+      "rankLabel": "#8 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -405,8 +335,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 11,
-      "rankLabel": "#11 · 5 Sitze"
+      "rank": 9,
+      "rankLabel": "#9 · 5 Sitze"
     },
     {
       "model": "Citroën Berlingo XL BlueHDi 130",
@@ -441,12 +371,12 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 12,
-      "rankLabel": "#12 · 5 Sitze"
+      "rank": 10,
+      "rankLabel": "#10 · 5 Sitze"
     },
     {
-      "rankLabel": "#13 · 5 Sitze",
-      "rank": 13,
+      "rankLabel": "#11 · 5 Sitze",
+      "rank": 11,
       "model": "Toyota Proace City Verso L2 1.5 D4D 130 Family+",
       "trim": "Family+ · 5-Sitzer · Automatik",
       "basis": "Gebrauchtwagen · Family+ · Händlerangebot",
@@ -514,8 +444,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 14,
-      "rankLabel": "#14 · 5 Sitze"
+      "rank": 12,
+      "rankLabel": "#12 · 5 Sitze"
     },
     {
       "model": "Toyota Proace City Verso L1 1,5 D4D",
@@ -550,8 +480,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 15,
-      "rankLabel": "#15 · 5 Sitze"
+      "rank": 13,
+      "rankLabel": "#13 · 5 Sitze"
     },
     {
       "model": "Toyota Proace City Verso L2 1,5 D4D",
@@ -586,8 +516,8 @@
       "checkedAt": "2026-11-19T01:07:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "rank": 16,
-      "rankLabel": "#16 · 5 Sitze"
+      "rank": 14,
+      "rankLabel": "#14 · 5 Sitze"
     }
   ],
   "staleReferences": [
