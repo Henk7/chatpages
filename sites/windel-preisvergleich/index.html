@@ -207,7 +207,7 @@
         }).join(''); };
         renderOffers(document.getElementById('offers-body'), offers);
 
-        if (!offers.length) throw new Error('Heute sind keine Händlerdaten verfügbar.');
+        if (!offers.length) document.getElementById('offers-body').innerHTML = '<tr><td class="loading-cell" colspan="7">Heute kein Händlerangebot direkt bestätigt.</td></tr>';
         const best = ranked[0];
         const status = document.getElementById('price-status');
         if (best) {
