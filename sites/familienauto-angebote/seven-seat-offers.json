@@ -1,13 +1,51 @@
 {
-  "checkedDate": "19.11.2026",
-  "checkedAt": "2026-11-19T01:07:47+01:00",
+  "checkedDate": "20.11.2026",
+  "checkedAt": "2026-11-20T01:05:13+01:00",
   "checked": false,
   "requiredCount": 10,
   "confirmedCount": 0,
   "shortfall": 10,
-  "statusNote": "Stand Donnerstag, 19. November 2026, 01:07:47 Uhr (Europe/Vienna): 0 von 10 separat recherchierten 7-Sitzern mit mindestens drei ISOFIX-Plätzen am konkreten Fahrzeug bestätigt; 10 Plätze offen. Das direkt geprüfte Toyota-Inserat in Steyr nennt 7 Sitze und ISOFIX, aber keine Anzahl; weitere Kandidaten sind gesondert und mit ihrem alten Prüftag gekennzeichnet.",
+  "statusNote": "Stand Freitag, 20. November 2026, 01:05 Uhr (Europe/Vienna): 0 von 10 separat recherchierten 7-Sitzern mit mindestens drei am konkreten Fahrzeug bestätigten ISOFIX-Plätzen; alle 10 Plätze offen. Der Berlingo in Elixhausen ist als Siebensitzer angeboten, das Inserat nennt ISOFIX ohne Anzahl und steht daher nur als Kandidat.",
   "offers": [],
   "staleReferences": [
+    {
+      "country": "AT",
+      "iso": "ISOFIX im Inserat genannt · Anzahl am Fahrzeug offen",
+      "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
+      "checkedDate": "20.11.2026",
+      "checkedAt": "2026-11-20T01:05:13+01:00",
+      "checked": false,
+      "lowestMatchingTrim": false,
+      "seats": "7",
+      "rank": 0,
+      "rankLabel": "Kandidat · 7 Sitze",
+      "model": "Citroën Berlingo XL BlueHDi 130",
+      "trim": "Plus · 7-Sitzer · Vorführwagen",
+      "location": "Elixhausen (Salzburg)",
+      "price": 30900,
+      "atPrice": 30900,
+      "reg": "07/2026",
+      "km": 3308,
+      "fuel": "Diesel",
+      "hp": 131,
+      "gearbox": "Schaltgetriebe",
+      "android": "Ja · laut Inserat",
+      "note": "Inserat nennt sieben Sitze, drei Einzelsitze in Reihe 2 und ISOFIX, aber keine Anzahl der ISOFIX-Plätze. Daher kein bestätigter Treffer; Ausstattung beim Händler erfragen.",
+      "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/citroen-berlingo-laenge-xl-bluehdi-130-s-s-plus-7-sitzer-2018202286/",
+      "source": "Willhaben · Pongruber Auto-Familie",
+      "features": [
+        "7 Sitze",
+        "Android Auto",
+        "Rückfahrkamera",
+        "Drei Einzelsitze Reihe 2",
+        "ISOFIX-Anzahl offen"
+      ],
+      "basis": "Plus XL · Vorführwagen",
+      "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
+      "displayAsCandidate": true,
+      "staleReferenceReason": "Direkt geprüft am 20.11.2026: sieben Sitze bestätigt, Anzahl der ISOFIX-Plätze am konkreten Fahrzeug offen.",
+      "change": "Separat recherchierter Kandidat; zählt nicht als bestätigtes Angebot."
+    },
     {
       "rank": 0,
       "rankLabel": "Kandidat · 7 Sitze",
@@ -46,7 +84,7 @@
       ],
       "checkedAt": "2026-11-16T20:36:16+01:00",
       "lowestMatchingTrim": false,
-      "displayAsCandidate": true,
+      "displayAsCandidate": false,
       "lastCheckAttemptAt": "2026-11-16T20:39:03+01:00",
       "staleReferenceReason": "Inserat und sieben Sitze heute geprüft; das Inserat nennt ISOFIX ohne konkrete Anzahl. Die Herstellerunterlagen sprechen für drei Plätze, am konkreten Fahrzeug ist die Anzahl aber nicht direkt bestätigt."
     },
@@ -87,46 +125,7 @@
       ],
       "checkedAt": "2026-11-16T20:36:16+01:00",
       "lowestMatchingTrim": false,
-      "displayAsCandidate": true,
-      "lastCheckAttemptAt": "2026-11-16T20:39:03+01:00",
-      "staleReferenceReason": "Inserat und sieben Sitze heute geprüft; das Inserat nennt ISOFIX ohne konkrete Anzahl. Die Herstellerunterlagen sprechen für drei Plätze, am konkreten Fahrzeug ist die Anzahl aber nicht direkt bestätigt."
-    },
-    {
-      "model": "Citroën Berlingo BlueHDi 130",
-      "trim": "Plus XL · 7-Sitzer",
-      "location": "Elixhausen (Salzburg)",
-      "country": "AT",
-      "price": 30900,
-      "atPrice": 30900,
-      "reg": "07/2026",
-      "km": 3308,
-      "fuel": "Diesel",
-      "hp": 131,
-      "gearbox": "Schaltgetriebe",
-      "android": "Ja laut Inserat",
-      "seats": "7",
-      "iso": "3× ISOFIX laut passender Herstellerpreisliste · Inserat nennt ISOFIX allgemein",
-      "note": "Inserat nennt 7 Sitze, 3 Einzelsitze in Reihe 2 und ISOFIX allgemein. Das passende Citroën-Produktblatt 2026 nennt ISOFIX an allen drei Plätzen; die Halterungen am Fahrzeug prüfen. AHK nur vorbereitet; Nachrüstung laut Inserat ca. 300 €.",
-      "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/citroen-berlingo-laenge-xl-bluehdi-130-s-s-plus-7-sitzer-2018202286/",
-      "source": "Willhaben · Pongruber Auto-Familie",
-      "features": [
-        "3× ISOFIX Reihe 2",
-        "7 Sitze",
-        "Diesel",
-        "Schaltgetriebe",
-        "Android Auto"
-      ],
-      "basis": "Plus XL · 7-Sitzer",
-      "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
-      "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am 16.11.2026 erneut direkt geprüft; Sitzangaben nach Inserat und gegebenenfalls passender Herstellerpreisliste.",
-      "checkedDate": "16.11.2026",
-      "checkedAt": "2026-11-16T20:36:16+01:00",
-      "checked": false,
-      "lowestMatchingTrim": false,
-      "rank": 0,
-      "rankLabel": "Kandidat · 7 Sitze",
-      "displayAsCandidate": true,
+      "displayAsCandidate": false,
       "lastCheckAttemptAt": "2026-11-16T20:39:03+01:00",
       "staleReferenceReason": "Inserat und sieben Sitze heute geprüft; das Inserat nennt ISOFIX ohne konkrete Anzahl. Die Herstellerunterlagen sprechen für drei Plätze, am konkreten Fahrzeug ist die Anzahl aber nicht direkt bestätigt."
     },
@@ -165,7 +164,7 @@
       "lowestMatchingTrim": false,
       "rank": 0,
       "rankLabel": "Kandidat · 7 Sitze",
-      "displayAsCandidate": true,
+      "displayAsCandidate": false,
       "lastCheckAttemptAt": "2026-11-18T01:05:09+01:00",
       "staleReferenceReason": "Am 18.11.2026 direkt erneut geprüft: 7 Sitze, €31.990 und 14.600 km sichtbar; ISOFIX nur allgemein genannt. Die Zahl der Halterungen ist am konkreten Fahrzeug nicht direkt bestätigt."
     },
@@ -205,7 +204,8 @@
       "checkedAt": "2026-11-10T11:15:35+01:00",
       "lowestMatchingTrim": false,
       "staleReferenceReason": "Direktprüfung am 11.11.2026: Inserat führt nur noch auf eine allgemeine Willhaben-Kategorieseite; Angebot, Preis und Verfügbarkeit sind nicht mehr belegbar. Entfernt.",
-      "lastCheckAttemptAt": "2026-11-11T01:30:16+01:00"
+      "lastCheckAttemptAt": "2026-11-11T01:30:16+01:00",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#1 · frisch direkt geprüft",
@@ -243,7 +243,8 @@
       ],
       "checkedAt": "2026-11-08T02:30:25+01:00",
       "change": "Separat recherchierte 7-Sitzer-Anzeige am Sonntag, 8. November 2026, 02:30 Uhr (Europe/Vienna) direkt geöffnet; aktiv angezeigter Preis, 7 Sitze, EZ/km und Fahrzeugdaten bestätigt. Hersteller-Produktblatt bestätigt für Länge XL drei Einzelsitze mit ISOFIX in Reihe 2.",
-      "staleReferenceReason": "Am 9.11.2026 nicht frisch bestätigt: Detailseite bei Direktabruf nicht geladen; Suchtreffer war gegenüber dem Vortagesstand widersprüchlich/stale. Nicht mehr als aktuelles Angebot geführt."
+      "staleReferenceReason": "Am 9.11.2026 nicht frisch bestätigt: Detailseite bei Direktabruf nicht geladen; Suchtreffer war gegenüber dem Vortagesstand widersprüchlich/stale. Nicht mehr als aktuelles Angebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "model": "Opel Combo XL 1.5 Diesel",
@@ -283,7 +284,8 @@
       "cost": "Österreichischer Bar-Verkaufspreis 31.990 €; zusätzlich ca. 270 € Zulassung angesetzt. Keine Importkosten.",
       "change": "Separat recherchiertes 7-Sitzer-Angebot am 27.10.2026 direkt geprüft; sieben Sitze, mindestens drei ISOFIX und österreichischer Barpreis bestätigt.",
       "rankLabel": "#6",
-      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt."
+      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#7",
@@ -362,7 +364,8 @@
         "Heckverschluss nicht eindeutig angegeben",
         "Android Auto nicht angegeben"
       ],
-      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt."
+      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#9",
@@ -444,7 +447,8 @@
         "Zwei Jahre Werksgarantie ohne km-Limit ab EZ",
         "12 Monate Mobilitätsgarantie ab EZ"
       ],
-      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt."
+      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#10",
@@ -508,7 +512,8 @@
         "Seitenfenster ab B-Säule abgedunkelt",
         "Sitz-Fahrer höhenverstellbar"
       ],
-      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt."
+      "staleReferenceReason": "Altreferenz mit letztem Direktcheck 27.10.2026; am 30.10. nicht frisch erneut bestätigt, daher nicht als aktuelles 7-Sitzer-Kaufangebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#2",
@@ -547,7 +552,8 @@
       ],
       "checkedAt": "2026-11-07T10:00:00+01:00",
       "lastCheckAttemptAt": "2026-11-08T01:24:05+01:00",
-      "staleReferenceReason": "Direktcheck am 08.11.2026: Spoticar-Produktseite lief beim Abruf in einen Timeout; aktueller Preis, Bestand und Ausstattungsangaben daher nicht erneut bestätigt. Nicht als aktuelles Angebot geführt."
+      "staleReferenceReason": "Direktcheck am 08.11.2026: Spoticar-Produktseite lief beim Abruf in einen Timeout; aktueller Preis, Bestand und Ausstattungsangaben daher nicht erneut bestätigt. Nicht als aktuelles Angebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#3",
@@ -586,7 +592,8 @@
       ],
       "checkedAt": "2026-11-07T10:00:00+01:00",
       "lastCheckAttemptAt": "2026-11-08T01:24:05+01:00",
-      "staleReferenceReason": "Direktcheck am 08.11.2026: Spoticar-Produktseite lief beim Abruf in einen Timeout; aktueller Preis, Bestand und Ausstattungsangaben daher nicht erneut bestätigt. Nicht als aktuelles Angebot geführt."
+      "staleReferenceReason": "Direktcheck am 08.11.2026: Spoticar-Produktseite lief beim Abruf in einen Timeout; aktueller Preis, Bestand und Ausstattungsangaben daher nicht erneut bestätigt. Nicht als aktuelles Angebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "rank": 4,
@@ -626,7 +633,8 @@
       "checkedAt": "2026-11-11T01:30:16+01:00",
       "lowestMatchingTrim": false,
       "lastCheckAttemptAt": "2026-11-12T01:24:15+01:00",
-      "staleReferenceReason": "Direktprüfung am Donnerstag, 12. November 2026: Das konkrete Willhaben-Inserat ist nicht mehr erreichbar und leitet auf eine allgemeine Fahrzeugkategorie weiter. Preis und Verfügbarkeit sind nicht mehr belegbar; der Datensatz wird nicht als aktuelles Angebot geführt."
+      "staleReferenceReason": "Direktprüfung am Donnerstag, 12. November 2026: Das konkrete Willhaben-Inserat ist nicht mehr erreichbar und leitet auf eine allgemeine Fahrzeugkategorie weiter. Preis und Verfügbarkeit sind nicht mehr belegbar; der Datensatz wird nicht als aktuelles Angebot geführt.",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#2 · 7 Sitze",
@@ -666,7 +674,8 @@
       "checkedAt": "2026-11-12T01:24:15+01:00",
       "lowestMatchingTrim": false,
       "staleReferenceReason": "Am 15.11.2026: heutige getrennte 7-Sitzer-Recherche hat dieses alte Inserat nicht frisch bestätigt; Preis/Verfügbarkeit werden nicht als aktuell gezählt.",
-      "lastCheckAttemptAt": "2026-11-15T01:21:26+01:00"
+      "lastCheckAttemptAt": "2026-11-15T01:21:26+01:00",
+      "displayAsCandidate": false
     },
     {
       "model": "Opel Combo XL 1.5 Diesel",
@@ -707,7 +716,8 @@
       "checkedAt": "2026-11-12T01:24:15+01:00",
       "lowestMatchingTrim": false,
       "staleReferenceReason": "Am 15.11.2026: heutige getrennte 7-Sitzer-Recherche hat dieses alte Inserat nicht frisch bestätigt; Preis/Verfügbarkeit werden nicht als aktuell gezählt.",
-      "lastCheckAttemptAt": "2026-11-15T01:21:26+01:00"
+      "lastCheckAttemptAt": "2026-11-15T01:21:26+01:00",
+      "displayAsCandidate": false
     },
     {
       "rankLabel": "#5 · 7 Sitze",
@@ -747,7 +757,8 @@
       "checkedAt": "2026-11-12T01:24:15+01:00",
       "lowestMatchingTrim": true,
       "staleReferenceReason": "Am 15.11.2026: heutige getrennte 7-Sitzer-Recherche hat dieses alte Inserat nicht frisch bestätigt; Preis/Verfügbarkeit werden nicht als aktuell gezählt.",
-      "lastCheckAttemptAt": "2026-11-15T01:21:26+01:00"
+      "lastCheckAttemptAt": "2026-11-15T01:21:26+01:00",
+      "displayAsCandidate": false
     }
   ]
 }
