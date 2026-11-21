@@ -1,6 +1,6 @@
 # AI Pareto Explorer
 
-A mobile-friendly explorer of dated snapshots from Arena Agent, AgentDuel and Arena WebDev. Each benchmark uses its own score scale.
+A mobile-friendly explorer of dated snapshots from the overall and coding-only Arena Agent leaderboards, AgentDuel and Arena WebDev. Each benchmark uses its own score scale.
 
 ## Agent Arena snapshot
 
@@ -27,6 +27,16 @@ To refresh, capture all rows and the frontier from a single consistent 50th-perc
 Provider artwork is embedded inline: Simple Icons SVGs (CC0) where available, with colored initials for providers without an icon in that set.
 
 The explorer is an independent reproduction of public Arena and AgentDuel data and is not affiliated with either source.
+
+## Coding-only Arena Agent snapshot
+
+- Source: <https://arena.ai/leaderboard/agent/code/pareto>
+- Arena board date: November 18, 2026; checked November 21, 2026
+- Metric: Coding Index against median task cost (50th percentile, last 14 days)
+- 68 ranked models; 61 with cost data are plotted and seven without costs remain in the model table as N/A
+- The chart uses Arena’s published 13-model source frontier. Preserve that membership rather than recomputing it from costs rounded to cents. Coding scores are on a separate scale from the overall Agent Arena Index and WebDev.
+- `coding-data.json` holds the full ranked snapshot. `coding.js` draws a separate interactive chart and searchable table for code-only agent tasks.
+- To refresh, capture the full coding leaderboard and Pareto view from one generation; retain missing and preliminary values, update the source frontier and capture date, then bump the cache versions in `index.html` and `coding.js`. This is a dated snapshot, not a live feed.
 
 ## AgentDuel comparison
 
@@ -70,5 +80,5 @@ ratings on the Agent Arena or AgentDuel score scales.
   source frontier, then bump the data and script cache versions. Check that
   all plotted labels remain visible and the published frontier agrees.
 
-The three charts are dated snapshots; they do not refresh automatically.
+The four charts are dated snapshots; they do not refresh automatically.
 
