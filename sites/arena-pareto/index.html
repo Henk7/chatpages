@@ -208,6 +208,16 @@
     .webdev-list > summary { color: var(--forest); cursor: pointer; font-size: .9rem; font-weight: 750; }
     @media (max-width: 760px) { #webdev-plot { height: 500px; } .webdev-source { padding: 0 16px 13px; } .webdev-details { padding: 14px 13px 18px; } }
     @media (max-width: 430px) { #webdev-plot { height: 460px; } }
+    #coding-plot { display: block; width: 100%; height: 620px; overflow: hidden; touch-action: none; user-select: none; }
+    #coding-plot text { font-family: inherit; }
+    #coding-plot .model-label:focus .label-bg { stroke: #fff; stroke-width: 5; }
+    .coding-source { padding: 0 24px 16px; }
+    .coding-details { padding: 16px 22px 22px; }
+    .coding-details > p { margin: 0 0 14px; color: var(--muted); font-size: .84rem; }
+    .coding-details a { color: #31544b; font-weight: 750; }
+    .coding-list > summary { color: var(--forest); cursor: pointer; font-size: .9rem; font-weight: 750; }
+    @media (max-width: 760px) { #coding-plot { height: 500px; } .coding-source { padding: 0 16px 13px; } .coding-details { padding: 14px 13px 18px; } }
+    @media (max-width: 430px) { #coding-plot { height: 460px; } }
     /* Full-screen chart mode keeps zoom, fit, labels, and model details available. */
     .icon-button.fullscreen-toggle { width: auto; min-width: 100px; padding: 0 10px; font-size: .76rem; font-weight: 750; white-space: nowrap; }
     body.chart-fullscreen-open { overflow: hidden; overscroll-behavior: none; }
@@ -282,6 +292,53 @@
         <span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the full chart</span>
       </div>
       <div id="tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model label to see its exact values.</div>
+    </section>
+
+    <section class="section card chart-card" id="coding" aria-labelledby="coding-chart-title">
+      <div class="card-head">
+        <div>
+          <h2 id="coding-chart-title">Arena Agent · Coding Index Pareto</h2>
+          <p>Web-app ratings vs. median cost per task · all models with cost data stay visible</p>
+          <p id="coding-snapshot">Loading coding-only Arena snapshot…</p>
+        </div>
+        <div class="legend" aria-label="Coding-only Arena chart legend">
+          <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Model name + provider mark</span>
+          <span class="legend-item"><i class="legend-line" aria-hidden="true"></i>Arena Pareto frontier</span>
+        </div>
+      </div>
+      <div class="developer-highlight" aria-label="Coding Index developer highlights">
+        <div class="developer-highlight-head"><span class="developer-highlight-title">Highlight by developer</span><span id="coding-highlight-status" class="developer-highlight-status" role="status" aria-live="polite">Loading developers…</span></div>
+        <div id="coding-developer-chips" class="developer-chips" role="group" aria-label="Highlight Coding Index models by developer"></div>
+      </div>
+      <div class="coding-source"><a class="button" href="https://arena.ai/leaderboard/code/coding" target="_blank" rel="noopener noreferrer">Open Arena Coding Index source ↗</a></div>
+      <div class="chart-wrap coding-chart-wrap">
+        <div class="chart-tools" aria-label="Coding Index chart controls">
+          <button class="icon-button" id="coding-zoom-in" type="button" aria-label="Zoom in on Coding Index chart" title="Zoom in">+</button>
+          <button class="icon-button" id="coding-zoom-out" type="button" aria-label="Zoom out on Coding Index chart" title="Zoom out">−</button>
+          <button class="icon-button reset" id="coding-zoom-reset" type="button" title="Fit the whole Coding Index chart">Fit</button>
+          <button class="icon-button fullscreen-toggle" id="fullscreen-coding" type="button" aria-label="Open Coding Index chart in full screen" aria-pressed="false" title="Open Coding Index chart in full screen">⛶ Full screen</button>
+        </div>
+        <svg id="coding-plot" role="img" aria-label="Coding-only Arena Agent Coding Index against median task cost. All cost-bearing models and provider marks are shown; the green line follows Arena’s published frontier."></svg>
+      </div>
+      <div class="chart-help"><span class="hint"><span class="key">Pinch</span> zoom · drag to move around the chart</span><span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the whole chart</span></div>
+      <div id="coding-tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model label to see its exact values.</div>
+      <div class="coding-details">
+        <p>This separate chart uses Arena Agent’s code-only Coding Index, not the overall Agent Arena Index or WebDev benchmark. It plots all 61 models with published median task costs; the green line follows Arena’s 13-model source frontier. Seven of the 68 ranked models have insufficient cost data and remain in the searchable table as N/A. Arena rounds costs to cents, so the published frontier membership is preserved instead of being recalculated from rounded values. Scores use the Coding Index scale and should not be compared numerically with the overall Agent Arena Index or WebDev ratings. <a href="https://arena.ai/leaderboard/agent/code/pareto" target="_blank" rel="noopener noreferrer">View Arena’s source ↗</a></p>
+        <details class="coding-list"><summary>Browse all 68 coding models</summary>
+        <div class="table-controls">
+          <div class="control-group">
+            <label class="search-box"><span class="sr-only">Search Coding Index models</span><input id="coding-search" class="control-input" type="search" placeholder="Search Coding Index models…" autocomplete="off"></label>
+            <select id="coding-sort" class="control-input select-box" aria-label="Sort Coding Index models"><option value="rank">Arena rank</option><option value="score">Highest rating</option><option value="cost">Lowest cost</option></select>
+            <button id="coding-frontier-toggle" class="filter-button" type="button" aria-pressed="false">Frontier in table</button>
+          </div>
+          <span id="coding-row-count" class="row-count"></span>
+        </div>
+        <div class="table-scroll"><table>
+          <thead><tr><th scope="col">Rank</th><th scope="col">Model</th><th scope="col" class="number-cell">Coding Index score</th><th scope="col" class="number-cell">Median cost / task</th></tr></thead>
+          <tbody id="coding-rows"></tbody>
+        </table><div id="coding-empty" class="empty-state">No models match that search.</div></div>
+        </details>
+      </div>
     </section>
 
     <section class="section card chart-card" id="agentduel" aria-labelledby="duel-chart-title">
@@ -1104,6 +1161,7 @@
   </script>
   <script src="./agentduel.js?v=20261117b"></script>
   <script src="./webdev.js?v=20261118b"></script>
+<script src="./coding.js?v=20261121a"></script>
   <script>
     (() => {
       const charts = [
