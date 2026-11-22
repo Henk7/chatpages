@@ -1,19 +1,131 @@
 {
   "source": "Agent Duel Leaderboard",
   "sourceUrl": "https://agentduel.com/leaderboard",
-  "generatedAt": "2026-11-17T18:00:00Z",
-  "generatedLabel": "Nov 17, 2026, 18:00 UTC",
+  "generatedAt": "2026-11-22T09:20:00Z",
+  "generatedLabel": "Nov 22, 2026, 09:20 UTC",
   "records": [
-    {"rank":1,"model":"Claude Fable 5.2","provider":"Anthropic","elo":1073,"ciPlus":63,"ciMinus":61,"cost":2.53,"minutes":2.4},
-    {"rank":2,"model":"Claude Opus 5.5","provider":"Anthropic","elo":1050,"ciPlus":40,"ciMinus":42,"cost":1.41,"minutes":2.3},
-    {"rank":3,"model":"GPT-6 Astra","provider":"OpenAI","elo":1007,"ciPlus":59,"ciMinus":60,"cost":3.74,"minutes":2.7},
-    {"rank":4,"model":"Kimi K3.1 Pro","provider":"Moonshot AI","elo":1002,"ciPlus":44,"ciMinus":47,"cost":0.43,"minutes":2.2},
-    {"rank":5,"model":"DeepSeek V4.1 Flash 1017","provider":"DeepSeek","elo":996,"ciPlus":39,"ciMinus":41,"cost":0.06,"minutes":1.9},
-    {"rank":6,"model":"Gemini Carbon","provider":"Google","elo":994,"ciPlus":59,"ciMinus":60,"cost":0.74,"minutes":6.4},
-    {"rank":7,"model":"Muse Wonder","provider":"Meta","elo":986,"ciPlus":41,"ciMinus":42,"cost":1.08,"minutes":2.2},
-    {"rank":8,"model":"GPT-6.1 Sol","provider":"OpenAI","elo":973,"ciPlus":47,"ciMinus":48,"cost":0.55,"minutes":2.4},
-    {"rank":9,"model":"MiMo-V2.6 Flash","provider":"Xiaomi","elo":964,"ciPlus":42,"ciMinus":43,"cost":0.03,"minutes":2.4},
-    {"rank":10,"model":"Grok 4.7","provider":"xAI","elo":935,"ciPlus":41,"ciMinus":44,"cost":0.70,"minutes":2.4},
-    {"rank":null,"model":"Qwen 4 Max","provider":"Qwen","elo":1044,"ciPlus":137,"ciMinus":130,"cost":0.25,"minutes":4.0,"provisional":true}
+    {
+      "rank": 1,
+      "model": "Claude Fable 5.2",
+      "provider": "Anthropic",
+      "elo": 1059,
+      "ciPlus": 51,
+      "ciMinus": 56,
+      "cost": 2.81,
+      "minutes": 3.1
+    },
+    {
+      "rank": 2,
+      "model": "Claude Opus 5.5",
+      "provider": "Anthropic",
+      "elo": 1053,
+      "ciPlus": 37,
+      "ciMinus": 41,
+      "cost": 1.55,
+      "minutes": 2.7
+    },
+    {
+      "rank": 3,
+      "model": "Qwen 4 Max",
+      "provider": "Qwen",
+      "elo": 1011,
+      "ciPlus": 66,
+      "ciMinus": 71,
+      "cost": 0.28,
+      "minutes": 4.4
+    },
+    {
+      "rank": 4,
+      "model": "Gemini Carbon",
+      "provider": "Google",
+      "elo": 1000,
+      "ciPlus": 49,
+      "ciMinus": 54,
+      "cost": 0.75,
+      "minutes": 6.7
+    },
+    {
+      "rank": 5,
+      "model": "DeepSeek V4.1 Flash 1017",
+      "provider": "DeepSeek",
+      "elo": 998,
+      "ciPlus": 35,
+      "ciMinus": 41,
+      "cost": 0.07,
+      "minutes": 2
+    },
+    {
+      "rank": 6,
+      "model": "Kimi K3.1 Pro",
+      "provider": "Moonshot AI",
+      "elo": 994,
+      "ciPlus": 41,
+      "ciMinus": 46,
+      "cost": 0.47,
+      "minutes": 2.3
+    },
+    {
+      "rank": 7,
+      "model": "Muse Wonder",
+      "provider": "Meta",
+      "elo": 982,
+      "ciPlus": 39,
+      "ciMinus": 42,
+      "cost": 1.15,
+      "minutes": 2.4
+    },
+    {
+      "rank": 8,
+      "model": "MiMo-V2.6 Flash",
+      "provider": "Xiaomi",
+      "elo": 963,
+      "ciPlus": 36,
+      "ciMinus": 42,
+      "cost": 0.03,
+      "minutes": 2.7
+    },
+    {
+      "rank": 9,
+      "model": "Grok 4.7",
+      "provider": "xAI",
+      "elo": 934,
+      "ciPlus": 38,
+      "ciMinus": 44,
+      "cost": 0.75,
+      "minutes": 2.6
+    },
+    {
+      "rank": null,
+      "model": "GPT-6.2 Astra",
+      "provider": "OpenAI",
+      "elo": 1054,
+      "ciPlus": 86,
+      "ciMinus": 87,
+      "cost": 1.92,
+      "minutes": 2.2,
+      "provisional": true
+    },
+    {
+      "rank": null,
+      "model": "Gemini 4 Neon",
+      "provider": "Google",
+      "elo": 1026,
+      "ciPlus": 76,
+      "ciMinus": 79,
+      "cost": 0.82,
+      "minutes": 3.1,
+      "provisional": true
+    },
+    {
+      "rank": null,
+      "model": "GPT-6.2 Sol",
+      "provider": "OpenAI",
+      "elo": 975,
+      "ciPlus": 72,
+      "ciMinus": 80,
+      "cost": 0.3,
+      "minutes": 0.7,
+      "provisional": true
+    }
   ]
 }
