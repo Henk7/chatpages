@@ -444,7 +444,7 @@
       "currency": "EUR",
       "priceLabel": "Archivierter Preis – heute nicht für die exakte Variante verifiziert",
       "shippingText": "Nicht als aktuelles kaufbares Angebot verwenden. Idealo list entry and exact seller/10.24-kWh SKU not independently confirmed today; keep the saved price only in the archive.",
-      "checked": "2026-11-21",
+      "checked": "2026-11-22",
       "pv": 5.52,
       "storage": 10.24,
       "grid": "Ja · AC CHG im Growatt-Handbuch",
@@ -472,10 +472,10 @@
       ],
       "review": {
         "type": "open",
-        "productTitle": "Heute nicht verifiziert · Archiv",
-        "product": "Idealo list entry and exact seller/10.24-kWh SKU not independently confirmed today; keep the saved price only in the archive.",
-        "valueTitle": "Kein aktueller Preis",
-        "value": "Der gespeicherte Preis stammt aus dem Check vom 2026-11-17. Heute konnte die exakte Variante/Verfügbarkeit nicht bestätigt werden; kein aktueller Treffer und kein österreichischer Endpreis.",
+        "productTitle": "Archiviert · heute nicht als aktueller Treffer bestätigt",
+        "product": "Heute wurde der Idealo-Treffer erneut gesucht; die exakte Händlerseite/gewählte 10,24-kWh-Variante ließ sich nicht belastbar verifizieren. Archiviert und kein aktueller Kaufpreis.",
+        "valueTitle": "Kein aktueller AT-Endpreis",
+        "value": "Gespeicherter Vergleichspreis ist kein bestätigter Livepreis. Händler, Variante, Verfügbarkeit und Österreich-Endpreis bleiben offen.",
         "checked": "2026-11-22",
         "sources": [
           {
@@ -484,6 +484,10 @@
           },
           {
             "label": "Idealo",
+            "url": "https://www.idealo.at/preisvergleich/Liste/124172761/photovoltaikanlage-5kw.html"
+          },
+          {
+            "label": "Prüfstand 22.11.2026 · genaue Produktseite/Verfügbarkeit nicht erneut belegbar",
             "url": "https://www.idealo.at/preisvergleich/Liste/124172761/photovoltaikanlage-5kw.html"
           }
         ]
@@ -1340,7 +1344,7 @@
       "currency": "EUR",
       "priceLabel": "Archivierter Preis – heute nicht für die exakte Variante verifiziert",
       "shippingText": "Nicht als aktuelles kaufbares Angebot verwenden. Exact 5.06-kWp/11.52-kWh variant and current availability not confirmed today; separate from the live 5.98-kWp listing.",
-      "checked": "2026-11-21",
+      "checked": "2026-11-22",
       "pv": 5.06,
       "storage": 11.52,
       "grid": "Ja · zeitgesteuert; Leistung prüfen",
@@ -1376,10 +1380,10 @@
       "needsReview": true,
       "review": {
         "type": "open",
-        "productTitle": "Heute nicht verifiziert · Archiv",
-        "product": "Exact 5.06-kWp/11.52-kWh variant and current availability not confirmed today; separate from the live 5.98-kWp listing.",
-        "valueTitle": "Kein aktueller Preis",
-        "value": "Der gespeicherte Preis stammt aus dem Check vom 2026-11-20. Heute konnte die exakte Variante/Verfügbarkeit nicht bestätigt werden; kein aktueller Treffer und kein österreichischer Endpreis.",
+        "productTitle": "Archiviert · heute nicht als aktueller Treffer bestätigt",
+        "product": "Heute erneut direkt geprüft: Die genaue 5,06-kWp-/11,52-kWh-Variante ist beim Händler als derzeit nicht verfügbar („Bald wieder da“) ausgewiesen. Archiviert; nicht als aktuelles Angebot gezählt.",
+        "valueTitle": "Kein aktueller AT-Endpreis",
+        "value": "Kein aktuelles Angebot. 5.398,80 € ist nur der ältere gespeicherte Preis; Verfügbarkeit heute nicht gegeben.",
         "checked": "2026-11-22",
         "sources": [
           {
@@ -1388,6 +1392,10 @@
           },
           {
             "label": "Tepto-Angebot",
+            "url": "https://www.tepto.at/5-kWp-FoxEss-PV-Anlage-11x-460Wp-Fullblack-11-52Wh-Speicher-Notstromfaehig-Speicher-erweiterbar"
+          },
+          {
+            "label": "Prüfstand 22.11.2026 · genaue Produktseite/Verfügbarkeit nicht erneut belegbar",
             "url": "https://www.tepto.at/5-kWp-FoxEss-PV-Anlage-11x-460Wp-Fullblack-11-52Wh-Speicher-Notstromfaehig-Speicher-erweiterbar"
           }
         ]
@@ -1657,7 +1665,7 @@
       "currency": "EUR",
       "priceLabel": "Archivierter Preis – heute nicht für die exakte Variante verifiziert",
       "shippingText": "Nicht als aktuelles kaufbares Angebot verwenden. Current Austrian delivery, exact battery/variant price and full technical documents not confirmed.",
-      "checked": "2026-11-21",
+      "checked": "2026-11-22",
       "pv": 5.17,
       "storage": 9.6,
       "grid": "Ja · laut FoxESS-Handbuch im Peak-Shaving-Modus",
@@ -1692,10 +1700,10 @@
       ],
       "review": {
         "type": "open",
-        "productTitle": "Heute nicht verifiziert · Archiv",
-        "product": "Current Austrian delivery, exact battery/variant price and full technical documents not confirmed.",
-        "valueTitle": "Kein aktueller Preis",
-        "value": "Der gespeicherte Preis stammt aus dem Check vom 2026-11-20. Heute konnte die exakte Variante/Verfügbarkeit nicht bestätigt werden; kein aktueller Treffer und kein österreichischer Endpreis.",
+        "productTitle": "Archiviert · heute nicht als aktueller Treffer bestätigt",
+        "product": "Heute ließ sich die WOBA-Produktseite über die öffentliche Quelle nicht neu verifizieren. Lieferumfang, Variantenpreis und Verfügbarkeit bleiben offen; archiviert.",
+        "valueTitle": "Kein aktueller AT-Endpreis",
+        "value": "Der gespeicherte Auslandspreis ist nicht aktuell bestätigt und enthält keinen belegten Österreich-Endpreis.",
         "checked": "2026-11-22",
         "sources": [
           {
@@ -1709,6 +1717,10 @@
           {
             "label": "Versandbedingungen",
             "url": "https://www.woba-solar.de/policies/shipping-policy"
+          },
+          {
+            "label": "Prüfstand 22.11.2026 · genaue Produktseite/Verfügbarkeit nicht erneut belegbar",
+            "url": "https://www.woba-solar.de/products/pv-komplettset-5-kwp-11-trina-vertex-s-470-w-full-black-fox-ess-power-cube-5-0-kw-all-in-one-mit-speicher?variant=57721999982965"
           }
         ]
       },
@@ -1972,7 +1984,7 @@
       "currency": "EUR",
       "priceLabel": "Archivierter Preis – heute nicht für die exakte Variante verifiziert",
       "shippingText": "Nicht als aktuelles kaufbares Angebot verwenden. Current variant and Austrian tax/shipping not confirmed; German price is not an Austrian end price.",
-      "checked": "2026-11-21",
+      "checked": "2026-11-22",
       "pv": 5.335,
       "storage": 10,
       "grid": "Netzladen für ESA-Baureihe dokumentiert; konkretes Modell bestätigen",
@@ -2001,10 +2013,10 @@
       ],
       "review": {
         "type": "open",
-        "productTitle": "Heute nicht verifiziert · Archiv",
-        "product": "Current variant and Austrian tax/shipping not confirmed; German price is not an Austrian end price.",
-        "valueTitle": "Kein aktueller Preis",
-        "value": "Der gespeicherte Preis stammt aus dem Check vom 2026-11-20. Heute konnte die exakte Variante/Verfügbarkeit nicht bestätigt werden; kein aktueller Treffer und kein österreichischer Endpreis.",
+        "productTitle": "Archiviert · heute nicht als aktueller Treffer bestätigt",
+        "product": "Heute ließ sich die SolarOutlet-Seite über die öffentliche Quelle nicht neu verifizieren. Exakte Variante, Lieferumfang und Verfügbarkeit bleiben offen; archiviert.",
+        "valueTitle": "Kein aktueller AT-Endpreis",
+        "value": "Der gespeicherte Deutschlandpreis ist kein aktueller Preis und kein österreichischer Endpreis.",
         "checked": "2026-11-22",
         "sources": [
           {
@@ -2014,6 +2026,10 @@
           {
             "label": "GoodWe ESA: Handbuch Netzladen",
             "url": "https://en.goodwe.com/Ftp/EN/Downloads/User%20Manual/GW_ESA-3-10kW_User-Manual-EN.pdf"
+          },
+          {
+            "label": "Prüfstand 22.11.2026 · genaue Produktseite/Verfügbarkeit nicht erneut belegbar",
+            "url": "https://solaroutlet.de/collections/pv-komplettset-5-kwp/products/pv-komplettset-5-kwp-11-x-aiko-485-w-full-black-goodwe-esa-all-in-one-system-10-kwh-speicher"
           }
         ]
       },
@@ -2198,12 +2214,12 @@
       "url": "https://online-batterien.de/a/growatt-5kwp-pv-komplettanlage-mit-glas-glas-modulen-und-10-2kwh-speicher/9890224",
       "image": "",
       "imageAlt": "",
-      "price": 4153.34,
+      "price": 4962.14,
       "shipping": null,
       "currency": "EUR",
-      "priceLabel": "Archivierter Preis – heute nicht für die exakte Variante verifiziert",
-      "shippingText": "Nicht als aktuelles kaufbares Angebot verwenden. Module configuration and Austrian shipping/tax for this exact storage variant remain unverified.",
-      "checked": "2026-11-21",
+      "priceLabel": "Deutschlandpreis inkl. 19 % USt.; Österreich-Lieferung und AT-Endpreis offen · archiviert",
+      "shippingText": "Der deutsche Shop weist für Deutschland kostenlosen Versand aus. Versand nach Österreich und dortige Steuerbehandlung nicht bestätigt.",
+      "checked": "2026-11-22",
       "pv": 5.52,
       "storage": 10.24,
       "grid": "Ja · AC-Ladefunktion laut Growatt",
@@ -2219,7 +2235,9 @@
         "Messung / Notstrom": "Growatt Smart Meter TPM-E und Shine-WiLan-X2 laut Stückliste. EPS-Notstromfunktion laut Hersteller, fachgerechte Ausführung und Zusatzteile klären.",
         "Schutz / Ausbau / Garantie": "SPH-Gerätedaten und Temperaturgrenzen laut Hersteller prüfen; individuelle Garantiebedingungen und Erweiterbarkeit der ARK-Batterie offen.",
         "Lieferumfang / Montage": "Händler weist ausdrücklich darauf hin, dass keine Solarkabel enthalten sind. Dach-Unterkonstruktion und Installationsdienstleistung sind in der Stückliste nicht enthalten bzw. nicht bestätigt.",
-        "Preis / Versand": "4.153,34 € für dieses 10,24-kWh-Angebot mit 0 % deutscher USt.; laut Shop 8 auf Lager. Österreichische Umsatzsteuer und Palettenversand werden individuell berechnet und sind nicht bestätigt."
+        "Preis / Versand": "4.153,34 € für dieses 10,24-kWh-Angebot mit 0 % deutscher USt.; laut Shop 8 auf Lager. Österreichische Umsatzsteuer und Palettenversand werden individuell berechnet und sind nicht bestätigt.",
+        "Aktueller DE-Check": "22.11.2026: deutsche Produktseite zeigt 5.330 W Produktleistung, 10,2 kWh Speicher, 4.962,14 € mit 19 % MwSt. (4.154,63 € mit 0 % MwSt.), auf Lager, 2–5 Tage; Deutschlandversand kostenlos laut Seite. Modulmodell/-anzahl und Österreich-Zustellung offen.",
+        "Module / AT-Lieferung": "Modell und Stückzahl der Module auf der aktuellen Produktseite nicht eindeutig ausgewiesen; Österreich-Versand und AT-Steuer nicht bestätigt. Deshalb archiviert, nicht als qualifizierter AT-Treffer."
       },
       "sources": [
         {
@@ -2237,10 +2255,10 @@
       ],
       "review": {
         "type": "open",
-        "productTitle": "Heute nicht verifiziert · Archiv",
-        "product": "Module configuration and Austrian shipping/tax for this exact storage variant remain unverified.",
-        "valueTitle": "Kein aktueller Preis",
-        "value": "Der gespeicherte Preis stammt aus dem Check vom 2026-11-20. Heute konnte die exakte Variante/Verfügbarkeit nicht bestätigt werden; kein aktueller Treffer und kein österreichischer Endpreis.",
+        "productTitle": "Modulmodell und Österreich-Lieferung offen",
+        "product": "Die aktuelle deutsche Seite zeigt 5.330 W PV-Leistung und 10,2 kWh Speicher, aber kein eindeutig belegtes Modulmodell samt Anzahl. Deutscher Shop weist 19%-Preis, Lagerstatus und 2–5 Tage aus; Österreich-Versand und AT-Steuerbehandlung bleiben ungeklärt. Daher archiviert und nicht als aktuelles AT-Angebot gezählt.",
+        "valueTitle": "Nur Deutschlandpreis belegbar",
+        "value": "4.962,14 € laut DE-Shop mit 19 % USt.; kostenloser Versand wird für Deutschland angezeigt. Österreich-Versand und österreichische Steuerbehandlung sind nicht bestätigt; daher kein österreichischer Endpreis.",
         "checked": "2026-11-22",
         "sources": [
           {
@@ -2254,6 +2272,10 @@
           {
             "label": "Versandbedingungen",
             "url": "https://online-batterien.de/services/versand-zahlung/"
+          },
+          {
+            "label": "Online Batterien · aktuelle deutsche Produktseite, Preis-/Bestands- und Versandangaben; Modulmodell und AT-Versand offen",
+            "url": "https://online-batterien.de/a/growatt-5kwp-pv-komplettanlage-mit-glas-glas-modulen-und-10-2kwh-speicher/9890224"
           }
         ]
       },
@@ -2321,7 +2343,7 @@
       "currency": "EUR",
       "priceLabel": "Archivierter Preis – heute nicht für die exakte Variante verifiziert",
       "shippingText": "Nicht als aktuelles kaufbares Angebot verwenden. Marketplace listing’s exact selection, tax and delivery to Austria were not verifiable; Germany delivery is not an Austrian price.",
-      "checked": "2026-11-21",
+      "checked": "2026-11-22",
       "pv": 5.7,
       "storage": 10,
       "grid": "Ja · laut Huawei MAP0",
@@ -2356,10 +2378,10 @@
       ],
       "review": {
         "type": "open",
-        "productTitle": "Heute nicht verifiziert · Archiv",
-        "product": "Marketplace listing’s exact selection, tax and delivery to Austria were not verifiable; Germany delivery is not an Austrian price.",
-        "valueTitle": "Kein aktueller Preis",
-        "value": "Der gespeicherte Preis stammt aus dem Check vom 2026-11-20. Heute konnte die exakte Variante/Verfügbarkeit nicht bestätigt werden; kein aktueller Treffer und kein österreichischer Endpreis.",
+        "productTitle": "Archiviert · heute nicht als aktueller Treffer bestätigt",
+        "product": "Heute ließ sich die konkrete eBay-Variante nicht erneut verifizieren. Speicherstufe, Gesamtstückliste, Verfügbarkeit und Zustellung nach Österreich sind offen; archiviert.",
+        "valueTitle": "Kein aktueller AT-Endpreis",
+        "value": "Der gespeicherte eBay-Preis ist nicht als aktueller Preis oder AT-Endpreis verwendbar.",
         "checked": "2026-11-22",
         "sources": [
           {
@@ -2373,6 +2395,10 @@
           {
             "label": "Huawei S1",
             "url": "https://solar.huawei.com/en/products/luna2000-7-14-21-s1/specs/"
+          },
+          {
+            "label": "Prüfstand 22.11.2026 · genaue Produktseite/Verfügbarkeit nicht erneut belegbar",
+            "url": "https://www.ebay.de/itm/256979537686?var=558306443251"
           }
         ]
       },
@@ -3177,6 +3203,13 @@
       "price": 8086.95,
       "shipping": 0,
       "note": "AT-Preis inkl. 20 % USt.; Österreich-Spedition 0 € separat bestätigt."
+    },
+    {
+      "id": "onlinebatterien-growatt-552-1024",
+      "date": "2026-11-22",
+      "price": 4962.14,
+      "shipping": null,
+      "note": "Echter Stand des deutschen Shops mit 19 % USt.; Versandkostenfrei nur laut deutscher Angebotsseite. Österreich-Versand/AT-Steuer und genaue PV-Modulmodell-/Stückliste offen; archiviert, kein AT-Endpreis."
     }
   ],
   "research": {
@@ -3310,6 +3343,30 @@
       {
         "label": "Solarhandel24 · Anker X1 11 × AIKO 485 W/10 kWh direkt geprüft",
         "url": "https://solarhandel24.at/products/pv-komplettset-5-kwp-aiko-485w-black-frame-anker-x1-h5k-t-speicher?variant=56871912440194"
+      },
+      {
+        "label": "22.11.2026 · Lumix 5-kWp-Vergleich und exakte Solinteg-Produktseite geprüft: 10 × Trina TSM-470NEG9R.28 = 4,70 kWp; auch bei Speicherstufe 10,24 kWh unter der Mindestgrenze, deshalb ausgeschlossen. Vergleichspreise inkl. USt., Versand extra.",
+        "url": "https://lumix-pvshop.at/pages/pv-anlage-5-kwp-vergleich"
+      },
+      {
+        "label": "22.11.2026 · Online Batterien: deutsche Growatt-Seite zeigt 5.330 W/10,2 kWh und 4.962,14 € mit 19 % USt., innerdeutscher Versand laut Seite frei; exaktes Modulmodell/-anzahl und AT-Zustellung offen, daher archiviert.",
+        "url": "https://online-batterien.de/a/growatt-5kwp-pv-komplettanlage-mit-glas-glas-modulen-und-10-2kwh-speicher/9890224"
+      },
+      {
+        "label": "22.11.2026 · Amazon.de/Marketplace: mehrere Suchanfragen nach 5-kWp-/10-kWh-Hybridsets lieferten keine exakt belegte passende Variante; Produktzugriff in dieser Sitzung nicht vollständig möglich. Kein ungeprüftes Angebot aufgenommen.",
+        "url": "https://www.amazon.de/s?k=PV+Komplettset+5+kWp+10+kWh+Speicher"
+      },
+      {
+        "label": "22.11.2026 · eBay-Marktplatzkandidat 267286692155: widersprüchliche 5.160-W-Überschrift versus Verkäuferbeschreibung mit 10 × Jinko 475 W = 4,75 kWp; Speicheroptionen widersprechen sich, AT-Versand offen. Unter 5.000 Wp bzw. nicht belegbar, ausgeschlossen.",
+        "url": "https://www.ebay.de/itm/267286692155"
+      },
+      {
+        "label": "22.11.2026 · Kaufland-Marktplatz-Suche: aktuelle Trefferseiten zeigten Balkonsets mit deutlich weniger PV- und Speicherkapazität; kein belegtes 5.000-Wp-/ca.-10-kWh-Gesamtset ergänzt.",
+        "url": "https://www.kaufland.de/s/?search_value=pv%20komplettanlage%205kw%2010kwh"
+      },
+      {
+        "label": "22.11.2026 · Geizhals/Idealo und Fachhändlersuche erneut abgeglichen; Preisvergleichs- und Landingpage-Angaben allein gelten nicht als exakter Variantenpreis. Growatt/Idealo-Eintrag bleibt archiviert, bis Händlerseite, Stückliste, Bestand und AT-Versand belegbar sind.",
+        "url": "https://www.idealo.at/preisvergleich/Liste/124172761/photovoltaikanlage-5kw.html"
       }
     ]
   }
