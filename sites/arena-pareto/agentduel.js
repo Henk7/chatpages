@@ -186,7 +186,7 @@
   $("duel-zoom-out").addEventListener("click", () => zoom(1.38));
   $("duel-zoom-reset").addEventListener("click", () => { if (view) fit(); });
 
-  fetch("./agentduel-data.json?v=20261117")
+  fetch("./agentduel-data.json?v=20261122")
     .then((response) => { if (!response.ok) throw new Error("AgentDuel snapshot could not load."); return response.json(); })
     .then((data) => {
       records = data.records.filter((r) => Number.isFinite(r.elo) && Number.isFinite(r.cost) && r.cost > 0);
