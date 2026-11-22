@@ -1,11 +1,11 @@
 {
-  "checkedDate": "21.11.2026",
-  "checkedAt": "2026-11-21T03:12:14+01:00",
+  "checkedDate": "22.11.2026",
+  "checkedAt": "2026-11-22T01:37:47+01:00",
   "checked": true,
   "requiredCount": 10,
-  "confirmedCount": 10,
-  "shortfall": 0,
-  "statusNote": "Stand Samstag, 21. November 2026, 03:12:14 Uhr (Europe/Vienna): 10 von 10 separat recherchierten österreichischen 7-Sitzer-Angeboten direkt geprüft; 0 Plätze offen. Alle Gebrauchten liegen am Prüftag innerhalb von höchstens zwei Jahren seit EZ und höchstens 50.000 km. Inserate nennen 7 Sitze und ISOFIX; die Zahl ≥3 ist anhand der passenden Herstellerkonfiguration verlinkt und in den Hinweisen je Angebot dokumentiert. VIN/Sitzkonfiguration vor Kauf abgleichen; Preis- oder Zwischenverkauf vorbehalten.",
+  "confirmedCount": 9,
+  "shortfall": 1,
+  "statusNote": "Stand Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna): 9 von 10 separat recherchierten österreichischen 7-Sitzern direkt bestätigt; 1 Platz offen. Das zuvor geführte Ford-Grand-Tourneo-Inserat ist abgelaufen und wurde aus der aktiven Liste entfernt; ein direkt bestätigter Ersatz wurde heute nicht gefunden. Übrige Gebrauchte erfüllen sicher die Zwei-Jahres-Grenze sowie höchstens 50.000 km; konkrete Inserate nennen sieben Sitze und ISOFIX, der Herstellerbeleg belegt mindestens drei ISOFIX-Plätze.",
   "offers": [
     {
       "model": "Opel Combo 1.5 Diesel",
@@ -33,11 +33,11 @@
         "3× ISOFIX Reihe 2 laut passender Opel-Sitzkonfiguration; Inserat bestätigt das Fahrzeug mit 7 Sitzen und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
       "rank": 1,
       "rankLabel": "#1 · 7 Sitze"
     },
@@ -67,11 +67,11 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Inserat nennt ISOFIX und sieben Sitze",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
       "rank": 2,
       "rankLabel": "#2 · 7 Sitze"
     },
@@ -101,11 +101,11 @@
         "3× ISOFIX Reihe 2 laut Citroën-Produktblatt; Inserat nennt ISOFIX und drei Einzelsitze Reihe 2",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
       "rank": 3,
       "rankLabel": "#3 · 7 Sitze"
     },
@@ -135,11 +135,11 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Inserat nennt ISOFIX und sieben Sitze",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
       "rank": 4,
       "rankLabel": "#4 · 7 Sitze"
     },
@@ -169,11 +169,11 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Inserat nennt 7-Sitzer und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
       "rank": 5,
       "rankLabel": "#5 · 7 Sitze"
     },
@@ -203,11 +203,11 @@
         "3× ISOFIX in Reihe 2 laut VW MY26-Preisliste; Inserat bestätigt 7 Sitze und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
       "rank": 6,
       "rankLabel": "#6 · 7 Sitze"
     },
@@ -237,47 +237,13 @@
         "3× ISOFIX · drei Einzelsitze in Reihe 2 laut Fiat-Herstellerbeleg; Inserat bestätigt 7-Sitzer und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
       "rank": 7,
       "rankLabel": "#7 · 7 Sitze"
-    },
-    {
-      "model": "Ford Grand Tourneo Connect PHEV 150",
-      "trim": "Active · 7-Sitzer · Automatik",
-      "location": "Hollabrunn (Niederösterreich)",
-      "price": 35990,
-      "reg": "02/2026",
-      "km": 18500,
-      "fuel": "Plug-in-Hybrid Benzin/Elektro",
-      "hp": 150,
-      "gearbox": "Automatik",
-      "android": "Nicht im Inserat belegt",
-      "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/ford-tourneo-grand-tourneo-connect-phev-active-i-7-sitze-i-938624485/",
-      "source": "Willhaben · Autohaus Erwin Sauberer",
-      "proof": "https://www.ford.at/content/dam/guxeu/at/de_at/documents/price-list/cars/PL-new-ford_tourneo_connect.pdf",
-      "iso": "4× ISOFIX laut Ford-Preisliste (äußere Plätze Reihe 2 plus Reihe 3); Inserat bestätigt 7 Sitze und ISOFIX",
-      "note": "Inserat bestätigt 7 Sitze, Plug-in-Hybrid, Preis und EZ 02/2026 bei 18.500 km. Ford-Preisliste nennt ISOFIX an den äußeren Plätzen in Reihe 2 und Reihe 3; Ausstattung anhand FIN klären.",
-      "basis": "Grand Tourneo Connect Active PHEV",
-      "country": "AT",
-      "atPrice": 35990,
-      "seats": "7",
-      "cost": "Inserierter österreichischer Bar-Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten vor Kauf klären.",
-      "features": [
-        "7 Sitze",
-        "4× ISOFIX laut Ford-Preisliste (äußere Plätze Reihe 2 plus Reihe 3); Inserat bestätigt 7 Sitze und ISOFIX",
-        "Österreichisches Kaufangebot"
-      ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
-      "checked": true,
-      "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
-      "rank": 8,
-      "rankLabel": "#8 · 7 Sitze"
     },
     {
       "model": "Opel Combo XL 1.5 Diesel 130",
@@ -305,13 +271,13 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Angebot weist 7 Sitze aus",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
-      "rank": 9,
-      "rankLabel": "#9 · 7 Sitze"
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
+      "rank": 8,
+      "rankLabel": "#8 · 7 Sitze"
     },
     {
       "model": "VW Caddy 2.0 TDI Maxi Style",
@@ -339,13 +305,13 @@
         "ISOFIX-Befestigungen auf allen Sitzen laut VW-7-Sitzer-Angabe; Inserat bestätigt Maxi/7 Sitze und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "21.11.2026",
-      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checkedDate": "22.11.2026",
+      "checkedAt": "2026-11-22T01:37:47+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
-      "rank": 10,
-      "rankLabel": "#10 · 7 Sitze"
+      "change": "Separat recherchiertes österreichisches 7-Sitzer-Inserat am Sonntag, 22. November 2026, 01:37:47 Uhr (Europe/Vienna) direkt auf Aktivität/Preis, EZ/km, sieben Sitze und ISOFIX geprüft; Herstellerbeleg je Fahrzeug verlinkt.",
+      "rank": 9,
+      "rankLabel": "#9 · 7 Sitze"
     }
   ],
   "staleReferences": [
@@ -979,6 +945,42 @@
       "staleReferenceReason": "Am 15.11.2026: heutige getrennte 7-Sitzer-Recherche hat dieses alte Inserat nicht frisch bestätigt; Preis/Verfügbarkeit werden nicht als aktuell gezählt.",
       "lastCheckAttemptAt": "2026-11-15T01:21:26+01:00",
       "displayAsCandidate": false
+    },
+    {
+      "model": "Ford Grand Tourneo Connect PHEV 150",
+      "trim": "Active · 7-Sitzer · Automatik",
+      "location": "Hollabrunn (Niederösterreich)",
+      "price": 35990,
+      "reg": "02/2026",
+      "km": 18500,
+      "fuel": "Plug-in-Hybrid Benzin/Elektro",
+      "hp": 150,
+      "gearbox": "Automatik",
+      "android": "Nicht im Inserat belegt",
+      "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/ford-tourneo-grand-tourneo-connect-phev-active-i-7-sitze-i-938624485/",
+      "source": "Willhaben · Autohaus Erwin Sauberer",
+      "proof": "https://www.ford.at/content/dam/guxeu/at/de_at/documents/price-list/cars/PL-new-ford_tourneo_connect.pdf",
+      "iso": "4× ISOFIX laut Ford-Preisliste (äußere Plätze Reihe 2 plus Reihe 3); Inserat bestätigt 7 Sitze und ISOFIX",
+      "note": "Inserat bestätigt 7 Sitze, Plug-in-Hybrid, Preis und EZ 02/2026 bei 18.500 km. Ford-Preisliste nennt ISOFIX an den äußeren Plätzen in Reihe 2 und Reihe 3; Ausstattung anhand FIN klären.",
+      "basis": "Grand Tourneo Connect Active PHEV",
+      "country": "AT",
+      "atPrice": 35990,
+      "seats": "7",
+      "cost": "Inserierter österreichischer Bar-Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten vor Kauf klären.",
+      "features": [
+        "7 Sitze",
+        "4× ISOFIX laut Ford-Preisliste (äußere Plätze Reihe 2 plus Reihe 3); Inserat bestätigt 7 Sitze und ISOFIX",
+        "Österreichisches Kaufangebot"
+      ],
+      "checkedDate": "21.11.2026",
+      "checkedAt": "2026-11-21T03:12:14+01:00",
+      "checked": true,
+      "lowestMatchingTrim": false,
+      "change": "Inserat am 21.11.2026 direkt auf Angebot, Preis, Verfügbarkeit, Erstzulassung/km, Sitze und ISOFIX geprüft; Alter neu bewertet.",
+      "rank": 8,
+      "rankLabel": "#8 · 7 Sitze",
+      "lastCheckAttemptAt": "2026-11-22T01:37:47+01:00",
+      "staleReferenceReason": "Am 22.11.2026 direkt erneut geprüft: das konkrete willhaben-Inserat ist abgelaufen und leitet auf eine allgemeine Suchseite um. Preis, Verfügbarkeit und Sitz-/ISOFIX-Ausstattung daher nicht mehr als aktuell bestätigt."
     }
   ]
 }
