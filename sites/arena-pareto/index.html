@@ -1134,7 +1134,7 @@
         URL.revokeObjectURL(url);
       });
 
-      fetch("./data.json?v=20261119")
+      fetch("./data.json?v=20261122")
         .then((response) => { if (!response.ok) throw new Error("Could not load the model snapshot."); return response.json(); })
         .then((snapshot) => {
           allData = snapshot.records;
@@ -1159,9 +1159,9 @@
         });
     })();
   </script>
-  <script src="./agentduel.js?v=20261117b"></script>
-  <script src="./webdev.js?v=20261118b"></script>
-<script src="./coding.js?v=20261121a"></script>
+  <script src="./agentduel.js?v=20261122a"></script>
+  <script src="./webdev.js?v=20261122a"></script>
+<script src="./coding.js?v=20261122a"></script>
   <script>
     (() => {
       const charts = [
