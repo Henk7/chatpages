@@ -5,9 +5,9 @@ A mobile-friendly explorer of dated snapshots from the overall and coding-only A
 ## Agent Arena snapshot
 
 - Source: <https://arena.ai/leaderboard/agent/pareto>
-- Arena board date: November 18, 2026; captured November 19, 2026, 07:08 CET
+- Arena board date: November 18, 2026; captured November 22, 2026, 20:08 CET
 - Metric: Agent Arena Index, plotted against median task cost (50th percentile, last 14 days)
-- 68 ranked models; 64 with task costs are plotted; four without a cost remain in the table as N/A
+- 68 ranked models; 63 with task costs are plotted; five without a cost remain in the table as N/A
 - Sessions displayed by Arena: 3,093,488
 
 Arena has replaced the earlier net-improvement percentage with the Agent Arena Index; the two metrics are not interchangeable. `data.json` stores the complete ranked table, preliminary status and the source-published cost frontier. Frontier membership is preserved from Arena instead of inferred from values rounded on screen. GPT-6.2 Astra and Sol are included, and Sol is on the source frontier.
@@ -31,23 +31,24 @@ The explorer is an independent reproduction of public Arena and AgentDuel data a
 ## Coding-only Arena Agent snapshot
 
 - Source: <https://arena.ai/leaderboard/agent/code/pareto>
-- Arena board date: November 18, 2026; checked November 21, 2026
+- Arena board date: November 18, 2026; captured November 22, 2026, 20:08 CET
 - Metric: Coding Index against median task cost (50th percentile, last 14 days)
-- 68 ranked models; 61 with cost data are plotted and seven without costs remain in the model table as N/A
-- The chart uses Arena’s published 13-model source frontier. Preserve that membership rather than recomputing it from costs rounded to cents. Coding scores are on a separate scale from the overall Agent Arena Index and WebDev.
+- 68 ranked models; 60 with cost data are plotted and eight without costs remain in the model table as N/A
+- The chart uses Arena’s published 14-model source frontier. Preserve that membership rather than recomputing it from costs rounded to cents. Coding scores are on a separate scale from the overall Agent Arena Index and WebDev.
 - `coding-data.json` holds the full ranked snapshot. `coding.js` draws a separate interactive chart and searchable table for code-only agent tasks.
 - To refresh, capture the full coding leaderboard and Pareto view from one generation; retain missing and preliminary values, update the source frontier and capture date, then bump the cache versions in `index.html` and `coding.js`. This is a dated snapshot, not a live feed.
 
 ## AgentDuel comparison
 
 The separate AgentDuel chart uses the public <https://agentduel.com/leaderboard>
-snapshot generated November 17, 2026, 18:00 UTC. Its y-axis is AgentDuel's
+snapshot generated November 22, 2026, 09:20 UTC. Its y-axis is AgentDuel's
 head-to-head Elo, not Arena's net improvement. Cost and time are the source's
 battle-adjusted medians. The point estimates and 95% Elo intervals are copied
 as displayed by AgentDuel.
 
 - `agentduel-data.json` contains the dated model snapshot, including ranked
-  and provisional models. Qwen 4 Max is provisional in this snapshot.
+  and provisional models. GPT-6.2 Astra, Gemini 4 Neon, and GPT-6.2 Sol are
+  provisional; Qwen 4 Max is now ranked.
 - `agentduel.js` draws a second independent, pannable and zoomable SVG and
   builds its table. The frontier is calculated only from ranked models, just
   as on AgentDuel; provisional models are visible but do not set the line.
@@ -61,12 +62,12 @@ as displayed by AgentDuel.
 
 ## WebDev comparison
 
-The third chart is a separate Arena WebDev overall leaderboard snapshot from
-November 18, 2026, captured at 21:04 Central European Time. It compares Arena's
+The fourth chart is a separate Arena WebDev overall leaderboard snapshot from
+November 20, 2026, captured at 20:08 Central European Time. It compares Arena's
 WebDev ratings with the published median task costs; it does not put WebDev
 ratings on the Agent Arena or AgentDuel score scales.
 
-- `webdev-data.json` contains all 160 ranked models: 111 have published costs
+- `webdev-data.json` contains all 162 ranked models: 113 have published costs
   and are plotted, while the other 49 remain in the searchable table as N/A.
   Arena also lists one unranked AutoEval entry, which is not included.
 - The frontier membership is copied from Arena's own WebDev Pareto view and
