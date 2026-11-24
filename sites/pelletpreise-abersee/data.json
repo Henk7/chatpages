@@ -39,7 +39,8 @@
       "quality": "ENplus-/DINplus-Qualität; genaue Ausführung nach Angebotsrechner.",
       "source_url": "https://at.holzpellets.net/pelletspreise/Salzburg/Salzburg-Umgebung/pellets-Abersee",
       "contact_url": "https://www.rz-pellets.at/",
-      "contact": "Angebot für Abersee öffnen"
+      "contact": "Angebot für Abersee öffnen",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "lagerhaus-salzburg",
@@ -55,7 +56,8 @@
       "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.salzburger-lagerhaus.at/pelletsbestellung",
-      "contact": "Bestellung / PLZ prüfen"
+      "contact": "Bestellung / PLZ prüfen",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "leikermoser",
@@ -71,7 +73,8 @@
       "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.lm-energy.at/",
-      "contact": "Händlerseite öffnen"
+      "contact": "Händlerseite öffnen",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "mafi",
@@ -88,7 +91,8 @@
       "quality": "ENplus A1 laut Anbieter.",
       "source_url": "https://www.mafi-pellets.at/de",
       "contact_url": "https://www.mafi-pellets.at/de",
-      "contact": "Preis und Liefergebiet bestätigen"
+      "contact": "Preis und Liefergebiet bestätigen",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "primapellets",
@@ -101,7 +105,8 @@
       "quality": "Im konkreten Angebot bestätigen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.topo-tanktechnik.at/prima-pellets/",
-      "contact": "0800 808049"
+      "contact": "0800 808049",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "sigl",
@@ -117,7 +122,8 @@
       "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.sigl.at/",
-      "contact": "06212 30363"
+      "contact": "06212 30363",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "spg",
@@ -130,7 +136,8 @@
       "quality": "Im konkreten Angebot bestätigen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.spg-biopellets.at/de/service/anfrage.html",
-      "contact": "06452 20792"
+      "contact": "06452 20792",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "sprung",
@@ -143,7 +150,8 @@
       "quality": "Im konkreten Angebot bestätigen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.sprung-pellets.at/",
-      "contact": "06452 66466"
+      "contact": "06452 66466",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "wav",
@@ -159,7 +167,8 @@
       "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.waermeaustria.com/produkte/",
-      "contact": "0662 871131"
+      "contact": "0662 871131",
+      "checked_date": "2026-11-24"
     },
     {
       "id": "wildenhofer",
@@ -175,7 +184,8 @@
       "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
       "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
       "contact_url": "https://www.wildenhofer.at/139.html",
-      "contact": "05 9990 1310"
+      "contact": "05 9990 1310",
+      "checked_date": "2026-11-24"
     }
   ],
   "history": [
