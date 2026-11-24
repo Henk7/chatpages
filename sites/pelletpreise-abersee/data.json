@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "Pelletpreise für Abersee",
+    "location": "Abersee",
+    "postal_code": "5342",
+    "updated": "2026-11-24",
+    "basis": "Lose Holzpellets, Vergleichsmenge 6.000 kg, eine Lieferstelle, Preise inkl. Umsatzsteuer. Wo die Quelle eine Abfüll-/Einblaspauschale ausweist, ist diese im 6-t-Gesamtpreis enthalten.",
+    "methodology": "Nur konkret veröffentlichte Preise werden beziffert. Exakte PLZ-Angebote, regionale Salzburg-Preislisten und künftige Preisgültigkeit sind getrennt gekennzeichnet. Preise auf Anfrage werden nicht geschätzt und nicht in die Rangfolge gerechnet.",
+    "sources": [
+      {
+        "name": "Holzpellets.net · Abersee PLZ 5342",
+        "url": "https://at.holzpellets.net/pelletspreise/Salzburg/Salzburg-Umgebung/pellets-Abersee"
+      },
+      {
+        "name": "Arbeiterkammer Salzburg · Lose Pellets, Stand 10.11.2026",
+        "url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf"
+      },
+      {
+        "name": "Arbeiterkammer Salzburg · Hinweise zur wöchentlichen Erhebung",
+        "url": "https://sbg.arbeiterkammer.at/pellets"
+      },
+      {
+        "name": "mafi Pellets · Preise ab Jänner 2027",
+        "url": "https://www.mafi-pellets.at/de"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "id": "rz-abersee",
+      "supplier": "RZ Pellets GmbH",
+      "status": "postal",
+      "source_date": "2026-11-24",
+      "quote_per_t": 449.01,
+      "total_6t": 2749.03,
+      "effective_per_t": 458.17,
+      "fee_note": "Holzpellets.net weist für 6.000 kg insgesamt 2.749,03 € aus. Der angezeigte Tonnenpreis beträgt 449,01 €; die Differenz ist in der Gesamtsumme enthalten, ihre Aufschlüsselung wird auf der Seite nicht ausgewiesen.",
+      "delivery_note": "Konkretes Angebot für Abersee (PLZ 5342), 6 t, eine Lieferstelle. Standardlieferzeit laut Rechner bis zu 25 Werktage.",
+      "quality": "ENplus-/DINplus-Qualität; genaue Ausführung nach Angebotsrechner.",
+      "source_url": "https://at.holzpellets.net/pelletspreise/Salzburg/Salzburg-Umgebung/pellets-Abersee",
+      "contact_url": "https://www.rz-pellets.at/",
+      "contact": "Angebot für Abersee öffnen"
+    },
+    {
+      "id": "lagerhaus-salzburg",
+      "supplier": "Salzburger Lagerhaus",
+      "status": "regional",
+      "source_date": "2026-11-10",
+      "price_per_t": 451,
+      "fee": 50.5,
+      "total_6t": 2756.5,
+      "effective_per_t": 459.42,
+      "fee_note": "451,00 €/t + 50,50 € Abfüllpauschale; AK-Gesamtpreis für 6 t.",
+      "delivery_note": "AK-Salzburg-Preis; Salzburger Lagerhaus liefert Pellets nur innerhalb des Bundeslands Salzburg. Zustellung nach Abersee und Liefertermin vor Bestellung bestätigen.",
+      "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.salzburger-lagerhaus.at/pelletsbestellung",
+      "contact": "Bestellung / PLZ prüfen"
+    },
+    {
+      "id": "leikermoser",
+      "supplier": "Leikermoser Energiehandel GmbH",
+      "status": "regional",
+      "source_date": "2026-11-10",
+      "price_per_t": 458.8,
+      "fee": 49.5,
+      "total_6t": 2802.3,
+      "effective_per_t": 467.05,
+      "fee_note": "458,80 €/t + 49,50 € Abfüllpauschale; AK-Gesamtpreis für 6 t.",
+      "delivery_note": "Preis aus der AK-Salzburg-Erhebung; konkreten Lieferpreis und Liefergebiet für PLZ 5342 bestätigen.",
+      "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.leikermoser.at/",
+      "contact": "Händlerseite öffnen"
+    },
+    {
+      "id": "mafi",
+      "supplier": "mafi Pellets",
+      "status": "future",
+      "source_date": "2026-11-24",
+      "price_per_t": 453,
+      "fee": 60,
+      "total_6t": 2778,
+      "effective_per_t": 463,
+      "valid_from": "2027-01-01",
+      "fee_note": "453,00 €/t plus 60,00 € Einblasgebühr inkl. Energiekostenzuschlag; rechnerisch 2.778,00 € für 6 t.",
+      "delivery_note": "Veröffentlichter Preis gilt für Lieferungen ab Jänner 2027. Liefergebiet laut Anbieter Salzburg/Oberösterreich im Umkreis von ca. 70 km um Steindorf; Zufahrt und PLZ 5342 bestätigen.",
+      "quality": "ENplus A1 laut Anbieter.",
+      "source_url": "https://www.mafi-pellets.at/de",
+      "contact_url": "https://www.mafi-pellets.at/de",
+      "contact": "Preis und Liefergebiet bestätigen"
+    },
+    {
+      "id": "primapellets",
+      "supplier": "Primapellets · TOPO Tanktechnik GmbH",
+      "status": "quote",
+      "source_date": "2026-11-10",
+      "fee": 48,
+      "fee_note": "AK Salzburg nennt 48,00 € Abfüllpauschale; Tonnenpreis und 6-t-Gesamtpreis: auf Anfrage.",
+      "delivery_note": "Lieferung nach Abersee und Preis für 6 t direkt beim Anbieter anfragen.",
+      "quality": "Im konkreten Angebot bestätigen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.primapellets.at/",
+      "contact": "0800 808049"
+    },
+    {
+      "id": "sigl",
+      "supplier": "Sigl-Pellets · Siglmühle GmbH",
+      "status": "regional",
+      "source_date": "2026-11-10",
+      "price_per_t": 458,
+      "fee": 49,
+      "total_6t": 2797,
+      "effective_per_t": 466.17,
+      "fee_note": "458,00 €/t + 49,00 € Abfüllpauschale; AK-Gesamtpreis für 6 t.",
+      "delivery_note": "Preis aus der AK-Salzburg-Erhebung; konkreten Lieferpreis und Liefergebiet für PLZ 5342 bestätigen.",
+      "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.sigl-pellets.at/",
+      "contact": "06212 30363"
+    },
+    {
+      "id": "spg",
+      "supplier": "SPG Bio-Pellets GmbH",
+      "status": "quote",
+      "source_date": "2026-11-10",
+      "fee": 49,
+      "fee_note": "AK Salzburg nennt 49,00 € Abfüllpauschale; Tonnenpreis und 6-t-Gesamtpreis: auf Anfrage.",
+      "delivery_note": "Lieferung nach Abersee und Preis für 6 t direkt beim Anbieter anfragen.",
+      "quality": "Im konkreten Angebot bestätigen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.spg-pellets.at/",
+      "contact": "06452 20792"
+    },
+    {
+      "id": "sprung",
+      "supplier": "Sprung Pellets GmbH",
+      "status": "quote",
+      "source_date": "2026-11-10",
+      "fee": 51,
+      "fee_note": "AK Salzburg nennt 51,00 € Abfüllpauschale; Tonnenpreis und 6-t-Gesamtpreis: auf Anfrage.",
+      "delivery_note": "AK-Erhebung nennt 7–14 Tage Lieferzeit; Lieferbarkeit und Preis für PLZ 5342 aktuell bestätigen.",
+      "quality": "Im konkreten Angebot bestätigen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.sprung-pellets.at/",
+      "contact": "06452 66466"
+    },
+    {
+      "id": "wav",
+      "supplier": "WAV Wärme Austria Vertriebs GmbH",
+      "status": "regional",
+      "source_date": "2026-11-10",
+      "price_per_t": 459,
+      "fee": 49.5,
+      "total_6t": 2803.5,
+      "effective_per_t": 467.25,
+      "fee_note": "459,00 €/t + 49,50 € Abfüllpauschale; AK-Gesamtpreis für 6 t.",
+      "delivery_note": "Preis aus der AK-Salzburg-Erhebung; konkreten Lieferpreis und Liefergebiet für PLZ 5342 bestätigen.",
+      "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.waermeaustria.com/",
+      "contact": "0662 871131"
+    },
+    {
+      "id": "wildenhofer",
+      "supplier": "Wildenhofer KG",
+      "status": "regional",
+      "source_date": "2026-11-10",
+      "price_per_t": 454.26,
+      "fee": 52.56,
+      "total_6t": 2778.12,
+      "effective_per_t": 463.02,
+      "fee_note": "454,26 €/t + 52,56 € Abfüllpauschale; AK-Gesamtpreis für 6 t.",
+      "delivery_note": "Preis aus der AK-Salzburg-Erhebung; konkreten Lieferpreis und Liefergebiet für PLZ 5342 bestätigen.",
+      "quality": "Angaben des Händlers zur konkreten Pelletqualität prüfen.",
+      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
+      "contact_url": "https://www.wildenhofer.at/",
+      "contact": "05 9990 1310"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-11-10",
+      "id": "lagerhaus-salzburg",
+      "effective_per_t": 459.42,
+      "source": "AK Salzburg"
+    },
+    {
+      "date": "2026-11-10",
+      "id": "leikermoser",
+      "effective_per_t": 467.05,
+      "source": "AK Salzburg"
+    },
+    {
+      "date": "2026-11-10",
+      "id": "sigl",
+      "effective_per_t": 466.17,
+      "source": "AK Salzburg"
+    },
+    {
+      "date": "2026-11-10",
+      "id": "wav",
+      "effective_per_t": 467.25,
+      "source": "AK Salzburg"
+    },
+    {
+      "date": "2026-11-10",
+      "id": "wildenhofer",
+      "effective_per_t": 463.02,
+      "source": "AK Salzburg"
+    },
+    {
+      "date": "2026-11-24",
+      "id": "rz-abersee",
+      "effective_per_t": 458.17,
+      "source": "Holzpellets.net Abersee"
+    },
+    {
+      "date": "2026-11-24",
+      "id": "mafi",
+      "effective_per_t": 463,
+      "source": "mafi official; valid from 2027-01-01"
+    }
+  ]
+}
