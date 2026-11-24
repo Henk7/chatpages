@@ -85,8 +85,9 @@ function initBreakEven(data){
  const costs=document.getElementById("beCosts");
  const offers=data.offers.filter(o=>o.status==="postal"&&Number.isFinite(o.total_6t)).sort((a,b)=>a.total_6t-b.total_6t);
  if(offers.length){pelletInput.value=(offers[0].total_6t/6).toFixed(2);document.getElementById("bePelletHint").textContent="Automatisch aus "+offers[0].supplier+" übernommen: "+fmt.format(offers[0].total_6t)+" für 6 t. Preis anpassbar."}
- const nfmt=new Intl.NumberFormat("de-AT",{minimumFractionDigits:2,maximumFractionDigits:2});
+ const nfmt=new Intl.NumberFormat("de-AT",{maximumFractionDigits:2});
  const euro=n=>fmt.format(n);
+ const unitCost=n=>new Intl.NumberFormat("de-AT",{minimumFractionDigits:3,maximumFractionDigits:4}).format(n)+" €/kWh";
  function update(){
   const pp=Number(pelletInput.value),pk=Number(pelletEnergy.value),pe=Number(pelletEfficiency.value),wk=Number(woodType.value),wp=woodPrice.value.trim()===""?null:Number(woodPrice.value),we=Number(woodEfficiency.value);
   if(!Number.isFinite(pp)||pp<=0||!Number.isFinite(pk)||pk<=0||!Number.isFinite(wk)||wk<=0||!Number.isFinite(pe)||pe<=0||pe>100||!Number.isFinite(we)||we<=0||we>100){limit.textContent="Eingaben prüfen";status.textContent="Bitte Preis und Heizwerte größer als 0 sowie Wirkungsgrade zwischen 1 und 100 % eingeben.";costs.textContent="";return}
