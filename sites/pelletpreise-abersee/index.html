@@ -47,7 +47,7 @@ function renderChart(list){
  const rows=known.map(o=>{
    const pos=Math.max(0,Math.min(100,(o.effective_per_t-450)/25*100));
    const kind=o.status==="postal"?"exact":o.status==="future"?"future":"regional";
-   const detail=o.status==="future"?"ab 01.01.2027":o.status==="postal"?"PLZ 5342 · "+dateFmt(o.source_date):"AK · "+dateFmt(o.source_date);
+   const detail=o.status==="future"?"ab Jänner 2027":o.status==="postal"?"PLZ 5342 · "+dateFmt(o.source_date):"AK · "+dateFmt(o.source_date);
    return '<div class="plot-row"><div class="plot-name">'+esc(o.supplier)+'<small>'+detail+'</small></div><div class="track"><i class="marker '+kind+'" style="left:'+pos.toFixed(2)+'%" title="'+esc(fmt.format(o.effective_per_t))+'/t"></i></div><div class="plot-price">'+esc(fmt.format(o.effective_per_t))+'</div></div>';
  }).join("");
  document.getElementById("chart").innerHTML=axis+rows;
@@ -73,16 +73,18 @@ function render(data){
  const winner=data.offers.find(o=>o.status==="postal");
  if(winner){document.getElementById("winnerSupplier").textContent=winner.supplier;document.getElementById("winnerTotal").textContent=fmt.format(winner.total_6t);document.getElementById("winnerPer").textContent=fmt.format(winner.effective_per_t)+"/t effektiv bei 6 t";document.getElementById("winnerNote").textContent=winner.delivery_note;document.getElementById("winnerLink").href=winner.source_url}
  renderChart(data.offers);
+ document.getElementById("sources").innerHTML=data.meta.sources.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.name)+' ↗</a>').join("");
  const all=orderOffers(data.offers);
  let rank=0;
  document.getElementById("offers").innerHTML=all.map(o=>{const canRank=Number.isFinite(o.total_6t)&&o.status!=="future";if(canRank)rank++;return renderOffer(o,canRank?rank:null)}).join("");
- const prices=data.history.filter(x=>Number.isFinite(x.effective_per_t));
- const uniqueDates=[...new Set(prices.map(x=>x.date))];
+ const groups=new Map();
+ data.history.filter(x=>Number.isFinite(x.effective_per_t)).forEach(x=>{if(!groups.has(x.id))groups.set(x.id,[]);groups.get(x.id).push(x)});
+ const comparable=[...groups.entries()].filter(([,points])=>new Set(points.map(p=>p.date)).size>=2);
  const histMsg=document.getElementById("historyMessage");
  const hist=document.getElementById("history");
- if(uniqueDates.length<2){histMsg.textContent="Ein echter Wochenverlauf entsteht, sobald bei einer späteren Prüfung mindestens ein weiterer belegter Preispunkt vorliegt. Ältere Werte wurden nicht ergänzt.";hist.innerHTML="";return}
- histMsg.textContent="Nur tatsächlich geprüfte Preise werden als Verlaufspunkt gespeichert. Die folgenden Werte haben je Quelle ihr eigenes Prüfdatum.";
- const sorted=prices.slice().sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
+ if(!comparable.length){histMsg.textContent="Ein echter Wochenverlauf je Anbieter erscheint, sobald spätere Prüfungen einen zweiten belegten Preispunkt liefern. Die aktuellen Quellen haben unterschiedliche Stichtage; daraus wird keine gemeinsame Trendlinie vorgetäuscht.";hist.innerHTML="";return}
+ histMsg.textContent="Verlauf je Anbieter auf Basis tatsächlich geprüfter Preise; unveränderte Preise werden ebenfalls als neue Prüfung gespeichert.";
+ const sorted=comparable.flatMap(([,points])=>points).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
  hist.innerHTML='<table class="history-table"><thead><tr><th>Prüfdatum</th><th>Anbieter</th><th>€/t bei 6 t</th></tr></thead><tbody>'+sorted.map(x=>{const o=data.offers.find(y=>y.id===x.id);return "<tr><td>"+esc(dateFmt(x.date))+"</td><td>"+esc(o?o.supplier:x.id)+"</td><td>"+esc(fmt.format(x.effective_per_t))+"</td></tr>"}).join("")+"</tbody></table>";
 }
 async function init(){try{const r=await fetch("data.json",{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);render(await r.json())}catch(e){document.getElementById("summaryCount").textContent="Preisdaten nicht verfügbar";document.getElementById("offers").innerHTML='<div class="warning">Die Preisdaten konnten nicht geladen werden. Bitte später erneut laden.</div>';console.error(e)}}
