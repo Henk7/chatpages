@@ -1,26 +1,26 @@
 {
   "source": "Arena Agent Coding Index",
   "sourceUrl": "https://arena.ai/leaderboard/agent/code/pareto",
-  "boardDate": "November 18, 2026",
-  "capturedAt": "November 22, 2026, 20:08 CET",
-  "sessions": 1031799,
-  "rankedModels": 68,
-  "withoutCost": 8,
+  "boardDate": "November 22, 2026",
+  "capturedAt": "November 24, 2026",
+  "sessions": 1064228,
+  "rankedModels": 69,
+  "withoutCost": 9,
   "metric": "Coding Index; median cost per task (P50, last 14 days)",
   "currency": "USD",
   "sourceFrontier": [
     "Claude Fable 5.2 (Max)",
     "Claude Opus 5.5 (Max)",
-    "GPT-6.2 Astra (Max)",
-    "Gemini 4 Neon (High)",
+    "Claude Sonnet 5.5 (Max)",
+    "Gemini 4 Neon (xHigh)",
     "Gemini 4 Carbon (High)",
-    "GPT-6.2 Sol (Max)",
     "GPT-6.1 Terra (Max)",
     "GPT-6.1 Sol (Medium)",
     "Hy4",
     "GPT-6.1 Terra (Medium)",
     "DeepSeek-V4.1-Flash-20261017 (Max)",
     "GPT-6 Luna (Max)",
+    "MiMo-V2.6-Flash",
     "Muse Ember (Max)",
     "GPT-6 Luna (Low)"
   ],
@@ -28,106 +28,106 @@
     {
       "rank": 1,
       "model": "Claude Fable 5.2 (Max)",
-      "score": 1489,
-      "cost": 19.15
+      "score": 1487,
+      "cost": 20.84
     },
     {
       "rank": 2,
       "model": "Claude Opus 5.5 (Max)",
-      "score": 1373,
-      "cost": 9.95
+      "score": 1380,
+      "cost": 9.23
     },
     {
       "rank": 3,
-      "model": "GPT-6.2 Astra (Max)",
-      "score": 1338,
-      "cost": 5.49
+      "model": "Claude Sonnet 5.5 (Max)",
+      "score": 1329,
+      "cost": 8.64
     },
     {
       "rank": 4,
-      "model": "Claude Sonnet 5.5 (Max)",
-      "score": 1329,
-      "cost": 6.76
-    },
-    {
-      "rank": 5,
-      "model": "Gemini 4 Neon (High)",
-      "score": 1325,
-      "cost": 4.58,
+      "model": "Gemini 4 Neon (xHigh)",
+      "score": 1327,
+      "cost": 4.55,
       "preliminary": true
     },
     {
-      "rank": 6,
+      "rank": 5,
       "model": "Claude Opus 5.5 (High)",
       "score": 1315,
-      "cost": 4.81
+      "cost": 4.65
+    },
+    {
+      "rank": 6,
+      "model": "GPT-6.2 Astra (Max)",
+      "score": 1313,
+      "cost": 5.53
     },
     {
       "rank": 7,
       "model": "Gemini 4 Carbon (High)",
       "score": 1291,
-      "cost": 2.6
+      "cost": 2.52
     },
     {
       "rank": 8,
       "model": "GPT-6 Astra (Max)",
-      "score": 1288,
-      "cost": 12.2
+      "score": 1279,
+      "cost": 13.2
     },
     {
       "rank": 9,
-      "model": "GPT-6.2 Sol (Max)",
-      "score": 1288,
-      "cost": 1.72
+      "model": "GPT-6.1 Terra (Max)",
+      "score": 1275,
+      "cost": 1.57
     },
     {
       "rank": 10,
-      "model": "GPT-6.1 Terra (Max)",
-      "score": 1276,
-      "cost": 1.56
+      "model": "Claude Fable 5.1 (Max)",
+      "score": 1263,
+      "cost": 16.4
     },
     {
       "rank": 11,
-      "model": "Claude Fable 5.1 (Max)",
-      "score": 1273,
-      "cost": 17.3
+      "model": "GPT-6.2 Sol (Max)",
+      "score": 1258,
+      "cost": 1.73
     },
     {
       "rank": 12,
-      "model": "GPT-6.1 Sol (Max)",
-      "score": 1246,
-      "cost": 2.15
+      "model": "Claude Sonnet 5.5 (High)",
+      "score": 1244,
+      "cost": 1.76
     },
     {
       "rank": 13,
-      "model": "Claude Sonnet 5.5 (High)",
-      "score": 1238,
-      "cost": 2.09
+      "model": "GPT-6.1 Sol (Max)",
+      "score": 1241,
+      "cost": 2.13
     },
     {
       "rank": 14,
       "model": "GPT-6.1 Sol (Medium)",
-      "score": 1230,
-      "cost": 0.78
+      "score": 1232,
+      "cost": 0.75
     },
     {
       "rank": 15,
-      "model": "Gemini 4 Hydrogen (High)",
+      "model": "Gemini 4 Hydrogen (xHigh)",
       "score": 1229,
-      "cost": 2.64,
+      "cost": 2.49,
       "preliminary": true
     },
     {
       "rank": 16,
       "model": "GPT-6 Sol (Max)",
-      "score": 1220,
-      "cost": 3.98
+      "score": 1221,
+      "cost": 4.51
     },
     {
       "rank": 17,
       "model": "Gemini 4 Argon (High)",
       "score": 1213,
-      "cost": 1.5
+      "cost": 1.7
     },
     {
       "rank": 18,
@@ -139,33 +139,33 @@
       "rank": 19,
       "model": "Hy4",
       "score": 1203,
-      "cost": 0.76,
+      "cost": 0.58,
       "preliminary": true
     },
     {
       "rank": 20,
-      "model": "Qwen4-Max (xHigh)",
-      "score": 1192,
-      "cost": 3.53,
-      "preliminary": true
+      "model": "Claude Fable 5 (High)",
+      "score": 1195,
+      "cost": 9.12
     },
     {
       "rank": 21,
-      "model": "GPT-6.1 Terra (Medium)",
+      "model": "Qwen4-Max (xHigh)",
       "score": 1192,
-      "cost": 0.22
+      "cost": null,
+      "preliminary": true
     },
     {
       "rank": 22,
-      "model": "Claude Fable 5 (High)",
-      "score": 1188,
-      "cost": 9.07
+      "model": "GPT-6.1 Terra (Medium)",
+      "score": 1190,
+      "cost": 0.22
     },
     {
       "rank": 23,
       "model": "Claude Opus 5 (Max)",
-      "score": 1179,
-      "cost": 10.85
+      "score": 1175,
+      "cost": 10.16
     },
     {
       "rank": 24,
@@ -177,265 +177,271 @@
       "rank": 25,
       "model": "GPT-5.6 Sol (xHigh)",
       "score": 1155,
-      "cost": 4
+      "cost": 3.79
     },
     {
       "rank": 26,
-      "model": "Inkling 2 Small",
-      "score": 1149,
-      "cost": 0.4,
-      "preliminary": true
+      "model": "Claude Haiku 5.5 (High)",
+      "score": 1147,
+      "cost": 0.44
     },
     {
       "rank": 27,
-      "model": "Claude Haiku 5.5 (High)",
-      "score": 1146,
-      "cost": 0.44
+      "model": "Inkling 2 Small",
+      "score": 1142,
+      "cost": 0.36,
+      "preliminary": true
     },
     {
       "rank": 28,
       "model": "Grok 4.7 (xHigh)",
-      "score": 1136,
-      "cost": 7.47
+      "score": 1133,
+      "cost": 5.68
     },
     {
       "rank": 29,
-      "model": "DeepSeek-V4.1-Flash-20261017 (Max)",
-      "score": 1128,
-      "cost": 0.2
-    },
-    {
-      "rank": 30,
       "model": "Muse Wonder (Max)",
-      "score": 1125,
+      "score": 1131,
       "cost": 2.4
     },
     {
+      "rank": 30,
+      "model": "DeepSeek-V4.1-Flash-20261017 (Max)",
+      "score": 1127,
+      "cost": 0.2
+    },
+    {
       "rank": 31,
-      "model": "GPT-6 Luna (Max)",
-      "score": 1125,
-      "cost": 0.12
+      "model": "Muse Spark 1.3 (Max)",
+      "score": 1123,
+      "cost": 0.98
     },
     {
       "rank": 32,
-      "model": "Claude Sonnet 5 (High)",
-      "score": 1124,
-      "cost": 2.17
+      "model": "GPT-6 Luna (Max)",
+      "score": 1122,
+      "cost": 0.12
     },
     {
       "rank": 33,
-      "model": "MiMo-V2.6-Pro",
-      "score": 1124,
-      "cost": 0.23
+      "model": "GLM-5.2 (Max)",
+      "score": 1119,
+      "cost": 2.43
     },
     {
       "rank": 34,
-      "model": "Muse Spark 1.3 (Max)",
-      "score": 1120,
-      "cost": 0.96
+      "model": "MiMo-V2.6-Pro",
+      "score": 1118,
+      "cost": 0.22
     },
     {
       "rank": 35,
-      "model": "GLM-5.2 (Max)",
-      "score": 1115,
-      "cost": 2.49
+      "model": "Claude Sonnet 5 (High)",
+      "score": 1117,
+      "cost": 2.17
     },
     {
       "rank": 36,
       "model": "Hy4 preview",
-      "score": 1115,
-      "cost": 0.78
+      "score": 1113,
+      "cost": 0.7
     },
     {
       "rank": 37,
-      "model": "Muse Ember (Max)",
-      "score": 1111,
-      "cost": 0.02
+      "model": "Grok 4.6 (xHigh)",
+      "score": 1105,
+      "cost": 4.02
     },
     {
       "rank": 38,
       "model": "GLM-5.3 (Max)",
-      "score": 1101,
-      "cost": 1.86
+      "score": 1104,
+      "cost": 1.44
     },
     {
       "rank": 39,
-      "model": "Grok 4.6 (xHigh)",
-      "score": 1099,
-      "cost": 4.22
+      "model": "MiMo-V2.6-Flash",
+      "score": 1100,
+      "cost": 0.11
     },
     {
       "rank": 40,
-      "model": "MiMo-V2.6-Flash",
-      "score": 1099,
-      "cost": 0.12
+      "model": "Qwen3.8-Max",
+      "score": 1095,
+      "cost": 2.86
     },
     {
       "rank": 41,
-      "model": "Qwen3.8-Max",
-      "score": 1095,
-      "cost": 2.87
+      "model": "Muse Ember (Max)",
+      "score": 1093,
+      "cost": 0.02
     },
     {
       "rank": 42,
-      "model": "MiniMax-M3.1-Flash",
-      "score": 1093,
-      "cost": 0.38
+      "model": "Kimi K3 (Max)",
+      "score": 1088,
+      "cost": 1.91
     },
     {
       "rank": 43,
-      "model": "Kimi K3 (Max)",
-      "score": 1090,
-      "cost": 1.85
+      "model": "MiniMax-M3.1-Flash",
+      "score": 1087,
+      "cost": 0.37
     },
     {
       "rank": 44,
       "model": "GPT-6 Luna (Medium)",
-      "score": 1082,
+      "score": 1083,
       "cost": 0.03
     },
     {
       "rank": 45,
       "model": "Gemini 3.8 Flash (High)",
-      "score": 1080,
-      "cost": 1.33
+      "score": 1083,
+      "cost": 1.34
     },
     {
       "rank": 46,
       "model": "GPT-5.6 Terra (xHigh)",
-      "score": 1076,
-      "cost": 1.58
+      "score": 1074,
+      "cost": 1.23
     },
     {
       "rank": 47,
       "model": "Qwen3.8-Flash-Next",
-      "score": 1064,
-      "cost": 0.39
+      "score": 1068,
+      "cost": 0.38
     },
     {
       "rank": 48,
-      "model": "Step 5 Preview",
-      "score": 1063,
-      "cost": 2.06
+      "model": "GLM-5.3-Flash",
+      "score": 1062,
+      "cost": 0.24
     },
     {
       "rank": 49,
-      "model": "GLM-5.3-Flash",
+      "model": "Step 5 Preview",
       "score": 1061,
-      "cost": 0.25
+      "cost": 2.14
     },
     {
       "rank": 50,
       "model": "Qwen3.8-27B",
-      "score": 1041,
-      "cost": 0.85
+      "score": 1046,
+      "cost": 0.82
     },
     {
       "rank": 51,
-      "model": "GPT-6 Luna (Low)",
-      "score": 1038,
-      "cost": 0.01
-    },
-    {
-      "rank": 52,
-      "model": "Gemini 3.7 Flash (High)",
-      "score": 1032,
+      "model": "Mistral Large 4",
+      "score": 1042,
       "cost": 0.96
     },
     {
+      "rank": 52,
+      "model": "GPT-6 Luna (Low)",
+      "score": 1034,
+      "cost": 0.01
+    },
+    {
       "rank": 53,
-      "model": "Mistral Large 4",
-      "score": 1028,
-      "cost": 0.63
+      "model": "Gemini 3.7 Flash (High)",
+      "score": 1031,
+      "cost": 1
     },
     {
       "rank": 54,
-      "model": "Hy3",
-      "score": 1016,
-      "cost": 0.1
+      "model": "Inkling 2 Mini",
+      "score": 1020,
+      "cost": 0.25
     },
     {
       "rank": 55,
-      "model": "Beam 1.0 501B A23B",
-      "score": 1010,
-      "cost": null
+      "model": "Hy3",
+      "score": 1015,
+      "cost": 0.1
     },
     {
       "rank": 56,
       "model": "Qwen3.7-Max",
-      "score": 991,
-      "cost": 0.55
+      "score": 992,
+      "cost": 0.53
     },
     {
       "rank": 57,
-      "model": "Gemini 3.1 Pro Preview",
-      "score": 986,
-      "cost": 1.34
+      "model": "MiniMax-M3",
+      "score": 991,
+      "cost": 1.43
     },
     {
       "rank": 58,
-      "model": "MiniMax-M3",
-      "score": 976,
-      "cost": 1.29
+      "model": "Beam 1.0 501B A23B",
+      "score": 987,
+      "cost": null
     },
     {
       "rank": 59,
-      "model": "Spark-X2.6",
-      "score": 974,
-      "cost": 0.16
+      "model": "Gemini 3.1 Pro Preview",
+      "score": 984,
+      "cost": 1.37
     },
     {
       "rank": 60,
-      "model": "Muse Spark 1.2 (xHigh)",
-      "score": 972,
-      "cost": 0.96
+      "model": "Spark-X2.6",
+      "score": 977,
+      "cost": 0.15
     },
     {
       "rank": 61,
-      "model": "Muse Spark 1.1",
-      "score": 959,
-      "cost": null
+      "model": "Muse Spark 1.2 (xHigh)",
+      "score": 976,
+      "cost": 0.94
     },
     {
       "rank": 62,
       "model": "Qwen3.7-Plus",
-      "score": 955,
-      "cost": 0.29
+      "score": 962,
+      "cost": 0.26
     },
     {
       "rank": 63,
-      "model": "Mistral Medium 3.5",
-      "score": 917,
+      "model": "Muse Spark 1.1",
+      "score": 958,
       "cost": null
     },
     {
       "rank": 64,
-      "model": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)",
-      "score": 911,
+      "model": "Mistral Medium 3.5",
+      "score": 918,
       "cost": null
     },
     {
       "rank": 65,
-      "model": "Inkling",
-      "score": 872,
+      "model": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)",
+      "score": 910,
       "cost": null
     },
     {
       "rank": 66,
-      "model": "Nemotron 3 Ultra",
-      "score": 861,
-      "cost": 0.42
+      "model": "Inkling",
+      "score": 874,
+      "cost": null
     },
     {
       "rank": 67,
+      "model": "Nemotron 3 Ultra",
+      "score": 862,
+      "cost": 0.81
+    },
+    {
+      "rank": 68,
       "model": "Inkling-Small",
       "score": 839,
       "cost": null
     },
     {
-      "rank": 68,
+      "rank": 69,
       "model": "Solar Pro 4",
-      "score": 783,
+      "score": 777,
       "cost": 0.06
     }
   ]

@@ -148,7 +148,7 @@
   $("coding-zoom-in").addEventListener("click",()=>zoom(.72));$("coding-zoom-out").addEventListener("click",()=>zoom(1.38));$("coding-zoom-reset").addEventListener("click",()=>{if(view)fit();});
   $("coding-search").addEventListener("input",renderRows);$("coding-sort").addEventListener("change",renderRows);
   $("coding-frontier-toggle").addEventListener("click",e=>{tableFrontier=!tableFrontier;e.currentTarget.setAttribute("aria-pressed",String(tableFrontier));renderRows();});
-  fetch("./coding-data.json?v=20261122").then(r=>{if(!r.ok)throw new Error("Coding Index snapshot could not load.");return r.json();}).then(snapshot=>{
+  fetch("./coding-data.json?v=20261124").then(r=>{if(!r.ok)throw new Error("Coding Index snapshot could not load.");return r.json();}).then(snapshot=>{
     data=snapshot.records;plotted=data.filter(r=>Number.isFinite(r.cost)&&r.cost>0&&Number.isFinite(r.score));
     frontier=snapshot.sourceFrontier.map(name=>plotted.find(r=>r.model===name)).filter(Boolean);
     if(frontier.length!==snapshot.sourceFrontier.length)throw new Error("The source frontier could not be matched to the snapshot.");

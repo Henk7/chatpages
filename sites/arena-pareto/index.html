@@ -252,7 +252,7 @@
       <div class="snapshot-strip" id="snapshot-strip" aria-label="Snapshot details">
         <span><i class="snapshot-dot" aria-hidden="true"></i><strong>Loading snapshot…</strong></span>
       </div>
-      <p class="availability-note"><strong>Model availability · Nov 19:</strong> GPT-6.2 Astra and GPT-6.2 Sol are included in the Agent Arena chart below. <a href="#webdev">See the separate WebDev chart ↓</a></p>
+      <p class="availability-note"><strong>Snapshot update · Nov 24:</strong> Inkling 2 Mini appears in the overall, coding-only and WebDev Arena snapshots. The Coding Index remains a separate benchmark from WebDev.</p>
       <div class="hero-actions">
         <a class="button primary source-link" href="https://arena.ai/leaderboard/agent/pareto" target="_blank" rel="noopener noreferrer">Open Arena source ↗</a>
         <button id="download-csv" class="button" type="button">Download CSV ↓</button>
@@ -298,7 +298,7 @@
       <div class="card-head">
         <div>
           <h2 id="coding-chart-title">Arena Agent · Coding Index Pareto</h2>
-          <p>Web-app ratings vs. median cost per task · all models with cost data stay visible</p>
+          <p>Coding Index ratings vs. median task cost · all cost-bearing models stay visible</p>
           <p id="coding-snapshot">Loading coding-only Arena snapshot…</p>
         </div>
         <div class="legend" aria-label="Coding-only Arena chart legend">
@@ -310,7 +310,7 @@
         <div class="developer-highlight-head"><span class="developer-highlight-title">Highlight by developer</span><span id="coding-highlight-status" class="developer-highlight-status" role="status" aria-live="polite">Loading developers…</span></div>
         <div id="coding-developer-chips" class="developer-chips" role="group" aria-label="Highlight Coding Index models by developer"></div>
       </div>
-      <div class="coding-source"><a class="button" href="https://arena.ai/leaderboard/code/coding" target="_blank" rel="noopener noreferrer">Open Arena Coding Index source ↗</a></div>
+      <div class="coding-source"><a class="button" href="https://arena.ai/leaderboard/agent/code/pareto" target="_blank" rel="noopener noreferrer">Open Arena Coding Index source ↗</a></div>
       <div class="chart-wrap coding-chart-wrap">
         <div class="chart-tools" aria-label="Coding Index chart controls">
           <button class="icon-button" id="coding-zoom-in" type="button" aria-label="Zoom in on Coding Index chart" title="Zoom in">+</button>
@@ -323,8 +323,8 @@
       <div class="chart-help"><span class="hint"><span class="key">Pinch</span> zoom · drag to move around the chart</span><span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the whole chart</span></div>
       <div id="coding-tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model label to see its exact values.</div>
       <div class="coding-details">
-        <p>This separate chart uses Arena Agent’s code-only Coding Index, not the overall Agent Arena Index or WebDev benchmark. It plots all 60 models with published median task costs; the green line follows Arena’s 14-model source frontier. Eight of the 68 ranked models have insufficient cost data and remain in the searchable table as N/A. Arena rounds costs to cents, so the published frontier membership is preserved instead of being recalculated from rounded values. Scores use the Coding Index scale and should not be compared numerically with the overall Agent Arena Index or WebDev ratings. <a href="https://arena.ai/leaderboard/agent/code/pareto" target="_blank" rel="noopener noreferrer">View Arena’s source ↗</a></p>
-        <details class="coding-list"><summary>Browse all 68 coding models</summary>
+        <p>This separate chart uses Arena Agent’s code-only Coding Index, not the overall Agent Arena Index or WebDev benchmark. It plots all 60 of 69 ranked models with published median task costs; the green line follows Arena’s 14-model source frontier. Nine ranked models have insufficient cost data and remain in the searchable table as N/A. Arena rounds costs to cents, so the published frontier membership is preserved instead of being recalculated from rounded values. Scores use the Coding Index scale and should not be compared numerically with the overall Agent Arena Index or WebDev ratings. <a href="https://arena.ai/leaderboard/agent/code/pareto" target="_blank" rel="noopener noreferrer">View Arena’s source ↗</a></p>
+        <details class="coding-list"><summary>Browse all 69 coding models</summary>
         <div class="table-controls">
           <div class="control-group">
             <label class="search-box"><span class="sr-only">Search Coding Index models</span><input id="coding-search" class="control-input" type="search" placeholder="Search Coding Index models…" autocomplete="off"></label>
@@ -391,7 +391,7 @@
         <div class="developer-highlight-head"><span class="developer-highlight-title">Highlight by developer</span><span id="webdev-highlight-status" class="developer-highlight-status" role="status" aria-live="polite">Loading developers…</span></div>
         <div id="webdev-developer-chips" class="developer-chips" role="group" aria-label="Highlight WebDev models by developer"></div>
       </div>
-      <div class="webdev-source"><a class="button" href="https://arena.ai/leaderboard/code/webdev" target="_blank" rel="noopener noreferrer">Open Arena WebDev source ↗</a></div>
+      <div class="webdev-source"><a class="button" href="https://arena.ai/leaderboard/code/pareto" target="_blank" rel="noopener noreferrer">Open Arena WebDev source ↗</a></div>
       <div class="chart-wrap webdev-chart-wrap">
         <div class="chart-tools" aria-label="WebDev chart controls">
           <button class="icon-button" id="webdev-zoom-in" type="button" aria-label="Zoom in on WebDev chart" title="Zoom in">+</button>
@@ -404,7 +404,7 @@
       <div class="chart-help"><span class="hint"><span class="key">Pinch</span> zoom · drag to move around the chart</span><span class="hint"><span class="key">Ctrl</span> + scroll to zoom · double-click or Fit for the whole chart</span></div>
       <div id="webdev-tooltip" class="tooltip" role="status" aria-live="polite">Tap or focus a model label to see its exact values.</div>
       <div class="webdev-details">
-        <p>This is a dated snapshot of Arena’s WebDev overall leaderboard. The green line follows Arena’s published frontier; costs are rounded to cents, so equal displayed costs can have different underlying values. Models without published task costs are listed below but cannot be plotted. One unranked AutoEval entry is omitted. WebDev ratings and Agent Arena scores measure different things. <a href="https://arena.ai/leaderboard/code/webdev" target="_blank" rel="noopener noreferrer">View Arena’s source ↗</a></p>
+        <p>This is a dated snapshot of Arena’s WebDev overall leaderboard. The green line follows Arena’s published frontier; costs are rounded to cents, so equal displayed costs can have different underlying values. Models without published task costs are listed below but cannot be plotted. One unranked AutoEval entry is omitted. WebDev ratings and Agent Arena scores measure different things. <a href="https://arena.ai/leaderboard/code/pareto" target="_blank" rel="noopener noreferrer">View Arena’s source ↗</a></p>
         <details class="webdev-list"><summary>Browse ranked models</summary>
         <div class="table-controls">
           <div class="control-group">
@@ -1127,14 +1127,14 @@
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
         link.href = url;
-        link.download = "arena-agent-pareto-snapshot-2026-11-19.csv";
+        link.download = "arena-agent-pareto-snapshot-2026-11-24.csv";
         document.body.append(link);
         link.click();
         link.remove();
         URL.revokeObjectURL(url);
       });
 
-      fetch("./data.json?v=20261122")
+      fetch("./data.json?v=20261124")
         .then((response) => { if (!response.ok) throw new Error("Could not load the model snapshot."); return response.json(); })
         .then((snapshot) => {
           allData = snapshot.records;
@@ -1159,9 +1159,9 @@
         });
     })();
   </script>
-  <script src="./agentduel.js?v=20261122a"></script>
-  <script src="./webdev.js?v=20261122a"></script>
-<script src="./coding.js?v=20261122a"></script>
+  <script src="./agentduel.js?v=20261124a"></script>
+  <script src="./webdev.js?v=20261124a"></script>
+<script src="./coding.js?v=20261124a"></script>
   <script>
     (() => {
       const charts = [
