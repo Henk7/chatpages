@@ -4786,10 +4786,10 @@
         "rank": 5
       }
     ],
-    "retailer_note": "Am 24.11.2026 direkt bestätigt: Müller Österreich, 0815.at, BIPA, dm.at und oh feliz für Größe 6 und 7. Amazon.de und Galaxus.at bleiben offen; Such-/Produktansichten lieferten heute keinen belastbaren, direkt bestätigten Endpreis mit Österreich-Lieferbarkeit. Je Größe sind 5 von 10 Vergleichsplätzen offen; offener Bestand ist kein Negativnachweis."
+    "retailer_note": "Am 24.11.2026 direkt bestätigt: Müller Österreich, 0815.at, BIPA, dm.at und oh feliz für Größe 6 und 7. Amazon.de bleibt offen: die heutigen direkten Suchseiten gaben Internal Error zurück. Galaxus.at bleibt ebenfalls offen; es wurde kein belastbarer Endpreis mit Österreich-Lieferbarkeit direkt bestätigt. Je Größe sind 5 von 10 Vergleichsplätzen offen; offener Bestand ist kein Negativnachweis."
   },
   "news_threshold_eur_per_unit": 0.37,
-  "latest_snapshot_note": "Dienstag, 24. November 2026 um 20:03:10 Uhr (Europe/Vienna): Größe 6 und Größe 7 jeweils 5 von 10 Vergleichsplätzen direkt bestätigt; jeweils 5 Plätze offen. Bester bestätigter Stückpreis: Größe 6 0.389 €/Stück (Müller Österreich, €53.65 gesamt); Größe 7 0.460 €/Stück (0815.at, €57.99 gesamt). Keines der bestätigten Angebote unterschreitet die Meldeschwelle von 0.37 €/Stück.",
+  "latest_snapshot_note": "Dienstag, 24. November 2026 um 20:03:10 Uhr (Europe/Vienna):03:10 Uhr (Europe/Vienna): Größe 6 und Größe 7 jeweils 5 von 10 Vergleichsplätzen direkt bestätigt; jeweils 5 Plätze offen. Bester bestätigter Stückpreis: Größe 6 0.389 €/Stück (Müller Österreich, €53.65 gesamt); Größe 7 0.460 €/Stück (0815.at, €57.99 gesamt). Keines der bestätigten Angebote unterschreitet die Meldeschwelle von 0.37 €/Stück.",
   "provider_history_started_on": "2026-10-18",
   "latest_note": "Montag, 23. November 2026, 01:19:19 Uhr (Europe/Vienna): Größe 6 und Größe 7 jeweils 4 von 10 Händlerplätzen direkt bestätigt; jeweils 6 Plätze offen. Bester bestätigter Stückpreis: Größe 6 55.99 € / 138 Stück = 0.405725 €; Größe 7 57.99 € / 126 Stück = 0.460238 €. Müller Österreich, Amazon.de und Galaxus.at bleiben offen und sind kein Negativnachweis.",
   "separate_savings": [
@@ -4869,9 +4869,9 @@
     {
       "retailer": "Amazon.de · Amazon und Marketplace",
       "status": "beide Größen nicht direkt bestätigt",
-      "checked_at": "2026-11-23T01:19:19+01:00",
+      "checked_at": "2026-11-24T20:16:20+01:00",
       "url": "https://www.amazon.de/",
-      "note": "Suchseiten für Größe 6 und 7 gaben einen internen Fehler zurück; Verkäufer, Versanddienstleister, Endpreis, Österreich-Lieferung und Bedingungen sind offen."
+      "note": "Heute erneut direkt versucht: Amazon-Suchergebnisse für Größe 6 und 7 gaben im Reader jeweils Internal Error zurück. Verkäufer, Versanddienstleister, Endpreis, Österreich-Lieferung und Coupon-/Prime-/Spar-Abo-Bedingungen blieben deshalb unbestätigt; kein Negativnachweis."
     },
     {
       "retailer": "Galaxus.at",
