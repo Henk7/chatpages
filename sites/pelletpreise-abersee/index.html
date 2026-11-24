@@ -62,14 +62,16 @@ function renderOffer(o,rank){
  const raw=Number.isFinite(o.price_per_t)?"Grundpreis "+fmt.format(o.price_per_t)+"/t + "+fmt.format(o.fee)+" Abfüllpauschale":"";
  const detail=[o.fee_note,o.delivery_note,o.quality].filter(Boolean).map(x=>"<p>"+esc(x)+"</p>").join("");
  const stateClass=o.status==="regional"?"regional":o.status==="future"?"future":o.status==="quote"?"quote":"";
- return '<article class="offer"><div class="offer-header"><div><span class="badge '+stateClass+'">'+esc(statusName[o.status])+'</span><h3>'+esc(o.supplier)+'</h3></div><span class="rank '+(rank?"":"open")+'">'+esc(rankLabel)+'</span></div><div class="price">'+esc(price)+' <small>für 6 t</small></div><div class="total">'+esc(per)+'</div>'+(original?'<div class="details"><p><strong>'+esc(original)+'</strong></p></div>':"")+(raw?'<div class="details"><p><strong>'+esc(raw)+'</strong></p></div>':"")+'<div class="details">'+detail+'</div><div class="source-line"><span>Quelle geprüft: '+esc(dateFmt(o.source_date))+'</span><span><a href="'+esc(o.source_url)+'" target="_blank" rel="noopener noreferrer">Preisquelle ↗</a> · <a href="'+esc(o.contact_url)+'" target="_blank" rel="noopener noreferrer">'+esc(o.contact||"Anbieter")+' ↗</a></span></div></article>';
+ return '<article class="offer"><div class="offer-header"><div><span class="badge '+stateClass+'">'+esc(statusName[o.status])+'</span><h3>'+esc(o.supplier)+'</h3></div><span class="rank '+(rank?"":"open")+'">'+esc(rankLabel)+'</span></div><div class="price">'+esc(price)+' <small>für 6 t</small></div><div class="total">'+esc(per)+'</div>'+(original?'<div class="details"><p><strong>'+esc(original)+'</strong></p></div>':"")+(raw?'<div class="details"><p><strong>'+esc(raw)+'</strong></p></div>':"")+'<div class="details">'+detail+'</div><div class="source-line"><span>Quellenstand: '+esc(dateFmt(o.source_date))+' · geprüft: '+esc(dateFmt(o.checked_date||o.source_date))+'</span><span><a href="'+esc(o.source_url)+'" target="_blank" rel="noopener noreferrer">Preisquelle ↗</a> · <a href="'+esc(o.contact_url)+'" target="_blank" rel="noopener noreferrer">'+esc(o.contact||"Anbieter")+' ↗</a></span></div></article>';
 }
 function render(data){
  const date=dateFmt(data.meta.updated);
  document.getElementById("updated").textContent=date;
  document.getElementById("footerDate").textContent=date;
  const ranked=data.offers.filter(o=>Number.isFinite(o.total_6t)&&o.status!=="future");
- document.getElementById("summaryCount").textContent=ranked.length+" veröffentlichte Preise · 3 Angebote auf Anfrage";
+ const quoteCount=data.offers.filter(o=>o.status==="quote").length;
+ const futureCount=data.offers.filter(o=>o.status==="future").length;
+ document.getElementById("summaryCount").textContent=ranked.length+" veröffentlichte Preise · "+futureCount+" künftiger Preis · "+quoteCount+" auf Anfrage";
  const winner=data.offers.find(o=>o.status==="postal");
  if(winner){document.getElementById("winnerSupplier").textContent=winner.supplier;document.getElementById("winnerTotal").textContent=fmt.format(winner.total_6t);document.getElementById("winnerPer").textContent=fmt.format(winner.effective_per_t)+"/t effektiv bei 6 t";document.getElementById("winnerNote").textContent=winner.delivery_note;document.getElementById("winnerLink").href=winner.source_url}
  renderChart(data.offers);
