@@ -93,12 +93,12 @@ function initBreakEven(data){
   if(!Number.isFinite(pp)||pp<=0||!Number.isFinite(pk)||pk<=0||!Number.isFinite(wk)||wk<=0||!Number.isFinite(pe)||pe<=0||pe>100||!Number.isFinite(we)||we<=0||we>100){limit.textContent="Eingaben prüfen";status.textContent="Bitte Preis und Heizwerte größer als 0 sowie Wirkungsgrade zwischen 1 und 100 % eingeben.";costs.textContent="";return}
   const pelletUseful=pk*pe/100,woodUseful=wk*we/100,pelletPerKwh=pp/pelletUseful,breakEven=pelletPerKwh*woodUseful;
   limit.textContent=euro(breakEven)+" / Rm";
-  if(wp===null){status.textContent="Bis zu diesem Scheitholzpreis liegen die Brennstoffkosten je Nutzwärme gleichauf. Trage deinen Preis ein, um beide Heizarten direkt zu vergleichen.";costs.innerHTML="<p>Pellets: "+euro(pelletPerKwh)+" je nutzbarer kWh · Scheitholz: "+nfmt.format(woodUseful)+" nutzbare kWh je Rm</p>";return}
+  if(wp===null){status.textContent="Bis zu diesem Scheitholzpreis liegen die Brennstoffkosten je Nutzwärme gleichauf. Trage deinen Preis ein, um beide Heizarten direkt zu vergleichen.";costs.innerHTML="<p>Pellets: "+unitCost(pelletPerKwh)+" je nutzbarer kWh · Scheitholz: "+nfmt.format(woodUseful)+" nutzbare kWh je Rm</p>";return}
   if(!Number.isFinite(wp)||wp<0){status.textContent="Bitte einen gültigen Scheitholzpreis ab 0 € eingeben.";costs.textContent="";return}
   const woodPerKwh=wp/woodUseful,diff=Math.abs(pelletPerKwh-woodPerKwh)*1000;
   const cheaper=woodPerKwh<pelletPerKwh?"Scheitholz":"Pellets";
   status.textContent=Math.abs(wp-breakEven)<0.005?"Bei diesem Preis sind beide Brennstoffe gleich teuer je Nutzwärme.":cheaper+" sind bei deinen Eingaben um etwa "+euro(diff)+" je 1.000 kWh Nutzwärme günstiger.";
-  costs.innerHTML="<p>Pellets: "+euro(pelletPerKwh)+" je nutzbarer kWh</p><p>Scheitholz: "+euro(woodPerKwh)+" je nutzbarer kWh</p>";
+  costs.innerHTML="<p>Pellets: "+unitCost(pelletPerKwh)+" je nutzbarer kWh</p><p>Scheitholz: "+unitCost(woodPerKwh)+" je nutzbarer kWh</p>";
  }
  [pelletInput,pelletEnergy,pelletEfficiency,woodType,woodPrice,woodEfficiency].forEach(el=>el.addEventListener("input",update));
  update();
