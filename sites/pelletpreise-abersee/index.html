@@ -96,7 +96,7 @@ function initBreakEven(data){
   if(!Number.isFinite(wp)||wp<0){status.textContent="Bitte einen gültigen Scheitholzpreis ab 0 € eingeben.";costs.textContent="";return}
   const woodPerKwh=wp/woodUseful,diff=Math.abs(pelletPerKwh-woodPerKwh)*1000;
   const cheaper=woodPerKwh<pelletPerKwh?"Scheitholz":"Pellets";
-  status.textContent=wp===breakEven?"Bei diesem Preis sind beide Brennstoffe gleich teuer je Nutzwärme.":cheaper+" sind bei deinen Eingaben um etwa "+euro(diff)+" je 1.000 kWh Nutzwärme günstiger.";
+  status.textContent=Math.abs(wp-breakEven)<0.005?"Bei diesem Preis sind beide Brennstoffe gleich teuer je Nutzwärme.":cheaper+" sind bei deinen Eingaben um etwa "+euro(diff)+" je 1.000 kWh Nutzwärme günstiger.";
   costs.innerHTML="<p>Pellets: "+euro(pelletPerKwh)+" je nutzbarer kWh</p><p>Scheitholz: "+euro(woodPerKwh)+" je nutzbarer kWh</p>";
  }
  [pelletInput,pelletEnergy,pelletEfficiency,woodType,woodPrice,woodEfficiency].forEach(el=>el.addEventListener("input",update));
