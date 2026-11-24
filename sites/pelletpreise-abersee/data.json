@@ -22,6 +22,10 @@
       {
         "name": "mafi Pellets · Preise ab Jänner 2027",
         "url": "https://www.mafi-pellets.at/de"
+      },
+      {
+        "name": "HeizPellets24 · konkretes 6-t-Angebot für PLZ 5342",
+        "url": "https://www.heizpellets24.at/holzpellets-lose/angebotsliste?zipCode=5342&amount=6000&stations=1&product=20&options=108,131,-18,127,159&ap=0&pcert=4,2,6,1&lbp=0"
       }
     ]
   },
@@ -140,20 +144,6 @@
       "checked_date": "2026-11-24"
     },
     {
-      "id": "sprung",
-      "supplier": "Sprung Pellets GmbH",
-      "status": "quote",
-      "source_date": "2026-11-10",
-      "fee": 51,
-      "fee_note": "AK Salzburg nennt 51,00 € Abfüllpauschale; Tonnenpreis und 6-t-Gesamtpreis: auf Anfrage.",
-      "delivery_note": "AK-Erhebung nennt 7–14 Tage Lieferzeit; Lieferbarkeit und Preis für PLZ 5342 aktuell bestätigen.",
-      "quality": "Im konkreten Angebot bestätigen.",
-      "source_url": "https://sbg.arbeiterkammer.at/beratung/konsumentenschutz/erhebungen/preise/Pelletspreise-2026-11-10-Lose.pdf",
-      "contact_url": "https://www.sprung-pellets.at/",
-      "contact": "06452 66466",
-      "checked_date": "2026-11-24"
-    },
-    {
       "id": "wav",
       "supplier": "WAV Wärme Austria Vertriebs GmbH",
       "status": "regional",
@@ -186,6 +176,22 @@
       "contact_url": "https://www.wildenhofer.at/139.html",
       "contact": "05 9990 1310",
       "checked_date": "2026-11-24"
+    },
+    {
+      "id": "kreuzmayr-abersee",
+      "supplier": "Kreuzmayr GmbH",
+      "status": "postal",
+      "source_date": "2026-11-24",
+      "checked_date": "2026-11-24",
+      "quote_per_t": 475,
+      "total_6t": 2904.97,
+      "effective_per_t": 484.16,
+      "fee_note": "Der Angebotsrechner zeigt 475,00 €/t und einen Gesamtpreis von 2.904,97 € für 6 t. Die Differenz von 54,97 € zu 6 × Grundpreis wird im sichtbaren Ergebnis nicht einzeln aufgeschlüsselt.",
+      "delivery_note": "Konkretes Rechnerangebot für PLZ 5342, 6.000 kg und eine Lieferstelle. Angezeigter Liefertermin: bis 10.12.2026. Lieferbedingungen im Angebotsdetail prüfen.",
+      "quality": "Lose Holzpellets; genaue Produktqualität im Angebotsdetail prüfen.",
+      "source_url": "https://www.heizpellets24.at/holzpellets-lose/angebotsliste?zipCode=5342&amount=6000&stations=1&product=20&options=108,131,-18,127,159&ap=0&pcert=4,2,6,1&lbp=0",
+      "contact_url": "https://www.heizpellets24.at/holzpellethaendler/oberoesterreich/4070/374-kreuzmayr-gmbh",
+      "contact": "Kreuzmayr-Angebot öffnen"
     }
   ],
   "history": [
@@ -230,6 +236,12 @@
       "id": "mafi",
       "effective_per_t": 463,
       "source": "mafi official; valid from 2027-01-01"
+    },
+    {
+      "date": "2026-11-24",
+      "id": "kreuzmayr-abersee",
+      "effective_per_t": 484.16,
+      "source": "HeizPellets24 Abersee quote"
     }
   ]
 }
