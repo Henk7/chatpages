@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive playground for white text buttons, hover states, keyboard focus rings, and pressed states.">
+  <title>Button interaction lab · Henk7</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212f;
+      --muted: #627084;
+      --line: #dfe6ee;
+      --paper: #fff;
+      --wash: #f3f6fa;
+      --blue: #3159c7;
+      --navy: #172640;
+      --gold: #e7bd61;
+      --btn-primary: #0b5ed7;
+      --btn-hover: #084db4;
+      --btn-pressed: #063d91;
+      --focus-ring: #111827;
+      --focus-gap: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    button, input { font: inherit; }
+    .wrap { width: min(1120px, 100% - 40px); margin: 0 auto; }
+    header {
+      color: #fff;
+      background: linear-gradient(135deg, #14223b, #263f68);
+      border-bottom: 4px solid var(--gold);
+      padding: 34px 0 38px;
+    }
+    .brand {
+      color: #cbd7ed;
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 780px;
+      margin: .5rem 0 .7rem;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+    .lede { max-width: 760px; margin: 0; color: #e1e8f3; }
+    main { padding: 26px 0 54px; }
+    .back-link {
+      display: inline-block;
+      margin: 0 0 20px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .back-link:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(245px, 310px) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .panel {
+      min-width: 0;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 3px 14px #1c30500a;
+    }
+    .controls { padding: 20px; }
+    .panel h2, .code-panel h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.12rem;
+      line-height: 1.3;
+    }
+    .panel-intro { margin: 7px 0 18px; color: var(--muted); font-size: .92rem; }
+    .control-list { display: grid; gap: 13px; }
+    .control-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 0 12px;
+      border-bottom: 1px solid #edf0f4;
+      font-weight: 650;
+    }
+    .control-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .color-value { display: flex; align-items: center; gap: 8px; }
+    .color-value output {
+      min-width: 72px;
+      color: var(--muted);
+      font: 500 .82rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+      text-align: right;
+    }
+    input[type="color"] {
+      width: 42px;
+      height: 34px;
+      padding: 3px;
+      border: 1px solid #cbd4df;
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+    }
+    input[type="color"]:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 2px;
+    }
+    .hint {
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+    .contrast-list {
+      display: grid;
+      gap: 7px;
+      margin: 15px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .contrast-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: .85rem;
+    }
+    .contrast-row span:first-child { color: var(--muted); }
+    .contrast-result { font-weight: 750; }
+    .contrast-result.good { color: #167347; }
+    .contrast-result.low { color: #b42318; }
+    .right-column { display: grid; gap: 18px; min-width: 0; }
+    .live-panel { padding: 22px; }
+    .live-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .live-heading p { margin: 5px 0 0; color: var(--muted); font-size: .92rem; }
+    .live-chip {
+      flex: 0 0 auto;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #edf2ff;
+      color: #3159c7;
+      font-size: .75rem;
+      font-weight: 750;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .live-stage {
+      display: grid;
+      place-items: center;
+      min-height: 168px;
+      padding: 24px;
+      border: 1px solid #e8edf3;
+      border-radius: 12px;
+      background:
+        radial-gradient(ellipse at 50% 45%, #ffffff 0, #f8faff 68%, #f3f6fa 100%);
+    }
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 11px 18px;
+      border: 2px solid transparent;
+      border-radius: 9px;
+      background: var(--btn-primary);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.25;
+      cursor: pointer;
+      transition: background-color 120ms ease, transform 120ms ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .primary-button:hover:not(:disabled) { background: var(--btn-hover); }
+    }
+    .primary-button:active:not(:disabled) {
+      background: var(--btn-pressed);
+      transform: translateY(1px);
+    }
+    .primary-button:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
+    }
+    .primary-button:disabled {
+      background: #748197;
+      color: #fff;
+      cursor: not-allowed;
+      opacity: .58;
+    }
+    .activation {
+      min-height: 1.5em;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+    .gallery-panel { padding: 20px; }
+    .gallery-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 15px;
+    }
+    .gallery-head p { margin: 0; color: var(--muted); font-size: .86rem; }
+    .state-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .state-card {
+      min-width: 0;
+      padding: 11px 8px 9px;
+      border: 1px solid #e7ebf1;
+      border-radius: 11px;
+      background: #fbfcfe;
+    }
+    .state-card h3 {
+      margin: 0 0 9px;
+      color: #39475a;
+      font-size: .78rem;
+      line-height: 1.3;
+      text-align: center;
+    }
+    .state-preview {
+      display: grid;
+      place-items: center;
+      min-height: 72px;
+      padding: 8px 2px;
+    }
+    .button-look {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      max-width: 100%;
+      padding: 8px 10px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background: var(--btn-primary);
+      color: #fff;
+      font-size: .82rem;
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .state-hover .button-look { background: var(--btn-hover); }
+    .state-pressed .button-look { background: var(--btn-pressed); transform: translateY(1px); }
+    .state-focus .button-look {
+      box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
+    }
+    .state-disabled .button-look {
+      background: #748197;
+      opacity: .58;
+    }
+    .code-panel { padding: 20px; }
+    .code-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .copy-button {
+      padding: 7px 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--navy);
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .copy-button:hover { background: #f1f5f9; }
+    .copy-button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 2px;
+    }
+    pre {
+      overflow: auto;
+      margin: 0;
+      padding: 14px;
+      border: 1px solid #e5eaf0;
+      border-radius: 10px;
+      background: #f8fafc;
+      color: #273449;
+      font: .8rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace;
+      tab-size: 2;
+    }
+    .copy-status { min-height: 1.4em; margin: 7px 0 0; color: var(--muted); font-size: .82rem; }
+    footer { padding: 0 0 30px; color: var(--muted); font-size: .84rem; }
+    @media (max-width: 880px) {
+      .layout { grid-template-columns: minmax(220px, 280px) minmax(0, 1fr); }
+      .state-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 28px, 560px); }
+      header { padding: 27px 0 30px; }
+      main { padding-top: 20px; }
+      .layout { grid-template-columns: 1fr; }
+      .controls { order: 2; }
+      .right-column { order: 1; }
+      .gallery-head { display: block; }
+      .gallery-head p { margin-top: 5px; }
+      .state-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 360px) {
+      .state-grid { grid-template-columns: 1fr 1fr; }
+      .state-card { padding-inline: 5px; }
+      .button-look { padding-inline: 7px; font-size: .75rem; }
+      .live-heading { display: block; }
+      .live-chip { display: inline-block; margin-top: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+    }
+    @media (forced-colors: active) {
+      .primary-button:focus-visible {
+        outline: 2px solid Highlight;
+        outline-offset: 3px;
+        box-shadow: none;
+      }
+      .copy-button:focus-visible, .back-link:focus-visible {
+        outline-color: Highlight;
+      }
+      .state-focus .button-look {
+        outline: 2px solid Highlight;
+        outline-offset: 3px;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">Henk7 · UI playground</div>
+      <h1>A button, five states.</h1>
+      <p class="lede">Explore a colored button with white text. Tune its colors, hover the live example, then use Tab to see the keyboard focus ring.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back-link" href="/chatpages/sites/">More pages and tools</a>
+    <div class="layout">
+      <aside class="panel controls" aria-labelledby="colors-title">
+        <h2 id="colors-title">Tune the colors</h2>
+        <p class="panel-intro">Changes update the live example, gallery, and CSS below.</p>
+        <div class="control-list">
+          <label class="control-row" for="primaryColor">
+            <span>Default fill</span>
+            <span class="color-value"><output id="primaryValue" for="primaryColor">#0B5ED7</output><input id="primaryColor" type="color" value="#0b5ed7"></span>
+          </label>
+          <label class="control-row" for="hoverColor">
+            <span>Hover fill</span>
+            <span class="color-value"><output id="hoverValue" for="hoverColor">#084DB4</output><input id="hoverColor" type="color" value="#084db4"></span>
+          </label>
+          <label class="control-row" for="pressedColor">
+            <span>Pressed fill</span>
+            <span class="color-value"><output id="pressedValue" for="pressedColor">#063D91</output><input id="pressedColor" type="color" value="#063d91"></span>
+          </label>
+          <label class="control-row" for="focusColor">
+            <span>Outer focus ring</span>
+            <span class="color-value"><output id="focusValue" for="focusColor">#111827</output><input id="focusColor" type="color" value="#111827"></span>
+          </label>
+        </div>
+        <p class="hint">The white separator around keyboard focus stays fixed. Try a lighter or darker outer ring against the page.</p>
+        <div class="contrast-list" aria-label="White text contrast">
+          <div class="contrast-row"><span>Default fill</span><span class="contrast-result" id="primaryContrast" aria-live="polite"></span></div>
+          <div class="contrast-row"><span>Hover fill</span><span class="contrast-result" id="hoverContrast" aria-live="polite"></span></div>
+          <div class="contrast-row"><span>Pressed fill</span><span class="contrast-result" id="pressedContrast" aria-live="polite"></span></div>
+        </div>
+      </aside>
+
+      <div class="right-column">
+        <section class="panel live-panel" aria-labelledby="live-title">
+          <div class="live-heading">
+            <div>
+              <h2 id="live-title">Try the real button</h2>
+              <p>Hover it, tab to it, or press and hold to compare the states.</p>
+            </div>
+            <span class="live-chip">Interactive</span>
+          </div>
+          <div class="live-stage">
+            <button class="primary-button" id="liveButton" type="button">Save changes</button>
+          </div>
+          <p class="activation" id="activationStatus" aria-live="polite">Use Tab to reach the button; Enter or Space activates it.</p>
+        </section>
+
+        <section class="panel gallery-panel" aria-labelledby="gallery-title">
+          <div class="gallery-head">
+            <h2 id="gallery-title">State gallery</h2>
+            <p>Side-by-side samples. Focus sample shows the two-color ring.</p>
+          </div>
+          <div class="state-grid">
+            <article class="state-card">
+              <h3>Default</h3>
+              <div class="state-preview" role="img" aria-label="Default button state">
+                <span class="button-look" aria-hidden="true">Save changes</span>
+              </div>
+            </article>
+            <article class="state-card">
+              <h3>Hover</h3>
+              <div class="state-preview state-hover" role="img" aria-label="Hover state with darker fill">
+                <span class="button-look" aria-hidden="true">Save changes</span>
+              </div>
+            </article>
+            <article class="state-card">
+              <h3>Keyboard focus</h3>
+              <div class="state-preview state-focus" role="img" aria-label="Keyboard focus state with a white gap and dark outer ring">
+                <span class="button-look" aria-hidden="true">Save changes</span>
+              </div>
+            </article>
+            <article class="state-card">
+              <h3>Pressed</h3>
+              <div class="state-preview state-pressed" role="img" aria-label="Pressed state with darker fill and slight movement">
+                <span class="button-look" aria-hidden="true">Save changes</span>
+              </div>
+            </article>
+            <article class="state-card">
+              <h3>Disabled</h3>
+              <div class="state-preview state-disabled" role="img" aria-label="Disabled state">
+                <span class="button-look" aria-hidden="true">Save changes</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel code-panel" aria-labelledby="code-title">
+          <div class="code-heading">
+            <h2 id="code-title">CSS for these colors</h2>
+            <button class="copy-button" id="copyCss" type="button">Copy CSS</button>
+          </div>
+          <pre><code id="cssSnippet"></code></pre>
+          <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="wrap">Static demo · Color changes stay in this browser session.</footer>
+
+  <script>
+    (() => {
+      "use strict";
+      const fields = [
+        { input: "primaryColor", output: "primaryValue", variable: "--btn-primary", contrast: "primaryContrast", name: "Primary" },
+        { input: "hoverColor", output: "hoverValue", variable: "--btn-hover", contrast: "hoverContrast", name: "Hover" },
+        { input: "pressedColor", output: "pressedValue", variable: "--btn-pressed", contrast: "pressedContrast", name: "Pressed" },
+        { input: "focusColor", output: "focusValue", variable: "--focus-ring", name: "Focus ring" }
+      ];
+      const cssSnippet = document.getElementById("cssSnippet");
+      const copyStatus = document.getElementById("copyStatus");
+      let activations = 0;
+
+      function luminance(hex) {
+        const channels = hex.slice(1).match(/.{2}/g).map(part => parseInt(part, 16) / 255);
+        const linear = channels.map(value =>
+          value <= 0.04045 ? value / 12.92 : Math.pow((value + 0.055) / 1.055, 2.4)
+        );
+        return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+      }
+
+      function updateContrast(hex, id) {
+        const ratio = 1.05 / (luminance(hex) + 0.05);
+        const element = document.getElementById(id);
+        const passes = ratio >= 4.5;
+        element.textContent = ratio.toFixed(2) + ":1 · " + (passes ? "AA" : "below AA");
+        element.classList.toggle("good", passes);
+        element.classList.toggle("low", !passes);
+      }
+
+      function currentCss() {
+        const primary = document.getElementById("primaryColor").value.toUpperCase();
+        const hover = document.getElementById("hoverColor").value.toUpperCase();
+        const pressed = document.getElementById("pressedColor").value.toUpperCase();
+        const focus = document.getElementById("focusColor").value.toUpperCase();
+        return [
+          ".primary-button {",
+          "  background: " + primary + ";",
+          "  color: #FFFFFF;",
+          "}",
+          "",
+          ".primary-button:hover {",
+          "  background: " + hover + ";",
+          "}",
+          "",
+          ".primary-button:active {",
+          "  background: " + pressed + ";",
+          "}",
+          "",
+          ".primary-button:focus-visible {",
+          "  outline: 0;",
+          "  box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px " + focus + ";",
+          "}",
+          "",
+          "@media (forced-colors: active) {",
+          "  .primary-button:focus-visible {",
+          "    outline: 2px solid Highlight;",
+          "    outline-offset: 3px;",
+          "    box-shadow: none;",
+          "  }",
+          "}"
+        ].join("\n");
+      }
+
+      function render() {
+        for (const field of fields) {
+          const input = document.getElementById(field.input);
+          const output = document.getElementById(field.output);
+          const value = input.value.toUpperCase();
+          output.value = value;
+          output.textContent = value;
+          document.documentElement.style.setProperty(field.variable, input.value);
+          if (field.contrast) updateContrast(input.value, field.contrast);
+        }
+        cssSnippet.textContent = currentCss();
+        copyStatus.textContent = "";
+      }
+
+      for (const field of fields) {
+        document.getElementById(field.input).addEventListener("input", render);
+      }
+
+      document.getElementById("liveButton").addEventListener("click", () => {
+        activations += 1;
+        document.getElementById("activationStatus").textContent =
+          "Activated " + activations + (activations === 1 ? " time." : " times.");
+      });
+
+      document.getElementById("copyCss").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(cssSnippet.textContent);
+          copyStatus.textContent = "CSS copied to the clipboard.";
+        } catch {
+          copyStatus.textContent = "Clipboard access is unavailable here. Select and copy the CSS above.";
+        }
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
