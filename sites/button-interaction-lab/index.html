@@ -173,6 +173,13 @@
       background:
         radial-gradient(ellipse at 50% 45%, #ffffff 0, #f8faff 68%, #f3f6fa 100%);
     }
+    .live-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+    }
     .primary-button {
       display: inline-flex;
       align-items: center;
@@ -437,14 +444,19 @@
           <div class="live-heading">
             <div>
               <h2 id="live-title">Try the selected style</h2>
-              <p>Test the selected treatment with your pointer or keyboard.</p>
+              <p>Tab through the buttons to compare keyboard focus. Enter or Space activates the focused button.</p>
             </div>
             <span class="live-chip">Using <span id="selectedStyleName" aria-live="polite">Clean shift</span></span>
           </div>
           <div class="live-stage">
-            <button class="primary-button style-clean" id="liveButton" type="button">Save changes</button>
+            <div class="live-buttons" role="group" aria-label="Button focus test">
+              <button class="primary-button style-clean live-demo-button" type="button">Save changes</button>
+              <button class="primary-button style-clean live-demo-button" type="button">Add user</button>
+              <button class="primary-button style-clean live-demo-button" type="button">Export data</button>
+              <button class="primary-button style-clean live-demo-button" type="button">Apply filters</button>
+            </div>
           </div>
-          <p class="activation" id="activationStatus" aria-live="polite">Use Tab to reach the button; Enter or Space activates it.</p>
+          <p class="activation" id="activationStatus" aria-live="polite">Use Tab to focus each button.</p>
         </section>
 
         <section class="panel gallery-panel" aria-labelledby="gallery-title">
@@ -628,7 +640,9 @@
         if (!styleNames[style]) return;
         selectedStyle = style;
         document.getElementById("selectedStyleName").textContent = styleNames[style];
-        document.getElementById("liveButton").className = "primary-button style-" + style;
+        for (const button of document.querySelectorAll(".live-demo-button")) {
+          button.className = "primary-button style-" + style + " live-demo-button";
+        }
         for (const button of document.querySelectorAll(".style-choice")) {
           const selected = button.dataset.style === style;
           button.setAttribute("aria-pressed", String(selected));
@@ -647,11 +661,13 @@
         button.addEventListener("click", () => selectStyle(button.dataset.style));
       }
 
-      document.getElementById("liveButton").addEventListener("click", () => {
-        activations += 1;
-        document.getElementById("activationStatus").textContent =
-          "Activated " + activations + (activations === 1 ? " time." : " times.");
-      });
+      for (const button of document.querySelectorAll(".live-demo-button")) {
+        button.addEventListener("click", () => {
+          activations += 1;
+          document.getElementById("activationStatus").textContent =
+            button.textContent + " activated (" + activations + (activations === 1 ? " time)." : " times).");
+        });
+      }
 
       document.getElementById("copyCss").addEventListener("click", async () => {
         try {
