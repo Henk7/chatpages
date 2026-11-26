@@ -291,6 +291,16 @@
       cursor: pointer;
       transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease, filter 140ms ease, transform 140ms ease;
     }
+    .style-lift { box-shadow: 0 4px 0 rgb(18 38 68 / .18); }
+    .style-frame {
+      border-color: rgb(255 255 255 / .9);
+      box-shadow: inset 0 0 0 1px rgb(255 255 255 / .28);
+    }
+    .style-glow {
+      box-shadow:
+        0 0 0 2px color-mix(in srgb, var(--btn-primary) 12%, transparent),
+        0 0 16px color-mix(in srgb, var(--btn-primary) 28%, transparent);
+    }
     @media (hover: hover) and (pointer: fine) {
       .style-choice:hover { background: var(--btn-hover); }
       .style-lift:hover {
@@ -303,7 +313,9 @@
       }
       .style-glow:hover {
         filter: brightness(1.07);
-        box-shadow: 0 0 0 4px rgb(255 255 255 / .22), 0 8px 20px rgb(18 38 68 / .2);
+        box-shadow:
+          0 0 0 3px color-mix(in srgb, var(--btn-primary) 14%, transparent),
+          0 0 20px color-mix(in srgb, var(--btn-primary) 40%, transparent);
       }
       .style-edge:hover {
         border-bottom-color: rgb(255 255 255 / .72);
@@ -319,7 +331,7 @@
     }
     .style-glow:active {
       filter: none;
-      box-shadow: none;
+      box-shadow: 0 1px 6px color-mix(in srgb, var(--btn-primary) 18%, transparent);
     }
     .style-edge { border-bottom: 4px solid rgb(0 0 0 / .24); }
     .style-edge:active {
@@ -483,28 +495,28 @@
             </article>
             <article class="style-card" data-style-card="lift">
               <div class="style-card-head">
-                <div><h3>Soft lift</h3><p>Rises on hover, settles when pressed.</p></div>
+                <div><h3>Soft lift</h3><p>Shallow shadow at rest, stronger lift on hover.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
               <button class="style-choice style-lift" data-style="lift" type="button" aria-label="Choose Soft lift style" aria-pressed="false">Save changes</button>
             </article>
             <article class="style-card" data-style-card="frame">
               <div class="style-card-head">
-                <div><h3>White frame</h3><p>Adds a clear inner edge on hover and focus.</p></div>
+                <div><h3>White frame</h3><p>White inner frame stays visible while hovering or focused.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
               <button class="style-choice style-frame" data-style="frame" type="button" aria-label="Choose White frame style" aria-pressed="false">Save changes</button>
             </article>
             <article class="style-card" data-style-card="glow">
               <div class="style-card-head">
-                <div><h3>Soft glow</h3><p>Brightens on hover with a gentle halo.</p></div>
+                <div><h3>Soft glow</h3><p>Colored halo at rest grows when hovered.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
               <button class="style-choice style-glow" data-style="glow" type="button" aria-label="Choose Soft glow style" aria-pressed="false">Save changes</button>
             </article>
             <article class="style-card" data-style-card="edge">
               <div class="style-card-head">
-                <div><h3>Bottom edge</h3><p>Gives the button depth, then presses flat.</p></div>
+                <div><h3>Bottom edge</h3><p>Raised lower edge sinks flat on press.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
               <button class="style-choice style-edge" data-style="edge" type="button" aria-label="Choose Bottom edge style" aria-pressed="false">Save changes</button>
@@ -581,6 +593,15 @@
         ].join("\n");
         const hoverRule = ".primary-button:hover { background: " + hover + ";";
         const activeRule = ".primary-button:active { background: " + pressed + ";";
+        const initialRules = {
+          clean: [],
+          lift: [".primary-button { box-shadow: 0 4px 0 rgb(18 38 68 / .18); }"],
+          frame: [".primary-button { border-color: rgb(255 255 255 / .9); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .28); }"],
+          glow: [
+            ".primary-button { box-shadow: 0 0 0 2px color-mix(in srgb, " + primary + " 12%, transparent), 0 0 16px color-mix(in srgb, " + primary + " 28%, transparent); }"
+          ],
+          edge: [".primary-button { border-bottom: 4px solid rgb(0 0 0 / .24); }"]
+        };
         const styleRules = {
           clean: [
             hoverRule + " }",
@@ -595,11 +616,10 @@
             activeRule + " border-color: #FFFFFF; }"
           ],
           glow: [
-            hoverRule + " filter: brightness(1.07); box-shadow: 0 0 0 4px rgb(255 255 255 / .22), 0 8px 20px rgb(18 38 68 / .2); }",
-            activeRule + " filter: none; box-shadow: none; transform: translateY(1px); }"
+            hoverRule + " filter: brightness(1.07); box-shadow: 0 0 0 3px color-mix(in srgb, " + primary + " 14%, transparent), 0 0 20px color-mix(in srgb, " + primary + " 40%, transparent); }",
+            activeRule + " filter: none; transform: translateY(1px); box-shadow: 0 1px 6px color-mix(in srgb, " + primary + " 18%, transparent); }"
           ],
           edge: [
-            ".primary-button { border-bottom: 4px solid rgb(0 0 0 / .24); }",
             hoverRule + " border-bottom-color: rgb(255 255 255 / .72); }",
             activeRule + " transform: translateY(2px); border-bottom-width: 2px; }"
           ]
@@ -620,6 +640,8 @@
           "}"
         ].join("\n");
         return shared + "/* " + styleNames[selectedStyle] + " */\n" +
+          initialRules[selectedStyle].join("\n") +
+          (initialRules[selectedStyle].length ? "\n" : "") +
           styleRules[selectedStyle].join("\n") + focusRules;
       }
 
