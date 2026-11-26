@@ -8,34 +8,34 @@
   <style>
     :root {
       color-scheme: light;
-      --paper: #f5f6fa;
+      --paper: #f6f8fb;
       --surface: #fff;
-      --ink: #231c48;
-      --muted: #586078;
-      --border: #dfe1e9;
+      --ink: #23374f;
+      --muted: #526174;
+      --border: #d9e0e8;
       font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
       font-size: 16px;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); color: #20253a; line-height: 1.55; }
-    a { color: #5035aa; }
-    a:hover { color: #301971; }
-    a:focus-visible, summary:focus-visible { outline: 3px solid #7856db; outline-offset: 3px; border-radius: 3px; }
+    body { margin: 0; background: var(--paper); color: #1d2b3a; line-height: 1.55; }
+    a { color: #245a94; }
+    a:hover { color: #163e6d; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid #2b75b8; outline-offset: 3px; border-radius: 3px; }
     .page { width: min(100% - 36px, 980px); margin: 0 auto; padding: 42px 0 70px; }
     .back { display: inline-block; margin-bottom: 28px; font-size: .9rem; font-weight: 650; text-decoration: none; }
-    .eyebrow { margin: 0 0 10px; color: #5b42b0; font-size: .8rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
-    h1 { margin: 0; max-width: 740px; font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.14; letter-spacing: -.035em; }
+    .eyebrow { margin: 0 0 10px; color: #285c93; font-size: .8rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 740px; font-size: clamp(1.9rem, 4vw, 2.55rem); line-height: 1.14; letter-spacing: -.035em; }
     .intro { max-width: 750px; margin: 16px 0 0; color: var(--muted); font-size: 1.04rem; }
     .facts { display: flex; gap: 9px; flex-wrap: wrap; margin: 20px 0 36px; padding: 0; list-style: none; }
-    .facts li { padding: 5px 10px; border: 1px solid #e0dcf1; border-radius: 999px; background: #f0edfa; color: #39256e; font-size: .84rem; font-weight: 700; }
+    .facts li { padding: 5px 10px; border: 1px solid #dce5ef; border-radius: 4px; background: #eef3f9; color: #324e6d; font-size: .84rem; font-weight: 700; }
     .section-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 20px; margin: 0 0 15px; }
     h2 { margin: 0; font-size: 1.18rem; line-height: 1.3; }
     .section-heading p { margin: 0; color: var(--muted); font-size: .9rem; }
-    .preview { overflow: hidden; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); box-shadow: 0 9px 28px rgba(25, 24, 53, .055); }
+    .preview { overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); box-shadow: 0 2px 10px rgba(24, 43, 64, .045); }
     .preview-body { padding: 26px; min-height: 195px; }
     .preview-body h3 { margin: 0 0 8px; font-size: 1.26rem; }
-    .preview-body p { margin: 0; color: #4e5367; max-width: 650px; }
-    .preview-body .kicker { margin: 0 0 7px; color: #6753a2; font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 750; }
+    .preview-body p { margin: 0; color: #526174; max-width: 650px; }
+    .preview-body .kicker { margin: 0 0 7px; color: #547296; font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 750; }
     .example { margin-top: 38px; }
 
     /* Radios supply keyboard navigation, tab state, and panel switching without JS. */
@@ -57,7 +57,7 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
       min-width: 0;
       padding: 5px 4px 0;
-      border-bottom: 1px solid #dedce9;
+      border-bottom: 1px solid #d9e0e8;
       background: transparent;
     }
     .moving-fill, .moving-ink {
@@ -66,29 +66,29 @@
       width: var(--tab-width);
       pointer-events: none;
       transform: translateX(calc(var(--selected) * 100%));
-      transition: transform .42s cubic-bezier(.65, 0, .35, 1);
+      transition: transform 180ms cubic-bezier(.2, 0, 0, 1);
     }
-    .moving-fill { z-index: 0; top: 5px; bottom: 0; border-radius: 9px 9px 0 0; background: var(--fill, #231c48); }
-    .moving-ink { z-index: 2; bottom: -1px; height: 3px; background: var(--line, #a58bfa); border-radius: 2px 2px 0 0; }
+    .moving-fill { z-index: 0; top: 5px; bottom: 0; border-radius: 4px 4px 0 0; background: var(--fill, #294e79); }
+    .moving-ink { z-index: 2; bottom: -1px; height: 2px; background: var(--line, #8fc8f1); border-radius: 2px 2px 0 0; }
     .tab-label {
       position: relative;
       z-index: 1;
       display: flex;
       min-width: 0;
-      min-height: 52px;
+      min-height: 46px;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 10px 8px;
-      color: var(--inactive, #55516a);
+      padding: 8px 8px;
+      color: var(--inactive, #46596e);
       font-size: .91rem;
-      font-weight: 650;
+      font-weight: 600;
       cursor: pointer;
       user-select: none;
       -webkit-tap-highlight-color: transparent;
-      transition: color .2s ease;
+      transition: color 120ms ease-out;
     }
-    .tab-label:hover { color: var(--hover, #201842); }
+    .tab-label:hover { color: var(--hover, #213e61); }
     .tab-label .tab-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .demo > input:nth-of-type(2):checked ~ .tab-strip { --selected: 1; }
     .demo > input:nth-of-type(3):checked ~ .tab-strip { --selected: 2; }
@@ -101,40 +101,44 @@
     .demo > input:nth-of-type(2):focus-visible ~ .tab-strip label:nth-of-type(2),
     .demo > input:nth-of-type(3):focus-visible ~ .tab-strip label:nth-of-type(3),
     .demo > input:nth-of-type(4):focus-visible ~ .tab-strip label:nth-of-type(4) {
-      outline: 3px solid var(--focus, #9579e6);
-      outline-offset: -6px;
-      border-radius: 11px 11px 4px 4px;
+      outline: 2px solid var(--focus, #1b5f9d);
+      outline-offset: -5px;
+      border-radius: 5px 5px 2px 2px;
     }
+    .demo > input:nth-of-type(1):checked:focus-visible ~ .tab-strip label:nth-of-type(1),
+    .demo > input:nth-of-type(2):checked:focus-visible ~ .tab-strip label:nth-of-type(2),
+    .demo > input:nth-of-type(3):checked:focus-visible ~ .tab-strip label:nth-of-type(3),
+    .demo > input:nth-of-type(4):checked:focus-visible ~ .tab-strip label:nth-of-type(4) { outline-color: #fff; }
     .tab-panel { display: none; }
     .demo > input:nth-of-type(1):checked ~ .tab-panels .tab-panel:nth-child(1),
     .demo > input:nth-of-type(2):checked ~ .tab-panels .tab-panel:nth-child(2),
     .demo > input:nth-of-type(3):checked ~ .tab-panels .tab-panel:nth-child(3),
     .demo > input:nth-of-type(4):checked ~ .tab-panels .tab-panel:nth-child(4) { display: block; }
 
-    .file-preview { border-color: #34394b; background: #1b1d29; color: #eef0f8; }
-    .file-preview .tab-strip { --fill: #30364a; --line: #ab96fa; --inactive: #a7afc1; --hover: #f2f3ff; border-color: #34394b; }
-    .file-preview .preview-body { min-height: 225px; background: #1d202d; }
-    .file-preview .preview-body h3 { color: #f6f6fc; }
-    .file-preview .preview-body p { color: #b8bfce; }
-    .file-preview .preview-body .kicker { color: #b39cfc; }
-    .file-icon { flex: 0 0 auto; display: inline-grid; width: 21px; height: 21px; place-items: center; border-radius: 5px; background: #e67843; color: #fff; font-size: .73rem; font-weight: 800; }
-    .file-icon.css { background: #3673cc; }
-    .file-icon.json { background: #b48b36; color: #171b26; }
-    .file-icon.md { background: #687285; }
-    .file-preview code { color: #d6b6ff; font: .92rem/1.7 ui-monospace, SFMono-Regular, Consolas, monospace; }
-    .editor-line { display: block; margin-top: 15px; padding: 11px 14px; border: 1px solid #33394a; border-radius: 7px; background: #171a26; overflow: auto; white-space: nowrap; }
+    .file-preview { border-color: #344256; background: #202a38; color: #eef3fa; }
+    .file-preview .tab-strip { --fill: #364b62; --line: #8fc8f1; --inactive: #b5c1d0; --hover: #f2f6fb; --focus: #d0eaff; border-color: #344256; }
+    .file-preview .preview-body { min-height: 210px; background: #202a38; }
+    .file-preview .preview-body h3 { color: #f3f7fc; }
+    .file-preview .preview-body p { color: #c0cad6; }
+    .file-preview .preview-body .kicker { color: #8fc8f1; }
+    .file-icon { flex: 0 0 auto; display: inline-grid; width: 18px; height: 18px; place-items: center; color: #e6a167; font-size: .8rem; font-weight: 750; }
+    .file-icon.css { color: #91bdf4; }
+    .file-icon.json { color: #e2c184; }
+    .file-icon.md { color: #bac7d9; }
+    .file-preview code { color: #a9d5f5; font: .92rem/1.7 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .editor-line { display: block; margin-top: 15px; padding: 11px 14px; border: 1px solid #3b4a5f; border-radius: 4px; background: #1b2532; overflow: auto; white-space: nowrap; }
 
-    .implementation { margin-top: 38px; padding: 18px 21px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+    .implementation { margin-top: 38px; padding: 18px 21px; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
     .implementation summary { cursor: pointer; font-weight: 750; }
     .implementation p { max-width: 760px; color: #4e5367; }
-    .implementation pre { overflow-x: auto; padding: 15px; border-radius: 8px; background: #f2f0f8; color: #302659; font: .86rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .implementation pre { overflow-x: auto; padding: 15px; border-radius: 4px; background: #eef3f8; color: #2a445e; font: .86rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; }
     .implementation code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
     footer { margin-top: 30px; color: var(--muted); font-size: .9rem; }
     @media (max-width: 590px) {
       .page { width: min(100% - 24px, 980px); padding-top: 23px; }
       .preview-body { padding: 20px 17px; }
       .tab-label { gap: 4px; padding-inline: 3px; font-size: .875rem; }
-      .file-icon { width: 17px; height: 17px; font-size: .64rem; }
+      .file-icon { width: 16px; height: 16px; font-size: .72rem; }
     }
     @media (prefers-reduced-motion: reduce) {
       .moving-fill, .moving-ink, .tab-label { transition: none; }
@@ -151,9 +155,9 @@
     <a class="back" href="../">← All demos</a>
     <header>
       <p class="eyebrow">Interaction lab / CSS only</p>
-      <h1>Ink slider with a moving tab background</h1>
-      <p class="intro">The colored area and underline slide together. The tab strip itself stays transparent; only the selected tab receives the moving fill.</p>
-      <ul class="facts"><li>No JavaScript</li><li>Click or use arrow keys</li><li>Respects reduced motion</li></ul>
+      <h1>Tabs with a moving active background</h1>
+      <p class="intro">A quick, steady slide moves the active fill and underline together. The rest of the tab header stays transparent.</p>
+      <ul class="facts"><li>No JavaScript</li><li>Keyboard accessible</li><li>Respects reduced motion</li></ul>
     </header>
 
     <section aria-labelledby="ink-title">
@@ -174,7 +178,7 @@
           <section class="tab-panel" aria-labelledby="label-ink-overview"><p class="kicker">Overview</p><h3>One active tab, one moving background.</h3><p>Only the selected tab has a fill. The rest of the header remains transparent, just like the original ink slider.</p></section>
           <section class="tab-panel" aria-labelledby="label-ink-pricing"><p class="kicker">Pricing</p><h3>The width stays aligned.</h3><p>All four tabs have equal widths. CSS can slide the filled rectangle and the underline exactly one tab at a time.</p></section>
           <section class="tab-panel" aria-labelledby="label-ink-reviews"><p class="kicker">Reviews</p><h3>Keyboard interaction comes built in.</h3><p>Focus the tab row and press the left or right arrow key. Native radio buttons update the visible panel automatically.</p></section>
-          <section class="tab-panel" aria-labelledby="label-ink-support"><p class="kicker">Support</p><h3>Motion is optional.</h3><p>If the operating system requests reduced motion, the highlight changes position immediately.</p></section>
+          <section class="tab-panel" aria-labelledby="label-ink-support"><p class="kicker">Support</p><h3>Motion is optional.</h3><p>The transition takes 180 milliseconds and does not overshoot. Reduced-motion settings turn it off.</p></section>
         </div>
       </div>
     </section>
@@ -209,7 +213,7 @@
 .moving-fill, .moving-ink {
   width: calc((100% - 8px) / 4);
   transform: translateX(calc(var(--selected) * 100%));
-  transition: transform .42s cubic-bezier(.65, 0, .35, 1);
+  transition: transform 180ms cubic-bezier(.2, 0, 0, 1);
 }
 .demo &gt; input:nth-of-type(2):checked ~ .tab-strip { --selected: 1; }
 /* Similarly: third input = 2, fourth input = 3. */</code></pre>
