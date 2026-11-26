@@ -187,14 +187,14 @@
       font-weight: 700;
       line-height: 1.25;
       cursor: pointer;
-      transition: background-color 120ms ease, transform 120ms ease;
+      transition: background-color 120ms ease;
     }
     @media (hover: hover) and (pointer: fine) {
       .primary-button:hover:not(:disabled) { background: var(--btn-hover); }
     }
     .primary-button:active:not(:disabled) {
       background: var(--btn-pressed);
-      transform: translateY(1px);
+      box-shadow: inset 0 1px 2px rgb(0 0 0 / .18);
     }
     .primary-button:focus-visible {
       outline: 0;
@@ -289,66 +289,33 @@
       line-height: 1.2;
       white-space: nowrap;
       cursor: pointer;
-      transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease, filter 140ms ease, transform 140ms ease;
+      transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
     }
-    .style-lift { box-shadow: 0 4px 0 rgb(18 38 68 / .18); }
+    .style-shadow { box-shadow: 0 2px 4px rgb(18 38 68 / .12); }
     .style-frame {
       border-color: rgb(255 255 255 / .9);
       box-shadow: inset 0 0 0 1px rgb(255 255 255 / .28);
     }
-    .style-glow {
-      box-shadow:
-        0 0 0 2px color-mix(in srgb, var(--btn-primary) 12%, transparent),
-        0 0 16px color-mix(in srgb, var(--btn-primary) 28%, transparent);
-    }
+    .style-corners { border-radius: 4px; }
+    .style-edge { border-bottom: 4px solid rgb(0 0 0 / .24); }
     @media (hover: hover) and (pointer: fine) {
       .style-choice:hover { background: var(--btn-hover); }
-      .style-lift:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 9px 18px rgb(18 38 68 / .24);
-      }
+      .style-shadow:hover { box-shadow: 0 4px 8px rgb(18 38 68 / .18); }
       .style-frame:hover {
         border-color: #fff;
         box-shadow: inset 0 0 0 1px rgb(255 255 255 / .35);
       }
-      .style-glow:hover {
-        filter: brightness(1.07);
-        box-shadow:
-          0 0 0 3px color-mix(in srgb, var(--btn-primary) 14%, transparent),
-          0 0 20px color-mix(in srgb, var(--btn-primary) 40%, transparent);
-      }
-      .style-edge:hover {
-        border-bottom-color: rgb(255 255 255 / .72);
-        box-shadow: 0 4px 8px rgb(18 38 68 / .18);
-      }
+      .style-edge:hover { border-bottom-color: rgb(0 0 0 / .35); }
     }
     .style-choice:active {
       background: var(--btn-pressed);
-      transform: translateY(1px);
-    }
-    .style-lift:active {
-      box-shadow: 0 2px 5px rgb(18 38 68 / .2);
-    }
-    .style-glow:active {
-      filter: none;
-      box-shadow: 0 1px 6px color-mix(in srgb, var(--btn-primary) 18%, transparent);
-    }
-    .style-edge { border-bottom: 4px solid rgb(0 0 0 / .24); }
-    .style-edge:active {
-      transform: translateY(2px);
-      border-bottom-width: 2px;
-    }
-    .primary-button:focus-visible, .style-choice:focus-visible {
-      outline: 0;
-      box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
+      box-shadow: inset 0 1px 2px rgb(0 0 0 / .18);
     }
     .style-frame:focus-visible {
       box-shadow: inset 0 0 0 2px #fff, 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
     }
-    .style-glow:focus-visible {
-      box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring), 0 0 14px rgb(18 38 68 / .22);
-    }
-    .style-edge:focus-visible {
+    .style-choice:focus-visible {
+      outline: 0;
       box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
     }
     .code-panel { padding: 20px; }
@@ -428,8 +395,8 @@
   <header>
     <div class="wrap">
       <div class="brand">Henk7 · UI playground</div>
-      <h1>Five styles for one button.</h1>
-      <p class="lede">Compare five treatments for a colored button with white text. Hover or tab through the samples, then choose one to use in the live preview.</p>
+      <h1>Clear button styles for admin apps.</h1>
+      <p class="lede">Designed for administration screens: steady buttons, clear hover feedback, and a strong keyboard focus ring. Choose the treatment that fits your app.</p>
     </div>
   </header>
 
@@ -483,40 +450,40 @@
         <section class="panel gallery-panel" aria-labelledby="gallery-title">
           <div class="gallery-head">
             <h2 id="gallery-title">Choose a style</h2>
-            <p>Hover or tab through the samples. Selecting one updates the live preview and CSS.</p>
+            <p>All options stay still. Hover, press, or Tab through the samples to compare their states.</p>
           </div>
           <div class="style-grid" aria-label="Five button styles">
             <article class="style-card is-selected" data-style-card="clean">
               <div class="style-card-head">
-                <div><h3>Clean shift</h3><p>Simple color change with a crisp focus ring.</p></div>
+                <div><h3>Clean shift</h3><p>Flat fill change on hover, with a clear keyboard ring.</p></div>
                 <span class="selected-badge">In use</span>
               </div>
               <button class="style-choice style-clean" data-style="clean" type="button" aria-label="Choose Clean shift style" aria-pressed="true">Save changes</button>
             </article>
-            <article class="style-card" data-style-card="lift">
+            <article class="style-card" data-style-card="shadow">
               <div class="style-card-head">
-                <div><h3>Soft lift</h3><p>Shallow shadow at rest, stronger lift on hover.</p></div>
+                <div><h3>Soft shadow</h3><p>Subtle shadow deepens on hover and presses inward.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
-              <button class="style-choice style-lift" data-style="lift" type="button" aria-label="Choose Soft lift style" aria-pressed="false">Save changes</button>
+              <button class="style-choice style-shadow" data-style="shadow" type="button" aria-label="Choose Soft shadow style" aria-pressed="false">Save changes</button>
             </article>
             <article class="style-card" data-style-card="frame">
               <div class="style-card-head">
-                <div><h3>White frame</h3><p>White inner frame stays visible while hovering or focused.</p></div>
+                <div><h3>White frame</h3><p>Thin white edge reinforces the button boundary.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
               <button class="style-choice style-frame" data-style="frame" type="button" aria-label="Choose White frame style" aria-pressed="false">Save changes</button>
             </article>
-            <article class="style-card" data-style-card="glow">
+            <article class="style-card" data-style-card="corners">
               <div class="style-card-head">
-                <div><h3>Soft glow</h3><p>Colored halo at rest grows when hovered.</p></div>
+                <div><h3>Crisp corners</h3><p>Tighter shape helps separate dense controls.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
-              <button class="style-choice style-glow" data-style="glow" type="button" aria-label="Choose Soft glow style" aria-pressed="false">Save changes</button>
+              <button class="style-choice style-corners" data-style="corners" type="button" aria-label="Choose Crisp corners style" aria-pressed="false">Save changes</button>
             </article>
             <article class="style-card" data-style-card="edge">
               <div class="style-card-head">
-                <div><h3>Bottom edge</h3><p>Raised lower edge sinks flat on press.</p></div>
+                <div><h3>Bottom edge</h3><p>Dark lower edge gives the filled button a clear boundary.</p></div>
                 <span class="selected-badge" hidden>In use</span>
               </div>
               <button class="style-choice style-edge" data-style="edge" type="button" aria-label="Choose Bottom edge style" aria-pressed="false">Save changes</button>
@@ -569,9 +536,9 @@
 
       const styleNames = {
         clean: "Clean shift",
-        lift: "Soft lift",
+        shadow: "Soft shadow",
         frame: "White frame",
-        glow: "Soft glow",
+        corners: "Crisp corners",
         edge: "Bottom edge"
       };
       let selectedStyle = "clean";
@@ -586,42 +553,39 @@
           "  background: " + primary + ";",
           "  color: #FFFFFF;",
           "  border: 2px solid transparent;",
-          "  border-radius: 9px;",
-          "  transition: background-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;",
-          "}",
-          ""
-        ].join("\n");
+          "  border-radius: 8px;",
+          "  transition: background-color 140ms ease, box-shadow 140ms ease;",
+          "}"
+        ];
         const hoverRule = ".primary-button:hover { background: " + hover + ";";
         const activeRule = ".primary-button:active { background: " + pressed + ";";
         const initialRules = {
           clean: [],
-          lift: [".primary-button { box-shadow: 0 4px 0 rgb(18 38 68 / .18); }"],
+          shadow: [".primary-button { box-shadow: 0 2px 4px rgb(18 38 68 / .12); }"],
           frame: [".primary-button { border-color: rgb(255 255 255 / .9); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .28); }"],
-          glow: [
-            ".primary-button { box-shadow: 0 0 0 2px color-mix(in srgb, " + primary + " 12%, transparent), 0 0 16px color-mix(in srgb, " + primary + " 28%, transparent); }"
-          ],
+          corners: [".primary-button { border-radius: 4px; }"],
           edge: [".primary-button { border-bottom: 4px solid rgb(0 0 0 / .24); }"]
         };
         const styleRules = {
           clean: [
             hoverRule + " }",
-            activeRule + " }"
+            activeRule + " box-shadow: inset 0 1px 2px rgb(0 0 0 / .18); }"
           ],
-          lift: [
-            hoverRule + " transform: translateY(-2px); box-shadow: 0 9px 18px rgb(18 38 68 / .24); }",
-            activeRule + " transform: translateY(1px); box-shadow: 0 2px 5px rgb(18 38 68 / .2); }"
+          shadow: [
+            hoverRule + " box-shadow: 0 4px 8px rgb(18 38 68 / .18); }",
+            activeRule + " box-shadow: inset 0 1px 2px rgb(0 0 0 / .18); }"
           ],
           frame: [
             hoverRule + " border-color: #FFFFFF; }",
             activeRule + " border-color: #FFFFFF; }"
           ],
-          glow: [
-            hoverRule + " filter: brightness(1.07); box-shadow: 0 0 0 3px color-mix(in srgb, " + primary + " 14%, transparent), 0 0 20px color-mix(in srgb, " + primary + " 40%, transparent); }",
-            activeRule + " filter: none; transform: translateY(1px); box-shadow: 0 1px 6px color-mix(in srgb, " + primary + " 18%, transparent); }"
+          corners: [
+            hoverRule + " }",
+            activeRule + " box-shadow: inset 0 1px 2px rgb(0 0 0 / .18); }"
           ],
           edge: [
-            hoverRule + " border-bottom-color: rgb(255 255 255 / .72); }",
-            activeRule + " transform: translateY(2px); border-bottom-width: 2px; }"
+            hoverRule + " border-bottom-color: rgb(0 0 0 / .35); }",
+            activeRule + " border-bottom-color: rgb(0 0 0 / .42); }"
           ]
         };
         const focusRules = [
@@ -638,11 +602,12 @@
           "    box-shadow: none;",
           "  }",
           "}"
-        ].join("\n");
-        return shared + "/* " + styleNames[selectedStyle] + " */\n" +
+        ];
+        return shared.join("\n") + "\n/* " + styleNames[selectedStyle] + " */\n" +
           initialRules[selectedStyle].join("\n") +
           (initialRules[selectedStyle].length ? "\n" : "") +
-          styleRules[selectedStyle].join("\n") + focusRules;
+          styleRules[selectedStyle].join("\n") +
+          focusRules.join("\n");
       }
 
       function render() {
