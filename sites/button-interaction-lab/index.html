@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An interactive playground for white text buttons, hover states, keyboard focus rings, and pressed states.">
-  <title>Button interaction lab · Henk7</title>
+  <meta name="description" content="Compare five interactive button styles with white text, hover effects, and keyboard focus rings.">
+  <title>Button style chooser · Henk7</title>
   <style>
     :root {
       color-scheme: light;
@@ -222,55 +222,122 @@
       margin-bottom: 15px;
     }
     .gallery-head p { margin: 0; color: var(--muted); font-size: .86rem; }
-    .state-grid {
+    .style-grid {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 10px;
     }
-    .state-card {
+    .style-card {
+      display: flex;
       min-width: 0;
-      padding: 11px 8px 9px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 9px;
+      padding: 12px 10px 10px;
       border: 1px solid #e7ebf1;
-      border-radius: 11px;
+      border-radius: 12px;
       background: #fbfcfe;
+      transition: border-color 140ms ease, background-color 140ms ease;
     }
-    .state-card h3 {
-      margin: 0 0 9px;
-      color: #39475a;
-      font-size: .78rem;
-      line-height: 1.3;
-      text-align: center;
+    .style-card.is-selected {
+      border-color: #8ba9f4;
+      background: #f2f6ff;
+      box-shadow: inset 0 0 0 1px #d8e3ff;
     }
-    .state-preview {
-      display: grid;
-      place-items: center;
-      min-height: 72px;
-      padding: 8px 2px;
+    .style-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 7px;
+      min-height: 53px;
     }
-    .button-look {
+    .style-card h3 {
+      margin: 0;
+      color: #26364d;
+      font-size: .88rem;
+      line-height: 1.25;
+    }
+    .style-card p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: .76rem;
+      line-height: 1.35;
+    }
+    .selected-badge {
+      flex: 0 0 auto;
+      padding: 3px 6px;
+      border-radius: 999px;
+      background: #e4ecff;
+      color: #3159c7;
+      font-size: .68rem;
+      font-weight: 800;
+    }
+    .selected-badge[hidden] { display: none; }
+    .style-choice {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 40px;
-      max-width: 100%;
-      padding: 8px 10px;
+      width: 100%;
+      min-height: 42px;
+      padding: 9px 8px;
       border: 2px solid transparent;
       border-radius: 8px;
       background: var(--btn-primary);
       color: #fff;
-      font-size: .82rem;
-      font-weight: 700;
+      font-size: .78rem;
+      font-weight: 750;
       line-height: 1.2;
       white-space: nowrap;
+      cursor: pointer;
+      transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease, filter 140ms ease, transform 140ms ease;
     }
-    .state-hover .button-look { background: var(--btn-hover); }
-    .state-pressed .button-look { background: var(--btn-pressed); transform: translateY(1px); }
-    .state-focus .button-look {
+    @media (hover: hover) and (pointer: fine) {
+      .style-choice:hover { background: var(--btn-hover); }
+      .style-lift:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 9px 18px rgb(18 38 68 / .24);
+      }
+      .style-frame:hover {
+        border-color: #fff;
+        box-shadow: inset 0 0 0 1px rgb(255 255 255 / .35);
+      }
+      .style-glow:hover {
+        filter: brightness(1.07);
+        box-shadow: 0 0 0 4px rgb(255 255 255 / .22), 0 8px 20px rgb(18 38 68 / .2);
+      }
+      .style-edge:hover {
+        border-bottom-color: rgb(255 255 255 / .72);
+        box-shadow: 0 4px 8px rgb(18 38 68 / .18);
+      }
+    }
+    .style-choice:active {
+      background: var(--btn-pressed);
+      transform: translateY(1px);
+    }
+    .style-lift:active {
+      box-shadow: 0 2px 5px rgb(18 38 68 / .2);
+    }
+    .style-glow:active {
+      filter: none;
+      box-shadow: none;
+    }
+    .style-edge { border-bottom: 4px solid rgb(0 0 0 / .24); }
+    .style-edge:active {
+      transform: translateY(2px);
+      border-bottom-width: 2px;
+    }
+    .primary-button:focus-visible, .style-choice:focus-visible {
+      outline: 0;
       box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
     }
-    .state-disabled .button-look {
-      background: #748197;
-      opacity: .58;
+    .style-frame:focus-visible {
+      box-shadow: inset 0 0 0 2px #fff, 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
+    }
+    .style-glow:focus-visible {
+      box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring), 0 0 14px rgb(18 38 68 / .22);
+    }
+    .style-edge:focus-visible {
+      box-shadow: 0 0 0 3px var(--focus-gap), 0 0 0 6px var(--focus-ring);
     }
     .code-panel { padding: 20px; }
     .code-heading {
@@ -309,7 +376,7 @@
     footer { padding: 0 0 30px; color: var(--muted); font-size: .84rem; }
     @media (max-width: 880px) {
       .layout { grid-template-columns: minmax(220px, 280px) minmax(0, 1fr); }
-      .state-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .style-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
     @media (max-width: 680px) {
       .wrap { width: min(100% - 28px, 560px); }
@@ -320,12 +387,12 @@
       .right-column { order: 1; }
       .gallery-head { display: block; }
       .gallery-head p { margin-top: 5px; }
-      .state-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .style-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 360px) {
       .state-grid { grid-template-columns: 1fr 1fr; }
-      .state-card { padding-inline: 5px; }
-      .button-look { padding-inline: 7px; font-size: .75rem; }
+      .style-card { padding-inline: 7px; }
+      .style-choice { padding-inline: 5px; font-size: .7rem; }
       .live-heading { display: block; }
       .live-chip { display: inline-block; margin-top: 10px; }
     }
@@ -333,7 +400,7 @@
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
     }
     @media (forced-colors: active) {
-      .primary-button:focus-visible {
+      .primary-button:focus-visible, .style-choice:focus-visible {
         outline: 2px solid Highlight;
         outline-offset: 3px;
         box-shadow: none;
@@ -341,11 +408,7 @@
       .copy-button:focus-visible, .back-link:focus-visible {
         outline-color: Highlight;
       }
-      .state-focus .button-look {
-        outline: 2px solid Highlight;
-        outline-offset: 3px;
-        box-shadow: none;
-      }
+
     }
   </style>
 </head>
@@ -353,8 +416,8 @@
   <header>
     <div class="wrap">
       <div class="brand">Henk7 · UI playground</div>
-      <h1>A button, five states.</h1>
-      <p class="lede">Explore a colored button with white text. Tune its colors, hover the live example, then use Tab to see the keyboard focus ring.</p>
+      <h1>Five styles for one button.</h1>
+      <p class="lede">Compare five treatments for a colored button with white text. Hover or tab through the samples, then choose one to use in the live preview.</p>
     </div>
   </header>
 
@@ -394,52 +457,57 @@
         <section class="panel live-panel" aria-labelledby="live-title">
           <div class="live-heading">
             <div>
-              <h2 id="live-title">Try the real button</h2>
-              <p>Hover it, tab to it, or press and hold to compare the states.</p>
+              <h2 id="live-title">Try the selected style</h2>
+              <p>Test the selected treatment with your pointer or keyboard.</p>
             </div>
-            <span class="live-chip">Interactive</span>
+            <span class="live-chip">Using <span id="selectedStyleName" aria-live="polite">Clean shift</span></span>
           </div>
           <div class="live-stage">
-            <button class="primary-button" id="liveButton" type="button">Save changes</button>
+            <button class="primary-button style-clean" id="liveButton" type="button">Save changes</button>
           </div>
           <p class="activation" id="activationStatus" aria-live="polite">Use Tab to reach the button; Enter or Space activates it.</p>
         </section>
 
         <section class="panel gallery-panel" aria-labelledby="gallery-title">
           <div class="gallery-head">
-            <h2 id="gallery-title">State gallery</h2>
-            <p>Side-by-side samples. Focus sample shows the two-color ring.</p>
+            <h2 id="gallery-title">Choose a style</h2>
+            <p>Hover or tab through the samples. Selecting one updates the live preview and CSS.</p>
           </div>
-          <div class="state-grid">
-            <article class="state-card">
-              <h3>Default</h3>
-              <div class="state-preview" role="img" aria-label="Default button state">
-                <span class="button-look" aria-hidden="true">Save changes</span>
+          <div class="style-grid" aria-label="Five button styles">
+            <article class="style-card is-selected" data-style-card="clean">
+              <div class="style-card-head">
+                <div><h3>Clean shift</h3><p>Simple color change with a crisp focus ring.</p></div>
+                <span class="selected-badge">In use</span>
               </div>
+              <button class="style-choice style-clean" data-style="clean" type="button" aria-label="Choose Clean shift style" aria-pressed="true">Save changes</button>
             </article>
-            <article class="state-card">
-              <h3>Hover</h3>
-              <div class="state-preview state-hover" role="img" aria-label="Hover state with darker fill">
-                <span class="button-look" aria-hidden="true">Save changes</span>
+            <article class="style-card" data-style-card="lift">
+              <div class="style-card-head">
+                <div><h3>Soft lift</h3><p>Rises on hover, settles when pressed.</p></div>
+                <span class="selected-badge" hidden>In use</span>
               </div>
+              <button class="style-choice style-lift" data-style="lift" type="button" aria-label="Choose Soft lift style" aria-pressed="false">Save changes</button>
             </article>
-            <article class="state-card">
-              <h3>Keyboard focus</h3>
-              <div class="state-preview state-focus" role="img" aria-label="Keyboard focus state with a white gap and dark outer ring">
-                <span class="button-look" aria-hidden="true">Save changes</span>
+            <article class="style-card" data-style-card="frame">
+              <div class="style-card-head">
+                <div><h3>White frame</h3><p>Adds a clear inner edge on hover and focus.</p></div>
+                <span class="selected-badge" hidden>In use</span>
               </div>
+              <button class="style-choice style-frame" data-style="frame" type="button" aria-label="Choose White frame style" aria-pressed="false">Save changes</button>
             </article>
-            <article class="state-card">
-              <h3>Pressed</h3>
-              <div class="state-preview state-pressed" role="img" aria-label="Pressed state with darker fill and slight movement">
-                <span class="button-look" aria-hidden="true">Save changes</span>
+            <article class="style-card" data-style-card="glow">
+              <div class="style-card-head">
+                <div><h3>Soft glow</h3><p>Brightens on hover with a gentle halo.</p></div>
+                <span class="selected-badge" hidden>In use</span>
               </div>
+              <button class="style-choice style-glow" data-style="glow" type="button" aria-label="Choose Soft glow style" aria-pressed="false">Save changes</button>
             </article>
-            <article class="state-card">
-              <h3>Disabled</h3>
-              <div class="state-preview state-disabled" role="img" aria-label="Disabled state">
-                <span class="button-look" aria-hidden="true">Save changes</span>
+            <article class="style-card" data-style-card="edge">
+              <div class="style-card-head">
+                <div><h3>Bottom edge</h3><p>Gives the button depth, then presses flat.</p></div>
+                <span class="selected-badge" hidden>In use</span>
               </div>
+              <button class="style-choice style-edge" data-style="edge" type="button" aria-label="Choose Bottom edge style" aria-pressed="false">Save changes</button>
             </article>
           </div>
         </section>
@@ -487,24 +555,56 @@
         element.classList.toggle("low", !passes);
       }
 
+      const styleNames = {
+        clean: "Clean shift",
+        lift: "Soft lift",
+        frame: "White frame",
+        glow: "Soft glow",
+        edge: "Bottom edge"
+      };
+      let selectedStyle = "clean";
+
       function currentCss() {
         const primary = document.getElementById("primaryColor").value.toUpperCase();
         const hover = document.getElementById("hoverColor").value.toUpperCase();
         const pressed = document.getElementById("pressedColor").value.toUpperCase();
         const focus = document.getElementById("focusColor").value.toUpperCase();
-        return [
+        const shared = [
           ".primary-button {",
           "  background: " + primary + ";",
           "  color: #FFFFFF;",
+          "  border: 2px solid transparent;",
+          "  border-radius: 9px;",
+          "  transition: background-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;",
           "}",
-          "",
-          ".primary-button:hover {",
-          "  background: " + hover + ";",
-          "}",
-          "",
-          ".primary-button:active {",
-          "  background: " + pressed + ";",
-          "}",
+          ""
+        ].join("\n");
+        const hoverRule = ".primary-button:hover { background: " + hover + ";";
+        const activeRule = ".primary-button:active { background: " + pressed + ";";
+        const styleRules = {
+          clean: [
+            hoverRule + " }",
+            activeRule + " }"
+          ],
+          lift: [
+            hoverRule + " transform: translateY(-2px); box-shadow: 0 9px 18px rgb(18 38 68 / .24); }",
+            activeRule + " transform: translateY(1px); box-shadow: 0 2px 5px rgb(18 38 68 / .2); }"
+          ],
+          frame: [
+            hoverRule + " border-color: #FFFFFF; }",
+            activeRule + " border-color: #FFFFFF; }"
+          ],
+          glow: [
+            hoverRule + " filter: brightness(1.07); box-shadow: 0 0 0 4px rgb(255 255 255 / .22), 0 8px 20px rgb(18 38 68 / .2); }",
+            activeRule + " filter: none; box-shadow: none; transform: translateY(1px); }"
+          ],
+          edge: [
+            ".primary-button { border-bottom: 4px solid rgb(0 0 0 / .24); }",
+            hoverRule + " border-bottom-color: rgb(255 255 255 / .72); }",
+            activeRule + " transform: translateY(2px); border-bottom-width: 2px; }"
+          ]
+        };
+        const focusRules = [
           "",
           ".primary-button:focus-visible {",
           "  outline: 0;",
@@ -519,6 +619,8 @@
           "  }",
           "}"
         ].join("\n");
+        return shared + "/* " + styleNames[selectedStyle] + " */\n" +
+          styleRules[selectedStyle].join("\n") + focusRules;
       }
 
       function render() {
@@ -535,8 +637,27 @@
         copyStatus.textContent = "";
       }
 
+      function selectStyle(style) {
+        if (!styleNames[style]) return;
+        selectedStyle = style;
+        document.getElementById("selectedStyleName").textContent = styleNames[style];
+        document.getElementById("liveButton").className = "primary-button style-" + style;
+        for (const button of document.querySelectorAll(".style-choice")) {
+          const selected = button.dataset.style === style;
+          button.setAttribute("aria-pressed", String(selected));
+          const card = button.closest(".style-card");
+          card.classList.toggle("is-selected", selected);
+          card.querySelector(".selected-badge").hidden = !selected;
+        }
+        cssSnippet.textContent = currentCss();
+        copyStatus.textContent = "";
+      }
+
       for (const field of fields) {
         document.getElementById(field.input).addEventListener("input", render);
+      }
+      for (const button of document.querySelectorAll(".style-choice")) {
+        button.addEventListener("click", () => selectStyle(button.dataset.style));
       }
 
       document.getElementById("liveButton").addEventListener("click", () => {
@@ -555,6 +676,7 @@
       });
 
       render();
+      selectStyle("clean");
     })();
   </script>
 </body>
