@@ -3,8 +3,8 @@
   "size": 7,
   "country": "AT",
   "currency": "EUR",
-  "checked_at": "2026-11-26T04:37:22+01:00",
-  "checked_label": "Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna)",
+  "checked_at": "2026-11-27T01:06:33+01:00",
+  "checked_label": "Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna)",
   "thresholds": {
     "great": 0.3,
     "good": 0.35,
@@ -30,7 +30,7 @@
       "total": 57.99,
       "unit_price": 0.4602380952380953,
       "rankable": true,
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "rank": 1
     },
     {
@@ -41,7 +41,7 @@
       "shipping": 0,
       "shipping_note": "Versandkostenfrei ab €49; Einzelbox erfüllt die Schwelle.",
       "availability": "Online verfügbar; Lieferung in 2–3 Werktagen.",
-      "conditions": "Kein Coupon eingerechnet. Die Seite zeigt eine 25%-Aktion auf zwei Produkte; Anwendbarkeit auf dieses Angebot wurde nicht bestätigt und nicht abgezogen.",
+      "conditions": "Kein Coupon eingerechnet. Eine sichtbare 25%-Aktion auf zwei Produkte wurde nicht abgezogen, da die Anwendbarkeit auf dieses Angebot nicht bestätigt war.",
       "validity": null,
       "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
       "pack": "Monatsbox · Baby-Dry Pants Größe 7",
@@ -50,7 +50,7 @@
       "total": 62.9,
       "unit_price": 0.4992063492063492,
       "rankable": true,
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "rank": 2
     },
     {
@@ -70,7 +70,7 @@
       "total": 63.36,
       "unit_price": 0.5028571428571429,
       "rankable": true,
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "rank": 3
     },
     {
@@ -79,8 +79,8 @@
       "count": 126,
       "item_price": 60.96,
       "shipping": 3.9,
-      "shipping_note": "Pflichtversand nach Österreich €3,90; Gesamtpreis berücksichtigt.",
-      "availability": "Noch 6 Stück auf Lager; angezeigtes Lieferfenster Sa 28.11.2026 bei Bestellung bis Do 26.11. 23:59.",
+      "shipping_note": "Pflichtversand nach Österreich €3,90; im Gesamtpreis enthalten.",
+      "availability": "Bestandsanzeige 6 Stück; das zuvor angezeigte Lieferfenster galt nur bei Bestellung bis 26.11.2026, 23:59 Uhr; heute keine belastbare neue ETA.",
       "conditions": "Angebotspreis; Gültigkeit nicht angegeben.",
       "validity": null,
       "url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr7",
@@ -90,7 +90,7 @@
       "total": 64.86,
       "unit_price": 0.5147619047619048,
       "rankable": true,
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "rank": 4
     },
     {
@@ -110,28 +110,8 @@
       "total": 65.9,
       "unit_price": 0.523015873015873,
       "rankable": true,
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "rank": 5
-    },
-    {
-      "retailer": "Müller Österreich",
-      "provider": "Müller",
-      "count": 126,
-      "item_price": 65.9,
-      "shipping": 0,
-      "shipping_note": "Versandkostenfrei ab €49; Einzelbox erfüllt die Schwelle.",
-      "availability": "Online lieferbar in 2–4 Werktagen; kostenfreie Abholung in Filiale möglich.",
-      "conditions": "Kein zusätzlicher Coupon eingerechnet.",
-      "validity": null,
-      "url": "https://www.mueller.at/p/pampers-baby-dry-pants-gr-7-15-kg-monatsbox-IPN2887002/",
-      "pack": "Monatsbox · Baby-Dry Pants Größe 7",
-      "source_url": "https://www.mueller.at/p/pampers-baby-dry-pants-gr-7-15-kg-monatsbox-IPN2887002/",
-      "link_label": "Direkt zum Händlerangebot ↗",
-      "total": 65.9,
-      "unit_price": 0.523015873015873,
-      "rankable": true,
-      "checked_at": "2026-11-26T04:37:22+01:00",
-      "rank": 6
     }
   ],
   "history": [
@@ -4823,12 +4803,125 @@
           "rank": 6
         }
       ]
+    },
+    {
+      "date": "2026-11-27",
+      "checked_at": "2026-11-27T01:06:33+01:00",
+      "best_unit_price": 0.4602380952380953,
+      "best_total": 57.99,
+      "retailer": "0815.at",
+      "confirmed_provider_count": 5,
+      "requested_provider_count": 10,
+      "shortfall": 5,
+      "news_alert": false,
+      "top10": [
+        {
+          "retailer": "0815.at",
+          "provider": "0815.at",
+          "count": 126,
+          "item_price": 57.99,
+          "shipping": 0,
+          "shipping_note": "Gratisversand nach Österreich ab €50; Einzelkarton überschreitet die Schwelle.",
+          "availability": "8 Stück im Versandlager; Lieferzeit 1–3 Werktage.",
+          "conditions": "Ohne Coupon; optionaler Vorkasse-Rabatt nicht eingerechnet.",
+          "validity": null,
+          "url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-7-Extra-Large-17-kg/656659360",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 7",
+          "source_url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-7-Extra-Large-17-kg/656659360",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 57.99,
+          "unit_price": 0.4602380952380953,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 1
+        },
+        {
+          "retailer": "BIPA",
+          "provider": "BIPA",
+          "count": 126,
+          "item_price": 62.9,
+          "shipping": 0,
+          "shipping_note": "Versandkostenfrei ab €49; Einzelbox erfüllt die Schwelle.",
+          "availability": "Online verfügbar; Lieferung in 2–3 Werktagen.",
+          "conditions": "Kein Coupon eingerechnet. Eine sichtbare 25%-Aktion auf zwei Produkte wurde nicht abgezogen, da die Anwendbarkeit auf dieses Angebot nicht bestätigt war.",
+          "validity": null,
+          "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 7",
+          "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-7--17kgplus--monatsbox/B3-348112",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 62.9,
+          "unit_price": 0.4992063492063492,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 2
+        },
+        {
+          "retailer": "Galaxus.at",
+          "provider": "Galaxus",
+          "count": 126,
+          "item_price": 63.36,
+          "shipping": 0,
+          "shipping_note": "Kostenloser Versand.",
+          "availability": "5 Stück beim Lieferanten; angezeigtes Lieferfenster Mo 30.11.–Mi 2.12.2026.",
+          "conditions": "Kein Rabatt eingerechnet.",
+          "validity": null,
+          "url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-7-monatsbox-126-stk-windeln-23688437",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 7",
+          "source_url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-7-monatsbox-126-stk-windeln-23688437",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 63.36,
+          "unit_price": 0.5028571428571429,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 3
+        },
+        {
+          "retailer": "oh feliz",
+          "provider": "oh feliz",
+          "count": 126,
+          "item_price": 60.96,
+          "shipping": 3.9,
+          "shipping_note": "Pflichtversand nach Österreich €3,90; im Gesamtpreis enthalten.",
+          "availability": "Bestandsanzeige 6 Stück; das zuvor angezeigte Lieferfenster galt nur bei Bestellung bis 26.11.2026, 23:59 Uhr; heute keine belastbare neue ETA.",
+          "conditions": "Angebotspreis; Gültigkeit nicht angegeben.",
+          "validity": null,
+          "url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr7",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 7",
+          "source_url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr7",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 64.86,
+          "unit_price": 0.5147619047619048,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 4
+        },
+        {
+          "retailer": "dm.at",
+          "provider": "dm.at",
+          "count": 126,
+          "item_price": 65.9,
+          "shipping": 0,
+          "shipping_note": "Versandkostenfrei mit Mein-dm-Konto ab €49; Einzelbox erfüllt die Schwelle.",
+          "availability": "Lieferbar; Standardversand 1–3 Werktage.",
+          "conditions": "Mein-dm-Konto erforderlich; kein Coupon eingerechnet.",
+          "validity": null,
+          "url": "https://www.dm.at/p/d/1681514/pampers-baby-dry-baby-pants-baby-dry-gr-7-17-kg-monatsbox",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 7",
+          "source_url": "https://www.dm.at/p/d/1681514/pampers-baby-dry-baby-pants-baby-dry-gr-7-17-kg-monatsbox",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 65.9,
+          "unit_price": 0.523015873015873,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 5
+        }
+      ]
     }
   ],
-  "method": "Direktkontrolle Montag, 23. November 2026, 01:19:19 Uhr (Europe/Vienna). Je Größe höchstens ein bestes Angebot je Händler, nach tatsächlichem Stückpreis einschließlich Pflichtversand nach Österreich sortiert. 4 von 10 Zielhändlern je Größe frisch direkt bestätigt; 6 Händlerplätze offen. Angebotsverläufe nur anhand heute bestätigter Händlerdaten aktualisiert; historische Einträge und Startdaten unverändert.",
+  "method": "Direktprüfung Freitag, 27. November 2026, 01:06:33 Uhr (Europe/Vienna). Je Größe höchstens ein bestes Angebot je Händler, sortiert nach ungerundetem effektivem Stückpreis inklusive zwingendem Versand nach Österreich. Größe 6: 6/10 konkrete Händlerangebote bestätigt, 4 Plätze offen. Größe 7: 5/10 bestätigt, 5 Plätze offen. Amazon.de wurde ausdrücklich geprüft, aber wegen direkter HTTP-/Browserzugriffsfehler nicht verifiziert; keine Negativaussage. Müller Österreich für Größe 6 bestätigt; Größe 7 direkt nicht bestätigbar. Verlauf nur aus heute bestätigten Preisen ergänzt; keine rückwirkenden Händlerpreise.",
   "size6_check": {
-    "checked_at": "2026-11-26T04:37:22+01:00",
-    "checked_label": "Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna)",
+    "checked_at": "2026-11-27T01:06:33+01:00",
+    "checked_label": "Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna)",
     "threshold_eur_per_pants": 0.37,
     "special_threshold_eur_per_pants": 0.27,
     "news_alert": false,
@@ -4855,7 +4948,7 @@
         "total": 53.65,
         "unit_price": 0.388768115942029,
         "rankable": true,
-        "checked_at": "2026-11-26T04:37:22+01:00",
+        "checked_at": "2026-11-27T01:06:33+01:00",
         "rank": 1
       },
       {
@@ -4875,7 +4968,7 @@
         "total": 55.99,
         "unit_price": 0.40572463768115946,
         "rankable": true,
-        "checked_at": "2026-11-26T04:37:22+01:00",
+        "checked_at": "2026-11-27T01:06:33+01:00",
         "rank": 2
       },
       {
@@ -4886,7 +4979,7 @@
         "shipping": 0,
         "shipping_note": "Versandkostenfrei ab €49; Einzelbox erfüllt die Schwelle.",
         "availability": "Online verfügbar; Lieferung in 2–3 Werktagen.",
-        "conditions": "Kein Coupon eingerechnet. Die Seite zeigt eine 25%-Aktion auf zwei Produkte; Anwendbarkeit auf dieses Angebot wurde nicht bestätigt und nicht abgezogen.",
+        "conditions": "Kein Coupon eingerechnet. Eine sichtbare 25%-Aktion auf zwei Produkte wurde nicht abgezogen, da die Anwendbarkeit auf dieses Angebot nicht bestätigt war.",
         "validity": null,
         "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-6---13kg-19kg--monatsbox/B3-348110",
         "pack": "Monatsbox · Baby-Dry Pants Größe 6",
@@ -4895,7 +4988,7 @@
         "total": 59.9,
         "unit_price": 0.4340579710144927,
         "rankable": true,
-        "checked_at": "2026-11-26T04:37:22+01:00",
+        "checked_at": "2026-11-27T01:06:33+01:00",
         "rank": 3
       },
       {
@@ -4915,7 +5008,7 @@
         "total": 60.72,
         "unit_price": 0.44,
         "rankable": true,
-        "checked_at": "2026-11-26T04:37:22+01:00",
+        "checked_at": "2026-11-27T01:06:33+01:00",
         "rank": 4
       },
       {
@@ -4935,7 +5028,7 @@
         "total": 62.9,
         "unit_price": 0.4557971014492754,
         "rankable": true,
-        "checked_at": "2026-11-26T04:37:22+01:00",
+        "checked_at": "2026-11-27T01:06:33+01:00",
         "rank": 5
       },
       {
@@ -4944,27 +5037,27 @@
         "count": 138,
         "item_price": 74.87,
         "shipping": 3.9,
-        "shipping_note": "Pflichtversand nach Österreich €3,90; Gesamtpreis berücksichtigt.",
-        "availability": "Noch 7 Stück auf Lager; angezeigtes Lieferfenster Sa 28.11.2026 bei Bestellung bis Do 26.11. 23:59.",
+        "shipping_note": "Pflichtversand nach Österreich €3,90; im Gesamtpreis enthalten.",
+        "availability": "Bestandsanzeige 7 Stück; das zuvor angezeigte Lieferfenster galt nur bei Bestellung bis 26.11.2026, 23:59 Uhr; heute keine belastbare neue ETA.",
         "conditions": "Angebotspreis; Gültigkeit nicht angegeben.",
         "validity": null,
         "url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr6",
         "pack": "Monatsbox · Baby-Dry Pants Größe 6",
         "source_url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr6",
         "link_label": "Direkt zum Händlerangebot ↗",
-        "total": 78.77,
-        "unit_price": 0.5707971014492753,
+        "total": 78.77000000000001,
+        "unit_price": 0.5707971014492754,
         "rankable": true,
-        "checked_at": "2026-11-26T04:37:22+01:00",
+        "checked_at": "2026-11-27T01:06:33+01:00",
         "rank": 6
       }
     ],
-    "retailer_note": "Am Mittwoch, 25. November 2026 um 02:08:10 Uhr (Europe/Vienna) direkt bestätigt: Müller Österreich, 0815.at, BIPA, dm.at, oh feliz und Galaxus.at für beide Größen. Amazon.de ließ sich auf den beiden Produkt-/Suchseiten nicht direkt auslesen; Verkäufer, Versanddienstleister, AT-Endpreis und Bedingungen bleiben unbestätigt. Amazon.de ist daher kein Negativnachweis. 6 von 10 Vergleichsplätzen sind belegt, 4 bleiben offen."
+    "retailer_note": "Sechs von zehn direkt bestätigten Größen-6-Angeboten; Müller Österreich für Größe 6 bestätigt. Amazon.de ließ Verkäufer-/Liefer-/Bedingungsprüfung nicht zu; ungeprüft, kein Negativnachweis. Vier Plätze offen."
   },
   "news_threshold_eur_per_unit": 0.37,
-  "latest_snapshot_note": "Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna): Größe 6 und Größe 7 jeweils 6 von 10 Vergleichsplätzen direkt bestätigt; jeweils 4 Plätze offen. Bester bestätigter Stückpreis inklusive Pflichtversand: Größe 6 €0,389 (Müller, €53,65 gesamt); Größe 7 €0,460 (0815.at, €57,99 gesamt). Kein bestätigtes Angebot unterschreitet €0,37 je Pants. Amazon.de blieb unbestätigt, da die direkte Seite den Browser-Client/Sitzung mit HTTP 503 ablehnte; drei weitere Plätze sind nicht mit konkreten Händlern belegt.",
+  "latest_snapshot_note": "Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna): Größe 6: 6/10 Angebote direkt bestätigt; bestes bestätigtes Angebot Müller Österreich €53,65/138 = €0.388768 je Pants inkl. Pflichtversand. Größe 7: 5/10 direkt bestätigt; bestes bestätigtes Angebot 0815.at €57,99/126 = €0.460238 je Pants inkl. Pflichtversand. Unter den direkt bestätigten Angeboten bei keiner Größe unter €0,37; Amazon.de ist ungeprüft (direkter Zugriff fehlgeschlagen), bei Größe 7 auch Müller, außerdem sind drei weitere Händlerplätze je Größe offen. Daraus folgt kein allgemeingültiger Negativnachweis.",
   "provider_history_started_on": "2026-10-18",
-  "latest_note": "Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna): Größe 6 und Größe 7 jeweils 6 von 10 Vergleichsplätzen direkt bestätigt; jeweils 4 Plätze offen. Bester bestätigter Stückpreis inklusive Pflichtversand: Größe 6 €0,389 (Müller, €53,65 gesamt); Größe 7 €0,460 (0815.at, €57,99 gesamt). Kein bestätigtes Angebot unterschreitet €0,37 je Pants. Amazon.de blieb unbestätigt, da die direkte Seite den Browser-Client/Sitzung mit HTTP 503 ablehnte; drei weitere Plätze sind nicht mit konkreten Händlern belegt.",
+  "latest_note": "Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna): Größe 6: 6/10 Angebote direkt bestätigt; bestes bestätigtes Angebot Müller Österreich €53,65/138 = €0.388768 je Pants inkl. Pflichtversand. Größe 7: 5/10 direkt bestätigt; bestes bestätigtes Angebot 0815.at €57,99/126 = €0.460238 je Pants inkl. Pflichtversand. Unter den direkt bestätigten Angeboten bei keiner Größe unter €0,37; Amazon.de ist ungeprüft (direkter Zugriff fehlgeschlagen), bei Größe 7 auch Müller, außerdem sind drei weitere Händlerplätze je Größe offen. Daraus folgt kein allgemeingültiger Negativnachweis.",
   "separate_savings": [
     {
       "date": "2026-11-11",
@@ -5007,58 +5100,58 @@
     {
       "retailer": "0815.at",
       "status": "beide Größen direkt bestätigt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-6-Extra-Large-14-19kg/656659359",
-      "note": "Preis, Stückzahl, Versandbedingung und Verfügbarkeit der jeweils besten Monatsbox direkt geprüft."
+      "note": "Preis, Packungsinhalt, Pflichtversand-Schwelle und Verfügbarkeit direkt geprüft."
     },
     {
       "retailer": "BIPA",
       "status": "beide Größen direkt bestätigt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-6---13kg-19kg--monatsbox/B3-348110",
-      "note": "Preis, Stückzahl, Online-Lieferbarkeit und Gratisversandbedingung direkt geprüft; beworbene 25%-Aktion nicht abgezogen, da Anwendbarkeit nicht bestätigt."
+      "note": "Preis, Packungsinhalt, Lieferbarkeit und Versandbedingungen direkt geprüft; nicht sicher anwendbare 25%-Aktion nicht abgezogen."
     },
     {
       "retailer": "dm.at",
       "status": "beide Größen direkt bestätigt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": "https://www.dm.at/p/d/1679518/pampers-baby-dry-baby-pants-baby-dry-paw-patrol-gr-6-extra-large-14-19-kg-monatsbox",
-      "note": "Preis, Packungsinhalt, Verfügbarkeit und Gratislieferung mit Mein-dm-Konto direkt geprüft."
+      "note": "Preis, Stückzahl, Verfügbarkeit und Versandbedingung mit Mein-dm-Konto direkt geprüft."
     },
     {
       "retailer": "oh feliz",
-      "status": "beide Größen direkt bestätigt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "status": "beide Größen direkt bestätigt; ETA offen",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr6",
-      "note": "Preis, Bestandsanzeige, Pflichtversand nach Österreich und angezeigtes Lieferfenster direkt geprüft."
+      "note": "Preis, Bestandsanzeige und Pflichtversand geprüft; bisherige Lieferzeitangabe war nur bis 26.11. gültig, daher nicht als aktuelle ETA übernommen."
     },
     {
       "retailer": "Müller Österreich",
-      "status": "beide Größen direkt bestätigt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "status": "Größe 6 direkt bestätigt; Größe 7 nicht direkt bestätigbar",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": "https://www.mueller.at/p/pampers-baby-dry-pants-gr-6-14-19kg-monatsbox-IPN2887000/",
-      "note": "Beide Produktseiten direkt geöffnet: Größe 6 €53,65/138 und Größe 7 €65,90/126; online lieferbar, kostenloser Versand über €49."
+      "note": "Größe 6: €53,65/138, online lieferbar, Versand ab €49 kostenlos. Größe-7-Produktseite wurde beim Direktaufruf durch Sicherheitsprüfung blockiert; Preis/Lieferung dort nicht übernommen."
     },
     {
       "retailer": "Galaxus.at",
       "status": "beide Größen direkt bestätigt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-6-monatsbox-138-stk-windeln-23688435",
-      "note": "Beide Produktseiten heute direkt geöffnet; Preis, Lieferfenster, Lieferantenbestand und kostenloser Versand sichtbar."
+      "note": "Preis, Packungsinhalt, Versand, Bestand und Lieferfenster auf beiden Produktseiten direkt geprüft."
     },
     {
       "retailer": "Amazon.de · Amazon und Marketplace",
-      "status": "direkter Zugriff fehlgeschlagen; keine Angebote bestätigt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "status": "direkte Angebotsprüfung nicht verfügbar",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": "https://www.amazon.de/",
-      "note": "Der direkte Aufruf der Amazon-Suche endete am 26.11.2026 mit HTTP 503 und der Meldung, dass Sitzung/Browser-Client nicht unterstützt werde. Verkäufer, Österreich-Endpreis, Lieferbarkeit und Coupon-/Prime-/Spar-Abo-Bedingungen blieben ungeprüft; kein Negativnachweis."
+      "note": "Direkte Suche und Produktaufrufe lieferten HTTP-/Browser-Client-Fehler. Verkäufer, Versanddienstleister, Endpreis nach Österreich, Verfügbarkeit und Coupon-/Prime-/Spar-Abo-Bedingungen sind ungeprüft; kein Negativnachweis."
     },
     {
-      "retailer": "Weitere Händlerplätze (3)",
-      "status": "nicht mit konkreten Händlern belegt",
-      "checked_at": "2026-11-26T04:37:22+01:00",
+      "retailer": "Weitere Anbieterplätze (3)",
+      "status": "keine konkreten Händler geprüft",
+      "checked_at": "2026-11-27T01:06:33+01:00",
       "url": null,
-      "note": "Drei der zehn Vergleichsplätze sind nicht besetzt und keine konkrete Händlerquelle wurde für diese Plätze als geprüft ausgewiesen."
+      "note": "Drei von zehn Zielplätzen sind nicht mit konkreten Händlerquellen belegt; sie bleiben offen."
     }
   ],
   "size6_history": [
@@ -7716,8 +7809,143 @@
           "rank": 6
         }
       ]
+    },
+    {
+      "date": "2026-11-27",
+      "checked_at": "2026-11-27T01:06:33+01:00",
+      "provider_history_started_on": "2026-11-01",
+      "provider_count": 6,
+      "requested_provider_count": 10,
+      "shortfall": 4,
+      "best_unit_price": 0.388768115942029,
+      "best_total": 53.65,
+      "retailer": "Müller Österreich",
+      "top10": [
+        {
+          "retailer": "Müller Österreich",
+          "provider": "Müller",
+          "count": 138,
+          "item_price": 53.65,
+          "shipping": 0,
+          "shipping_note": "Versandkostenfrei ab €49; Einzelbox erfüllt die Schwelle.",
+          "availability": "Online lieferbar in 2–4 Werktagen; kostenfreie Abholung in Filiale möglich.",
+          "conditions": "Kein zusätzlicher Coupon eingerechnet.",
+          "validity": null,
+          "url": "https://www.mueller.at/p/pampers-baby-dry-pants-gr-6-14-19kg-monatsbox-IPN2887000/",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 6",
+          "source_url": "https://www.mueller.at/p/pampers-baby-dry-pants-gr-6-14-19kg-monatsbox-IPN2887000/",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 53.65,
+          "unit_price": 0.388768115942029,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 1
+        },
+        {
+          "retailer": "0815.at",
+          "provider": "0815.at",
+          "count": 138,
+          "item_price": 55.99,
+          "shipping": 0,
+          "shipping_note": "Gratisversand nach Österreich ab €50; Einzelkarton überschreitet die Schwelle.",
+          "availability": "Mehr als 10 Stück im Versandlager; Lieferzeit 1–3 Werktage.",
+          "conditions": "Ohne Coupon; optionaler Vorkasse-Rabatt nicht eingerechnet.",
+          "validity": null,
+          "url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-6-Extra-Large-14-19kg/656659359",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 6",
+          "source_url": "https://www.0815.at/Familie-Gesundheit/Babyartikel/Windeln/Pampers-Baby-Dry-Pants-Gr.-6-Extra-Large-14-19kg/656659359",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 55.99,
+          "unit_price": 0.40572463768115946,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 2
+        },
+        {
+          "retailer": "BIPA",
+          "provider": "BIPA",
+          "count": 138,
+          "item_price": 59.9,
+          "shipping": 0,
+          "shipping_note": "Versandkostenfrei ab €49; Einzelbox erfüllt die Schwelle.",
+          "availability": "Online verfügbar; Lieferung in 2–3 Werktagen.",
+          "conditions": "Kein Coupon eingerechnet. Eine sichtbare 25%-Aktion auf zwei Produkte wurde nicht abgezogen, da die Anwendbarkeit auf dieses Angebot nicht bestätigt war.",
+          "validity": null,
+          "url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-6---13kg-19kg--monatsbox/B3-348110",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 6",
+          "source_url": "https://www.bipa.at/p/pampers-baby-dry-pants-groesse-6---13kg-19kg--monatsbox/B3-348110",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 59.9,
+          "unit_price": 0.4340579710144927,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 3
+        },
+        {
+          "retailer": "Galaxus.at",
+          "provider": "Galaxus",
+          "count": 138,
+          "item_price": 60.72,
+          "shipping": 0,
+          "shipping_note": "Kostenloser Versand.",
+          "availability": "9 Stück beim Lieferanten; angezeigtes Lieferfenster Mo 30.11.–Mi 2.12.2026.",
+          "conditions": "Kein Rabatt eingerechnet.",
+          "validity": null,
+          "url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-6-monatsbox-138-stk-windeln-23688435",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 6",
+          "source_url": "https://www.galaxus.at/de/s10/product/pampers-baby-dry-pants-gr-6-monatsbox-138-stk-windeln-23688435",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 60.72,
+          "unit_price": 0.44,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 4
+        },
+        {
+          "retailer": "dm.at",
+          "provider": "dm.at",
+          "count": 138,
+          "item_price": 62.9,
+          "shipping": 0,
+          "shipping_note": "Versandkostenfrei mit Mein-dm-Konto ab €49; Einzelbox erfüllt die Schwelle.",
+          "availability": "Lieferbar; Standardversand 1–3 Werktage.",
+          "conditions": "Mein-dm-Konto erforderlich; kein Coupon eingerechnet.",
+          "validity": null,
+          "url": "https://www.dm.at/p/d/1679518/pampers-baby-dry-baby-pants-baby-dry-paw-patrol-gr-6-extra-large-14-19-kg-monatsbox",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 6",
+          "source_url": "https://www.dm.at/p/d/1679518/pampers-baby-dry-baby-pants-baby-dry-paw-patrol-gr-6-extra-large-14-19-kg-monatsbox",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 62.9,
+          "unit_price": 0.4557971014492754,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 5
+        },
+        {
+          "retailer": "oh feliz",
+          "provider": "oh feliz",
+          "count": 138,
+          "item_price": 74.87,
+          "shipping": 3.9,
+          "shipping_note": "Pflichtversand nach Österreich €3,90; im Gesamtpreis enthalten.",
+          "availability": "Bestandsanzeige 7 Stück; das zuvor angezeigte Lieferfenster galt nur bei Bestellung bis 26.11.2026, 23:59 Uhr; heute keine belastbare neue ETA.",
+          "conditions": "Angebotspreis; Gültigkeit nicht angegeben.",
+          "validity": null,
+          "url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr6",
+          "pack": "Monatsbox · Baby-Dry Pants Größe 6",
+          "source_url": "https://www.ohfeliz.at/pampers/pants-baby-dry-gr6",
+          "link_label": "Direkt zum Händlerangebot ↗",
+          "total": 78.77000000000001,
+          "unit_price": 0.5707971014492754,
+          "rankable": true,
+          "checked_at": "2026-11-27T01:06:33+01:00",
+          "rank": 6
+        }
+      ],
+      "note": "Direkt geprüfte Anbieter am Tagesdatum; vier Plätze offen. Keine Händlerpreise rückwirkend ergänzt."
     }
   ],
   "size6_provider_history_started_on": "2026-11-01",
-  "latest_snapshot_date": "2026-11-26"
+  "latest_snapshot_date": "2026-11-27",
+  "news_alert_below": 0.37
 }

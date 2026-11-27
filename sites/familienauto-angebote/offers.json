@@ -1,11 +1,11 @@
 {
-  "checkedDate": "26.11.2026",
-  "checkedAt": "2026-11-26T04:37:22+01:00",
+  "checkedDate": "27.11.2026",
+  "checkedAt": "2026-11-27T01:06:33+01:00",
   "checked": true,
   "requiredCount": 20,
   "confirmedCount": 20,
   "shortfall": 0,
-  "statusNote": "Stand Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna): 20 von 20 Hauptangebote direkt auf Aktivität, Preis, Erstzulassung/Kilometer und Sitzplätze geprüft; die ausgewiesene ISOFIX-Angabe bzw. passende Herstellerkonfiguration wurde nachvollzogen. Altersgrenze höchstens zwei Jahre und Laufleistung höchstens 50.000 km erneut angewendet.",
+  "statusNote": "Stand Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna): 20 von 20 Hauptangeboten direkt am Inserat auf Aktivität, Preis, Erstzulassung/Kilometer und Sitzplätze geprüft; die ISOFIX-Angabe bzw. passende Herstellerkonfiguration wurde nachvollzogen. Altersgrenze höchstens zwei Jahre und Laufleistung höchstens 50.000 km erneut angewendet.",
   "unqualifiedLeads": [
     {
       "url": "https://www.willhaben.at/iad/gebrauchtwagen/d/nutzfahrzeuge/toyota-pro-ace-proace-city-verso-l2-1-5-d-4d-130-auto-7-sitze-1016423009/",
@@ -41,13 +41,13 @@
       "basis": "Plus M · Vorführwagen",
       "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": true,
       "rank": 1,
-      "rankLabel": "#1 · 5 Sitze"
+      "rankLabel": "#1"
     },
     {
       "model": "Citroën Berlingo BlueHDi 100",
@@ -77,13 +77,13 @@
       "basis": "Plus M · Vorführwagen",
       "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 2,
-      "rankLabel": "#2 · 5 Sitze"
+      "rankLabel": "#2"
     },
     {
       "model": "Citroën Berlingo 1.5 BlueHDi 130",
@@ -113,12 +113,12 @@
       "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
       "cost": "Inserierter österreichischer Bar-Verkaufspreis; zusätzliche Zulassungs- oder Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
       "lowestMatchingTrim": false,
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 3,
-      "rankLabel": "#3 · 5 Sitze"
+      "rankLabel": "#3"
     },
     {
       "model": "Toyota Proace City Verso L1 1,2",
@@ -149,13 +149,13 @@
       "basis": "Active · 5-Sitzer",
       "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/toyota-sonstige-proace-city-verso-l1-1-2-active-top-finanzi-2063439353/",
       "cost": "Österreichischer Verkaufspreis laut Inserat; Finanzierung wird separat angeboten. Eventuelle Nebenkosten beim Händler klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": true,
       "rank": 4,
-      "rankLabel": "#4 · 5 Sitze"
+      "rankLabel": "#4"
     },
     {
       "model": "Opel Combo 1.2 PureTech 110",
@@ -186,12 +186,12 @@
       "proof": "https://www.media.stellantis.com/at-de/opel/press/der-neue-beste-freund-der-familie-der-innovative-opel-combo-life",
       "cost": "Verkaufspreis laut Inserat; Bonus gilt laut Inserat für jeden Kunden. Zusätzliche Zulassungskosten vor Kauf klären.",
       "lowestMatchingTrim": true,
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 5,
-      "rankLabel": "#5 · 5 Sitze"
+      "rankLabel": "#5"
     },
     {
       "model": "Citroën Berlingo BlueHDi 100",
@@ -221,13 +221,13 @@
       "basis": "Plus M · Neuwagen",
       "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/citroen-berlingo-bluehdi-100-s-s-plus-m-1865185969/",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten vor Kauf klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 6,
-      "rankLabel": "#6 · 5 Sitze"
+      "rankLabel": "#6"
     },
     {
       "model": "Peugeot Rifter Lang Diesel 100",
@@ -257,19 +257,19 @@
       "proof": "https://www.peugeot.at/content/dam/peugeot/austria/downloads/preislisten/2026/peugeot-rifter-preisliste-2026.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; mögliche Nebenkosten vor Kauf klären.",
       "lowestMatchingTrim": true,
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 7,
-      "rankLabel": "#7 · 5 Sitze"
+      "rankLabel": "#7"
     },
     {
       "country": "AT",
       "iso": "3× ISOFIX · alle drei Plätze in Reihe 2 laut Inserat",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "seats": "5",
@@ -296,9 +296,9 @@
       ],
       "basis": "Shuttle · Vorführwagen",
       "proof": "",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 8,
-      "rankLabel": "#8 · 5 Sitze"
+      "rankLabel": "#8"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -327,13 +327,13 @@
       "basis": "Max M · 5-Sitzer",
       "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 9,
-      "rankLabel": "#9 · 5 Sitze"
+      "rankLabel": "#9"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -363,20 +363,20 @@
       "basis": "Max XL · Vorführwagen · 5-Sitzer",
       "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 10,
-      "rankLabel": "#10 · 5 Sitze"
+      "rankLabel": "#10"
     },
     {
       "country": "AT",
       "iso": "3× ISOFIX · alle drei Plätze in Reihe 2 laut Inserat",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "seats": "5",
@@ -403,9 +403,9 @@
       ],
       "basis": "Plus · Gebrauchtwagen",
       "proof": "",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 11,
-      "rankLabel": "#11 · 5 Sitze"
+      "rankLabel": "#11"
     },
     {
       "model": "Toyota Proace City Verso L1 1,2",
@@ -434,13 +434,13 @@
       "basis": "Family · Vorführwagen",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 12,
-      "rankLabel": "#12 · 5 Sitze"
+      "rankLabel": "#12"
     },
     {
       "model": "Citroën Berlingo BlueHDi 130",
@@ -469,13 +469,13 @@
       "basis": "Max M · Automatik",
       "proof": "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/2026/06/Berlingo_Produktblatt_Juni_2026.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 13,
-      "rankLabel": "#13 · 5 Sitze"
+      "rankLabel": "#13"
     },
     {
       "model": "Fiat Doblò M Diesel 130",
@@ -506,12 +506,12 @@
       "proof": "https://www.media.stellantis.com/at-de/fiat/press/der-neue-fiat-e-doblo-und-doblo-erfindungsreichtum-fuer-die-aufgaben-des-alltags",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen.",
       "lowestMatchingTrim": true,
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 14,
-      "rankLabel": "#14 · 5 Sitze"
+      "rankLabel": "#14"
     },
     {
       "model": "Citroën Berlingo XL BlueHDi 130",
@@ -541,13 +541,13 @@
       "basis": "Max XL · Neuwagen",
       "proof": "https://www.willhaben.at/iad/gebrauchtwagen/d/auto/citroen-berlingo-xl-bluehdi-130-s-s-max-lager-aktion-2137064098/",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten vor Kauf klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 15,
-      "rankLabel": "#15 · 5 Sitze"
+      "rankLabel": "#15"
     },
     {
       "model": "Toyota Proace City Verso L2 1,2",
@@ -577,24 +577,24 @@
       "basis": "Family · Vorführwagen",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 16,
-      "rankLabel": "#16 · 5 Sitze"
+      "rankLabel": "#16"
     },
     {
-      "rankLabel": "#17 · 5 Sitze",
+      "rankLabel": "#17",
       "rank": 17,
       "model": "Toyota Proace City Verso L2 1.5 D4D 130 Family+",
       "trim": "Family+ · 5-Sitzer · Automatik",
       "basis": "Gebrauchtwagen · Family+ · Händlerangebot",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Österreichischer Verkaufspreis €34.990 laut heute direkt geprüftem Inserat; keine zusätzlichen verpflichtenden Nebenkosten separat ausgewiesen.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
       "checked": true,
       "location": "Krems an der Donau (Niederösterreich)",
       "country": "AT",
@@ -619,15 +619,15 @@
         "Diesel",
         "Automatik"
       ],
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "lowestMatchingTrim": false
     },
     {
       "country": "AT",
       "iso": "3× ISOFIX · alle drei Plätze in Reihe 2 laut Inserat",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "seats": "5",
@@ -654,9 +654,9 @@
       ],
       "basis": "Family · Vorführwagen",
       "proof": "",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 18,
-      "rankLabel": "#18 · 5 Sitze"
+      "rankLabel": "#18"
     },
     {
       "model": "Toyota Proace City Verso L1 1,5 D4D",
@@ -686,13 +686,13 @@
       "basis": "Family · Automatik · Vorführwagen",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 19,
-      "rankLabel": "#19 · 5 Sitze"
+      "rankLabel": "#19"
     },
     {
       "model": "Toyota Proace City Verso L2 1,5 D4D",
@@ -722,13 +722,13 @@
       "basis": "Design · Neuwagen",
       "proof": "https://localform.toyota.at/pdf/brochures/Toyota_AT_Proace_City_Verso_MB_03_25.pdf",
       "cost": "Inserierter österreichischer Verkaufspreis; zusätzliche Zulassungs- oder allfällige Händlerkosten sind nicht ausgewiesen und vor Kauf zu klären.",
-      "change": "Inserat am Donnerstag, 26. November 2026 um 04:37:22 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
-      "checkedDate": "26.11.2026",
-      "checkedAt": "2026-11-26T04:37:22+01:00",
+      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "checkedDate": "27.11.2026",
+      "checkedAt": "2026-11-27T01:06:33+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
       "rank": 20,
-      "rankLabel": "#20 · 5 Sitze"
+      "rankLabel": "#20"
     }
   ],
   "staleReferences": [
