@@ -1,11 +1,11 @@
 {
-  "checkedDate": "27.11.2026",
-  "checkedAt": "2026-11-27T01:06:33+01:00",
+  "checkedDate": "28.11.2026",
+  "checkedAt": "2026-11-28T01:52:36+01:00",
   "checked": true,
   "requiredCount": 10,
   "confirmedCount": 10,
   "shortfall": 0,
-  "statusNote": "Stand Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna): 10 von 10 passenden 7-Sitzer-Angeboten direkt am Inserat auf Aktivität, Preis, Erstzulassung/Kilometer und Sitzplätze geprüft; die ISOFIX-Angabe bzw. passende Herstellerkonfiguration wurde nachvollzogen. Altersgrenze höchstens zwei Jahre und Laufleistung höchstens 50.000 km erneut angewendet.",
+  "statusNote": "Stand Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna): 10 von 10 passenden 7-Sitzer-Angeboten direkt am Inserat auf Aktivität, Preis, Erstzulassung/Kilometer und Sitzplätze geprüft; ISOFIX-Angabe bzw. passende Herstellerkonfiguration nachvollzogen. Altersgrenze höchstens zwei Jahre und Laufleistung höchstens 50.000 km erneut angewendet.",
   "offers": [
     {
       "model": "Opel Combo 1.5 Diesel",
@@ -33,11 +33,11 @@
         "3× ISOFIX Reihe 2 laut passender Opel-Sitzkonfiguration; Inserat bestätigt das Fahrzeug mit 7 Sitzen und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 1,
       "rankLabel": "#1 · 7 Sitze"
     },
@@ -67,11 +67,11 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Inserat nennt ISOFIX und sieben Sitze",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 2,
       "rankLabel": "#2 · 7 Sitze"
     },
@@ -101,11 +101,11 @@
         "3× ISOFIX Reihe 2 laut Citroën-Produktblatt; Inserat nennt ISOFIX und drei Einzelsitze Reihe 2",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 3,
       "rankLabel": "#3 · 7 Sitze"
     },
@@ -135,11 +135,11 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Inserat nennt ISOFIX und sieben Sitze",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 4,
       "rankLabel": "#4 · 7 Sitze"
     },
@@ -169,11 +169,11 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Inserat nennt 7-Sitzer und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 5,
       "rankLabel": "#5 · 7 Sitze"
     },
@@ -203,11 +203,11 @@
         "ISOFIX-Halteösen laut VW in zweiter und dritter Sitzreihe; Ausstattung am konkreten Fahrzeug/FIN abgleichen",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 6,
       "rankLabel": "#6 · 7 Sitze"
     },
@@ -237,11 +237,11 @@
         "3× ISOFIX in Reihe 2 laut VW MY26-Preisliste; Inserat bestätigt 7 Sitze und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 7,
       "rankLabel": "#7 · 7 Sitze"
     },
@@ -271,11 +271,11 @@
         "3× ISOFIX · drei Einzelsitze in Reihe 2 laut Fiat-Herstellerbeleg; Inserat bestätigt 7-Sitzer und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 8,
       "rankLabel": "#8 · 7 Sitze"
     },
@@ -305,11 +305,11 @@
         "3× ISOFIX Reihe 2 laut Opel-Konfiguration; Angebot weist 7 Sitze aus",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 9,
       "rankLabel": "#9 · 7 Sitze"
     },
@@ -339,11 +339,11 @@
         "ISOFIX-Befestigungen auf allen Sitzen laut VW-7-Sitzer-Angabe; Inserat bestätigt Maxi/7 Sitze und ISOFIX",
         "Österreichisches Kaufangebot"
       ],
-      "checkedDate": "27.11.2026",
-      "checkedAt": "2026-11-27T01:06:33+01:00",
+      "checkedDate": "28.11.2026",
+      "checkedAt": "2026-11-28T01:52:36+01:00",
       "checked": true,
       "lowestMatchingTrim": false,
-      "change": "Inserat am Freitag, 27. November 2026 um 01:06:33 Uhr (Europe/Vienna) direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
+      "change": "Inserat am Samstag, 28. November 2026 um 01:52:36 Uhr (Europe/Vienna) erneut direkt auf Aktivität, Preis, Erstzulassung/Kilometer, Sitzplätze und ISOFIX geprüft.",
       "rank": 10,
       "rankLabel": "#10 · 7 Sitze"
     }
